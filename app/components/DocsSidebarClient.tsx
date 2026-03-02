@@ -35,8 +35,8 @@ interface DocsSidebarClientProps {
 function findParentPaths(items: NavItem[], targetSlug: string, parentPath: string[] = []): string[] | null {
   for (const item of items) {
     const currentPath = [...parentPath, item.path]
-    // 直接比较 slug
-    if (item.type === 'file' && item.slug === targetSlug) {
+    // 不区分大小写比较 slug
+    if (item.type === 'file' && item.slug?.toLowerCase() === targetSlug.toLowerCase()) {
       return parentPath
     }
     if (item.type === 'directory' && item.children) {
@@ -133,8 +133,8 @@ interface TreeItemProps {
 
 function TreeItem({ item, level, currentSlug, expanded, onToggle }: TreeItemProps) {
   const isExpanded = expanded.has(item.path)
-  // 直接比较 slug
-  const isCurrent = item.type === 'file' && item.slug === currentSlug
+  // 不区分大小写比较 slug（解决线上服务器可能对 URL 进行大小写规范化的问题）
+  const isCurrent = item.type === 'file' && item.slug?.toLowerCase() === currentSlug.toLowerCase()
 
   // GitHub 配色
   // 使用固定宽度和等宽数字，避免选中时跳动
