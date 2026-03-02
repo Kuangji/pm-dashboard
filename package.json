@@ -7,7 +7,7 @@
     "generate-manifest": "tsx scripts/generate-manifest.ts",
     "sync": "npm run sync-content && npm run generate-manifest",
     "dev": "npm run sync && next dev",
-    "build": "npm run sync && next build",
+    "build": "npm run generate-manifest && next build",
     "build:ci": "bash scripts/ci-build.sh",
     "start": "next start",
     "lint": "eslint"

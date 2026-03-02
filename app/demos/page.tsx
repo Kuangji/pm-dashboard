@@ -25,8 +25,9 @@ export default async function DemosPage() {
           {manifest.navigation.demos.map((demo) => (
             <Link
               key={demo.id}
-              href={`/demos-raw/${demo.id}/index.html`}
+              href={`/demos/${demo.id}/index.html`}
               target="_blank"
+              prefetch={false}
               className="group block bg-zinc-50 rounded-lg border border-zinc-100 hover:border-zinc-300 hover:shadow-md transition-all overflow-hidden"
             >
               <div className="aspect-video bg-zinc-200 relative">

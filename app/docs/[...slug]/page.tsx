@@ -87,13 +87,24 @@ export async function generateStaticParams() {
   try {
     const manifest = await readManifest()
     const allDocs = flattenNavTree(manifest.navigation.docs)
-    return allDocs
+
+    if (allDocs.length === 0) {
+      console.warn('Warning: No documents found in manifest')
+      // 返回一个占位符，避免构建失败
+      return [{ slug: ['README.md'] }]
+    }
+
+    const params = allDocs
       .filter((item) => item.type === 'file' && item.slug)
       .map((item) => ({
-        // 保留完整路径在 slug 数组中
         slug: item.slug!.split('/')
       }))
-  } catch {
-    return []
+
+    console.log(`generateStaticParams: Generated ${params.length} paths`)
+    return params
+  } catch (error) {
+    console.error('Error in generateStaticParams:', error)
+    // 构建时如果 manifest 不存在，返回默认路径避免失败
+    return [{ slug: ['README.md'] }]
   }
 }

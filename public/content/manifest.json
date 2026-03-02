@@ -1,0 +1,417 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-03-03T01:28:02.531Z",
+  "navigation": {
+    "docs": [
+      {
+        "type": "file",
+        "name": "README.md",
+        "path": "README.md",
+        "slug": "README.md",
+        "fileType": "markdown",
+        "isText": true,
+        "isImage": false
+      },
+      {
+        "type": "directory",
+        "name": "01-getting-started",
+        "path": "01-getting-started",
+        "children": [
+          {
+            "type": "file",
+            "name": "intro.md",
+            "path": "01-getting-started/intro.md",
+            "slug": "01-getting-started/intro.md",
+            "fileType": "markdown",
+            "isText": true,
+            "isImage": false
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "02-project-documents",
+        "path": "02-project-documents",
+        "children": [
+          {
+            "type": "directory",
+            "name": "monitor_760",
+            "path": "02-project-documents/monitor_760",
+            "children": [
+              {
+                "type": "file",
+                "name": "monitor_760_plan_v1.md",
+                "path": "02-project-documents/monitor_760/monitor_760_plan_v1.md",
+                "slug": "02-project-documents/monitor_760/monitor_760_plan_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "monitor_backlog_v1.md",
+                "path": "02-project-documents/monitor_760/monitor_backlog_v1.md",
+                "slug": "02-project-documents/monitor_760/monitor_backlog_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "monitor_common_context_v1.md",
+                "path": "02-project-documents/monitor_760/monitor_common_context_v1.md",
+                "slug": "02-project-documents/monitor_760/monitor_common_context_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "monitor_create_design_v1.md",
+                "path": "02-project-documents/monitor_760/monitor_create_design_v1.md",
+                "slug": "02-project-documents/monitor_760/monitor_create_design_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "monitor_create_input_v1.md",
+                "path": "02-project-documents/monitor_760/monitor_create_input_v1.md",
+                "slug": "02-project-documents/monitor_760/monitor_create_input_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "monitor_create_spec_v1.md",
+                "path": "02-project-documents/monitor_760/monitor_create_spec_v1.md",
+                "slug": "02-project-documents/monitor_760/monitor_create_spec_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "monitor_list_design_v1.md",
+                "path": "02-project-documents/monitor_760/monitor_list_design_v1.md",
+                "slug": "02-project-documents/monitor_760/monitor_list_design_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "monitor_list_input_v1.md",
+                "path": "02-project-documents/monitor_760/monitor_list_input_v1.md",
+                "slug": "02-project-documents/monitor_760/monitor_list_input_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "monitor_list_spec_v1.md",
+                "path": "02-project-documents/monitor_760/monitor_list_spec_v1.md",
+                "slug": "02-project-documents/monitor_760/monitor_list_spec_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "twitter_support_design_v1.md",
+                "path": "02-project-documents/monitor_760/twitter_support_design_v1.md",
+                "slug": "02-project-documents/monitor_760/twitter_support_design_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "twitter_support_input_v1.md",
+                "path": "02-project-documents/monitor_760/twitter_support_input_v1.md",
+                "slug": "02-project-documents/monitor_760/twitter_support_input_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "twitter_support_spec_v1.md",
+                "path": "02-project-documents/monitor_760/twitter_support_spec_v1.md",
+                "slug": "02-project-documents/monitor_760/twitter_support_spec_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "PLAN-multi-file-type-support.md",
+        "path": "PLAN-multi-file-type-support.md",
+        "slug": "PLAN-multi-file-type-support.md",
+        "fileType": "markdown",
+        "isText": true,
+        "isImage": false
+      },
+      {
+        "type": "file",
+        "name": "notes.txt",
+        "path": "notes.txt",
+        "slug": "notes.txt",
+        "fileType": "text",
+        "isText": true,
+        "isImage": false
+      },
+      {
+        "type": "file",
+        "name": "sample-config.json",
+        "path": "sample-config.json",
+        "slug": "sample-config.json",
+        "fileType": "json",
+        "language": "json",
+        "isText": true,
+        "isImage": false
+      },
+      {
+        "type": "file",
+        "name": "sample-data.yaml",
+        "path": "sample-data.yaml",
+        "slug": "sample-data.yaml",
+        "fileType": "yaml",
+        "language": "yaml",
+        "isText": true,
+        "isImage": false
+      },
+      {
+        "type": "file",
+        "name": "styles.css",
+        "path": "styles.css",
+        "slug": "styles.css",
+        "fileType": "code",
+        "language": "css",
+        "isText": true,
+        "isImage": false
+      },
+      {
+        "type": "directory",
+        "name": "nox_ai_transform_quick_validation",
+        "path": "nox_ai_transform_quick_validation",
+        "children": [
+          {
+            "type": "file",
+            "name": "README.md",
+            "path": "nox_ai_transform_quick_validation/README.md",
+            "slug": "nox_ai_transform_quick_validation/README.md",
+            "fileType": "markdown",
+            "isText": true,
+            "isImage": false
+          },
+          {
+            "type": "file",
+            "name": "_plan.md",
+            "path": "nox_ai_transform_quick_validation/_plan.md",
+            "slug": "nox_ai_transform_quick_validation/_plan.md",
+            "fileType": "markdown",
+            "isText": true,
+            "isImage": false
+          },
+          {
+            "type": "directory",
+            "name": "00_executive_summary",
+            "path": "nox_ai_transform_quick_validation/00_executive_summary",
+            "children": [
+              {
+                "type": "file",
+                "name": "EXECUTIVE_SUMMARY.md",
+                "path": "nox_ai_transform_quick_validation/00_executive_summary/EXECUTIVE_SUMMARY.md",
+                "slug": "nox_ai_transform_quick_validation/00_executive_summary/EXECUTIVE_SUMMARY.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "01_market_scan",
+            "path": "nox_ai_transform_quick_validation/01_market_scan",
+            "children": [
+              {
+                "type": "file",
+                "name": "phase1_summary.md",
+                "path": "nox_ai_transform_quick_validation/01_market_scan/phase1_summary.md",
+                "slug": "nox_ai_transform_quick_validation/01_market_scan/phase1_summary.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "scan_1_ai_agent_creator_economy.md",
+                "path": "nox_ai_transform_quick_validation/01_market_scan/scan_1_ai_agent_creator_economy.md",
+                "slug": "nox_ai_transform_quick_validation/01_market_scan/scan_1_ai_agent_creator_economy.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "scan_2_influencer_marketing_automation.md",
+                "path": "nox_ai_transform_quick_validation/01_market_scan/scan_2_influencer_marketing_automation.md",
+                "slug": "nox_ai_transform_quick_validation/01_market_scan/scan_2_influencer_marketing_automation.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "scan_3_data_mcp_provider.md",
+                "path": "nox_ai_transform_quick_validation/01_market_scan/scan_3_data_mcp_provider.md",
+                "slug": "nox_ai_transform_quick_validation/01_market_scan/scan_3_data_mcp_provider.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "scan_4_ai_kol_discovery.md",
+                "path": "nox_ai_transform_quick_validation/01_market_scan/scan_4_ai_kol_discovery.md",
+                "slug": "nox_ai_transform_quick_validation/01_market_scan/scan_4_ai_kol_discovery.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "scan_5_content_automation.md",
+                "path": "nox_ai_transform_quick_validation/01_market_scan/scan_5_content_automation.md",
+                "slug": "nox_ai_transform_quick_validation/01_market_scan/scan_5_content_automation.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "scan_6_brand_influencer_matching.md",
+                "path": "nox_ai_transform_quick_validation/01_market_scan/scan_6_brand_influencer_matching.md",
+                "slug": "nox_ai_transform_quick_validation/01_market_scan/scan_6_brand_influencer_matching.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "scan_7_tiktok_shop_ai.md",
+                "path": "nox_ai_transform_quick_validation/01_market_scan/scan_7_tiktok_shop_ai.md",
+                "slug": "nox_ai_transform_quick_validation/01_market_scan/scan_7_tiktok_shop_ai.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "scan_8_creator_data_monetization.md",
+                "path": "nox_ai_transform_quick_validation/01_market_scan/scan_8_creator_data_monetization.md",
+                "slug": "nox_ai_transform_quick_validation/01_market_scan/scan_8_creator_data_monetization.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "02_user_research",
+            "path": "nox_ai_transform_quick_validation/02_user_research",
+            "children": [
+              {
+                "type": "file",
+                "name": "customer_persona.md",
+                "path": "nox_ai_transform_quick_validation/02_user_research/customer_persona.md",
+                "slug": "nox_ai_transform_quick_validation/02_user_research/customer_persona.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "jobs_to_be_done.md",
+                "path": "nox_ai_transform_quick_validation/02_user_research/jobs_to_be_done.md",
+                "slug": "nox_ai_transform_quick_validation/02_user_research/jobs_to_be_done.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "phase2_insights.md",
+                "path": "nox_ai_transform_quick_validation/02_user_research/phase2_insights.md",
+                "slug": "nox_ai_transform_quick_validation/02_user_research/phase2_insights.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "reddit_insights.md",
+                "path": "nox_ai_transform_quick_validation/02_user_research/reddit_insights.md",
+                "slug": "nox_ai_transform_quick_validation/02_user_research/reddit_insights.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "03_opportunities",
+            "path": "nox_ai_transform_quick_validation/03_opportunities",
+            "children": [
+              {
+                "type": "file",
+                "name": "top5_opportunities.md",
+                "path": "nox_ai_transform_quick_validation/03_opportunities/top5_opportunities.md",
+                "slug": "nox_ai_transform_quick_validation/03_opportunities/top5_opportunities.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "demos": [
+      {
+        "id": "button-component",
+        "title": "Button 组件演示",
+        "description": "交互式按钮组件展示，包含多种变体、尺寸和状态",
+        "path": "demos/button-component/index.html",
+        "thumbnail": "",
+        "tags": [
+          "组件",
+          "UI",
+          "交互"
+        ]
+      },
+      {
+        "id": "monitor-760",
+        "title": "760 监控平台 Demo",
+        "description": "内容监控平台原型演示，包含任务管理、主题监控、新建任务等功能",
+        "path": "demos/monitor-760/index.html",
+        "thumbnail": "",
+        "tags": [
+          "监控",
+          "原型",
+          "Next.js"
+        ]
+      }
+    ]
+  }
+}

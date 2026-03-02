@@ -3,7 +3,8 @@ import path from 'path'
 import matter from 'gray-matter'
 import { detectFileType, isTextFile, getMimeType, getLanguage, FileCategory } from './file-types'
 
-const CONTENT_DIR = path.join(process.cwd(), 'public/content')
+// 使用相对路径，确保在构建时能找到正确的位置
+const CONTENT_DIR = path.resolve('./public/content')
 
 export interface NavItem {
   type: 'file' | 'directory'

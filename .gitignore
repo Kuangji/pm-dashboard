@@ -20,8 +20,8 @@
 # production
 /build
 /dist
-/public/content
-/public/demos
+# Note: public/content and public/demos are committed to git
+# They are synced locally and deployed as static assets
 
 # misc
 .DS_Store

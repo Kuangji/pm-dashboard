@@ -1,0 +1,36 @@
+# Sample YAML configuration file
+
+app:
+  name: PM Dashboard
+  version: 1.0.0
+  environment: development
+
+database:
+  host: localhost
+  port: 5432
+  name: pm_dashboard
+  pool:
+    min: 5
+    max: 20
+
+features:
+  - id: markdown-support
+    name: Markdown Support
+    enabled: true
+  - id: json-viewer
+    name: JSON Viewer
+    enabled: true
+  - id: code-highlighting
+    name: Code Highlighting
+    enabled: true
+  - id: image-preview
+    name: Image Preview
+    enabled: true
+
+navigation:
+  docs:
+    base_path: /docs
+    default_file: README.md
+  demos:
+    base_path: /demos
+    require_index: true
