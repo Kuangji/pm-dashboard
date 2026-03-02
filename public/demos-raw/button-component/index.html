@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button 组件演示</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h1 {
+      color: #1a1a2e;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+
+    .subtitle {
+      color: #666;
+      margin-bottom: 30px;
+      font-size: 14px;
+    }
+
+    .demo-section {
+      margin-bottom: 30px;
+    }
+
+    .section-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* 基础按钮样式 */
+    .btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: #4f46e5;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #4338ca;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+    }
+
+    .btn-secondary {
+      background: #e5e7eb;
+      color: #374151;
+    }
+
+    .btn-secondary:hover {
+      background: #d1d5db;
+    }
+
+    .btn-success {
+      background: #10b981;
+      color: white;
+    }
+
+    .btn-success:hover {
+      background: #059669;
+    }
+
+    .btn-danger {
+      background: #ef4444;
+      color: white;
+    }
+
+    .btn-danger:hover {
+      background: #dc2626;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #4f46e5;
+      color: #4f46e5;
+    }
+
+    .btn-outline:hover {
+      background: #4f46e5;
+      color: white;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: #4f46e5;
+    }
+
+    .btn-ghost:hover {
+      background: #eef2ff;
+    }
+
+    /* 尺寸变体 */
+    .btn-sm {
+      padding: 8px 16px;
+      font-size: 12px;
+    }
+
+    .btn-lg {
+      padding: 16px 32px;
+      font-size: 16px;
+    }
+
+    /* 加载状态 */
+    .btn-loading {
+      position: relative;
+      color: transparent !important;
+    }
+
+    .btn-loading::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      left: 50%;
+      margin-left: -8px;
+      margin-top: -8px;
+      border: 2px solid transparent;
+      border-top-color: currentColor;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* 禁用状态 */
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    .click-counter {
+      background: #f3f4f6;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .counter-value {
+      font-size: 48px;
+      font-weight: bold;
+      color: #4f46e5;
+      margin: 10px 0;
+    }
+
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      transform: scale(0);
+      animation: ripple-animation 0.6s ease-out;
+      pointer-events: none;
+    }
+
+    @keyframes ripple-animation {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+
+    .btn {
+      position: relative;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 Button 组件演示</h1>
+    <p class="subtitle">交互式按钮组件展示 - 点击按钮查看效果</p>
+
+    <div class="demo-section">
+      <div class="section-title">变体样式</div>
+      <div class="button-group">
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-secondary">Secondary</button>
+        <button class="btn btn-success">Success</button>
+        <button class="btn btn-danger">Danger</button>
+        <button class="btn btn-outline">Outline</button>
+        <button class="btn btn-ghost">Ghost</button>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <div class="section-title">尺寸</div>
+      <div class="button-group">
+        <button class="btn btn-primary btn-sm">Small</button>
+        <button class="btn btn-primary">Medium</button>
+        <button class="btn btn-primary btn-lg">Large</button>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <div class="section-title">状态</div>
+      <div class="button-group">
+        <button class="btn btn-primary" id="loadingBtn">Click to Load</button>
+        <button class="btn btn-primary" disabled>Disabled</button>
+      </div>
+    </div>
+
+    <div class="click-counter">
+      <div class="section-title">点击计数器</div>
+      <div class="counter-value" id="counter">0</div>
+      <button class="btn btn-primary btn-lg" id="counterBtn">
+        👆 点击我
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // 点击计数器
+    let count = 0;
+    const counter = document.getElementById('counter');
+    const counterBtn = document.getElementById('counterBtn');
+
+    counterBtn.addEventListener('click', function(e) {
+      count++;
+      counter.textContent = count;
+      createRipple(e, this);
+    });
+
+    // 加载状态演示
+    const loadingBtn = document.getElementById('loadingBtn');
+    loadingBtn.addEventListener('click', function(e) {
+      createRipple(e, this);
+      this.classList.add('btn-loading');
+      this.disabled = true;
+
+      setTimeout(() => {
+        this.classList.remove('btn-loading');
+        this.disabled = false;
+        this.textContent = 'Loaded!';
+        setTimeout(() => {
+          this.textContent = 'Click to Load';
+        }, 1000);
+      }, 2000);
+    });
+
+    // 为所有按钮添加涟漪效果
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        if (!this.classList.contains('btn-loading')) {
+          createRipple(e, this);
+        }
+      });
+    });
+
+    function createRipple(e, btn) {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const ripple = document.createElement('span');
+      ripple.className = 'ripple';
+      ripple.style.left = x + 'px';
+      ripple.style.top = y + 'px';
+
+      btn.appendChild(ripple);
+
+      setTimeout(() => ripple.remove(), 600);
+    }
+  </script>
+</body>
+</html>

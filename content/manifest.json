@@ -1,0 +1,47 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-02-27T12:00:00Z",
+  "navigation": {
+    "documents": [
+      {
+        "id": "dashboard-docs",
+        "title": "Dashboard 文档",
+        "category": "元文档",
+        "items": [
+          {
+            "slug": "architecture",
+            "title": "架构设计",
+            "file": "00-dashboard/pm-dashboard-architecture.md",
+            "tags": ["架构", "设计"],
+            "created": "2026-02-27",
+            "updated": "2026-02-27"
+          },
+          {
+            "slug": "user-guide",
+            "title": "使用指南",
+            "file": "00-dashboard/user-guide.md",
+            "tags": ["指南", "使用说明"],
+            "created": "2026-02-27",
+            "updated": "2026-02-27"
+          }
+        ]
+      },
+      {
+        "id": "getting-started",
+        "title": "入门指南",
+        "category": "示例",
+        "items": [
+          {
+            "slug": "intro",
+            "title": "欢迎使用",
+            "file": "01-getting-started/intro.md",
+            "tags": ["示例", "入门"],
+            "created": "2026-02-27",
+            "updated": "2026-02-27"
+          }
+        ]
+      }
+    ],
+    "demos": []
+  }
+}
