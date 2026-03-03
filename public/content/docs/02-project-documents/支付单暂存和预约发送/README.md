@@ -24,9 +24,9 @@
 |------|------|------|
 | Input | [input_v1.md](./input_v1.md) | ✅ 已归档 |
 | Spec | [spec_v1.md](./spec_v1.md) | ✅ 定稿 |
-| Design | [design_v1.md](./design_v1.md) | 🔄 草稿 |
-| Design 原型 | prototype_v1.pen（待保存至本目录） | 🔄 草稿 |
-| PRD | [prd_v1.md](./prd_v1.md) | 🔄 草稿 |
+| Design | [design_v1.md](./design_v1.md) | ✅ 定稿 |
+| Design 原型 | prototype_v1.pen（待保存至本目录） | ✅ 定稿 |
+| PRD | [prd_v1.md](./prd_v1.md) | ✅ 定稿 |
 | 执行计划 | [_plan.md](./_plan.md) | 持续更新 |
 
 ## 关键人员
