@@ -33,7 +33,7 @@ function getFileTypeLabel(fileType: string, language?: string) {
 export default async function DocPage({ params }: Props) {
   const { slug } = await params
   // 将数组拼接成完整路径，如 ['00-dashboard', 'pm-dashboard-architecture'] -> '00-dashboard/pm-dashboard-architecture.md'
-  const slugPath = Array.isArray(slug) ? slug.join('/') : slug
+  const slugPath = Array.isArray(slug) ? slug.map(decodeURIComponent).join('/') : decodeURIComponent(slug)
 
   try {
     const doc = await readDocument(slugPath)

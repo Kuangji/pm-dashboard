@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-03-03T01:28:02.531Z",
+  "updatedAt": "2026-03-03T11:34:30.652Z",
   "navigation": {
     "docs": [
       {
@@ -145,6 +145,110 @@
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "支付单暂存和预约发送",
+            "path": "02-project-documents/支付单暂存和预约发送",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "02-project-documents/支付单暂存和预约发送/README.md",
+                "slug": "02-project-documents/支付单暂存和预约发送/README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "_plan.md",
+                "path": "02-project-documents/支付单暂存和预约发送/_plan.md",
+                "slug": "02-project-documents/支付单暂存和预约发送/_plan.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "design_v1.md",
+                "path": "02-project-documents/支付单暂存和预约发送/design_v1.md",
+                "slug": "02-project-documents/支付单暂存和预约发送/design_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "input_v1.md",
+                "path": "02-project-documents/支付单暂存和预约发送/input_v1.md",
+                "slug": "02-project-documents/支付单暂存和预约发送/input_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "prd_v1.md",
+                "path": "02-project-documents/支付单暂存和预约发送/prd_v1.md",
+                "slug": "02-project-documents/支付单暂存和预约发送/prd_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "spec_v1.md",
+                "path": "02-project-documents/支付单暂存和预约发送/spec_v1.md",
+                "slug": "02-project-documents/支付单暂存和预约发送/spec_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "directory",
+                "name": "infra_screenshot",
+                "path": "02-project-documents/支付单暂存和预约发送/infra_screenshot",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "01-main-list.png",
+                    "path": "02-project-documents/支付单暂存和预约发送/infra_screenshot/01-main-list.png",
+                    "slug": "02-project-documents/支付单暂存和预约发送/infra_screenshot/01-main-list.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "02-create-payment-popup.png",
+                    "path": "02-project-documents/支付单暂存和预约发送/infra_screenshot/02-create-payment-popup.png",
+                    "slug": "02-project-documents/支付单暂存和预约发送/infra_screenshot/02-create-payment-popup.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "03-mindmap-part1.png",
+                    "path": "02-project-documents/支付单暂存和预约发送/infra_screenshot/03-mindmap-part1.png",
+                    "slug": "02-project-documents/支付单暂存和预约发送/infra_screenshot/03-mindmap-part1.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "04-payment-states.png",
+                    "path": "02-project-documents/支付单暂存和预约发送/infra_screenshot/04-payment-states.png",
+                    "slug": "02-project-documents/支付单暂存和预约发送/infra_screenshot/04-payment-states.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  }
+                ]
               }
             ]
           }

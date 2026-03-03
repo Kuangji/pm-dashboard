@@ -70,7 +70,7 @@ export function DocsSidebarClient({ manifest }: DocsSidebarClientProps) {
   const pathname = usePathname()
   // 从 pathname 中提取完整 slug（去掉 /docs/ 前缀和尾部斜杠）
   // 如 /docs/00-dashboard/file.md/ -> 00-dashboard/file.md
-  const currentSlug = pathname?.replace(/^\/docs\//, '').replace(/\/$/, '') || ''
+  const currentSlug = (pathname?.replace(/^\/docs\//, '').replace(/\/$/, '') || '').split('/').map(decodeURIComponent).join('/')
 
   // 初始化展开状态 - 包含当前 slug 的所有父级目录
   const initialExpanded = new Set<string>()
