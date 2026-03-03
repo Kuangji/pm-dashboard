@@ -1,6 +1,7 @@
 ---
 title: PM Dashboard 架构设计
 created: 2026-02-27
+updated: 2026-03-03
 author: 匡济
 tags: [架构, Dashboard, Next.js]
 ---
@@ -9,14 +10,14 @@ tags: [架构, Dashboard, Next.js]
 
 ## 概述
 
-PM Dashboard 是一个基于 Next.js 的产品文档与原型展示系统，采用**手动挑选 + 构建同步**的架构模式。
+PM Dashboard 是一个基于 Next.js 的产品文档与原型展示系统，采用**本地预同步 + Vercel 直接部署**的架构模式。
 
 ## 核心原则
 
 1. **内容与展示解耦** - 内容由 `drafts/publish/` 管理，展示层完全独立
 2. **显式控制** - 通过 `manifest.json` 显式声明要展示的内容
 3. **单向同步** - 构建脚本只复制文件，不修改 Dashboard 代码
-4. **静态导出** - 生产环境为纯静态站点，可部署到任意托管服务
+4. **本地预同步** - 内容在本地同步并提交到 Git，Vercel 直接部署已提交的内容
 
 ## 架构图
 
@@ -34,9 +35,10 @@ pm-dashboard/
 │   ├── docs/                # 文档页面
 │   ├── demos/               # Demo 列表
 │   └── components/          # 共享组件
-├── content/                 # 同步后的内容
-├── public/demos/            # Demo 静态文件
-└── dist/                    # 构建输出
+├── content/                 # 内容源（Markdown）
+├── public/content/docs/     # 同步后的文档
+├── public/demos/            # 同步后的 Demo 静态文件
+└── .next/                   # 构建输出（Vercel 原生 Runtime）
 ```
 
 ## 目录结构
@@ -120,18 +122,22 @@ pm-dashboard/
 ## 构建流程
 
 ```bash
-# 1. 同步内容
-npm run sync
-# - 复制 manifest.json → content/
-# - 复制 documents/* → content/docs/
-# - 复制 demos/* → public/demos/
-
-# 2. 开发预览
+# 1. 开发模式（自动同步）
 npm run dev
+# - 同步 documents/* → public/content/docs/
+# - 同步 demos/* → public/demos/
+# - 生成 manifest.json
+# - 启动开发服务器
 
-# 3. 生产构建
-npm run build
-# 生成 dist/ 目录，包含完整静态站点
+# 2. 手动同步内容
+npm run sync
+
+# 3. 提交同步后的内容
+git add public/content/ public/demos/
+git commit -m "同步内容更新"
+
+# 4. 推送后 Vercel 自动部署
+git push
 ```
 
 ## 设计决策
@@ -140,7 +146,7 @@ npm run build
 |------|------|------|
 | 内容管理 | 手动 manifest.json | 显式控制，避免意外暴露 |
 | Demo 托管 | public/demos/ 静态文件 | Next.js 原生支持，无路径问题 |
-| 渲染模式 | SSG (静态生成) | 利于部署，无需服务器 |
+| 渲染模式 | Vercel 原生 Runtime | 支持 SSR，无需静态导出 |
 | Markdown 引擎 | react-markdown | 完整的 GFM 支持，可扩展 |
 | 同步策略 | 单向复制 | Dashboard 代码稳定，内容独立 |
 
