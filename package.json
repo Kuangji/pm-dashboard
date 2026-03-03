@@ -5,7 +5,8 @@
   "scripts": {
     "sync-content": "tsx scripts/sync-content.ts",
     "generate-manifest": "npx tsx scripts/generate-manifest.ts",
-    "sync": "npm run sync-content && npm run generate-manifest",
+    "update-readme": "npx tsx scripts/update-readme.ts",
+    "sync": "npm run sync-content && npm run generate-manifest && npm run update-readme",
     "dev": "npm run sync && next dev",
     "build": "npm run generate-manifest && next build",
     "build:ci": "bash scripts/ci-build.sh",

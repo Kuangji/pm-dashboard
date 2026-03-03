@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-03-03T12:03:03.512Z",
+  "updatedAt": "2026-03-03T12:47:42.751Z",
   "navigation": {
     "docs": [
       {
@@ -255,236 +255,195 @@
         ]
       },
       {
-        "type": "file",
-        "name": "PLAN-multi-file-type-support.md",
-        "path": "PLAN-multi-file-type-support.md",
-        "slug": "PLAN-multi-file-type-support.md",
-        "fileType": "markdown",
-        "isText": true,
-        "isImage": false
-      },
-      {
-        "type": "file",
-        "name": "notes.txt",
-        "path": "notes.txt",
-        "slug": "notes.txt",
-        "fileType": "text",
-        "isText": true,
-        "isImage": false
-      },
-      {
-        "type": "file",
-        "name": "sample-config.json",
-        "path": "sample-config.json",
-        "slug": "sample-config.json",
-        "fileType": "json",
-        "language": "json",
-        "isText": true,
-        "isImage": false
-      },
-      {
-        "type": "file",
-        "name": "sample-data.yaml",
-        "path": "sample-data.yaml",
-        "slug": "sample-data.yaml",
-        "fileType": "yaml",
-        "language": "yaml",
-        "isText": true,
-        "isImage": false
-      },
-      {
-        "type": "file",
-        "name": "styles.css",
-        "path": "styles.css",
-        "slug": "styles.css",
-        "fileType": "code",
-        "language": "css",
-        "isText": true,
-        "isImage": false
-      },
-      {
         "type": "directory",
-        "name": "nox_ai_transform_quick_validation",
-        "path": "nox_ai_transform_quick_validation",
+        "name": "03-research",
+        "path": "03-research",
         "children": [
           {
-            "type": "file",
-            "name": "README.md",
-            "path": "nox_ai_transform_quick_validation/README.md",
-            "slug": "nox_ai_transform_quick_validation/README.md",
-            "fileType": "markdown",
-            "isText": true,
-            "isImage": false
-          },
-          {
-            "type": "file",
-            "name": "_plan.md",
-            "path": "nox_ai_transform_quick_validation/_plan.md",
-            "slug": "nox_ai_transform_quick_validation/_plan.md",
-            "fileType": "markdown",
-            "isText": true,
-            "isImage": false
-          },
-          {
             "type": "directory",
-            "name": "00_executive_summary",
-            "path": "nox_ai_transform_quick_validation/00_executive_summary",
+            "name": "nox_ai_transform_quick_validation",
+            "path": "03-research/nox_ai_transform_quick_validation",
             "children": [
               {
                 "type": "file",
-                "name": "EXECUTIVE_SUMMARY.md",
-                "path": "nox_ai_transform_quick_validation/00_executive_summary/EXECUTIVE_SUMMARY.md",
-                "slug": "nox_ai_transform_quick_validation/00_executive_summary/EXECUTIVE_SUMMARY.md",
-                "fileType": "markdown",
-                "isText": true,
-                "isImage": false
-              }
-            ]
-          },
-          {
-            "type": "directory",
-            "name": "01_market_scan",
-            "path": "nox_ai_transform_quick_validation/01_market_scan",
-            "children": [
-              {
-                "type": "file",
-                "name": "phase1_summary.md",
-                "path": "nox_ai_transform_quick_validation/01_market_scan/phase1_summary.md",
-                "slug": "nox_ai_transform_quick_validation/01_market_scan/phase1_summary.md",
+                "name": "README.md",
+                "path": "03-research/nox_ai_transform_quick_validation/README.md",
+                "slug": "03-research/nox_ai_transform_quick_validation/README.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
               },
               {
                 "type": "file",
-                "name": "scan_1_ai_agent_creator_economy.md",
-                "path": "nox_ai_transform_quick_validation/01_market_scan/scan_1_ai_agent_creator_economy.md",
-                "slug": "nox_ai_transform_quick_validation/01_market_scan/scan_1_ai_agent_creator_economy.md",
+                "name": "_plan.md",
+                "path": "03-research/nox_ai_transform_quick_validation/_plan.md",
+                "slug": "03-research/nox_ai_transform_quick_validation/_plan.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
               },
               {
-                "type": "file",
-                "name": "scan_2_influencer_marketing_automation.md",
-                "path": "nox_ai_transform_quick_validation/01_market_scan/scan_2_influencer_marketing_automation.md",
-                "slug": "nox_ai_transform_quick_validation/01_market_scan/scan_2_influencer_marketing_automation.md",
-                "fileType": "markdown",
-                "isText": true,
-                "isImage": false
+                "type": "directory",
+                "name": "00_executive_summary",
+                "path": "03-research/nox_ai_transform_quick_validation/00_executive_summary",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "EXECUTIVE_SUMMARY.md",
+                    "path": "03-research/nox_ai_transform_quick_validation/00_executive_summary/EXECUTIVE_SUMMARY.md",
+                    "slug": "03-research/nox_ai_transform_quick_validation/00_executive_summary/EXECUTIVE_SUMMARY.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
               },
               {
-                "type": "file",
-                "name": "scan_3_data_mcp_provider.md",
-                "path": "nox_ai_transform_quick_validation/01_market_scan/scan_3_data_mcp_provider.md",
-                "slug": "nox_ai_transform_quick_validation/01_market_scan/scan_3_data_mcp_provider.md",
-                "fileType": "markdown",
-                "isText": true,
-                "isImage": false
+                "type": "directory",
+                "name": "01_market_scan",
+                "path": "03-research/nox_ai_transform_quick_validation/01_market_scan",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "phase1_summary.md",
+                    "path": "03-research/nox_ai_transform_quick_validation/01_market_scan/phase1_summary.md",
+                    "slug": "03-research/nox_ai_transform_quick_validation/01_market_scan/phase1_summary.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "scan_1_ai_agent_creator_economy.md",
+                    "path": "03-research/nox_ai_transform_quick_validation/01_market_scan/scan_1_ai_agent_creator_economy.md",
+                    "slug": "03-research/nox_ai_transform_quick_validation/01_market_scan/scan_1_ai_agent_creator_economy.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "scan_2_influencer_marketing_automation.md",
+                    "path": "03-research/nox_ai_transform_quick_validation/01_market_scan/scan_2_influencer_marketing_automation.md",
+                    "slug": "03-research/nox_ai_transform_quick_validation/01_market_scan/scan_2_influencer_marketing_automation.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "scan_3_data_mcp_provider.md",
+                    "path": "03-research/nox_ai_transform_quick_validation/01_market_scan/scan_3_data_mcp_provider.md",
+                    "slug": "03-research/nox_ai_transform_quick_validation/01_market_scan/scan_3_data_mcp_provider.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "scan_4_ai_kol_discovery.md",
+                    "path": "03-research/nox_ai_transform_quick_validation/01_market_scan/scan_4_ai_kol_discovery.md",
+                    "slug": "03-research/nox_ai_transform_quick_validation/01_market_scan/scan_4_ai_kol_discovery.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "scan_5_content_automation.md",
+                    "path": "03-research/nox_ai_transform_quick_validation/01_market_scan/scan_5_content_automation.md",
+                    "slug": "03-research/nox_ai_transform_quick_validation/01_market_scan/scan_5_content_automation.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "scan_6_brand_influencer_matching.md",
+                    "path": "03-research/nox_ai_transform_quick_validation/01_market_scan/scan_6_brand_influencer_matching.md",
+                    "slug": "03-research/nox_ai_transform_quick_validation/01_market_scan/scan_6_brand_influencer_matching.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "scan_7_tiktok_shop_ai.md",
+                    "path": "03-research/nox_ai_transform_quick_validation/01_market_scan/scan_7_tiktok_shop_ai.md",
+                    "slug": "03-research/nox_ai_transform_quick_validation/01_market_scan/scan_7_tiktok_shop_ai.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "scan_8_creator_data_monetization.md",
+                    "path": "03-research/nox_ai_transform_quick_validation/01_market_scan/scan_8_creator_data_monetization.md",
+                    "slug": "03-research/nox_ai_transform_quick_validation/01_market_scan/scan_8_creator_data_monetization.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
               },
               {
-                "type": "file",
-                "name": "scan_4_ai_kol_discovery.md",
-                "path": "nox_ai_transform_quick_validation/01_market_scan/scan_4_ai_kol_discovery.md",
-                "slug": "nox_ai_transform_quick_validation/01_market_scan/scan_4_ai_kol_discovery.md",
-                "fileType": "markdown",
-                "isText": true,
-                "isImage": false
+                "type": "directory",
+                "name": "02_user_research",
+                "path": "03-research/nox_ai_transform_quick_validation/02_user_research",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "customer_persona.md",
+                    "path": "03-research/nox_ai_transform_quick_validation/02_user_research/customer_persona.md",
+                    "slug": "03-research/nox_ai_transform_quick_validation/02_user_research/customer_persona.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "jobs_to_be_done.md",
+                    "path": "03-research/nox_ai_transform_quick_validation/02_user_research/jobs_to_be_done.md",
+                    "slug": "03-research/nox_ai_transform_quick_validation/02_user_research/jobs_to_be_done.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "phase2_insights.md",
+                    "path": "03-research/nox_ai_transform_quick_validation/02_user_research/phase2_insights.md",
+                    "slug": "03-research/nox_ai_transform_quick_validation/02_user_research/phase2_insights.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "reddit_insights.md",
+                    "path": "03-research/nox_ai_transform_quick_validation/02_user_research/reddit_insights.md",
+                    "slug": "03-research/nox_ai_transform_quick_validation/02_user_research/reddit_insights.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
               },
               {
-                "type": "file",
-                "name": "scan_5_content_automation.md",
-                "path": "nox_ai_transform_quick_validation/01_market_scan/scan_5_content_automation.md",
-                "slug": "nox_ai_transform_quick_validation/01_market_scan/scan_5_content_automation.md",
-                "fileType": "markdown",
-                "isText": true,
-                "isImage": false
-              },
-              {
-                "type": "file",
-                "name": "scan_6_brand_influencer_matching.md",
-                "path": "nox_ai_transform_quick_validation/01_market_scan/scan_6_brand_influencer_matching.md",
-                "slug": "nox_ai_transform_quick_validation/01_market_scan/scan_6_brand_influencer_matching.md",
-                "fileType": "markdown",
-                "isText": true,
-                "isImage": false
-              },
-              {
-                "type": "file",
-                "name": "scan_7_tiktok_shop_ai.md",
-                "path": "nox_ai_transform_quick_validation/01_market_scan/scan_7_tiktok_shop_ai.md",
-                "slug": "nox_ai_transform_quick_validation/01_market_scan/scan_7_tiktok_shop_ai.md",
-                "fileType": "markdown",
-                "isText": true,
-                "isImage": false
-              },
-              {
-                "type": "file",
-                "name": "scan_8_creator_data_monetization.md",
-                "path": "nox_ai_transform_quick_validation/01_market_scan/scan_8_creator_data_monetization.md",
-                "slug": "nox_ai_transform_quick_validation/01_market_scan/scan_8_creator_data_monetization.md",
-                "fileType": "markdown",
-                "isText": true,
-                "isImage": false
-              }
-            ]
-          },
-          {
-            "type": "directory",
-            "name": "02_user_research",
-            "path": "nox_ai_transform_quick_validation/02_user_research",
-            "children": [
-              {
-                "type": "file",
-                "name": "customer_persona.md",
-                "path": "nox_ai_transform_quick_validation/02_user_research/customer_persona.md",
-                "slug": "nox_ai_transform_quick_validation/02_user_research/customer_persona.md",
-                "fileType": "markdown",
-                "isText": true,
-                "isImage": false
-              },
-              {
-                "type": "file",
-                "name": "jobs_to_be_done.md",
-                "path": "nox_ai_transform_quick_validation/02_user_research/jobs_to_be_done.md",
-                "slug": "nox_ai_transform_quick_validation/02_user_research/jobs_to_be_done.md",
-                "fileType": "markdown",
-                "isText": true,
-                "isImage": false
-              },
-              {
-                "type": "file",
-                "name": "phase2_insights.md",
-                "path": "nox_ai_transform_quick_validation/02_user_research/phase2_insights.md",
-                "slug": "nox_ai_transform_quick_validation/02_user_research/phase2_insights.md",
-                "fileType": "markdown",
-                "isText": true,
-                "isImage": false
-              },
-              {
-                "type": "file",
-                "name": "reddit_insights.md",
-                "path": "nox_ai_transform_quick_validation/02_user_research/reddit_insights.md",
-                "slug": "nox_ai_transform_quick_validation/02_user_research/reddit_insights.md",
-                "fileType": "markdown",
-                "isText": true,
-                "isImage": false
-              }
-            ]
-          },
-          {
-            "type": "directory",
-            "name": "03_opportunities",
-            "path": "nox_ai_transform_quick_validation/03_opportunities",
-            "children": [
-              {
-                "type": "file",
-                "name": "top5_opportunities.md",
-                "path": "nox_ai_transform_quick_validation/03_opportunities/top5_opportunities.md",
-                "slug": "nox_ai_transform_quick_validation/03_opportunities/top5_opportunities.md",
-                "fileType": "markdown",
-                "isText": true,
-                "isImage": false
+                "type": "directory",
+                "name": "03_opportunities",
+                "path": "03-research/nox_ai_transform_quick_validation/03_opportunities",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "top5_opportunities.md",
+                    "path": "03-research/nox_ai_transform_quick_validation/03_opportunities/top5_opportunities.md",
+                    "slug": "03-research/nox_ai_transform_quick_validation/03_opportunities/top5_opportunities.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
               }
             ]
           }

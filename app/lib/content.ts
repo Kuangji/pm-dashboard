@@ -152,7 +152,7 @@ export async function readDocument(slug: string): Promise<Document> {
     if (fileTypeInfo.category === 'markdown') {
       const parsed = matter(rawContent)
       frontmatter = parsed.data
-      content = parsed.content
+      content = parsed.content.replace(/<!--\s*CONTENT-TREE-(?:START|END)\s*-->\n?/g, '')
     } else if (fileTypeInfo.category === 'json') {
       // For JSON files, try to parse and format
       try {

@@ -2,21 +2,15 @@
 
 产品文档与原型展示平台 - 用于托管和展示从 `drafts/publish/` 同步的业务内容。
 
-## 架构
+## 内容目录
 
 ```
-pm-workspace/
-├── drafts/publish/           # 内容生产（业务文档、Demo）
-│   ├── documents/            # Markdown 文档
-│   └── demos/                # 构建后的 Demo
-│
-└── pm-dashboard/             # 内容展示平台（本仓库）
-    ├── docs/                 # 平台自身文档
-    ├── public/content/docs   # 同步后的业务文档
-    ├── public/demos-raw/     # 同步后的 Demo
-    └── scripts/
-        ├── sync-content.ts       # 从 drafts 拉取内容
-        └── generate-manifest.ts  # 生成导航 manifest
+├── 01-getting-started/  # 快速开始
+├── 02-project-documents/  # 项目文档
+│   ├── monitor_760/  # Monitor 监控功能
+│   └── 支付单暂存和预约发送/
+└── 03-research/  # 研究报告
+    └── nox_ai_transform_quick_validation/  # Nox AI转型快速验证
 ```
 
 ## 职责边界
