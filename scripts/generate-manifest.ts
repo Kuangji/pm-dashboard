@@ -4,6 +4,7 @@
  */
 
 import { promises as fs } from 'fs'
+import { execSync } from 'child_process'
 import path from 'path'
 import matter from 'gray-matter'
 import {
@@ -141,6 +142,53 @@ function cleanItems(items: NavItem[]): NavItem[] {
   })
 }
 
+/** 从 index.html 提取 <title> 和部分文本内容作为上下文 */
+async function extractHtmlContext(indexPath: string): Promise<string> {
+  try {
+    const html = await fs.readFile(indexPath, 'utf-8')
+    const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i)
+    const title = titleMatch ? titleMatch[1].trim() : ''
+    // 去掉标签，取前 300 字符作为内容摘要
+    const text = html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 300)
+    return [title, text].filter(Boolean).join('\n')
+  } catch {
+    return ''
+  }
+}
+
+/** 调用 claude -p 为 demo 生成 title/description/tags */
+async function generateDemoConfig(dirName: string, indexPath: string): Promise<Partial<DemoItem>> {
+  const htmlContext = await extractHtmlContext(indexPath)
+  const prompt = `以下是一个产品原型 Demo 的目录名和页面内容摘要，请生成展示卡片所需的元数据。
+
+目录名: ${dirName}
+页面内容摘要:
+${htmlContext || '（无）'}
+
+严格按以下 JSON 格式返回，不要添加任何其他文字或代码块标记：
+{
+  "title": "简短标题（10字以内）",
+  "description": "一句话描述这个 Demo 的功能和用途（20-40字）",
+  "tags": ["标签1", "标签2", "标签3"]
+}`
+
+  try {
+    const env = { ...process.env }
+    delete env.CLAUDECODE
+
+    const raw = execSync(`claude -p ${JSON.stringify(prompt)}`, {
+      encoding: 'utf-8',
+      timeout: 60000,
+      env,
+    })
+    const cleaned = raw.trim().replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '')
+    return JSON.parse(cleaned)
+  } catch (err) {
+    console.warn(`   ⚠️  claude 调用失败，使用默认配置: ${(err as Error).message.split('\n')[0]}`)
+    return { title: dirName, description: '', tags: [] }
+  }
+}
+
 async function scanDemos(): Promise<DemoItem[]> {
   try {
     const entries = await fs.readdir(DEMOS_DIR, { withFileTypes: true })
@@ -163,7 +211,10 @@ async function scanDemos(): Promise<DemoItem[]> {
           const configContent = await fs.readFile(configPath, 'utf-8')
           config = JSON.parse(configContent)
         } catch {
-          // 使用默认配置
+          // 没有 demo.json，调用 claude 自动生成
+          config = await generateDemoConfig(entry.name, indexPath)
+          await fs.writeFile(configPath, JSON.stringify(config, null, 2) + '\n', 'utf-8')
+          console.log(`   🤖 已生成 demo.json: ${entry.name}`)
         }
 
         demos.push({

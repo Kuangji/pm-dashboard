@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-03-03T12:47:42.751Z",
+  "updatedAt": "2026-03-04T00:56:25.958Z",
   "navigation": {
     "docs": [
       {
@@ -473,6 +473,18 @@
           "监控",
           "原型",
           "Next.js"
+        ]
+      },
+      {
+        "id": "poe_328_bd_website",
+        "title": "POE 3.28 BD 收集站",
+        "description": "流放之路3.28赛季开荒Build攻略收集展示网站，帮助玩家快速浏览和选择适合自己的开荒流派",
+        "path": "demos/poe_328_bd_website/index.html",
+        "thumbnail": "",
+        "tags": [
+          "游戏",
+          "POE",
+          "攻略收集"
         ]
       }
     ]

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POE 3.28 Mirage BD Collection | 流放之路3.28赛季开荒BD收集</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #ff5a36;
+            --primary-dark: #e54d2b;
+            --bg-dark: #0a0a0f;
+            --bg-card: #12121a;
+            --bg-elevated: #1a1a25;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0b0;
+            --text-muted: #606070;
+            --border: #2a2a3a;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --info: #3b82f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-dark) 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .title-section h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .title-section p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+        }
+
+        .stats-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .stat-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 0.75rem 1.25rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .stat-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--bg-elevated);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+        }
+
+        .stat-content .stat-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .stat-content .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .countdown {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 0.75rem 1.25rem;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        .controls {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+        }
+
+        .search-box {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .search-box input {
+            width: 100%;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            padding: 1rem 1rem 1rem 3rem;
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(255, 90, 54, 0.1);
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        .filter-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .filter-tag {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.875rem;
+        }
+
+        .filter-tag:hover, .filter-tag.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .builds-section {
+            padding: 2rem 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .builds-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .build-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .build-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .build-card.featured {
+            border-color: var(--primary);
+        }
+
+        .build-card.featured::before {
+            content: "🔥 热门";
+            position: absolute;
+            top: 0;
+            right: 1rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .build-card.new-skill {
+            border-color: var(--warning);
+        }
+
+        .build-card.new-skill::before {
+            content: "✨ 新技能";
+            position: absolute;
+            top: 0;
+            right: 1rem;
+            background: var(--warning);
+            color: black;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .build-header {
+            padding: 1.25rem;
+            background: linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-card) 100%);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .build-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .build-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .meta-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: 0.375rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .meta-tag.ascendancy {
+            background: rgba(59, 130, 246, 0.15);
+            color: #60a5fa;
+        }
+
+        .meta-tag.skill {
+            background: rgba(34, 197, 94, 0.15);
+            color: #4ade80;
+        }
+
+        .meta-tag.author {
+            background: rgba(245, 158, 11, 0.15);
+            color: #fbbf24;
+        }
+
+        .build-content {
+            padding: 1.25rem;
+            flex: 1;
+        }
+
+        .build-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .build-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-tag {
+            background: var(--bg-elevated);
+            padding: 0.25rem 0.625rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .build-links {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .build-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: 0.5rem 1rem;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+        }
+
+        .build-link:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        .footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .builds-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-bar {
+                justify-content: center;
+            }
+
+            .title-section h1 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">🦞</div>
+                    <div class="title-section">
+                        <h1>POE 3.28 Mirage BD Collection</h1>
+                        <p>流放之路3.28赛季开荒BD收集站 · 自动抓取主播与社区推荐</p>
+                    </div>
+                </div>
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-book"></i></div>
+                        <div class="stat-content">
+                            <div class="stat-value">59</div>
+                            <div class="stat-label">BD总数</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-content">
+                            <div class="stat-value">18</div>
+                            <div class="stat-label">主播来源</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                        <div class="stat-content">
+                            <div class="stat-value">03-02</div>
+                            <div class="stat-label">最后更新</div>
+                        </div>
+                    </div>
+                    <div class="countdown">
+                        <i class="fas fa-hourglass-half"></i>
+                        <span>赛季开启: 3月6日</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="controls">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="搜索BD名称、升华、技能或作者...">
+            </div>
+            <div class="filter-tags">
+                <span class="filter-tag active" data-filter="all">全部</span>
+                <span class="filter-tag" data-filter="hierophant">圣宗</span>
+                <span class="filter-tag" data-filter="chieftain">酋长</span>
+                <span class="filter-tag" data-filter="gladiator">卫士</span>
+                <span class="filter-tag" data-filter="inquisitor">审判者</span>
+                <span class="filter-tag" data-filter="necromancer">死灵</span>
+                <span class="filter-tag" data-filter="guardian">守护者</span>
+                <span class="filter-tag" data-filter="ascendant">使徒</span>
+                <span class="filter-tag" data-filter="warden">守望者</span>
+                <span class="filter-tag" data-filter="new-skill">新技能</span>
+                <span class="filter-tag" data-filter="reliquarian">Reliquarian</span>
+            </div>
+        </div>
+
+        <section class="builds-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-fire"></i>
+                    热门开荒BD推荐
+                </h2>
+            </div>
+            <div class="builds-grid" id="buildsGrid">
+                <!-- Builds will be inserted here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>数据来源: Mathil, GhazzyTV, Zizaran, Pohx, AOEAH, Reddit, 巴哈姆特等</p>
+            <p>自动收集于 <span class="highlight">2026-03-02</span> · 使用 <span class="highlight">OpenClaw</span> 构建</p>
+        </div>
+    </footer>
+
+    <script src="builds.js"></script>
+    <script>
+        // Use builds from external file (allBuilds is defined in builds.js)
+        const builds = allBuilds;
+
+        function getAscendancyName(key) {
+            const names = {
+                'hierophant': '圣宗',
+                'chieftain': '酋长',
+                'gladiator': '卫士',
+                'inquisitor': '审判者',
+                'necromancer': '死灵法师',
+                'guardian': '守护者',
+                'ascendant': '使徒',
+                'saboteur': '破坏者',
+                'occultist': '秘术师',
+                'slayer': '处刑者',
+                'berserker': '狂战士',
+                'raider': '侠客',
+                'assassin': '刺客',
+                'pathfinder': '追猎者',
+                'deadeye': '锐眼',
+                'warden': '守望者',
+                'elementalist': '元素使'
+            };
+            return names[key] || key;
+        }
+
+        function renderBuilds(buildsToRender) {
+            const grid = document.getElementById('buildsGrid');
+            grid.innerHTML = buildsToRender.map(build => `
+                <article class="build-card ${build.featured ? 'featured' : ''} ${build.newSkill ? 'new-skill' : ''}" data-ascendancy="${build.ascendancy}">
+                    <div class="build-header">
+                        <h3 class="build-title">${build.nameZh} <span style="color: var(--text-muted); font-size: 0.85rem;">${build.name}</span></h3>
+                        <div class="build-meta">
+                            <span class="meta-tag ascendancy"><i class="fas fa-user-circle"></i> ${getAscendancyName(build.ascendancy)}</span>
+                            <span class="meta-tag skill"><i class="fas fa-bolt"></i> ${build.skill}</span>
+                            <span class="meta-tag author"><i class="fas fa-user"></i> ${build.author}</span>
+                        </div>
+                    </div>
+                    <div class="build-content">
+                        <p class="build-description">${build.description}</p>
+                        <div class="build-features">
+                            ${build.features.map(f => `<span class="feature-tag">${f}</span>`).join('')}
+                        </div>
+                        ${build.links.length > 0 ? `
+                            <div class="build-links">
+                                ${build.links.map(link => `<a href="${link.url}" target="_blank" class="build-link"><i class="fas fa-external-link-alt"></i> ${link.text}</a>`).join('')}
+                            </div>
+                        ` : ''}
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        // Search Functionality
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const filtered = builds.filter(build => 
+                build.name.toLowerCase().includes(searchTerm) ||
+                build.nameZh.toLowerCase().includes(searchTerm) ||
+                build.author.toLowerCase().includes(searchTerm) ||
+                build.skill.toLowerCase().includes(searchTerm) ||
+                build.tags.some(tag => tag.toLowerCase().includes(searchTerm))
+            );
+            renderBuilds(filtered);
+        });
+
+        // Filter Tags
+        document.querySelectorAll('.filter-tag').forEach(tag => {
+            tag.addEventListener('click', () => {
+                document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+                tag.classList.add('active');
+                
+                const filter = tag.dataset.filter;
+                if (filter === 'all') {
+                    renderBuilds(builds);
+                } else if (filter === 'new-skill') {
+                    renderBuilds(builds.filter(b => b.newSkill));
+                } else if (filter === 'reliquarian') {
+                    renderBuilds(builds.filter(b => b.tags.includes('Reliquarian')));
+                } else {
+                    renderBuilds(builds.filter(b => b.ascendancy === filter));
+                }
+            });
+        });
+
+        // Initial Render
+        renderBuilds(builds);
+    </script>
+</body>
+</html>
