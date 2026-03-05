@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-03-05T03:12:43.515Z",
+  "updatedAt": "2026-03-05T13:17:51.923Z",
   "navigation": {
     "docs": [
       {
@@ -261,6 +261,138 @@
         "children": [
           {
             "type": "directory",
+            "name": "keyword_search_竞研",
+            "path": "03-research/keyword_search_竞研",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "03-research/keyword_search_竞研/README.md",
+                "slug": "03-research/keyword_search_竞研/README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "_plan.md",
+                "path": "03-research/keyword_search_竞研/_plan.md",
+                "slug": "03-research/keyword_search_竞研/_plan.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "调研简报.md",
+                "path": "03-research/keyword_search_竞研/调研简报.md",
+                "slug": "03-research/keyword_search_竞研/调研简报.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "directory",
+                "name": "01_raw_data",
+                "path": "03-research/keyword_search_竞研/01_raw_data",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "人工抽检样本.md",
+                    "path": "03-research/keyword_search_竞研/01_raw_data/人工抽检样本.md",
+                    "slug": "03-research/keyword_search_竞研/01_raw_data/人工抽检样本.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "人工抽检样本v2.md",
+                    "path": "03-research/keyword_search_竞研/01_raw_data/人工抽检样本v2.md",
+                    "slug": "03-research/keyword_search_竞研/01_raw_data/人工抽检样本v2.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "竞品A_raw.md",
+                    "path": "03-research/keyword_search_竞研/01_raw_data/竞品A_raw.md",
+                    "slug": "03-research/keyword_search_竞研/01_raw_data/竞品A_raw.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "02_ux_flows",
+                "path": "03-research/keyword_search_竞研/02_ux_flows",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "tarsight_flow.md",
+                    "path": "03-research/keyword_search_竞研/02_ux_flows/tarsight_flow.md",
+                    "slug": "03-research/keyword_search_竞研/02_ux_flows/tarsight_flow.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "03_teardown",
+                "path": "03-research/keyword_search_竞研/03_teardown",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "tarsight_teardown.md",
+                    "path": "03-research/keyword_search_竞研/03_teardown/tarsight_teardown.md",
+                    "slug": "03-research/keyword_search_竞研/03_teardown/tarsight_teardown.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "04_matrix",
+                "path": "03-research/keyword_search_竞研/04_matrix",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "feature_comparison.md",
+                    "path": "03-research/keyword_search_竞研/04_matrix/feature_comparison.md",
+                    "slug": "03-research/keyword_search_竞研/04_matrix/feature_comparison.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "05_insights",
+                "path": "03-research/keyword_search_竞研/05_insights",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "竞品洞察.md",
+                    "path": "03-research/keyword_search_竞研/05_insights/竞品洞察.md",
+                    "slug": "03-research/keyword_search_竞研/05_insights/竞品洞察.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "directory",
             "name": "nox_ai_transform_quick_validation",
             "path": "03-research/nox_ai_transform_quick_validation",
             "children": [
@@ -477,14 +609,14 @@
       },
       {
         "id": "poe_328_bd_website",
-        "title": "POE 3.28 开荒BD收集",
-        "description": "流放之路3.28赛季开荒BD收集网站，提供多种角色构建方案的展示与参考。",
+        "title": "POE 3.28 BD 收集",
+        "description": "流放之路 3.28 赛季开荒 BD 收集展示网站，聚合赛季热门构筑供玩家参考选择。",
         "path": "demos/poe_328_bd_website/index.html",
         "thumbnail": "",
         "tags": [
           "游戏",
-          "流放之路",
-          "BD推荐"
+          "POE",
+          "BD 收集"
         ]
       }
     ]
