@@ -157,7 +157,7 @@ function TreeItem({ item, level, currentSlug, expanded, onToggle }: TreeItemProp
           <span className="truncate">{item.name}</span>
         </Link>
         <a
-          href={`/content/docs/${encodedSlug}`}
+          href={`/api/download/${encodedSlug}`}
           download
           onClick={e => e.stopPropagation()}
           className="absolute right-1 top-1/2 -translate-y-1/2 p-1 rounded opacity-0 group-hover:opacity-100 text-[#57606a] hover:text-[#0969da] hover:bg-[#eaeef2] transition-opacity"

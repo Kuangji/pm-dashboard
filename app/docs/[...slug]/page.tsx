@@ -54,7 +54,7 @@ export default async function DocPage({ params }: Props) {
             </div>
             {/* Download button */}
             <a
-              href={`/content/docs/${slug.map(encodeURIComponent).join('/')}`}
+              href={`/api/download/${slug.map(encodeURIComponent).join('/')}`}
               download
               className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-[#57606a] hover:text-[#0969da] hover:bg-[#eaeef2] rounded-md transition-colors shrink-0"
               title="下载源文件"
