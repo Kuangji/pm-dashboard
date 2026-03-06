@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
-import { FileText, Code, Image, File } from 'lucide-react'
+import { FileText, Code, Image, File, Download } from 'lucide-react'
 
 export interface NavItem {
   type: 'file' | 'directory'
@@ -148,13 +148,23 @@ function TreeItem({ item, level, currentSlug, expanded, onToggle }: TreeItemProp
   )
 
   if (item.type === 'file') {
+    const encodedSlug = item.slug!.split('/').map(encodeURIComponent).join('/')
     return (
-      <div style={{ paddingLeft: `${level * 16}px` }}>
+      <div style={{ paddingLeft: `${level * 16}px` }} className="relative group">
         {/* 保留完整文件名，对路径的每一部分分别编码 */}
-        <Link href={`/docs/${item.slug!.split('/').map(encodeURIComponent).join('/')}`} className={itemClasses}>
+        <Link href={`/docs/${encodedSlug}`} className={itemClasses}>
           <FileTypeIcon item={item} />
           <span className="truncate">{item.name}</span>
         </Link>
+        <a
+          href={`/content/docs/${encodedSlug}`}
+          download
+          onClick={e => e.stopPropagation()}
+          className="absolute right-1 top-1/2 -translate-y-1/2 p-1 rounded opacity-0 group-hover:opacity-100 text-[#57606a] hover:text-[#0969da] hover:bg-[#eaeef2] transition-opacity"
+          title="下载源文件"
+        >
+          <Download className="w-3.5 h-3.5" />
+        </a>
       </div>
     )
   }

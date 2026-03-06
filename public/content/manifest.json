@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-03-05T13:17:51.923Z",
+  "updatedAt": "2026-03-06T03:08:14.237Z",
   "navigation": {
     "docs": [
       {
@@ -609,14 +609,14 @@
       },
       {
         "id": "poe_328_bd_website",
-        "title": "POE 3.28 BD 收集",
-        "description": "流放之路 3.28 赛季开荒 BD 收集展示网站，聚合赛季热门构筑供玩家参考选择。",
+        "title": "POE 3.28 开荒BD合集",
+        "description": "流放之路3.28赛季幻象BD收集网站，聚合展示赛季热门开荒流派与配装方案",
         "path": "demos/poe_328_bd_website/index.html",
         "thumbnail": "",
         "tags": [
           "游戏",
           "POE",
-          "BD 收集"
+          "BD合集"
         ]
       }
     ]

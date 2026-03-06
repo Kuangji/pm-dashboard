@@ -1,7 +1,7 @@
 import { readDocument, readManifest, flattenNavTree } from '@/app/lib/content'
 import { DocumentViewer } from '@/app/components/DocumentViewer'
 import { notFound } from 'next/navigation'
-import { Calendar, Tag, FileCode, FileText, Image, File } from 'lucide-react'
+import { Calendar, Tag, FileCode, FileText, Image, File, Download } from 'lucide-react'
 
 interface Props {
   params: Promise<{ slug: string[] }>
@@ -41,15 +41,27 @@ export default async function DocPage({ params }: Props) {
     return (
       <>
         <header className="mb-8 pb-4 border-b border-[#d0d7de]">
-          <div className="flex items-center gap-3 mb-3">
-            <h1 className="text-3xl font-semibold text-[#24292f]" style={{ fontSize: '2em', fontWeight: 600 }}>
-              {doc.title}
-            </h1>
-            {/* File type badge */}
-            <span className="flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium text-gray-600 bg-gray-100 rounded-full">
-              {getFileTypeIcon(doc.fileType, doc.isImage)}
-              {getFileTypeLabel(doc.fileType, doc.language)}
-            </span>
+          <div className="flex items-start justify-between gap-4 mb-3">
+            <div className="flex items-center gap-3">
+              <h1 className="text-3xl font-semibold text-[#24292f]" style={{ fontSize: '2em', fontWeight: 600 }}>
+                {doc.title}
+              </h1>
+              {/* File type badge */}
+              <span className="flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium text-gray-600 bg-gray-100 rounded-full">
+                {getFileTypeIcon(doc.fileType, doc.isImage)}
+                {getFileTypeLabel(doc.fileType, doc.language)}
+              </span>
+            </div>
+            {/* Download button */}
+            <a
+              href={`/content/docs/${slug.map(encodeURIComponent).join('/')}`}
+              download
+              className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-[#57606a] hover:text-[#0969da] hover:bg-[#eaeef2] rounded-md transition-colors shrink-0"
+              title="下载源文件"
+            >
+              <Download className="w-4 h-4" />
+              下载源文件
+            </a>
           </div>
           <div className="flex flex-wrap items-center gap-4 text-sm text-[#57606a]">
             {doc.created && (
