@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>设计探索 Playground</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0f0f11;
+    --surface: #18181b;
+    --surface2: #222226;
+    --border: #2e2e34;
+    --text: #e4e4e7;
+    --text-muted: #71717a;
+    --accent: #6366f1;
+    --accent-dim: #6366f122;
+    --slider-thumb: #6366f1;
+    --radius: 8px;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-size: 13px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: 48px 1fr;
+    overflow: hidden;
+  }
+
+  /* ─── Header ─── */
+  header {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+  header h1 { font-size: 14px; font-weight: 600; letter-spacing: -0.01em; }
+  header span { color: var(--text-muted); font-size: 12px; }
+
+  .presets {
+    margin-left: auto;
+    display: flex;
+    gap: 6px;
+  }
+  .preset-btn {
+    padding: 4px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 11px;
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .preset-btn:hover { border-color: var(--accent); color: var(--text); }
+  .preset-btn.active { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+
+  /* ─── Controls ─── */
+  aside {
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    padding: 16px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ctrl-group { display: flex; flex-direction: column; gap: 12px; }
+  .ctrl-group-title {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .ctrl { display: flex; flex-direction: column; gap: 5px; }
+  .ctrl-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ctrl-label { font-size: 12px; color: var(--text-muted); }
+  .ctrl-value {
+    font-size: 11px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    color: var(--accent);
+    min-width: 48px;
+    text-align: right;
+  }
+
+  input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 3px;
+    background: var(--border);
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--slider-thumb);
+    cursor: pointer;
+    box-shadow: 0 0 0 3px var(--accent-dim);
+  }
+  input[type=range]::-webkit-slider-thumb:active {
+    box-shadow: 0 0 0 5px var(--accent-dim);
+  }
+
+  input[type=color] {
+    -webkit-appearance: none;
+    width: 32px;
+    height: 22px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: none;
+    cursor: pointer;
+    padding: 1px;
+  }
+  input[type=color]::-webkit-color-swatch-wrapper { padding: 0; }
+  input[type=color]::-webkit-color-swatch { border: none; border-radius: 3px; }
+
+  .toggle-row { display: flex; align-items: center; justify-content: space-between; }
+  .toggle {
+    position: relative;
+    width: 32px;
+    height: 18px;
+  }
+  .toggle input { opacity: 0; width: 0; height: 0; }
+  .toggle-slider {
+    position: absolute;
+    inset: 0;
+    background: var(--border);
+    border-radius: 9px;
+    cursor: pointer;
+    transition: .2s;
+  }
+  .toggle-slider::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 3px;
+    top: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: .2s;
+  }
+  .toggle input:checked + .toggle-slider { background: var(--accent); }
+  .toggle input:checked + .toggle-slider::before { transform: translateX(14px); }
+
+  select {
+    width: 100%;
+    padding: 5px 8px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    color: var(--text);
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+  }
+  select:focus { border-color: var(--accent); }
+
+  .layout-picker {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  .layout-option {
+    padding: 6px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-muted);
+    transition: all .15s;
+    background: transparent;
+  }
+  .layout-option:hover { border-color: var(--accent); color: var(--text); }
+  .layout-option.active { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+  .layout-icon { font-size: 18px; margin-bottom: 2px; }
+
+  /* ─── Main area ─── */
+  main {
+    display: grid;
+    grid-template-rows: 1fr 180px;
+    overflow: hidden;
+  }
+
+  /* Preview */
+  .preview-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bg-toggle {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 10;
+  }
+  .bg-toggle button {
+    padding: 5px 12px;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 11px;
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .bg-toggle button.active {
+    background: var(--surface2);
+    color: var(--text);
+  }
+
+  #preview-bg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .3s;
+    padding: 40px;
+  }
+
+  #preview-card {
+    position: relative;
+    transition: all .25s cubic-bezier(.4,0,.2,1);
+    cursor: pointer;
+  }
+
+  .card-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    flex-shrink: 0;
+    transition: inherit;
+  }
+
+  .card-body { display: flex; flex-direction: column; }
+  .card-tag {
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    transition: inherit;
+  }
+  .card-title { font-weight: 700; line-height: 1.25; transition: inherit; }
+  .card-desc { line-height: 1.6; transition: inherit; }
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+  .card-btn {
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: inherit;
+  }
+  .card-meta { transition: inherit; }
+
+  /* ─── Prompt output ─── */
+  .prompt-area {
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    padding: 14px 16px;
+    gap: 10px;
+  }
+
+  .prompt-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .prompt-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .copy-btn {
+    padding: 4px 12px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 11px;
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .copy-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .copy-btn.copied { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+
+  #prompt-text {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px 14px;
+    min-height: 60px;
+    max-height: 100px;
+    overflow-y: auto;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <h1>设计探索</h1>
+  <span>卡片组件 · 实时预览</span>
+  <div class="presets">
+    <button class="preset-btn" data-preset="minimal">简约</button>
+    <button class="preset-btn" data-preset="material">Material</button>
+    <button class="preset-btn" data-preset="soft">柔和</button>
+    <button class="preset-btn" data-preset="glass">玻璃态</button>
+    <button class="preset-btn" data-preset="brutal">极简硬边</button>
+  </div>
+</header>
+
+<!-- Controls -->
+<aside>
+
+  <!-- 布局结构 -->
+  <div class="ctrl-group">
+    <div class="ctrl-group-title">布局结构</div>
+    <div class="ctrl">
+      <div class="ctrl-label">卡片方向</div>
+      <div class="layout-picker">
+        <button class="layout-option active" data-layout="vertical">
+          <div class="layout-icon">☷</div>
+          垂直
+        </button>
+        <button class="layout-option" data-layout="horizontal">
+          <div class="layout-icon">☰</div>
+          横向
+        </button>
+      </div>
+    </div>
+    <div class="ctrl">
+      <div class="ctrl-row">
+        <span class="ctrl-label">卡片宽度</span>
+        <span class="ctrl-value" id="val-width">320px</span>
+      </div>
+      <input type="range" id="ctrl-width" min="200" max="520" step="10" value="320">
+    </div>
+    <div class="ctrl toggle-row">
+      <span class="ctrl-label">显示图片区域</span>
+      <label class="toggle">
+        <input type="checkbox" id="ctrl-showImage" checked>
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+    <div class="ctrl toggle-row">
+      <span class="ctrl-label">显示底部按钮</span>
+      <label class="toggle">
+        <input type="checkbox" id="ctrl-showFooter" checked>
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <!-- 间距 -->
+  <div class="ctrl-group">
+    <div class="ctrl-group-title">间距</div>
+    <div class="ctrl">
+      <div class="ctrl-row">
+        <span class="ctrl-label">内边距</span>
+        <span class="ctrl-value" id="val-padding">24px</span>
+      </div>
+      <input type="range" id="ctrl-padding" min="8" max="48" step="4" value="24">
+    </div>
+    <div class="ctrl">
+      <div class="ctrl-row">
+        <span class="ctrl-label">内容间距</span>
+        <span class="ctrl-value" id="val-gap">12px</span>
+      </div>
+      <input type="range" id="ctrl-gap" min="4" max="32" step="2" value="12">
+    </div>
+    <div class="ctrl">
+      <div class="ctrl-row">
+        <span class="ctrl-label">图片高度</span>
+        <span class="ctrl-value" id="val-imageH">160px</span>
+      </div>
+      <input type="range" id="ctrl-imageH" min="80" max="280" step="8" value="160">
+    </div>
+  </div>
+
+  <!-- 颜色 -->
+  <div class="ctrl-group">
+    <div class="ctrl-group-title">颜色</div>
+    <div class="ctrl toggle-row">
+      <span class="ctrl-label">卡片背景</span>
+      <input type="color" id="ctrl-cardBg" value="#ffffff">
+    </div>
+    <div class="ctrl toggle-row">
+      <span class="ctrl-label">强调色</span>
+      <input type="color" id="ctrl-accent" value="#6366f1">
+    </div>
+    <div class="ctrl toggle-row">
+      <span class="ctrl-label">标签颜色</span>
+      <input type="color" id="ctrl-tagColor" value="#6366f1">
+    </div>
+    <div class="ctrl">
+      <div class="ctrl-row">
+        <span class="ctrl-label">背景不透明度</span>
+        <span class="ctrl-value" id="val-bgOpacity">100%</span>
+      </div>
+      <input type="range" id="ctrl-bgOpacity" min="10" max="100" step="5" value="100">
+    </div>
+    <div class="ctrl toggle-row">
+      <span class="ctrl-label">图片背景色</span>
+      <input type="color" id="ctrl-imageBg" value="#f0f0ff">
+    </div>
+  </div>
+
+  <!-- 圆角与边框 -->
+  <div class="ctrl-group">
+    <div class="ctrl-group-title">圆角与边框</div>
+    <div class="ctrl">
+      <div class="ctrl-row">
+        <span class="ctrl-label">卡片圆角</span>
+        <span class="ctrl-value" id="val-radius">16px</span>
+      </div>
+      <input type="range" id="ctrl-radius" min="0" max="32" step="2" value="16">
+    </div>
+    <div class="ctrl">
+      <div class="ctrl-row">
+        <span class="ctrl-label">按钮圆角</span>
+        <span class="ctrl-value" id="val-btnRadius">8px</span>
+      </div>
+      <input type="range" id="ctrl-btnRadius" min="0" max="28" step="2" value="8">
+    </div>
+    <div class="ctrl toggle-row">
+      <span class="ctrl-label">显示边框</span>
+      <label class="toggle">
+        <input type="checkbox" id="ctrl-showBorder">
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+    <div class="ctrl">
+      <div class="ctrl-row">
+        <span class="ctrl-label">边框粗细</span>
+        <span class="ctrl-value" id="val-borderW">1px</span>
+      </div>
+      <input type="range" id="ctrl-borderW" min="1" max="4" step="1" value="1">
+    </div>
+    <div class="ctrl toggle-row">
+      <span class="ctrl-label">边框颜色</span>
+      <input type="color" id="ctrl-borderColor" value="#e4e4e7">
+    </div>
+  </div>
+
+  <!-- 阴影 -->
+  <div class="ctrl-group">
+    <div class="ctrl-group-title">阴影</div>
+    <div class="ctrl toggle-row">
+      <span class="ctrl-label">启用阴影</span>
+      <label class="toggle">
+        <input type="checkbox" id="ctrl-showShadow" checked>
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+    <div class="ctrl">
+      <div class="ctrl-row">
+        <span class="ctrl-label">垂直偏移</span>
+        <span class="ctrl-value" id="val-shadowY">8px</span>
+      </div>
+      <input type="range" id="ctrl-shadowY" min="0" max="40" step="2" value="8">
+    </div>
+    <div class="ctrl">
+      <div class="ctrl-row">
+        <span class="ctrl-label">模糊半径</span>
+        <span class="ctrl-value" id="val-shadowBlur">24px</span>
+      </div>
+      <input type="range" id="ctrl-shadowBlur" min="0" max="80" step="4" value="24">
+    </div>
+    <div class="ctrl">
+      <div class="ctrl-row">
+        <span class="ctrl-label">不透明度</span>
+        <span class="ctrl-value" id="val-shadowOpacity">10%</span>
+      </div>
+      <input type="range" id="ctrl-shadowOpacity" min="0" max="50" step="2" value="10">
+    </div>
+  </div>
+
+  <!-- 排版 -->
+  <div class="ctrl-group">
+    <div class="ctrl-group-title">排版</div>
+    <div class="ctrl">
+      <div class="ctrl-label">字体</div>
+      <select id="ctrl-font">
+        <option value="system-ui, sans-serif">系统默认</option>
+        <option value="'Georgia', serif">Georgia（衬线）</option>
+        <option value="'Inter', system-ui, sans-serif">Inter</option>
+        <option value="'SF Mono', monospace">Monospace</option>
+      </select>
+    </div>
+    <div class="ctrl">
+      <div class="ctrl-row">
+        <span class="ctrl-label">标题大小</span>
+        <span class="ctrl-value" id="val-titleSize">18px</span>
+      </div>
+      <input type="range" id="ctrl-titleSize" min="12" max="32" step="1" value="18">
+    </div>
+    <div class="ctrl">
+      <div class="ctrl-row">
+        <span class="ctrl-label">正文大小</span>
+        <span class="ctrl-value" id="val-bodySize">14px</span>
+      </div>
+      <input type="range" id="ctrl-bodySize" min="10" max="20" step="1" value="14">
+    </div>
+  </div>
+
+  <!-- 交互 -->
+  <div class="ctrl-group">
+    <div class="ctrl-group-title">交互效果</div>
+    <div class="ctrl">
+      <div class="ctrl-label">Hover 效果</div>
+      <select id="ctrl-hoverEffect">
+        <option value="none">无</option>
+        <option value="lift" selected>上浮 + 深阴影</option>
+        <option value="scale">轻微放大</option>
+        <option value="glow">发光边框</option>
+        <option value="darken">背景加深</option>
+      </select>
+    </div>
+    <div class="ctrl">
+      <div class="ctrl-label">过渡曲线</div>
+      <select id="ctrl-easing">
+        <option value="ease">Ease（默认）</option>
+        <option value="ease-in-out" selected>Ease In Out（平滑）</option>
+        <option value="cubic-bezier(.34,1.56,.64,1)">Spring（弹跳）</option>
+        <option value="linear">Linear（匀速）</option>
+      </select>
+    </div>
+    <div class="ctrl">
+      <div class="ctrl-row">
+        <span class="ctrl-label">过渡时长</span>
+        <span class="ctrl-value" id="val-duration">200ms</span>
+      </div>
+      <input type="range" id="ctrl-duration" min="50" max="600" step="50" value="200">
+    </div>
+  </div>
+
+</aside>
+
+<!-- Main area -->
+<main>
+  <div class="preview-area">
+    <div class="bg-toggle">
+      <button class="active" data-bg="light" onclick="setBg('light')">浅色</button>
+      <button data-bg="dark" onclick="setBg('dark')">深色</button>
+      <button data-bg="gradient" onclick="setBg('gradient')">渐变</button>
+    </div>
+
+    <div id="preview-bg">
+      <div id="preview-card">
+        <div id="card-image-wrap" class="card-image">🌿</div>
+        <div class="card-body" id="card-body">
+          <span class="card-tag" id="card-tag">产品设计</span>
+          <div class="card-title" id="card-title">设计系统实践指南</div>
+          <div class="card-desc" id="card-desc">探索如何构建一致、可扩展的组件库，提升团队协作效率与产品质量。</div>
+          <div class="card-footer" id="card-footer">
+            <span class="card-meta" id="card-meta">2 分钟阅读</span>
+            <button class="card-btn" id="card-btn">查看详情 →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prompt-area">
+    <div class="prompt-header">
+      <span class="prompt-label">生成的 Prompt</span>
+      <button class="copy-btn" id="copy-btn" onclick="copyPrompt()">复制 Prompt</button>
+    </div>
+    <div id="prompt-text"></div>
+  </div>
+</main>
+
+<script>
+// ── State ──────────────────────────────────────────────────────────
+const DEFAULTS = {
+  layout: 'vertical',
+  width: 320,
+  showImage: true,
+  showFooter: true,
+  padding: 24,
+  gap: 12,
+  imageH: 160,
+  cardBg: '#ffffff',
+  accent: '#6366f1',
+  tagColor: '#6366f1',
+  bgOpacity: 100,
+  imageBg: '#f0f0ff',
+  radius: 16,
+  btnRadius: 8,
+  showBorder: false,
+  borderW: 1,
+  borderColor: '#e4e4e7',
+  showShadow: true,
+  shadowY: 8,
+  shadowBlur: 24,
+  shadowOpacity: 10,
+  font: 'system-ui, sans-serif',
+  titleSize: 18,
+  bodySize: 14,
+  hoverEffect: 'lift',
+  easing: 'ease-in-out',
+  duration: 200,
+  bg: 'light',
+};
+
+const state = { ...DEFAULTS };
+
+// ── Presets ────────────────────────────────────────────────────────
+const PRESETS = {
+  minimal: {
+    radius: 8, padding: 20, gap: 10, showShadow: false, showBorder: true,
+    borderW: 1, borderColor: '#e4e4e7', cardBg: '#ffffff', accent: '#18181b',
+    tagColor: '#71717a', hoverEffect: 'darken', duration: 150, imageH: 140,
+    titleSize: 16, bodySize: 13, bgOpacity: 100,
+  },
+  material: {
+    radius: 12, padding: 20, gap: 12, showShadow: true, shadowY: 4, shadowBlur: 10,
+    shadowOpacity: 15, showBorder: false, cardBg: '#ffffff', accent: '#1976d2',
+    tagColor: '#1976d2', hoverEffect: 'lift', duration: 200, imageH: 200,
+    titleSize: 18, bodySize: 14, bgOpacity: 100,
+  },
+  soft: {
+    radius: 24, padding: 28, gap: 14, showShadow: true, shadowY: 16, shadowBlur: 48,
+    shadowOpacity: 8, showBorder: false, cardBg: '#faf9ff', accent: '#7c3aed',
+    tagColor: '#7c3aed', hoverEffect: 'lift', duration: 300, imageH: 180,
+    titleSize: 19, bodySize: 14, bgOpacity: 100,
+  },
+  glass: {
+    radius: 20, padding: 24, gap: 12, showShadow: true, shadowY: 8, shadowBlur: 32,
+    shadowOpacity: 12, showBorder: true, borderW: 1, borderColor: '#ffffff40',
+    cardBg: '#ffffff', bgOpacity: 40, accent: '#f0f9ff', tagColor: '#e0f2fe',
+    hoverEffect: 'glow', duration: 250, imageH: 160, titleSize: 18, bodySize: 13,
+  },
+  brutal: {
+    radius: 0, padding: 20, gap: 10, showShadow: true, shadowY: 6, shadowBlur: 0,
+    shadowOpacity: 100, showBorder: true, borderW: 3, borderColor: '#000000',
+    cardBg: '#ffffff', accent: '#000000', tagColor: '#000000',
+    hoverEffect: 'scale', duration: 100, imageH: 160, titleSize: 20, bodySize: 14,
+    bgOpacity: 100,
+  },
+};
+
+// ── Render ─────────────────────────────────────────────────────────
+const card = document.getElementById('preview-card');
+const cardImageWrap = document.getElementById('card-image-wrap');
+const cardBody = document.getElementById('card-body');
+const cardTag = document.getElementById('card-tag');
+const cardTitle = document.getElementById('card-title');
+const cardDesc = document.getElementById('card-desc');
+const cardFooter = document.getElementById('card-footer');
+const cardBtn = document.getElementById('card-btn');
+const cardMeta = document.getElementById('card-meta');
+const previewBg = document.getElementById('preview-bg');
+
+function hexToRgb(hex) {
+  const r = parseInt(hex.slice(1,3),16);
+  const g = parseInt(hex.slice(3,5),16);
+  const b = parseInt(hex.slice(5,7),16);
+  return `${r},${g},${b}`;
+}
+
+function renderPreview() {
+  const s = state;
+  const opacity = s.bgOpacity / 100;
+
+  // Layout
+  card.style.width = s.layout === 'vertical' ? s.width + 'px' : (s.width + 120) + 'px';
+  card.style.display = 'flex';
+  card.style.flexDirection = s.layout === 'vertical' ? 'column' : 'row';
+  card.style.gap = '0';
+  card.style.overflow = 'hidden';
+
+  // Bg
+  const rgb = hexToRgb(s.cardBg);
+  card.style.background = `rgba(${rgb},${opacity})`;
+
+  // Radius
+  card.style.borderRadius = s.radius + 'px';
+
+  // Border
+  card.style.border = s.showBorder
+    ? `${s.borderW}px solid ${s.borderColor}`
+    : 'none';
+
+  // Shadow
+  card.style.boxShadow = s.showShadow
+    ? `0 ${s.shadowY}px ${s.shadowBlur}px rgba(0,0,0,${s.shadowOpacity/100})`
+    : 'none';
+
+  // Image
+  cardImageWrap.style.display = s.showImage ? 'flex' : 'none';
+  if (s.showImage) {
+    cardImageWrap.style.height = s.layout === 'vertical' ? s.imageH + 'px' : 'auto';
+    cardImageWrap.style.width = s.layout === 'horizontal' ? '140px' : 'auto';
+    cardImageWrap.style.minHeight = s.layout === 'horizontal' ? '100%' : 'auto';
+    cardImageWrap.style.background = s.imageBg;
+    cardImageWrap.style.borderRadius = s.layout === 'vertical'
+      ? `${s.radius}px ${s.radius}px 0 0`
+      : `${s.radius}px 0 0 ${s.radius}px`;
+  }
+
+  // Body
+  cardBody.style.padding = s.padding + 'px';
+  cardBody.style.gap = s.gap + 'px';
+  cardBody.style.display = 'flex';
+  cardBody.style.flexDirection = 'column';
+  cardBody.style.flex = '1';
+
+  // Tag
+  cardTag.style.fontSize = Math.max(10, s.bodySize - 2) + 'px';
+  cardTag.style.color = s.tagColor;
+
+  // Title
+  cardTitle.style.fontSize = s.titleSize + 'px';
+  cardTitle.style.fontFamily = s.font;
+  cardTitle.style.color = s.cardBg < '#888888' ? '#18181b' : '#ffffff';
+
+  // Desc
+  cardDesc.style.fontSize = s.bodySize + 'px';
+  cardDesc.style.fontFamily = s.font;
+  cardDesc.style.color = '#71717a';
+
+  // Footer
+  cardFooter.style.display = s.showFooter ? 'flex' : 'none';
+  cardFooter.style.marginTop = s.gap + 'px';
+  cardMeta.style.fontSize = (s.bodySize - 1) + 'px';
+  cardMeta.style.color = '#a1a1aa';
+
+  // Button
+  cardBtn.style.padding = `${Math.max(6, s.padding * 0.3)}px ${Math.max(12, s.padding * 0.6)}px`;
+  cardBtn.style.background = s.accent;
+  cardBtn.style.borderRadius = s.btnRadius + 'px';
+  cardBtn.style.color = '#ffffff';
+  cardBtn.style.fontSize = (s.bodySize - 1) + 'px';
+  cardBtn.style.fontFamily = s.font;
+
+  // Transition
+  card.style.transition = `all ${s.duration}ms ${s.easing}`;
+
+  // Hover effect (via style injection)
+  applyHoverEffect();
+}
+
+let hoverStyle = document.createElement('style');
+document.head.appendChild(hoverStyle);
+
+function applyHoverEffect() {
+  const s = state;
+  let hoverCSS = '';
+  switch (s.hoverEffect) {
+    case 'lift':
+      hoverCSS = `#preview-card:hover { transform: translateY(-4px); box-shadow: 0 ${s.shadowY + 8}px ${s.shadowBlur + 16}px rgba(0,0,0,${(s.shadowOpacity + 6)/100}) !important; }`;
+      break;
+    case 'scale':
+      hoverCSS = `#preview-card:hover { transform: scale(1.025); }`;
+      break;
+    case 'glow':
+      hoverCSS = `#preview-card:hover { box-shadow: 0 0 0 2px ${state.accent}, 0 ${s.shadowY}px ${s.shadowBlur}px rgba(0,0,0,${s.shadowOpacity/100}) !important; }`;
+      break;
+    case 'darken':
+      hoverCSS = `#preview-card:hover { filter: brightness(0.97); }`;
+      break;
+    default:
+      hoverCSS = '';
+  }
+  hoverStyle.textContent = hoverCSS;
+}
+
+// ── Prompt generation ──────────────────────────────────────────────
+function updatePrompt() {
+  const s = state;
+  const parts = [];
+
+  // Layout
+  if (s.layout === 'horizontal') parts.push('横向布局（图片在左）');
+
+  // Size/spacing
+  if (s.width !== DEFAULTS.width) {
+    parts.push(`宽度 ${s.width}px`);
+  }
+  parts.push(`内边距 ${s.padding}px`);
+  if (s.gap !== DEFAULTS.gap) parts.push(`内容间距 ${s.gap}px`);
+
+  // Visual feel
+  const radiusDesc = s.radius === 0 ? '直角' : s.radius <= 6 ? '小圆角' : s.radius <= 16 ? '中等圆角' : '大圆角';
+  parts.push(`${radiusDesc}（${s.radius}px）`);
+
+  if (s.btnRadius !== DEFAULTS.btnRadius) {
+    const bDesc = s.btnRadius === 0 ? '方形' : s.btnRadius >= 20 ? '胶囊形' : `${s.btnRadius}px 圆角`;
+    parts.push(`按钮为${bDesc}`);
+  }
+
+  // Shadow
+  if (s.showShadow) {
+    const depth = s.shadowBlur > 48 ? '深度阴影' : s.shadowBlur > 20 ? '中等阴影' : '浅阴影';
+    parts.push(`${depth}（偏移 ${s.shadowY}px，模糊 ${s.shadowBlur}px，透明度 ${s.shadowOpacity}%）`);
+  } else {
+    parts.push('无阴影');
+  }
+
+  // Border
+  if (s.showBorder) parts.push(`${s.borderW}px 边框`);
+
+  // Color
+  if (s.cardBg !== DEFAULTS.cardBg) parts.push(`卡片背景 ${s.cardBg}`);
+  if (s.accent !== DEFAULTS.accent) parts.push(`主色调 ${s.accent}`);
+  if (s.bgOpacity < 100) parts.push(`背景透明度 ${s.bgOpacity}%（玻璃效果）`);
+
+  // Typography
+  if (s.font !== DEFAULTS.font) {
+    const fontName = s.font.split(',')[0].replace(/'/g,'');
+    parts.push(`字体 ${fontName}`);
+  }
+  if (s.titleSize !== DEFAULTS.titleSize || s.bodySize !== DEFAULTS.bodySize) {
+    parts.push(`标题 ${s.titleSize}px / 正文 ${s.bodySize}px`);
+  }
+
+  // Interaction
+  const hoverMap = { none: '无悬停效果', lift: '悬停上浮 + 深阴影', scale: '悬停轻微放大', glow: '悬停发光边框', darken: '悬停背景加深' };
+  if (s.hoverEffect !== DEFAULTS.hoverEffect) {
+    parts.push(hoverMap[s.hoverEffect]);
+  }
+  if (s.duration !== DEFAULTS.duration) {
+    const speed = s.duration < 150 ? '快速' : s.duration < 300 ? '适中' : '缓慢';
+    parts.push(`${speed}过渡（${s.duration}ms）`);
+  }
+
+  // Content
+  if (!s.showImage) parts.push('隐藏图片区域');
+  if (!s.showFooter) parts.push('隐藏底部操作区');
+
+  const promptEl = document.getElementById('prompt-text');
+  promptEl.textContent = `请将卡片组件更新为：${parts.join('，')}。${s.hoverEffect !== 'none' ? `鼠标悬停时触发${hoverMap[s.hoverEffect]}，过渡曲线使用 ${s.easing}。` : ''}`;
+}
+
+function updateAll() {
+  renderPreview();
+  updatePrompt();
+}
+
+// ── Background toggle ──────────────────────────────────────────────
+function setBg(type) {
+  state.bg = type;
+  document.querySelectorAll('.bg-toggle button').forEach(b => {
+    b.classList.toggle('active', b.dataset.bg === type);
+  });
+  const bgs = {
+    light: '#f4f4f5',
+    dark: '#18181b',
+    gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+  };
+  previewBg.style.background = bgs[type] || bgs.light;
+}
+
+// ── Control bindings ───────────────────────────────────────────────
+function bindRange(id, key, unit = '') {
+  const el = document.getElementById(id);
+  const valEl = document.getElementById('val-' + key);
+  el.addEventListener('input', () => {
+    state[key] = parseFloat(el.value);
+    if (valEl) valEl.textContent = el.value + unit;
+    updateAll();
+  });
+}
+
+function bindColor(id, key) {
+  const el = document.getElementById(id);
+  el.addEventListener('input', () => {
+    state[key] = el.value;
+    updateAll();
+  });
+}
+
+function bindToggle(id, key) {
+  const el = document.getElementById(id);
+  el.addEventListener('change', () => {
+    state[key] = el.checked;
+    updateAll();
+  });
+}
+
+function bindSelect(id, key) {
+  const el = document.getElementById(id);
+  el.addEventListener('change', () => {
+    state[key] = el.value;
+    updateAll();
+  });
+}
+
+bindRange('ctrl-width', 'width', 'px');
+bindRange('ctrl-padding', 'padding', 'px');
+bindRange('ctrl-gap', 'gap', 'px');
+bindRange('ctrl-imageH', 'imageH', 'px');
+bindRange('ctrl-radius', 'radius', 'px');
+bindRange('ctrl-btnRadius', 'btnRadius', 'px');
+bindRange('ctrl-borderW', 'borderW', 'px');
+bindRange('ctrl-shadowY', 'shadowY', 'px');
+bindRange('ctrl-shadowBlur', 'shadowBlur', 'px');
+bindRange('ctrl-shadowOpacity', 'shadowOpacity', '%');
+bindRange('ctrl-bgOpacity', 'bgOpacity', '%');
+bindRange('ctrl-titleSize', 'titleSize', 'px');
+bindRange('ctrl-bodySize', 'bodySize', 'px');
+bindRange('ctrl-duration', 'duration', 'ms');
+
+bindColor('ctrl-cardBg', 'cardBg');
+bindColor('ctrl-accent', 'accent');
+bindColor('ctrl-tagColor', 'tagColor');
+bindColor('ctrl-imageBg', 'imageBg');
+bindColor('ctrl-borderColor', 'borderColor');
+
+bindToggle('ctrl-showImage', 'showImage');
+bindToggle('ctrl-showFooter', 'showFooter');
+bindToggle('ctrl-showBorder', 'showBorder');
+bindToggle('ctrl-showShadow', 'showShadow');
+
+bindSelect('ctrl-font', 'font');
+bindSelect('ctrl-hoverEffect', 'hoverEffect');
+bindSelect('ctrl-easing', 'easing');
+
+// Layout picker
+document.querySelectorAll('[data-layout]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    state.layout = btn.dataset.layout;
+    document.querySelectorAll('[data-layout]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    updateAll();
+  });
+});
+
+// ── Presets ────────────────────────────────────────────────────────
+function applyPreset(name) {
+  const p = PRESETS[name];
+  if (!p) return;
+  Object.assign(state, p);
+
+  // Sync all inputs
+  const syncRange = (id, key, unit) => {
+    const el = document.getElementById(id);
+    const valEl = document.getElementById('val-' + key);
+    if (el && state[key] !== undefined) {
+      el.value = state[key];
+      if (valEl) valEl.textContent = state[key] + unit;
+    }
+  };
+  const syncColor = (id, key) => {
+    const el = document.getElementById(id);
+    if (el && state[key]) el.value = state[key];
+  };
+  const syncToggle = (id, key) => {
+    const el = document.getElementById(id);
+    if (el) el.checked = !!state[key];
+  };
+  const syncSelect = (id, key) => {
+    const el = document.getElementById(id);
+    if (el && state[key]) el.value = state[key];
+  };
+
+  syncRange('ctrl-width', 'width', 'px');
+  syncRange('ctrl-padding', 'padding', 'px');
+  syncRange('ctrl-gap', 'gap', 'px');
+  syncRange('ctrl-imageH', 'imageH', 'px');
+  syncRange('ctrl-radius', 'radius', 'px');
+  syncRange('ctrl-btnRadius', 'btnRadius', 'px');
+  syncRange('ctrl-borderW', 'borderW', 'px');
+  syncRange('ctrl-shadowY', 'shadowY', 'px');
+  syncRange('ctrl-shadowBlur', 'shadowBlur', 'px');
+  syncRange('ctrl-shadowOpacity', 'shadowOpacity', '%');
+  syncRange('ctrl-bgOpacity', 'bgOpacity', '%');
+  syncRange('ctrl-titleSize', 'titleSize', 'px');
+  syncRange('ctrl-bodySize', 'bodySize', 'px');
+  syncRange('ctrl-duration', 'duration', 'ms');
+
+  syncColor('ctrl-cardBg', 'cardBg');
+  syncColor('ctrl-accent', 'accent');
+  syncColor('ctrl-tagColor', 'tagColor');
+  syncColor('ctrl-imageBg', 'imageBg');
+  syncColor('ctrl-borderColor', 'borderColor');
+
+  syncToggle('ctrl-showImage', 'showImage');
+  syncToggle('ctrl-showFooter', 'showFooter');
+  syncToggle('ctrl-showBorder', 'showBorder');
+  syncToggle('ctrl-showShadow', 'showShadow');
+
+  syncSelect('ctrl-font', 'font');
+  syncSelect('ctrl-hoverEffect', 'hoverEffect');
+  syncSelect('ctrl-easing', 'easing');
+
+  document.querySelectorAll('.preset-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.preset === name);
+  });
+
+  updateAll();
+}
+
+document.querySelectorAll('[data-preset]').forEach(btn => {
+  btn.addEventListener('click', () => applyPreset(btn.dataset.preset));
+});
+
+// ── Copy prompt ────────────────────────────────────────────────────
+function copyPrompt() {
+  const text = document.getElementById('prompt-text').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById('copy-btn');
+    btn.textContent = '已复制！';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = '复制 Prompt';
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+
+// ── Init ───────────────────────────────────────────────────────────
+setBg('light');
+updateAll();
+</script>
+</body>
+</html>

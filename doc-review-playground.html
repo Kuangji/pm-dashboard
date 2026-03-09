@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文档 Review Playground</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0f0f11;
+    --surface: #18181b;
+    --surface2: #222226;
+    --border: #2e2e34;
+    --text: #e4e4e7;
+    --text-muted: #71717a;
+    --text-dim: #52525b;
+    --accent: #6366f1;
+    --accent-dim: rgba(99,102,241,.15);
+    --pending: #d97706;
+    --pending-bg: rgba(217,119,6,.08);
+    --approved: #16a34a;
+    --approved-bg: rgba(22,163,74,.08);
+    --rejected: #dc2626;
+    --rejected-bg: rgba(220,38,38,.08);
+    --r: 8px;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-size: 13px;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 48px 1fr 160px;
+    overflow: hidden;
+  }
+
+  /* ─── Header ─── */
+  header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 14px; font-weight: 600; }
+  .doc-title-tag {
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--accent-dim);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  .stats {
+    margin-left: auto;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .stat { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--text-muted); }
+  .stat-dot { width: 7px; height: 7px; border-radius: 50%; }
+  .stat-dot.pending { background: var(--pending); }
+  .stat-dot.approved { background: var(--approved); }
+  .stat-dot.rejected { background: var(--rejected); }
+  .stat-count { font-weight: 600; color: var(--text); }
+
+  /* ─── Main panels ─── */
+  .panels {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    overflow: hidden;
+  }
+
+  /* ─── Document panel ─── */
+  .doc-panel {
+    overflow-y: auto;
+    padding: 24px 0;
+    border-right: 1px solid var(--border);
+  }
+
+  .doc-line {
+    display: flex;
+    align-items: flex-start;
+    min-height: 24px;
+    border-left: 3px solid transparent;
+    padding: 1px 24px 1px 0;
+    transition: background .15s, border-color .15s;
+    cursor: default;
+  }
+  .doc-line.has-suggestion { border-left-color: var(--pending); background: var(--pending-bg); }
+  .doc-line.status-approved { border-left-color: var(--approved); background: var(--approved-bg); }
+  .doc-line.status-rejected { border-left-color: var(--rejected); background: var(--rejected-bg); opacity: .6; }
+  .doc-line.active-line { outline: 1px solid var(--accent); outline-offset: -1px; }
+
+  .line-num {
+    width: 48px;
+    min-width: 48px;
+    text-align: right;
+    padding-right: 16px;
+    color: var(--text-dim);
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 11px;
+    line-height: 22px;
+    user-select: none;
+  }
+  .line-content {
+    flex: 1;
+    line-height: 22px;
+    word-break: break-word;
+    font-size: 13px;
+  }
+
+  /* Markdown rendering */
+  .line-content h1 { font-size: 20px; font-weight: 700; color: var(--text); line-height: 1.4; padding: 4px 0 2px; }
+  .line-content h2 { font-size: 16px; font-weight: 600; color: var(--text); border-bottom: 1px solid var(--border); padding-bottom: 4px; margin-top: 4px; line-height: 1.5; }
+  .line-content h3 { font-size: 14px; font-weight: 600; color: var(--text); margin-top: 2px; line-height: 1.5; }
+  .line-content code {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 11px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    padding: 0 4px;
+    border-radius: 3px;
+    color: #a78bfa;
+  }
+  .line-content strong { font-weight: 600; color: var(--text); }
+  .line-content em { color: var(--text-muted); font-style: italic; }
+  .line-content .empty-line { height: 10px; display: block; }
+  .code-block-wrap {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 11px;
+    color: #a78bfa;
+    padding: 2px 8px;
+    margin: 0;
+  }
+  .line-content ul-item::before { content: '• '; color: var(--text-muted); }
+  .line-content ol-item { color: var(--text-muted); }
+
+  /* ─── Suggestions panel ─── */
+  .suggestions-panel {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--surface);
+  }
+
+  .filter-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    padding: 0 12px;
+    flex-shrink: 0;
+  }
+  .filter-tab {
+    padding: 10px 10px;
+    font-size: 12px;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    transition: color .15s, border-color .15s;
+    white-space: nowrap;
+  }
+  .filter-tab:hover { color: var(--text); }
+  .filter-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .filter-tab .tab-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background: var(--surface2);
+    font-size: 10px;
+    padding: 0 4px;
+    margin-left: 4px;
+  }
+
+  .suggestions-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .suggestion-card {
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 10px 12px;
+    background: var(--bg);
+    transition: border-color .15s, box-shadow .15s;
+    cursor: pointer;
+  }
+  .suggestion-card:hover { border-color: var(--text-dim); }
+  .suggestion-card.active { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-dim); }
+  .suggestion-card.status-approved { border-color: var(--approved); }
+  .suggestion-card.status-rejected { border-color: var(--rejected); opacity: .6; }
+
+  .card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .line-ref {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 10px;
+    color: var(--text-muted);
+    background: var(--surface2);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+  .cat-tag {
+    font-size: 10px;
+    font-weight: 500;
+    padding: 1px 6px;
+    border-radius: 4px;
+    letter-spacing: .03em;
+  }
+  .cat-clarity { background: rgba(139,92,246,.15); color: #a78bfa; }
+  .cat-completeness { background: rgba(59,130,246,.15); color: #60a5fa; }
+  .cat-structure { background: rgba(16,185,129,.15); color: #34d399; }
+  .cat-ux { background: rgba(245,158,11,.15); color: #fbbf24; }
+  .cat-accuracy { background: rgba(239,68,68,.15); color: #f87171; }
+
+  .status-badge {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
+  .badge-pending { background: rgba(217,119,6,.15); color: var(--pending); }
+  .badge-approved { background: rgba(22,163,74,.15); color: var(--approved); }
+  .badge-rejected { background: rgba(220,38,38,.15); color: var(--rejected); }
+
+  .card-suggestion { font-size: 12px; line-height: 1.55; color: var(--text); margin-bottom: 8px; }
+  .card-quote {
+    font-size: 11px;
+    color: var(--text-muted);
+    border-left: 2px solid var(--border);
+    padding-left: 8px;
+    margin-bottom: 8px;
+    font-style: italic;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .card-actions { display: flex; gap: 6px; }
+  .action-btn {
+    flex: 1;
+    padding: 5px 8px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .action-btn:hover { border-color: var(--text-muted); color: var(--text); }
+  .action-btn.approve:hover, .action-btn.approve.active {
+    border-color: var(--approved); background: rgba(22,163,74,.1); color: var(--approved);
+  }
+  .action-btn.reject:hover, .action-btn.reject.active {
+    border-color: var(--rejected); background: rgba(220,38,38,.1); color: var(--rejected);
+  }
+  .action-btn.comment-toggle:hover, .action-btn.comment-toggle.active {
+    border-color: var(--accent); background: var(--accent-dim); color: var(--accent);
+  }
+  .action-btn.reset-btn {
+    flex: none;
+    padding: 5px 10px;
+  }
+
+  .comment-area {
+    display: none;
+    margin-top: 8px;
+  }
+  .comment-area.open { display: block; }
+  .comment-area textarea {
+    width: 100%;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    color: var(--text);
+    font-size: 12px;
+    font-family: inherit;
+    padding: 6px 8px;
+    resize: vertical;
+    min-height: 56px;
+    outline: none;
+    transition: border-color .15s;
+  }
+  .comment-area textarea:focus { border-color: var(--accent); }
+
+  .empty-state {
+    text-align: center;
+    color: var(--text-muted);
+    padding: 40px 20px;
+    font-size: 13px;
+  }
+
+  /* ─── Prompt output ─── */
+  .prompt-area {
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .prompt-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .prompt-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .prompt-actions { display: flex; gap: 8px; align-items: center; }
+  .prompt-hint { font-size: 11px; color: var(--text-dim); }
+  .copy-btn {
+    padding: 4px 12px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 11px;
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .copy-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .copy-btn.copied { background: rgba(22,163,74,.1); border-color: var(--approved); color: var(--approved); }
+
+  #prompt-text {
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 12px;
+    max-height: 88px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+  }
+  #prompt-text.empty { color: var(--text-dim); font-style: italic; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>文档 Review</h1>
+  <span class="doc-title-tag">用户通知中心 · PRD v1.2</span>
+  <div class="stats">
+    <div class="stat"><span class="stat-dot pending"></span><span class="stat-count" id="count-pending">0</span> 待审</div>
+    <div class="stat"><span class="stat-dot approved"></span><span class="stat-count" id="count-approved">0</span> 采纳</div>
+    <div class="stat"><span class="stat-dot rejected"></span><span class="stat-count" id="count-rejected">0</span> 拒绝</div>
+  </div>
+</header>
+
+<div class="panels">
+  <div class="doc-panel" id="doc-panel"></div>
+
+  <div class="suggestions-panel">
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">全部 <span class="tab-count" id="tab-all">0</span></button>
+      <button class="filter-tab" data-filter="pending">待审 <span class="tab-count" id="tab-pending">0</span></button>
+      <button class="filter-tab" data-filter="approved">已采纳 <span class="tab-count" id="tab-approved">0</span></button>
+      <button class="filter-tab" data-filter="rejected">已拒绝 <span class="tab-count" id="tab-rejected">0</span></button>
+    </div>
+    <div class="suggestions-list" id="suggestions-list"></div>
+  </div>
+</div>
+
+<div class="prompt-area">
+  <div class="prompt-header">
+    <span class="prompt-label">生成的修改 Prompt</span>
+    <div class="prompt-actions">
+      <span class="prompt-hint" id="prompt-hint">采纳建议后自动生成</span>
+      <button class="copy-btn" id="copy-btn" onclick="copyPrompt()">复制 Prompt</button>
+    </div>
+  </div>
+  <div id="prompt-text" class="empty">还没有采纳任何建议。点击右侧建议卡片的「采纳」按钮开始审阅。</div>
+</div>
+
+<script>
+// ─── Document content ─────────────────────────────────────────────
+const DOC_CONTENT = `# 用户通知中心 产品需求文档
+
+**版本**: v1.2  **状态**: 评审中  **负责人**: 产品团队
+
+## 一、背景与目标
+
+随着平台业务的快速增长，用户需要及时了解账号动态、内容互动等信息。目前通知功能分散在各个模块，体验不一致，用户反馈难以找到重要消息。
+
+本次迭代目标：建立统一的通知中心，提升用户对重要事件的感知效率。
+
+## 二、用户场景
+
+### 2.1 核心用户群
+
+- 内容创作者：关注粉丝互动、收益变化
+- 品牌客户：关注合作进度、数据报告
+- 普通用户：关注内容推荐、账号安全
+
+### 2.2 主要场景
+
+**场景一**：用户收到新的合作邀请，需要在24小时内回复。
+**场景二**：用户的视频数据出现异常波动，系统主动预警。
+**场景三**：用户长时间未登录，推送个性化内容召回。
+
+## 三、功能需求
+
+### 3.1 通知分类
+
+系统支持以下通知类型：
+- 互动通知（点赞、评论、关注）
+- 系统通知（账号安全、政策更新）
+- 业务通知（合作邀请、收益结算）
+- 推广通知（活动、推荐内容）
+
+### 3.2 消息中心
+
+用户可以在消息中心查看全部通知，支持：
+- 按类型筛选
+- 标记已读/未读
+- 批量删除
+
+未读消息数量在 App 图标显示角标，最大显示 99+。
+
+### 3.3 推送策略
+
+推送渠道包括：App Push、站内信、邮件。
+
+推送频率限制：每天最多推送 10 条消息。频率限制对所有用户类型一视同仁。
+
+用户可以在设置中关闭全部通知，但不支持分类关闭。
+
+### 3.4 实时通知
+
+页面顶部展示浮层通知，停留 3 秒后自动消失。浮层同时最多展示 1 条。
+
+## 四、非功能需求
+
+- 通知送达率 > 95%
+- 系统响应时间 < 200ms
+
+## 五、数据指标
+
+上线后 30 天内观察：
+- 通知点击率
+- 用户设置关闭率
+
+## 六、开放问题
+
+1. 通知的保留时长是多少？
+2. 是否支持通知内容的富文本展示？`;
+
+// ─── Suggestions ──────────────────────────────────────────────────
+const suggestions = [
+  {
+    id: 1,
+    lineRef: '第 3 行',
+    lineNum: 3,
+    targetText: '**版本**: v1.2  **状态**: 评审中  **负责人**: 产品团队',
+    suggestion: '缺少「预计上线时间」字段，评审文档通常需要明确时间节点，便于跨团队协调排期。',
+    category: 'completeness',
+    status: 'pending',
+    userComment: '',
+  },
+  {
+    id: 2,
+    lineRef: '第 7-8 行',
+    lineNum: 7,
+    targetText: '本次迭代目标：建立统一的通知中心，提升用户对重要事件的感知效率。',
+    suggestion: '目标描述过于宏观，缺少可量化的成功指标（如：通知打开率提升 X%，投诉率下降 X%）。建议补充 OKR 或关键结果。',
+    category: 'clarity',
+    status: 'pending',
+    userComment: '',
+  },
+  {
+    id: 3,
+    lineRef: '第 19-20 行',
+    lineNum: 19,
+    targetText: '**场景三**：用户长时间未登录，推送个性化内容召回。',
+    suggestion: '「召回」场景与通知中心的核心定位（事件感知）存在偏差，更偏向运营增长策略。建议移至单独的「运营推送」模块，或明确说明这是通知中心承载的合理范畴。',
+    category: 'structure',
+    status: 'pending',
+    userComment: '',
+  },
+  {
+    id: 4,
+    lineRef: '第 33 行',
+    lineNum: 33,
+    targetText: '推送频率限制：每天最多推送 10 条消息。频率限制对所有用户类型一视同仁。',
+    suggestion: '频率限制「一视同仁」与 2.1 中的分层用户群设计矛盾。品牌客户对合作通知时效性要求更高，应允许差异化频率配置，否则可能影响关键业务流程。',
+    category: 'accuracy',
+    status: 'pending',
+    userComment: '',
+  },
+  {
+    id: 5,
+    lineRef: '第 35 行',
+    lineNum: 35,
+    targetText: '用户可以在设置中关闭全部通知，但不支持分类关闭。',
+    suggestion: '不支持分类关闭通知是用户体验的重大缺陷。GDPR 及国内相关法规要求允许用户细粒度控制通知权限，尤其是推广类通知必须可单独关闭。存在合规风险。',
+    category: 'ux',
+    status: 'pending',
+    userComment: '',
+  },
+  {
+    id: 6,
+    lineRef: '第 38-39 行',
+    lineNum: 38,
+    targetText: '页面顶部展示浮层通知，停留 3 秒后自动消失。浮层同时最多展示 1 条。',
+    suggestion: '3 秒停留时间对于包含行动按钮（如「立即查看合作邀请」）的通知明显不足，用户可能来不及操作。建议区分纯信息类（3s）和需要操作的通知（不自动消失，需手动关闭）。',
+    category: 'ux',
+    status: 'pending',
+    userComment: '',
+  },
+  {
+    id: 7,
+    lineRef: '第 43 行',
+    lineNum: 43,
+    targetText: '系统响应时间 < 200ms',
+    suggestion: '性能指标缺少上下文说明：是 P50、P95 还是 P99？缺少测试条件（并发用户数、峰值场景）。建议补充为：「P95 响应时间 < 200ms（基准：1000 并发用户）」。',
+    category: 'completeness',
+    status: 'pending',
+    userComment: '',
+  },
+  {
+    id: 8,
+    lineRef: '第 47-48 行',
+    lineNum: 47,
+    targetText: '- 通知点击率\n- 用户设置关闭率',
+    suggestion: '数据指标过少，且缺少基线值和目标值。建议至少补充：通知送达率（验证 3.4 的 95% 目标）、通知阅读率（区分点击和已读）、关键业务通知的响应时效。',
+    category: 'completeness',
+    status: 'pending',
+    userComment: '',
+  },
+];
+
+// ─── State ────────────────────────────────────────────────────────
+let state = {
+  suggestions: suggestions.map(s => ({ ...s })),
+  activeFilter: 'all',
+  activeSuggestionId: null,
+};
+
+// ─── Render document ──────────────────────────────────────────────
+function renderDoc() {
+  const panel = document.getElementById('doc-panel');
+  const lines = DOC_CONTENT.split('\n');
+  let html = '';
+  let inCodeBlock = false;
+
+  lines.forEach((line, i) => {
+    const lineNum = i + 1;
+    const sugg = state.suggestions.find(s => {
+      const m = s.lineRef.match(/第\s*(\d+)/);
+      if (m) return Math.abs(parseInt(m[1]) - lineNum) <= 1;
+      return false;
+    });
+    const hasSugg = !!sugg;
+    const status = sugg ? sugg.status : '';
+    const isActive = sugg && sugg.id === state.activeSuggestionId;
+
+    let cls = 'doc-line';
+    if (hasSugg) cls += ' has-suggestion';
+    if (status === 'approved') cls += ' status-approved';
+    if (status === 'rejected') cls += ' status-rejected';
+    if (isActive) cls += ' active-line';
+
+    // Render content
+    let content = '';
+    if (line.startsWith('```')) {
+      inCodeBlock = !inCodeBlock;
+      content = `<span class="empty-line"></span>`;
+    } else if (inCodeBlock) {
+      content = `<span class="code-block-wrap">${escapeHtml(line)}</span>`;
+    } else if (line.startsWith('# ')) {
+      content = `<h1>${formatInline(line.slice(2))}</h1>`;
+    } else if (line.startsWith('## ')) {
+      content = `<h2>${formatInline(line.slice(3))}</h2>`;
+    } else if (line.startsWith('### ')) {
+      content = `<h3>${formatInline(line.slice(4))}</h3>`;
+    } else if (line.match(/^[-*]\s/)) {
+      content = `<ul-item>${formatInline(line.slice(2))}</ul-item>`;
+    } else if (line.trim() === '') {
+      content = `<span class="empty-line"></span>`;
+    } else {
+      content = formatInline(line);
+    }
+
+    html += `<div class="${cls}" id="line-${lineNum}" data-sugg-id="${sugg ? sugg.id : ''}">
+      <span class="line-num">${lineNum}</span>
+      <div class="line-content">${content}</div>
+    </div>`;
+  });
+
+  panel.innerHTML = html;
+
+  // Click on line
+  panel.querySelectorAll('.doc-line[data-sugg-id]').forEach(el => {
+    const sid = parseInt(el.dataset.suggId);
+    if (sid) {
+      el.addEventListener('click', () => {
+        state.activeSuggestionId = state.activeSuggestionId === sid ? null : sid;
+        renderAll();
+        if (state.activeSuggestionId) scrollToSuggestion(sid);
+      });
+    }
+  });
+}
+
+function escapeHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function formatInline(text) {
+  return escapeHtml(text)
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+    .replace(/`([^`]+)`/g, '<code>$1</code>');
+}
+
+// ─── Render suggestions ───────────────────────────────────────────
+const catLabels = {
+  clarity: '清晰度',
+  completeness: '完整性',
+  structure: '结构',
+  ux: '体验',
+  accuracy: '准确性',
+};
+
+function renderSuggestions() {
+  const list = document.getElementById('suggestions-list');
+  const filtered = state.suggestions.filter(s => {
+    if (state.activeFilter === 'all') return true;
+    return s.status === state.activeFilter;
+  });
+
+  if (filtered.length === 0) {
+    list.innerHTML = `<div class="empty-state">该分类下暂无建议</div>`;
+    return;
+  }
+
+  list.innerHTML = filtered.map(s => {
+    const isActive = s.id === state.activeSuggestionId;
+    const badgeClass = `badge-${s.status}`;
+    const badgeText = { pending: '待审', approved: '已采纳', rejected: '已拒绝' }[s.status];
+    const commentOpen = s._commentOpen ? 'open' : '';
+
+    const actions = s.status === 'pending'
+      ? `<button class="action-btn approve" onclick="setStatus(${s.id},'approved')">✓ 采纳</button>
+         <button class="action-btn reject" onclick="setStatus(${s.id},'rejected')">✗ 拒绝</button>
+         <button class="action-btn comment-toggle ${s._commentOpen ? 'active' : ''}" onclick="toggleComment(${s.id})">💬</button>`
+      : `<button class="action-btn reset-btn" onclick="setStatus(${s.id},'pending')">重置</button>
+         <button class="action-btn comment-toggle ${s._commentOpen ? 'active' : ''}" onclick="toggleComment(${s.id})">💬 备注</button>`;
+
+    return `<div class="suggestion-card ${isActive ? 'active' : ''} status-${s.status}" id="card-${s.id}" onclick="activateSuggestion(${s.id}, event)">
+      <div class="card-top">
+        <div class="card-meta">
+          <span class="line-ref">${s.lineRef}</span>
+          <span class="cat-tag cat-${s.category}">${catLabels[s.category]}</span>
+        </div>
+        <span class="status-badge ${badgeClass}">${badgeText}</span>
+      </div>
+      <div class="card-quote">${escapeHtml(s.targetText.split('\n')[0])}</div>
+      <div class="card-suggestion">${escapeHtml(s.suggestion)}</div>
+      <div class="card-actions">${actions}</div>
+      <div class="comment-area ${commentOpen}" id="comment-${s.id}">
+        <textarea placeholder="添加备注（可选）..." oninput="updateComment(${s.id}, this.value)">${escapeHtml(s.userComment)}</textarea>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ─── Update stats & tabs ──────────────────────────────────────────
+function updateStats() {
+  const counts = { pending: 0, approved: 0, rejected: 0 };
+  state.suggestions.forEach(s => counts[s.status]++);
+
+  document.getElementById('count-pending').textContent = counts.pending;
+  document.getElementById('count-approved').textContent = counts.approved;
+  document.getElementById('count-rejected').textContent = counts.rejected;
+
+  document.getElementById('tab-all').textContent = state.suggestions.length;
+  document.getElementById('tab-pending').textContent = counts.pending;
+  document.getElementById('tab-approved').textContent = counts.approved;
+  document.getElementById('tab-rejected').textContent = counts.rejected;
+}
+
+// ─── Update prompt ────────────────────────────────────────────────
+function updatePrompt() {
+  const approved = state.suggestions.filter(s => s.status === 'approved');
+  const withComments = state.suggestions.filter(s => s.userComment?.trim() && s.status !== 'approved');
+  const rejected = state.suggestions.filter(s => s.status === 'rejected');
+
+  const el = document.getElementById('prompt-text');
+  const hint = document.getElementById('prompt-hint');
+
+  if (approved.length === 0 && withComments.length === 0) {
+    el.textContent = '还没有采纳任何建议。点击右侧建议卡片的「采纳」按钮开始审阅。';
+    el.classList.add('empty');
+    hint.textContent = '采纳建议后自动生成';
+    return;
+  }
+
+  el.classList.remove('empty');
+  hint.textContent = `${approved.length} 条采纳，${rejected.length} 条拒绝`;
+
+  let parts = [];
+  parts.push('请对「用户通知中心 PRD v1.2」进行以下修改：\n');
+
+  if (approved.length > 0) {
+    parts.push('【采纳的修改建议】');
+    approved.forEach(s => {
+      let item = `• ${s.lineRef}（${catLabels[s.category]}）：${s.suggestion}`;
+      if (s.userComment?.trim()) item += `\n  → 附加说明：${s.userComment.trim()}`;
+      parts.push(item);
+    });
+  }
+
+  if (withComments.length > 0) {
+    parts.push('\n【额外反馈（未采纳但需关注）】');
+    withComments.forEach(s => {
+      parts.push(`• ${s.lineRef}：${s.userComment.trim()}`);
+    });
+  }
+
+  if (rejected.length > 0) {
+    parts.push(`\n【已拒绝的建议（保持原文）】：${rejected.map(s => s.lineRef).join('、')}`);
+  }
+
+  el.textContent = parts.join('\n');
+}
+
+// ─── Actions ──────────────────────────────────────────────────────
+function setStatus(id, status) {
+  const s = state.suggestions.find(s => s.id === id);
+  if (s) s.status = status;
+  renderAll();
+}
+
+function toggleComment(id) {
+  const s = state.suggestions.find(s => s.id === id);
+  if (s) s._commentOpen = !s._commentOpen;
+  renderSuggestions();
+}
+
+function updateComment(id, value) {
+  const s = state.suggestions.find(s => s.id === id);
+  if (s) {
+    s.userComment = value;
+    updatePrompt();
+  }
+}
+
+function activateSuggestion(id, e) {
+  if (e.target.tagName === 'BUTTON' || e.target.tagName === 'TEXTAREA') return;
+  state.activeSuggestionId = state.activeSuggestionId === id ? null : id;
+
+  // Scroll to line in doc
+  if (state.activeSuggestionId) {
+    const s = state.suggestions.find(s => s.id === id);
+    if (s) {
+      const m = s.lineRef.match(/第\s*(\d+)/);
+      if (m) {
+        const lineEl = document.getElementById(`line-${m[1]}`);
+        if (lineEl) lineEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  }
+  renderAll();
+}
+
+function scrollToSuggestion(id) {
+  const card = document.getElementById(`card-${id}`);
+  if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+// ─── Filter tabs ──────────────────────────────────────────────────
+document.querySelectorAll('.filter-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    state.activeFilter = tab.dataset.filter;
+    document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    renderSuggestions();
+  });
+});
+
+// ─── Copy prompt ──────────────────────────────────────────────────
+function copyPrompt() {
+  const text = document.getElementById('prompt-text').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById('copy-btn');
+    btn.textContent = '已复制！';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = '复制 Prompt';
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+
+// ─── Render all ───────────────────────────────────────────────────
+function renderAll() {
+  renderDoc();
+  renderSuggestions();
+  updateStats();
+  updatePrompt();
+}
+
+renderAll();
+</script>
+</body>
+</html>

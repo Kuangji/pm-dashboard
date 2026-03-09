@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-03-06T03:08:14.237Z",
+  "updatedAt": "2026-03-09T08:00:48.721Z",
   "navigation": {
     "docs": [
       {
@@ -284,9 +284,18 @@
               },
               {
                 "type": "file",
-                "name": "调研简报.md",
-                "path": "03-research/keyword_search_竞研/调研简报.md",
-                "slug": "03-research/keyword_search_竞研/调研简报.md",
+                "name": "调研报告_综合版.md",
+                "path": "03-research/keyword_search_竞研/调研报告_综合版.md",
+                "slug": "03-research/keyword_search_竞研/调研报告_综合版.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "调研速览.md",
+                "path": "03-research/keyword_search_竞研/调研速览.md",
+                "slug": "03-research/keyword_search_竞研/调研速览.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
@@ -296,6 +305,24 @@
                 "name": "01_raw_data",
                 "path": "03-research/keyword_search_竞研/01_raw_data",
                 "children": [
+                  {
+                    "type": "file",
+                    "name": "glad2glow_raw.md",
+                    "path": "03-research/keyword_search_竞研/01_raw_data/glad2glow_raw.md",
+                    "slug": "03-research/keyword_search_竞研/01_raw_data/glad2glow_raw.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "uwell_raw.md",
+                    "path": "03-research/keyword_search_竞研/01_raw_data/uwell_raw.md",
+                    "slug": "03-research/keyword_search_竞研/01_raw_data/uwell_raw.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
                   {
                     "type": "file",
                     "name": "人工抽检样本.md",
@@ -609,14 +636,14 @@
       },
       {
         "id": "poe_328_bd_website",
-        "title": "POE 3.28 开荒BD合集",
-        "description": "流放之路3.28赛季幻象BD收集网站，聚合展示赛季热门开荒流派与配装方案",
+        "title": "POE 3.28 BD 收集站",
+        "description": "流放之路 3.28 赛季开荒 BD 合集展示站，聚合主流幻影 BD 构建，供玩家赛季初快速选取参考。",
         "path": "demos/poe_328_bd_website/index.html",
         "thumbnail": "",
         "tags": [
           "游戏",
           "POE",
-          "BD合集"
+          "BD 收集"
         ]
       }
     ]
