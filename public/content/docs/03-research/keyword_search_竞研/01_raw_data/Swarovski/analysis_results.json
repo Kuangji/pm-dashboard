@@ -1,0 +1,55 @@
+{
+  "nox": {
+    "YouTube": {
+      "total": 1387,
+      "effective": 1064
+    },
+    "TikTok": {
+      "total": 9132,
+      "effective": 9019
+    },
+    "Instagram": {
+      "total": 10000,
+      "effective": 9997
+    }
+  },
+  "tarsight": {
+    "instagram": {
+      "total": 2021,
+      "hit": 2021,
+      "rate": 100.0
+    },
+    "snapchat": {
+      "total": 1,
+      "hit": 1,
+      "rate": 100.0
+    },
+    "tiktok": {
+      "total": 6900,
+      "hit": 2922,
+      "rate": 42.3
+    },
+    "youtube": {
+      "total": 1078,
+      "hit": 871,
+      "rate": 80.8
+    }
+  },
+  "url_overlap": {
+    "YouTube": {
+      "both": 261,
+      "nox_only": 1126,
+      "tar_only": 785
+    },
+    "TikTok": {
+      "both": 1830,
+      "nox_only": 7302,
+      "tar_only": 5070
+    },
+    "Instagram": {
+      "both": 813,
+      "nox_only": 9187,
+      "tar_only": 1208
+    }
+  }
+}

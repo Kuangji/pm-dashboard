@@ -74,4 +74,6 @@
 - [x] Phase 5：洞察提炼（`05_insights/竞品洞察.md`，三品牌验证完成）
 - [x] Phase 6：总结层文档（`调研速览.md` + `调研报告_综合版.md`，2026-03-09）
 
-**当前状态**：✅ 调研完成，分发文档已就绪。
+- [x] **Swarovski 专项有效性分析**（`01_raw_data/Swarovski/swarovski_validity_comparison.md`）：基于实际导出数据的有效性校正，结论：有效内容 Nox（20080）是 Tarsight（5814）的 3.5 倍，Tarsight TikTok 噪声率 57.7%
+
+**当前状态**：✅ 调研完成，含 Swarovski 专项验证，分发文档已就绪。

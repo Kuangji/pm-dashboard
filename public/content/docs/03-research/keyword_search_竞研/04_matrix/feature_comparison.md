@@ -12,10 +12,10 @@
 | 对比维度 | NoxInfluencer | Tarsight | 差距说明 |
 |---------|--------------|---------|---------|
 | Posts 结果数（近 7 天）| **2,434**（YT 312 / TT 1,519 / IG 603）| **3K**（2,663）| Tarsight 原始多约 23%；质量修正（×60%）后 Nox 领先 ~35% |
-| Creators 结果总数（近 7 天 / 近 2 年）| **1,358** / **4.13万（41,300）** | **165.6K**（全量，含大量噪音）| 质量修正后：Tarsight ~124（7天）/~2,300（全量估）vs Nox **1,358/41,300**，Nox 领先 **~11×/~18×** |
+| Creators 结果总数（近 7 天 / 近 2 年）| **1,358** / **4.13万（41,300）** | **165.6K**（全量，含大量噪音）| 质量修正后：Tarsight ~124（7天）/~2,700（全量估）vs Nox **1,358/41,300**，Nox 领先 **~11×/~15×** |
 | Creators 有效结果（估）| **~100%**（品牌监控内容行为验证）| **~1.64%**（~2,700 条）| Nox 品牌监控有效率 vs Tarsight 昵称匹配有效率，差距约 61× |
 | Posts Badcase 率（前 20）| ❓ 待补充 | ~25%（截图估算）| — |
-| Creators Badcase 率 | ❓ 待补充 | **~98.4%**（多语言分析修正）| 严重 |
+| Creators Badcase 率 | **≈0%**（品牌监控内容行为验证）| **~98.4%**（多语言分析修正）| Nox 品牌监控有效率接近100%；Tarsight 严重 |
 | 平台覆盖 | ❓ 待补充 | TikTok/IG/YouTube/X/FB/Snapchat/Reddit/Twitch/Website | 9 平台 |
 
 ---
@@ -33,14 +33,14 @@
 | 结果总数显示 | ❓ | ✅ | 「3K Posts / 165.6K Accounts Match」|
 | 平台分布明细（带数字）| ❓ | ✅ | 顶部各平台 checkbox + 数量 |
 | 列表视图（表格）| ❓ | ✅ | 支持多选 + 自定义列 |
-| 情感分析（Sentiment）| ❓ | ✅ | Neutral/Positive/Negative |
+| 情感分析（Sentiment）| ✅ | ✅ | Nox：品牌监控内容主题词情感分析（数据量随品牌而异）；Tarsight：Neutral/Positive/Negative |
 | KBI 影响力指数 | ❓ | ✅ | 独有综合指标 |
 | **聚合分析（Insight Tab）** | | | |
-| Hashtag 词云 | ❓ | ✅ | Post Insight 内 |
-| Hashtag 趋势折线图 | ❓ | ✅ | 时间范围可调 |
-| Hashtag 数据表（关联帖数/点赞/播放/ER）| ❓ | ✅ | 可 Export |
-| Creator 品类分布图 | ❓ | ✅ | Creator Insight 内 |
-| Creator 品类数据表（ER/均值粉丝数）| ❓ | ✅ | 可 Export |
+| Hashtag 词云 | ✅ | ✅ | Nox：品牌监控内容策略标签词云；Tarsight：Post Insight 内 |
+| Hashtag 趋势折线图 | ✅ | ✅ | Nox：品牌监控市场动态72h标签趋势曲线；Tarsight：时间范围可调 |
+| Hashtag 数据表（关联帖数/点赞/播放/ER）| ✅ | ✅ | Nox：品牌监控内容策略Hashtag排行榜；Tarsight：可 Export |
+| Creator 品类分布图 | ✅ | ✅ | Nox：品牌监控网红策略类别占比图；Tarsight：Creator Insight 内 |
+| Creator 品类数据表（ER/均值粉丝数）| ✅ | ✅ | Nox：品牌监控网红策略类别详细数据；Tarsight：可 Export |
 | **搜索质量** | | | |
 | 精确词匹配 | ❓ | ❌ | Tarsight 使用子串匹配，dreame→dreamer 大量噪音 |
 | 同名品牌消歧义 | ❓ | ❌ | 无法区分「Dreame 家电」vs「Dreame 小说平台」|
@@ -53,18 +53,24 @@
 | 平台筛选 | ❓ | ✅ | 可多选平台 checkbox |
 | **筛选维度数** | ❓ | **15（Post）+ 2（Creator）** | 右侧抽屉，低打扰 |
 | 排序 | ❓ | ✅（表头点击，升/降序）| 无独立排序 UI |
-| **OCR 视频文字识别** | ❓ | ✅（导出字段）| 视频画面文字可导出 |
-| **ASR 语音转文字** | ❓ | ✅（导出字段）| 视频音轨文字可导出 |
+| **OCR 视频文字识别** | ❌ | ✅（导出字段）| 视频画面文字可导出 |
+| **ASR 语音转文字** | ❌ | ✅（导出字段）| 视频音轨文字可导出 |
 | 企业定制字段（如 Loreal Brands）| ❓ | ⚠️ 疑似 | 筛选面板出现品牌专属字段 |
 
 ---
 
 ## 象限分析
 
-**Tarsight 有、Nox 待确认的功能**（调研重点）：
-- Hashtag 词云 + 趋势图（Post Insight）
-- Creator 品类聚合分析（Creator Insight）
-- 情感分析（Sentiment 字段）
+**Tarsight 有、Nox 已确认具备的功能**：
+- Hashtag 词云 + 趋势图（Nox 品牌监控：内容策略标签词云 + 市场动态72h标签趋势）
+- Creator 品类聚合分析（Nox 品牌监控：网红策略类别占比图 + 类别详细数据）
+- 情感分析（Nox 品牌监控：内容主题词情感分析，数据量随品牌而异）
+
+**Tarsight 有、Nox 不具备的功能**（真实差距）：
+- OCR 视频文字识别（❌）
+- ASR 语音转文字（❌）
+
+**Tarsight 有、Nox 待确认的功能**：
 - KBI 综合影响力指数
 - My Saved Searches（搜索记录保存）
 
