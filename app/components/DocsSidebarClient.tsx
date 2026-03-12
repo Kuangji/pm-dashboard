@@ -4,7 +4,12 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
-import { FileText, Code, Image, File, Download } from 'lucide-react'
+import { FileText, Code, Image, File, Download, ChevronDown, ChevronUp } from 'lucide-react'
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from '@/components/ui/collapsible'
 
 export interface NavItem {
   type: 'file' | 'directory'
@@ -35,7 +40,6 @@ interface DocsSidebarClientProps {
 function findParentPaths(items: NavItem[], targetSlug: string, parentPath: string[] = []): string[] | null {
   for (const item of items) {
     const currentPath = [...parentPath, item.path]
-    // 不区分大小写比较 slug
     if (item.type === 'file' && item.slug?.toLowerCase() === targetSlug.toLowerCase()) {
       return parentPath
     }
@@ -45,6 +49,42 @@ function findParentPaths(items: NavItem[], targetSlug: string, parentPath: strin
     }
   }
   return null
+}
+
+/**
+ * 统计树中所有叶子文件节点的总数
+ */
+function countLeafNodes(items: NavItem[]): number {
+  let count = 0
+  for (const item of items) {
+    if (item.type === 'file') {
+      count += 1
+    } else if (item.type === 'directory' && item.children) {
+      count += countLeafNodes(item.children)
+    }
+  }
+  return count
+}
+
+/**
+ * 在根层级将 items 拆分为"常驻（含前10个叶子）"和"折叠"两部分
+ */
+function splitAtLeaf10(items: NavItem[]): { visible: NavItem[]; hidden: NavItem[] } {
+  let leafCount = 0
+  let splitIndex = items.length
+
+  for (let i = 0; i < items.length; i++) {
+    leafCount += countLeafNodes([items[i]])
+    if (leafCount >= 10) {
+      splitIndex = i + 1
+      break
+    }
+  }
+
+  return {
+    visible: items.slice(0, splitIndex),
+    hidden: items.slice(splitIndex),
+  }
 }
 
 /**
@@ -68,16 +108,14 @@ function FileTypeIcon({ item }: { item: NavItem }) {
 
 export function DocsSidebarClient({ manifest }: DocsSidebarClientProps) {
   const pathname = usePathname()
-  // 从 pathname 中提取完整 slug（去掉 /docs/ 前缀和尾部斜杠）
-  // 如 /docs/00-dashboard/file.md/ -> 00-dashboard/file.md
   const currentSlug = (pathname?.replace(/^\/docs\//, '').replace(/\/$/, '') || '').split('/').map(decodeURIComponent).join('/')
 
-  // 初始化展开状态 - 包含当前 slug 的所有父级目录
   const initialExpanded = new Set<string>()
   const parentPaths = findParentPaths(manifest.navigation.docs, currentSlug) || []
   parentPaths.forEach(p => initialExpanded.add(p))
 
   const [expanded, setExpanded] = useState<Set<string>>(initialExpanded)
+  const [tocOpen, setTocOpen] = useState(false)
 
   const toggleExpand = (path: string) => {
     setExpanded(prev => {
@@ -91,8 +129,15 @@ export function DocsSidebarClient({ manifest }: DocsSidebarClientProps) {
     })
   }
 
-  return (
-    <aside className="w-72 h-screen sticky top-0 bg-white border-r border-[#d0d7de] overflow-y-scroll shrink-0">
+  const totalLeaves = countLeafNodes(manifest.navigation.docs)
+  const needsCollapsible = totalLeaves > 10
+  const { visible, hidden } = needsCollapsible
+    ? splitAtLeaf10(manifest.navigation.docs)
+    : { visible: manifest.navigation.docs, hidden: [] }
+
+  // 桌面端：原有样式
+  const desktopSidebar = (
+    <aside className="hidden md:block w-72 h-screen sticky top-0 bg-white border-r border-[#d0d7de] overflow-y-scroll shrink-0">
       {/* Header */}
       <div className="p-4 border-b border-[#d0d7de]">
         <Link href="/" className="block">
@@ -121,6 +166,71 @@ export function DocsSidebarClient({ manifest }: DocsSidebarClientProps) {
       </div>
     </aside>
   )
+
+  // 移动端：TOC 在内容上方，超 10 条时折叠
+  const mobileToc = (
+    <div className="block md:hidden border-b border-[#d0d7de] bg-white">
+      <div className="px-4 py-3">
+        <p className="text-xs font-semibold text-[#57606a] uppercase tracking-wide mb-2">文档目录</p>
+        <nav className="space-y-0.5">
+          {visible.map((item) => (
+            <TreeItem
+              key={item.path}
+              item={item}
+              level={0}
+              currentSlug={currentSlug}
+              expanded={expanded}
+              onToggle={toggleExpand}
+            />
+          ))}
+        </nav>
+
+        {needsCollapsible && hidden.length > 0 && (
+          <Collapsible open={tocOpen} onOpenChange={setTocOpen}>
+            <CollapsibleContent>
+              <nav className="space-y-0.5 mt-0.5">
+                {hidden.map((item) => (
+                  <TreeItem
+                    key={item.path}
+                    item={item}
+                    level={0}
+                    currentSlug={currentSlug}
+                    expanded={expanded}
+                    onToggle={toggleExpand}
+                  />
+                ))}
+              </nav>
+            </CollapsibleContent>
+            <CollapsibleTrigger asChild>
+              <button
+                type="button"
+                className="w-full flex items-center justify-center gap-1.5 mt-2 py-1.5 text-xs text-[#57606a] hover:text-[#24292f] hover:bg-[#eaeef2] rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-300"
+              >
+                {tocOpen ? (
+                  <>
+                    <ChevronUp className="w-3.5 h-3.5" />
+                    收起目录
+                  </>
+                ) : (
+                  <>
+                    <ChevronDown className="w-3.5 h-3.5" />
+                    展开全部目录
+                  </>
+                )}
+              </button>
+            </CollapsibleTrigger>
+          </Collapsible>
+        )}
+      </div>
+    </div>
+  )
+
+  return (
+    <>
+      {desktopSidebar}
+      {mobileToc}
+    </>
+  )
 }
 
 interface TreeItemProps {
@@ -133,11 +243,8 @@ interface TreeItemProps {
 
 function TreeItem({ item, level, currentSlug, expanded, onToggle }: TreeItemProps) {
   const isExpanded = expanded.has(item.path)
-  // 不区分大小写比较 slug（解决线上服务器可能对 URL 进行大小写规范化的问题）
   const isCurrent = item.type === 'file' && item.slug?.toLowerCase() === currentSlug.toLowerCase()
 
-  // GitHub 配色
-  // 使用固定宽度和等宽数字，避免选中时跳动
   const itemClasses = cn(
     'flex items-center gap-2 w-full text-left text-sm rounded-md transition-colors',
     'h-8 px-2 font-normal',
@@ -151,7 +258,6 @@ function TreeItem({ item, level, currentSlug, expanded, onToggle }: TreeItemProp
     const encodedSlug = item.slug!.split('/').map(encodeURIComponent).join('/')
     return (
       <div style={{ paddingLeft: `${level * 16}px` }} className="relative group">
-        {/* 保留完整文件名，对路径的每一部分分别编码 */}
         <Link href={`/docs/${encodedSlug}`} className={itemClasses}>
           <FileTypeIcon item={item} />
           <span className="truncate">{item.name}</span>
@@ -169,7 +275,6 @@ function TreeItem({ item, level, currentSlug, expanded, onToggle }: TreeItemProp
     )
   }
 
-  // Directory
   return (
     <div>
       <button
@@ -185,22 +290,13 @@ function TreeItem({ item, level, currentSlug, expanded, onToggle }: TreeItemProp
             'w-3 h-3 flex-shrink-0 text-[#57606a] transition-transform',
             isExpanded && 'rotate-90'
           )}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 5l7 7-7 7"
-          />
-        </svg>
-        <svg
-          className="w-4 h-4 flex-shrink-0 text-[#57606a]"
-          fill="currentColor"
+          fill="none"
+          stroke="currentColor"
           viewBox="0 0 24 24"
         >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+        <svg className="w-4 h-4 flex-shrink-0 text-[#57606a]" fill="currentColor" viewBox="0 0 24 24">
           <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
         </svg>
         <span className="font-semibold truncate">{item.name}</span>
