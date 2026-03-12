@@ -5,7 +5,7 @@ export default async function SettingsPage() {
   const allDocs = flattenNavTree(manifest.navigation.docs)
 
   return (
-    <div className="max-w-4xl mx-auto py-8 px-6">
+    <div className="max-w-4xl mx-auto py-8 px-4 md:px-6">
       <h1 className="text-3xl font-bold text-zinc-900 mb-8">设置</h1>
 
       <div className="space-y-6">

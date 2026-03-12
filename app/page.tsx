@@ -11,7 +11,7 @@ export default async function Home() {
   const categoryCount = manifest.navigation.docs.length
 
   return (
-    <div className="max-w-5xl mx-auto py-8 px-6">
+    <div className="max-w-5xl mx-auto py-8 px-4 md:px-6">
       <header className="mb-10">
         <h1 className="text-3xl font-bold text-zinc-900">仪表盘</h1>
         <p className="text-zinc-500 mt-2">产品文档与原型管理中心</p>

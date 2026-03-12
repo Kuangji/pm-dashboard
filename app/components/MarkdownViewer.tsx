@@ -102,7 +102,10 @@ export function MarkdownViewer({ content }: MarkdownViewerProps) {
         }
         .markdown-body table {
           border-collapse: collapse;
-          width: 100%;
+          display: block;
+          width: max-content;
+          max-width: 100%;
+          overflow-x: auto;
           margin-bottom: 16px;
         }
         .markdown-body th,

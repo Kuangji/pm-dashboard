@@ -6,7 +6,7 @@ export default async function DemosPage() {
   const manifest = await readManifest()
 
   return (
-    <div className="max-w-5xl mx-auto py-8 px-6">
+    <div className="max-w-5xl mx-auto py-8 px-4 md:px-6">
       <header className="mb-8">
         <h1 className="text-3xl font-bold text-zinc-900">Demos</h1>
         <p className="text-zinc-500 mt-2">交互式原型演示</p>

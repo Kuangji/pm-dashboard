@@ -95,7 +95,7 @@ export function CodeViewer({ content, language, fileName }: CodeViewerProps) {
 
       {/* Content */}
       <div className="bg-[#f6f8fa] overflow-auto max-h-[80vh]">
-        <pre className="p-4 m-0 text-sm leading-relaxed">
+        <pre className="p-3 md:p-4 m-0 text-sm leading-relaxed">
           <code
             className={`hljs ${language ? `language-${language}` : ''}`}
             dangerouslySetInnerHTML={{ __html: highlighted }}
