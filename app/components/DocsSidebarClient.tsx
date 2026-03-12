@@ -185,6 +185,7 @@ export function DocsSidebarClient({ manifest }: DocsSidebarClientProps) {
           ))}
         </nav>
 
+        {/* needsCollapsible: totalLeaves > 10; hidden.length > 0: guards against edge case where splitAtLeaf10 puts everything in visible */}
         {needsCollapsible && hidden.length > 0 && (
           <Collapsible open={tocOpen} onOpenChange={setTocOpen}>
             <CollapsibleContent>
