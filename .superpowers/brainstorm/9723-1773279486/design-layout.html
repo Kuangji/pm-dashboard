@@ -1,0 +1,126 @@
+<h2>设计方案：移动端布局结构</h2>
+<p class="subtitle">对比桌面端（≥768px）和移动端（&lt;768px）的布局差异</p>
+
+<div class="split">
+  <div class="mockup">
+    <div class="mockup-header">桌面端（≥768px）— 保持不变</div>
+    <div class="mockup-body" style="padding:0;">
+      <!-- 主布局 -->
+      <div style="display:flex;height:280px;font-size:11px;">
+        <!-- 主侧边栏 -->
+        <div style="width:64px;background:#1e293b;color:#94a3b8;padding:12px 8px;flex-shrink:0;">
+          <div style="font-weight:600;color:#f1f5f9;margin-bottom:16px;font-size:10px;">PM</div>
+          <div style="padding:6px 4px;border-radius:4px;margin-bottom:4px;color:#f1f5f9;background:#334155;">🏠 首页</div>
+          <div style="padding:6px 4px;border-radius:4px;margin-bottom:4px;">📄 文档</div>
+          <div style="padding:6px 4px;border-radius:4px;margin-bottom:4px;">🎮 演示</div>
+          <div style="padding:6px 4px;border-radius:4px;">⚙️ 设置</div>
+        </div>
+        <!-- 主内容 -->
+        <div style="flex:1;background:#f8fafc;padding:12px;">
+          <div style="background:#e2e8f0;height:12px;border-radius:2px;margin-bottom:8px;width:40%;"></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:8px;">
+            <div style="background:white;border:1px solid #e2e8f0;border-radius:4px;padding:8px;"><div style="background:#e2e8f0;height:8px;border-radius:2px;margin-bottom:4px;"></div><div style="background:#f1f5f9;height:6px;border-radius:2px;"></div></div>
+            <div style="background:white;border:1px solid #e2e8f0;border-radius:4px;padding:8px;"><div style="background:#e2e8f0;height:8px;border-radius:2px;margin-bottom:4px;"></div><div style="background:#f1f5f9;height:6px;border-radius:2px;"></div></div>
+            <div style="background:white;border:1px solid #e2e8f0;border-radius:4px;padding:8px;"><div style="background:#e2e8f0;height:8px;border-radius:2px;margin-bottom:4px;"></div><div style="background:#f1f5f9;height:6px;border-radius:2px;"></div></div>
+          </div>
+          <div style="background:#e2e8f0;height:8px;border-radius:2px;margin-bottom:6px;width:90%;"></div>
+          <div style="background:#e2e8f0;height:8px;border-radius:2px;width:75%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-header">移动端（&lt;768px）— 侧边栏改为 Drawer</div>
+    <div class="mockup-body" style="padding:0;">
+      <div style="height:280px;font-size:11px;position:relative;overflow:hidden;">
+        <!-- 顶部 Header（仅移动端出现） -->
+        <div style="background:#1e293b;color:#f1f5f9;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;">
+          <div style="font-weight:600;font-size:12px;">PM Dashboard</div>
+          <div style="font-size:16px;cursor:pointer;">☰</div>
+        </div>
+        <!-- 全宽内容 -->
+        <div style="background:#f8fafc;padding:12px;">
+          <div style="background:#e2e8f0;height:12px;border-radius:2px;margin-bottom:8px;width:50%;"></div>
+          <div style="display:grid;grid-template-columns:1fr;gap:8px;margin-bottom:8px;">
+            <div style="background:white;border:1px solid #e2e8f0;border-radius:4px;padding:8px;"><div style="background:#e2e8f0;height:8px;border-radius:2px;margin-bottom:4px;"></div><div style="background:#f1f5f9;height:6px;border-radius:2px;"></div></div>
+            <div style="background:white;border:1px solid #e2e8f0;border-radius:4px;padding:8px;"><div style="background:#e2e8f0;height:8px;border-radius:2px;margin-bottom:4px;"></div><div style="background:#f1f5f9;height:6px;border-radius:2px;"></div></div>
+          </div>
+          <div style="background:#e2e8f0;height:8px;border-radius:2px;margin-bottom:6px;width:95%;"></div>
+          <div style="background:#e2e8f0;height:8px;border-radius:2px;width:80%;"></div>
+        </div>
+        <!-- Drawer 覆盖层（演示打开状态） -->
+        <div style="position:absolute;top:0;left:0;right:0;bottom:0;display:flex;">
+          <div style="width:200px;background:#1e293b;color:#94a3b8;padding:16px;box-shadow:4px 0 20px rgba(0,0,0,0.3);">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+              <div style="font-weight:600;color:#f1f5f9;font-size:12px;">PM Dashboard</div>
+              <div style="color:#94a3b8;cursor:pointer;">✕</div>
+            </div>
+            <div style="padding:8px;border-radius:4px;margin-bottom:4px;color:#f1f5f9;background:#334155;font-size:11px;">🏠 首页</div>
+            <div style="padding:8px;border-radius:4px;margin-bottom:4px;font-size:11px;">📄 文档</div>
+            <div style="padding:8px;border-radius:4px;margin-bottom:4px;font-size:11px;">🎮 演示</div>
+            <div style="padding:8px;border-radius:4px;font-size:11px;">⚙️ 设置</div>
+          </div>
+          <div style="flex:1;background:rgba(0,0,0,0.4);"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top:24px;">
+  <h3>文档页移动端布局（GitHub 风格）</h3>
+</div>
+
+<div class="split">
+  <div class="mockup">
+    <div class="mockup-header">桌面端 — 两列布局</div>
+    <div class="mockup-body" style="padding:0;">
+      <div style="display:flex;height:240px;font-size:11px;">
+        <div style="width:80px;background:#f8fafc;border-right:1px solid #e2e8f0;padding:10px 8px;flex-shrink:0;">
+          <div style="font-weight:600;color:#374151;margin-bottom:8px;font-size:10px;">目录</div>
+          <div style="color:#6b7280;padding:3px 0;border-left:2px solid #3b82f6;padding-left:6px;margin-bottom:2px;">概述</div>
+          <div style="color:#6b7280;padding:3px 0;padding-left:6px;margin-bottom:2px;">背景</div>
+          <div style="color:#6b7280;padding:3px 0;padding-left:6px;margin-bottom:2px;">方案</div>
+          <div style="color:#6b7280;padding:3px 0;padding-left:6px;">结论</div>
+        </div>
+        <div style="flex:1;padding:12px;overflow:hidden;">
+          <div style="background:#e2e8f0;height:14px;border-radius:2px;margin-bottom:10px;width:60%;"></div>
+          <div style="background:#f1f5f9;height:8px;border-radius:2px;margin-bottom:6px;width:95%;"></div>
+          <div style="background:#f1f5f9;height:8px;border-radius:2px;margin-bottom:6px;width:85%;"></div>
+          <div style="background:#f1f5f9;height:8px;border-radius:2px;width:90%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-header">移动端 — 纵向堆叠 + Toggle</div>
+    <div class="mockup-body" style="padding:0;">
+      <div style="height:240px;font-size:11px;">
+        <!-- 顶部 header -->
+        <div style="background:#1e293b;color:#f1f5f9;padding:8px 12px;display:flex;justify-content:space-between;">
+          <div style="font-size:11px;">PM Dashboard</div>
+          <div>☰</div>
+        </div>
+        <!-- 文档 TOC toggle 区 -->
+        <div style="background:#f0f4f8;border-bottom:1px solid #e2e8f0;padding:8px 12px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div style="font-weight:600;font-size:11px;color:#374151;">📑 文档目录</div>
+            <div style="font-size:11px;color:#6b7280;">▼ 展开</div>
+          </div>
+          <!-- 折叠状态，仅显示 toggle，内容隐藏 -->
+        </div>
+        <!-- 全宽内容 -->
+        <div style="padding:12px;">
+          <div style="background:#e2e8f0;height:14px;border-radius:2px;margin-bottom:10px;width:70%;"></div>
+          <div style="background:#f1f5f9;height:8px;border-radius:2px;margin-bottom:6px;width:95%;"></div>
+          <div style="background:#f1f5f9;height:8px;border-radius:2px;margin-bottom:6px;width:85%;"></div>
+          <div style="background:#f1f5f9;height:8px;border-radius:2px;width:90%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:16px;">以上两部分是否符合你的预期？</p>

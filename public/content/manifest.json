@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-03-10T03:30:45.899Z",
+  "updatedAt": "2026-03-12T07:14:04.089Z",
   "navigation": {
     "docs": [
       {
@@ -659,6 +659,18 @@
         ]
       },
       {
+        "id": "cool_hello_world_v2",
+        "title": "酷炫欢迎页 v2",
+        "description": "NoxInfluencer 2026 品牌风格的视觉展示页，采用深色背景与玻璃态设计，融合品牌蓝紫渐变配色。",
+        "path": "demos/cool_hello_world_v2/index.html",
+        "thumbnail": "",
+        "tags": [
+          "品牌视觉",
+          "暗色主题",
+          "玻璃态"
+        ]
+      },
+      {
         "id": "monitor-760",
         "title": "760 监控平台 Demo",
         "description": "内容监控平台原型演示，包含任务管理、主题监控、新建任务等功能",
@@ -672,14 +684,14 @@
       },
       {
         "id": "poe_328_bd_website",
-        "title": "POE 3.28 开荒BD合集",
-        "description": "流放之路3.28赛季开荒Build收集站，聚合热门BD配装方案，支持快速浏览与筛选。",
+        "title": "POE开荒BD收集站",
+        "description": "流放之路3.28赛季开荒Build Guide聚合展示网站，支持BD浏览与分类筛选",
         "path": "demos/poe_328_bd_website/index.html",
         "thumbnail": "",
         "tags": [
-          "游戏",
-          "POE",
-          "Build"
+          "流放之路",
+          "游戏工具",
+          "Build Guide"
         ]
       }
     ]

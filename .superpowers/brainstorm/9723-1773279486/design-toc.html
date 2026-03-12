@@ -1,0 +1,73 @@
+<h2>文档 TOC 移动端交互细化</h2>
+<p class="subtitle">常驻显示前 N 条，超出部分折叠 / 展开</p>
+
+<div class="split">
+  <div class="mockup">
+    <div class="mockup-header">TOC 较短（≤ 阈值）— 全部常驻</div>
+    <div class="mockup-body" style="padding:0;font-size:11px;">
+      <div style="background:#f0f4f8;border-bottom:1px solid #e2e8f0;padding:10px 14px;">
+        <div style="font-weight:600;color:#374151;margin-bottom:8px;">📑 本文目录</div>
+        <div style="color:#3b82f6;padding:4px 0;border-left:2px solid #3b82f6;padding-left:8px;margin-bottom:2px;font-weight:500;">1. 背景</div>
+        <div style="color:#6b7280;padding:4px 0;padding-left:8px;margin-bottom:2px;">2. 问题分析</div>
+        <div style="color:#6b7280;padding:4px 0;padding-left:8px;margin-bottom:2px;">3. 方案设计</div>
+        <div style="color:#6b7280;padding:4px 0;padding-left:8px;">4. 结论</div>
+        <!-- 无 toggle 按钮，因为条数未超限 -->
+      </div>
+      <div style="padding:12px;">
+        <div style="background:#e2e8f0;height:12px;border-radius:2px;margin-bottom:8px;width:60%;"></div>
+        <div style="background:#f1f5f9;height:7px;border-radius:2px;margin-bottom:5px;width:95%;"></div>
+        <div style="background:#f1f5f9;height:7px;border-radius:2px;width:80%;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-header">TOC 较长（＞ 阈值）— 超出部分可 Toggle</div>
+    <div class="mockup-body" style="padding:0;font-size:11px;">
+      <!-- 折叠状态 -->
+      <div style="background:#f0f4f8;border-bottom:1px solid #e2e8f0;padding:10px 14px;">
+        <div style="font-weight:600;color:#374151;margin-bottom:8px;">📑 本文目录</div>
+        <!-- 常驻区：前 N 条始终可见 -->
+        <div style="color:#3b82f6;padding:4px 0;border-left:2px solid #3b82f6;padding-left:8px;margin-bottom:2px;font-weight:500;">1. 背景</div>
+        <div style="color:#6b7280;padding:4px 0;padding-left:8px;margin-bottom:2px;">2. 问题分析</div>
+        <div style="color:#6b7280;padding:4px 0;padding-left:8px;margin-bottom:2px;">3. 方案设计</div>
+        <div style="color:#6b7280;padding:4px 0;padding-left:8px;margin-bottom:2px;">4. 竞品对比</div>
+        <div style="color:#6b7280;padding:4px 0;padding-left:8px;margin-bottom:2px;">5. 数据支撑</div>
+        <!-- 折叠区：隐藏的条目 -->
+        <div style="background:#e8edf2;border-radius:4px;padding:4px 8px;color:#9ca3af;font-style:italic;margin-bottom:6px;">（还有 3 条...）</div>
+        <!-- Toggle 按钮 -->
+        <button style="width:100%;background:none;border:1px solid #d1d5db;border-radius:4px;padding:4px 8px;color:#6b7280;cursor:pointer;font-size:11px;">▼ 展开全部目录</button>
+      </div>
+      <div style="padding:12px;">
+        <div style="background:#e2e8f0;height:12px;border-radius:2px;margin-bottom:8px;width:60%;"></div>
+        <div style="background:#f1f5f9;height:7px;border-radius:2px;margin-bottom:5px;width:95%;"></div>
+        <div style="background:#f1f5f9;height:7px;border-radius:2px;width:80%;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top:24px;">
+  <div class="mockup">
+    <div class="mockup-header">TOC 较长 — 展开后状态</div>
+    <div class="mockup-body" style="padding:0;font-size:11px;">
+      <div style="background:#f0f4f8;border-bottom:1px solid #e2e8f0;padding:10px 14px;">
+        <div style="font-weight:600;color:#374151;margin-bottom:8px;">📑 本文目录</div>
+        <!-- 常驻区 -->
+        <div style="color:#3b82f6;padding:4px 0;border-left:2px solid #3b82f6;padding-left:8px;margin-bottom:2px;font-weight:500;">1. 背景</div>
+        <div style="color:#6b7280;padding:4px 0;padding-left:8px;margin-bottom:2px;">2. 问题分析</div>
+        <div style="color:#6b7280;padding:4px 0;padding-left:8px;margin-bottom:2px;">3. 方案设计</div>
+        <div style="color:#6b7280;padding:4px 0;padding-left:8px;margin-bottom:2px;">4. 竞品对比</div>
+        <div style="color:#6b7280;padding:4px 0;padding-left:8px;margin-bottom:2px;">5. 数据支撑</div>
+        <!-- 展开区：显示超出部分 -->
+        <div style="color:#6b7280;padding:4px 0;padding-left:8px;margin-bottom:2px;">6. 实施计划</div>
+        <div style="color:#6b7280;padding:4px 0;padding-left:8px;margin-bottom:2px;">7. 风险评估</div>
+        <div style="color:#6b7280;padding:4px 0;padding-left:8px;margin-bottom:6px;">8. 结论</div>
+        <!-- Toggle 按钮变为"收起" -->
+        <button style="width:100%;background:none;border:1px solid #d1d5db;border-radius:4px;padding:4px 8px;color:#6b7280;cursor:pointer;font-size:11px;">▲ 收起目录</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:16px;">阈值建议：<strong>5 条</strong>。超出则折叠，未超出则全部常驻显示。这个数值是否合适？</p>

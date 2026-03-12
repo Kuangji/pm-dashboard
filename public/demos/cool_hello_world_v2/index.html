@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cool Hello World v2 — NoxInfluencer 2026</title>
+
+  <link rel="stylesheet" href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+  <script crossorigin src="https://cdn.bootcdn.net/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script crossorigin src="https://cdn.bootcdn.net/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/babel-standalone/7.22.17/babel.min.js"></script>
+  <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --nox-blue:    #2E5BFF;
+      --nox-purple:  #7C3AED;
+      --bg-dark:     #080C18;
+      --glass-bg:    rgba(255,255,255,0.055);
+      --text:        #FFFFFF;
+      --text-muted:  rgba(255,255,255,0.52);
+      --r-container: 12px;
+      --r-card:      10px;
+      --r-btn:       8px;
+      --r-badge:     6px;
+    }
+
+    html, body, #root {
+      width: 100%; height: 100%;
+      overflow: hidden;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text);
+    }
+
+    /* ── MESH BACKGROUND ── */
+    .mesh-bg { position: fixed; inset: 0; z-index: 0; overflow: hidden; }
+    .orb { position: absolute; border-radius: 50%; filter: blur(80px); mix-blend-mode: screen; }
+    .orb-a {
+      width: 620px; height: 620px;
+      background: radial-gradient(circle, rgba(46,91,255,0.55) 0%, transparent 70%);
+      top: -120px; left: -120px;
+      animation: drift-a 10s ease-in-out infinite alternate;
+    }
+    .orb-b {
+      width: 520px; height: 520px;
+      background: radial-gradient(circle, rgba(124,58,237,0.5) 0%, transparent 70%);
+      top: 180px; right: -60px;
+      animation: drift-b 13s ease-in-out infinite alternate;
+    }
+    .orb-c {
+      width: 560px; height: 560px;
+      background: radial-gradient(circle, rgba(14,165,233,0.4) 0%, transparent 70%);
+      bottom: -120px; left: 28%;
+      animation: drift-c 8s ease-in-out infinite alternate;
+    }
+    @keyframes drift-a { from{transform:translate(0,0) scale(1)}   to{transform:translate(130px,90px) scale(1.18)} }
+    @keyframes drift-b { from{transform:translate(0,0) scale(1.1)} to{transform:translate(-90px,130px) scale(1)} }
+    @keyframes drift-c { from{transform:translate(0,0) scale(1)}   to{transform:translate(-70px,-110px) scale(1.22)} }
+
+    /* ── NOISE TEXTURE ── */
+    .noise {
+      position: fixed; inset: 0; z-index: 1;
+      opacity: 0.03; pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px; mix-blend-mode: overlay;
+    }
+
+    /* ── NAV ── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: 64px; display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px;
+      background: rgba(8,12,24,0.72); backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+    .nav-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--nox-blue);
+      animation: nav-pulse 2s ease-in-out infinite;
+    }
+    @keyframes nav-pulse {
+      0%,100% { box-shadow: 0 0 8px var(--nox-blue), 0 0 18px rgba(46,91,255,0.5); }
+      50%      { box-shadow: 0 0 14px var(--nox-blue), 0 0 32px rgba(46,91,255,0.7); }
+    }
+    .nav-wordmark { font-size: 14px; font-weight: 700; letter-spacing: 0.2em; }
+    .nav-status { font-size: 12px; color: rgba(255,255,255,0.38); display: flex; align-items: center; gap: 6px; }
+    .status-live { color: #10B981; }
+
+    /* ── BENTO GRID ── */
+    .bento {
+      position: relative; z-index: 10;
+      width: 100%; height: 100vh;        /* 直接用 viewport 高度，断开易碎的百分比链 */
+      box-sizing: border-box;
+      padding: 96px 48px 32px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr 140px 130px;
+      gap: 16px;
+      max-width: 1400px; margin: 0 auto;
+    }
+
+    /* ── 3D FLIP 架构 ──
+       flip-wrapper：perspective 容器 + display:flex
+         → flex 的 align-items:stretch 在容器高度由外层 bento grid 确定后
+           可靠地将高度传递给 flip-inner。
+         → display:grid 的隐式行高为 auto，内容全部绝对定位时计算为 0，
+           导致 flip-inner 塌陷，故改用 flex。
+    ── */
+    .flip-wrapper {
+      perspective: 1200px;
+      display: flex;
+      align-items: stretch;
+      width: 100%;   /* 明确撑满 grid cell 宽度 */
+      height: 100%;  /* 建立高度上下文，让 flip-inner 的 height:100% 可解析 */
+    }
+    /* transform-style: preserve-3d：CSS 侧保底 + Framer Motion style prop 同时注入，防背面镜像 */
+    .flip-inner {
+      position: relative;           /* card-face(absolute) 的包含块 */
+      transform-style: preserve-3d; /* CSS 保底：Framer Motion 覆写 transform 时不丢失 3D 上下文 */
+      cursor: pointer;
+      width: 100%;                  /* 填满 flex 主轴（宽度） */
+      height: 100%;                 /* 填满 flex 交叉轴（高度），与 align-items:stretch 双保险 */
+      min-height: 0;                /* 允许在 flex/grid 上下文中收缩，防止溢出 */
+    }
+    .card-face {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: var(--r-card);
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+    }
+    /* 背面初始旋转 180°：隐藏；当父级旋转到 180° 时，合计 360°=0°，正向可读 */
+    .card-back {
+      transform: rotateY(180deg); /* REVERSE MIRROR — 背面反向，翻转后呈正向 */
+      background: rgba(10,15,35,0.95);
+      backdrop-filter: blur(25px);
+      border: 1px solid rgba(46,91,255,0.25);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; /* CENTER: 两轴居中 */
+      gap: 8px;
+      padding: 28px;
+      text-align: center;
+    }
+
+    /* ── GLASS CARD BASE ── */
+    .glass-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      position: relative;
+    }
+    .glass-card::before {
+      content: ''; position: absolute; inset: 0; border-radius: inherit; z-index: 5;
+      border: 1px solid rgba(255,255,255,0.10); pointer-events: none;
+      animation: breathe-white 3.5s ease-in-out infinite;
+    }
+    @keyframes breathe-white {
+      0%,100% { border-color: rgba(255,255,255,0.08); }
+      50%      { border-color: rgba(255,255,255,0.26); }
+    }
+
+    /* ── SPOTLIGHT ── */
+    .spotlight {
+      position: absolute; inset: 0; border-radius: inherit;
+      pointer-events: none; z-index: 2;
+      opacity: 0; transition: opacity 0.6s ease;
+    }
+
+    /* ── 背面文字 ── */
+    .back-tag   { font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--nox-blue); margin-bottom: 8px; }
+    .back-title { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .back-list  { list-style: none; display: flex; flex-direction: column; gap: 6px; align-items: center; }
+    .back-list li { font-size: 11px; color: rgba(255,255,255,0.62); display: flex; align-items: center; gap: 7px; }
+    .back-list li::before { content: '→'; color: var(--nox-blue); font-size: 9px; }
+
+    /* ══════════════════════════════════════════════════════
+       GRID PLACEMENT — 只有 grid-column / grid-row
+       应用于 .flip-wrapper，与布局/外观完全解耦
+    ══════════════════════════════════════════════════════ */
+    .gc-hero   { grid-column: 1/3; grid-row: 1/3; }
+    .gc-tech1  { grid-column: 3/4; grid-row: 1/2; }
+    .gc-tech2  { grid-column: 4/5; grid-row: 1/2; }
+    .gc-stats  { grid-column: 3/5; grid-row: 2/3; }
+    .gc-swatch { grid-column: 1/2; grid-row: 3/4; }
+    .gc-slogan { grid-column: 2/5; grid-row: 3/4; }
+
+    /* ══════════════════════════════════════════════════════
+       FRONT FACE LAYOUTS — 应用于 .card-front（含布局/外观）
+    ══════════════════════════════════════════════════════ */
+
+    /* HERO */
+    .cf-hero {
+      border-radius: var(--r-container) !important;
+      padding: 40px;
+      display: flex; flex-direction: column;
+      align-items: flex-start; justify-content: center;
+    }
+    .cf-hero .hero-tint {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(46,91,255,0.09) 0%, transparent 60%);
+      pointer-events: none; z-index: 1;
+    }
+    /* 直接子元素（内容）需显式高于 hero-tint(z:1) 和 spotlight(z:2) */
+    .cf-hero > *:not(.spotlight):not(.hero-tint) { position: relative; z-index: 3; }
+
+    /* TECH */
+    .cf-tech {
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 10px;
+    }
+
+    /* STATS */
+    .cf-stats {
+      display: flex; flex-direction: row; align-items: center; justify-content: space-around;
+      padding: 0 32px; gap: 16px;
+    }
+    .cf-stats > div:not([style]) {
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+    }
+
+    /* SWATCH */
+    .cf-swatch {
+      background: var(--nox-blue) !important;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 6px;
+    }
+
+    /* SLOGAN */
+    .cf-slogan {
+      padding-left: 60px;
+      display: flex; align-items: center;
+    }
+
+    /* ── HERO 内容 ── */
+    .brand-pill { display: inline-flex; align-items: center; gap: 6px; background: var(--nox-blue); color: #fff; font-size: 11px; font-weight: 600; padding: 5px 12px; border-radius: var(--r-badge); width: fit-content; margin-bottom: 24px; }
+    .hero-h1    { font-size: clamp(40px,4vw,60px); font-weight: 800; line-height: 1.1; margin-bottom: 14px; }
+    .hero-sub   { font-size: 16px; color: var(--text-muted); margin-bottom: 30px; }
+    .cta        { display: inline-flex; align-items: center; gap: 8px; background: var(--nox-blue); color: #fff; font-size: 14px; font-weight: 600; padding: 12px 24px; border-radius: var(--r-btn); text-decoration: none; width: fit-content; box-shadow: 0 4px 20px rgba(46,91,255,0.3); }
+
+    /* ── TECH 内容 ── */
+    .tech-name { font-size: 15px; font-weight: 700; }
+    .tech-desc { font-size: 11px; color: var(--text-muted); }
+
+    /* ── STATS 内容 ── */
+    .stat-num { font-size: 36px; font-weight: 800; line-height: 1; }
+    .stat-lbl { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.12em; margin-top: 6px; }
+
+    /* ── SWATCH 内容 ── */
+    .hex      { font-size: 18px; font-weight: 700; font-family: 'SF Mono','Fira Code',monospace; }
+    .hex-name { font-size: 11px; color: rgba(255,255,255,0.75); letter-spacing: 0.15em; text-transform: uppercase; }
+
+    /* ── SLOGAN 内容 ── */
+    .slogan-text { font-size: 20px; font-weight: 300; font-style: italic; }
+    .slogan-hl   { font-style: normal; font-weight: 600; background: linear-gradient(90deg, var(--nox-blue), var(--nox-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useRef, useCallback, useState } = React;
+    const { motion, useSpring } = window.Motion;
+
+    /**
+     * BentoCard — 3D Flip + Spotlight + Framer Motion 3D Tilt
+     *
+     * 关键点：
+     *   transformStyle: 'preserve-3d' 必须写在 motion.div 的 style 里，
+     *   而不是 CSS class 里，否则 Framer Motion 自己的 transform 会覆盖它。
+     *
+     * Props:
+     *   gridClass  — gc-* 类，只含 grid placement，挂到 flip-wrapper
+     *   frontClass — cf-* 类，含布局/外观，挂到 card-front
+     */
+    function BentoCard({ gridClass, frontClass = '', children, backContent }) {
+      const [flipped, setFlipped] = useState(false);
+      const cardRef = useRef(null);
+      const spotRef = useRef(null);
+
+      const rotateY = useSpring(0, { stiffness: 200, damping: 25 });
+      const rotateX = useSpring(0, { stiffness: 200, damping: 25 });
+
+      const onMove = useCallback((e) => {
+        if (flipped) return;
+        const r = cardRef.current.getBoundingClientRect();
+        const x = e.clientX - r.left;
+        const y = e.clientY - r.top;
+        rotateY.set((x / r.width  - 0.5) * 14);
+        rotateX.set(-(y / r.height - 0.5) * 14);
+        if (spotRef.current) {
+          spotRef.current.style.opacity = '1';
+          spotRef.current.style.background =
+            `radial-gradient(250px circle at ${x}px ${y}px, rgba(46,91,255,0.15), transparent 80%)`;
+        }
+      }, [flipped]);
+
+      const onLeave = useCallback(() => {
+        if (!flipped) { rotateY.set(0); rotateX.set(0); }
+        if (spotRef.current) spotRef.current.style.opacity = '0';
+      }, [flipped]);
+
+      const handleClick = () => {
+        const next = !flipped;
+        setFlipped(next);
+        rotateY.set(next ? 180 : 0);
+        rotateX.set(0);
+      };
+
+      return (
+        <div className={`flip-wrapper ${gridClass}`}>
+          {/*
+            transformStyle: 'preserve-3d' 写在 style prop 里，
+            确保 Framer Motion 合成矩阵时不会丢失 3D 上下文。
+            没有这一行，背面文字会在 rotateY(180deg) 后呈镜像。
+          */}
+          <motion.div
+            className="flip-inner"
+            style={{ rotateY, rotateX, transformStyle: 'preserve-3d' }}
+            onClick={handleClick}
+            whileTap={{ scale: 0.96 }}
+          >
+            {/* ── 正面 ── */}
+            <div
+              ref={cardRef}
+              className={`card-face card-front glass-card ${frontClass}`}
+              onMouseMove={onMove}
+              onMouseLeave={onLeave}
+            >
+              <div ref={spotRef} className="spotlight" />
+              {children}
+            </div>
+
+            {/* ── 背面：rotateY(180deg) 使其初始背向用户；父级转到 180° 时合计 360°=0°，正向可读 ── */}
+            <div className="card-face card-back">
+              {backContent}
+            </div>
+          </motion.div>
+        </div>
+      );
+    }
+
+    /* ── SVG Icons ── */
+    const ReactIcon = () => (
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+        <ellipse cx="20" cy="20" rx="3" ry="3" fill="#61DAFB"/>
+        <ellipse cx="20" cy="20" rx="18" ry="7" stroke="#61DAFB" strokeWidth="1.5" fill="none"/>
+        <ellipse cx="20" cy="20" rx="18" ry="7" stroke="#61DAFB" strokeWidth="1.5" fill="none" transform="rotate(60 20 20)"/>
+        <ellipse cx="20" cy="20" rx="18" ry="7" stroke="#61DAFB" strokeWidth="1.5" fill="none" transform="rotate(120 20 20)"/>
+      </svg>
+    );
+    const FramerIcon = () => (
+      <svg width="32" height="32" viewBox="0 0 100 100" fill="none">
+        <path d="M 10 10 L 90 10 L 90 55 L 50 55 Z" fill="#FF4D6A"/>
+        <path d="M 10 55 L 50 55 L 90 100 L 10 100 Z" fill="#FF4D6A" opacity="0.7"/>
+        <path d="M 10 10 L 50 55 L 10 55 Z" fill="#FF4D6A" opacity="0.5"/>
+      </svg>
+    );
+
+    /* ── App ── */
+    function App() {
+      return (
+        <>
+          <div className="mesh-bg">
+            <div className="orb orb-a"/><div className="orb orb-b"/><div className="orb orb-c"/>
+          </div>
+          <div className="noise"/>
+
+          <nav className="nav">
+            <div className="nav-logo"><div className="nav-dot"/><span className="nav-wordmark">NOX</span></div>
+            <div className="nav-status"><span className="status-live">●</span>LIVE v2.1</div>
+          </nav>
+
+          <main className="bento">
+
+            {/* HERO — gc-hero: col 1/3, row 1/3 | cf-hero: padding + flex layout */}
+            <BentoCard
+              gridClass="gc-hero"
+              frontClass="cf-hero"
+              backContent={<>
+                <span className="back-tag">NoxIntelligence</span>
+                <p className="back-title">Core Engine 2026</p>
+                <ul className="back-list">
+                  <li>Advanced AI Discovery</li>
+                  <li>Real-time Data Processing</li>
+                  <li>Predictive Analytics</li>
+                </ul>
+              </>}
+            >
+              <div className="hero-tint"/>
+              <div className="brand-pill">NoxInfluencer</div>
+              <h1 className="hero-h1">Hello,<br/>World.</h1>
+              <p className="hero-sub">Leading Creator Economy Data Platform</p>
+              <a href="#" className="cta">Explore →</a>
+            </BentoCard>
+
+            {/* TECH A — React */}
+            <BentoCard
+              gridClass="gc-tech1"
+              frontClass="cf-tech"
+              backContent={<>
+                <span className="back-tag">Frontend</span>
+                <p className="back-title">React 18</p>
+                <ul className="back-list">
+                  <li>Concurrent UI</li>
+                  <li>State Management</li>
+                  <li>Zero Latency</li>
+                </ul>
+              </>}
+            >
+              <ReactIcon/><span className="tech-name">React 18</span><span className="tech-desc">UI Framework</span>
+            </BentoCard>
+
+            {/* TECH B — Framer Motion */}
+            <BentoCard
+              gridClass="gc-tech2"
+              frontClass="cf-tech"
+              backContent={<>
+                <span className="back-tag">Motion</span>
+                <p className="back-title">Framer Motion</p>
+                <ul className="back-list">
+                  <li>Physics Springs</li>
+                  <li>Gesture Support</li>
+                  <li>3D Orchestration</li>
+                </ul>
+              </>}
+            >
+              <FramerIcon/><span className="tech-name">Framer</span><span className="tech-desc">Animation</span>
+            </BentoCard>
+
+            {/* STATS */}
+            <BentoCard
+              gridClass="gc-stats"
+              frontClass="cf-stats"
+              backContent={<>
+                <span className="back-tag">Scale</span>
+                <p className="back-title">Global Impact</p>
+                <ul className="back-list">
+                  <li>150+ Regions</li>
+                  <li>Daily Updates</li>
+                  <li>High Consistency</li>
+                </ul>
+              </>}
+            >
+              <div><div className="stat-num">10M+</div><div className="stat-lbl">Creators</div></div>
+              <div style={{width:1, height:48, background:'linear-gradient(to bottom, transparent, rgba(255,255,255,0.12), transparent)'}}/>
+              <div><div className="stat-num">4B+</div><div className="stat-lbl">Data Points</div></div>
+            </BentoCard>
+
+            {/* SWATCH */}
+            <BentoCard
+              gridClass="gc-swatch"
+              frontClass="cf-swatch"
+              backContent={<>
+                <span className="back-tag">Design</span>
+                <p className="back-title">NoxBlue</p>
+                <p style={{fontSize:11, opacity:0.6}}>#2E5BFF<br/>Brand Identity Prime</p>
+              </>}
+            >
+              <div className="hex">#2E5BFF</div>
+              <div className="hex-name">NoxBlue</div>
+            </BentoCard>
+
+            {/* SLOGAN */}
+            <BentoCard
+              gridClass="gc-slogan"
+              frontClass="cf-slogan"
+              backContent={<>
+                <span className="back-tag">Mission</span>
+                <p className="back-title">Our Vision</p>
+                <p style={{fontSize:11, opacity:0.6}}>To bridge creators and brands through truth in data.</p>
+              </>}
+            >
+              <p className="slogan-text">Where <span className="slogan-hl">Creators</span> Meet Data.</p>
+            </BentoCard>
+
+          </main>
+        </>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+  </script>
+</body>
+</html>
