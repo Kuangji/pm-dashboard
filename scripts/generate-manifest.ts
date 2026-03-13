@@ -237,13 +237,14 @@ async function scanDemos(): Promise<DemoItem[]> {
 async function getNewestMtime(dirs: string[]): Promise<number> {
   let newest = 0
   async function walk(dir: string) {
-    let entries: Awaited<ReturnType<typeof fs.readdir>>
-    try { entries = await fs.readdir(dir, { withFileTypes: true }) } catch { return }
-    for (const entry of entries) {
-      const full = path.join(dir, entry.name)
-      if (entry.isDirectory()) { await walk(full) }
-      else { const { mtimeMs } = await fs.stat(full); if (mtimeMs > newest) newest = mtimeMs }
-    }
+    try {
+      const entries = await fs.readdir(dir, { withFileTypes: true })
+      for (const entry of entries) {
+        const full = path.join(dir, entry.name)
+        if (entry.isDirectory()) { await walk(full) }
+        else { const { mtimeMs } = await fs.stat(full); if (mtimeMs > newest) newest = mtimeMs }
+      }
+    } catch { return }
   }
   for (const dir of dirs) await walk(dir)
   return newest
