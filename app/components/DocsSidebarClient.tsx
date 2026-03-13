@@ -137,7 +137,7 @@ export function DocsSidebarClient({ manifest }: DocsSidebarClientProps) {
 
   // 桌面端：原有样式
   const desktopSidebar = (
-    <aside className="hidden md:block w-72 h-screen sticky top-0 bg-white border-r border-[#d0d7de] overflow-y-scroll shrink-0">
+    <aside className="hidden md:flex md:flex-col w-72 h-screen sticky top-0 bg-white border-r border-[#d0d7de] shrink-0">
       {/* Header */}
       <div className="p-4 border-b border-[#d0d7de]">
         <Link href="/" className="block">
@@ -147,7 +147,7 @@ export function DocsSidebarClient({ manifest }: DocsSidebarClientProps) {
       </div>
 
       {/* Tree Navigation */}
-      <nav className="p-2 pb-20">
+      <nav className="p-2 flex-1 overflow-y-auto">
         {manifest.navigation.docs.map((item) => (
           <TreeItem
             key={item.path}
@@ -161,7 +161,7 @@ export function DocsSidebarClient({ manifest }: DocsSidebarClientProps) {
       </nav>
 
       {/* Footer */}
-      <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-[#d0d7de] bg-white">
+      <div className="p-4 border-t border-[#d0d7de] bg-white shrink-0">
         <p className="text-xs text-[#57606a]">v{manifest.version}</p>
       </div>
     </aside>

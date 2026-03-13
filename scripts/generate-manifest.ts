@@ -234,8 +234,32 @@ async function scanDemos(): Promise<DemoItem[]> {
   }
 }
 
+async function getNewestMtime(dirs: string[]): Promise<number> {
+  let newest = 0
+  async function walk(dir: string) {
+    let entries: Awaited<ReturnType<typeof fs.readdir>>
+    try { entries = await fs.readdir(dir, { withFileTypes: true }) } catch { return }
+    for (const entry of entries) {
+      const full = path.join(dir, entry.name)
+      if (entry.isDirectory()) { await walk(full) }
+      else { const { mtimeMs } = await fs.stat(full); if (mtimeMs > newest) newest = mtimeMs }
+    }
+  }
+  for (const dir of dirs) await walk(dir)
+  return newest
+}
+
 async function generateManifest() {
   console.log('🔄 生成 manifest.json...\n')
+
+  try {
+    const manifestStat = await fs.stat(MANIFEST_PATH)
+    const newestMtime = await getNewestMtime([DOCUMENTS_DIR, DEMOS_DIR])
+    if (manifestStat.mtimeMs > newestMtime) {
+      console.log('⚡ 内容未变动，跳过 manifest 生成')
+      return
+    }
+  } catch { /* manifest 不存在或目录不存在，继续生成 */ }
 
   const docs = await scanDirectory(DOCUMENTS_DIR)
   const cleanedDocs = cleanItems(docs)

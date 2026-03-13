@@ -36,6 +36,8 @@ async function syncFile(src: string, dest: string) {
   const destDir = path.dirname(dest)
   await fs.mkdir(destDir, { recursive: true })
   await fs.copyFile(src, dest)
+  const { atime, mtime } = await fs.stat(src)
+  await fs.utimes(dest, atime, mtime)
 }
 
 async function syncDirectory(src: string, dest: string) {

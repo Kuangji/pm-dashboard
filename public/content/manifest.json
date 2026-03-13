@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-03-12T07:14:04.089Z",
+  "updatedAt": "2026-03-13T09:08:44.130Z",
   "navigation": {
     "docs": [
       {
@@ -660,14 +660,14 @@
       },
       {
         "id": "cool_hello_world_v2",
-        "title": "酷炫欢迎页 v2",
-        "description": "NoxInfluencer 2026 品牌风格的视觉展示页，采用深色背景与玻璃态设计，融合品牌蓝紫渐变配色。",
+        "title": "NoxInfluencer 2026 视觉演示",
+        "description": "NoxInfluencer 品牌风格的 Hello World 演示页，展示深色玻璃态 UI 设计语言与配色体系",
         "path": "demos/cool_hello_world_v2/index.html",
         "thumbnail": "",
         "tags": [
-          "品牌视觉",
-          "暗色主题",
-          "玻璃态"
+          "品牌设计",
+          "视觉演示",
+          "暗色主题"
         ]
       },
       {
@@ -684,14 +684,14 @@
       },
       {
         "id": "poe_328_bd_website",
-        "title": "POE开荒BD收集站",
-        "description": "流放之路3.28赛季开荒Build Guide聚合展示网站，支持BD浏览与分类筛选",
+        "title": "POE 3.28 BD收集站",
+        "description": "流放之路3.28赛季开荒BD合集，收录幻象系构建方案，帮助玩家快速筛选和参考赛季开荒路线",
         "path": "demos/poe_328_bd_website/index.html",
         "thumbnail": "",
         "tags": [
           "流放之路",
-          "游戏工具",
-          "Build Guide"
+          "游戏攻略",
+          "赛季开荒"
         ]
       }
     ]
