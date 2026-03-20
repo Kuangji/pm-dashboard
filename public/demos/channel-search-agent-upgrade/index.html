@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>频道搜索 Agent 化改造 Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="demo-page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">NoxInfluencer · Searchbox Focus Demo</p>
+          <h1>频道搜索 Agent 化改造</h1>
+          <p class="hero-copy">
+            这个静态 Demo 只聚焦搜索框本体。页面其他部件故意弱化，用于比较“经典态、URL
+            识别态、自然语言展开态、混合输入态”的视觉和交互语义。
+          </p>
+        </div>
+        <div class="hero-pill">外部稳定，内部惊喜</div>
+      </header>
+
+      <section class="controls">
+        <div class="control-group">
+          <span class="control-label">场景</span>
+          <div class="segmented" id="scenario-picker">
+            <button class="is-active" data-scenario="keyword-input">关键词输入态</button>
+            <button data-scenario="keyword-tag">关键词完成态</button>
+            <button data-scenario="keyword-multi">多关键词态</button>
+            <button data-scenario="keyword-menu">匹配目标态</button>
+            <button data-scenario="url">纯 URL</button>
+            <button data-scenario="natural">自然语言</button>
+            <button data-scenario="mixed">混合输入</button>
+            <button data-scenario="repair">修正态</button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <span class="control-label">视觉方向</span>
+          <div class="segmented" id="variant-picker">
+            <button class="is-active" data-variant="balanced">A 平衡型</button>
+            <button data-variant="glass">B AI 材质型</button>
+            <button data-variant="neon">C 强惊喜型</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="compare-stack">
+        <article class="demo-panel wide" data-card-variant="balanced">
+          <div class="demo-panel-header">
+            <div>
+              <p class="demo-kicker">方案 A</p>
+              <h2>平衡型</h2>
+            </div>
+            <span class="tone-tag">保守升级</span>
+          </div>
+          <p class="demo-desc">
+            最贴近现有 Nox 搜索页，只在展开态加入少量 AI 材质与分层，适合先做 v1。
+          </p>
+          <div class="search-shell theme-balanced" id="balanced-shell"></div>
+        </article>
+
+        <article class="demo-panel wide" data-card-variant="glass">
+          <div class="demo-panel-header">
+            <div>
+              <p class="demo-kicker">方案 B</p>
+              <h2>AI 材质型</h2>
+            </div>
+            <span class="tone-tag">推荐方向</span>
+          </div>
+          <p class="demo-desc">
+            搜索框外保持不动，展开后通过独立材质、柔和光感、层叠卡片制造“进入智能模式”的惊喜。
+          </p>
+          <div class="search-shell theme-glass" id="glass-shell"></div>
+        </article>
+
+        <article class="demo-panel wide" data-card-variant="neon">
+          <div class="demo-panel-header">
+            <div>
+              <p class="demo-kicker">方案 C</p>
+              <h2>强惊喜型</h2>
+            </div>
+            <span class="tone-tag">上限探索</span>
+          </div>
+          <p class="demo-desc">
+            更明显的 AI 发光边界与高对比层次，适合探索上限，但风险是和外部页面拉开过大。
+          </p>
+          <div class="search-shell theme-neon" id="neon-shell"></div>
+        </article>
+      </section>
+
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

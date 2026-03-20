@@ -1,0 +1,45 @@
+{
+  "_description": "Twitter/X 频道原始数据样例 - 来自数据组",
+  "_note": "此样例展示从 kol_twitter_v1 索引获取的真实数据字段",
+  "_last_updated": "2026-03-16",
+  "_sample_user": "nananat96 (Natalia)",
+
+  "raw_data": {
+    "_index": "kol_twitter_v1",
+    "_type": "_doc",
+    "_id": "886530583",
+    "_score": null,
+    "_source": {
+      "followers": 424573,
+      "following": 173,
+      "biography": "MIDZY 👑 IG : nananat | Tiktok : natnatnatalia28",
+      "listed_count": 1346,
+      "location": "Jakarta",
+      "medias": 1654,
+      "username": "Natalia",
+      "banner_url": "https://pbs.twimg.com/profile_banners/886530583/1594568164",
+      "alias": "nananat96",
+      "posts_number": 17155,
+      "is_translator": false,
+      "translator_type": "none",
+      "is_verified": null,
+      "verified_type": null,
+      "avatar": "https://res-kol.noxgroup.com/noxinfluencer/twitter/avatar/f9b87041561b38fb4a46d93e48028f58.png",
+      "likes": 789,
+      "register_date": "2012-10-17",
+      "withheld_in_countries": [],
+      "possibly_sensitive": false,
+      "parody_commentary_fan_label": "None",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "pinned_tweet_ids_str": [],
+      "generated_at": 1773655902219,
+      "birthdate": null,
+      "external_url": null,
+      "category": null,
+      "professional_type": null,
+      "is_delete": 1,
+      "country": "ID"
+    }
+  }
+}

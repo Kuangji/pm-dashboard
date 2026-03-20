@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-03-13T09:08:44.130Z",
+  "updatedAt": "2026-03-20T02:22:37.801Z",
   "navigation": {
     "docs": [
       {
@@ -33,6 +33,67 @@
         "name": "02-project-documents",
         "path": "02-project-documents",
         "children": [
+          {
+            "type": "directory",
+            "name": "channel_search_agent_upgrade",
+            "path": "02-project-documents/channel_search_agent_upgrade",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "02-project-documents/channel_search_agent_upgrade/README.md",
+                "slug": "02-project-documents/channel_search_agent_upgrade/README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "design_v1.md",
+                "path": "02-project-documents/channel_search_agent_upgrade/design_v1.md",
+                "slug": "02-project-documents/channel_search_agent_upgrade/design_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "input_v1.md",
+                "path": "02-project-documents/channel_search_agent_upgrade/input_v1.md",
+                "slug": "02-project-documents/channel_search_agent_upgrade/input_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "prd_v1.md",
+                "path": "02-project-documents/channel_search_agent_upgrade/prd_v1.md",
+                "slug": "02-project-documents/channel_search_agent_upgrade/prd_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "spec_v1.md",
+                "path": "02-project-documents/channel_search_agent_upgrade/spec_v1.md",
+                "slug": "02-project-documents/channel_search_agent_upgrade/spec_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "state_machine_v1.md",
+                "path": "02-project-documents/channel_search_agent_upgrade/state_machine_v1.md",
+                "slug": "02-project-documents/channel_search_agent_upgrade/state_machine_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              }
+            ]
+          },
           {
             "type": "directory",
             "name": "monitor_760",
@@ -150,6 +211,768 @@
           },
           {
             "type": "directory",
+            "name": "other_social_search_741",
+            "path": "02-project-documents/other_social_search_741",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "02-project-documents/other_social_search_741/README.md",
+                "slug": "02-project-documents/other_social_search_741/README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "_plan.md",
+                "path": "02-project-documents/other_social_search_741/_plan.md",
+                "slug": "02-project-documents/other_social_search_741/_plan.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "design_v1.md",
+                "path": "02-project-documents/other_social_search_741/design_v1.md",
+                "slug": "02-project-documents/other_social_search_741/design_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "input_v2.md",
+                "path": "02-project-documents/other_social_search_741/input_v2.md",
+                "slug": "02-project-documents/other_social_search_741/input_v2.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "input_v3.md",
+                "path": "02-project-documents/other_social_search_741/input_v3.md",
+                "slug": "02-project-documents/other_social_search_741/input_v3.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "other_social_search_common_context_v1.md",
+                "path": "02-project-documents/other_social_search_741/other_social_search_common_context_v1.md",
+                "slug": "02-project-documents/other_social_search_741/other_social_search_common_context_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "spec_v1.md",
+                "path": "02-project-documents/other_social_search_741/spec_v1.md",
+                "slug": "02-project-documents/other_social_search_741/spec_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "twitter_data_fields.md",
+                "path": "02-project-documents/other_social_search_741/twitter_data_fields.md",
+                "slug": "02-project-documents/other_social_search_741/twitter_data_fields.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "twitter_data_sample_raw.json",
+                "path": "02-project-documents/other_social_search_741/twitter_data_sample_raw.json",
+                "slug": "02-project-documents/other_social_search_741/twitter_data_sample_raw.json",
+                "fileType": "json",
+                "language": "json",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "twitter_tweet_sample_raw.json",
+                "path": "02-project-documents/other_social_search_741/twitter_tweet_sample_raw.json",
+                "slug": "02-project-documents/other_social_search_741/twitter_tweet_sample_raw.json",
+                "fileType": "json",
+                "language": "json",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "v740_background.md",
+                "path": "02-project-documents/other_social_search_741/v740_background.md",
+                "slug": "02-project-documents/other_social_search_741/v740_background.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "directory",
+                "name": "images",
+                "path": "02-project-documents/other_social_search_741/images",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "generated-1773917831473.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773917831473.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773917831473.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773917858724.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773917858724.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773917858724.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773917885922.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773917885922.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773917885922.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773917895959.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773917895959.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773917895959.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773917901056.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773917901056.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773917901056.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773917915044.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773917915044.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773917915044.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773917937506.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773917937506.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773917937506.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773917954114.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773917954114.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773917954114.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773917958131.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773917958131.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773917958131.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773917976564.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773917976564.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773917976564.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773917977870.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773917977870.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773917977870.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773917999360.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773917999360.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773917999360.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918014657.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918014657.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918014657.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918019043.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918019043.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918019043.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918040626.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918040626.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918040626.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918041937.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918041937.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918041937.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918045922.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918045922.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918045922.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918054831.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918054831.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918054831.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918058500.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918058500.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918058500.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918061498.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918061498.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918061498.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918075061.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918075061.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918075061.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918080106.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918080106.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918080106.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918081677.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918081677.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918081677.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918089581.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918089581.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918089581.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918099070.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918099070.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918099070.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918108647.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918108647.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918108647.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918110083.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918110083.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918110083.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918125509.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918125509.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918125509.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918141091.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918141091.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918141091.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918151677.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918151677.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918151677.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918158415.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918158415.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918158415.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918174386.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918174386.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918174386.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918175347.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918175347.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918175347.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918206659.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918206659.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918206659.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918222820.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918222820.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918222820.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918230258.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918230258.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918230258.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918239077.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918239077.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918239077.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "generated-1773918257418.png",
+                    "path": "02-project-documents/other_social_search_741/images/generated-1773918257418.png",
+                    "slug": "02-project-documents/other_social_search_741/images/generated-1773918257418.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "prototype_exports",
+                "path": "02-project-documents/other_social_search_741/prototype_exports",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "4MWNN.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports/4MWNN.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports/4MWNN.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "6r1W8.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports/6r1W8.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports/6r1W8.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "SEBrk.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports/SEBrk.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports/SEBrk.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "YRrJw.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports/YRrJw.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports/YRrJw.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "YjHMY.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports/YjHMY.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports/YjHMY.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ipqVu.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports/ipqVu.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports/ipqVu.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "uk3AD.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports/uk3AD.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports/uk3AD.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "prototype_exports_final",
+                "path": "02-project-documents/other_social_search_741/prototype_exports_final",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "4MWNN.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports_final/4MWNN.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports_final/4MWNN.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "6r1W8.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports_final/6r1W8.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports_final/6r1W8.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "SEBrk.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports_final/SEBrk.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports_final/SEBrk.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "YRrJw.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports_final/YRrJw.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports_final/YRrJw.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "YjHMY.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports_final/YjHMY.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports_final/YjHMY.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ipqVu.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports_final/ipqVu.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports_final/ipqVu.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "uk3AD.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports_final/uk3AD.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports_final/uk3AD.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "prototype_exports_showcase",
+                "path": "02-project-documents/other_social_search_741/prototype_exports_showcase",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "4MWNN.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports_showcase/4MWNN.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports_showcase/4MWNN.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "6r1W8.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports_showcase/6r1W8.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports_showcase/6r1W8.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "SEBrk.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports_showcase/SEBrk.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports_showcase/SEBrk.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "YRrJw.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports_showcase/YRrJw.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports_showcase/YRrJw.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "YjHMY.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports_showcase/YjHMY.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports_showcase/YjHMY.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ipqVu.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports_showcase/ipqVu.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports_showcase/ipqVu.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "uk3AD.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports_showcase/uk3AD.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports_showcase/uk3AD.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "prototype_exports_showcase_v2",
+                "path": "02-project-documents/other_social_search_741/prototype_exports_showcase_v2",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "SEBrk.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports_showcase_v2/SEBrk.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports_showcase_v2/SEBrk.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "YjHMY.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports_showcase_v2/YjHMY.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports_showcase_v2/YjHMY.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ipqVu.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports_showcase_v2/ipqVu.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports_showcase_v2/ipqVu.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "uk3AD.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports_showcase_v2/uk3AD.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports_showcase_v2/uk3AD.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "reference_screenshots",
+                "path": "02-project-documents/other_social_search_741/reference_screenshots",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "2026-03-18-twitter-search-first-card.png",
+                    "path": "02-project-documents/other_social_search_741/reference_screenshots/2026-03-18-twitter-search-first-card.png",
+                    "slug": "02-project-documents/other_social_search_741/reference_screenshots/2026-03-18-twitter-search-first-card.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "2026-03-18-twitter-search-fullpage.png",
+                    "path": "02-project-documents/other_social_search_741/reference_screenshots/2026-03-18-twitter-search-fullpage.png",
+                    "slug": "02-project-documents/other_social_search_741/reference_screenshots/2026-03-18-twitter-search-fullpage.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "2026-03-18-twitter-search-results.png",
+                    "path": "02-project-documents/other_social_search_741/reference_screenshots/2026-03-18-twitter-search-results.png",
+                    "slug": "02-project-documents/other_social_search_741/reference_screenshots/2026-03-18-twitter-search-results.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "2026-03-18-twitter-search-top.png",
+                    "path": "02-project-documents/other_social_search_741/reference_screenshots/2026-03-18-twitter-search-top.png",
+                    "slug": "02-project-documents/other_social_search_741/reference_screenshots/2026-03-18-twitter-search-top.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "2026-03-18-twitter-search-viewport.png",
+                    "path": "02-project-documents/other_social_search_741/reference_screenshots/2026-03-18-twitter-search-viewport.png",
+                    "slug": "02-project-documents/other_social_search_741/reference_screenshots/2026-03-18-twitter-search-viewport.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "directory",
             "name": "支付单暂存和预约发送",
             "path": "02-project-documents/支付单暂存和预约发送",
             "children": [
@@ -259,6 +1082,219 @@
         "name": "03-research",
         "path": "03-research",
         "children": [
+          {
+            "type": "directory",
+            "name": "channel_search_agent_upgrade",
+            "path": "03-research/channel_search_agent_upgrade",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "03-research/channel_search_agent_upgrade/README.md",
+                "slug": "03-research/channel_search_agent_upgrade/README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "调研简报.md",
+                "path": "03-research/channel_search_agent_upgrade/调研简报.md",
+                "slug": "03-research/channel_search_agent_upgrade/调研简报.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "directory",
+                "name": "01_raw_data",
+                "path": "03-research/channel_search_agent_upgrade/01_raw_data",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "hypeauditor_raw.md",
+                    "path": "03-research/channel_search_agent_upgrade/01_raw_data/hypeauditor_raw.md",
+                    "slug": "03-research/channel_search_agent_upgrade/01_raw_data/hypeauditor_raw.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "klear_raw.md",
+                    "path": "03-research/channel_search_agent_upgrade/01_raw_data/klear_raw.md",
+                    "slug": "03-research/channel_search_agent_upgrade/01_raw_data/klear_raw.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "linkedin_recruiter_raw.md",
+                    "path": "03-research/channel_search_agent_upgrade/01_raw_data/linkedin_recruiter_raw.md",
+                    "slug": "03-research/channel_search_agent_upgrade/01_raw_data/linkedin_recruiter_raw.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "modash_raw.md",
+                    "path": "03-research/channel_search_agent_upgrade/01_raw_data/modash_raw.md",
+                    "slug": "03-research/channel_search_agent_upgrade/01_raw_data/modash_raw.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "upfluence_raw.md",
+                    "path": "03-research/channel_search_agent_upgrade/01_raw_data/upfluence_raw.md",
+                    "slug": "03-research/channel_search_agent_upgrade/01_raw_data/upfluence_raw.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "02_ux_flows",
+                "path": "03-research/channel_search_agent_upgrade/02_ux_flows",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "hypeauditor_flow.md",
+                    "path": "03-research/channel_search_agent_upgrade/02_ux_flows/hypeauditor_flow.md",
+                    "slug": "03-research/channel_search_agent_upgrade/02_ux_flows/hypeauditor_flow.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "klear_flow.md",
+                    "path": "03-research/channel_search_agent_upgrade/02_ux_flows/klear_flow.md",
+                    "slug": "03-research/channel_search_agent_upgrade/02_ux_flows/klear_flow.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "linkedin_recruiter_flow.md",
+                    "path": "03-research/channel_search_agent_upgrade/02_ux_flows/linkedin_recruiter_flow.md",
+                    "slug": "03-research/channel_search_agent_upgrade/02_ux_flows/linkedin_recruiter_flow.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "modash_flow.md",
+                    "path": "03-research/channel_search_agent_upgrade/02_ux_flows/modash_flow.md",
+                    "slug": "03-research/channel_search_agent_upgrade/02_ux_flows/modash_flow.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "upfluence_flow.md",
+                    "path": "03-research/channel_search_agent_upgrade/02_ux_flows/upfluence_flow.md",
+                    "slug": "03-research/channel_search_agent_upgrade/02_ux_flows/upfluence_flow.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "03_teardown",
+                "path": "03-research/channel_search_agent_upgrade/03_teardown",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "hypeauditor_teardown.md",
+                    "path": "03-research/channel_search_agent_upgrade/03_teardown/hypeauditor_teardown.md",
+                    "slug": "03-research/channel_search_agent_upgrade/03_teardown/hypeauditor_teardown.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "klear_teardown.md",
+                    "path": "03-research/channel_search_agent_upgrade/03_teardown/klear_teardown.md",
+                    "slug": "03-research/channel_search_agent_upgrade/03_teardown/klear_teardown.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "linkedin_recruiter_teardown.md",
+                    "path": "03-research/channel_search_agent_upgrade/03_teardown/linkedin_recruiter_teardown.md",
+                    "slug": "03-research/channel_search_agent_upgrade/03_teardown/linkedin_recruiter_teardown.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "modash_teardown.md",
+                    "path": "03-research/channel_search_agent_upgrade/03_teardown/modash_teardown.md",
+                    "slug": "03-research/channel_search_agent_upgrade/03_teardown/modash_teardown.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "upfluence_teardown.md",
+                    "path": "03-research/channel_search_agent_upgrade/03_teardown/upfluence_teardown.md",
+                    "slug": "03-research/channel_search_agent_upgrade/03_teardown/upfluence_teardown.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "04_matrix",
+                "path": "03-research/channel_search_agent_upgrade/04_matrix",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "feature_comparison.md",
+                    "path": "03-research/channel_search_agent_upgrade/04_matrix/feature_comparison.md",
+                    "slug": "03-research/channel_search_agent_upgrade/04_matrix/feature_comparison.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "05_insights",
+                "path": "03-research/channel_search_agent_upgrade/05_insights",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "竞品洞察.md",
+                    "path": "03-research/channel_search_agent_upgrade/05_insights/竞品洞察.md",
+                    "slug": "03-research/channel_search_agent_upgrade/05_insights/竞品洞察.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              }
+            ]
+          },
           {
             "type": "directory",
             "name": "keyword_search_竞研",
@@ -643,6 +1679,15 @@
             ]
           }
         ]
+      },
+      {
+        "type": "file",
+        "name": "git_worktree_multi_agent_guide.md",
+        "path": "git_worktree_multi_agent_guide.md",
+        "slug": "git_worktree_multi_agent_guide.md",
+        "fileType": "markdown",
+        "isText": true,
+        "isImage": false
       }
     ],
     "demos": [
@@ -659,16 +1704,25 @@
         ]
       },
       {
-        "id": "cool_hello_world_v2",
-        "title": "NoxInfluencer 2026 视觉演示",
-        "description": "NoxInfluencer 品牌风格的 Hello World 演示页，展示深色玻璃态 UI 设计语言与配色体系",
-        "path": "demos/cool_hello_world_v2/index.html",
+        "id": "channel-search-agent-upgrade",
+        "title": "频道搜索 Agent 化改造 Demo",
+        "description": "聚焦搜索框内部的静态原型，对比关键词编辑器、URL 识别、自然语言展开与混合输入等关键状态。",
+        "path": "demos/channel-search-agent-upgrade/index.html",
         "thumbnail": "",
         "tags": [
-          "品牌设计",
-          "视觉演示",
-          "暗色主题"
+          "搜索框",
+          "Agent",
+          "原型",
+          "静态 Demo"
         ]
+      },
+      {
+        "id": "cool_hello_world_v2",
+        "title": "cool_hello_world_v2",
+        "description": "",
+        "path": "demos/cool_hello_world_v2/index.html",
+        "thumbnail": "",
+        "tags": []
       },
       {
         "id": "monitor-760",
@@ -684,15 +1738,11 @@
       },
       {
         "id": "poe_328_bd_website",
-        "title": "POE 3.28 BD收集站",
-        "description": "流放之路3.28赛季开荒BD合集，收录幻象系构建方案，帮助玩家快速筛选和参考赛季开荒路线",
+        "title": "poe_328_bd_website",
+        "description": "",
         "path": "demos/poe_328_bd_website/index.html",
         "thumbnail": "",
-        "tags": [
-          "流放之路",
-          "游戏攻略",
-          "赛季开荒"
-        ]
+        "tags": []
       }
     ]
   }

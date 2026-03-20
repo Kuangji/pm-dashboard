@@ -1,0 +1,40 @@
+{
+  "_description": "Twitter/X 推文数据样例 - 来自数据组",
+  "_note": "此样例展示从 kol_twitter_tweets_2026 索引获取的真实推文数据字段",
+  "_last_updated": "2026-03-16",
+  "_sample_context": "转发推文 (RT)，原推文发布者 @HappyMotorhead",
+
+  "raw_data": {
+    "_index": "kol_twitter_tweets_2026",
+    "_type": "_doc",
+    "_id": "2033486101076119617",
+    "_score": null,
+    "_source": {
+      "media_visibility_results": null,
+      "bookmarks": 0,
+      "is_bookmarked": false,
+      "pub_date": "2026-03-16",
+      "pub_time": 1773655841,
+      "tags": [],
+      "likes": 0,
+      "is_likes": false,
+      "description": "RT @HappyMotorhead: Asking fir a friend... 1 or 2 ? ",
+      "is_quote_status": false,
+      "language": "en",
+      "quotes": 0,
+      "comments": 0,
+      "retweets": 2,
+      "channel_id": "1632174744203309056",
+      "place": null,
+      "views": 0,
+      "generated_at": 1773655921864,
+      "thumbnails": [
+        "https://res-kol.noxgroup.com/noxinfluencer/twitter/video/thumbnails/71435af1b8241eb98d1eadd69feb7215.png"
+      ],
+      "video_url": null,
+      "parent_id": "2033392850944074062",
+      "parent_channel_id": "1829170310316261377"
+    },
+    "sort": [1773655841]
+  }
+}

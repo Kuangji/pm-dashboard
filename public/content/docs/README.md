@@ -14,9 +14,12 @@
 ```
 ├── 01-getting-started/  # 快速开始
 ├── 02-project-documents/  # 项目文档
+│   ├── channel_search_agent_upgrade/  # 频道搜索Agent升级
 │   ├── monitor_760/  # Monitor 监控功能
+│   ├── other_social_search_741/  # 社交搜索项目文档
 │   └── 支付单暂存和预约发送/  # 支付单暂存与预约发送
 └── 03-research/  # 研究报告
+    ├── channel_search_agent_upgrade/  # 频道搜索升级研究
     ├── keyword_search_竞研/  # 关键词竞品调研分析
     └── nox_ai_transform_quick_validation/  # Nox AI转型快速验证
 ```
