@@ -4,7 +4,6 @@
  */
 
 import { promises as fs } from 'fs'
-import { execSync } from 'child_process'
 import path from 'path'
 import matter from 'gray-matter'
 import {
@@ -14,6 +13,7 @@ import {
   isImageFile,
   getLanguage
 } from '../app/lib/file-types'
+import { invokeAiJson } from './lib/ai-cli'
 
 const DASHBOARD_ROOT = process.cwd()
 const DOCUMENTS_DIR = path.join(DASHBOARD_ROOT, 'public/content/docs')
@@ -156,7 +156,7 @@ async function extractHtmlContext(indexPath: string): Promise<string> {
   }
 }
 
-/** 调用 claude -p 为 demo 生成 title/description/tags */
+/** 调用 kimi CLI 为 demo 生成 title/description/tags */
 async function generateDemoConfig(dirName: string, indexPath: string): Promise<Partial<DemoItem>> {
   const htmlContext = await extractHtmlContext(indexPath)
   const prompt = `以下是一个产品原型 Demo 的目录名和页面内容摘要，请生成展示卡片所需的元数据。
@@ -173,18 +173,12 @@ ${htmlContext || '（无）'}
 }`
 
   try {
-    const env = { ...process.env }
-    delete env.CLAUDECODE
-
-    const raw = execSync(`claude -p ${JSON.stringify(prompt)}`, {
-      encoding: 'utf-8',
-      timeout: 60000,
-      env,
+    return await invokeAiJson<Partial<DemoItem>>({
+      prompt,
+      purpose: `generate-demo-config-${dirName}`,
     })
-    const cleaned = raw.trim().replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '')
-    return JSON.parse(cleaned)
   } catch (err) {
-    console.warn(`   ⚠️  claude 调用失败，使用默认配置: ${(err as Error).message.split('\n')[0]}`)
+    console.warn(`   ⚠️  kimi 调用失败，使用默认配置: ${(err as Error).message.split('\n')[0]}`)
     return { title: dirName, description: '', tags: [] }
   }
 }
@@ -211,7 +205,7 @@ async function scanDemos(): Promise<DemoItem[]> {
           const configContent = await fs.readFile(configPath, 'utf-8')
           config = JSON.parse(configContent)
         } catch {
-          // 没有 demo.json，调用 claude 自动生成
+          // 没有 demo.json，调用 kimi 自动生成
           config = await generateDemoConfig(entry.name, indexPath)
           await fs.writeFile(configPath, JSON.stringify(config, null, 2) + '\n', 'utf-8')
           console.log(`   🤖 已生成 demo.json: ${entry.name}`)

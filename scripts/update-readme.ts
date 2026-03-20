@@ -4,12 +4,12 @@
  *
  * 仅展示目录节点（不展示文件），最多 2 层深度。
  * 注释文本由 scripts/readme-tree-comments.json 维护，
- * 遇到没有注释的新目录时自动调用 claude -p 生成。
+ * 遇到没有注释的新目录时自动调用 kimi CLI 生成。
  */
 
 import { promises as fs } from 'fs'
-import { execSync } from 'child_process'
 import path from 'path'
+import { invokeAiJson } from './lib/ai-cli'
 
 const DASHBOARD_ROOT = process.cwd()
 const MANIFEST_PATH = path.join(DASHBOARD_ROOT, 'public/content/manifest.json')
@@ -46,7 +46,7 @@ function collectDirPaths(
   return paths
 }
 
-/** 调用 claude -p 为缺失注释的目录批量生成注释 */
+/** 调用 kimi CLI 为缺失注释的目录批量生成注释 */
 async function fillMissingComments(
   missingPaths: string[],
   comments: Record<string, string>
@@ -62,26 +62,17 @@ ${list}
   "路径": "说明"
 }`
 
-  console.log(`🤖 调用 claude 为 ${missingPaths.length} 个新目录生成注释...`)
+  console.log(`🤖 调用 kimi 为 ${missingPaths.length} 个新目录生成注释...`)
 
   try {
-    // 去掉 CLAUDECODE 以支持在 Claude Code 会话内嵌套调用
-    const env = { ...process.env }
-    delete env.CLAUDECODE
-
-    const raw = execSync(`claude -p ${JSON.stringify(prompt)}`, {
-      encoding: 'utf-8',
-      timeout: 60000,
-      env,
+    const generated = await invokeAiJson<Record<string, string>>({
+      prompt,
+      purpose: 'update-readme-comments',
     })
-
-    // 去除可能的 markdown 代码块包装
-    const cleaned = raw.trim().replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '')
-    const generated: Record<string, string> = JSON.parse(cleaned)
     Object.assign(comments, generated)
     console.log(`   生成完成: ${Object.keys(generated).join(', ')}`)
   } catch (err) {
-    console.warn('⚠️  claude 调用失败，跳过注释生成:', (err as Error).message)
+    console.warn('⚠️  kimi 调用失败，跳过注释生成:', (err as Error).message)
   }
 }
 
