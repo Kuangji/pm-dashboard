@@ -41,6 +41,7 @@ export function DocumentViewer({ doc }: DocumentViewerProps) {
         slug={doc.slug}
         title={doc.title}
         mimeType={doc.mimeType}
+        extension={doc.extension}
       />
     )
   }
