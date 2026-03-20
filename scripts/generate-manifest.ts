@@ -7,13 +7,13 @@ import { promises as fs } from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import {
-  SUPPORTED_EXTENSIONS,
   detectFileType,
   isTextFile,
   isImageFile,
   getLanguage
 } from '../app/lib/file-types'
 import { invokeAiJson } from './lib/ai-cli'
+import { shouldIncludeManifestFile } from './lib/manifest-files'
 
 const DASHBOARD_ROOT = process.cwd()
 const DOCUMENTS_DIR = path.join(DASHBOARD_ROOT, 'public/content/docs')
@@ -62,16 +62,11 @@ function parseName(name: string): { order: number; name: string } {
   return { order: 999, name: name.replace(/-/g, ' ').replace(/_/g, ' ') }
 }
 
-function hasSupportedExtension(filename: string): boolean {
-  const ext = path.extname(filename).toLowerCase()
-  return SUPPORTED_EXTENSIONS.includes(ext)
-}
-
 async function scanDirectory(dirPath: string, relativePath: string = ''): Promise<NavItem[]> {
   const entries = await fs.readdir(dirPath, { withFileTypes: true })
   const items: NavItem[] = []
 
-  const files = entries.filter((e) => e.isFile() && hasSupportedExtension(e.name))
+  const files = entries.filter((e) => e.isFile() && shouldIncludeManifestFile(e.name))
   const dirs = entries.filter((e) => e.isDirectory())
 
   for (const file of files) {

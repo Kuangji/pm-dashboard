@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-03-20T02:22:37.801Z",
+  "updatedAt": "2026-03-20T13:46:48.170Z",
   "navigation": {
     "docs": [
       {
@@ -266,6 +266,15 @@
                 "slug": "02-project-documents/other_social_search_741/other_social_search_common_context_v1.md",
                 "fileType": "markdown",
                 "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "prototype_v1.pen",
+                "path": "02-project-documents/other_social_search_741/prototype_v1.pen",
+                "slug": "02-project-documents/other_social_search_741/prototype_v1.pen",
+                "fileType": "binary",
+                "isText": false,
                 "isImage": false
               },
               {
@@ -1023,6 +1032,15 @@
               },
               {
                 "type": "file",
+                "name": "prototype_v1.pen",
+                "path": "02-project-documents/支付单暂存和预约发送/prototype_v1.pen",
+                "slug": "02-project-documents/支付单暂存和预约发送/prototype_v1.pen",
+                "fileType": "binary",
+                "isText": false,
+                "isImage": false
+              },
+              {
+                "type": "file",
                 "name": "spec_v1.md",
                 "path": "02-project-documents/支付单暂存和预约发送/spec_v1.md",
                 "slug": "02-project-documents/支付单暂存和预约发送/spec_v1.md",
@@ -1343,6 +1361,33 @@
                 "children": [
                   {
                     "type": "file",
+                    "name": "dreame_Export_Result_NoxInfluencer_20260305205844409.xlsx",
+                    "path": "03-research/keyword_search_竞研/01_raw_data/dreame_Export_Result_NoxInfluencer_20260305205844409.xlsx",
+                    "slug": "03-research/keyword_search_竞研/01_raw_data/dreame_Export_Result_NoxInfluencer_20260305205844409.xlsx",
+                    "fileType": "binary",
+                    "isText": false,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "dreame_keywords_search_creators_report.xlsx",
+                    "path": "03-research/keyword_search_竞研/01_raw_data/dreame_keywords_search_creators_report.xlsx",
+                    "slug": "03-research/keyword_search_竞研/01_raw_data/dreame_keywords_search_creators_report.xlsx",
+                    "fileType": "binary",
+                    "isText": false,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "dreame_keywords_search_posts_report.xlsx",
+                    "path": "03-research/keyword_search_竞研/01_raw_data/dreame_keywords_search_posts_report.xlsx",
+                    "slug": "03-research/keyword_search_竞研/01_raw_data/dreame_keywords_search_posts_report.xlsx",
+                    "fileType": "binary",
+                    "isText": false,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
                     "name": "glad2glow_raw.md",
                     "path": "03-research/keyword_search_竞研/01_raw_data/glad2glow_raw.md",
                     "slug": "03-research/keyword_search_竞研/01_raw_data/glad2glow_raw.md",
@@ -1413,11 +1458,65 @@
                       },
                       {
                         "type": "file",
+                        "name": "noxinfluencer_brand_monitor_content_20260368 _tiktok.xlsx",
+                        "path": "03-research/keyword_search_竞研/01_raw_data/Swarovski/noxinfluencer_brand_monitor_content_20260368 _tiktok.xlsx",
+                        "slug": "03-research/keyword_search_竞研/01_raw_data/Swarovski/noxinfluencer_brand_monitor_content_20260368 _tiktok.xlsx",
+                        "fileType": "binary",
+                        "isText": false,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "noxinfluencer_brand_monitor_content_20260368 instagram.xlsx",
+                        "path": "03-research/keyword_search_竞研/01_raw_data/Swarovski/noxinfluencer_brand_monitor_content_20260368 instagram.xlsx",
+                        "slug": "03-research/keyword_search_竞研/01_raw_data/Swarovski/noxinfluencer_brand_monitor_content_20260368 instagram.xlsx",
+                        "fileType": "binary",
+                        "isText": false,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "noxinfluencer_brand_monitor_content_20260368_youtube.xlsx",
+                        "path": "03-research/keyword_search_竞研/01_raw_data/Swarovski/noxinfluencer_brand_monitor_content_20260368_youtube.xlsx",
+                        "slug": "03-research/keyword_search_竞研/01_raw_data/Swarovski/noxinfluencer_brand_monitor_content_20260368_youtube.xlsx",
+                        "fileType": "binary",
+                        "isText": false,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
                         "name": "swarovski_validity_comparison.md",
                         "path": "03-research/keyword_search_竞研/01_raw_data/Swarovski/swarovski_validity_comparison.md",
                         "slug": "03-research/keyword_search_竞研/01_raw_data/Swarovski/swarovski_validity_comparison.md",
                         "fileType": "markdown",
                         "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "tarsight_exclusive_content.xlsx",
+                        "path": "03-research/keyword_search_竞研/01_raw_data/Swarovski/tarsight_exclusive_content.xlsx",
+                        "slug": "03-research/keyword_search_竞研/01_raw_data/Swarovski/tarsight_exclusive_content.xlsx",
+                        "fileType": "binary",
+                        "isText": false,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "tarsight_noise_content.xlsx",
+                        "path": "03-research/keyword_search_竞研/01_raw_data/Swarovski/tarsight_noise_content.xlsx",
+                        "slug": "03-research/keyword_search_竞研/01_raw_data/Swarovski/tarsight_noise_content.xlsx",
+                        "fileType": "binary",
+                        "isText": false,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "tarsight_swarovski_2mon_posts_top10k.xlsx",
+                        "path": "03-research/keyword_search_竞研/01_raw_data/Swarovski/tarsight_swarovski_2mon_posts_top10k.xlsx",
+                        "slug": "03-research/keyword_search_竞研/01_raw_data/Swarovski/tarsight_swarovski_2mon_posts_top10k.xlsx",
+                        "fileType": "binary",
+                        "isText": false,
                         "isImage": false
                       }
                     ]
@@ -1718,11 +1817,15 @@
       },
       {
         "id": "cool_hello_world_v2",
-        "title": "cool_hello_world_v2",
-        "description": "",
+        "title": "Cool Hello World v2",
+        "description": "NoxInfluencer 品牌风格展示 Demo，采用深色主题与玻璃态视觉效果。",
         "path": "demos/cool_hello_world_v2/index.html",
         "thumbnail": "",
-        "tags": []
+        "tags": [
+          "展示",
+          "视觉效果",
+          "品牌设计"
+        ]
       },
       {
         "id": "monitor-760",
@@ -1738,11 +1841,15 @@
       },
       {
         "id": "poe_328_bd_website",
-        "title": "poe_328_bd_website",
-        "description": "",
+        "title": "POE BD收集站",
+        "description": "流放之路3.28幻象赛季开荒BD收集站，整理各类职业流派构建方案。",
         "path": "demos/poe_328_bd_website/index.html",
         "thumbnail": "",
-        "tags": []
+        "tags": [
+          "游戏工具",
+          "流放之路",
+          "BD收集"
+        ]
       }
     ]
   }
