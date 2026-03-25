@@ -446,6 +446,37 @@ body {
   opacity: 0.18;
 }
 
+.machine-svg.is-focusing .svg-transition-target.is-dim .svg-edge {
+  stroke-width: 2.5px !important;
+  filter: none !important;
+}
+
+.machine-svg.is-focusing .svg-transition-target.is-dim .svg-edge.main {
+  stroke: #5a84ff !important;
+}
+
+.machine-svg.is-focusing .svg-transition-target.is-dim .svg-edge.branch {
+  stroke: #ef8a2e !important;
+}
+
+.machine-svg.is-focusing .svg-transition-target.is-dim .svg-edge-label {
+  fill: #5f6f88 !important;
+  font-weight: 700 !important;
+}
+
+.machine-svg.is-focusing .svg-transition-target.is-dim .svg-edge-label.branch {
+  fill: #b56a27 !important;
+}
+
+.machine-svg.is-focusing .svg-state-target.is-dim .svg-node {
+  stroke-width: 1.5px !important;
+  filter: drop-shadow(0 6px 14px rgba(31, 37, 46, 0.04)) !important;
+}
+
+.machine-svg.is-focusing .svg-state-target.is-dim .svg-node-title {
+  fill: #202734 !important;
+}
+
 .svg-state-target.is-highlight .svg-node {
   stroke: rgba(31, 37, 46, 0.22);
   stroke-width: 2.8;

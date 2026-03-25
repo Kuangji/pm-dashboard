@@ -85,6 +85,8 @@
 
 - 当 URL 已被精确识别成功时，输入层语义应切换为 `committed_anchor`
 - 当用户编辑一个已有关键词 tag 时，输入层语义应切换为 `editing_keyword`
+- 当 `committed_anchor + committed_keyword` 同时出现时，默认不做前置冲突判别
+- 系统应先按用户原样执行首轮搜索，再根据结果决定是否 repair / clarify
 
 ---
 
@@ -262,6 +264,8 @@
 **输入规则**：
 - 用户可点选答案
 - 也允许主动再补一句自然语言
+- 允许继续补充新的关键词 tag
+- 允许输入新的 URL，但只可作为替换现有 anchor 或建立单一 anchor 的操作
 - 输入框承载的是新的 follow-up，而不是原始 query
 
 ### 4.6 `refining`
@@ -376,6 +380,11 @@ Agent 必须：
 - Agent 必须先解释系统当前按什么优先级理解输入
 - URL 锚点优先于软偏好
 - 软偏好默认不伪装成已生效硬过滤器
+- 当 `anchor + keyword` 同时出现时：
+  - `anchor` 作为参考锚点
+  - `keyword` 作为显式约束条件
+  - V1 不做前置冲突判别
+  - 默认直接 as-is 进入首轮搜索
 
 ### 5.5 经典态升级为 Agent 态
 
@@ -404,6 +413,17 @@ Agent 必须：
   - `task_summary`
   - `conditions`
   - 必要时一个高价值问题
+
+### 5.6 Agent -> 经典态回退
+
+- Agent 态允许回退到经典态，但只在以下条件成立时：
+  - 已不存在未完成的追问
+  - 已不存在 repair 进行中的卡点
+  - 当前输入只剩显式关键词 tag 和/或单一 anchor
+- 回退后：
+  - 保留显式 tag
+  - 保留单一 anchor
+  - 移除 Agent 派生解释层
 
 ---
 

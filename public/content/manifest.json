@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-03-25T00:32:53.282Z",
+  "updatedAt": "2026-03-25T08:15:39.837Z",
   "navigation": {
     "docs": [
       {
@@ -97,6 +97,15 @@
                 "name": "state_machine_v1.md",
                 "path": "02-project-documents/channel_search_agent_upgrade/state_machine_v1.md",
                 "slug": "02-project-documents/channel_search_agent_upgrade/state_machine_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "xstate_integration_notes_v1.md",
+                "path": "02-project-documents/channel_search_agent_upgrade/xstate_integration_notes_v1.md",
+                "slug": "02-project-documents/channel_search_agent_upgrade/xstate_integration_notes_v1.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
@@ -1364,6 +1373,15 @@
                 "isImage": false
               },
               {
+                "type": "file",
+                "name": "调研速览_数据量对比.md",
+                "path": "03-research/keyword_search_竞研/调研速览_数据量对比.md",
+                "slug": "03-research/keyword_search_竞研/调研速览_数据量对比.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
                 "type": "directory",
                 "name": "01_raw_data",
                 "path": "03-research/keyword_search_竞研/01_raw_data",
@@ -1400,6 +1418,15 @@
                     "name": "glad2glow_raw.md",
                     "path": "03-research/keyword_search_竞研/01_raw_data/glad2glow_raw.md",
                     "slug": "03-research/keyword_search_竞研/01_raw_data/glad2glow_raw.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "tarsight数据量对比.md",
+                    "path": "03-research/keyword_search_竞研/01_raw_data/tarsight数据量对比.md",
+                    "slug": "03-research/keyword_search_竞研/01_raw_data/tarsight数据量对比.md",
                     "fileType": "markdown",
                     "isText": true,
                     "isImage": false
@@ -1571,6 +1598,15 @@
                 "children": [
                   {
                     "type": "file",
+                    "name": "data_volume_comparison.md",
+                    "path": "03-research/keyword_search_竞研/04_matrix/data_volume_comparison.md",
+                    "slug": "03-research/keyword_search_竞研/04_matrix/data_volume_comparison.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
                     "name": "feature_comparison.md",
                     "path": "03-research/keyword_search_竞研/04_matrix/feature_comparison.md",
                     "slug": "03-research/keyword_search_竞研/04_matrix/feature_comparison.md",
@@ -1585,6 +1621,15 @@
                 "name": "05_insights",
                 "path": "03-research/keyword_search_竞研/05_insights",
                 "children": [
+                  {
+                    "type": "file",
+                    "name": "tarsight数据量对比_正式分析结论.md",
+                    "path": "03-research/keyword_search_竞研/05_insights/tarsight数据量对比_正式分析结论.md",
+                    "slug": "03-research/keyword_search_竞研/05_insights/tarsight数据量对比_正式分析结论.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
                   {
                     "type": "file",
                     "name": "竞品洞察.md",
@@ -1826,14 +1871,14 @@
       },
       {
         "id": "cool_hello_world_v2",
-        "title": "Cool Hello World v2",
-        "description": "NoxInfluencer 2026 风格化展示组件，采用玻璃态设计和现代渐变配色方案。",
+        "title": "Cool Hello World",
+        "description": "NoxInfluencer 品牌展示 Demo，采用深色玻璃态 UI 设计的现代化 Hello World 页面。",
         "path": "demos/cool_hello_world_v2/index.html",
         "thumbnail": "",
         "tags": [
-          "UI组件",
-          "玻璃态设计",
-          "展示"
+          "品牌展示",
+          "UI设计",
+          "Demo"
         ]
       },
       {
@@ -1850,14 +1895,14 @@
       },
       {
         "id": "poe_328_bd_website",
-        "title": "POE BD 收集站",
-        "description": "流放之路3.28 Mirage赛季开荒BD收集网站，展示各流派Build攻略与天赋配置。",
+        "title": "流放之路BD站",
+        "description": "流放之路3.28赛季开荒BD收集网站，帮助玩家快速查找和筛选适合的开荒BD配置方案。",
         "path": "demos/poe_328_bd_website/index.html",
         "thumbnail": "",
         "tags": [
-          "游戏工具",
-          "POE",
-          "BD攻略"
+          "游戏",
+          "流放之路",
+          "BD收集"
         ]
       }
     ]

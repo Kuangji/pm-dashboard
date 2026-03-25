@@ -113,6 +113,8 @@ As a keyword-search user, I want each committed keyword phrase to become a confi
 - 多个关键词 tag 可并列存在
 - 每个 tag 可单独配置匹配目标
 - 每个 tag 可单独切换为排除关键词
+- 经典态不因这些能力而变成“带说明的面板”
+- 匹配目标菜单必须被感知为当前 tag 的附属菜单
 
 ### 2.3 Non-Goals
 

@@ -1,1294 +1,4516 @@
-const scenarios = {
-  "keyword-empty": {
-    mode: "classic",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: null,
-    status: null,
-    session: null,
-    question: null,
-    conditions: null,
-    keywordFlow: {
-      draft: "",
-      tags: [],
-      openMenu: false,
-    },
-  },
-  "keyword-input": {
-    mode: "classic",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: null,
-    status: null,
-    session: null,
-    question: null,
-    conditions: null,
-    keywordFlow: {
-      draft: "swim vest",
-      tags: [],
-      openMenu: false,
-    },
-  },
-  "keyword-tag": {
-    mode: "classic",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: null,
-    status: null,
-    session: null,
-    question: null,
-    conditions: null,
-    keywordFlow: {
-      draft: "",
-      tags: [{ text: "swim vest", scope: "标签" }],
-      openMenu: false,
-    },
-  },
-  "keyword-edit": {
-    mode: "classic",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: null,
-    status: null,
-    session: null,
-    question: null,
-    conditions: null,
-    keywordFlow: {
-      draft: "swim vest",
-      tags: [],
-      openMenu: false,
-    },
-  },
-  "keyword-multi": {
-    mode: "classic",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: null,
-    status: null,
-    session: null,
-    question: null,
-    conditions: null,
-    keywordFlow: {
-      draft: "water sports",
-      tags: [{ text: "swim vest", scope: "标签" }],
-      openMenu: false,
-    },
-  },
-  "keyword-anchor-seed": {
-    mode: "classic",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: null,
-    status: null,
-    session: null,
-    question: null,
-    conditions: null,
-    keywordFlow: {
-      draft: "outdoor gear",
-      tags: [
-        { text: "swim vest", scope: "标签" },
-        { text: "@HollylandTech", scope: "频道" },
-        { text: "water sports", scope: "标签" },
-      ],
-      openMenu: false,
-    },
-  },
-  "keyword-menu": {
-    mode: "classic",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: null,
-    status: null,
-    session: null,
-    question: null,
-    conditions: null,
-    keywordFlow: {
-      draft: "",
-      tags: [
-        { text: "swim vest", scope: "标签" },
-        { text: "water sports", scope: "标签" },
-      ],
-      openMenu: true,
-    },
-  },
-  "url-resolving": {
-    mode: "resolving",
-    inputTitle: "https://www.youtube.com/@HollylandTech",
-    inputHint: "",
-    miniAction: "识别中",
-    primaryAction: null,
-    status: {
-      state: "识别中",
-      stateClass: "",
-      spinner: true,
-      text: "正在识别链接类型与目标频道。如果能直接锁定目标，将进入锚点搜索并召回相似频道。",
-    },
-    session: null,
-    question: null,
-    conditions: null,
-  },
-  "url-exact": {
-    mode: "classic",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: null,
-    status: {
-      state: "锚点搜索已就绪",
-      stateClass: "ok",
-      spinner: false,
-      text: "已锁定参考频道 @HollylandTech。结果列表中锚点频道置顶，其余结果默认按相似程度召回。",
-    },
-    session: {
-      label: "task_summary",
-      summary: "当前按 @HollylandTech 作为锚点频道，正在召回相似频道。",
-      meta: ["锚点频道置顶", "相似频道召回", "默认按相似程度排序"],
-    },
-    question: null,
-    conditions: {
-      anchor: "锚点频道：@HollylandTech",
-      hard: [],
-      soft: ["相似频道默认按相似程度排序"],
-      hint: "锚点频道不混入普通相似结果排序流。",
-    },
-    keywordFlow: {
-      draft: "",
-      tags: [{ text: "@HollylandTech", scope: "频道" }],
-      openMenu: false,
-    },
-  },
-  "url-mismatch": {
-    mode: "expanded",
-    inputTitle: "https://www.instagram.com/creator_xxx",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: null,
-    status: {
-      state: "平台不匹配",
-      stateClass: "warn",
-      spinner: false,
-      text: "当前在 YouTube 频道搜索页，该链接属于 Instagram。需要修正后再继续。",
-    },
-    session: {
-      label: "当前卡点",
-      summary: "链接可识别，但目标平台与当前页面不一致。",
-      meta: ["可切平台", "可删链接改写", "不建议静默忽略链接"],
-    },
-    question: {
-      slot: "repair_options",
-      title: "你想切换到 Instagram 搜索，还是继续搜 YouTube？",
-      choices: ["切到 Instagram", "删掉链接继续搜 YouTube", "重新粘贴 YouTube 链接"],
-      caption: "这是 URL 修正问题，不是开放式追问。",
-    },
-    conditions: {
-      anchor: null,
-      hard: ["当前平台：YouTube"],
-      soft: [],
-      hint: "平台冲突优先于其它偏好。",
-    },
-  },
-  "url-unsupported": {
-    mode: "expanded",
-    inputTitle: "https://www.amazon.com/dp/B0XXXXXX",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: null,
-    status: {
-      state: "类型不支持",
-      stateClass: "warn",
-      spinner: false,
-      text: "当前版本不支持直接使用该类链接起搜，可改为频道链接、关键词或自然语言描述。",
-    },
-    session: {
-      label: "当前卡点",
-      summary: "链接结构可识别，但不属于本搜索框当前支持的 URL 类型。",
-      meta: ["可改为频道链接", "可改为关键词", "可改为自然语言"],
-    },
-    question: {
-      slot: "repair_options",
-      title: "你要继续用什么方式搜索？",
-      choices: ["改为频道链接", "删掉链接输入关键词", "直接描述想找什么"],
-      caption: "这里只处理输入类型修正。",
-    },
-    conditions: null,
-  },
-  "url-invalid": {
-    mode: "expanded",
-    inputTitle: "https://www.youtube.com/this-link-is-broken",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: null,
-    status: {
-      state: "无法识别",
-      stateClass: "warn",
-      spinner: false,
-      text: "未识别到可用频道链接。你可以重新粘贴频道主页链接，或直接输入频道名。",
-    },
-    session: {
-      label: "当前卡点",
-      summary: "该链接未能映射为有效频道资源。",
-      meta: ["重新贴链接", "只输频道名", "改成自然语言"],
-    },
-    question: {
-      slot: "repair_options",
-      title: "你更想怎么修正？",
-      choices: ["重新粘贴链接", "直接输入频道名", "改为自然语言搜索"],
-      caption: "修正态应该短、明确，只处理当前卡点。",
-    },
-    conditions: null,
-  },
-  "natural-init": {
-    mode: "expanded",
-    inputTitle: "帮我找美国做汽配评测、最近活跃、粉丝 5k-20k 的 YouTube 红人",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: "搜索",
-    status: null,
-    session: {
-      label: "搜索框已展开",
-      summary: "系统正在把自然语言拆成可执行搜索条件。",
-      meta: ["刚进入 Agent 模式", "尚未返回结果"],
-    },
-    question: null,
-    conditions: null,
-  },
-  "natural-retrieving": {
-    mode: "expanded",
-    inputTitle: "帮我找美国做汽配评测、最近活跃、粉丝 5k-20k 的 YouTube 红人",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: "搜索",
-    status: {
-      state: "首轮搜索中",
-      stateClass: "",
-      spinner: true,
-      text: "系统已提取主要条件，正在当前平台结果集中执行第一轮搜索。",
-    },
-    session: {
-      label: "当前任务",
-      summary: "正在搜索：YouTube 频道 · 美国 · 汽配/工具测评 · 粉丝 5k-20k · 近期活跃",
-      meta: ["已理解 5 个硬条件", "正在 retrieving"],
-    },
-    question: null,
-    conditions: null,
-  },
-  "natural-results": {
-    mode: "expanded",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: "搜索",
-    status: {
-      state: "首轮结果已返回",
-      stateClass: "ok",
-      spinner: false,
-      text: "已将你的描述拆成可执行搜索条件，并在当前平台结果集中完成第一轮召回。",
-    },
-    session: {
-      label: "当前任务",
-      summary: "正在搜索：YouTube 频道 · 美国 · 汽配/工具测评 · 粉丝 5k-20k · 近期活跃",
-      meta: ["系统已理解 5 个硬条件", "未触发追问", "结果区已刷新"],
-    },
-    question: null,
-    conditions: {
-      anchor: null,
-      hard: ["美国", "YouTube", "汽配 / 工具测评", "5k-20k 粉丝", "近 30 天活跃"],
-      soft: [],
-      hint: "所有条件都已进入首轮搜索。",
-    },
-    keywordFlow: {
-      draft: "",
-      tags: [],
-      openMenu: false,
-      followup: true,
-      placeholder: "继续补充筛选要求",
-    },
-  },
-  "natural-clarifying": {
-    mode: "expanded",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: "搜索",
-    status: {
-      state: "需要补充",
-      stateClass: "",
-      spinner: false,
-      text: "首轮结果已返回，但“汽配评测”仍可继续缩小范围。",
-    },
-    session: {
-      label: "当前任务",
-      summary: "系统已找到一批候选频道，但还有一个高影响问题可进一步 refine。",
-      meta: ["结果已返回", "当前存在 1 个追问"],
-    },
-    question: {
-      slot: "question",
-      title: "你更偏维修教程、产品开箱，还是车载配件测评？",
-      choices: ["维修教程", "产品开箱", "车载配件测评"],
-      caption: "每次只问一个高影响问题。",
-    },
-    conditions: {
-      anchor: null,
-      hard: ["美国", "YouTube", "5k-20k 粉丝", "近 30 天活跃"],
-      soft: ["汽配评测"],
-      hint: "“汽配评测”当前作为待细化条件存在。",
-    },
-    keywordFlow: {
-      draft: "",
-      tags: [],
-      openMenu: false,
-      followup: true,
-      placeholder: "也可以直接补一句说明",
-    },
-  },
-  "natural-followup-draft": {
-    mode: "expanded",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: "搜索",
-    status: {
-      state: "正在记录补充",
-      stateClass: "",
-      spinner: false,
-      text: "系统已保留之前的理解，现在你正在输入一条新的补充要求。",
-    },
-    session: {
-      label: "当前任务",
-      summary: "首轮结果已返回，当前准备接收一条新的自然语言补充。",
-      meta: ["follow-up input", "不会回到原始 query 编辑"],
-    },
-    question: null,
-    conditions: {
-      anchor: null,
-      hard: ["美国", "YouTube", "汽配 / 工具测评", "5k-20k 粉丝", "近 30 天活跃"],
-      soft: [],
-      hint: "原始 query 已被吸收到条件层。",
-    },
-    keywordFlow: {
-      draft: "不要太大的号",
-      tags: [],
-      openMenu: false,
-      followup: true,
-      placeholder: "继续补充筛选要求",
-    },
-  },
-  "natural-followup-refining": {
-    mode: "expanded",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: "搜索",
-    status: {
-      state: "正在应用补充要求",
-      stateClass: "",
-      spinner: true,
-      text: "系统正在把你刚补充的自然语言增量并入当前任务，并刷新结果。",
-    },
-    session: {
-      label: "task_summary",
-      summary: "原有任务保持不变，新的 follow-up 正在作为增量条件进入 refine。",
-      meta: ["增量 refine", "不会回到首轮 retrieving", "可能回到结果 / 追问 / 修正"],
-    },
-    question: null,
-    conditions: {
-      anchor: null,
-      hard: ["美国", "YouTube", "汽配 / 工具测评", "5k-20k 粉丝", "近 30 天活跃"],
-      soft: ["不要太大的号"],
-      hint: "follow-up 会先作为新增条件进入 refine。",
-    },
-    keywordFlow: {
-      draft: "",
-      tags: [],
-      openMenu: false,
-      followup: true,
-      placeholder: "正在刷新，请稍候",
-    },
-  },
-  "mixed-parse": {
-    mode: "expanded",
-    inputTitle:
-      "https://www.youtube.com/@HollylandTech 帮我找美国类似调性的频道，粉丝 1w-10w，最好近期活跃，性价比高",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: "搜索",
-    status: {
-      state: "解析中",
-      stateClass: "",
-      spinner: true,
-      text: "系统正在判断这串输入里哪些是锚点，哪些是硬条件，哪些只是参考偏好。",
-    },
-    session: {
-      label: "系统解析摘要",
-      summary: "当前输入包含 URL、地区、粉丝量、活跃度和软性偏好。",
-      meta: ["解析锚点", "解析硬条件", "解析软偏好"],
-    },
-    question: null,
-    conditions: null,
-  },
-  "mixed-anchor": {
-    mode: "expanded",
-    inputTitle:
-      "https://www.youtube.com/@HollylandTech 帮我找美国类似调性的频道，粉丝 1w-10w，最好近期活跃，性价比高",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: "搜索",
-    status: {
-      state: "锚点优先",
-      stateClass: "ok",
-      spinner: false,
-      text: "当前按 URL 锚点优先处理，其他描述不会自动覆盖精确频道语义。",
-    },
-    session: {
-      label: "系统解析摘要",
-      summary: "已按 URL 锁定频道：@HollylandTech。",
-      meta: ["URL 优先", "其它条件后置解释"],
-    },
-    question: null,
-    conditions: {
-      anchor: "URL 锚点：@HollylandTech",
-      hard: ["美国", "1w-10w 粉丝", "近 30 天活跃"],
-      soft: [],
-      hint: "当前优先保证精确 URL 语义不被破坏。",
-    },
-  },
-  "mixed-soft": {
-    mode: "expanded",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: "搜索",
-    status: {
-      state: "软条件待澄清",
-      stateClass: "",
-      spinner: false,
-      text: "“类似调性”“性价比高”暂不直接作为硬过滤器，而是先作为参考偏好展示。",
-    },
-    session: {
-      label: "系统解析摘要",
-      summary: "硬条件已经生效，软条件被降级为参考偏好。",
-      meta: ["硬条件 3 项", "软偏好 2 项"],
-    },
-    question: null,
-    conditions: {
-      anchor: "URL 锚点：@HollylandTech",
-      hard: ["美国", "1w-10w 粉丝", "近 30 天活跃"],
-      soft: ["类似调性", "性价比高"],
-      hint: "软偏好不会伪装成已严格生效的过滤器。",
-    },
-    keywordFlow: {
-      draft: "",
-      tags: [{ text: "@HollylandTech", scope: "频道" }],
-      openMenu: false,
-      followup: true,
-      placeholder: "继续补充你真正想要的方向",
-    },
-  },
-  "mixed-clarifying": {
-    mode: "expanded",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: "搜索",
-    status: {
-      state: "混合解析完成",
-      stateClass: "ok",
-      spinner: false,
-      text: "当前按 URL 锚点优先处理，其他描述被拆成硬条件与软偏好。不会自动把 URL 解释成“找类似频道”。",
-    },
-    session: {
-      label: "系统解析摘要",
-      summary: "已按 URL 锁定频道：@HollylandTech；当前不会自动扩展为“找类似频道”任务。",
-      meta: ["硬条件 3 项", "软偏好 2 项", "建议先确认是否要找“类似频道”"],
-    },
-    question: {
-      slot: "question",
-      title: "你是想继续看这个频道，还是想找“和它类似”的其他频道？",
-      choices: ["继续看这个频道", "找类似频道", "先按当前条件看结果"],
-      caption: "这里只问一个高价值问题，不把会话推成长聊天流。",
-    },
-    conditions: {
-      anchor: "URL 锚点：@HollylandTech",
-      hard: ["美国", "1w-10w 粉丝", "近 30 天活跃"],
-      soft: ["类似调性", "性价比高"],
-      hint: "软偏好不会被伪装成已严格生效的过滤器。",
-    },
-    keywordFlow: {
-      draft: "",
-      tags: [{ text: "@HollylandTech", scope: "频道" }],
-      openMenu: false,
-      followup: true,
-      placeholder: "继续补一句，或者直接回答问题",
-    },
-  },
-  "mixed-followup-draft": {
-    mode: "expanded",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: "搜索",
-    status: {
-      state: "正在记录补充",
-      stateClass: "",
-      spinner: false,
-      text: "你正在补充新的自然语言要求，系统会把它作为增量而不是改写原始 query。",
-    },
-    session: {
-      label: "task_summary",
-      summary: "当前已存在 URL 锚点与结构化条件，正在接收一条新的 follow-up。",
-      meta: ["anchor 保留", "follow-up input"],
-    },
-    question: null,
-    conditions: {
-      anchor: "URL 锚点：@HollylandTech",
-      hard: ["美国", "1w-10w 粉丝", "近 30 天活跃"],
-      soft: ["类似调性"],
-      hint: "新的补充不会覆盖 URL 锚点。",
-    },
-    keywordFlow: {
-      draft: "更偏教程类，不要开箱",
-      tags: [{ text: "@HollylandTech", scope: "频道" }],
-      openMenu: false,
-      followup: true,
-      placeholder: "继续补充你真正想要的方向",
-    },
-  },
-  "mixed-followup-refining": {
-    mode: "expanded",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: "搜索",
-    status: {
-      state: "正在应用补充要求",
-      stateClass: "",
-      spinner: true,
-      text: "系统正在保留 URL 锚点的前提下，重新解释并应用你刚补充的要求。",
-    },
-    session: {
-      label: "task_summary",
-      summary: "URL 锚点保留，新的 follow-up 正在进入 refine。",
-      meta: ["anchor 保留", "增量 refine", "不会覆盖原锚点"],
-    },
-    question: null,
-    conditions: {
-      anchor: "URL 锚点：@HollylandTech",
-      hard: ["美国", "1w-10w 粉丝", "近 30 天活跃"],
-      soft: ["类似调性", "更偏教程类", "不要开箱"],
-      hint: "新的 follow-up 会先影响偏好解释，再决定是否上升为硬条件。",
-    },
-    keywordFlow: {
-      draft: "",
-      tags: [{ text: "@HollylandTech", scope: "频道" }],
-      openMenu: false,
-      followup: true,
-      placeholder: "正在刷新，请稍候",
-    },
-  },
-  "repair-invalid": {
-    mode: "expanded",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: null,
-    status: {
-      state: "URL 无法识别",
-      stateClass: "warn",
-      spinner: false,
-      text: "未识别到可用频道链接。你可以重新贴链接，或改为频道名 / 自然语言。",
-    },
-    session: {
-      label: "当前卡点",
-      summary: "链接未映射到有效频道资源。",
-      meta: ["重新贴链接", "输入频道名", "改为自然语言"],
-    },
-    question: {
-      slot: "repair_options",
-      title: "你想怎么继续修正？",
-      choices: ["重新粘贴链接", "直接输入频道名", "改为自然语言搜索"],
-      caption: "这里只处理 URL 修正。",
-    },
-    conditions: null,
-    keywordFlow: {
-      draft: "",
-      tags: [],
-      openMenu: false,
-      followup: true,
-      placeholder: "你也可以直接补一句新的搜索要求",
-    },
-  },
-  "repair-mismatch": {
-    mode: "expanded",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: null,
-    status: {
-      state: "平台不匹配",
-      stateClass: "warn",
-      spinner: false,
-      text: "当前在 YouTube 频道搜索页，该链接属于 Instagram。建议你切换平台，或删除链接后直接描述你想找的 YouTube 频道。",
-    },
-    session: {
-      label: "当前卡点",
-      summary: "链接可识别，但与当前搜索页平台不匹配。",
-      meta: ["可修改 URL", "可删除链接改为自然语言", "不建议静默忽略该链接"],
-    },
-    question: {
-      slot: "repair_options",
-      title: "你更想怎么继续？",
-      choices: ["切到 Instagram 搜索", "删掉链接继续搜 YouTube", "重新粘贴 YouTube 频道链接"],
-      caption: "修正态应该短、明确，只处理当前卡点。",
-    },
-    conditions: {
-      anchor: null,
-      hard: ["当前平台：YouTube"],
-      soft: ["类似风格"],
-      hint: "平台冲突优先于风格偏好。",
-    },
-    keywordFlow: {
-      draft: "",
-      tags: [],
-      openMenu: false,
-      followup: true,
-      placeholder: "或直接输入你想找的 YouTube 频道要求",
-    },
-  },
-  "repair-unsupported": {
-    mode: "expanded",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: null,
-    status: {
-      state: "类型不支持",
-      stateClass: "warn",
-      spinner: false,
-      text: "当前版本不支持使用该类链接起搜，请改为频道链接、关键词或自然语言。",
-    },
-    session: {
-      label: "当前卡点",
-      summary: "链接结构可识别，但不属于搜索框当前支持的 URL 类型。",
-      meta: ["可改成频道链接", "可删掉链接", "可改为自然语言"],
-    },
-    question: {
-      slot: "repair_options",
-      title: "你要换成什么方式继续搜索？",
-      choices: ["改为频道链接", "删掉链接输关键词", "直接描述想找什么"],
-      caption: "这里只处理输入类型修正。",
-    },
-    conditions: null,
-    keywordFlow: {
-      draft: "",
-      tags: [],
-      openMenu: false,
-      followup: true,
-      placeholder: "直接描述你想找什么也可以",
-    },
-  },
-  "repair-empty": {
-    mode: "expanded",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: null,
-    status: {
-      state: "有条件无结果",
-      stateClass: "warn",
-      spinner: false,
-      text: "当前条件过窄，结果为空。系统建议你先放宽一个最影响结果的条件。",
-    },
-    session: {
-      label: "当前卡点",
-      summary: "系统没有找到满足所有条件的频道。",
-      meta: ["可放宽粉丝范围", "可放宽类目", "可删掉活跃限制"],
-    },
-    question: {
-      slot: "repair_options",
-      title: "你想先放宽哪一个条件？",
-      choices: ["粉丝范围", "内容类目", "近期活跃"],
-      caption: "修正态不是聊天，而是帮助你恢复可搜状态。",
-    },
-    conditions: {
-      anchor: null,
-      hard: ["美国", "户外 / 水上运动", "5k-10k 粉丝", "近期活跃"],
-      soft: [],
-      hint: "至少需要放宽一项硬条件才能恢复结果。",
-    },
-    keywordFlow: {
-      draft: "",
-      tags: [],
-      openMenu: false,
-      followup: true,
-      placeholder: "补一句放宽条件的要求",
-    },
-  },
-  "repair-followup-draft": {
-    mode: "expanded",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: "搜索",
-    status: {
-      state: "正在记录修正要求",
-      stateClass: "",
-      spinner: false,
-      text: "当前卡点已被识别，你正在补一句修正要求，系统会据此重新组织搜索。",
-    },
-    session: {
-      label: "task_summary",
-      summary: "系统正在从修正态接收一个新的 follow-up 输入。",
-      meta: ["repair input", "不会恢复原始 query 全文"],
-    },
-    question: {
-      slot: "repair_options",
-      title: "你也可以直接描述想怎么修正。",
-      choices: ["删掉链接继续搜", "直接说想找什么", "改为关键词搜索"],
-      caption: "修正态支持点选，也支持主动补一句。",
-    },
-    conditions: null,
-    keywordFlow: {
-      draft: "那就直接帮我找美国 YouTube 户外博主",
-      tags: [],
-      openMenu: false,
-      followup: true,
-      placeholder: "直接补一句你想怎么修正",
-    },
-  },
-  "repair-followup-refining": {
-    mode: "expanded",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: "搜索",
-    status: {
-      state: "正在应用修正要求",
-      stateClass: "",
-      spinner: true,
-      text: "系统正在把你补充的修正要求转成新的可执行搜索条件。",
-    },
-    session: {
-      label: "task_summary",
-      summary: "修正态输入已提交，当前正在尝试恢复结果。",
-      meta: ["repair refine", "可能恢复结果", "也可能继续停留在修正态"],
-    },
-    question: null,
-    conditions: null,
-    keywordFlow: {
-      draft: "",
-      tags: [],
-      openMenu: false,
-      followup: true,
-      placeholder: "正在刷新，请稍候",
-    },
-  },
-  "repair-recovered-results": {
-    mode: "expanded",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: "搜索",
-    status: {
-      state: "已恢复结果",
-      stateClass: "ok",
-      spinner: false,
-      text: "修正后的条件已经重新召回到结果，当前已回到稳定可浏览状态。",
-    },
-    session: {
-      label: "task_summary",
-      summary: "原修正问题已被化解，当前结果来自修正后的新条件。",
-      meta: ["从 repair 恢复", "当前结果已稳定", "可继续 refine"],
-    },
-    question: null,
-    conditions: {
-      anchor: null,
-      hard: ["美国", "YouTube", "户外博主"],
-      soft: [],
-      hint: "这是修正后的新结果，不再是原始失败条件的直出。",
-    },
-    keywordFlow: {
-      draft: "",
-      tags: [],
-      openMenu: false,
-      followup: true,
-      placeholder: "继续补一句，进一步 refine",
-    },
-  },
-  "upgrade-keyword-trigger": {
-    mode: "classic",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: null,
-    status: null,
-    session: null,
-    question: null,
-    conditions: null,
-    keywordFlow: {
-      draft: "帮我找美国妈妈博主",
-      tags: [{ text: "swim vest", scope: "标签" }],
-      openMenu: false,
-    },
-  },
-  "upgrade-keyword-transition": {
-    mode: "expanded",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: "搜索",
-    status: {
-      state: "正在升级为 Agent 态",
-      stateClass: "",
-      spinner: true,
-      text: "已保留原有关键词 tag，系统正在把新增自然语言转成任务解释与条件。",
-    },
-    session: {
-      label: "task_summary",
-      summary: "经典搜索已升级：关键词保持不变，新增自然语言将作为任务增量处理。",
-      meta: ["保留关键词 tag", "解析新增自然语言", "进入 expanded_agent"],
-    },
-    question: null,
-    conditions: {
-      anchor: null,
-      hard: ["swim vest（标签）"],
-      soft: ["美国妈妈博主"],
-      hint: "升级中，新增自然语言暂作为待解析意图。",
-    },
-  },
-  "upgrade-keyword-stable": {
-    mode: "expanded",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: "搜索",
-    status: {
-      state: "已升级完成",
-      stateClass: "ok",
-      spinner: false,
-      text: "关键词 tag 已保留为显式条件，新增自然语言已转成任务摘要与结构化条件。",
-    },
-    session: {
-      label: "task_summary",
-      summary: "正在搜索：swim vest 相关频道 · 美国 · 妈妈博主",
-      meta: ["关键词保留", "自然语言已吸收", "可继续 refine"],
-    },
-    question: null,
-    conditions: {
-      anchor: null,
-      hard: ["swim vest（标签）", "美国"],
-      soft: ["妈妈博主"],
-      hint: "经典关键词已变成 Agent 态中的前置显式条件。",
-    },
-  },
-  "upgrade-url-trigger": {
-    mode: "classic",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: null,
-    status: null,
-    session: null,
-    question: null,
-    conditions: null,
-    keywordFlow: {
-      draft: "找和它类似的美国频道",
-      tags: [{ text: "@HollylandTech", scope: "频道" }],
-      openMenu: false,
-    },
-  },
-  "upgrade-url-transition": {
-    mode: "expanded",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: "搜索",
-    status: {
-      state: "正在解释 URL 与自然语言的关系",
-      stateClass: "",
-      spinner: true,
-      text: "系统正在判断 URL 是否继续作为精确锚点，以及新增自然语言应被当作 refine 还是新的搜索任务。",
-    },
-    session: {
-      label: "task_summary",
-      summary: "已识别 URL 锚点：@HollylandTech，正在解释“找和它类似的美国频道”这句新要求。",
-      meta: ["URL 锚点优先", "解释新增自然语言", "避免静默改写意图"],
-    },
-    question: null,
-    conditions: {
-      anchor: "URL 锚点：@HollylandTech",
-      hard: [],
-      soft: ["找类似频道", "美国"],
-      hint: "升级中，系统还未决定是继续看该频道还是转为找类似频道。",
-    },
-  },
-  "upgrade-url-stable": {
-    mode: "expanded",
-    inputTitle: "",
-    inputHint: "",
-    miniAction: null,
-    primaryAction: "搜索",
-    status: {
-      state: "锚点升级完成",
-      stateClass: "ok",
-      spinner: false,
-      text: "URL 作为 anchor 被保留，新增自然语言已被解释为 refine 要求，而不是静默覆盖原有精确语义。",
-    },
-    session: {
-      label: "task_summary",
-      summary: "当前按 @HollylandTech 作为锚点，并开始搜索“类似调性 + 美国”的频道。",
-      meta: ["URL 保留为 anchor", "新增要求已解释", "必要时可继续追问"],
-    },
-    question: {
-      slot: "question",
-      title: "你是想继续看这个频道，还是想以它为参考找新的频道？",
-      choices: ["继续看这个频道", "找新的类似频道"],
-      caption: "URL 起手升级时，必须先处理锚点语义。",
-    },
-    conditions: {
-      anchor: "URL 锚点：@HollylandTech",
-      hard: ["美国"],
-      soft: ["类似调性"],
-      hint: "URL 精确语义优先于软偏好。",
-    },
-  },
-};
+(() => {
+  // node_modules/xstate/dev/dist/xstate-dev.esm.js
+  function getGlobal() {
+    if (typeof globalThis !== "undefined") {
+      return globalThis;
+    }
+    if (typeof self !== "undefined") {
+      return self;
+    }
+    if (typeof window !== "undefined") {
+      return window;
+    }
+    if (typeof global !== "undefined") {
+      return global;
+    }
+  }
+  function getDevTools() {
+    const w = getGlobal();
+    if (w.__xstate__) {
+      return w.__xstate__;
+    }
+    return void 0;
+  }
+  var devToolsAdapter = (service) => {
+    if (typeof window === "undefined") {
+      return;
+    }
+    const devTools = getDevTools();
+    if (devTools) {
+      devTools.register(service);
+    }
+  };
 
-let currentScenario = "keyword-empty";
-let currentScene = "keyword";
-let currentVariant = "glass";
+  // node_modules/xstate/dist/raise-b47daa89.esm.js
+  var Mailbox = class {
+    constructor(_process) {
+      this._process = _process;
+      this._active = false;
+      this._current = null;
+      this._last = null;
+    }
+    start() {
+      this._active = true;
+      this.flush();
+    }
+    clear() {
+      if (this._current) {
+        this._current.next = null;
+        this._last = this._current;
+      }
+    }
+    enqueue(event) {
+      const enqueued = {
+        value: event,
+        next: null
+      };
+      if (this._current) {
+        this._last.next = enqueued;
+        this._last = enqueued;
+        return;
+      }
+      this._current = enqueued;
+      this._last = enqueued;
+      if (this._active) {
+        this.flush();
+      }
+    }
+    flush() {
+      while (this._current) {
+        const consumed = this._current;
+        this._process(consumed.value);
+        this._current = consumed.next;
+      }
+      this._last = null;
+    }
+  };
+  var STATE_DELIMITER = ".";
+  var TARGETLESS_KEY = "";
+  var NULL_EVENT = "";
+  var STATE_IDENTIFIER = "#";
+  var WILDCARD = "*";
+  var XSTATE_INIT = "xstate.init";
+  var XSTATE_STOP = "xstate.stop";
+  function createAfterEvent(delayRef, id) {
+    return {
+      type: `xstate.after.${delayRef}.${id}`
+    };
+  }
+  function createDoneStateEvent(id, output) {
+    return {
+      type: `xstate.done.state.${id}`,
+      output
+    };
+  }
+  function createDoneActorEvent(invokeId, output) {
+    return {
+      type: `xstate.done.actor.${invokeId}`,
+      output,
+      actorId: invokeId
+    };
+  }
+  function createErrorActorEvent(id, error) {
+    return {
+      type: `xstate.error.actor.${id}`,
+      error,
+      actorId: id
+    };
+  }
+  function createInitEvent(input) {
+    return {
+      type: XSTATE_INIT,
+      input
+    };
+  }
+  function reportUnhandledError(err) {
+    setTimeout(() => {
+      throw err;
+    });
+  }
+  var symbolObservable = (() => typeof Symbol === "function" && Symbol.observable || "@@observable")();
+  function matchesState(parentStateId, childStateId) {
+    const parentStateValue = toStateValue(parentStateId);
+    const childStateValue = toStateValue(childStateId);
+    if (typeof childStateValue === "string") {
+      if (typeof parentStateValue === "string") {
+        return childStateValue === parentStateValue;
+      }
+      return false;
+    }
+    if (typeof parentStateValue === "string") {
+      return parentStateValue in childStateValue;
+    }
+    return Object.keys(parentStateValue).every((key) => {
+      if (!(key in childStateValue)) {
+        return false;
+      }
+      return matchesState(parentStateValue[key], childStateValue[key]);
+    });
+  }
+  function toStatePath(stateId) {
+    if (isArray(stateId)) {
+      return stateId;
+    }
+    const result = [];
+    let segment = "";
+    for (let i = 0; i < stateId.length; i++) {
+      const char = stateId.charCodeAt(i);
+      switch (char) {
+        // \
+        case 92:
+          segment += stateId[i + 1];
+          i++;
+          continue;
+        // .
+        case 46:
+          result.push(segment);
+          segment = "";
+          continue;
+      }
+      segment += stateId[i];
+    }
+    result.push(segment);
+    return result;
+  }
+  function toStateValue(stateValue) {
+    if (isMachineSnapshot(stateValue)) {
+      return stateValue.value;
+    }
+    if (typeof stateValue !== "string") {
+      return stateValue;
+    }
+    const statePath = toStatePath(stateValue);
+    return pathToStateValue(statePath);
+  }
+  function pathToStateValue(statePath) {
+    if (statePath.length === 1) {
+      return statePath[0];
+    }
+    const value = {};
+    let marker = value;
+    for (let i = 0; i < statePath.length - 1; i++) {
+      if (i === statePath.length - 2) {
+        marker[statePath[i]] = statePath[i + 1];
+      } else {
+        const previous = marker;
+        marker = {};
+        previous[statePath[i]] = marker;
+      }
+    }
+    return value;
+  }
+  function mapValues(collection, iteratee) {
+    const result = {};
+    const collectionKeys = Object.keys(collection);
+    for (let i = 0; i < collectionKeys.length; i++) {
+      const key = collectionKeys[i];
+      result[key] = iteratee(collection[key], key, collection, i);
+    }
+    return result;
+  }
+  function toArrayStrict(value) {
+    if (isArray(value)) {
+      return value;
+    }
+    return [value];
+  }
+  function toArray(value) {
+    if (value === void 0) {
+      return [];
+    }
+    return toArrayStrict(value);
+  }
+  function resolveOutput(mapper, context, event, self2) {
+    if (typeof mapper === "function") {
+      return mapper({
+        context,
+        event,
+        self: self2
+      });
+    }
+    return mapper;
+  }
+  function isArray(value) {
+    return Array.isArray(value);
+  }
+  function isErrorActorEvent(event) {
+    return event.type.startsWith("xstate.error.actor");
+  }
+  function toTransitionConfigArray(configLike) {
+    return toArrayStrict(configLike).map((transitionLike) => {
+      if (typeof transitionLike === "undefined" || typeof transitionLike === "string") {
+        return {
+          target: transitionLike
+        };
+      }
+      return transitionLike;
+    });
+  }
+  function normalizeTarget(target) {
+    if (target === void 0 || target === TARGETLESS_KEY) {
+      return void 0;
+    }
+    return toArray(target);
+  }
+  function toObserver(nextHandler, errorHandler, completionHandler) {
+    const isObserver = typeof nextHandler === "object";
+    const self2 = isObserver ? nextHandler : void 0;
+    return {
+      next: (isObserver ? nextHandler.next : nextHandler)?.bind(self2),
+      error: (isObserver ? nextHandler.error : errorHandler)?.bind(self2),
+      complete: (isObserver ? nextHandler.complete : completionHandler)?.bind(self2)
+    };
+  }
+  function createInvokeId(stateNodeId, index) {
+    return `${index}.${stateNodeId}`;
+  }
+  function resolveReferencedActor(machine, src) {
+    const match = src.match(/^xstate\.invoke\.(\d+)\.(.*)/);
+    if (!match) {
+      return machine.implementations.actors[src];
+    }
+    const [, indexStr, nodeId] = match;
+    const node = machine.getStateNodeById(nodeId);
+    const invokeConfig = node.config.invoke;
+    return (Array.isArray(invokeConfig) ? invokeConfig[indexStr] : invokeConfig).src;
+  }
+  function matchesEventDescriptor(eventType, descriptor) {
+    if (descriptor === eventType) {
+      return true;
+    }
+    if (descriptor === WILDCARD) {
+      return true;
+    }
+    if (!descriptor.endsWith(".*")) {
+      return false;
+    }
+    const partialEventTokens = descriptor.split(".");
+    const eventTokens = eventType.split(".");
+    for (let tokenIndex = 0; tokenIndex < partialEventTokens.length; tokenIndex++) {
+      const partialEventToken = partialEventTokens[tokenIndex];
+      const eventToken = eventTokens[tokenIndex];
+      if (partialEventToken === "*") {
+        const isLastToken = tokenIndex === partialEventTokens.length - 1;
+        return isLastToken;
+      }
+      if (partialEventToken !== eventToken) {
+        return false;
+      }
+    }
+    return true;
+  }
+  function createScheduledEventId(actorRef, id) {
+    return `${actorRef.sessionId}.${id}`;
+  }
+  var idCounter = 0;
+  function createSystem(rootActor, options) {
+    const children = /* @__PURE__ */ new Map();
+    const keyedActors = /* @__PURE__ */ new Map();
+    const reverseKeyedActors = /* @__PURE__ */ new WeakMap();
+    const inspectionObservers = /* @__PURE__ */ new Set();
+    const timerMap = {};
+    const {
+      clock,
+      logger
+    } = options;
+    const scheduler = {
+      schedule: (source, target, event, delay, id = Math.random().toString(36).slice(2)) => {
+        const scheduledEvent = {
+          source,
+          target,
+          event,
+          delay,
+          id,
+          startedAt: Date.now()
+        };
+        const scheduledEventId = createScheduledEventId(source, id);
+        system._snapshot._scheduledEvents[scheduledEventId] = scheduledEvent;
+        const timeout = clock.setTimeout(() => {
+          delete timerMap[scheduledEventId];
+          delete system._snapshot._scheduledEvents[scheduledEventId];
+          system._relay(source, target, event);
+        }, delay);
+        timerMap[scheduledEventId] = timeout;
+      },
+      cancel: (source, id) => {
+        const scheduledEventId = createScheduledEventId(source, id);
+        const timeout = timerMap[scheduledEventId];
+        delete timerMap[scheduledEventId];
+        delete system._snapshot._scheduledEvents[scheduledEventId];
+        if (timeout !== void 0) {
+          clock.clearTimeout(timeout);
+        }
+      },
+      cancelAll: (actorRef) => {
+        for (const scheduledEventId in system._snapshot._scheduledEvents) {
+          const scheduledEvent = system._snapshot._scheduledEvents[scheduledEventId];
+          if (scheduledEvent.source === actorRef) {
+            scheduler.cancel(actorRef, scheduledEvent.id);
+          }
+        }
+      }
+    };
+    const sendInspectionEvent = (event) => {
+      if (!inspectionObservers.size) {
+        return;
+      }
+      const resolvedInspectionEvent = {
+        ...event,
+        rootId: rootActor.sessionId
+      };
+      inspectionObservers.forEach((observer) => observer.next?.(resolvedInspectionEvent));
+    };
+    const system = {
+      _snapshot: {
+        _scheduledEvents: (options?.snapshot && options.snapshot.scheduler) ?? {}
+      },
+      _bookId: () => `x:${idCounter++}`,
+      _register: (sessionId, actorRef) => {
+        children.set(sessionId, actorRef);
+        return sessionId;
+      },
+      _unregister: (actorRef) => {
+        children.delete(actorRef.sessionId);
+        const systemId = reverseKeyedActors.get(actorRef);
+        if (systemId !== void 0) {
+          keyedActors.delete(systemId);
+          reverseKeyedActors.delete(actorRef);
+        }
+      },
+      get: (systemId) => {
+        return keyedActors.get(systemId);
+      },
+      getAll: () => {
+        return Object.fromEntries(keyedActors.entries());
+      },
+      _set: (systemId, actorRef) => {
+        const existing = keyedActors.get(systemId);
+        if (existing && existing !== actorRef) {
+          throw new Error(`Actor with system ID '${systemId}' already exists.`);
+        }
+        keyedActors.set(systemId, actorRef);
+        reverseKeyedActors.set(actorRef, systemId);
+      },
+      inspect: (observerOrFn) => {
+        const observer = toObserver(observerOrFn);
+        inspectionObservers.add(observer);
+        return {
+          unsubscribe() {
+            inspectionObservers.delete(observer);
+          }
+        };
+      },
+      _sendInspectionEvent: sendInspectionEvent,
+      _relay: (source, target, event) => {
+        system._sendInspectionEvent({
+          type: "@xstate.event",
+          sourceRef: source,
+          actorRef: target,
+          event
+        });
+        target._send(event);
+      },
+      scheduler,
+      getSnapshot: () => {
+        return {
+          _scheduledEvents: {
+            ...system._snapshot._scheduledEvents
+          }
+        };
+      },
+      start: () => {
+        const scheduledEvents = system._snapshot._scheduledEvents;
+        system._snapshot._scheduledEvents = {};
+        for (const scheduledId in scheduledEvents) {
+          const {
+            source,
+            target,
+            event,
+            delay,
+            id
+          } = scheduledEvents[scheduledId];
+          scheduler.schedule(source, target, event, delay, id);
+        }
+      },
+      _clock: clock,
+      _logger: logger
+    };
+    return system;
+  }
+  var executingCustomAction = false;
+  var $$ACTOR_TYPE = 1;
+  var ProcessingStatus = /* @__PURE__ */ (function(ProcessingStatus2) {
+    ProcessingStatus2[ProcessingStatus2["NotStarted"] = 0] = "NotStarted";
+    ProcessingStatus2[ProcessingStatus2["Running"] = 1] = "Running";
+    ProcessingStatus2[ProcessingStatus2["Stopped"] = 2] = "Stopped";
+    return ProcessingStatus2;
+  })({});
+  var defaultOptions = {
+    clock: {
+      setTimeout: (fn, ms) => {
+        return setTimeout(fn, ms);
+      },
+      clearTimeout: (id) => {
+        return clearTimeout(id);
+      }
+    },
+    logger: console.log.bind(console),
+    devTools: false
+  };
+  var Actor = class {
+    /**
+     * Creates a new actor instance for the given logic with the provided options,
+     * if any.
+     *
+     * @param logic The logic to create an actor from
+     * @param options Actor options
+     */
+    constructor(logic, options) {
+      this.logic = logic;
+      this._snapshot = void 0;
+      this.clock = void 0;
+      this.options = void 0;
+      this.id = void 0;
+      this.mailbox = new Mailbox(this._process.bind(this));
+      this.observers = /* @__PURE__ */ new Set();
+      this.eventListeners = /* @__PURE__ */ new Map();
+      this.logger = void 0;
+      this._processingStatus = ProcessingStatus.NotStarted;
+      this._parent = void 0;
+      this._syncSnapshot = void 0;
+      this.ref = void 0;
+      this._actorScope = void 0;
+      this.systemId = void 0;
+      this.sessionId = void 0;
+      this.system = void 0;
+      this._doneEvent = void 0;
+      this.src = void 0;
+      this._deferred = [];
+      const resolvedOptions = {
+        ...defaultOptions,
+        ...options
+      };
+      const {
+        clock,
+        logger,
+        parent,
+        syncSnapshot,
+        id,
+        systemId,
+        inspect
+      } = resolvedOptions;
+      this.system = parent ? parent.system : createSystem(this, {
+        clock,
+        logger
+      });
+      if (inspect && !parent) {
+        this.system.inspect(toObserver(inspect));
+      }
+      this.sessionId = this.system._bookId();
+      this.id = id ?? this.sessionId;
+      this.logger = options?.logger ?? this.system._logger;
+      this.clock = options?.clock ?? this.system._clock;
+      this._parent = parent;
+      this._syncSnapshot = syncSnapshot;
+      this.options = resolvedOptions;
+      this.src = resolvedOptions.src ?? logic;
+      this.ref = this;
+      this._actorScope = {
+        self: this,
+        id: this.id,
+        sessionId: this.sessionId,
+        logger: this.logger,
+        defer: (fn) => {
+          this._deferred.push(fn);
+        },
+        system: this.system,
+        stopChild: (child) => {
+          if (child._parent !== this) {
+            throw new Error(`Cannot stop child actor ${child.id} of ${this.id} because it is not a child`);
+          }
+          child._stop();
+        },
+        emit: (emittedEvent) => {
+          const listeners = this.eventListeners.get(emittedEvent.type);
+          const wildcardListener = this.eventListeners.get("*");
+          if (!listeners && !wildcardListener) {
+            return;
+          }
+          const allListeners = [...listeners ? listeners.values() : [], ...wildcardListener ? wildcardListener.values() : []];
+          for (const handler of allListeners) {
+            try {
+              handler(emittedEvent);
+            } catch (err) {
+              reportUnhandledError(err);
+            }
+          }
+        },
+        actionExecutor: (action) => {
+          const exec = () => {
+            this._actorScope.system._sendInspectionEvent({
+              type: "@xstate.action",
+              actorRef: this,
+              action: {
+                type: action.type,
+                params: action.params
+              }
+            });
+            if (!action.exec) {
+              return;
+            }
+            const saveExecutingCustomAction = executingCustomAction;
+            try {
+              executingCustomAction = true;
+              action.exec(action.info, action.params);
+            } finally {
+              executingCustomAction = saveExecutingCustomAction;
+            }
+          };
+          if (this._processingStatus === ProcessingStatus.Running) {
+            exec();
+          } else {
+            this._deferred.push(exec);
+          }
+        }
+      };
+      this.send = this.send.bind(this);
+      this.system._sendInspectionEvent({
+        type: "@xstate.actor",
+        actorRef: this
+      });
+      if (systemId) {
+        this.systemId = systemId;
+        this.system._set(systemId, this);
+      }
+      this._initState(options?.snapshot ?? options?.state);
+      if (systemId && this._snapshot.status !== "active") {
+        this.system._unregister(this);
+      }
+    }
+    _initState(persistedState) {
+      try {
+        this._snapshot = persistedState ? this.logic.restoreSnapshot ? this.logic.restoreSnapshot(persistedState, this._actorScope) : persistedState : this.logic.getInitialSnapshot(this._actorScope, this.options?.input);
+      } catch (err) {
+        this._snapshot = {
+          status: "error",
+          output: void 0,
+          error: err
+        };
+      }
+    }
+    update(snapshot, event) {
+      this._snapshot = snapshot;
+      let deferredFn;
+      while (deferredFn = this._deferred.shift()) {
+        try {
+          deferredFn();
+        } catch (err) {
+          this._deferred.length = 0;
+          this._snapshot = {
+            ...snapshot,
+            status: "error",
+            error: err
+          };
+        }
+      }
+      switch (this._snapshot.status) {
+        case "active":
+          for (const observer of this.observers) {
+            try {
+              observer.next?.(snapshot);
+            } catch (err) {
+              reportUnhandledError(err);
+            }
+          }
+          break;
+        case "done":
+          for (const observer of this.observers) {
+            try {
+              observer.next?.(snapshot);
+            } catch (err) {
+              reportUnhandledError(err);
+            }
+          }
+          this._stopProcedure();
+          this._complete();
+          this._doneEvent = createDoneActorEvent(this.id, this._snapshot.output);
+          if (this._parent) {
+            this.system._relay(this, this._parent, this._doneEvent);
+          }
+          break;
+        case "error":
+          this._error(this._snapshot.error);
+          break;
+      }
+      this.system._sendInspectionEvent({
+        type: "@xstate.snapshot",
+        actorRef: this,
+        event,
+        snapshot
+      });
+    }
+    /**
+     * Subscribe an observer to an actor’s snapshot values.
+     *
+     * @remarks
+     * The observer will receive the actor’s snapshot value when it is emitted.
+     * The observer can be:
+     *
+     * - A plain function that receives the latest snapshot, or
+     * - An observer object whose `.next(snapshot)` method receives the latest
+     *   snapshot
+     *
+     * @example
+     *
+     * ```ts
+     * // Observer as a plain function
+     * const subscription = actor.subscribe((snapshot) => {
+     *   console.log(snapshot);
+     * });
+     * ```
+     *
+     * @example
+     *
+     * ```ts
+     * // Observer as an object
+     * const subscription = actor.subscribe({
+     *   next(snapshot) {
+     *     console.log(snapshot);
+     *   },
+     *   error(err) {
+     *     // ...
+     *   },
+     *   complete() {
+     *     // ...
+     *   }
+     * });
+     * ```
+     *
+     * The return value of `actor.subscribe(observer)` is a subscription object
+     * that has an `.unsubscribe()` method. You can call
+     * `subscription.unsubscribe()` to unsubscribe the observer:
+     *
+     * @example
+     *
+     * ```ts
+     * const subscription = actor.subscribe((snapshot) => {
+     *   // ...
+     * });
+     *
+     * // Unsubscribe the observer
+     * subscription.unsubscribe();
+     * ```
+     *
+     * When the actor is stopped, all of its observers will automatically be
+     * unsubscribed.
+     *
+     * @param observer - Either a plain function that receives the latest
+     *   snapshot, or an observer object whose `.next(snapshot)` method receives
+     *   the latest snapshot
+     */
+    subscribe(nextListenerOrObserver, errorListener, completeListener) {
+      const observer = toObserver(nextListenerOrObserver, errorListener, completeListener);
+      if (this._processingStatus !== ProcessingStatus.Stopped) {
+        this.observers.add(observer);
+      } else {
+        switch (this._snapshot.status) {
+          case "done":
+            try {
+              observer.complete?.();
+            } catch (err) {
+              reportUnhandledError(err);
+            }
+            break;
+          case "error": {
+            const err = this._snapshot.error;
+            if (!observer.error) {
+              reportUnhandledError(err);
+            } else {
+              try {
+                observer.error(err);
+              } catch (err2) {
+                reportUnhandledError(err2);
+              }
+            }
+            break;
+          }
+        }
+      }
+      return {
+        unsubscribe: () => {
+          this.observers.delete(observer);
+        }
+      };
+    }
+    on(type, handler) {
+      let listeners = this.eventListeners.get(type);
+      if (!listeners) {
+        listeners = /* @__PURE__ */ new Set();
+        this.eventListeners.set(type, listeners);
+      }
+      const wrappedHandler = handler.bind(void 0);
+      listeners.add(wrappedHandler);
+      return {
+        unsubscribe: () => {
+          listeners.delete(wrappedHandler);
+        }
+      };
+    }
+    select(selector, equalityFn = Object.is) {
+      return {
+        subscribe: (observerOrFn) => {
+          const observer = toObserver(observerOrFn);
+          const snapshot = this.getSnapshot();
+          let previousSelected = selector(snapshot);
+          return this.subscribe((snapshot2) => {
+            const nextSelected = selector(snapshot2);
+            if (!equalityFn(previousSelected, nextSelected)) {
+              previousSelected = nextSelected;
+              observer.next?.(nextSelected);
+            }
+          });
+        },
+        get: () => selector(this.getSnapshot())
+      };
+    }
+    /** Starts the Actor from the initial state */
+    start() {
+      if (this._processingStatus === ProcessingStatus.Running) {
+        return this;
+      }
+      if (this._syncSnapshot) {
+        this.subscribe({
+          next: (snapshot) => {
+            if (snapshot.status === "active") {
+              this.system._relay(this, this._parent, {
+                type: `xstate.snapshot.${this.id}`,
+                snapshot
+              });
+            }
+          },
+          error: () => {
+          }
+        });
+      }
+      this.system._register(this.sessionId, this);
+      if (this.systemId) {
+        this.system._set(this.systemId, this);
+      }
+      this._processingStatus = ProcessingStatus.Running;
+      const initEvent = createInitEvent(this.options.input);
+      this.system._sendInspectionEvent({
+        type: "@xstate.event",
+        sourceRef: this._parent,
+        actorRef: this,
+        event: initEvent
+      });
+      const status = this._snapshot.status;
+      switch (status) {
+        case "done":
+          this.update(this._snapshot, initEvent);
+          return this;
+        case "error":
+          this._error(this._snapshot.error);
+          return this;
+      }
+      if (!this._parent) {
+        this.system.start();
+      }
+      if (this.logic.start) {
+        try {
+          this.logic.start(this._snapshot, this._actorScope);
+        } catch (err) {
+          this._snapshot = {
+            ...this._snapshot,
+            status: "error",
+            error: err
+          };
+          this._error(err);
+          return this;
+        }
+      }
+      this.update(this._snapshot, initEvent);
+      if (this.options.devTools) {
+        this.attachDevTools();
+      }
+      this.mailbox.start();
+      return this;
+    }
+    _process(event) {
+      let nextState;
+      let caughtError;
+      try {
+        nextState = this.logic.transition(this._snapshot, event, this._actorScope);
+      } catch (err) {
+        caughtError = {
+          err
+        };
+      }
+      if (caughtError) {
+        const {
+          err
+        } = caughtError;
+        this._snapshot = {
+          ...this._snapshot,
+          status: "error",
+          error: err
+        };
+        this._error(err);
+        return;
+      }
+      this.update(nextState, event);
+      if (event.type === XSTATE_STOP) {
+        this._stopProcedure();
+        this._complete();
+      }
+    }
+    _stop() {
+      if (this._processingStatus === ProcessingStatus.Stopped) {
+        return this;
+      }
+      this.mailbox.clear();
+      if (this._processingStatus === ProcessingStatus.NotStarted) {
+        this._processingStatus = ProcessingStatus.Stopped;
+        return this;
+      }
+      this.mailbox.enqueue({
+        type: XSTATE_STOP
+      });
+      return this;
+    }
+    /** Stops the Actor and unsubscribe all listeners. */
+    stop() {
+      if (this._parent) {
+        throw new Error("A non-root actor cannot be stopped directly.");
+      }
+      return this._stop();
+    }
+    _complete() {
+      for (const observer of this.observers) {
+        try {
+          observer.complete?.();
+        } catch (err) {
+          reportUnhandledError(err);
+        }
+      }
+      this.observers.clear();
+      this.eventListeners.clear();
+    }
+    _reportError(err) {
+      if (!this.observers.size) {
+        if (!this._parent) {
+          reportUnhandledError(err);
+        }
+        this.eventListeners.clear();
+        return;
+      }
+      let reportError = false;
+      for (const observer of this.observers) {
+        const errorListener = observer.error;
+        reportError ||= !errorListener;
+        try {
+          errorListener?.(err);
+        } catch (err2) {
+          reportUnhandledError(err2);
+        }
+      }
+      this.observers.clear();
+      this.eventListeners.clear();
+      if (reportError) {
+        reportUnhandledError(err);
+      }
+    }
+    _error(err) {
+      this._stopProcedure();
+      this._reportError(err);
+      if (this._parent) {
+        this.system._relay(this, this._parent, createErrorActorEvent(this.id, err));
+      }
+    }
+    // TODO: atm children don't belong entirely to the actor so
+    // in a way - it's not even super aware of them
+    // so we can't stop them from here but we really should!
+    // right now, they are being stopped within the machine's transition
+    // but that could throw and leave us with "orphaned" active actors
+    _stopProcedure() {
+      if (this._processingStatus !== ProcessingStatus.Running) {
+        return this;
+      }
+      this.system.scheduler.cancelAll(this);
+      this.mailbox.clear();
+      this.mailbox = new Mailbox(this._process.bind(this));
+      this._processingStatus = ProcessingStatus.Stopped;
+      this.system._unregister(this);
+      return this;
+    }
+    /** @internal */
+    _send(event) {
+      if (this._processingStatus === ProcessingStatus.Stopped) {
+        return;
+      }
+      this.mailbox.enqueue(event);
+    }
+    /**
+     * Sends an event to the running Actor to trigger a transition.
+     *
+     * @param event The event to send
+     */
+    send(event) {
+      this.system._relay(void 0, this, event);
+    }
+    attachDevTools() {
+      const {
+        devTools
+      } = this.options;
+      if (devTools) {
+        const resolvedDevToolsAdapter = typeof devTools === "function" ? devTools : devToolsAdapter;
+        resolvedDevToolsAdapter(this);
+      }
+    }
+    toJSON() {
+      return {
+        xstate$$type: $$ACTOR_TYPE,
+        id: this.id
+      };
+    }
+    /**
+     * Obtain the internal state of the actor, which can be persisted.
+     *
+     * @remarks
+     * The internal state can be persisted from any actor, not only machines.
+     *
+     * Note that the persisted state is not the same as the snapshot from
+     * {@link Actor.getSnapshot}. Persisted state represents the internal state of
+     * the actor, while snapshots represent the actor's last emitted value.
+     *
+     * Can be restored with {@link ActorOptions.state}
+     * @see https://stately.ai/docs/persistence
+     */
+    getPersistedSnapshot(options) {
+      return this.logic.getPersistedSnapshot(this._snapshot, options);
+    }
+    [symbolObservable]() {
+      return this;
+    }
+    /**
+     * Read an actor’s snapshot synchronously.
+     *
+     * @remarks
+     * The snapshot represent an actor's last emitted value.
+     *
+     * When an actor receives an event, its internal state may change. An actor
+     * may emit a snapshot when a state transition occurs.
+     *
+     * Note that some actors, such as callback actors generated with
+     * `fromCallback`, will not emit snapshots.
+     * @see {@link Actor.subscribe} to subscribe to an actor’s snapshot values.
+     * @see {@link Actor.getPersistedSnapshot} to persist the internal state of an actor (which is more than just a snapshot).
+     */
+    getSnapshot() {
+      return this._snapshot;
+    }
+  };
+  function createActor(logic, ...[options]) {
+    return new Actor(logic, options);
+  }
+  function resolveCancel(_, snapshot, actionArgs, actionParams, {
+    sendId
+  }) {
+    const resolvedSendId = typeof sendId === "function" ? sendId(actionArgs, actionParams) : sendId;
+    return [snapshot, {
+      sendId: resolvedSendId
+    }, void 0];
+  }
+  function executeCancel(actorScope, params) {
+    actorScope.defer(() => {
+      actorScope.system.scheduler.cancel(actorScope.self, params.sendId);
+    });
+  }
+  function cancel(sendId) {
+    function cancel2(_args, _params) {
+    }
+    cancel2.type = "xstate.cancel";
+    cancel2.sendId = sendId;
+    cancel2.resolve = resolveCancel;
+    cancel2.execute = executeCancel;
+    return cancel2;
+  }
+  function resolveSpawn(actorScope, snapshot, actionArgs, _actionParams, {
+    id,
+    systemId,
+    src,
+    input,
+    syncSnapshot
+  }) {
+    const logic = typeof src === "string" ? resolveReferencedActor(snapshot.machine, src) : src;
+    const resolvedId = typeof id === "function" ? id(actionArgs) : id;
+    let actorRef;
+    let resolvedInput = void 0;
+    if (logic) {
+      resolvedInput = typeof input === "function" ? input({
+        context: snapshot.context,
+        event: actionArgs.event,
+        self: actorScope.self
+      }) : input;
+      actorRef = createActor(logic, {
+        id: resolvedId,
+        src,
+        parent: actorScope.self,
+        syncSnapshot,
+        systemId,
+        input: resolvedInput
+      });
+    }
+    return [cloneMachineSnapshot(snapshot, {
+      children: {
+        ...snapshot.children,
+        [resolvedId]: actorRef
+      }
+    }), {
+      id,
+      systemId,
+      actorRef,
+      src,
+      input: resolvedInput
+    }, void 0];
+  }
+  function executeSpawn(actorScope, {
+    actorRef
+  }) {
+    if (!actorRef) {
+      return;
+    }
+    actorScope.defer(() => {
+      if (actorRef._processingStatus === ProcessingStatus.Stopped) {
+        return;
+      }
+      actorRef.start();
+    });
+  }
+  function spawnChild(...[src, {
+    id,
+    systemId,
+    input,
+    syncSnapshot = false
+  } = {}]) {
+    function spawnChild2(_args, _params) {
+    }
+    spawnChild2.type = "xstate.spawnChild";
+    spawnChild2.id = id;
+    spawnChild2.systemId = systemId;
+    spawnChild2.src = src;
+    spawnChild2.input = input;
+    spawnChild2.syncSnapshot = syncSnapshot;
+    spawnChild2.resolve = resolveSpawn;
+    spawnChild2.execute = executeSpawn;
+    return spawnChild2;
+  }
+  function resolveStop(_, snapshot, args, actionParams, {
+    actorRef
+  }) {
+    const actorRefOrString = typeof actorRef === "function" ? actorRef(args, actionParams) : actorRef;
+    const resolvedActorRef = typeof actorRefOrString === "string" ? snapshot.children[actorRefOrString] : actorRefOrString;
+    let children = snapshot.children;
+    if (resolvedActorRef) {
+      children = {
+        ...children
+      };
+      delete children[resolvedActorRef.id];
+    }
+    return [cloneMachineSnapshot(snapshot, {
+      children
+    }), resolvedActorRef, void 0];
+  }
+  function unregisterRecursively(actorScope, actorRef) {
+    const snapshot = actorRef.getSnapshot();
+    if (snapshot && "children" in snapshot) {
+      for (const child of Object.values(snapshot.children)) {
+        unregisterRecursively(actorScope, child);
+      }
+    }
+    actorScope.system._unregister(actorRef);
+  }
+  function executeStop(actorScope, actorRef) {
+    if (!actorRef) {
+      return;
+    }
+    unregisterRecursively(actorScope, actorRef);
+    if (actorRef._processingStatus !== ProcessingStatus.Running) {
+      actorScope.stopChild(actorRef);
+      return;
+    }
+    actorScope.defer(() => {
+      actorScope.stopChild(actorRef);
+    });
+  }
+  function stopChild(actorRef) {
+    function stop2(_args, _params) {
+    }
+    stop2.type = "xstate.stopChild";
+    stop2.actorRef = actorRef;
+    stop2.resolve = resolveStop;
+    stop2.execute = executeStop;
+    return stop2;
+  }
+  function evaluateGuard(guard, context, event, snapshot) {
+    const {
+      machine
+    } = snapshot;
+    const isInline = typeof guard === "function";
+    const resolved = isInline ? guard : machine.implementations.guards[typeof guard === "string" ? guard : guard.type];
+    if (!isInline && !resolved) {
+      throw new Error(`Guard '${typeof guard === "string" ? guard : guard.type}' is not implemented.'.`);
+    }
+    if (typeof resolved !== "function") {
+      return evaluateGuard(resolved, context, event, snapshot);
+    }
+    const guardArgs = {
+      context,
+      event
+    };
+    const guardParams = isInline || typeof guard === "string" ? void 0 : "params" in guard ? typeof guard.params === "function" ? guard.params({
+      context,
+      event
+    }) : guard.params : void 0;
+    if (!("check" in resolved)) {
+      return resolved(guardArgs, guardParams);
+    }
+    const builtinGuard = resolved;
+    return builtinGuard.check(
+      snapshot,
+      guardArgs,
+      resolved
+      // this holds all params
+    );
+  }
+  function isAtomicStateNode(stateNode) {
+    return stateNode.type === "atomic" || stateNode.type === "final";
+  }
+  function getChildren(stateNode) {
+    return Object.values(stateNode.states).filter((sn) => sn.type !== "history");
+  }
+  function getProperAncestors(stateNode, toStateNode) {
+    const ancestors = [];
+    if (toStateNode === stateNode) {
+      return ancestors;
+    }
+    let m = stateNode.parent;
+    while (m && m !== toStateNode) {
+      ancestors.push(m);
+      m = m.parent;
+    }
+    return ancestors;
+  }
+  function getAllStateNodes(stateNodes) {
+    const nodeSet = new Set(stateNodes);
+    const adjList = getAdjList(nodeSet);
+    for (const s of nodeSet) {
+      if (s.type === "compound" && (!adjList.get(s) || !adjList.get(s).length)) {
+        getInitialStateNodesWithTheirAncestors(s).forEach((sn) => nodeSet.add(sn));
+      } else {
+        if (s.type === "parallel") {
+          for (const child of getChildren(s)) {
+            if (child.type === "history") {
+              continue;
+            }
+            if (!nodeSet.has(child)) {
+              const initialStates = getInitialStateNodesWithTheirAncestors(child);
+              for (const initialStateNode of initialStates) {
+                nodeSet.add(initialStateNode);
+              }
+            }
+          }
+        }
+      }
+    }
+    for (const s of nodeSet) {
+      let m = s.parent;
+      while (m) {
+        nodeSet.add(m);
+        m = m.parent;
+      }
+    }
+    return nodeSet;
+  }
+  function getValueFromAdj(baseNode, adjList) {
+    const childStateNodes = adjList.get(baseNode);
+    if (!childStateNodes) {
+      return {};
+    }
+    if (baseNode.type === "compound") {
+      const childStateNode = childStateNodes[0];
+      if (childStateNode) {
+        if (isAtomicStateNode(childStateNode)) {
+          return childStateNode.key;
+        }
+      } else {
+        return {};
+      }
+    }
+    const stateValue = {};
+    for (const childStateNode of childStateNodes) {
+      stateValue[childStateNode.key] = getValueFromAdj(childStateNode, adjList);
+    }
+    return stateValue;
+  }
+  function getAdjList(stateNodes) {
+    const adjList = /* @__PURE__ */ new Map();
+    for (const s of stateNodes) {
+      if (!adjList.has(s)) {
+        adjList.set(s, []);
+      }
+      if (s.parent) {
+        if (!adjList.has(s.parent)) {
+          adjList.set(s.parent, []);
+        }
+        adjList.get(s.parent).push(s);
+      }
+    }
+    return adjList;
+  }
+  function getStateValue(rootNode, stateNodes) {
+    const config = getAllStateNodes(stateNodes);
+    return getValueFromAdj(rootNode, getAdjList(config));
+  }
+  function isInFinalState(stateNodeSet, stateNode) {
+    if (stateNode.type === "compound") {
+      return getChildren(stateNode).some((s) => s.type === "final" && stateNodeSet.has(s));
+    }
+    if (stateNode.type === "parallel") {
+      return getChildren(stateNode).every((sn) => isInFinalState(stateNodeSet, sn));
+    }
+    return stateNode.type === "final";
+  }
+  var isStateId = (str) => str[0] === STATE_IDENTIFIER;
+  function getCandidates(stateNode, receivedEventType) {
+    const candidates = stateNode.transitions.get(receivedEventType) || [...stateNode.transitions.keys()].filter((eventDescriptor) => matchesEventDescriptor(receivedEventType, eventDescriptor)).sort((a, b) => b.length - a.length).flatMap((key) => stateNode.transitions.get(key));
+    return candidates;
+  }
+  function getDelayedTransitions(stateNode) {
+    const afterConfig = stateNode.config.after;
+    if (!afterConfig) {
+      return [];
+    }
+    const mutateEntryExit = (delay) => {
+      const afterEvent = createAfterEvent(delay, stateNode.id);
+      const eventType = afterEvent.type;
+      stateNode.entry.push(raise(afterEvent, {
+        id: eventType,
+        delay
+      }));
+      stateNode.exit.push(cancel(eventType));
+      return eventType;
+    };
+    const delayedTransitions = Object.keys(afterConfig).flatMap((delay) => {
+      const configTransition = afterConfig[delay];
+      const resolvedTransition = typeof configTransition === "string" ? {
+        target: configTransition
+      } : configTransition;
+      const resolvedDelay = Number.isNaN(+delay) ? delay : +delay;
+      const eventType = mutateEntryExit(resolvedDelay);
+      return toArray(resolvedTransition).map((transition) => ({
+        ...transition,
+        event: eventType,
+        delay: resolvedDelay
+      }));
+    });
+    return delayedTransitions.map((delayedTransition) => {
+      const {
+        delay
+      } = delayedTransition;
+      return {
+        ...formatTransition(stateNode, delayedTransition.event, delayedTransition),
+        delay
+      };
+    });
+  }
+  function formatTransition(stateNode, descriptor, transitionConfig) {
+    const normalizedTarget = normalizeTarget(transitionConfig.target);
+    const reenter = transitionConfig.reenter ?? false;
+    const target = resolveTarget(stateNode, normalizedTarget);
+    const transition = {
+      ...transitionConfig,
+      actions: toArray(transitionConfig.actions),
+      guard: transitionConfig.guard,
+      target,
+      source: stateNode,
+      reenter,
+      eventType: descriptor,
+      toJSON: () => ({
+        ...transition,
+        source: `#${stateNode.id}`,
+        target: target ? target.map((t) => `#${t.id}`) : void 0
+      })
+    };
+    return transition;
+  }
+  function formatTransitions(stateNode) {
+    const transitions = /* @__PURE__ */ new Map();
+    if (stateNode.config.on) {
+      for (const descriptor of Object.keys(stateNode.config.on)) {
+        if (descriptor === NULL_EVENT) {
+          throw new Error('Null events ("") cannot be specified as a transition key. Use `always: { ... }` instead.');
+        }
+        const transitionsConfig = stateNode.config.on[descriptor];
+        transitions.set(descriptor, toTransitionConfigArray(transitionsConfig).map((t) => formatTransition(stateNode, descriptor, t)));
+      }
+    }
+    if (stateNode.config.onDone) {
+      const descriptor = `xstate.done.state.${stateNode.id}`;
+      transitions.set(descriptor, toTransitionConfigArray(stateNode.config.onDone).map((t) => formatTransition(stateNode, descriptor, t)));
+    }
+    for (const invokeDef of stateNode.invoke) {
+      if (invokeDef.onDone) {
+        const descriptor = `xstate.done.actor.${invokeDef.id}`;
+        transitions.set(descriptor, toTransitionConfigArray(invokeDef.onDone).map((t) => formatTransition(stateNode, descriptor, t)));
+      }
+      if (invokeDef.onError) {
+        const descriptor = `xstate.error.actor.${invokeDef.id}`;
+        transitions.set(descriptor, toTransitionConfigArray(invokeDef.onError).map((t) => formatTransition(stateNode, descriptor, t)));
+      }
+      if (invokeDef.onSnapshot) {
+        const descriptor = `xstate.snapshot.${invokeDef.id}`;
+        transitions.set(descriptor, toTransitionConfigArray(invokeDef.onSnapshot).map((t) => formatTransition(stateNode, descriptor, t)));
+      }
+    }
+    for (const delayedTransition of stateNode.after) {
+      let existing = transitions.get(delayedTransition.eventType);
+      if (!existing) {
+        existing = [];
+        transitions.set(delayedTransition.eventType, existing);
+      }
+      existing.push(delayedTransition);
+    }
+    return transitions;
+  }
+  function formatRouteTransitions(rootStateNode) {
+    const routeTransitions = [];
+    const collectRoutes = (states) => {
+      Object.values(states).forEach((sn) => {
+        if (sn.config.route && sn.config.id) {
+          const routeId = sn.config.id;
+          const userGuard = sn.config.route.guard;
+          const routeGuard = (args, params) => {
+            if (args.event.to !== `#${routeId}`) {
+              return false;
+            }
+            if (!userGuard) {
+              return true;
+            }
+            if (typeof userGuard === "function") {
+              return userGuard(args, params);
+            }
+            return true;
+          };
+          const transition = {
+            ...sn.config.route,
+            guard: routeGuard,
+            target: `#${routeId}`
+          };
+          routeTransitions.push(formatTransition(rootStateNode, "xstate.route", transition));
+        }
+        if (sn.states) {
+          collectRoutes(sn.states);
+        }
+      });
+    };
+    collectRoutes(rootStateNode.states);
+    if (routeTransitions.length > 0) {
+      rootStateNode.transitions.set("xstate.route", routeTransitions);
+    }
+  }
+  function formatInitialTransition(stateNode, _target) {
+    const resolvedTarget = typeof _target === "string" ? stateNode.states[_target] : _target ? stateNode.states[_target.target] : void 0;
+    if (!resolvedTarget && _target) {
+      throw new Error(
+        // eslint-disable-next-line @typescript-eslint/restrict-template-expressions, @typescript-eslint/no-base-to-string
+        `Initial state node "${_target}" not found on parent state node #${stateNode.id}`
+      );
+    }
+    const transition = {
+      source: stateNode,
+      actions: !_target || typeof _target === "string" ? [] : toArray(_target.actions),
+      eventType: null,
+      reenter: false,
+      target: resolvedTarget ? [resolvedTarget] : [],
+      toJSON: () => ({
+        ...transition,
+        source: `#${stateNode.id}`,
+        target: resolvedTarget ? [`#${resolvedTarget.id}`] : []
+      })
+    };
+    return transition;
+  }
+  function resolveTarget(stateNode, targets) {
+    if (targets === void 0) {
+      return void 0;
+    }
+    return targets.map((target) => {
+      if (typeof target !== "string") {
+        return target;
+      }
+      if (isStateId(target)) {
+        return stateNode.machine.getStateNodeById(target);
+      }
+      const isInternalTarget = target[0] === STATE_DELIMITER;
+      if (isInternalTarget && !stateNode.parent) {
+        return getStateNodeByPath(stateNode, target.slice(1));
+      }
+      const resolvedTarget = isInternalTarget ? stateNode.key + target : target;
+      if (stateNode.parent) {
+        try {
+          const targetStateNode = getStateNodeByPath(stateNode.parent, resolvedTarget);
+          return targetStateNode;
+        } catch (err) {
+          throw new Error(`Invalid transition definition for state node '${stateNode.id}':
+${err.message}`);
+        }
+      } else {
+        throw new Error(`Invalid target: "${target}" is not a valid target from the root node. Did you mean ".${target}"?`);
+      }
+    });
+  }
+  function resolveHistoryDefaultTransition(stateNode) {
+    const normalizedTarget = normalizeTarget(stateNode.config.target);
+    if (!normalizedTarget) {
+      return stateNode.parent.initial;
+    }
+    return {
+      target: normalizedTarget.map((t) => typeof t === "string" ? getStateNodeByPath(stateNode.parent, t) : t)
+    };
+  }
+  function isHistoryNode(stateNode) {
+    return stateNode.type === "history";
+  }
+  function getInitialStateNodesWithTheirAncestors(stateNode) {
+    const states = getInitialStateNodes(stateNode);
+    for (const initialState of states) {
+      for (const ancestor of getProperAncestors(initialState, stateNode)) {
+        states.add(ancestor);
+      }
+    }
+    return states;
+  }
+  function getInitialStateNodes(stateNode) {
+    const set = /* @__PURE__ */ new Set();
+    function iter(descStateNode) {
+      if (set.has(descStateNode)) {
+        return;
+      }
+      set.add(descStateNode);
+      if (descStateNode.type === "compound") {
+        iter(descStateNode.initial.target[0]);
+      } else if (descStateNode.type === "parallel") {
+        for (const child of getChildren(descStateNode)) {
+          iter(child);
+        }
+      }
+    }
+    iter(stateNode);
+    return set;
+  }
+  function getStateNode(stateNode, stateKey) {
+    if (isStateId(stateKey)) {
+      return stateNode.machine.getStateNodeById(stateKey);
+    }
+    if (!stateNode.states) {
+      throw new Error(`Unable to retrieve child state '${stateKey}' from '${stateNode.id}'; no child states exist.`);
+    }
+    const result = stateNode.states[stateKey];
+    if (!result) {
+      throw new Error(`Child state '${stateKey}' does not exist on '${stateNode.id}'`);
+    }
+    return result;
+  }
+  function getStateNodeByPath(stateNode, statePath) {
+    if (typeof statePath === "string" && isStateId(statePath)) {
+      try {
+        return stateNode.machine.getStateNodeById(statePath);
+      } catch {
+      }
+    }
+    const arrayStatePath = toStatePath(statePath).slice();
+    let currentStateNode = stateNode;
+    while (arrayStatePath.length) {
+      const key = arrayStatePath.shift();
+      if (!key.length) {
+        break;
+      }
+      currentStateNode = getStateNode(currentStateNode, key);
+    }
+    return currentStateNode;
+  }
+  function getStateNodes(stateNode, stateValue) {
+    if (typeof stateValue === "string") {
+      const childStateNode = stateNode.states[stateValue];
+      if (!childStateNode) {
+        throw new Error(`State '${stateValue}' does not exist on '${stateNode.id}'`);
+      }
+      return [stateNode, childStateNode];
+    }
+    const childStateKeys = Object.keys(stateValue);
+    const childStateNodes = childStateKeys.map((subStateKey) => getStateNode(stateNode, subStateKey)).filter(Boolean);
+    return [stateNode.machine.root, stateNode].concat(childStateNodes, childStateKeys.reduce((allSubStateNodes, subStateKey) => {
+      const subStateNode = getStateNode(stateNode, subStateKey);
+      if (!subStateNode) {
+        return allSubStateNodes;
+      }
+      const subStateNodes = getStateNodes(subStateNode, stateValue[subStateKey]);
+      return allSubStateNodes.concat(subStateNodes);
+    }, []));
+  }
+  function transitionAtomicNode(stateNode, stateValue, snapshot, event) {
+    const childStateNode = getStateNode(stateNode, stateValue);
+    const next = childStateNode.next(snapshot, event);
+    if (!next || !next.length) {
+      return stateNode.next(snapshot, event);
+    }
+    return next;
+  }
+  function transitionCompoundNode(stateNode, stateValue, snapshot, event) {
+    const subStateKeys = Object.keys(stateValue);
+    const childStateNode = getStateNode(stateNode, subStateKeys[0]);
+    const next = transitionNode(childStateNode, stateValue[subStateKeys[0]], snapshot, event);
+    if (!next || !next.length) {
+      return stateNode.next(snapshot, event);
+    }
+    return next;
+  }
+  function transitionParallelNode(stateNode, stateValue, snapshot, event) {
+    const allInnerTransitions = [];
+    for (const subStateKey of Object.keys(stateValue)) {
+      const subStateValue = stateValue[subStateKey];
+      if (!subStateValue) {
+        continue;
+      }
+      const subStateNode = getStateNode(stateNode, subStateKey);
+      const innerTransitions = transitionNode(subStateNode, subStateValue, snapshot, event);
+      if (innerTransitions) {
+        allInnerTransitions.push(...innerTransitions);
+      }
+    }
+    if (!allInnerTransitions.length) {
+      return stateNode.next(snapshot, event);
+    }
+    return allInnerTransitions;
+  }
+  function transitionNode(stateNode, stateValue, snapshot, event) {
+    if (typeof stateValue === "string") {
+      return transitionAtomicNode(stateNode, stateValue, snapshot, event);
+    }
+    if (Object.keys(stateValue).length === 1) {
+      return transitionCompoundNode(stateNode, stateValue, snapshot, event);
+    }
+    return transitionParallelNode(stateNode, stateValue, snapshot, event);
+  }
+  function getHistoryNodes(stateNode) {
+    return Object.keys(stateNode.states).map((key) => stateNode.states[key]).filter((sn) => sn.type === "history");
+  }
+  function isDescendant(childStateNode, parentStateNode) {
+    let marker = childStateNode;
+    while (marker.parent && marker.parent !== parentStateNode) {
+      marker = marker.parent;
+    }
+    return marker.parent === parentStateNode;
+  }
+  function hasIntersection(s1, s2) {
+    const set1 = new Set(s1);
+    const set2 = new Set(s2);
+    for (const item of set1) {
+      if (set2.has(item)) {
+        return true;
+      }
+    }
+    for (const item of set2) {
+      if (set1.has(item)) {
+        return true;
+      }
+    }
+    return false;
+  }
+  function removeConflictingTransitions(enabledTransitions, stateNodeSet, historyValue) {
+    const filteredTransitions = /* @__PURE__ */ new Set();
+    for (const t1 of enabledTransitions) {
+      let t1Preempted = false;
+      const transitionsToRemove = /* @__PURE__ */ new Set();
+      for (const t2 of filteredTransitions) {
+        if (hasIntersection(computeExitSet([t1], stateNodeSet, historyValue), computeExitSet([t2], stateNodeSet, historyValue))) {
+          if (isDescendant(t1.source, t2.source)) {
+            transitionsToRemove.add(t2);
+          } else {
+            t1Preempted = true;
+            break;
+          }
+        }
+      }
+      if (!t1Preempted) {
+        for (const t3 of transitionsToRemove) {
+          filteredTransitions.delete(t3);
+        }
+        filteredTransitions.add(t1);
+      }
+    }
+    return Array.from(filteredTransitions);
+  }
+  function findLeastCommonAncestor(stateNodes) {
+    const [head, ...tail] = stateNodes;
+    for (const ancestor of getProperAncestors(head, void 0)) {
+      if (tail.every((sn) => isDescendant(sn, ancestor))) {
+        return ancestor;
+      }
+    }
+  }
+  function getEffectiveTargetStates(transition, historyValue) {
+    if (!transition.target) {
+      return [];
+    }
+    const targets = /* @__PURE__ */ new Set();
+    for (const targetNode of transition.target) {
+      if (isHistoryNode(targetNode)) {
+        if (historyValue[targetNode.id]) {
+          for (const node of historyValue[targetNode.id]) {
+            targets.add(node);
+          }
+        } else {
+          for (const node of getEffectiveTargetStates(resolveHistoryDefaultTransition(targetNode), historyValue)) {
+            targets.add(node);
+          }
+        }
+      } else {
+        targets.add(targetNode);
+      }
+    }
+    return [...targets];
+  }
+  function getTransitionDomain(transition, historyValue) {
+    const targetStates = getEffectiveTargetStates(transition, historyValue);
+    if (!targetStates) {
+      return;
+    }
+    if (!transition.reenter && targetStates.every((target) => target === transition.source || isDescendant(target, transition.source))) {
+      return transition.source;
+    }
+    const lca = findLeastCommonAncestor(targetStates.concat(transition.source));
+    if (lca) {
+      return lca;
+    }
+    if (transition.reenter) {
+      return;
+    }
+    return transition.source.machine.root;
+  }
+  function computeExitSet(transitions, stateNodeSet, historyValue) {
+    const statesToExit = /* @__PURE__ */ new Set();
+    for (const t of transitions) {
+      if (t.target?.length) {
+        const domain = getTransitionDomain(t, historyValue);
+        if (t.reenter && t.source === domain) {
+          statesToExit.add(domain);
+        }
+        for (const stateNode of stateNodeSet) {
+          if (isDescendant(stateNode, domain)) {
+            statesToExit.add(stateNode);
+          }
+        }
+      }
+    }
+    return [...statesToExit];
+  }
+  function areStateNodeCollectionsEqual(prevStateNodes, nextStateNodeSet) {
+    if (prevStateNodes.length !== nextStateNodeSet.size) {
+      return false;
+    }
+    for (const node of prevStateNodes) {
+      if (!nextStateNodeSet.has(node)) {
+        return false;
+      }
+    }
+    return true;
+  }
+  function initialMicrostep(root, preInitialState, actorScope, initEvent, internalQueue) {
+    return microstep([{
+      target: [...getInitialStateNodes(root)],
+      source: root,
+      reenter: true,
+      actions: [],
+      eventType: null,
+      toJSON: null
+    }], preInitialState, actorScope, initEvent, true, internalQueue);
+  }
+  function microstep(transitions, currentSnapshot, actorScope, event, isInitial, internalQueue) {
+    const actions = [];
+    if (!transitions.length) {
+      return [currentSnapshot, actions];
+    }
+    const originalExecutor = actorScope.actionExecutor;
+    actorScope.actionExecutor = (action) => {
+      actions.push(action);
+      originalExecutor(action);
+    };
+    try {
+      const mutStateNodeSet = new Set(currentSnapshot._nodes);
+      let historyValue = currentSnapshot.historyValue;
+      const filteredTransitions = removeConflictingTransitions(transitions, mutStateNodeSet, historyValue);
+      let nextState = currentSnapshot;
+      if (!isInitial) {
+        [nextState, historyValue] = exitStates(nextState, event, actorScope, filteredTransitions, mutStateNodeSet, historyValue, internalQueue, actorScope.actionExecutor);
+      }
+      nextState = resolveActionsAndContext(nextState, event, actorScope, filteredTransitions.flatMap((t) => t.actions), internalQueue, void 0);
+      nextState = enterStates(nextState, event, actorScope, filteredTransitions, mutStateNodeSet, internalQueue, historyValue, isInitial);
+      const nextStateNodes = [...mutStateNodeSet];
+      if (nextState.status === "done") {
+        nextState = resolveActionsAndContext(nextState, event, actorScope, nextStateNodes.sort((a, b) => b.order - a.order).flatMap((state) => state.exit), internalQueue, void 0);
+      }
+      try {
+        if (historyValue === currentSnapshot.historyValue && areStateNodeCollectionsEqual(currentSnapshot._nodes, mutStateNodeSet)) {
+          return [nextState, actions];
+        }
+        return [cloneMachineSnapshot(nextState, {
+          _nodes: nextStateNodes,
+          historyValue
+        }), actions];
+      } catch (e) {
+        throw e;
+      }
+    } finally {
+      actorScope.actionExecutor = originalExecutor;
+    }
+  }
+  function getMachineOutput(snapshot, event, actorScope, rootNode, rootCompletionNode) {
+    if (rootNode.output === void 0) {
+      return;
+    }
+    const doneStateEvent = createDoneStateEvent(rootCompletionNode.id, rootCompletionNode.output !== void 0 && rootCompletionNode.parent ? resolveOutput(rootCompletionNode.output, snapshot.context, event, actorScope.self) : void 0);
+    return resolveOutput(rootNode.output, snapshot.context, doneStateEvent, actorScope.self);
+  }
+  function enterStates(currentSnapshot, event, actorScope, filteredTransitions, mutStateNodeSet, internalQueue, historyValue, isInitial) {
+    let nextSnapshot = currentSnapshot;
+    const statesToEnter = /* @__PURE__ */ new Set();
+    const statesForDefaultEntry = /* @__PURE__ */ new Set();
+    computeEntrySet(filteredTransitions, historyValue, statesForDefaultEntry, statesToEnter);
+    if (isInitial) {
+      statesForDefaultEntry.add(currentSnapshot.machine.root);
+    }
+    const completedNodes = /* @__PURE__ */ new Set();
+    for (const stateNodeToEnter of [...statesToEnter].sort((a, b) => a.order - b.order)) {
+      mutStateNodeSet.add(stateNodeToEnter);
+      const actions = [];
+      actions.push(...stateNodeToEnter.entry);
+      for (const invokeDef of stateNodeToEnter.invoke) {
+        actions.push(spawnChild(invokeDef.src, {
+          ...invokeDef,
+          syncSnapshot: !!invokeDef.onSnapshot
+        }));
+      }
+      if (statesForDefaultEntry.has(stateNodeToEnter)) {
+        const initialActions = stateNodeToEnter.initial.actions;
+        actions.push(...initialActions);
+      }
+      nextSnapshot = resolveActionsAndContext(nextSnapshot, event, actorScope, actions, internalQueue, stateNodeToEnter.invoke.map((invokeDef) => invokeDef.id));
+      if (stateNodeToEnter.type === "final") {
+        const parent = stateNodeToEnter.parent;
+        let ancestorMarker = parent?.type === "parallel" ? parent : parent?.parent;
+        let rootCompletionNode = ancestorMarker || stateNodeToEnter;
+        if (parent?.type === "compound") {
+          internalQueue.push(createDoneStateEvent(parent.id, stateNodeToEnter.output !== void 0 ? resolveOutput(stateNodeToEnter.output, nextSnapshot.context, event, actorScope.self) : void 0));
+        }
+        while (ancestorMarker?.type === "parallel" && !completedNodes.has(ancestorMarker) && isInFinalState(mutStateNodeSet, ancestorMarker)) {
+          completedNodes.add(ancestorMarker);
+          internalQueue.push(createDoneStateEvent(ancestorMarker.id));
+          rootCompletionNode = ancestorMarker;
+          ancestorMarker = ancestorMarker.parent;
+        }
+        if (ancestorMarker) {
+          continue;
+        }
+        nextSnapshot = cloneMachineSnapshot(nextSnapshot, {
+          status: "done",
+          output: getMachineOutput(nextSnapshot, event, actorScope, nextSnapshot.machine.root, rootCompletionNode)
+        });
+      }
+    }
+    return nextSnapshot;
+  }
+  function computeEntrySet(transitions, historyValue, statesForDefaultEntry, statesToEnter) {
+    for (const t of transitions) {
+      const domain = getTransitionDomain(t, historyValue);
+      for (const s of t.target || []) {
+        if (!isHistoryNode(s) && // if the target is different than the source then it will *definitely* be entered
+        (t.source !== s || // we know that the domain can't lie within the source
+        // if it's different than the source then it's outside of it and it means that the target has to be entered as well
+        t.source !== domain || // reentering transitions always enter the target, even if it's the source itself
+        t.reenter)) {
+          statesToEnter.add(s);
+          statesForDefaultEntry.add(s);
+        }
+        addDescendantStatesToEnter(s, historyValue, statesForDefaultEntry, statesToEnter);
+      }
+      const targetStates = getEffectiveTargetStates(t, historyValue);
+      for (const s of targetStates) {
+        const ancestors = getProperAncestors(s, domain);
+        if (domain?.type === "parallel") {
+          ancestors.push(domain);
+        }
+        addAncestorStatesToEnter(statesToEnter, historyValue, statesForDefaultEntry, ancestors, !t.source.parent && t.reenter ? void 0 : domain);
+      }
+    }
+  }
+  function addDescendantStatesToEnter(stateNode, historyValue, statesForDefaultEntry, statesToEnter) {
+    if (isHistoryNode(stateNode)) {
+      if (historyValue[stateNode.id]) {
+        const historyStateNodes = historyValue[stateNode.id];
+        for (const s of historyStateNodes) {
+          statesToEnter.add(s);
+          addDescendantStatesToEnter(s, historyValue, statesForDefaultEntry, statesToEnter);
+        }
+        for (const s of historyStateNodes) {
+          addProperAncestorStatesToEnter(s, stateNode.parent, statesToEnter, historyValue, statesForDefaultEntry);
+        }
+      } else {
+        const historyDefaultTransition = resolveHistoryDefaultTransition(stateNode);
+        for (const s of historyDefaultTransition.target) {
+          statesToEnter.add(s);
+          if (historyDefaultTransition === stateNode.parent?.initial) {
+            statesForDefaultEntry.add(stateNode.parent);
+          }
+          addDescendantStatesToEnter(s, historyValue, statesForDefaultEntry, statesToEnter);
+        }
+        for (const s of historyDefaultTransition.target) {
+          addProperAncestorStatesToEnter(s, stateNode.parent, statesToEnter, historyValue, statesForDefaultEntry);
+        }
+      }
+    } else {
+      if (stateNode.type === "compound") {
+        const [initialState] = stateNode.initial.target;
+        if (!isHistoryNode(initialState)) {
+          statesToEnter.add(initialState);
+          statesForDefaultEntry.add(initialState);
+        }
+        addDescendantStatesToEnter(initialState, historyValue, statesForDefaultEntry, statesToEnter);
+        addProperAncestorStatesToEnter(initialState, stateNode, statesToEnter, historyValue, statesForDefaultEntry);
+      } else {
+        if (stateNode.type === "parallel") {
+          for (const child of getChildren(stateNode).filter((sn) => !isHistoryNode(sn))) {
+            if (![...statesToEnter].some((s) => isDescendant(s, child))) {
+              if (!isHistoryNode(child)) {
+                statesToEnter.add(child);
+                statesForDefaultEntry.add(child);
+              }
+              addDescendantStatesToEnter(child, historyValue, statesForDefaultEntry, statesToEnter);
+            }
+          }
+        }
+      }
+    }
+  }
+  function addAncestorStatesToEnter(statesToEnter, historyValue, statesForDefaultEntry, ancestors, reentrancyDomain) {
+    for (const anc of ancestors) {
+      if (!reentrancyDomain || isDescendant(anc, reentrancyDomain)) {
+        statesToEnter.add(anc);
+      }
+      if (anc.type === "parallel") {
+        for (const child of getChildren(anc).filter((sn) => !isHistoryNode(sn))) {
+          if (![...statesToEnter].some((s) => isDescendant(s, child))) {
+            statesToEnter.add(child);
+            addDescendantStatesToEnter(child, historyValue, statesForDefaultEntry, statesToEnter);
+          }
+        }
+      }
+    }
+  }
+  function addProperAncestorStatesToEnter(stateNode, toStateNode, statesToEnter, historyValue, statesForDefaultEntry) {
+    addAncestorStatesToEnter(statesToEnter, historyValue, statesForDefaultEntry, getProperAncestors(stateNode, toStateNode));
+  }
+  function exitStates(currentSnapshot, event, actorScope, transitions, mutStateNodeSet, historyValue, internalQueue, _actionExecutor) {
+    let nextSnapshot = currentSnapshot;
+    const statesToExit = computeExitSet(transitions, mutStateNodeSet, historyValue);
+    statesToExit.sort((a, b) => b.order - a.order);
+    let changedHistory;
+    for (const exitStateNode of statesToExit) {
+      for (const historyNode of getHistoryNodes(exitStateNode)) {
+        let predicate;
+        if (historyNode.history === "deep") {
+          predicate = (sn) => isAtomicStateNode(sn) && isDescendant(sn, exitStateNode);
+        } else {
+          predicate = (sn) => {
+            return sn.parent === exitStateNode;
+          };
+        }
+        changedHistory ??= {
+          ...historyValue
+        };
+        changedHistory[historyNode.id] = Array.from(mutStateNodeSet).filter(predicate);
+      }
+    }
+    for (const s of statesToExit) {
+      nextSnapshot = resolveActionsAndContext(nextSnapshot, event, actorScope, [...s.exit, ...s.invoke.map((def) => stopChild(def.id))], internalQueue, void 0);
+      mutStateNodeSet.delete(s);
+    }
+    return [nextSnapshot, changedHistory || historyValue];
+  }
+  function getAction(machine, actionType) {
+    return machine.implementations.actions[actionType];
+  }
+  function resolveAndExecuteActionsWithContext(currentSnapshot, event, actorScope, actions, extra, retries) {
+    const {
+      machine
+    } = currentSnapshot;
+    let intermediateSnapshot = currentSnapshot;
+    for (const action of actions) {
+      const isInline = typeof action === "function";
+      const resolvedAction = isInline ? action : (
+        // the existing type of `.actions` assumes non-nullable `TExpressionAction`
+        // it's fine to cast this here to get a common type and lack of errors in the rest of the code
+        // our logic below makes sure that we call those 2 "variants" correctly
+        getAction(machine, typeof action === "string" ? action : action.type)
+      );
+      const actionArgs = {
+        context: intermediateSnapshot.context,
+        event,
+        self: actorScope.self,
+        system: actorScope.system
+      };
+      const actionParams = isInline || typeof action === "string" ? void 0 : "params" in action ? typeof action.params === "function" ? action.params({
+        context: intermediateSnapshot.context,
+        event
+      }) : action.params : void 0;
+      if (!resolvedAction || !("resolve" in resolvedAction)) {
+        actorScope.actionExecutor({
+          type: typeof action === "string" ? action : typeof action === "object" ? action.type : action.name || "(anonymous)",
+          info: actionArgs,
+          params: actionParams,
+          exec: resolvedAction
+        });
+        continue;
+      }
+      const builtinAction = resolvedAction;
+      const [nextState, params, actions2] = builtinAction.resolve(
+        actorScope,
+        intermediateSnapshot,
+        actionArgs,
+        actionParams,
+        resolvedAction,
+        // this holds all params
+        extra
+      );
+      intermediateSnapshot = nextState;
+      if ("retryResolve" in builtinAction) {
+        retries?.push([builtinAction, params]);
+      }
+      if ("execute" in builtinAction) {
+        actorScope.actionExecutor({
+          type: builtinAction.type,
+          info: actionArgs,
+          params,
+          exec: builtinAction.execute.bind(null, actorScope, params)
+        });
+      }
+      if (actions2) {
+        intermediateSnapshot = resolveAndExecuteActionsWithContext(intermediateSnapshot, event, actorScope, actions2, extra, retries);
+      }
+    }
+    return intermediateSnapshot;
+  }
+  function resolveActionsAndContext(currentSnapshot, event, actorScope, actions, internalQueue, deferredActorIds) {
+    const retries = deferredActorIds ? [] : void 0;
+    const nextState = resolveAndExecuteActionsWithContext(currentSnapshot, event, actorScope, actions, {
+      internalQueue,
+      deferredActorIds
+    }, retries);
+    retries?.forEach(([builtinAction, params]) => {
+      builtinAction.retryResolve(actorScope, nextState, params);
+    });
+    return nextState;
+  }
+  function macrostep(snapshot, event, actorScope, internalQueue) {
+    let nextSnapshot = snapshot;
+    const microsteps = [];
+    function addMicrostep(step, event2, transitions) {
+      actorScope.system._sendInspectionEvent({
+        type: "@xstate.microstep",
+        actorRef: actorScope.self,
+        event: event2,
+        snapshot: step[0],
+        _transitions: transitions
+      });
+      microsteps.push(step);
+    }
+    if (event.type === XSTATE_STOP) {
+      nextSnapshot = cloneMachineSnapshot(stopChildren(nextSnapshot, event, actorScope), {
+        status: "stopped"
+      });
+      addMicrostep([nextSnapshot, []], event, []);
+      return {
+        snapshot: nextSnapshot,
+        microsteps
+      };
+    }
+    let nextEvent = event;
+    if (nextEvent.type !== XSTATE_INIT) {
+      const currentEvent = nextEvent;
+      const isErr = isErrorActorEvent(currentEvent);
+      const transitions = selectTransitions(currentEvent, nextSnapshot);
+      if (isErr && !transitions.length) {
+        nextSnapshot = cloneMachineSnapshot(snapshot, {
+          status: "error",
+          error: currentEvent.error
+        });
+        addMicrostep([nextSnapshot, []], currentEvent, []);
+        return {
+          snapshot: nextSnapshot,
+          microsteps
+        };
+      }
+      const step = microstep(
+        transitions,
+        snapshot,
+        actorScope,
+        nextEvent,
+        false,
+        // isInitial
+        internalQueue
+      );
+      nextSnapshot = step[0];
+      addMicrostep(step, currentEvent, transitions);
+    }
+    let shouldSelectEventlessTransitions = true;
+    while (nextSnapshot.status === "active") {
+      let enabledTransitions = shouldSelectEventlessTransitions ? selectEventlessTransitions(nextSnapshot, nextEvent) : [];
+      const previousState = enabledTransitions.length ? nextSnapshot : void 0;
+      if (!enabledTransitions.length) {
+        if (!internalQueue.length) {
+          break;
+        }
+        nextEvent = internalQueue.shift();
+        enabledTransitions = selectTransitions(nextEvent, nextSnapshot);
+      }
+      const step = microstep(enabledTransitions, nextSnapshot, actorScope, nextEvent, false, internalQueue);
+      nextSnapshot = step[0];
+      shouldSelectEventlessTransitions = nextSnapshot !== previousState;
+      addMicrostep(step, nextEvent, enabledTransitions);
+    }
+    if (nextSnapshot.status !== "active") {
+      stopChildren(nextSnapshot, nextEvent, actorScope);
+    }
+    return {
+      snapshot: nextSnapshot,
+      microsteps
+    };
+  }
+  function stopChildren(nextState, event, actorScope) {
+    return resolveActionsAndContext(nextState, event, actorScope, Object.values(nextState.children).map((child) => stopChild(child)), [], void 0);
+  }
+  function selectTransitions(event, nextState) {
+    return nextState.machine.getTransitionData(nextState, event);
+  }
+  function selectEventlessTransitions(nextState, event) {
+    const enabledTransitionSet = /* @__PURE__ */ new Set();
+    const atomicStates = nextState._nodes.filter(isAtomicStateNode);
+    for (const stateNode of atomicStates) {
+      loop: for (const s of [stateNode].concat(getProperAncestors(stateNode, void 0))) {
+        if (!s.always) {
+          continue;
+        }
+        for (const transition of s.always) {
+          if (transition.guard === void 0 || evaluateGuard(transition.guard, nextState.context, event, nextState)) {
+            enabledTransitionSet.add(transition);
+            break loop;
+          }
+        }
+      }
+    }
+    return removeConflictingTransitions(Array.from(enabledTransitionSet), new Set(nextState._nodes), nextState.historyValue);
+  }
+  function resolveStateValue(rootNode, stateValue) {
+    const allStateNodes = getAllStateNodes(getStateNodes(rootNode, stateValue));
+    return getStateValue(rootNode, [...allStateNodes]);
+  }
+  function isMachineSnapshot(value) {
+    return !!value && typeof value === "object" && "machine" in value && "value" in value;
+  }
+  var machineSnapshotMatches = function matches(testValue) {
+    return matchesState(testValue, this.value);
+  };
+  var machineSnapshotHasTag = function hasTag(tag) {
+    return this.tags.has(tag);
+  };
+  var machineSnapshotCan = function can(event) {
+    const transitionData = this.machine.getTransitionData(this, event);
+    return !!transitionData?.length && // Check that at least one transition is not forbidden
+    transitionData.some((t) => t.target !== void 0 || t.actions.length);
+  };
+  var machineSnapshotToJSON = function toJSON() {
+    const {
+      _nodes: nodes,
+      tags,
+      machine,
+      getMeta: getMeta2,
+      toJSON: toJSON2,
+      can: can2,
+      hasTag: hasTag2,
+      matches: matches2,
+      ...jsonValues
+    } = this;
+    return {
+      ...jsonValues,
+      tags: Array.from(tags)
+    };
+  };
+  var machineSnapshotGetMeta = function getMeta() {
+    return this._nodes.reduce((acc, stateNode) => {
+      if (stateNode.meta !== void 0) {
+        acc[stateNode.id] = stateNode.meta;
+      }
+      return acc;
+    }, {});
+  };
+  function createMachineSnapshot(config, machine) {
+    return {
+      status: config.status,
+      output: config.output,
+      error: config.error,
+      machine,
+      context: config.context,
+      _nodes: config._nodes,
+      value: getStateValue(machine.root, config._nodes),
+      tags: new Set(config._nodes.flatMap((sn) => sn.tags)),
+      children: config.children,
+      historyValue: config.historyValue || {},
+      matches: machineSnapshotMatches,
+      hasTag: machineSnapshotHasTag,
+      can: machineSnapshotCan,
+      getMeta: machineSnapshotGetMeta,
+      toJSON: machineSnapshotToJSON
+    };
+  }
+  function cloneMachineSnapshot(snapshot, config = {}) {
+    return createMachineSnapshot({
+      ...snapshot,
+      ...config
+    }, snapshot.machine);
+  }
+  function serializeHistoryValue(historyValue) {
+    if (typeof historyValue !== "object" || historyValue === null) {
+      return {};
+    }
+    const result = {};
+    for (const key in historyValue) {
+      const value = historyValue[key];
+      if (Array.isArray(value)) {
+        result[key] = value.map((item) => ({
+          id: item.id
+        }));
+      }
+    }
+    return result;
+  }
+  function getPersistedSnapshot(snapshot, options) {
+    const {
+      _nodes: nodes,
+      tags,
+      machine,
+      children,
+      context,
+      can: can2,
+      hasTag: hasTag2,
+      matches: matches2,
+      getMeta: getMeta2,
+      toJSON: toJSON2,
+      ...jsonValues
+    } = snapshot;
+    const childrenJson = {};
+    for (const id in children) {
+      const child = children[id];
+      childrenJson[id] = {
+        snapshot: child.getPersistedSnapshot(options),
+        src: child.src,
+        systemId: child.systemId,
+        syncSnapshot: child._syncSnapshot
+      };
+    }
+    const persisted = {
+      ...jsonValues,
+      context: persistContext(context),
+      children: childrenJson,
+      historyValue: serializeHistoryValue(jsonValues.historyValue)
+    };
+    return persisted;
+  }
+  function persistContext(contextPart) {
+    let copy;
+    for (const key in contextPart) {
+      const value = contextPart[key];
+      if (value && typeof value === "object") {
+        if ("sessionId" in value && "send" in value && "ref" in value) {
+          copy ??= Array.isArray(contextPart) ? contextPart.slice() : {
+            ...contextPart
+          };
+          copy[key] = {
+            xstate$$type: $$ACTOR_TYPE,
+            id: value.id
+          };
+        } else {
+          const result = persistContext(value);
+          if (result !== value) {
+            copy ??= Array.isArray(contextPart) ? contextPart.slice() : {
+              ...contextPart
+            };
+            copy[key] = result;
+          }
+        }
+      }
+    }
+    return copy ?? contextPart;
+  }
+  function resolveRaise(_, snapshot, args, actionParams, {
+    event: eventOrExpr,
+    id,
+    delay
+  }, {
+    internalQueue
+  }) {
+    const delaysMap = snapshot.machine.implementations.delays;
+    if (typeof eventOrExpr === "string") {
+      throw new Error(
+        // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+        `Only event objects may be used with raise; use raise({ type: "${eventOrExpr}" }) instead`
+      );
+    }
+    const resolvedEvent = typeof eventOrExpr === "function" ? eventOrExpr(args, actionParams) : eventOrExpr;
+    let resolvedDelay;
+    if (typeof delay === "string") {
+      const configDelay = delaysMap && delaysMap[delay];
+      resolvedDelay = typeof configDelay === "function" ? configDelay(args, actionParams) : configDelay;
+    } else {
+      resolvedDelay = typeof delay === "function" ? delay(args, actionParams) : delay;
+    }
+    if (typeof resolvedDelay !== "number") {
+      internalQueue.push(resolvedEvent);
+    }
+    return [snapshot, {
+      event: resolvedEvent,
+      id,
+      delay: resolvedDelay
+    }, void 0];
+  }
+  function executeRaise(actorScope, params) {
+    const {
+      event,
+      delay,
+      id
+    } = params;
+    if (typeof delay === "number") {
+      actorScope.defer(() => {
+        const self2 = actorScope.self;
+        actorScope.system.scheduler.schedule(self2, self2, event, delay, id);
+      });
+      return;
+    }
+  }
+  function raise(eventOrExpr, options) {
+    function raise2(_args, _params) {
+    }
+    raise2.type = "xstate.raise";
+    raise2.event = eventOrExpr;
+    raise2.id = options?.id;
+    raise2.delay = options?.delay;
+    raise2.resolve = resolveRaise;
+    raise2.execute = executeRaise;
+    return raise2;
+  }
 
-const sceneMap = {
-  keyword: [
-    { id: "keyword-empty", label: "初始空白态" },
-    { id: "keyword-input", label: "输入态" },
-    { id: "keyword-tag", label: "完成态" },
-    { id: "keyword-edit", label: "编辑已有关键词" },
-    { id: "keyword-multi", label: "多关键词" },
-    { id: "keyword-anchor-seed", label: "关键词+URL种子" },
-    { id: "keyword-menu", label: "匹配目标" },
-  ],
-  url: [
-    { id: "url-resolving", label: "识别中" },
-    { id: "url-exact", label: "锚点搜索就绪" },
-    { id: "url-mismatch", label: "平台不匹配" },
-    { id: "url-unsupported", label: "类型不支持" },
-    { id: "url-invalid", label: "无法识别" },
-  ],
-  natural: [
-    { id: "natural-init", label: "刚展开" },
-    { id: "natural-retrieving", label: "首轮搜索中" },
-    { id: "natural-results", label: "首轮结果已返回" },
-    { id: "natural-clarifying", label: "追问态" },
-    { id: "natural-followup-draft", label: "主动补充输入中" },
-    { id: "natural-followup-refining", label: "补充后刷新中" },
-  ],
-  mixed: [
-    { id: "mixed-parse", label: "解析摘要态" },
-    { id: "mixed-anchor", label: "锚点优先态" },
-    { id: "mixed-soft", label: "软条件待澄清态" },
-    { id: "mixed-clarifying", label: "追问态" },
-    { id: "mixed-followup-draft", label: "主动补充输入中" },
-    { id: "mixed-followup-refining", label: "补充后刷新中" },
-  ],
-  repair: [
-    { id: "repair-invalid", label: "URL 无法识别" },
-    { id: "repair-mismatch", label: "平台不匹配" },
-    { id: "repair-unsupported", label: "类型不支持" },
-    { id: "repair-empty", label: "有条件无结果" },
-    { id: "repair-followup-draft", label: "主动补充输入中" },
-    { id: "repair-followup-refining", label: "修正后刷新中" },
-    { id: "repair-recovered-results", label: "修正后已恢复结果" },
-  ],
-  upgrade: [
-    { id: "upgrade-keyword-trigger", label: "关键词起手-触发前" },
-    { id: "upgrade-keyword-transition", label: "关键词起手-升级中" },
-    { id: "upgrade-keyword-stable", label: "关键词起手-升级稳定" },
-    { id: "upgrade-url-trigger", label: "URL 起手-触发前" },
-    { id: "upgrade-url-transition", label: "URL 起手-升级中" },
-    { id: "upgrade-url-stable", label: "URL 起手-升级稳定" },
-  ],
-};
+  // node_modules/xstate/actors/dist/xstate-actors.esm.js
+  function fromTransition(transition, initialContext) {
+    return {
+      config: transition,
+      transition: (snapshot, event, actorScope) => {
+        return {
+          ...snapshot,
+          context: transition(snapshot.context, event, actorScope)
+        };
+      },
+      getInitialSnapshot: (_, input) => {
+        return {
+          status: "active",
+          output: void 0,
+          error: void 0,
+          context: typeof initialContext === "function" ? initialContext({
+            input
+          }) : initialContext
+        };
+      },
+      getPersistedSnapshot: (snapshot) => snapshot,
+      restoreSnapshot: (snapshot) => snapshot
+    };
+  }
+  var emptyLogic = fromTransition((_) => void 0, void 0);
 
-const shellTargets = {
-  balanced: document.getElementById("balanced-shell"),
-  glass: document.getElementById("glass-shell"),
-  neon: document.getElementById("neon-shell"),
-  querychip: document.getElementById("querychip-shell"),
-  workbench: document.getElementById("workbench-shell"),
-  assistant: document.getElementById("assistant-shell"),
-};
+  // node_modules/xstate/dist/assign-128c3f01.esm.js
+  function createSpawner(actorScope, {
+    machine,
+    context
+  }, event, spawnedChildren) {
+    const spawn = (src, options) => {
+      if (typeof src === "string") {
+        const logic = resolveReferencedActor(machine, src);
+        if (!logic) {
+          throw new Error(`Actor logic '${src}' not implemented in machine '${machine.id}'`);
+        }
+        const actorRef = createActor(logic, {
+          id: options?.id,
+          parent: actorScope.self,
+          syncSnapshot: options?.syncSnapshot,
+          input: typeof options?.input === "function" ? options.input({
+            context,
+            event,
+            self: actorScope.self
+          }) : options?.input,
+          src,
+          systemId: options?.systemId
+        });
+        spawnedChildren[actorRef.id] = actorRef;
+        return actorRef;
+      } else {
+        const actorRef = createActor(src, {
+          id: options?.id,
+          parent: actorScope.self,
+          syncSnapshot: options?.syncSnapshot,
+          input: options?.input,
+          src,
+          systemId: options?.systemId
+        });
+        return actorRef;
+      }
+    };
+    return (src, options) => {
+      const actorRef = spawn(src, options);
+      spawnedChildren[actorRef.id] = actorRef;
+      actorScope.defer(() => {
+        if (actorRef._processingStatus === ProcessingStatus.Stopped) {
+          return;
+        }
+        actorRef.start();
+      });
+      return actorRef;
+    };
+  }
+  function resolveAssign(actorScope, snapshot, actionArgs, actionParams, {
+    assignment
+  }) {
+    if (!snapshot.context) {
+      throw new Error("Cannot assign to undefined `context`. Ensure that `context` is defined in the machine config.");
+    }
+    const spawnedChildren = {};
+    const assignArgs = {
+      context: snapshot.context,
+      event: actionArgs.event,
+      spawn: createSpawner(actorScope, snapshot, actionArgs.event, spawnedChildren),
+      self: actorScope.self,
+      system: actorScope.system
+    };
+    let partialUpdate = {};
+    if (typeof assignment === "function") {
+      partialUpdate = assignment(assignArgs, actionParams);
+    } else {
+      for (const key of Object.keys(assignment)) {
+        const propAssignment = assignment[key];
+        partialUpdate[key] = typeof propAssignment === "function" ? propAssignment(assignArgs, actionParams) : propAssignment;
+      }
+    }
+    const updatedContext = Object.assign({}, snapshot.context, partialUpdate);
+    return [cloneMachineSnapshot(snapshot, {
+      context: updatedContext,
+      children: Object.keys(spawnedChildren).length ? {
+        ...snapshot.children,
+        ...spawnedChildren
+      } : snapshot.children
+    }), void 0, void 0];
+  }
+  function assign(assignment) {
+    function assign2(_args, _params) {
+    }
+    assign2.type = "xstate.assign";
+    assign2.assignment = assignment;
+    assign2.resolve = resolveAssign;
+    return assign2;
+  }
 
-const stateNodeMap = {
-  "keyword-empty": ["empty_input", "compact_classic", "idle"],
-  "keyword-input": ["draft_keyword", "compact_classic", "idle"],
-  "keyword-tag": ["committed_keyword", "compact_classic", "idle"],
-  "keyword-edit": ["draft_keyword", "committed_keyword", "compact_classic", "idle"],
-  "keyword-multi": ["committed_keyword", "compact_classic", "idle"],
-  "keyword-anchor-seed": ["draft_keyword", "committed_keyword", "committed_anchor", "compact_classic", "idle"],
-  "keyword-menu": ["tag_scope_menu_open", "excluded_keyword", "compact_classic", "idle"],
-  "url-resolving": ["compact_resolving"],
-  "url-exact": ["committed_anchor", "return-state"],
-  "url-mismatch": ["expanded_repair"],
-  "url-unsupported": ["expanded_repair"],
-  "url-invalid": ["expanded_repair"],
-  "natural-init": ["expanded_agent"],
-  "natural-retrieving": ["expanded_agent", "retrieving"],
-  "natural-results": ["results_ready", "followup_waiting"],
-  "natural-clarifying": ["expanded_clarifying", "clarifying", "followup_waiting"],
-  "natural-followup-draft": ["expanded_agent", "results_ready", "draft_followup"],
-  "natural-followup-refining": ["expanded_agent", "refining", "followup_waiting"],
-  "mixed-parse": ["expanded_agent"],
-  "mixed-anchor": ["expanded_agent", "committed_anchor", "followup_waiting"],
-  "mixed-soft": ["expanded_agent", "committed_anchor", "followup_waiting"],
-  "mixed-clarifying": ["expanded_agent", "committed_anchor", "clarifying", "followup_waiting"],
-  "mixed-followup-draft": ["expanded_agent", "committed_anchor", "results_ready", "draft_followup"],
-  "mixed-followup-refining": ["expanded_agent", "committed_anchor", "refining", "followup_waiting"],
-  "repair-invalid": ["expanded_repair", "followup_waiting"],
-  "repair-mismatch": ["expanded_repair", "followup_waiting"],
-  "repair-unsupported": ["expanded_repair", "followup_waiting"],
-  "repair-empty": ["empty_repair", "followup_waiting"],
-  "repair-followup-draft": ["expanded_repair", "empty_repair", "draft_followup"],
-  "repair-followup-refining": ["expanded_repair", "refining", "followup_waiting"],
-  "repair-recovered-results": ["expanded_agent", "results_ready", "followup_waiting"],
-  "upgrade-keyword-trigger": ["draft_keyword", "compact_classic", "idle"],
-  "upgrade-keyword-transition": ["expanded_agent", "retrieving", "committed_keyword"],
-  "upgrade-keyword-stable": ["expanded_agent", "results_ready", "committed_keyword", "followup_waiting"],
-  "upgrade-url-trigger": ["compact_classic", "committed_anchor"],
-  "upgrade-url-transition": ["expanded_agent", "retrieving", "committed_anchor"],
-  "upgrade-url-stable": ["expanded_agent", "clarifying", "committed_anchor", "followup_waiting"],
-};
+  // node_modules/xstate/dist/StateMachine-bf2cec8d.esm.js
+  var cache = /* @__PURE__ */ new WeakMap();
+  function memo(object, key, fn) {
+    let memoizedData = cache.get(object);
+    if (!memoizedData) {
+      memoizedData = {
+        [key]: fn()
+      };
+      cache.set(object, memoizedData);
+    } else if (!(key in memoizedData)) {
+      memoizedData[key] = fn();
+    }
+    return memoizedData[key];
+  }
+  var EMPTY_OBJECT = {};
+  var toSerializableAction = (action) => {
+    if (typeof action === "string") {
+      return {
+        type: action
+      };
+    }
+    if (typeof action === "function") {
+      if ("resolve" in action) {
+        return {
+          type: action.type
+        };
+      }
+      return {
+        type: action.name
+      };
+    }
+    return action;
+  };
+  var StateNode = class _StateNode {
+    constructor(config, options) {
+      this.config = config;
+      this.key = void 0;
+      this.id = void 0;
+      this.type = void 0;
+      this.path = void 0;
+      this.states = void 0;
+      this.history = void 0;
+      this.entry = void 0;
+      this.exit = void 0;
+      this.parent = void 0;
+      this.machine = void 0;
+      this.meta = void 0;
+      this.output = void 0;
+      this.order = -1;
+      this.description = void 0;
+      this.tags = [];
+      this.transitions = void 0;
+      this.always = void 0;
+      this.parent = options._parent;
+      this.key = options._key;
+      this.machine = options._machine;
+      this.path = this.parent ? this.parent.path.concat(this.key) : [];
+      this.id = this.config.id || [this.machine.id, ...this.path].join(STATE_DELIMITER);
+      this.type = this.config.type || (this.config.states && Object.keys(this.config.states).length ? "compound" : this.config.history ? "history" : "atomic");
+      this.description = this.config.description;
+      this.order = this.machine.idMap.size;
+      this.machine.idMap.set(this.id, this);
+      this.states = this.config.states ? mapValues(this.config.states, (stateConfig, key) => {
+        const stateNode = new _StateNode(stateConfig, {
+          _parent: this,
+          _key: key,
+          _machine: this.machine
+        });
+        return stateNode;
+      }) : EMPTY_OBJECT;
+      if (this.type === "compound" && !this.config.initial) {
+        throw new Error(`No initial state specified for compound state node "#${this.id}". Try adding { initial: "${Object.keys(this.states)[0]}" } to the state config.`);
+      }
+      this.history = this.config.history === true ? "shallow" : this.config.history || false;
+      this.entry = toArray(this.config.entry).slice();
+      this.exit = toArray(this.config.exit).slice();
+      this.meta = this.config.meta;
+      this.output = this.type === "final" || !this.parent ? this.config.output : void 0;
+      this.tags = toArray(config.tags).slice();
+    }
+    /** @internal */
+    _initialize() {
+      this.transitions = formatTransitions(this);
+      if (this.config.always) {
+        this.always = toTransitionConfigArray(this.config.always).map((t) => formatTransition(this, NULL_EVENT, t));
+      }
+      Object.keys(this.states).forEach((key) => {
+        this.states[key]._initialize();
+      });
+    }
+    /** The well-structured state node definition. */
+    get definition() {
+      return {
+        id: this.id,
+        key: this.key,
+        version: this.machine.version,
+        type: this.type,
+        initial: this.initial ? {
+          target: this.initial.target,
+          source: this,
+          actions: this.initial.actions.map(toSerializableAction),
+          eventType: null,
+          reenter: false,
+          toJSON: () => ({
+            target: this.initial.target.map((t) => `#${t.id}`),
+            source: `#${this.id}`,
+            actions: this.initial.actions.map(toSerializableAction),
+            eventType: null
+          })
+        } : void 0,
+        history: this.history,
+        states: mapValues(this.states, (state) => {
+          return state.definition;
+        }),
+        on: this.on,
+        transitions: [...this.transitions.values()].flat().map((t) => ({
+          ...t,
+          actions: t.actions.map(toSerializableAction)
+        })),
+        entry: this.entry.map(toSerializableAction),
+        exit: this.exit.map(toSerializableAction),
+        meta: this.meta,
+        order: this.order || -1,
+        output: this.output,
+        invoke: this.invoke,
+        description: this.description,
+        tags: this.tags
+      };
+    }
+    /** @internal */
+    toJSON() {
+      return this.definition;
+    }
+    /** The logic invoked as actors by this state node. */
+    get invoke() {
+      return memo(this, "invoke", () => toArray(this.config.invoke).map((invokeConfig, i) => {
+        const {
+          src,
+          systemId
+        } = invokeConfig;
+        const resolvedId = invokeConfig.id ?? createInvokeId(this.id, i);
+        const sourceName = typeof src === "string" ? src : `xstate.invoke.${createInvokeId(this.id, i)}`;
+        return {
+          ...invokeConfig,
+          src: sourceName,
+          id: resolvedId,
+          systemId,
+          toJSON() {
+            const {
+              onDone,
+              onError,
+              ...invokeDefValues
+            } = invokeConfig;
+            return {
+              ...invokeDefValues,
+              type: "xstate.invoke",
+              src: sourceName,
+              id: resolvedId
+            };
+          }
+        };
+      }));
+    }
+    /** The mapping of events to transitions. */
+    get on() {
+      return memo(this, "on", () => {
+        const transitions = this.transitions;
+        return [...transitions].flatMap(([descriptor, t]) => t.map((t2) => [descriptor, t2])).reduce((map, [descriptor, transition]) => {
+          map[descriptor] = map[descriptor] || [];
+          map[descriptor].push(transition);
+          return map;
+        }, {});
+      });
+    }
+    get after() {
+      return memo(this, "delayedTransitions", () => getDelayedTransitions(this));
+    }
+    get initial() {
+      return memo(this, "initial", () => formatInitialTransition(this, this.config.initial));
+    }
+    /** @internal */
+    next(snapshot, event) {
+      const eventType = event.type;
+      const actions = [];
+      let selectedTransition;
+      const candidates = memo(this, `candidates-${eventType}`, () => getCandidates(this, eventType));
+      for (const candidate of candidates) {
+        const {
+          guard
+        } = candidate;
+        const resolvedContext = snapshot.context;
+        let guardPassed = false;
+        try {
+          guardPassed = !guard || evaluateGuard(guard, resolvedContext, event, snapshot);
+        } catch (err) {
+          const guardType = typeof guard === "string" ? guard : typeof guard === "object" ? guard.type : void 0;
+          throw new Error(`Unable to evaluate guard ${guardType ? `'${guardType}' ` : ""}in transition for event '${eventType}' in state node '${this.id}':
+${err.message}`);
+        }
+        if (guardPassed) {
+          actions.push(...candidate.actions);
+          selectedTransition = candidate;
+          break;
+        }
+      }
+      return selectedTransition ? [selectedTransition] : void 0;
+    }
+    /** All the event types accepted by this state node and its descendants. */
+    get events() {
+      return memo(this, "events", () => {
+        const {
+          states
+        } = this;
+        const events = new Set(this.ownEvents);
+        if (states) {
+          for (const stateId of Object.keys(states)) {
+            const state = states[stateId];
+            if (state.states) {
+              for (const event of state.events) {
+                events.add(`${event}`);
+              }
+            }
+          }
+        }
+        return Array.from(events);
+      });
+    }
+    /**
+     * All the events that have transitions directly from this state node.
+     *
+     * Excludes any inert events.
+     */
+    get ownEvents() {
+      const keys = Object.keys(Object.fromEntries(this.transitions));
+      const events = new Set(keys.filter((descriptor) => {
+        return this.transitions.get(descriptor).some((transition) => !(!transition.target && !transition.actions.length && !transition.reenter));
+      }));
+      return Array.from(events);
+    }
+  };
+  var STATE_IDENTIFIER2 = "#";
+  var StateMachine = class _StateMachine {
+    constructor(config, implementations) {
+      this.config = config;
+      this.version = void 0;
+      this.schemas = void 0;
+      this.implementations = void 0;
+      this.__xstatenode = true;
+      this.idMap = /* @__PURE__ */ new Map();
+      this.root = void 0;
+      this.id = void 0;
+      this.states = void 0;
+      this.events = void 0;
+      this.id = config.id || "(machine)";
+      this.implementations = {
+        actors: implementations?.actors ?? {},
+        actions: implementations?.actions ?? {},
+        delays: implementations?.delays ?? {},
+        guards: implementations?.guards ?? {}
+      };
+      this.version = this.config.version;
+      this.schemas = this.config.schemas;
+      this.transition = this.transition.bind(this);
+      this.getInitialSnapshot = this.getInitialSnapshot.bind(this);
+      this.getPersistedSnapshot = this.getPersistedSnapshot.bind(this);
+      this.restoreSnapshot = this.restoreSnapshot.bind(this);
+      this.start = this.start.bind(this);
+      this.root = new StateNode(config, {
+        _key: this.id,
+        _machine: this
+      });
+      this.root._initialize();
+      formatRouteTransitions(this.root);
+      this.states = this.root.states;
+      this.events = this.root.events;
+    }
+    /**
+     * Clones this state machine with the provided implementations.
+     *
+     * @param implementations Options (`actions`, `guards`, `actors`, `delays`) to
+     *   recursively merge with the existing options.
+     * @returns A new `StateMachine` instance with the provided implementations.
+     */
+    provide(implementations) {
+      const {
+        actions,
+        guards,
+        actors,
+        delays
+      } = this.implementations;
+      return new _StateMachine(this.config, {
+        actions: {
+          ...actions,
+          ...implementations.actions
+        },
+        guards: {
+          ...guards,
+          ...implementations.guards
+        },
+        actors: {
+          ...actors,
+          ...implementations.actors
+        },
+        delays: {
+          ...delays,
+          ...implementations.delays
+        }
+      });
+    }
+    resolveState(config) {
+      const resolvedStateValue = resolveStateValue(this.root, config.value);
+      const nodeSet = getAllStateNodes(getStateNodes(this.root, resolvedStateValue));
+      return createMachineSnapshot({
+        _nodes: [...nodeSet],
+        context: config.context || {},
+        children: {},
+        status: isInFinalState(nodeSet, this.root) ? "done" : config.status || "active",
+        output: config.output,
+        error: config.error,
+        historyValue: config.historyValue
+      }, this);
+    }
+    /**
+     * Determines the next snapshot given the current `snapshot` and received
+     * `event`. Calculates a full macrostep from all microsteps.
+     *
+     * @param snapshot The current snapshot
+     * @param event The received event
+     */
+    transition(snapshot, event, actorScope) {
+      return macrostep(snapshot, event, actorScope, []).snapshot;
+    }
+    /**
+     * Determines the next state given the current `state` and `event`. Calculates
+     * a microstep.
+     *
+     * @param state The current state
+     * @param event The received event
+     */
+    microstep(snapshot, event, actorScope) {
+      return macrostep(snapshot, event, actorScope, []).microsteps.map(([s]) => s);
+    }
+    getTransitionData(snapshot, event) {
+      return transitionNode(this.root, snapshot.value, snapshot, event) || [];
+    }
+    /**
+     * The initial state _before_ evaluating any microsteps. This "pre-initial"
+     * state is provided to initial actions executed in the initial state.
+     *
+     * @internal
+     */
+    _getPreInitialState(actorScope, initEvent, internalQueue) {
+      const {
+        context
+      } = this.config;
+      const preInitial = createMachineSnapshot({
+        context: typeof context !== "function" && context ? context : {},
+        _nodes: [this.root],
+        children: {},
+        status: "active"
+      }, this);
+      if (typeof context === "function") {
+        const assignment = ({
+          spawn,
+          event,
+          self: self2
+        }) => context({
+          spawn,
+          input: event.input,
+          self: self2
+        });
+        return resolveActionsAndContext(preInitial, initEvent, actorScope, [assign(assignment)], internalQueue, void 0);
+      }
+      return preInitial;
+    }
+    /**
+     * Returns the initial `State` instance, with reference to `self` as an
+     * `ActorRef`.
+     */
+    getInitialSnapshot(actorScope, input) {
+      const initEvent = createInitEvent(input);
+      const internalQueue = [];
+      const preInitialState = this._getPreInitialState(actorScope, initEvent, internalQueue);
+      const [nextState] = initialMicrostep(this.root, preInitialState, actorScope, initEvent, internalQueue);
+      const {
+        snapshot: macroState
+      } = macrostep(nextState, initEvent, actorScope, internalQueue);
+      return macroState;
+    }
+    start(snapshot) {
+      Object.values(snapshot.children).forEach((child) => {
+        if (child.getSnapshot().status === "active") {
+          child.start();
+        }
+      });
+    }
+    getStateNodeById(stateId) {
+      const fullPath = toStatePath(stateId);
+      const relativePath = fullPath.slice(1);
+      const resolvedStateId = isStateId(fullPath[0]) ? fullPath[0].slice(STATE_IDENTIFIER2.length) : fullPath[0];
+      const stateNode = this.idMap.get(resolvedStateId);
+      if (!stateNode) {
+        throw new Error(`Child state node '#${resolvedStateId}' does not exist on machine '${this.id}'`);
+      }
+      return getStateNodeByPath(stateNode, relativePath);
+    }
+    get definition() {
+      return this.root.definition;
+    }
+    toJSON() {
+      return this.definition;
+    }
+    getPersistedSnapshot(snapshot, options) {
+      return getPersistedSnapshot(snapshot, options);
+    }
+    restoreSnapshot(snapshot, _actorScope) {
+      const children = {};
+      const snapshotChildren = snapshot.children;
+      Object.keys(snapshotChildren).forEach((actorId) => {
+        const actorData = snapshotChildren[actorId];
+        const childState = actorData.snapshot;
+        const src = actorData.src;
+        const logic = typeof src === "string" ? resolveReferencedActor(this, src) : src;
+        if (!logic) {
+          return;
+        }
+        const actorRef = createActor(logic, {
+          id: actorId,
+          parent: _actorScope.self,
+          syncSnapshot: actorData.syncSnapshot,
+          snapshot: childState,
+          src,
+          systemId: actorData.systemId
+        });
+        children[actorId] = actorRef;
+      });
+      function resolveHistoryReferencedState(root, referenced) {
+        if (referenced instanceof StateNode) {
+          return referenced;
+        }
+        try {
+          return root.machine.getStateNodeById(referenced.id);
+        } catch {
+        }
+      }
+      function reviveHistoryValue(root, historyValue) {
+        if (!historyValue || typeof historyValue !== "object") {
+          return {};
+        }
+        const revived = {};
+        for (const key in historyValue) {
+          const arr = historyValue[key];
+          for (const item of arr) {
+            const resolved = resolveHistoryReferencedState(root, item);
+            if (!resolved) {
+              continue;
+            }
+            revived[key] ??= [];
+            revived[key].push(resolved);
+          }
+        }
+        return revived;
+      }
+      const revivedHistoryValue = reviveHistoryValue(this.root, snapshot.historyValue);
+      const restoredSnapshot = createMachineSnapshot({
+        ...snapshot,
+        children,
+        _nodes: Array.from(getAllStateNodes(getStateNodes(this.root, snapshot.value))),
+        historyValue: revivedHistoryValue
+      }, this);
+      const seen = /* @__PURE__ */ new Set();
+      function reviveContext(contextPart, children2) {
+        if (seen.has(contextPart)) {
+          return;
+        }
+        seen.add(contextPart);
+        for (const key in contextPart) {
+          const value = contextPart[key];
+          if (value && typeof value === "object") {
+            if ("xstate$$type" in value && value.xstate$$type === $$ACTOR_TYPE) {
+              contextPart[key] = children2[value.id];
+              continue;
+            }
+            reviveContext(value, children2);
+          }
+        }
+      }
+      reviveContext(restoredSnapshot.context, children);
+      return restoredSnapshot;
+    }
+  };
 
-const stateTriples = {
-  "keyword-empty": { input: "empty_input", container: "compact_classic", session: "idle" },
-  "keyword-input": { input: "draft_keyword", container: "compact_classic", session: "idle" },
-  "keyword-tag": { input: "committed_keyword", container: "compact_classic", session: "idle" },
-  "keyword-edit": { input: "editing_keyword", container: "compact_classic", session: "idle" },
-  "keyword-multi": { input: "draft_keyword + committed_keyword", container: "compact_classic", session: "idle" },
-  "keyword-anchor-seed": { input: "committed_keyword + committed_anchor + committed_keyword + draft_keyword", container: "compact_classic", session: "idle" },
-  "keyword-menu": { input: "tag_scope_menu_open", container: "compact_classic", session: "idle" },
-  "url-resolving": { input: "draft_keyword", container: "compact_resolving", session: "retrieving" },
-  "url-exact": { input: "committed_anchor", container: "compact_classic", session: "results_ready" },
-  "url-mismatch": { input: "followup_waiting", container: "expanded_repair", session: "empty_repair" },
-  "url-unsupported": { input: "followup_waiting", container: "expanded_repair", session: "unsupported" },
-  "url-invalid": { input: "followup_waiting", container: "expanded_repair", session: "empty_repair" },
-  "natural-init": { input: "draft_keyword", container: "expanded_agent", session: "idle" },
-  "natural-retrieving": { input: "draft_keyword", container: "expanded_agent", session: "retrieving" },
-  "natural-results": { input: "followup_waiting", container: "expanded_agent", session: "results_ready" },
-  "natural-clarifying": { input: "followup_waiting", container: "expanded_clarifying", session: "clarifying" },
-  "natural-followup-draft": { input: "draft_followup", container: "expanded_agent", session: "results_ready" },
-  "natural-followup-refining": { input: "followup_waiting", container: "expanded_agent", session: "refining" },
-  "mixed-parse": { input: "draft_keyword + committed_anchor", container: "expanded_agent", session: "retrieving" },
-  "mixed-anchor": { input: "committed_anchor + followup_waiting", container: "expanded_agent", session: "results_ready" },
-  "mixed-soft": { input: "committed_anchor + followup_waiting", container: "expanded_agent", session: "results_ready" },
-  "mixed-clarifying": { input: "committed_anchor + followup_waiting", container: "expanded_clarifying", session: "clarifying" },
-  "mixed-followup-draft": { input: "committed_anchor + draft_followup", container: "expanded_agent", session: "results_ready" },
-  "mixed-followup-refining": { input: "committed_anchor + followup_waiting", container: "expanded_agent", session: "refining" },
-  "repair-invalid": { input: "followup_waiting", container: "expanded_repair", session: "empty_repair" },
-  "repair-mismatch": { input: "followup_waiting", container: "expanded_repair", session: "empty_repair" },
-  "repair-unsupported": { input: "followup_waiting", container: "expanded_repair", session: "unsupported" },
-  "repair-empty": { input: "followup_waiting", container: "expanded_repair", session: "empty_repair" },
-  "repair-followup-draft": { input: "draft_followup", container: "expanded_repair", session: "empty_repair" },
-  "repair-followup-refining": { input: "followup_waiting", container: "expanded_repair", session: "refining" },
-  "repair-recovered-results": { input: "followup_waiting", container: "expanded_agent", session: "results_ready" },
-  "upgrade-keyword-trigger": { input: "draft_keyword + committed_keyword", container: "compact_classic", session: "idle" },
-  "upgrade-keyword-transition": { input: "draft_keyword + committed_keyword", container: "expanded_agent", session: "retrieving" },
-  "upgrade-keyword-stable": { input: "committed_keyword + followup_waiting", container: "expanded_agent", session: "results_ready" },
-  "upgrade-url-trigger": { input: "committed_anchor + draft_keyword", container: "compact_classic", session: "results_ready" },
-  "upgrade-url-transition": { input: "committed_anchor + draft_keyword", container: "expanded_agent", session: "retrieving" },
-  "upgrade-url-stable": { input: "committed_anchor + followup_waiting", container: "expanded_clarifying", session: "clarifying" },
-};
+  // node_modules/xstate/dist/xstate.esm.js
+  function createMachine(config, implementations) {
+    return new StateMachine(config, implementations);
+  }
 
-const stateActions = {
-  "keyword-empty": [
-    { label: "开始输入关键词", target: "keyword-input" },
-    { label: "直接粘贴 URL", target: "url-resolving" },
-    { label: "直接描述需求，进入自然语言场景", target: "natural-init" },
-  ],
-  "keyword-input": [
-    { label: "按回车固化为关键词 tag", target: "keyword-tag" },
-    { label: "清空输入，回到初始空白态", target: "keyword-empty" },
-    { label: "继续补自然语言，升级为 Agent 态", target: "upgrade-keyword-trigger" },
-  ],
-  "keyword-tag": [
-    { label: "编辑当前关键词", target: "keyword-edit" },
-    { label: "删除最后一个关键词", target: "keyword-empty" },
-    { label: "继续输入第二个关键词", target: "keyword-multi" },
-    { label: "打开匹配目标菜单", target: "keyword-menu" },
-    { label: "追加自然语言并升级", target: "upgrade-keyword-trigger" },
-  ],
-  "keyword-edit": [
-    { label: "提交编辑结果", target: "keyword-tag" },
-    { label: "取消编辑，恢复原关键词", target: "keyword-tag" },
-    { label: "清空并删除该关键词", target: "keyword-empty" },
-  ],
-  "keyword-multi": [
-    { label: "清空当前输入，回到单关键词态", target: "keyword-tag" },
-    { label: "固化当前第二个关键词", target: "keyword-menu" },
-    { label: "插入一个 URL 锚点并继续输入", target: "keyword-anchor-seed" },
-    { label: "补充自然语言并升级", target: "upgrade-keyword-trigger" },
-  ],
-  "keyword-anchor-seed": [
-    { label: "继续输入下一个关键词", target: "keyword-anchor-seed" },
-    { label: "删除 URL 锚点，回到多关键词态", target: "keyword-multi" },
-    { label: "补充自然语言并升级", target: "upgrade-url-trigger" },
-  ],
-  "keyword-menu": [
-    { label: "关闭菜单", target: "keyword-tag" },
-    { label: "切换匹配目标", target: "keyword-tag" },
-    { label: "转为排除关键词", target: "keyword-menu" },
-    { label: "升级为 Agent 态", target: "upgrade-keyword-trigger" },
-  ],
-  "url-resolving": [
-    { label: "识别成功", target: "url-exact" },
-    { label: "平台不匹配", target: "url-mismatch" },
-    { label: "类型不支持", target: "url-unsupported" },
-    { label: "无法识别", target: "url-invalid" },
-  ],
-  "url-exact": [
-    { label: "继续浏览相似频道结果", target: "url-exact" },
-    { label: "只查看锚点频道", target: "url-exact" },
-    { label: "删除频道锚点，回到初始空白态", target: "keyword-empty" },
-    { label: "补充自然语言，升级为 Agent 态", target: "upgrade-url-trigger" },
-  ],
-  "url-mismatch": [
-    { label: "删除链接，回到关键词态", target: "keyword-input" },
-    { label: "重新贴可用 URL", target: "url-resolving" },
-  ],
-  "url-unsupported": [
-    { label: "改为关键词", target: "keyword-input" },
-    { label: "改为自然语言", target: "natural-init" },
-  ],
-  "url-invalid": [
-    { label: "重新粘贴链接", target: "url-resolving" },
-    { label: "改为频道名", target: "keyword-input" },
-  ],
-  "natural-init": [
-    { label: "开始首轮搜索", target: "natural-retrieving" },
-  ],
-  "natural-retrieving": [
-    { label: "首轮结果返回", target: "natural-results" },
-    { label: "仍无结果，进入修正态", target: "repair-empty" },
-  ],
-  "natural-results": [
-    { label: "提出一个高价值追问", target: "natural-clarifying" },
-    { label: "继续稳定浏览", target: "natural-results" },
-    { label: "用自然语言主动补充", target: "natural-followup-draft" },
-  ],
-  "natural-clarifying": [
-    { label: "回答追问并刷新", target: "natural-results" },
-    { label: "回答后仍无结果", target: "repair-empty" },
-    { label: "跳过点选，直接补一句", target: "natural-followup-draft" },
-  ],
-  "natural-followup-draft": [
-    { label: "提交补充并刷新", target: "natural-followup-refining" },
-    { label: "放弃补充，回到稳定结果", target: "natural-results" },
-  ],
-  "natural-followup-refining": [
-    { label: "刷新后结果稳定", target: "natural-results" },
-    { label: "刷新后需要一个追问", target: "natural-clarifying" },
-    { label: "刷新后仍无结果", target: "repair-empty" },
-  ],
-  "mixed-parse": [
-    { label: "按锚点优先解释", target: "mixed-anchor" },
-    { label: "先降级软条件", target: "mixed-soft" },
-  ],
-  "mixed-anchor": [
-    { label: "继续按锚点优先返回结果", target: "mixed-anchor" },
-    { label: "补一个澄清问题", target: "mixed-clarifying" },
-  ],
-  "mixed-soft": [
-    { label: "保留软条件为参考偏好", target: "mixed-soft" },
-    { label: "要求进一步澄清", target: "mixed-clarifying" },
-    { label: "用自然语言主动补充", target: "mixed-followup-draft" },
-  ],
-  "mixed-clarifying": [
-    { label: "回答追问并继续 refine", target: "mixed-anchor" },
-    { label: "回答后进入修正态", target: "repair-empty" },
-    { label: "跳过点选，直接补一句", target: "mixed-followup-draft" },
-  ],
-  "mixed-followup-draft": [
-    { label: "提交补充并刷新", target: "mixed-followup-refining" },
-    { label: "放弃补充，回到软条件待澄清态", target: "mixed-soft" },
-  ],
-  "mixed-followup-refining": [
-    { label: "刷新后回到锚点优先结果", target: "mixed-anchor" },
-    { label: "刷新后仍需澄清", target: "mixed-clarifying" },
-    { label: "刷新后仍无结果", target: "repair-empty" },
-  ],
-  "repair-invalid": [
-    { label: "重新粘贴链接", target: "url-resolving" },
-    { label: "改为关键词搜索", target: "keyword-input" },
-    { label: "直接描述修正要求", target: "repair-followup-draft" },
-  ],
-  "repair-mismatch": [
-    { label: "删掉链接继续搜当前平台", target: "keyword-input" },
-    { label: "换平台后重新开始", target: "url-resolving" },
-    { label: "直接补一句修正要求", target: "repair-followup-draft" },
-  ],
-  "repair-unsupported": [
-    { label: "改为关键词", target: "keyword-input" },
-    { label: "改为自然语言", target: "natural-init" },
-    { label: "直接补一句修正要求", target: "repair-followup-draft" },
-  ],
-  "repair-empty": [
-    { label: "放宽条件后重搜", target: "natural-retrieving" },
-    { label: "退回经典关键词态", target: "keyword-tag" },
-    { label: "直接补一句放宽要求", target: "repair-followup-draft" },
-  ],
-  "repair-followup-draft": [
-    { label: "提交修正要求并刷新", target: "repair-followup-refining" },
-    { label: "改为关键词搜索", target: "keyword-input" },
-    { label: "改为自然语言搜索", target: "natural-init" },
-  ],
-  "repair-followup-refining": [
-    { label: "修正成功并恢复结果", target: "repair-recovered-results" },
-    { label: "修正后仍无结果", target: "repair-empty" },
-    { label: "修正后仍不支持", target: "repair-unsupported" },
-  ],
-  "repair-recovered-results": [
-    { label: "继续浏览恢复后的结果", target: "repair-recovered-results" },
-    { label: "继续补一句 refine", target: "repair-followup-draft" },
-    { label: "回到一般稳定结果态", target: "natural-results" },
-  ],
-  "upgrade-keyword-trigger": [
-    { label: "系统开始解释新增自然语言", target: "upgrade-keyword-transition" },
-  ],
-  "upgrade-keyword-transition": [
-    { label: "升级完成，进入稳定 Agent 态", target: "upgrade-keyword-stable" },
-  ],
-  "upgrade-keyword-stable": [
-    { label: "继续 refine", target: "natural-clarifying" },
-    { label: "保持当前稳定结果", target: "natural-results" },
-  ],
-  "upgrade-url-trigger": [
-    { label: "开始解释 URL 与自然语言关系", target: "upgrade-url-transition" },
-  ],
-  "upgrade-url-transition": [
-    { label: "升级完成，等待锚点确认", target: "upgrade-url-stable" },
-  ],
-  "upgrade-url-stable": [
-    { label: "继续看这个频道", target: "url-exact" },
-    { label: "转为找类似频道", target: "mixed-clarifying" },
-  ],
-};
+  // src/machines/inputMachine.js
+  var inputMachineConfig = {
+    initial: "empty_input",
+    states: {
+      empty_input: {},
+      draft_keyword: {},
+      editing_keyword: {},
+      committed_keyword: {},
+      committed_anchor: {},
+      followup_waiting: {},
+      draft_followup: {},
+      tag_scope_menu_open: {},
+      excluded_keyword: {}
+    }
+  };
+  var inputMachine = createMachine({
+    id: "input",
+    ...inputMachineConfig
+  });
 
-function renderShell(themeName, target) {
-  const data = scenarios[currentScenario];
-  const isExpanded = data.mode === "expanded";
-  const isResolving = data.mode === "resolving";
-  const keywordFlow = data.keywordFlow;
+  // src/machines/containerMachine.js
+  var containerMachineConfig = {
+    initial: "compact_classic",
+    states: {
+      compact_classic: {},
+      compact_resolving: {},
+      expanded_agent: {},
+      expanded_clarifying: {},
+      expanded_repair: {}
+    }
+  };
+  var containerMachine = createMachine({
+    id: "container",
+    ...containerMachineConfig
+  });
 
-  target.innerHTML = `
+  // src/machines/sessionMachine.js
+  var sessionMachineConfig = {
+    initial: "idle",
+    states: {
+      idle: {},
+      retrieving: {},
+      results_ready: {},
+      clarifying: {},
+      refining: {},
+      empty_repair: {},
+      unsupported: {}
+    }
+  };
+  var sessionMachine = createMachine({
+    id: "session",
+    ...sessionMachineConfig
+  });
+
+  // src/machines/searchboxOrchestrator.js
+  function buildFixtureTarget(triple) {
+    return [
+      `.input.${triple.input}`,
+      `.container.${triple.container}`,
+      `.session.${triple.session}`
+    ];
+  }
+  function buildFixtureLoaders(fixtures2) {
+    return Object.entries(fixtures2).map(([fixtureId, fixture]) => ({
+      guard: ({ event }) => event.fixtureId === fixtureId,
+      target: buildFixtureTarget(fixture.machineTriplet),
+      actions: assign({
+        currentFixtureId: fixtureId,
+        currentScene: fixture.scene
+      })
+    }));
+  }
+  function buildActionTransitions(fixtures2) {
+    const transitions = {};
+    Object.entries(fixtures2).forEach(([fixtureId, fixture]) => {
+      (fixture.actions || []).forEach((action) => {
+        const eventType = action.event?.type;
+        if (!eventType) return;
+        if (!transitions[eventType]) {
+          transitions[eventType] = [];
+        }
+        transitions[eventType].push({
+          guard: ({ context, event }) => context.currentFixtureId === fixtureId && event.targetFixtureId === action.targetFixtureId,
+          target: buildFixtureTarget(fixtures2[action.targetFixtureId].machineTriplet),
+          actions: assign({
+            currentFixtureId: action.targetFixtureId,
+            currentScene: fixtures2[action.targetFixtureId].scene
+          })
+        });
+      });
+    });
+    return transitions;
+  }
+  function createSearchboxOrchestratorMachine({ fixtures: fixtures2, initialFixtureId, initialVariant }) {
+    const initialFixture = fixtures2[initialFixtureId];
+    return createMachine({
+      id: "searchboxOrchestrator",
+      type: "parallel",
+      context: {
+        currentFixtureId: initialFixtureId,
+        currentScene: initialFixture.scene,
+        currentVariant: initialVariant
+      },
+      states: {
+        input: {
+          ...inputMachineConfig
+        },
+        container: {
+          ...containerMachineConfig
+        },
+        session: {
+          ...sessionMachineConfig
+        }
+      },
+      on: {
+        LOAD_FIXTURE: buildFixtureLoaders(fixtures2),
+        SELECT_VARIANT: {
+          actions: assign({
+            currentVariant: ({ event }) => event.variant
+          })
+        },
+        ...buildActionTransitions(fixtures2)
+      }
+    });
+  }
+
+  // src/selectors.js
+  function getFixture(snapshot, fixtures2) {
+    return fixtures2[snapshot.context.currentFixtureId];
+  }
+  function getTriplet(snapshot) {
+    return {
+      input: String(snapshot.value.input),
+      container: String(snapshot.value.container),
+      session: String(snapshot.value.session)
+    };
+  }
+  function getVariant(snapshot) {
+    return snapshot.context.currentVariant;
+  }
+  function getScene(snapshot) {
+    return snapshot.context.currentScene;
+  }
+  function getCurrentFixtureId(snapshot) {
+    return snapshot.context.currentFixtureId;
+  }
+
+  // src/main.js
+  var scenarios = {
+    "keyword-empty": {
+      mode: "classic",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: null,
+      status: null,
+      session: null,
+      question: null,
+      conditions: null,
+      keywordFlow: {
+        draft: "",
+        tags: [],
+        openMenu: false
+      }
+    },
+    "keyword-input": {
+      mode: "classic",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: null,
+      status: null,
+      session: null,
+      question: null,
+      conditions: null,
+      keywordFlow: {
+        draft: "swim vest",
+        tags: [],
+        openMenu: false
+      }
+    },
+    "keyword-tag": {
+      mode: "classic",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: null,
+      status: null,
+      session: null,
+      question: null,
+      conditions: null,
+      keywordFlow: {
+        draft: "",
+        tags: [{ text: "swim vest", scope: "\u6807\u7B7E" }],
+        openMenu: false
+      }
+    },
+    "keyword-edit": {
+      mode: "classic",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: null,
+      status: null,
+      session: null,
+      question: null,
+      conditions: null,
+      keywordFlow: {
+        draft: "swim vest",
+        tags: [],
+        openMenu: false
+      }
+    },
+    "keyword-multi": {
+      mode: "classic",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: null,
+      status: null,
+      session: null,
+      question: null,
+      conditions: null,
+      keywordFlow: {
+        draft: "water sports",
+        tags: [{ text: "swim vest", scope: "\u6807\u7B7E" }],
+        openMenu: false
+      }
+    },
+    "keyword-anchor-seed": {
+      mode: "classic",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: null,
+      status: null,
+      session: null,
+      question: null,
+      conditions: null,
+      keywordFlow: {
+        draft: "outdoor gear",
+        tags: [
+          { text: "swim vest", scope: "\u6807\u7B7E" },
+          { text: "@HollylandTech", scope: "\u9891\u9053" },
+          { text: "water sports", scope: "\u6807\u7B7E" }
+        ],
+        openMenu: false
+      }
+    },
+    "keyword-menu": {
+      mode: "classic",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: null,
+      status: null,
+      session: null,
+      question: null,
+      conditions: null,
+      keywordFlow: {
+        draft: "",
+        tags: [
+          { text: "swim vest", scope: "\u6807\u7B7E" },
+          { text: "water sports", scope: "\u6807\u7B7E" }
+        ],
+        openMenu: true
+      }
+    },
+    "url-resolving": {
+      mode: "resolving",
+      inputTitle: "https://www.youtube.com/@HollylandTech",
+      inputHint: "",
+      miniAction: "\u8BC6\u522B\u4E2D",
+      primaryAction: null,
+      status: {
+        state: "\u8BC6\u522B\u4E2D",
+        stateClass: "",
+        spinner: true,
+        text: "\u6B63\u5728\u8BC6\u522B\u94FE\u63A5\u7C7B\u578B\u4E0E\u76EE\u6807\u9891\u9053\u3002\u5982\u679C\u80FD\u76F4\u63A5\u9501\u5B9A\u76EE\u6807\uFF0C\u5C06\u8FDB\u5165\u951A\u70B9\u641C\u7D22\u5E76\u53EC\u56DE\u76F8\u4F3C\u9891\u9053\u3002"
+      },
+      session: null,
+      question: null,
+      conditions: null
+    },
+    "url-exact": {
+      mode: "classic",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: null,
+      status: {
+        state: "\u951A\u70B9\u641C\u7D22\u5DF2\u5C31\u7EEA",
+        stateClass: "ok",
+        spinner: false,
+        text: "\u5DF2\u9501\u5B9A\u53C2\u8003\u9891\u9053 @HollylandTech\u3002\u7ED3\u679C\u5217\u8868\u4E2D\u951A\u70B9\u9891\u9053\u7F6E\u9876\uFF0C\u5176\u4F59\u7ED3\u679C\u9ED8\u8BA4\u6309\u76F8\u4F3C\u7A0B\u5EA6\u53EC\u56DE\u3002"
+      },
+      session: {
+        label: "task_summary",
+        summary: "\u5F53\u524D\u6309 @HollylandTech \u4F5C\u4E3A\u951A\u70B9\u9891\u9053\uFF0C\u6B63\u5728\u53EC\u56DE\u76F8\u4F3C\u9891\u9053\u3002",
+        meta: ["\u951A\u70B9\u9891\u9053\u7F6E\u9876", "\u76F8\u4F3C\u9891\u9053\u53EC\u56DE", "\u9ED8\u8BA4\u6309\u76F8\u4F3C\u7A0B\u5EA6\u6392\u5E8F"]
+      },
+      question: null,
+      conditions: {
+        anchor: "\u951A\u70B9\u9891\u9053\uFF1A@HollylandTech",
+        hard: [],
+        soft: ["\u76F8\u4F3C\u9891\u9053\u9ED8\u8BA4\u6309\u76F8\u4F3C\u7A0B\u5EA6\u6392\u5E8F"],
+        hint: "\u951A\u70B9\u9891\u9053\u4E0D\u6DF7\u5165\u666E\u901A\u76F8\u4F3C\u7ED3\u679C\u6392\u5E8F\u6D41\u3002"
+      },
+      keywordFlow: {
+        draft: "",
+        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053" }],
+        openMenu: false
+      }
+    },
+    "url-mismatch": {
+      mode: "expanded",
+      inputTitle: "https://www.instagram.com/creator_xxx",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: null,
+      status: {
+        state: "\u5E73\u53F0\u4E0D\u5339\u914D",
+        stateClass: "warn",
+        spinner: false,
+        text: "\u5F53\u524D\u5728 YouTube \u9891\u9053\u641C\u7D22\u9875\uFF0C\u8BE5\u94FE\u63A5\u5C5E\u4E8E Instagram\u3002\u9700\u8981\u4FEE\u6B63\u540E\u518D\u7EE7\u7EED\u3002"
+      },
+      session: {
+        label: "\u5F53\u524D\u5361\u70B9",
+        summary: "\u94FE\u63A5\u53EF\u8BC6\u522B\uFF0C\u4F46\u76EE\u6807\u5E73\u53F0\u4E0E\u5F53\u524D\u9875\u9762\u4E0D\u4E00\u81F4\u3002",
+        meta: ["\u53EF\u5207\u5E73\u53F0", "\u53EF\u5220\u94FE\u63A5\u6539\u5199", "\u4E0D\u5EFA\u8BAE\u9759\u9ED8\u5FFD\u7565\u94FE\u63A5"]
+      },
+      question: {
+        slot: "repair_options",
+        title: "\u4F60\u60F3\u5207\u6362\u5230 Instagram \u641C\u7D22\uFF0C\u8FD8\u662F\u7EE7\u7EED\u641C YouTube\uFF1F",
+        choices: ["\u5207\u5230 Instagram", "\u5220\u6389\u94FE\u63A5\u7EE7\u7EED\u641C YouTube", "\u91CD\u65B0\u7C98\u8D34 YouTube \u94FE\u63A5"],
+        caption: "\u8FD9\u662F URL \u4FEE\u6B63\u95EE\u9898\uFF0C\u4E0D\u662F\u5F00\u653E\u5F0F\u8FFD\u95EE\u3002"
+      },
+      conditions: {
+        anchor: null,
+        hard: ["\u5F53\u524D\u5E73\u53F0\uFF1AYouTube"],
+        soft: [],
+        hint: "\u5E73\u53F0\u51B2\u7A81\u4F18\u5148\u4E8E\u5176\u5B83\u504F\u597D\u3002"
+      }
+    },
+    "url-unsupported": {
+      mode: "expanded",
+      inputTitle: "https://www.amazon.com/dp/B0XXXXXX",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: null,
+      status: {
+        state: "\u7C7B\u578B\u4E0D\u652F\u6301",
+        stateClass: "warn",
+        spinner: false,
+        text: "\u5F53\u524D\u7248\u672C\u4E0D\u652F\u6301\u76F4\u63A5\u4F7F\u7528\u8BE5\u7C7B\u94FE\u63A5\u8D77\u641C\uFF0C\u53EF\u6539\u4E3A\u9891\u9053\u94FE\u63A5\u3001\u5173\u952E\u8BCD\u6216\u81EA\u7136\u8BED\u8A00\u63CF\u8FF0\u3002"
+      },
+      session: {
+        label: "\u5F53\u524D\u5361\u70B9",
+        summary: "\u94FE\u63A5\u7ED3\u6784\u53EF\u8BC6\u522B\uFF0C\u4F46\u4E0D\u5C5E\u4E8E\u672C\u641C\u7D22\u6846\u5F53\u524D\u652F\u6301\u7684 URL \u7C7B\u578B\u3002",
+        meta: ["\u53EF\u6539\u4E3A\u9891\u9053\u94FE\u63A5", "\u53EF\u6539\u4E3A\u5173\u952E\u8BCD", "\u53EF\u6539\u4E3A\u81EA\u7136\u8BED\u8A00"]
+      },
+      question: {
+        slot: "repair_options",
+        title: "\u4F60\u8981\u7EE7\u7EED\u7528\u4EC0\u4E48\u65B9\u5F0F\u641C\u7D22\uFF1F",
+        choices: ["\u6539\u4E3A\u9891\u9053\u94FE\u63A5", "\u5220\u6389\u94FE\u63A5\u8F93\u5165\u5173\u952E\u8BCD", "\u76F4\u63A5\u63CF\u8FF0\u60F3\u627E\u4EC0\u4E48"],
+        caption: "\u8FD9\u91CC\u53EA\u5904\u7406\u8F93\u5165\u7C7B\u578B\u4FEE\u6B63\u3002"
+      },
+      conditions: null
+    },
+    "url-invalid": {
+      mode: "expanded",
+      inputTitle: "https://www.youtube.com/this-link-is-broken",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: null,
+      status: {
+        state: "\u65E0\u6CD5\u8BC6\u522B",
+        stateClass: "warn",
+        spinner: false,
+        text: "\u672A\u8BC6\u522B\u5230\u53EF\u7528\u9891\u9053\u94FE\u63A5\u3002\u4F60\u53EF\u4EE5\u91CD\u65B0\u7C98\u8D34\u9891\u9053\u4E3B\u9875\u94FE\u63A5\uFF0C\u6216\u76F4\u63A5\u8F93\u5165\u9891\u9053\u540D\u3002"
+      },
+      session: {
+        label: "\u5F53\u524D\u5361\u70B9",
+        summary: "\u8BE5\u94FE\u63A5\u672A\u80FD\u6620\u5C04\u4E3A\u6709\u6548\u9891\u9053\u8D44\u6E90\u3002",
+        meta: ["\u91CD\u65B0\u8D34\u94FE\u63A5", "\u53EA\u8F93\u9891\u9053\u540D", "\u6539\u6210\u81EA\u7136\u8BED\u8A00"]
+      },
+      question: {
+        slot: "repair_options",
+        title: "\u4F60\u66F4\u60F3\u600E\u4E48\u4FEE\u6B63\uFF1F",
+        choices: ["\u91CD\u65B0\u7C98\u8D34\u94FE\u63A5", "\u76F4\u63A5\u8F93\u5165\u9891\u9053\u540D", "\u6539\u4E3A\u81EA\u7136\u8BED\u8A00\u641C\u7D22"],
+        caption: "\u4FEE\u6B63\u6001\u5E94\u8BE5\u77ED\u3001\u660E\u786E\uFF0C\u53EA\u5904\u7406\u5F53\u524D\u5361\u70B9\u3002"
+      },
+      conditions: null
+    },
+    "natural-init": {
+      mode: "expanded",
+      inputTitle: "\u5E2E\u6211\u627E\u7F8E\u56FD\u505A\u6C7D\u914D\u8BC4\u6D4B\u3001\u6700\u8FD1\u6D3B\u8DC3\u3001\u7C89\u4E1D 5k-20k \u7684 YouTube \u7EA2\u4EBA",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: "\u641C\u7D22",
+      status: null,
+      session: {
+        label: "\u641C\u7D22\u6846\u5DF2\u5C55\u5F00",
+        summary: "\u7CFB\u7EDF\u6B63\u5728\u628A\u81EA\u7136\u8BED\u8A00\u62C6\u6210\u53EF\u6267\u884C\u641C\u7D22\u6761\u4EF6\u3002",
+        meta: ["\u521A\u8FDB\u5165 Agent \u6A21\u5F0F", "\u5C1A\u672A\u8FD4\u56DE\u7ED3\u679C"]
+      },
+      question: null,
+      conditions: null
+    },
+    "natural-retrieving": {
+      mode: "expanded",
+      inputTitle: "\u5E2E\u6211\u627E\u7F8E\u56FD\u505A\u6C7D\u914D\u8BC4\u6D4B\u3001\u6700\u8FD1\u6D3B\u8DC3\u3001\u7C89\u4E1D 5k-20k \u7684 YouTube \u7EA2\u4EBA",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: "\u641C\u7D22",
+      status: {
+        state: "\u9996\u8F6E\u641C\u7D22\u4E2D",
+        stateClass: "",
+        spinner: true,
+        text: "\u7CFB\u7EDF\u5DF2\u63D0\u53D6\u4E3B\u8981\u6761\u4EF6\uFF0C\u6B63\u5728\u5F53\u524D\u5E73\u53F0\u7ED3\u679C\u96C6\u4E2D\u6267\u884C\u7B2C\u4E00\u8F6E\u641C\u7D22\u3002"
+      },
+      session: {
+        label: "\u5F53\u524D\u4EFB\u52A1",
+        summary: "\u6B63\u5728\u641C\u7D22\uFF1AYouTube \u9891\u9053 \xB7 \u7F8E\u56FD \xB7 \u6C7D\u914D/\u5DE5\u5177\u6D4B\u8BC4 \xB7 \u7C89\u4E1D 5k-20k \xB7 \u8FD1\u671F\u6D3B\u8DC3",
+        meta: ["\u5DF2\u7406\u89E3 5 \u4E2A\u786C\u6761\u4EF6", "\u6B63\u5728 retrieving"]
+      },
+      question: null,
+      conditions: null
+    },
+    "natural-results": {
+      mode: "expanded",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: "\u641C\u7D22",
+      status: {
+        state: "\u9996\u8F6E\u7ED3\u679C\u5DF2\u8FD4\u56DE",
+        stateClass: "ok",
+        spinner: false,
+        text: "\u5DF2\u5C06\u4F60\u7684\u63CF\u8FF0\u62C6\u6210\u53EF\u6267\u884C\u641C\u7D22\u6761\u4EF6\uFF0C\u5E76\u5728\u5F53\u524D\u5E73\u53F0\u7ED3\u679C\u96C6\u4E2D\u5B8C\u6210\u7B2C\u4E00\u8F6E\u53EC\u56DE\u3002"
+      },
+      session: {
+        label: "\u5F53\u524D\u4EFB\u52A1",
+        summary: "\u6B63\u5728\u641C\u7D22\uFF1AYouTube \u9891\u9053 \xB7 \u7F8E\u56FD \xB7 \u6C7D\u914D/\u5DE5\u5177\u6D4B\u8BC4 \xB7 \u7C89\u4E1D 5k-20k \xB7 \u8FD1\u671F\u6D3B\u8DC3",
+        meta: ["\u7CFB\u7EDF\u5DF2\u7406\u89E3 5 \u4E2A\u786C\u6761\u4EF6", "\u672A\u89E6\u53D1\u8FFD\u95EE", "\u7ED3\u679C\u533A\u5DF2\u5237\u65B0"]
+      },
+      question: null,
+      conditions: {
+        anchor: null,
+        hard: ["\u7F8E\u56FD", "YouTube", "\u6C7D\u914D / \u5DE5\u5177\u6D4B\u8BC4", "5k-20k \u7C89\u4E1D", "\u8FD1 30 \u5929\u6D3B\u8DC3"],
+        soft: [],
+        hint: "\u6240\u6709\u6761\u4EF6\u90FD\u5DF2\u8FDB\u5165\u9996\u8F6E\u641C\u7D22\u3002"
+      },
+      keywordFlow: {
+        draft: "",
+        tags: [],
+        openMenu: false,
+        followup: true,
+        placeholder: "\u7EE7\u7EED\u8865\u5145\u7B5B\u9009\u8981\u6C42"
+      }
+    },
+    "natural-clarifying": {
+      mode: "expanded",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: "\u641C\u7D22",
+      status: {
+        state: "\u9700\u8981\u8865\u5145",
+        stateClass: "",
+        spinner: false,
+        text: "\u9996\u8F6E\u7ED3\u679C\u5DF2\u8FD4\u56DE\uFF0C\u4F46\u201C\u6C7D\u914D\u8BC4\u6D4B\u201D\u4ECD\u53EF\u7EE7\u7EED\u7F29\u5C0F\u8303\u56F4\u3002"
+      },
+      session: {
+        label: "\u5F53\u524D\u4EFB\u52A1",
+        summary: "\u7CFB\u7EDF\u5DF2\u627E\u5230\u4E00\u6279\u5019\u9009\u9891\u9053\uFF0C\u4F46\u8FD8\u6709\u4E00\u4E2A\u9AD8\u5F71\u54CD\u95EE\u9898\u53EF\u8FDB\u4E00\u6B65 refine\u3002",
+        meta: ["\u7ED3\u679C\u5DF2\u8FD4\u56DE", "\u5F53\u524D\u5B58\u5728 1 \u4E2A\u8FFD\u95EE"]
+      },
+      question: {
+        slot: "question",
+        title: "\u4F60\u66F4\u504F\u7EF4\u4FEE\u6559\u7A0B\u3001\u4EA7\u54C1\u5F00\u7BB1\uFF0C\u8FD8\u662F\u8F66\u8F7D\u914D\u4EF6\u6D4B\u8BC4\uFF1F",
+        choices: ["\u7EF4\u4FEE\u6559\u7A0B", "\u4EA7\u54C1\u5F00\u7BB1", "\u8F66\u8F7D\u914D\u4EF6\u6D4B\u8BC4"],
+        caption: "\u6BCF\u6B21\u53EA\u95EE\u4E00\u4E2A\u9AD8\u5F71\u54CD\u95EE\u9898\u3002"
+      },
+      conditions: {
+        anchor: null,
+        hard: ["\u7F8E\u56FD", "YouTube", "5k-20k \u7C89\u4E1D", "\u8FD1 30 \u5929\u6D3B\u8DC3"],
+        soft: ["\u6C7D\u914D\u8BC4\u6D4B"],
+        hint: "\u201C\u6C7D\u914D\u8BC4\u6D4B\u201D\u5F53\u524D\u4F5C\u4E3A\u5F85\u7EC6\u5316\u6761\u4EF6\u5B58\u5728\u3002"
+      },
+      keywordFlow: {
+        draft: "",
+        tags: [],
+        openMenu: false,
+        followup: true,
+        placeholder: "\u4E5F\u53EF\u4EE5\u76F4\u63A5\u8865\u4E00\u53E5\u8BF4\u660E"
+      }
+    },
+    "natural-followup-draft": {
+      mode: "expanded",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: "\u641C\u7D22",
+      status: {
+        state: "\u6B63\u5728\u8BB0\u5F55\u8865\u5145",
+        stateClass: "",
+        spinner: false,
+        text: "\u7CFB\u7EDF\u5DF2\u4FDD\u7559\u4E4B\u524D\u7684\u7406\u89E3\uFF0C\u73B0\u5728\u4F60\u6B63\u5728\u8F93\u5165\u4E00\u6761\u65B0\u7684\u8865\u5145\u8981\u6C42\u3002"
+      },
+      session: {
+        label: "\u5F53\u524D\u4EFB\u52A1",
+        summary: "\u9996\u8F6E\u7ED3\u679C\u5DF2\u8FD4\u56DE\uFF0C\u5F53\u524D\u51C6\u5907\u63A5\u6536\u4E00\u6761\u65B0\u7684\u81EA\u7136\u8BED\u8A00\u8865\u5145\u3002",
+        meta: ["follow-up input", "\u4E0D\u4F1A\u56DE\u5230\u539F\u59CB query \u7F16\u8F91"]
+      },
+      question: null,
+      conditions: {
+        anchor: null,
+        hard: ["\u7F8E\u56FD", "YouTube", "\u6C7D\u914D / \u5DE5\u5177\u6D4B\u8BC4", "5k-20k \u7C89\u4E1D", "\u8FD1 30 \u5929\u6D3B\u8DC3"],
+        soft: [],
+        hint: "\u539F\u59CB query \u5DF2\u88AB\u5438\u6536\u5230\u6761\u4EF6\u5C42\u3002"
+      },
+      keywordFlow: {
+        draft: "\u4E0D\u8981\u592A\u5927\u7684\u53F7",
+        tags: [],
+        openMenu: false,
+        followup: true,
+        placeholder: "\u7EE7\u7EED\u8865\u5145\u7B5B\u9009\u8981\u6C42"
+      }
+    },
+    "natural-followup-refining": {
+      mode: "expanded",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: "\u641C\u7D22",
+      status: {
+        state: "\u6B63\u5728\u5E94\u7528\u8865\u5145\u8981\u6C42",
+        stateClass: "",
+        spinner: true,
+        text: "\u7CFB\u7EDF\u6B63\u5728\u628A\u4F60\u521A\u8865\u5145\u7684\u81EA\u7136\u8BED\u8A00\u589E\u91CF\u5E76\u5165\u5F53\u524D\u4EFB\u52A1\uFF0C\u5E76\u5237\u65B0\u7ED3\u679C\u3002"
+      },
+      session: {
+        label: "task_summary",
+        summary: "\u539F\u6709\u4EFB\u52A1\u4FDD\u6301\u4E0D\u53D8\uFF0C\u65B0\u7684 follow-up \u6B63\u5728\u4F5C\u4E3A\u589E\u91CF\u6761\u4EF6\u8FDB\u5165 refine\u3002",
+        meta: ["\u589E\u91CF refine", "\u4E0D\u4F1A\u56DE\u5230\u9996\u8F6E retrieving", "\u53EF\u80FD\u56DE\u5230\u7ED3\u679C / \u8FFD\u95EE / \u4FEE\u6B63"]
+      },
+      question: null,
+      conditions: {
+        anchor: null,
+        hard: ["\u7F8E\u56FD", "YouTube", "\u6C7D\u914D / \u5DE5\u5177\u6D4B\u8BC4", "5k-20k \u7C89\u4E1D", "\u8FD1 30 \u5929\u6D3B\u8DC3"],
+        soft: ["\u4E0D\u8981\u592A\u5927\u7684\u53F7"],
+        hint: "follow-up \u4F1A\u5148\u4F5C\u4E3A\u65B0\u589E\u6761\u4EF6\u8FDB\u5165 refine\u3002"
+      },
+      keywordFlow: {
+        draft: "",
+        tags: [],
+        openMenu: false,
+        followup: true,
+        placeholder: "\u6B63\u5728\u5237\u65B0\uFF0C\u8BF7\u7A0D\u5019"
+      }
+    },
+    "mixed-parse": {
+      mode: "expanded",
+      inputTitle: "https://www.youtube.com/@HollylandTech \u5E2E\u6211\u627E\u7F8E\u56FD\u7C7B\u4F3C\u8C03\u6027\u7684\u9891\u9053\uFF0C\u7C89\u4E1D 1w-10w\uFF0C\u6700\u597D\u8FD1\u671F\u6D3B\u8DC3\uFF0C\u6027\u4EF7\u6BD4\u9AD8",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: "\u641C\u7D22",
+      status: {
+        state: "\u89E3\u6790\u4E2D",
+        stateClass: "",
+        spinner: true,
+        text: "\u7CFB\u7EDF\u6B63\u5728\u5224\u65AD\u8FD9\u4E32\u8F93\u5165\u91CC\u54EA\u4E9B\u662F\u951A\u70B9\uFF0C\u54EA\u4E9B\u662F\u786C\u6761\u4EF6\uFF0C\u54EA\u4E9B\u53EA\u662F\u53C2\u8003\u504F\u597D\u3002"
+      },
+      session: {
+        label: "\u7CFB\u7EDF\u89E3\u6790\u6458\u8981",
+        summary: "\u5F53\u524D\u8F93\u5165\u5305\u542B URL\u3001\u5730\u533A\u3001\u7C89\u4E1D\u91CF\u3001\u6D3B\u8DC3\u5EA6\u548C\u8F6F\u6027\u504F\u597D\u3002",
+        meta: ["\u89E3\u6790\u951A\u70B9", "\u89E3\u6790\u786C\u6761\u4EF6", "\u89E3\u6790\u8F6F\u504F\u597D"]
+      },
+      question: null,
+      conditions: null
+    },
+    "mixed-anchor": {
+      mode: "expanded",
+      inputTitle: "https://www.youtube.com/@HollylandTech \u5E2E\u6211\u627E\u7F8E\u56FD\u7C7B\u4F3C\u8C03\u6027\u7684\u9891\u9053\uFF0C\u7C89\u4E1D 1w-10w\uFF0C\u6700\u597D\u8FD1\u671F\u6D3B\u8DC3\uFF0C\u6027\u4EF7\u6BD4\u9AD8",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: "\u641C\u7D22",
+      status: {
+        state: "\u951A\u70B9\u4F18\u5148",
+        stateClass: "ok",
+        spinner: false,
+        text: "\u5F53\u524D\u6309 URL \u951A\u70B9\u4F18\u5148\u5904\u7406\uFF0C\u5176\u4ED6\u63CF\u8FF0\u4E0D\u4F1A\u81EA\u52A8\u8986\u76D6\u7CBE\u786E\u9891\u9053\u8BED\u4E49\u3002"
+      },
+      session: {
+        label: "\u7CFB\u7EDF\u89E3\u6790\u6458\u8981",
+        summary: "\u5DF2\u6309 URL \u9501\u5B9A\u9891\u9053\uFF1A@HollylandTech\u3002",
+        meta: ["URL \u4F18\u5148", "\u5176\u5B83\u6761\u4EF6\u540E\u7F6E\u89E3\u91CA"]
+      },
+      question: null,
+      conditions: {
+        anchor: "URL \u951A\u70B9\uFF1A@HollylandTech",
+        hard: ["\u7F8E\u56FD", "1w-10w \u7C89\u4E1D", "\u8FD1 30 \u5929\u6D3B\u8DC3"],
+        soft: [],
+        hint: "\u5F53\u524D\u4F18\u5148\u4FDD\u8BC1\u7CBE\u786E URL \u8BED\u4E49\u4E0D\u88AB\u7834\u574F\u3002"
+      }
+    },
+    "mixed-soft": {
+      mode: "expanded",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: "\u641C\u7D22",
+      status: {
+        state: "\u8F6F\u6761\u4EF6\u5F85\u6F84\u6E05",
+        stateClass: "",
+        spinner: false,
+        text: "\u201C\u7C7B\u4F3C\u8C03\u6027\u201D\u201C\u6027\u4EF7\u6BD4\u9AD8\u201D\u6682\u4E0D\u76F4\u63A5\u4F5C\u4E3A\u786C\u8FC7\u6EE4\u5668\uFF0C\u800C\u662F\u5148\u4F5C\u4E3A\u53C2\u8003\u504F\u597D\u5C55\u793A\u3002"
+      },
+      session: {
+        label: "\u7CFB\u7EDF\u89E3\u6790\u6458\u8981",
+        summary: "\u786C\u6761\u4EF6\u5DF2\u7ECF\u751F\u6548\uFF0C\u8F6F\u6761\u4EF6\u88AB\u964D\u7EA7\u4E3A\u53C2\u8003\u504F\u597D\u3002",
+        meta: ["\u786C\u6761\u4EF6 3 \u9879", "\u8F6F\u504F\u597D 2 \u9879"]
+      },
+      question: null,
+      conditions: {
+        anchor: "URL \u951A\u70B9\uFF1A@HollylandTech",
+        hard: ["\u7F8E\u56FD", "1w-10w \u7C89\u4E1D", "\u8FD1 30 \u5929\u6D3B\u8DC3"],
+        soft: ["\u7C7B\u4F3C\u8C03\u6027", "\u6027\u4EF7\u6BD4\u9AD8"],
+        hint: "\u8F6F\u504F\u597D\u4E0D\u4F1A\u4F2A\u88C5\u6210\u5DF2\u4E25\u683C\u751F\u6548\u7684\u8FC7\u6EE4\u5668\u3002"
+      },
+      keywordFlow: {
+        draft: "",
+        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053" }],
+        openMenu: false,
+        followup: true,
+        placeholder: "\u7EE7\u7EED\u8865\u5145\u4F60\u771F\u6B63\u60F3\u8981\u7684\u65B9\u5411"
+      }
+    },
+    "mixed-clarifying": {
+      mode: "expanded",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: "\u641C\u7D22",
+      status: {
+        state: "\u6DF7\u5408\u89E3\u6790\u5B8C\u6210",
+        stateClass: "ok",
+        spinner: false,
+        text: "\u5F53\u524D\u6309 URL \u951A\u70B9\u4F18\u5148\u5904\u7406\uFF0C\u5176\u4ED6\u63CF\u8FF0\u88AB\u62C6\u6210\u786C\u6761\u4EF6\u4E0E\u8F6F\u504F\u597D\u3002\u4E0D\u4F1A\u81EA\u52A8\u628A URL \u89E3\u91CA\u6210\u201C\u627E\u7C7B\u4F3C\u9891\u9053\u201D\u3002"
+      },
+      session: {
+        label: "\u7CFB\u7EDF\u89E3\u6790\u6458\u8981",
+        summary: "\u5DF2\u6309 URL \u9501\u5B9A\u9891\u9053\uFF1A@HollylandTech\uFF1B\u5F53\u524D\u4E0D\u4F1A\u81EA\u52A8\u6269\u5C55\u4E3A\u201C\u627E\u7C7B\u4F3C\u9891\u9053\u201D\u4EFB\u52A1\u3002",
+        meta: ["\u786C\u6761\u4EF6 3 \u9879", "\u8F6F\u504F\u597D 2 \u9879", "\u5EFA\u8BAE\u5148\u786E\u8BA4\u662F\u5426\u8981\u627E\u201C\u7C7B\u4F3C\u9891\u9053\u201D"]
+      },
+      question: {
+        slot: "question",
+        title: "\u4F60\u662F\u60F3\u7EE7\u7EED\u770B\u8FD9\u4E2A\u9891\u9053\uFF0C\u8FD8\u662F\u60F3\u627E\u201C\u548C\u5B83\u7C7B\u4F3C\u201D\u7684\u5176\u4ED6\u9891\u9053\uFF1F",
+        choices: ["\u7EE7\u7EED\u770B\u8FD9\u4E2A\u9891\u9053", "\u627E\u7C7B\u4F3C\u9891\u9053", "\u5148\u6309\u5F53\u524D\u6761\u4EF6\u770B\u7ED3\u679C"],
+        caption: "\u8FD9\u91CC\u53EA\u95EE\u4E00\u4E2A\u9AD8\u4EF7\u503C\u95EE\u9898\uFF0C\u4E0D\u628A\u4F1A\u8BDD\u63A8\u6210\u957F\u804A\u5929\u6D41\u3002"
+      },
+      conditions: {
+        anchor: "URL \u951A\u70B9\uFF1A@HollylandTech",
+        hard: ["\u7F8E\u56FD", "1w-10w \u7C89\u4E1D", "\u8FD1 30 \u5929\u6D3B\u8DC3"],
+        soft: ["\u7C7B\u4F3C\u8C03\u6027", "\u6027\u4EF7\u6BD4\u9AD8"],
+        hint: "\u8F6F\u504F\u597D\u4E0D\u4F1A\u88AB\u4F2A\u88C5\u6210\u5DF2\u4E25\u683C\u751F\u6548\u7684\u8FC7\u6EE4\u5668\u3002"
+      },
+      keywordFlow: {
+        draft: "",
+        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053" }],
+        openMenu: false,
+        followup: true,
+        placeholder: "\u7EE7\u7EED\u8865\u4E00\u53E5\uFF0C\u6216\u8005\u76F4\u63A5\u56DE\u7B54\u95EE\u9898"
+      }
+    },
+    "mixed-followup-draft": {
+      mode: "expanded",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: "\u641C\u7D22",
+      status: {
+        state: "\u6B63\u5728\u8BB0\u5F55\u8865\u5145",
+        stateClass: "",
+        spinner: false,
+        text: "\u4F60\u6B63\u5728\u8865\u5145\u65B0\u7684\u81EA\u7136\u8BED\u8A00\u8981\u6C42\uFF0C\u7CFB\u7EDF\u4F1A\u628A\u5B83\u4F5C\u4E3A\u589E\u91CF\u800C\u4E0D\u662F\u6539\u5199\u539F\u59CB query\u3002"
+      },
+      session: {
+        label: "task_summary",
+        summary: "\u5F53\u524D\u5DF2\u5B58\u5728 URL \u951A\u70B9\u4E0E\u7ED3\u6784\u5316\u6761\u4EF6\uFF0C\u6B63\u5728\u63A5\u6536\u4E00\u6761\u65B0\u7684 follow-up\u3002",
+        meta: ["anchor \u4FDD\u7559", "follow-up input"]
+      },
+      question: null,
+      conditions: {
+        anchor: "URL \u951A\u70B9\uFF1A@HollylandTech",
+        hard: ["\u7F8E\u56FD", "1w-10w \u7C89\u4E1D", "\u8FD1 30 \u5929\u6D3B\u8DC3"],
+        soft: ["\u7C7B\u4F3C\u8C03\u6027"],
+        hint: "\u65B0\u7684\u8865\u5145\u4E0D\u4F1A\u8986\u76D6 URL \u951A\u70B9\u3002"
+      },
+      keywordFlow: {
+        draft: "\u66F4\u504F\u6559\u7A0B\u7C7B\uFF0C\u4E0D\u8981\u5F00\u7BB1",
+        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053" }],
+        openMenu: false,
+        followup: true,
+        placeholder: "\u7EE7\u7EED\u8865\u5145\u4F60\u771F\u6B63\u60F3\u8981\u7684\u65B9\u5411"
+      }
+    },
+    "mixed-followup-refining": {
+      mode: "expanded",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: "\u641C\u7D22",
+      status: {
+        state: "\u6B63\u5728\u5E94\u7528\u8865\u5145\u8981\u6C42",
+        stateClass: "",
+        spinner: true,
+        text: "\u7CFB\u7EDF\u6B63\u5728\u4FDD\u7559 URL \u951A\u70B9\u7684\u524D\u63D0\u4E0B\uFF0C\u91CD\u65B0\u89E3\u91CA\u5E76\u5E94\u7528\u4F60\u521A\u8865\u5145\u7684\u8981\u6C42\u3002"
+      },
+      session: {
+        label: "task_summary",
+        summary: "URL \u951A\u70B9\u4FDD\u7559\uFF0C\u65B0\u7684 follow-up \u6B63\u5728\u8FDB\u5165 refine\u3002",
+        meta: ["anchor \u4FDD\u7559", "\u589E\u91CF refine", "\u4E0D\u4F1A\u8986\u76D6\u539F\u951A\u70B9"]
+      },
+      question: null,
+      conditions: {
+        anchor: "URL \u951A\u70B9\uFF1A@HollylandTech",
+        hard: ["\u7F8E\u56FD", "1w-10w \u7C89\u4E1D", "\u8FD1 30 \u5929\u6D3B\u8DC3"],
+        soft: ["\u7C7B\u4F3C\u8C03\u6027", "\u66F4\u504F\u6559\u7A0B\u7C7B", "\u4E0D\u8981\u5F00\u7BB1"],
+        hint: "\u65B0\u7684 follow-up \u4F1A\u5148\u5F71\u54CD\u504F\u597D\u89E3\u91CA\uFF0C\u518D\u51B3\u5B9A\u662F\u5426\u4E0A\u5347\u4E3A\u786C\u6761\u4EF6\u3002"
+      },
+      keywordFlow: {
+        draft: "",
+        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053" }],
+        openMenu: false,
+        followup: true,
+        placeholder: "\u6B63\u5728\u5237\u65B0\uFF0C\u8BF7\u7A0D\u5019"
+      }
+    },
+    "repair-invalid": {
+      mode: "expanded",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: null,
+      status: {
+        state: "URL \u65E0\u6CD5\u8BC6\u522B",
+        stateClass: "warn",
+        spinner: false,
+        text: "\u672A\u8BC6\u522B\u5230\u53EF\u7528\u9891\u9053\u94FE\u63A5\u3002\u4F60\u53EF\u4EE5\u91CD\u65B0\u8D34\u94FE\u63A5\uFF0C\u6216\u6539\u4E3A\u9891\u9053\u540D / \u81EA\u7136\u8BED\u8A00\u3002"
+      },
+      session: {
+        label: "\u5F53\u524D\u5361\u70B9",
+        summary: "\u94FE\u63A5\u672A\u6620\u5C04\u5230\u6709\u6548\u9891\u9053\u8D44\u6E90\u3002",
+        meta: ["\u91CD\u65B0\u8D34\u94FE\u63A5", "\u8F93\u5165\u9891\u9053\u540D", "\u6539\u4E3A\u81EA\u7136\u8BED\u8A00"]
+      },
+      question: {
+        slot: "repair_options",
+        title: "\u4F60\u60F3\u600E\u4E48\u7EE7\u7EED\u4FEE\u6B63\uFF1F",
+        choices: ["\u91CD\u65B0\u7C98\u8D34\u94FE\u63A5", "\u76F4\u63A5\u8F93\u5165\u9891\u9053\u540D", "\u6539\u4E3A\u81EA\u7136\u8BED\u8A00\u641C\u7D22"],
+        caption: "\u8FD9\u91CC\u53EA\u5904\u7406 URL \u4FEE\u6B63\u3002"
+      },
+      conditions: null,
+      keywordFlow: {
+        draft: "",
+        tags: [],
+        openMenu: false,
+        followup: true,
+        placeholder: "\u4F60\u4E5F\u53EF\u4EE5\u76F4\u63A5\u8865\u4E00\u53E5\u65B0\u7684\u641C\u7D22\u8981\u6C42"
+      }
+    },
+    "repair-mismatch": {
+      mode: "expanded",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: null,
+      status: {
+        state: "\u5E73\u53F0\u4E0D\u5339\u914D",
+        stateClass: "warn",
+        spinner: false,
+        text: "\u5F53\u524D\u5728 YouTube \u9891\u9053\u641C\u7D22\u9875\uFF0C\u8BE5\u94FE\u63A5\u5C5E\u4E8E Instagram\u3002\u5EFA\u8BAE\u4F60\u5207\u6362\u5E73\u53F0\uFF0C\u6216\u5220\u9664\u94FE\u63A5\u540E\u76F4\u63A5\u63CF\u8FF0\u4F60\u60F3\u627E\u7684 YouTube \u9891\u9053\u3002"
+      },
+      session: {
+        label: "\u5F53\u524D\u5361\u70B9",
+        summary: "\u94FE\u63A5\u53EF\u8BC6\u522B\uFF0C\u4F46\u4E0E\u5F53\u524D\u641C\u7D22\u9875\u5E73\u53F0\u4E0D\u5339\u914D\u3002",
+        meta: ["\u53EF\u4FEE\u6539 URL", "\u53EF\u5220\u9664\u94FE\u63A5\u6539\u4E3A\u81EA\u7136\u8BED\u8A00", "\u4E0D\u5EFA\u8BAE\u9759\u9ED8\u5FFD\u7565\u8BE5\u94FE\u63A5"]
+      },
+      question: {
+        slot: "repair_options",
+        title: "\u4F60\u66F4\u60F3\u600E\u4E48\u7EE7\u7EED\uFF1F",
+        choices: ["\u5207\u5230 Instagram \u641C\u7D22", "\u5220\u6389\u94FE\u63A5\u7EE7\u7EED\u641C YouTube", "\u91CD\u65B0\u7C98\u8D34 YouTube \u9891\u9053\u94FE\u63A5"],
+        caption: "\u4FEE\u6B63\u6001\u5E94\u8BE5\u77ED\u3001\u660E\u786E\uFF0C\u53EA\u5904\u7406\u5F53\u524D\u5361\u70B9\u3002"
+      },
+      conditions: {
+        anchor: null,
+        hard: ["\u5F53\u524D\u5E73\u53F0\uFF1AYouTube"],
+        soft: ["\u7C7B\u4F3C\u98CE\u683C"],
+        hint: "\u5E73\u53F0\u51B2\u7A81\u4F18\u5148\u4E8E\u98CE\u683C\u504F\u597D\u3002"
+      },
+      keywordFlow: {
+        draft: "",
+        tags: [],
+        openMenu: false,
+        followup: true,
+        placeholder: "\u6216\u76F4\u63A5\u8F93\u5165\u4F60\u60F3\u627E\u7684 YouTube \u9891\u9053\u8981\u6C42"
+      }
+    },
+    "repair-unsupported": {
+      mode: "expanded",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: null,
+      status: {
+        state: "\u7C7B\u578B\u4E0D\u652F\u6301",
+        stateClass: "warn",
+        spinner: false,
+        text: "\u5F53\u524D\u7248\u672C\u4E0D\u652F\u6301\u4F7F\u7528\u8BE5\u7C7B\u94FE\u63A5\u8D77\u641C\uFF0C\u8BF7\u6539\u4E3A\u9891\u9053\u94FE\u63A5\u3001\u5173\u952E\u8BCD\u6216\u81EA\u7136\u8BED\u8A00\u3002"
+      },
+      session: {
+        label: "\u5F53\u524D\u5361\u70B9",
+        summary: "\u94FE\u63A5\u7ED3\u6784\u53EF\u8BC6\u522B\uFF0C\u4F46\u4E0D\u5C5E\u4E8E\u641C\u7D22\u6846\u5F53\u524D\u652F\u6301\u7684 URL \u7C7B\u578B\u3002",
+        meta: ["\u53EF\u6539\u6210\u9891\u9053\u94FE\u63A5", "\u53EF\u5220\u6389\u94FE\u63A5", "\u53EF\u6539\u4E3A\u81EA\u7136\u8BED\u8A00"]
+      },
+      question: {
+        slot: "repair_options",
+        title: "\u4F60\u8981\u6362\u6210\u4EC0\u4E48\u65B9\u5F0F\u7EE7\u7EED\u641C\u7D22\uFF1F",
+        choices: ["\u6539\u4E3A\u9891\u9053\u94FE\u63A5", "\u5220\u6389\u94FE\u63A5\u8F93\u5173\u952E\u8BCD", "\u76F4\u63A5\u63CF\u8FF0\u60F3\u627E\u4EC0\u4E48"],
+        caption: "\u8FD9\u91CC\u53EA\u5904\u7406\u8F93\u5165\u7C7B\u578B\u4FEE\u6B63\u3002"
+      },
+      conditions: null,
+      keywordFlow: {
+        draft: "",
+        tags: [],
+        openMenu: false,
+        followup: true,
+        placeholder: "\u76F4\u63A5\u63CF\u8FF0\u4F60\u60F3\u627E\u4EC0\u4E48\u4E5F\u53EF\u4EE5"
+      }
+    },
+    "repair-empty": {
+      mode: "expanded",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: null,
+      status: {
+        state: "\u6709\u6761\u4EF6\u65E0\u7ED3\u679C",
+        stateClass: "warn",
+        spinner: false,
+        text: "\u5F53\u524D\u6761\u4EF6\u8FC7\u7A84\uFF0C\u7ED3\u679C\u4E3A\u7A7A\u3002\u7CFB\u7EDF\u5EFA\u8BAE\u4F60\u5148\u653E\u5BBD\u4E00\u4E2A\u6700\u5F71\u54CD\u7ED3\u679C\u7684\u6761\u4EF6\u3002"
+      },
+      session: {
+        label: "\u5F53\u524D\u5361\u70B9",
+        summary: "\u7CFB\u7EDF\u6CA1\u6709\u627E\u5230\u6EE1\u8DB3\u6240\u6709\u6761\u4EF6\u7684\u9891\u9053\u3002",
+        meta: ["\u53EF\u653E\u5BBD\u7C89\u4E1D\u8303\u56F4", "\u53EF\u653E\u5BBD\u7C7B\u76EE", "\u53EF\u5220\u6389\u6D3B\u8DC3\u9650\u5236"]
+      },
+      question: {
+        slot: "repair_options",
+        title: "\u4F60\u60F3\u5148\u653E\u5BBD\u54EA\u4E00\u4E2A\u6761\u4EF6\uFF1F",
+        choices: ["\u7C89\u4E1D\u8303\u56F4", "\u5185\u5BB9\u7C7B\u76EE", "\u8FD1\u671F\u6D3B\u8DC3"],
+        caption: "\u4FEE\u6B63\u6001\u4E0D\u662F\u804A\u5929\uFF0C\u800C\u662F\u5E2E\u52A9\u4F60\u6062\u590D\u53EF\u641C\u72B6\u6001\u3002"
+      },
+      conditions: {
+        anchor: null,
+        hard: ["\u7F8E\u56FD", "\u6237\u5916 / \u6C34\u4E0A\u8FD0\u52A8", "5k-10k \u7C89\u4E1D", "\u8FD1\u671F\u6D3B\u8DC3"],
+        soft: [],
+        hint: "\u81F3\u5C11\u9700\u8981\u653E\u5BBD\u4E00\u9879\u786C\u6761\u4EF6\u624D\u80FD\u6062\u590D\u7ED3\u679C\u3002"
+      },
+      keywordFlow: {
+        draft: "",
+        tags: [],
+        openMenu: false,
+        followup: true,
+        placeholder: "\u8865\u4E00\u53E5\u653E\u5BBD\u6761\u4EF6\u7684\u8981\u6C42"
+      }
+    },
+    "repair-followup-draft": {
+      mode: "expanded",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: "\u641C\u7D22",
+      status: {
+        state: "\u6B63\u5728\u8BB0\u5F55\u4FEE\u6B63\u8981\u6C42",
+        stateClass: "",
+        spinner: false,
+        text: "\u5F53\u524D\u5361\u70B9\u5DF2\u88AB\u8BC6\u522B\uFF0C\u4F60\u6B63\u5728\u8865\u4E00\u53E5\u4FEE\u6B63\u8981\u6C42\uFF0C\u7CFB\u7EDF\u4F1A\u636E\u6B64\u91CD\u65B0\u7EC4\u7EC7\u641C\u7D22\u3002"
+      },
+      session: {
+        label: "task_summary",
+        summary: "\u7CFB\u7EDF\u6B63\u5728\u4ECE\u4FEE\u6B63\u6001\u63A5\u6536\u4E00\u4E2A\u65B0\u7684 follow-up \u8F93\u5165\u3002",
+        meta: ["repair input", "\u4E0D\u4F1A\u6062\u590D\u539F\u59CB query \u5168\u6587"]
+      },
+      question: {
+        slot: "repair_options",
+        title: "\u4F60\u4E5F\u53EF\u4EE5\u76F4\u63A5\u63CF\u8FF0\u60F3\u600E\u4E48\u4FEE\u6B63\u3002",
+        choices: ["\u5220\u6389\u94FE\u63A5\u7EE7\u7EED\u641C", "\u76F4\u63A5\u8BF4\u60F3\u627E\u4EC0\u4E48", "\u6539\u4E3A\u5173\u952E\u8BCD\u641C\u7D22"],
+        caption: "\u4FEE\u6B63\u6001\u652F\u6301\u70B9\u9009\uFF0C\u4E5F\u652F\u6301\u4E3B\u52A8\u8865\u4E00\u53E5\u3002"
+      },
+      conditions: null,
+      keywordFlow: {
+        draft: "\u90A3\u5C31\u76F4\u63A5\u5E2E\u6211\u627E\u7F8E\u56FD YouTube \u6237\u5916\u535A\u4E3B",
+        tags: [],
+        openMenu: false,
+        followup: true,
+        placeholder: "\u76F4\u63A5\u8865\u4E00\u53E5\u4F60\u60F3\u600E\u4E48\u4FEE\u6B63"
+      }
+    },
+    "repair-followup-refining": {
+      mode: "expanded",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: "\u641C\u7D22",
+      status: {
+        state: "\u6B63\u5728\u5E94\u7528\u4FEE\u6B63\u8981\u6C42",
+        stateClass: "",
+        spinner: true,
+        text: "\u7CFB\u7EDF\u6B63\u5728\u628A\u4F60\u8865\u5145\u7684\u4FEE\u6B63\u8981\u6C42\u8F6C\u6210\u65B0\u7684\u53EF\u6267\u884C\u641C\u7D22\u6761\u4EF6\u3002"
+      },
+      session: {
+        label: "task_summary",
+        summary: "\u4FEE\u6B63\u6001\u8F93\u5165\u5DF2\u63D0\u4EA4\uFF0C\u5F53\u524D\u6B63\u5728\u5C1D\u8BD5\u6062\u590D\u7ED3\u679C\u3002",
+        meta: ["repair refine", "\u53EF\u80FD\u6062\u590D\u7ED3\u679C", "\u4E5F\u53EF\u80FD\u7EE7\u7EED\u505C\u7559\u5728\u4FEE\u6B63\u6001"]
+      },
+      question: null,
+      conditions: null,
+      keywordFlow: {
+        draft: "",
+        tags: [],
+        openMenu: false,
+        followup: true,
+        placeholder: "\u6B63\u5728\u5237\u65B0\uFF0C\u8BF7\u7A0D\u5019"
+      }
+    },
+    "repair-recovered-results": {
+      mode: "expanded",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: "\u641C\u7D22",
+      status: {
+        state: "\u5DF2\u6062\u590D\u7ED3\u679C",
+        stateClass: "ok",
+        spinner: false,
+        text: "\u4FEE\u6B63\u540E\u7684\u6761\u4EF6\u5DF2\u7ECF\u91CD\u65B0\u53EC\u56DE\u5230\u7ED3\u679C\uFF0C\u5F53\u524D\u5DF2\u56DE\u5230\u7A33\u5B9A\u53EF\u6D4F\u89C8\u72B6\u6001\u3002"
+      },
+      session: {
+        label: "task_summary",
+        summary: "\u539F\u4FEE\u6B63\u95EE\u9898\u5DF2\u88AB\u5316\u89E3\uFF0C\u5F53\u524D\u7ED3\u679C\u6765\u81EA\u4FEE\u6B63\u540E\u7684\u65B0\u6761\u4EF6\u3002",
+        meta: ["\u4ECE repair \u6062\u590D", "\u5F53\u524D\u7ED3\u679C\u5DF2\u7A33\u5B9A", "\u53EF\u7EE7\u7EED refine"]
+      },
+      question: null,
+      conditions: {
+        anchor: null,
+        hard: ["\u7F8E\u56FD", "YouTube", "\u6237\u5916\u535A\u4E3B"],
+        soft: [],
+        hint: "\u8FD9\u662F\u4FEE\u6B63\u540E\u7684\u65B0\u7ED3\u679C\uFF0C\u4E0D\u518D\u662F\u539F\u59CB\u5931\u8D25\u6761\u4EF6\u7684\u76F4\u51FA\u3002"
+      },
+      keywordFlow: {
+        draft: "",
+        tags: [],
+        openMenu: false,
+        followup: true,
+        placeholder: "\u7EE7\u7EED\u8865\u4E00\u53E5\uFF0C\u8FDB\u4E00\u6B65 refine"
+      }
+    },
+    "upgrade-keyword-trigger": {
+      mode: "classic",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: null,
+      status: null,
+      session: null,
+      question: null,
+      conditions: null,
+      keywordFlow: {
+        draft: "\u5E2E\u6211\u627E\u7F8E\u56FD\u5988\u5988\u535A\u4E3B",
+        tags: [{ text: "swim vest", scope: "\u6807\u7B7E" }],
+        openMenu: false
+      }
+    },
+    "upgrade-keyword-transition": {
+      mode: "expanded",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: "\u641C\u7D22",
+      status: {
+        state: "\u6B63\u5728\u5347\u7EA7\u4E3A Agent \u6001",
+        stateClass: "",
+        spinner: true,
+        text: "\u5DF2\u4FDD\u7559\u539F\u6709\u5173\u952E\u8BCD tag\uFF0C\u7CFB\u7EDF\u6B63\u5728\u628A\u65B0\u589E\u81EA\u7136\u8BED\u8A00\u8F6C\u6210\u4EFB\u52A1\u89E3\u91CA\u4E0E\u6761\u4EF6\u3002"
+      },
+      session: {
+        label: "task_summary",
+        summary: "\u7ECF\u5178\u641C\u7D22\u5DF2\u5347\u7EA7\uFF1A\u5173\u952E\u8BCD\u4FDD\u6301\u4E0D\u53D8\uFF0C\u65B0\u589E\u81EA\u7136\u8BED\u8A00\u5C06\u4F5C\u4E3A\u4EFB\u52A1\u589E\u91CF\u5904\u7406\u3002",
+        meta: ["\u4FDD\u7559\u5173\u952E\u8BCD tag", "\u89E3\u6790\u65B0\u589E\u81EA\u7136\u8BED\u8A00", "\u8FDB\u5165 expanded_agent"]
+      },
+      question: null,
+      conditions: {
+        anchor: null,
+        hard: ["swim vest\uFF08\u6807\u7B7E\uFF09"],
+        soft: ["\u7F8E\u56FD\u5988\u5988\u535A\u4E3B"],
+        hint: "\u5347\u7EA7\u4E2D\uFF0C\u65B0\u589E\u81EA\u7136\u8BED\u8A00\u6682\u4F5C\u4E3A\u5F85\u89E3\u6790\u610F\u56FE\u3002"
+      }
+    },
+    "upgrade-keyword-stable": {
+      mode: "expanded",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: "\u641C\u7D22",
+      status: {
+        state: "\u5DF2\u5347\u7EA7\u5B8C\u6210",
+        stateClass: "ok",
+        spinner: false,
+        text: "\u5173\u952E\u8BCD tag \u5DF2\u4FDD\u7559\u4E3A\u663E\u5F0F\u6761\u4EF6\uFF0C\u65B0\u589E\u81EA\u7136\u8BED\u8A00\u5DF2\u8F6C\u6210\u4EFB\u52A1\u6458\u8981\u4E0E\u7ED3\u6784\u5316\u6761\u4EF6\u3002"
+      },
+      session: {
+        label: "task_summary",
+        summary: "\u6B63\u5728\u641C\u7D22\uFF1Aswim vest \u76F8\u5173\u9891\u9053 \xB7 \u7F8E\u56FD \xB7 \u5988\u5988\u535A\u4E3B",
+        meta: ["\u5173\u952E\u8BCD\u4FDD\u7559", "\u81EA\u7136\u8BED\u8A00\u5DF2\u5438\u6536", "\u53EF\u7EE7\u7EED refine"]
+      },
+      question: null,
+      conditions: {
+        anchor: null,
+        hard: ["swim vest\uFF08\u6807\u7B7E\uFF09", "\u7F8E\u56FD"],
+        soft: ["\u5988\u5988\u535A\u4E3B"],
+        hint: "\u7ECF\u5178\u5173\u952E\u8BCD\u5DF2\u53D8\u6210 Agent \u6001\u4E2D\u7684\u524D\u7F6E\u663E\u5F0F\u6761\u4EF6\u3002"
+      }
+    },
+    "upgrade-url-trigger": {
+      mode: "classic",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: null,
+      status: null,
+      session: null,
+      question: null,
+      conditions: null,
+      keywordFlow: {
+        draft: "\u627E\u548C\u5B83\u7C7B\u4F3C\u7684\u7F8E\u56FD\u9891\u9053",
+        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053" }],
+        openMenu: false
+      }
+    },
+    "upgrade-url-transition": {
+      mode: "expanded",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: "\u641C\u7D22",
+      status: {
+        state: "\u6B63\u5728\u89E3\u91CA URL \u4E0E\u81EA\u7136\u8BED\u8A00\u7684\u5173\u7CFB",
+        stateClass: "",
+        spinner: true,
+        text: "\u7CFB\u7EDF\u6B63\u5728\u5224\u65AD URL \u662F\u5426\u7EE7\u7EED\u4F5C\u4E3A\u7CBE\u786E\u951A\u70B9\uFF0C\u4EE5\u53CA\u65B0\u589E\u81EA\u7136\u8BED\u8A00\u5E94\u88AB\u5F53\u4F5C refine \u8FD8\u662F\u65B0\u7684\u641C\u7D22\u4EFB\u52A1\u3002"
+      },
+      session: {
+        label: "task_summary",
+        summary: "\u5DF2\u8BC6\u522B URL \u951A\u70B9\uFF1A@HollylandTech\uFF0C\u6B63\u5728\u89E3\u91CA\u201C\u627E\u548C\u5B83\u7C7B\u4F3C\u7684\u7F8E\u56FD\u9891\u9053\u201D\u8FD9\u53E5\u65B0\u8981\u6C42\u3002",
+        meta: ["URL \u951A\u70B9\u4F18\u5148", "\u89E3\u91CA\u65B0\u589E\u81EA\u7136\u8BED\u8A00", "\u907F\u514D\u9759\u9ED8\u6539\u5199\u610F\u56FE"]
+      },
+      question: null,
+      conditions: {
+        anchor: "URL \u951A\u70B9\uFF1A@HollylandTech",
+        hard: [],
+        soft: ["\u627E\u7C7B\u4F3C\u9891\u9053", "\u7F8E\u56FD"],
+        hint: "\u5347\u7EA7\u4E2D\uFF0C\u7CFB\u7EDF\u8FD8\u672A\u51B3\u5B9A\u662F\u7EE7\u7EED\u770B\u8BE5\u9891\u9053\u8FD8\u662F\u8F6C\u4E3A\u627E\u7C7B\u4F3C\u9891\u9053\u3002"
+      }
+    },
+    "upgrade-url-stable": {
+      mode: "expanded",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: "\u641C\u7D22",
+      status: {
+        state: "\u951A\u70B9\u5347\u7EA7\u5B8C\u6210",
+        stateClass: "ok",
+        spinner: false,
+        text: "URL \u4F5C\u4E3A anchor \u88AB\u4FDD\u7559\uFF0C\u65B0\u589E\u81EA\u7136\u8BED\u8A00\u5DF2\u88AB\u89E3\u91CA\u4E3A refine \u8981\u6C42\uFF0C\u800C\u4E0D\u662F\u9759\u9ED8\u8986\u76D6\u539F\u6709\u7CBE\u786E\u8BED\u4E49\u3002"
+      },
+      session: {
+        label: "task_summary",
+        summary: "\u5F53\u524D\u6309 @HollylandTech \u4F5C\u4E3A\u951A\u70B9\uFF0C\u5E76\u5F00\u59CB\u641C\u7D22\u201C\u7C7B\u4F3C\u8C03\u6027 + \u7F8E\u56FD\u201D\u7684\u9891\u9053\u3002",
+        meta: ["URL \u4FDD\u7559\u4E3A anchor", "\u65B0\u589E\u8981\u6C42\u5DF2\u89E3\u91CA", "\u5FC5\u8981\u65F6\u53EF\u7EE7\u7EED\u8FFD\u95EE"]
+      },
+      question: {
+        slot: "question",
+        title: "\u4F60\u662F\u60F3\u7EE7\u7EED\u770B\u8FD9\u4E2A\u9891\u9053\uFF0C\u8FD8\u662F\u60F3\u4EE5\u5B83\u4E3A\u53C2\u8003\u627E\u65B0\u7684\u9891\u9053\uFF1F",
+        choices: ["\u7EE7\u7EED\u770B\u8FD9\u4E2A\u9891\u9053", "\u627E\u65B0\u7684\u7C7B\u4F3C\u9891\u9053"],
+        caption: "URL \u8D77\u624B\u5347\u7EA7\u65F6\uFF0C\u5FC5\u987B\u5148\u5904\u7406\u951A\u70B9\u8BED\u4E49\u3002"
+      },
+      conditions: {
+        anchor: "URL \u951A\u70B9\uFF1A@HollylandTech",
+        hard: ["\u7F8E\u56FD"],
+        soft: ["\u7C7B\u4F3C\u8C03\u6027"],
+        hint: "URL \u7CBE\u786E\u8BED\u4E49\u4F18\u5148\u4E8E\u8F6F\u504F\u597D\u3002"
+      }
+    }
+  };
+  var INITIAL_FIXTURE_ID = "keyword-empty";
+  var INITIAL_VARIANT = "glass";
+  var sceneMap = {
+    keyword: [
+      { id: "keyword-empty", label: "\u521D\u59CB\u7A7A\u767D\u6001" },
+      { id: "keyword-input", label: "\u8F93\u5165\u6001" },
+      { id: "keyword-tag", label: "\u5B8C\u6210\u6001" },
+      { id: "keyword-edit", label: "\u7F16\u8F91\u5DF2\u6709\u5173\u952E\u8BCD" },
+      { id: "keyword-multi", label: "\u591A\u5173\u952E\u8BCD" },
+      { id: "keyword-anchor-seed", label: "\u5173\u952E\u8BCD+URL\u79CD\u5B50" },
+      { id: "keyword-menu", label: "\u5339\u914D\u76EE\u6807" }
+    ],
+    url: [
+      { id: "url-resolving", label: "\u8BC6\u522B\u4E2D" },
+      { id: "url-exact", label: "\u951A\u70B9\u641C\u7D22\u5C31\u7EEA" },
+      { id: "url-mismatch", label: "\u5E73\u53F0\u4E0D\u5339\u914D" },
+      { id: "url-unsupported", label: "\u7C7B\u578B\u4E0D\u652F\u6301" },
+      { id: "url-invalid", label: "\u65E0\u6CD5\u8BC6\u522B" }
+    ],
+    natural: [
+      { id: "natural-init", label: "\u521A\u5C55\u5F00" },
+      { id: "natural-retrieving", label: "\u9996\u8F6E\u641C\u7D22\u4E2D" },
+      { id: "natural-results", label: "\u9996\u8F6E\u7ED3\u679C\u5DF2\u8FD4\u56DE" },
+      { id: "natural-clarifying", label: "\u8FFD\u95EE\u6001" },
+      { id: "natural-followup-draft", label: "\u4E3B\u52A8\u8865\u5145\u8F93\u5165\u4E2D" },
+      { id: "natural-followup-refining", label: "\u8865\u5145\u540E\u5237\u65B0\u4E2D" }
+    ],
+    mixed: [
+      { id: "mixed-parse", label: "\u89E3\u6790\u6458\u8981\u6001" },
+      { id: "mixed-anchor", label: "\u951A\u70B9\u4F18\u5148\u6001" },
+      { id: "mixed-soft", label: "\u8F6F\u6761\u4EF6\u5F85\u6F84\u6E05\u6001" },
+      { id: "mixed-clarifying", label: "\u8FFD\u95EE\u6001" },
+      { id: "mixed-followup-draft", label: "\u4E3B\u52A8\u8865\u5145\u8F93\u5165\u4E2D" },
+      { id: "mixed-followup-refining", label: "\u8865\u5145\u540E\u5237\u65B0\u4E2D" }
+    ],
+    repair: [
+      { id: "repair-invalid", label: "URL \u65E0\u6CD5\u8BC6\u522B" },
+      { id: "repair-mismatch", label: "\u5E73\u53F0\u4E0D\u5339\u914D" },
+      { id: "repair-unsupported", label: "\u7C7B\u578B\u4E0D\u652F\u6301" },
+      { id: "repair-empty", label: "\u6709\u6761\u4EF6\u65E0\u7ED3\u679C" },
+      { id: "repair-followup-draft", label: "\u4E3B\u52A8\u8865\u5145\u8F93\u5165\u4E2D" },
+      { id: "repair-followup-refining", label: "\u4FEE\u6B63\u540E\u5237\u65B0\u4E2D" },
+      { id: "repair-recovered-results", label: "\u4FEE\u6B63\u540E\u5DF2\u6062\u590D\u7ED3\u679C" }
+    ],
+    upgrade: [
+      { id: "upgrade-keyword-trigger", label: "\u5173\u952E\u8BCD\u8D77\u624B-\u89E6\u53D1\u524D" },
+      { id: "upgrade-keyword-transition", label: "\u5173\u952E\u8BCD\u8D77\u624B-\u5347\u7EA7\u4E2D" },
+      { id: "upgrade-keyword-stable", label: "\u5173\u952E\u8BCD\u8D77\u624B-\u5347\u7EA7\u7A33\u5B9A" },
+      { id: "upgrade-url-trigger", label: "URL \u8D77\u624B-\u89E6\u53D1\u524D" },
+      { id: "upgrade-url-transition", label: "URL \u8D77\u624B-\u5347\u7EA7\u4E2D" },
+      { id: "upgrade-url-stable", label: "URL \u8D77\u624B-\u5347\u7EA7\u7A33\u5B9A" }
+    ]
+  };
+  var shellTargets = {
+    balanced: document.getElementById("balanced-shell"),
+    glass: document.getElementById("glass-shell"),
+    neon: document.getElementById("neon-shell"),
+    querychip: document.getElementById("querychip-shell"),
+    workbench: document.getElementById("workbench-shell"),
+    assistant: document.getElementById("assistant-shell")
+  };
+  var stateNodeMap = {
+    "keyword-empty": ["empty_input", "compact_classic", "idle"],
+    "keyword-input": ["draft_keyword", "compact_classic", "idle"],
+    "keyword-tag": ["committed_keyword", "compact_classic", "idle"],
+    "keyword-edit": ["draft_keyword", "committed_keyword", "compact_classic", "idle"],
+    "keyword-multi": ["committed_keyword", "compact_classic", "idle"],
+    "keyword-anchor-seed": ["draft_keyword", "committed_keyword", "committed_anchor", "compact_classic", "idle"],
+    "keyword-menu": ["tag_scope_menu_open", "excluded_keyword", "compact_classic", "idle"],
+    "url-resolving": ["compact_resolving"],
+    "url-exact": ["committed_anchor", "return-state"],
+    "url-mismatch": ["expanded_repair"],
+    "url-unsupported": ["expanded_repair"],
+    "url-invalid": ["expanded_repair"],
+    "natural-init": ["expanded_agent"],
+    "natural-retrieving": ["expanded_agent", "retrieving"],
+    "natural-results": ["results_ready", "followup_waiting"],
+    "natural-clarifying": ["expanded_clarifying", "clarifying", "followup_waiting"],
+    "natural-followup-draft": ["expanded_agent", "results_ready", "draft_followup"],
+    "natural-followup-refining": ["expanded_agent", "refining", "followup_waiting"],
+    "mixed-parse": ["expanded_agent"],
+    "mixed-anchor": ["expanded_agent", "committed_anchor", "followup_waiting"],
+    "mixed-soft": ["expanded_agent", "committed_anchor", "followup_waiting"],
+    "mixed-clarifying": ["expanded_agent", "committed_anchor", "clarifying", "followup_waiting"],
+    "mixed-followup-draft": ["expanded_agent", "committed_anchor", "results_ready", "draft_followup"],
+    "mixed-followup-refining": ["expanded_agent", "committed_anchor", "refining", "followup_waiting"],
+    "repair-invalid": ["expanded_repair", "followup_waiting"],
+    "repair-mismatch": ["expanded_repair", "followup_waiting"],
+    "repair-unsupported": ["expanded_repair", "followup_waiting"],
+    "repair-empty": ["empty_repair", "followup_waiting"],
+    "repair-followup-draft": ["expanded_repair", "empty_repair", "draft_followup"],
+    "repair-followup-refining": ["expanded_repair", "refining", "followup_waiting"],
+    "repair-recovered-results": ["expanded_agent", "results_ready", "followup_waiting"],
+    "upgrade-keyword-trigger": ["draft_keyword", "compact_classic", "idle"],
+    "upgrade-keyword-transition": ["expanded_agent", "retrieving", "committed_keyword"],
+    "upgrade-keyword-stable": ["expanded_agent", "results_ready", "committed_keyword", "followup_waiting"],
+    "upgrade-url-trigger": ["compact_classic", "committed_anchor"],
+    "upgrade-url-transition": ["expanded_agent", "retrieving", "committed_anchor"],
+    "upgrade-url-stable": ["expanded_agent", "clarifying", "committed_anchor", "followup_waiting"]
+  };
+  var stateTriples = {
+    "keyword-empty": { input: "empty_input", container: "compact_classic", session: "idle" },
+    "keyword-input": { input: "draft_keyword", container: "compact_classic", session: "idle" },
+    "keyword-tag": { input: "committed_keyword", container: "compact_classic", session: "idle" },
+    "keyword-edit": { input: "editing_keyword", container: "compact_classic", session: "idle" },
+    "keyword-multi": { input: "draft_keyword + committed_keyword", container: "compact_classic", session: "idle" },
+    "keyword-anchor-seed": { input: "committed_keyword + committed_anchor + committed_keyword + draft_keyword", container: "compact_classic", session: "idle" },
+    "keyword-menu": { input: "tag_scope_menu_open", container: "compact_classic", session: "idle" },
+    "url-resolving": { input: "draft_keyword", container: "compact_resolving", session: "retrieving" },
+    "url-exact": { input: "committed_anchor", container: "compact_classic", session: "results_ready" },
+    "url-mismatch": { input: "followup_waiting", container: "expanded_repair", session: "empty_repair" },
+    "url-unsupported": { input: "followup_waiting", container: "expanded_repair", session: "unsupported" },
+    "url-invalid": { input: "followup_waiting", container: "expanded_repair", session: "empty_repair" },
+    "natural-init": { input: "draft_keyword", container: "expanded_agent", session: "idle" },
+    "natural-retrieving": { input: "draft_keyword", container: "expanded_agent", session: "retrieving" },
+    "natural-results": { input: "followup_waiting", container: "expanded_agent", session: "results_ready" },
+    "natural-clarifying": { input: "followup_waiting", container: "expanded_clarifying", session: "clarifying" },
+    "natural-followup-draft": { input: "draft_followup", container: "expanded_agent", session: "results_ready" },
+    "natural-followup-refining": { input: "followup_waiting", container: "expanded_agent", session: "refining" },
+    "mixed-parse": { input: "draft_keyword + committed_anchor", container: "expanded_agent", session: "retrieving" },
+    "mixed-anchor": { input: "committed_anchor + followup_waiting", container: "expanded_agent", session: "results_ready" },
+    "mixed-soft": { input: "committed_anchor + followup_waiting", container: "expanded_agent", session: "results_ready" },
+    "mixed-clarifying": { input: "committed_anchor + followup_waiting", container: "expanded_clarifying", session: "clarifying" },
+    "mixed-followup-draft": { input: "committed_anchor + draft_followup", container: "expanded_agent", session: "results_ready" },
+    "mixed-followup-refining": { input: "committed_anchor + followup_waiting", container: "expanded_agent", session: "refining" },
+    "repair-invalid": { input: "followup_waiting", container: "expanded_repair", session: "empty_repair" },
+    "repair-mismatch": { input: "followup_waiting", container: "expanded_repair", session: "empty_repair" },
+    "repair-unsupported": { input: "followup_waiting", container: "expanded_repair", session: "unsupported" },
+    "repair-empty": { input: "followup_waiting", container: "expanded_repair", session: "empty_repair" },
+    "repair-followup-draft": { input: "draft_followup", container: "expanded_repair", session: "empty_repair" },
+    "repair-followup-refining": { input: "followup_waiting", container: "expanded_repair", session: "refining" },
+    "repair-recovered-results": { input: "followup_waiting", container: "expanded_agent", session: "results_ready" },
+    "upgrade-keyword-trigger": { input: "draft_keyword + committed_keyword", container: "compact_classic", session: "idle" },
+    "upgrade-keyword-transition": { input: "draft_keyword + committed_keyword", container: "expanded_agent", session: "retrieving" },
+    "upgrade-keyword-stable": { input: "committed_keyword + followup_waiting", container: "expanded_agent", session: "results_ready" },
+    "upgrade-url-trigger": { input: "committed_anchor + draft_keyword", container: "compact_classic", session: "results_ready" },
+    "upgrade-url-transition": { input: "committed_anchor + draft_keyword", container: "expanded_agent", session: "retrieving" },
+    "upgrade-url-stable": { input: "committed_anchor + followup_waiting", container: "expanded_clarifying", session: "clarifying" }
+  };
+  var stateActions = {
+    "keyword-empty": [
+      { label: "\u5F00\u59CB\u8F93\u5165\u5173\u952E\u8BCD", target: "keyword-input" },
+      { label: "\u76F4\u63A5\u7C98\u8D34 URL", target: "url-resolving" },
+      { label: "\u76F4\u63A5\u63CF\u8FF0\u9700\u6C42\uFF0C\u8FDB\u5165\u81EA\u7136\u8BED\u8A00\u573A\u666F", target: "natural-init" }
+    ],
+    "keyword-input": [
+      { label: "\u6309\u56DE\u8F66\u56FA\u5316\u4E3A\u5173\u952E\u8BCD tag", target: "keyword-tag" },
+      { label: "\u6E05\u7A7A\u8F93\u5165\uFF0C\u56DE\u5230\u521D\u59CB\u7A7A\u767D\u6001", target: "keyword-empty" },
+      { label: "\u7EE7\u7EED\u8865\u81EA\u7136\u8BED\u8A00\uFF0C\u5347\u7EA7\u4E3A Agent \u6001", target: "upgrade-keyword-trigger" }
+    ],
+    "keyword-tag": [
+      { label: "\u7F16\u8F91\u5F53\u524D\u5173\u952E\u8BCD", target: "keyword-edit" },
+      { label: "\u5220\u9664\u6700\u540E\u4E00\u4E2A\u5173\u952E\u8BCD", target: "keyword-empty" },
+      { label: "\u7EE7\u7EED\u8F93\u5165\u7B2C\u4E8C\u4E2A\u5173\u952E\u8BCD", target: "keyword-multi" },
+      { label: "\u6253\u5F00\u5339\u914D\u76EE\u6807\u83DC\u5355", target: "keyword-menu" },
+      { label: "\u8FFD\u52A0\u81EA\u7136\u8BED\u8A00\u5E76\u5347\u7EA7", target: "upgrade-keyword-trigger" }
+    ],
+    "keyword-edit": [
+      { label: "\u63D0\u4EA4\u7F16\u8F91\u7ED3\u679C", target: "keyword-tag" },
+      { label: "\u53D6\u6D88\u7F16\u8F91\uFF0C\u6062\u590D\u539F\u5173\u952E\u8BCD", target: "keyword-tag" },
+      { label: "\u6E05\u7A7A\u5E76\u5220\u9664\u8BE5\u5173\u952E\u8BCD", target: "keyword-empty" }
+    ],
+    "keyword-multi": [
+      { label: "\u6E05\u7A7A\u5F53\u524D\u8F93\u5165\uFF0C\u56DE\u5230\u5355\u5173\u952E\u8BCD\u6001", target: "keyword-tag" },
+      { label: "\u56FA\u5316\u5F53\u524D\u7B2C\u4E8C\u4E2A\u5173\u952E\u8BCD", target: "keyword-menu" },
+      { label: "\u63D2\u5165\u4E00\u4E2A URL \u951A\u70B9\u5E76\u7EE7\u7EED\u8F93\u5165", target: "keyword-anchor-seed" },
+      { label: "\u8865\u5145\u81EA\u7136\u8BED\u8A00\u5E76\u5347\u7EA7", target: "upgrade-keyword-trigger" }
+    ],
+    "keyword-anchor-seed": [
+      { label: "\u7EE7\u7EED\u8F93\u5165\u4E0B\u4E00\u4E2A\u5173\u952E\u8BCD", target: "keyword-anchor-seed" },
+      { label: "\u5220\u9664 URL \u951A\u70B9\uFF0C\u56DE\u5230\u591A\u5173\u952E\u8BCD\u6001", target: "keyword-multi" },
+      { label: "\u8865\u5145\u81EA\u7136\u8BED\u8A00\u5E76\u5347\u7EA7", target: "upgrade-url-trigger" }
+    ],
+    "keyword-menu": [
+      { label: "\u5173\u95ED\u83DC\u5355", target: "keyword-tag" },
+      { label: "\u5207\u6362\u5339\u914D\u76EE\u6807", target: "keyword-tag" },
+      { label: "\u8F6C\u4E3A\u6392\u9664\u5173\u952E\u8BCD", target: "keyword-menu" },
+      { label: "\u5347\u7EA7\u4E3A Agent \u6001", target: "upgrade-keyword-trigger" }
+    ],
+    "url-resolving": [
+      { label: "\u8BC6\u522B\u6210\u529F", target: "url-exact" },
+      { label: "\u5E73\u53F0\u4E0D\u5339\u914D", target: "url-mismatch" },
+      { label: "\u7C7B\u578B\u4E0D\u652F\u6301", target: "url-unsupported" },
+      { label: "\u65E0\u6CD5\u8BC6\u522B", target: "url-invalid" }
+    ],
+    "url-exact": [
+      { label: "\u7EE7\u7EED\u6D4F\u89C8\u76F8\u4F3C\u9891\u9053\u7ED3\u679C", target: "url-exact" },
+      { label: "\u53EA\u67E5\u770B\u951A\u70B9\u9891\u9053", target: "url-exact" },
+      { label: "\u5220\u9664\u9891\u9053\u951A\u70B9\uFF0C\u56DE\u5230\u521D\u59CB\u7A7A\u767D\u6001", target: "keyword-empty" },
+      { label: "\u8865\u5145\u81EA\u7136\u8BED\u8A00\uFF0C\u5347\u7EA7\u4E3A Agent \u6001", target: "upgrade-url-trigger" }
+    ],
+    "url-mismatch": [
+      { label: "\u5220\u9664\u94FE\u63A5\uFF0C\u56DE\u5230\u5173\u952E\u8BCD\u6001", target: "keyword-input" },
+      { label: "\u91CD\u65B0\u8D34\u53EF\u7528 URL", target: "url-resolving" }
+    ],
+    "url-unsupported": [
+      { label: "\u6539\u4E3A\u5173\u952E\u8BCD", target: "keyword-input" },
+      { label: "\u6539\u4E3A\u81EA\u7136\u8BED\u8A00", target: "natural-init" }
+    ],
+    "url-invalid": [
+      { label: "\u91CD\u65B0\u7C98\u8D34\u94FE\u63A5", target: "url-resolving" },
+      { label: "\u6539\u4E3A\u9891\u9053\u540D", target: "keyword-input" }
+    ],
+    "natural-init": [
+      { label: "\u5F00\u59CB\u9996\u8F6E\u641C\u7D22", target: "natural-retrieving" }
+    ],
+    "natural-retrieving": [
+      { label: "\u9996\u8F6E\u7ED3\u679C\u8FD4\u56DE", target: "natural-results" },
+      { label: "\u4ECD\u65E0\u7ED3\u679C\uFF0C\u8FDB\u5165\u4FEE\u6B63\u6001", target: "repair-empty" }
+    ],
+    "natural-results": [
+      { label: "\u63D0\u51FA\u4E00\u4E2A\u9AD8\u4EF7\u503C\u8FFD\u95EE", target: "natural-clarifying" },
+      { label: "\u7EE7\u7EED\u7A33\u5B9A\u6D4F\u89C8", target: "natural-results" },
+      { label: "\u7528\u81EA\u7136\u8BED\u8A00\u4E3B\u52A8\u8865\u5145", target: "natural-followup-draft" }
+    ],
+    "natural-clarifying": [
+      { label: "\u56DE\u7B54\u8FFD\u95EE\u5E76\u5237\u65B0", target: "natural-results" },
+      { label: "\u56DE\u7B54\u540E\u4ECD\u65E0\u7ED3\u679C", target: "repair-empty" },
+      { label: "\u8DF3\u8FC7\u70B9\u9009\uFF0C\u76F4\u63A5\u8865\u4E00\u53E5", target: "natural-followup-draft" }
+    ],
+    "natural-followup-draft": [
+      { label: "\u63D0\u4EA4\u8865\u5145\u5E76\u5237\u65B0", target: "natural-followup-refining" },
+      { label: "\u653E\u5F03\u8865\u5145\uFF0C\u56DE\u5230\u7A33\u5B9A\u7ED3\u679C", target: "natural-results" }
+    ],
+    "natural-followup-refining": [
+      { label: "\u5237\u65B0\u540E\u7ED3\u679C\u7A33\u5B9A", target: "natural-results" },
+      { label: "\u5237\u65B0\u540E\u9700\u8981\u4E00\u4E2A\u8FFD\u95EE", target: "natural-clarifying" },
+      { label: "\u5237\u65B0\u540E\u4ECD\u65E0\u7ED3\u679C", target: "repair-empty" }
+    ],
+    "mixed-parse": [
+      { label: "\u6309\u951A\u70B9\u4F18\u5148\u89E3\u91CA", target: "mixed-anchor" },
+      { label: "\u5148\u964D\u7EA7\u8F6F\u6761\u4EF6", target: "mixed-soft" }
+    ],
+    "mixed-anchor": [
+      { label: "\u7EE7\u7EED\u6309\u951A\u70B9\u4F18\u5148\u8FD4\u56DE\u7ED3\u679C", target: "mixed-anchor" },
+      { label: "\u8865\u4E00\u4E2A\u6F84\u6E05\u95EE\u9898", target: "mixed-clarifying" }
+    ],
+    "mixed-soft": [
+      { label: "\u4FDD\u7559\u8F6F\u6761\u4EF6\u4E3A\u53C2\u8003\u504F\u597D", target: "mixed-soft" },
+      { label: "\u8981\u6C42\u8FDB\u4E00\u6B65\u6F84\u6E05", target: "mixed-clarifying" },
+      { label: "\u7528\u81EA\u7136\u8BED\u8A00\u4E3B\u52A8\u8865\u5145", target: "mixed-followup-draft" }
+    ],
+    "mixed-clarifying": [
+      { label: "\u56DE\u7B54\u8FFD\u95EE\u5E76\u7EE7\u7EED refine", target: "mixed-anchor" },
+      { label: "\u56DE\u7B54\u540E\u8FDB\u5165\u4FEE\u6B63\u6001", target: "repair-empty" },
+      { label: "\u8DF3\u8FC7\u70B9\u9009\uFF0C\u76F4\u63A5\u8865\u4E00\u53E5", target: "mixed-followup-draft" }
+    ],
+    "mixed-followup-draft": [
+      { label: "\u63D0\u4EA4\u8865\u5145\u5E76\u5237\u65B0", target: "mixed-followup-refining" },
+      { label: "\u653E\u5F03\u8865\u5145\uFF0C\u56DE\u5230\u8F6F\u6761\u4EF6\u5F85\u6F84\u6E05\u6001", target: "mixed-soft" }
+    ],
+    "mixed-followup-refining": [
+      { label: "\u5237\u65B0\u540E\u56DE\u5230\u951A\u70B9\u4F18\u5148\u7ED3\u679C", target: "mixed-anchor" },
+      { label: "\u5237\u65B0\u540E\u4ECD\u9700\u6F84\u6E05", target: "mixed-clarifying" },
+      { label: "\u5237\u65B0\u540E\u4ECD\u65E0\u7ED3\u679C", target: "repair-empty" }
+    ],
+    "repair-invalid": [
+      { label: "\u91CD\u65B0\u7C98\u8D34\u94FE\u63A5", target: "url-resolving" },
+      { label: "\u6539\u4E3A\u5173\u952E\u8BCD\u641C\u7D22", target: "keyword-input" },
+      { label: "\u76F4\u63A5\u63CF\u8FF0\u4FEE\u6B63\u8981\u6C42", target: "repair-followup-draft" }
+    ],
+    "repair-mismatch": [
+      { label: "\u5220\u6389\u94FE\u63A5\u7EE7\u7EED\u641C\u5F53\u524D\u5E73\u53F0", target: "keyword-input" },
+      { label: "\u6362\u5E73\u53F0\u540E\u91CD\u65B0\u5F00\u59CB", target: "url-resolving" },
+      { label: "\u76F4\u63A5\u8865\u4E00\u53E5\u4FEE\u6B63\u8981\u6C42", target: "repair-followup-draft" }
+    ],
+    "repair-unsupported": [
+      { label: "\u6539\u4E3A\u5173\u952E\u8BCD", target: "keyword-input" },
+      { label: "\u6539\u4E3A\u81EA\u7136\u8BED\u8A00", target: "natural-init" },
+      { label: "\u76F4\u63A5\u8865\u4E00\u53E5\u4FEE\u6B63\u8981\u6C42", target: "repair-followup-draft" }
+    ],
+    "repair-empty": [
+      { label: "\u653E\u5BBD\u6761\u4EF6\u540E\u91CD\u641C", target: "natural-retrieving" },
+      { label: "\u9000\u56DE\u7ECF\u5178\u5173\u952E\u8BCD\u6001", target: "keyword-tag" },
+      { label: "\u76F4\u63A5\u8865\u4E00\u53E5\u653E\u5BBD\u8981\u6C42", target: "repair-followup-draft" }
+    ],
+    "repair-followup-draft": [
+      { label: "\u63D0\u4EA4\u4FEE\u6B63\u8981\u6C42\u5E76\u5237\u65B0", target: "repair-followup-refining" },
+      { label: "\u6539\u4E3A\u5173\u952E\u8BCD\u641C\u7D22", target: "keyword-input" },
+      { label: "\u6539\u4E3A\u81EA\u7136\u8BED\u8A00\u641C\u7D22", target: "natural-init" }
+    ],
+    "repair-followup-refining": [
+      { label: "\u4FEE\u6B63\u6210\u529F\u5E76\u6062\u590D\u7ED3\u679C", target: "repair-recovered-results" },
+      { label: "\u4FEE\u6B63\u540E\u4ECD\u65E0\u7ED3\u679C", target: "repair-empty" },
+      { label: "\u4FEE\u6B63\u540E\u4ECD\u4E0D\u652F\u6301", target: "repair-unsupported" }
+    ],
+    "repair-recovered-results": [
+      { label: "\u7EE7\u7EED\u6D4F\u89C8\u6062\u590D\u540E\u7684\u7ED3\u679C", target: "repair-recovered-results" },
+      { label: "\u7EE7\u7EED\u8865\u4E00\u53E5 refine", target: "repair-followup-draft" },
+      { label: "\u56DE\u5230\u4E00\u822C\u7A33\u5B9A\u7ED3\u679C\u6001", target: "natural-results" }
+    ],
+    "upgrade-keyword-trigger": [
+      { label: "\u7CFB\u7EDF\u5F00\u59CB\u89E3\u91CA\u65B0\u589E\u81EA\u7136\u8BED\u8A00", target: "upgrade-keyword-transition" }
+    ],
+    "upgrade-keyword-transition": [
+      { label: "\u5347\u7EA7\u5B8C\u6210\uFF0C\u8FDB\u5165\u7A33\u5B9A Agent \u6001", target: "upgrade-keyword-stable" }
+    ],
+    "upgrade-keyword-stable": [
+      { label: "\u7EE7\u7EED refine", target: "natural-clarifying" },
+      { label: "\u4FDD\u6301\u5F53\u524D\u7A33\u5B9A\u7ED3\u679C", target: "natural-results" }
+    ],
+    "upgrade-url-trigger": [
+      { label: "\u5F00\u59CB\u89E3\u91CA URL \u4E0E\u81EA\u7136\u8BED\u8A00\u5173\u7CFB", target: "upgrade-url-transition" }
+    ],
+    "upgrade-url-transition": [
+      { label: "\u5347\u7EA7\u5B8C\u6210\uFF0C\u7B49\u5F85\u951A\u70B9\u786E\u8BA4", target: "upgrade-url-stable" }
+    ],
+    "upgrade-url-stable": [
+      { label: "\u7EE7\u7EED\u770B\u8FD9\u4E2A\u9891\u9053", target: "url-exact" },
+      { label: "\u8F6C\u4E3A\u627E\u7C7B\u4F3C\u9891\u9053", target: "mixed-clarifying" }
+    ]
+  };
+  var ACTION_EVENT_TYPE_MAP = {
+    "keyword-empty::\u5F00\u59CB\u8F93\u5165\u5173\u952E\u8BCD": "TYPE_KEYWORD",
+    "keyword-empty::\u76F4\u63A5\u7C98\u8D34 URL": "PASTE_URL",
+    "keyword-empty::\u76F4\u63A5\u63CF\u8FF0\u9700\u6C42\uFF0C\u8FDB\u5165\u81EA\u7136\u8BED\u8A00\u573A\u666F": "SUBMIT_SEARCH",
+    "keyword-input::\u6309\u56DE\u8F66\u56FA\u5316\u4E3A\u5173\u952E\u8BCD tag": "COMMIT_KEYWORD",
+    "keyword-input::\u6E05\u7A7A\u8F93\u5165\uFF0C\u56DE\u5230\u521D\u59CB\u7A7A\u767D\u6001": "CLEAR_DRAFT",
+    "keyword-input::\u7EE7\u7EED\u8865\u81EA\u7136\u8BED\u8A00\uFF0C\u5347\u7EA7\u4E3A Agent \u6001": "UPGRADE_TO_AGENT",
+    "keyword-tag::\u7F16\u8F91\u5F53\u524D\u5173\u952E\u8BCD": "EDIT_TAG",
+    "keyword-tag::\u5220\u9664\u6700\u540E\u4E00\u4E2A\u5173\u952E\u8BCD": "DELETE_TAG",
+    "keyword-tag::\u7EE7\u7EED\u8F93\u5165\u7B2C\u4E8C\u4E2A\u5173\u952E\u8BCD": "TYPE_KEYWORD",
+    "keyword-tag::\u6253\u5F00\u5339\u914D\u76EE\u6807\u83DC\u5355": "OPEN_TAG_SCOPE",
+    "keyword-tag::\u8FFD\u52A0\u81EA\u7136\u8BED\u8A00\u5E76\u5347\u7EA7": "UPGRADE_TO_AGENT",
+    "keyword-edit::\u63D0\u4EA4\u7F16\u8F91\u7ED3\u679C": "SAVE_TAG_EDIT",
+    "keyword-edit::\u53D6\u6D88\u7F16\u8F91\uFF0C\u6062\u590D\u539F\u5173\u952E\u8BCD": "CANCEL_TAG_EDIT",
+    "keyword-edit::\u6E05\u7A7A\u5E76\u5220\u9664\u8BE5\u5173\u952E\u8BCD": "DELETE_TAG",
+    "keyword-multi::\u6E05\u7A7A\u5F53\u524D\u8F93\u5165\uFF0C\u56DE\u5230\u5355\u5173\u952E\u8BCD\u6001": "CLEAR_DRAFT",
+    "keyword-multi::\u56FA\u5316\u5F53\u524D\u7B2C\u4E8C\u4E2A\u5173\u952E\u8BCD": "COMMIT_KEYWORD",
+    "keyword-multi::\u63D2\u5165\u4E00\u4E2A URL \u951A\u70B9\u5E76\u7EE7\u7EED\u8F93\u5165": "PASTE_URL",
+    "keyword-multi::\u8865\u5145\u81EA\u7136\u8BED\u8A00\u5E76\u5347\u7EA7": "UPGRADE_TO_AGENT",
+    "keyword-anchor-seed::\u7EE7\u7EED\u8F93\u5165\u4E0B\u4E00\u4E2A\u5173\u952E\u8BCD": "TYPE_KEYWORD",
+    "keyword-anchor-seed::\u5220\u9664 URL \u951A\u70B9\uFF0C\u56DE\u5230\u591A\u5173\u952E\u8BCD\u6001": "REMOVE_ANCHOR",
+    "keyword-anchor-seed::\u8865\u5145\u81EA\u7136\u8BED\u8A00\u5E76\u5347\u7EA7": "UPGRADE_TO_AGENT",
+    "keyword-menu::\u5173\u95ED\u83DC\u5355": "CLOSE_TAG_SCOPE",
+    "keyword-menu::\u5207\u6362\u5339\u914D\u76EE\u6807": "SET_TAG_SCOPE",
+    "keyword-menu::\u8F6C\u4E3A\u6392\u9664\u5173\u952E\u8BCD": "TOGGLE_EXCLUDE",
+    "keyword-menu::\u5347\u7EA7\u4E3A Agent \u6001": "UPGRADE_TO_AGENT",
+    "url-resolving::\u8BC6\u522B\u6210\u529F": "URL_RESOLVE_SUCCESS",
+    "url-resolving::\u5E73\u53F0\u4E0D\u5339\u914D": "URL_RESOLVE_MISMATCH",
+    "url-resolving::\u7C7B\u578B\u4E0D\u652F\u6301": "URL_RESOLVE_UNSUPPORTED",
+    "url-resolving::\u65E0\u6CD5\u8BC6\u522B": "URL_RESOLVE_INVALID",
+    "url-exact::\u7EE7\u7EED\u6D4F\u89C8\u76F8\u4F3C\u9891\u9053\u7ED3\u679C": "BROWSE_SIMILAR_RESULTS",
+    "url-exact::\u53EA\u67E5\u770B\u951A\u70B9\u9891\u9053": "VIEW_ANCHOR_ONLY",
+    "url-exact::\u5220\u9664\u9891\u9053\u951A\u70B9\uFF0C\u56DE\u5230\u521D\u59CB\u7A7A\u767D\u6001": "REMOVE_ANCHOR",
+    "url-exact::\u8865\u5145\u81EA\u7136\u8BED\u8A00\uFF0C\u5347\u7EA7\u4E3A Agent \u6001": "UPGRADE_TO_AGENT",
+    "url-mismatch::\u5220\u9664\u94FE\u63A5\uFF0C\u56DE\u5230\u5173\u952E\u8BCD\u6001": "REMOVE_ANCHOR",
+    "url-mismatch::\u91CD\u65B0\u8D34\u53EF\u7528 URL": "PASTE_URL",
+    "url-unsupported::\u6539\u4E3A\u5173\u952E\u8BCD": "TYPE_KEYWORD",
+    "url-unsupported::\u6539\u4E3A\u81EA\u7136\u8BED\u8A00": "SUBMIT_SEARCH",
+    "url-invalid::\u91CD\u65B0\u7C98\u8D34\u94FE\u63A5": "PASTE_URL",
+    "url-invalid::\u6539\u4E3A\u9891\u9053\u540D": "TYPE_KEYWORD",
+    "natural-init::\u5F00\u59CB\u9996\u8F6E\u641C\u7D22": "SUBMIT_SEARCH",
+    "natural-retrieving::\u9996\u8F6E\u7ED3\u679C\u8FD4\u56DE": "RETRIEVE_SUCCESS",
+    "natural-retrieving::\u4ECD\u65E0\u7ED3\u679C\uFF0C\u8FDB\u5165\u4FEE\u6B63\u6001": "RETRIEVE_EMPTY",
+    "natural-results::\u63D0\u51FA\u4E00\u4E2A\u9AD8\u4EF7\u503C\u8FFD\u95EE": "ASK_CLARIFYING_QUESTION",
+    "natural-results::\u7EE7\u7EED\u7A33\u5B9A\u6D4F\u89C8": "BROWSE_RESULTS",
+    "natural-results::\u7528\u81EA\u7136\u8BED\u8A00\u4E3B\u52A8\u8865\u5145": "TYPE_FOLLOWUP",
+    "natural-clarifying::\u56DE\u7B54\u8FFD\u95EE\u5E76\u5237\u65B0": "ANSWER_CLARIFYING_QUESTION",
+    "natural-clarifying::\u56DE\u7B54\u540E\u4ECD\u65E0\u7ED3\u679C": "REFINE_EMPTY",
+    "natural-clarifying::\u8DF3\u8FC7\u70B9\u9009\uFF0C\u76F4\u63A5\u8865\u4E00\u53E5": "TYPE_FOLLOWUP",
+    "natural-followup-draft::\u63D0\u4EA4\u8865\u5145\u5E76\u5237\u65B0": "SUBMIT_FOLLOWUP",
+    "natural-followup-draft::\u653E\u5F03\u8865\u5145\uFF0C\u56DE\u5230\u7A33\u5B9A\u7ED3\u679C": "CLEAR_FOLLOWUP",
+    "natural-followup-refining::\u5237\u65B0\u540E\u7ED3\u679C\u7A33\u5B9A": "REFINE_SUCCESS",
+    "natural-followup-refining::\u5237\u65B0\u540E\u9700\u8981\u4E00\u4E2A\u8FFD\u95EE": "ASK_CLARIFYING_QUESTION",
+    "natural-followup-refining::\u5237\u65B0\u540E\u4ECD\u65E0\u7ED3\u679C": "REFINE_EMPTY",
+    "mixed-parse::\u6309\u951A\u70B9\u4F18\u5148\u89E3\u91CA": "RESOLVE_INTENT",
+    "mixed-parse::\u5148\u964D\u7EA7\u8F6F\u6761\u4EF6": "DOWNGRADE_SOFT_CONDITIONS",
+    "mixed-anchor::\u7EE7\u7EED\u6309\u951A\u70B9\u4F18\u5148\u8FD4\u56DE\u7ED3\u679C": "BROWSE_RESULTS",
+    "mixed-anchor::\u8865\u4E00\u4E2A\u6F84\u6E05\u95EE\u9898": "ASK_CLARIFYING_QUESTION",
+    "mixed-soft::\u4FDD\u7559\u8F6F\u6761\u4EF6\u4E3A\u53C2\u8003\u504F\u597D": "BROWSE_RESULTS",
+    "mixed-soft::\u8981\u6C42\u8FDB\u4E00\u6B65\u6F84\u6E05": "ASK_CLARIFYING_QUESTION",
+    "mixed-soft::\u7528\u81EA\u7136\u8BED\u8A00\u4E3B\u52A8\u8865\u5145": "TYPE_FOLLOWUP",
+    "mixed-clarifying::\u56DE\u7B54\u8FFD\u95EE\u5E76\u7EE7\u7EED refine": "ANSWER_CLARIFYING_QUESTION",
+    "mixed-clarifying::\u56DE\u7B54\u540E\u8FDB\u5165\u4FEE\u6B63\u6001": "REFINE_EMPTY",
+    "mixed-clarifying::\u8DF3\u8FC7\u70B9\u9009\uFF0C\u76F4\u63A5\u8865\u4E00\u53E5": "TYPE_FOLLOWUP",
+    "mixed-followup-draft::\u63D0\u4EA4\u8865\u5145\u5E76\u5237\u65B0": "SUBMIT_FOLLOWUP",
+    "mixed-followup-draft::\u653E\u5F03\u8865\u5145\uFF0C\u56DE\u5230\u8F6F\u6761\u4EF6\u5F85\u6F84\u6E05\u6001": "CLEAR_FOLLOWUP",
+    "mixed-followup-refining::\u5237\u65B0\u540E\u56DE\u5230\u951A\u70B9\u4F18\u5148\u7ED3\u679C": "REFINE_SUCCESS",
+    "mixed-followup-refining::\u5237\u65B0\u540E\u4ECD\u9700\u6F84\u6E05": "ASK_CLARIFYING_QUESTION",
+    "mixed-followup-refining::\u5237\u65B0\u540E\u4ECD\u65E0\u7ED3\u679C": "REFINE_EMPTY",
+    "repair-invalid::\u91CD\u65B0\u7C98\u8D34\u94FE\u63A5": "PASTE_URL",
+    "repair-invalid::\u6539\u4E3A\u5173\u952E\u8BCD\u641C\u7D22": "TYPE_KEYWORD",
+    "repair-invalid::\u76F4\u63A5\u63CF\u8FF0\u4FEE\u6B63\u8981\u6C42": "APPLY_REPAIR",
+    "repair-mismatch::\u5220\u6389\u94FE\u63A5\u7EE7\u7EED\u641C\u5F53\u524D\u5E73\u53F0": "REMOVE_ANCHOR",
+    "repair-mismatch::\u6362\u5E73\u53F0\u540E\u91CD\u65B0\u5F00\u59CB": "PASTE_URL",
+    "repair-mismatch::\u76F4\u63A5\u8865\u4E00\u53E5\u4FEE\u6B63\u8981\u6C42": "APPLY_REPAIR",
+    "repair-unsupported::\u6539\u4E3A\u5173\u952E\u8BCD": "TYPE_KEYWORD",
+    "repair-unsupported::\u6539\u4E3A\u81EA\u7136\u8BED\u8A00": "SUBMIT_SEARCH",
+    "repair-unsupported::\u76F4\u63A5\u8865\u4E00\u53E5\u4FEE\u6B63\u8981\u6C42": "APPLY_REPAIR",
+    "repair-empty::\u653E\u5BBD\u6761\u4EF6\u540E\u91CD\u641C": "APPLY_REPAIR",
+    "repair-empty::\u9000\u56DE\u7ECF\u5178\u5173\u952E\u8BCD\u6001": "RESET_TO_CLASSIC",
+    "repair-empty::\u76F4\u63A5\u8865\u4E00\u53E5\u653E\u5BBD\u8981\u6C42": "TYPE_FOLLOWUP",
+    "repair-followup-draft::\u63D0\u4EA4\u4FEE\u6B63\u8981\u6C42\u5E76\u5237\u65B0": "SUBMIT_FOLLOWUP",
+    "repair-followup-draft::\u6539\u4E3A\u5173\u952E\u8BCD\u641C\u7D22": "TYPE_KEYWORD",
+    "repair-followup-draft::\u6539\u4E3A\u81EA\u7136\u8BED\u8A00\u641C\u7D22": "SUBMIT_SEARCH",
+    "repair-followup-refining::\u4FEE\u6B63\u6210\u529F\u5E76\u6062\u590D\u7ED3\u679C": "REFINE_SUCCESS",
+    "repair-followup-refining::\u4FEE\u6B63\u540E\u4ECD\u65E0\u7ED3\u679C": "REFINE_EMPTY",
+    "repair-followup-refining::\u4FEE\u6B63\u540E\u4ECD\u4E0D\u652F\u6301": "REFINE_UNSUPPORTED",
+    "repair-recovered-results::\u7EE7\u7EED\u6D4F\u89C8\u6062\u590D\u540E\u7684\u7ED3\u679C": "BROWSE_RESULTS",
+    "repair-recovered-results::\u7EE7\u7EED\u8865\u4E00\u53E5 refine": "TYPE_FOLLOWUP",
+    "repair-recovered-results::\u56DE\u5230\u4E00\u822C\u7A33\u5B9A\u7ED3\u679C\u6001": "RESET_TO_CLASSIC",
+    "upgrade-keyword-trigger::\u7CFB\u7EDF\u5F00\u59CB\u89E3\u91CA\u65B0\u589E\u81EA\u7136\u8BED\u8A00": "UPGRADE_TO_AGENT",
+    "upgrade-keyword-transition::\u5347\u7EA7\u5B8C\u6210\uFF0C\u8FDB\u5165\u7A33\u5B9A Agent \u6001": "RETRIEVE_SUCCESS",
+    "upgrade-keyword-stable::\u7EE7\u7EED refine": "ASK_CLARIFYING_QUESTION",
+    "upgrade-keyword-stable::\u4FDD\u6301\u5F53\u524D\u7A33\u5B9A\u7ED3\u679C": "BROWSE_RESULTS",
+    "upgrade-url-trigger::\u5F00\u59CB\u89E3\u91CA URL \u4E0E\u81EA\u7136\u8BED\u8A00\u5173\u7CFB": "UPGRADE_TO_AGENT",
+    "upgrade-url-transition::\u5347\u7EA7\u5B8C\u6210\uFF0C\u7B49\u5F85\u951A\u70B9\u786E\u8BA4": "RETRIEVE_SUCCESS",
+    "upgrade-url-stable::\u7EE7\u7EED\u770B\u8FD9\u4E2A\u9891\u9053": "BROWSE_RESULTS",
+    "upgrade-url-stable::\u8F6C\u4E3A\u627E\u7C7B\u4F3C\u9891\u9053": "ASK_CLARIFYING_QUESTION"
+  };
+  function getSceneByFixtureId(fixtureId) {
+    const entry = Object.entries(sceneMap).find(([, list]) => list.some((item) => item.id === fixtureId));
+    return entry?.[0] || "keyword";
+  }
+  function normalizeInputState(input) {
+    if (!input) return "empty_input";
+    if (input.includes("draft_followup")) return "draft_followup";
+    if (input.includes("followup_waiting")) return "followup_waiting";
+    if (input.includes("editing_keyword")) return "editing_keyword";
+    if (input.includes("tag_scope_menu_open")) return "tag_scope_menu_open";
+    if (input.includes("excluded_keyword")) return "excluded_keyword";
+    if (input.includes("committed_anchor")) return "committed_anchor";
+    if (input.includes("draft_keyword")) return "draft_keyword";
+    if (input.includes("committed_keyword")) return "committed_keyword";
+    return "empty_input";
+  }
+  function buildMachineTriplet(displayTriplet) {
+    return {
+      input: normalizeInputState(displayTriplet.input),
+      container: displayTriplet.container,
+      session: displayTriplet.session
+    };
+  }
+  function buildFixtures() {
+    return Object.fromEntries(
+      Object.entries(scenarios).map(([fixtureId, ui]) => {
+        const scene = getSceneByFixtureId(fixtureId);
+        const sceneState = sceneMap[scene].find((item) => item.id === fixtureId);
+        const actions = (stateActions[fixtureId] || []).map((action) => ({
+          ...action,
+          targetFixtureId: action.target,
+          event: {
+            type: ACTION_EVENT_TYPE_MAP[`${fixtureId}::${action.label}`] || "LOAD_FIXTURE",
+            targetFixtureId: action.target
+          }
+        }));
+        return [
+          fixtureId,
+          {
+            id: fixtureId,
+            scene,
+            label: sceneState?.label || fixtureId,
+            ui,
+            triplet: stateTriples[fixtureId],
+            machineTriplet: buildMachineTriplet(stateTriples[fixtureId]),
+            nodeIds: stateNodeMap[fixtureId] || [],
+            actions
+          }
+        ];
+      })
+    );
+  }
+  var fixtures = buildFixtures();
+  var actor = createActor(
+    createSearchboxOrchestratorMachine({
+      fixtures,
+      initialFixtureId: INITIAL_FIXTURE_ID,
+      initialVariant: INITIAL_VARIANT
+    })
+  );
+  actor.start();
+  function renderShell(themeName, target) {
+    const snapshot = actor.getSnapshot();
+    const data = getFixture(snapshot, fixtures).ui;
+    const isExpanded = data.mode === "expanded";
+    const isResolving = data.mode === "resolving";
+    const keywordFlow = data.keywordFlow;
+    target.innerHTML = `
     <div class="search-box ${isExpanded ? "expanded" : "classic"}">
       <div class="shell-chrome">
-        <div class="search-icon">${isResolving ? "↻" : "⌕"}</div>
+        <div class="search-icon">${isResolving ? "\u21BB" : "\u2315"}</div>
         <div class="main-input">
           ${keywordFlow ? renderKeywordFlow(keywordFlow) : `<p class="line-1">${data.inputTitle}</p>`}
           ${data.inputHint ? `<p class="line-2">${data.inputHint}</p>` : ""}
@@ -1315,75 +4537,61 @@ function renderShell(themeName, target) {
       ${keywordFlow?.openMenu ? renderTargetMenu() : ""}
     </div>
   `;
-}
-
-function renderKeywordFlow(flow) {
-  if (flow.followup) {
-    const tags = (flow.tags || [])
-      .map(
+  }
+  function renderKeywordFlow(flow) {
+    if (flow.followup) {
+      const tags2 = (flow.tags || []).map(
         (tag) => `
           <span class="query-token ${tag.exclude ? "exclude" : ""}">
             <span>${tag.text}</span>
             <span class="divider"></span>
             <span class="scope">${tag.scope}</span>
           </span>
-        `,
-      )
-      .join("");
-
-    const content = flow.draft
-      ? flow.draft
-      : `<span class="followup-placeholder">${flow.placeholder || "继续补充..."}</span>`;
-
-    return `
+        `
+      ).join("");
+      const content = flow.draft ? flow.draft : `<span class="followup-placeholder">${flow.placeholder || "\u7EE7\u7EED\u8865\u5145..."}</span>`;
+      return `
       <div class="query-line followup-line">
-        ${tags}
+        ${tags2}
         <span class="followup-fragment with-caret">${content}</span>
       </div>
     `;
-  }
-
-  const tags = flow.tags
-    .map(
+    }
+    const tags = flow.tags.map(
       (tag) => `
         <span class="query-token ${tag.exclude ? "exclude" : ""}">
           <span>${tag.text}</span>
           <span class="divider"></span>
           <span class="scope">${tag.scope}</span>
         </span>
-      `,
-    )
-    .join("");
-
-  const draft = `<span class="draft-fragment with-caret">${flow.draft || ""}</span>`;
-
-  return `
+      `
+    ).join("");
+    const draft = `<span class="draft-fragment with-caret">${flow.draft || ""}</span>`;
+    return `
     <div class="query-line">
       ${tags}
       ${draft}
     </div>
   `;
-}
-
-function renderTargetMenu() {
-  return `
+  }
+  function renderTargetMenu() {
+    return `
     <div class="target-menu">
-      <div class="menu-item is-active">按频道标签</div>
-      <div class="menu-item">按频道名</div>
-      <div class="menu-item">按频道简介</div>
-      <div class="menu-item">按发布内容</div>
-      <div class="menu-item">从全部来源</div>
+      <div class="menu-item is-active">\u6309\u9891\u9053\u6807\u7B7E</div>
+      <div class="menu-item">\u6309\u9891\u9053\u540D</div>
+      <div class="menu-item">\u6309\u9891\u9053\u7B80\u4ECB</div>
+      <div class="menu-item">\u6309\u53D1\u5E03\u5185\u5BB9</div>
+      <div class="menu-item">\u4ECE\u5168\u90E8\u6765\u6E90</div>
       <div class="menu-divider"></div>
       <div class="toggle-row">
-        <span>排除该关键词</span>
+        <span>\u6392\u9664\u8BE5\u5173\u952E\u8BCD</span>
         <span class="toggle-pill"></span>
       </div>
     </div>
   `;
-}
-
-function renderStatus(status) {
-  return `
+  }
+  function renderStatus(status) {
+    return `
     <div class="micro-status ${status.spinner ? "" : "is-stable"}">
       <div class="status-topline">
         <span>status</span>
@@ -1396,14 +4604,10 @@ function renderStatus(status) {
       <span class="state-badge ${status.stateClass || ""}">${status.state}</span>
     </div>
   `;
-}
-
-function renderSession(session) {
-  const meta = session.meta
-    .map((item) => `<span class="chip">${item}</span>`)
-    .join("");
-
-  return `
+  }
+  function renderSession(session) {
+    const meta = session.meta.map((item) => `<span class="chip">${item}</span>`).join("");
+    return `
     <section class="session-card">
       <div class="card-label">
         <span>task_summary</span>
@@ -1412,16 +4616,12 @@ function renderSession(session) {
       <div class="meta-row" style="margin-top:10px;">${meta}</div>
     </section>
   `;
-}
-
-function renderQuestion(question) {
-  const choices = question.choices
-    .map((item) => `<span class="chip soft">${item}</span>`)
-    .join("");
-  const slotLabel = question.slot || "question";
-  const badge = slotLabel === "repair_options" ? "repair" : "one question only";
-
-  return `
+  }
+  function renderQuestion(question) {
+    const choices = question.choices.map((item) => `<span class="chip soft">${item}</span>`).join("");
+    const slotLabel = question.slot || "question";
+    const badge = slotLabel === "repair_options" ? "repair" : "one question only";
+    return `
     <section class="question-card">
       <div class="card-label">
         <span>${slotLabel}</span>
@@ -1432,334 +4632,275 @@ function renderQuestion(question) {
       <p class="card-text" style="margin-top:10px;">${question.caption}</p>
     </section>
   `;
-}
-
-function renderConditions(conditions) {
-  const hard = conditions.hard.map((item) => `<span class="chip">${item}</span>`).join("");
-  const soft = conditions.soft
-    .map((item) => `<span class="chip reference">${item}</span>`)
-    .join("");
-
-  return `
+  }
+  function renderConditions(conditions) {
+    const hard = conditions.hard.map((item) => `<span class="chip">${item}</span>`).join("");
+    const soft = conditions.soft.map((item) => `<span class="chip reference">${item}</span>`).join("");
+    return `
     <section class="conditions-card">
       <div class="card-label">
         <span>conditions</span>
-        <span class="legend">硬条件与参考偏好分开表达</span>
+        <span class="legend">\u786C\u6761\u4EF6\u4E0E\u53C2\u8003\u504F\u597D\u5206\u5F00\u8868\u8FBE</span>
       </div>
       ${conditions.anchor ? `
         <div class="anchor-group">
-          <div class="legend">锚点</div>
+          <div class="legend">\u951A\u70B9</div>
           <div class="chip-row">
             <span class="chip anchor">${conditions.anchor}</span>
           </div>
         </div>
       ` : ""}
       <div class="soft-group" style="${conditions.anchor ? "" : "margin-top:0;padding-top:0;border-top:none;"}">
-        <div class="legend">已生效硬条件</div>
+        <div class="legend">\u5DF2\u751F\u6548\u786C\u6761\u4EF6</div>
         <div class="chip-row">${hard}</div>
       </div>
       ${conditions.soft.length ? `
         <div class="soft-group">
-          <div class="legend">参考偏好 / 待澄清</div>
+          <div class="legend">\u53C2\u8003\u504F\u597D / \u5F85\u6F84\u6E05</div>
           <div class="chip-row">${soft}</div>
         </div>
       ` : ""}
       <p class="card-text" style="margin-top:12px;">${conditions.hint}</p>
     </section>
   `;
-}
-
-function rerenderAll() {
-  Object.entries(shellTargets).forEach(([variant, target]) => renderShell(variant, target));
-}
-
-function applyVariantVisibility() {
-  document.querySelectorAll(".demo-panel").forEach((panel) => {
-    const isVisible = panel.dataset.cardVariant === currentVariant;
-    panel.hidden = !isVisible;
-  });
-}
-
-function renderSubstatePicker() {
-  const picker = document.getElementById("substate-picker");
-  const states = sceneMap[currentScene] || [];
-  picker.innerHTML = states
-    .map(
+  }
+  function rerenderAll() {
+    Object.entries(shellTargets).forEach(([variant, target]) => renderShell(variant, target));
+  }
+  function applyVariantVisibility() {
+    const currentVariant = getVariant(actor.getSnapshot());
+    document.querySelectorAll(".demo-panel").forEach((panel) => {
+      const isVisible = panel.dataset.cardVariant === currentVariant;
+      panel.hidden = !isVisible;
+    });
+  }
+  function renderSubstatePicker() {
+    const snapshot = actor.getSnapshot();
+    const currentScene = getScene(snapshot);
+    const currentFixtureId = getCurrentFixtureId(snapshot);
+    const picker = document.getElementById("substate-picker");
+    const states = sceneMap[currentScene] || [];
+    picker.innerHTML = states.map(
       (state) => `
-        <button data-scenario="${state.id}" class="${state.id === currentScenario ? "is-active" : ""}">
+        <button data-scenario="${state.id}" class="${state.id === currentFixtureId ? "is-active" : ""}">
           ${state.label}
         </button>
-      `,
-    )
-    .join("");
-}
-
-function applyStateMachineSelection() {
-  const activeNodes = new Set(stateNodeMap[currentScenario] || []);
-  document.querySelectorAll(".svg-state-target").forEach((node) => {
-    const isActive = activeNodes.has(node.dataset.node);
-    node.classList.toggle("is-selected", isActive);
-  });
-  document.querySelectorAll(".svg-transition-target").forEach((edge) => {
-    edge.classList.toggle("is-selected", edge.dataset.target === currentScenario);
-  });
-}
-
-function enhanceTransitionTargets() {
-  document.querySelectorAll(".svg-transition-target").forEach((group) => {
-    if (group.querySelector(".svg-edge-hit")) return;
-    const edge = group.querySelector(".svg-edge");
-    if (!edge) return;
-    const hit = edge.cloneNode(false);
-    hit.removeAttribute("marker-end");
-    hit.classList.remove("main", "branch");
-    hit.classList.add("svg-edge-hit");
-    group.insertBefore(hit, group.firstChild);
-  });
-}
-
-function setTransitionVisualState(group, state) {
-  const edge = group.querySelector(".svg-edge.main, .svg-edge.branch");
-  const label = group.querySelector(".svg-edge-label");
-  if (!edge || !label) return;
-  const isBranch = edge.classList.contains("branch");
-
-  if (state === "hover") {
-    edge.style.stroke = isBranch ? "#ef8a2e" : "#2d7ff9";
-    edge.style.strokeWidth = "4.5px";
-    edge.style.filter = isBranch
-      ? "drop-shadow(0 0 8px rgba(239, 138, 46, 0.22))"
-      : "drop-shadow(0 0 8px rgba(45, 127, 249, 0.28))";
-    label.style.fill = isBranch ? "#a55e1f" : "#1f252e";
-    label.style.fontWeight = "800";
-    return;
+      `
+    ).join("");
   }
-
-  edge.style.stroke = "";
-  edge.style.strokeWidth = "";
-  edge.style.filter = "";
-  label.style.fill = "";
-  label.style.fontWeight = "";
-}
-
-function clearSvgFocus(svg) {
-  if (!svg) return;
-  svg.classList.remove("is-focusing");
-  svg.querySelectorAll(".svg-state-target").forEach((node) => {
-    node.classList.remove("is-dim", "is-highlight", "is-context");
-  });
-  svg.querySelectorAll(".svg-transition-target").forEach((group) => {
-    group.classList.remove("is-dim", "is-highlight", "is-context");
-    setTransitionVisualState(group, "base");
-  });
-}
-
-function focusTransition(group) {
-  const svg = group.closest("svg");
-  if (!svg) return;
-  clearSvgFocus(svg);
-  svg.classList.add("is-focusing");
-
-  const from = group.dataset.from;
-  const to = group.dataset.to;
-
-  svg.querySelectorAll(".svg-state-target").forEach((node) => node.classList.add("is-dim"));
-  svg.querySelectorAll(".svg-transition-target").forEach((edge) => edge.classList.add("is-dim"));
-
-  group.classList.remove("is-dim");
-  group.classList.add("is-highlight");
-  setTransitionVisualState(group, "hover");
-
-  svg.querySelectorAll(".svg-state-target").forEach((node) => {
-    if (node.dataset.node === from || node.dataset.node === to) {
-      node.classList.remove("is-dim");
-      node.classList.add("is-highlight");
+  function applyStateMachineSelection() {
+    const snapshot = actor.getSnapshot();
+    const currentFixture = getFixture(snapshot, fixtures);
+    const activeNodes = new Set(currentFixture.nodeIds || []);
+    document.querySelectorAll(".svg-state-target").forEach((node) => {
+      const isActive = activeNodes.has(node.dataset.node);
+      node.classList.toggle("is-selected", isActive);
+    });
+    document.querySelectorAll(".svg-transition-target").forEach((edge) => {
+      edge.classList.toggle("is-selected", edge.dataset.target === currentFixture.id);
+    });
+  }
+  function enhanceTransitionTargets() {
+    document.querySelectorAll(".svg-transition-target").forEach((group) => {
+      if (!group.dataset.event) {
+        group.dataset.event = "LOAD_FIXTURE";
+      }
+      if (group.querySelector(".svg-edge-hit")) return;
+      const edge = group.querySelector(".svg-edge");
+      if (!edge) return;
+      const hit = edge.cloneNode(false);
+      hit.removeAttribute("marker-end");
+      hit.classList.remove("main", "branch");
+      hit.classList.add("svg-edge-hit");
+      group.insertBefore(hit, group.firstChild);
+    });
+  }
+  function setTransitionVisualState(group, state) {
+    const edge = group.querySelector(".svg-edge.main, .svg-edge.branch");
+    const label = group.querySelector(".svg-edge-label");
+    if (!edge || !label) return;
+    const isBranch = edge.classList.contains("branch");
+    if (state === "hover") {
+      edge.style.stroke = isBranch ? "#ef8a2e" : "#2d7ff9";
+      edge.style.strokeWidth = "4.5px";
+      edge.style.filter = isBranch ? "drop-shadow(0 0 8px rgba(239, 138, 46, 0.22))" : "drop-shadow(0 0 8px rgba(45, 127, 249, 0.28))";
+      label.style.fill = isBranch ? "#a55e1f" : "#1f252e";
+      label.style.fontWeight = "800";
+      return;
     }
-  });
-
-  svg.querySelectorAll(".svg-transition-target").forEach((edge) => {
-    if (edge === group) return;
-    if ([from, to].includes(edge.dataset.from) || [from, to].includes(edge.dataset.to)) {
-      edge.classList.remove("is-dim");
-      edge.classList.add("is-context");
-    }
-  });
-
-  svg.querySelectorAll(".svg-state-target").forEach((node) => {
-    if (node.classList.contains("is-highlight")) return;
+    edge.style.stroke = "";
+    edge.style.strokeWidth = "";
+    edge.style.filter = "";
+    label.style.fill = "";
+    label.style.fontWeight = "";
+  }
+  function clearSvgFocus(svg) {
+    if (!svg) return;
+    svg.classList.remove("is-focusing");
+    svg.querySelectorAll(".svg-state-target").forEach((node) => {
+      node.classList.remove("is-dim", "is-highlight", "is-context");
+    });
+    svg.querySelectorAll(".svg-transition-target").forEach((group) => {
+      group.classList.remove("is-dim", "is-highlight", "is-context");
+      setTransitionVisualState(group, "base");
+    });
+  }
+  function focusTransition(group) {
+    const svg = group.closest("svg");
+    if (!svg) return;
+    clearSvgFocus(svg);
+    svg.classList.add("is-focusing");
+    const from = group.dataset.from;
+    const to = group.dataset.to;
+    svg.querySelectorAll(".svg-state-target").forEach((node) => node.classList.add("is-dim"));
+    svg.querySelectorAll(".svg-transition-target").forEach((edge) => edge.classList.add("is-dim"));
+    group.classList.remove("is-dim");
+    group.classList.add("is-highlight");
+    setTransitionVisualState(group, "hover");
+    svg.querySelectorAll(".svg-state-target").forEach((node) => {
+      if (node.dataset.node === from || node.dataset.node === to) {
+        node.classList.remove("is-dim");
+        node.classList.add("is-highlight");
+      }
+    });
+  }
+  function focusState(node) {
+    const svg = node.closest("svg");
+    if (!svg) return;
+    clearSvgFocus(svg);
+    svg.classList.add("is-focusing");
     const nodeId = node.dataset.node;
-    const isContext = [...svg.querySelectorAll(".svg-transition-target.is-context")].some((edge) =>
-      edge.dataset.from === nodeId || edge.dataset.to === nodeId,
+    const transitions = [...svg.querySelectorAll(".svg-transition-target")];
+    const directEdges = transitions.filter((edge) => edge.dataset.from === nodeId || edge.dataset.to === nodeId);
+    const directNeighborIds = new Set(
+      directEdges.flatMap((edge) => [edge.dataset.from, edge.dataset.to]).filter((id) => id && id !== nodeId)
     );
-    if (isContext) {
-      node.classList.remove("is-dim");
-      node.classList.add("is-context");
-    }
-  });
-}
-
-function focusState(node) {
-  const svg = node.closest("svg");
-  if (!svg) return;
-  clearSvgFocus(svg);
-  svg.classList.add("is-focusing");
-
-  const nodeId = node.dataset.node;
-  svg.querySelectorAll(".svg-state-target").forEach((item) => item.classList.add("is-dim"));
-  svg.querySelectorAll(".svg-transition-target").forEach((edge) => edge.classList.add("is-dim"));
-
-  node.classList.remove("is-dim");
-  node.classList.add("is-highlight");
-
-  svg.querySelectorAll(".svg-transition-target").forEach((edge) => {
-    if (edge.dataset.from === nodeId || edge.dataset.to === nodeId) {
+    svg.querySelectorAll(".svg-state-target").forEach((item) => item.classList.add("is-dim"));
+    svg.querySelectorAll(".svg-transition-target").forEach((edge) => edge.classList.add("is-dim"));
+    node.classList.remove("is-dim");
+    node.classList.add("is-highlight");
+    directEdges.forEach((edge) => {
       edge.classList.remove("is-dim");
       edge.classList.add("is-context");
-    }
-  });
-
-  svg.querySelectorAll(".svg-state-target").forEach((item) => {
-    if (item === node) return;
-    const itemId = item.dataset.node;
-    const isContext = [...svg.querySelectorAll(".svg-transition-target.is-context")].some((edge) =>
-      edge.dataset.from === itemId || edge.dataset.to === itemId,
-    );
-    if (isContext) {
-      item.classList.remove("is-dim");
-      item.classList.add("is-context");
-    }
-  });
-}
-
-function renderStateDock() {
-  const triple = stateTriples[currentScenario];
-  const actions = stateActions[currentScenario] || [];
-  document.getElementById("state-triplet").innerHTML = `
-    <span class="triple-chip"><strong>input_state</strong><em>${triple?.input || "—"}</em></span>
-    <span class="triple-chip"><strong>container_state</strong><em>${triple?.container || "—"}</em></span>
-    <span class="triple-chip"><strong>session_state</strong><em>${triple?.session || "—"}</em></span>
+    });
+    svg.querySelectorAll(".svg-state-target").forEach((item) => {
+      if (item === node) return;
+      if (directNeighborIds.has(item.dataset.node)) {
+        item.classList.remove("is-dim");
+        item.classList.add("is-context");
+      }
+    });
+  }
+  function renderStateDock() {
+    const snapshot = actor.getSnapshot();
+    const fixture = getFixture(snapshot, fixtures);
+    const triple = getTriplet(snapshot);
+    const currentScene = getScene(snapshot);
+    const currentFixtureId = getCurrentFixtureId(snapshot);
+    const currentVariant = getVariant(snapshot);
+    const actions = fixture.actions || [];
+    document.getElementById("state-triplet").innerHTML = `
+    <span class="triple-chip"><strong>input_state</strong><em>${triple?.input || "\u2014"}</em></span>
+    <span class="triple-chip"><strong>container_state</strong><em>${triple?.container || "\u2014"}</em></span>
+    <span class="triple-chip"><strong>session_state</strong><em>${triple?.session || "\u2014"}</em></span>
     <span class="triple-chip subtle"><strong>scene</strong><em>${currentScene}</em></span>
-    <span class="triple-chip subtle"><strong>substate</strong><em>${currentScenario}</em></span>
+    <span class="triple-chip subtle"><strong>substate</strong><em>${currentFixtureId}</em></span>
     <span class="triple-chip subtle"><strong>variant</strong><em>${currentVariant}</em></span>
   `;
-  document.getElementById("state-actions").innerHTML = actions
-    .map((action) => `<button class="dock-action" data-target="${action.target}">${action.label}</button>`)
-    .join("");
-}
-
-document.getElementById("scene-picker").addEventListener("click", (event) => {
-  const button = event.target.closest("button[data-scene]");
-  if (!button) return;
-  currentScene = button.dataset.scene;
-  currentScenario = sceneMap[currentScene][0].id;
-  document
-    .querySelectorAll("#scene-picker button")
-    .forEach((node) => node.classList.toggle("is-active", node === button));
-  renderSubstatePicker();
-  rerenderAll();
-  renderStateDock();
-});
-
-document.getElementById("substate-picker").addEventListener("click", (event) => {
-  const button = event.target.closest("button[data-scenario]");
-  if (!button) return;
-  currentScenario = button.dataset.scenario;
-  document
-    .querySelectorAll("#substate-picker button")
-    .forEach((node) => node.classList.toggle("is-active", node === button));
-  rerenderAll();
-  applyStateMachineSelection();
-  renderStateDock();
-});
-
-document.getElementById("variant-picker").addEventListener("click", (event) => {
-  const button = event.target.closest("button[data-variant]");
-  if (!button) return;
-  document
-    .querySelectorAll("#variant-picker button")
-    .forEach((node) => node.classList.toggle("is-active", node === button));
-
-  currentVariant = button.dataset.variant;
-  applyVariantVisibility();
-  renderStateDock();
-});
-
-document.querySelector(".state-machine-panel").addEventListener("click", (event) => {
-  const transition = event.target.closest(".svg-transition-target");
-  if (transition?.dataset.target) {
-    const targetScenario = transition.dataset.target;
-    const sceneEntry = Object.entries(sceneMap).find(([, list]) => list.some((item) => item.id === targetScenario));
-    if (!sceneEntry) return;
-    currentScene = sceneEntry[0];
-    currentScenario = targetScenario;
-    document
-      .querySelectorAll("#scene-picker button")
-      .forEach((node) => node.classList.toggle("is-active", node.dataset.scene === currentScene));
+    document.getElementById("state-actions").innerHTML = actions.map(
+      (action) => `<button class="dock-action" data-event-type="${action.event.type}" data-target-fixture="${action.targetFixtureId}">${action.label}</button>`
+    ).join("");
+  }
+  document.getElementById("scene-picker").addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-scene]");
+    if (!button) return;
+    const scene = button.dataset.scene;
+    actor.send({ type: "LOAD_FIXTURE", fixtureId: sceneMap[scene][0].id });
+    document.querySelectorAll("#scene-picker button").forEach((node) => node.classList.toggle("is-active", node.dataset.scene === scene));
+    renderSubstatePicker();
+    rerenderAll();
+    renderStateDock();
+  });
+  document.getElementById("substate-picker").addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-scenario]");
+    if (!button) return;
+    actor.send({ type: "LOAD_FIXTURE", fixtureId: button.dataset.scenario });
+    document.querySelectorAll("#substate-picker button").forEach((node) => node.classList.toggle("is-active", node === button));
+    rerenderAll();
+    applyStateMachineSelection();
+    renderStateDock();
+  });
+  document.getElementById("variant-picker").addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-variant]");
+    if (!button) return;
+    document.querySelectorAll("#variant-picker button").forEach((node) => node.classList.toggle("is-active", node === button));
+    actor.send({ type: "SELECT_VARIANT", variant: button.dataset.variant });
+    applyVariantVisibility();
+    renderStateDock();
+  });
+  document.querySelector(".state-machine-panel").addEventListener("click", (event) => {
+    const transition = event.target.closest(".svg-transition-target");
+    if (transition?.dataset.target) {
+      const targetScenario = transition.dataset.target;
+      actor.send({ type: transition.dataset.event || "LOAD_FIXTURE", fixtureId: targetScenario });
+      const currentScene2 = getScene(actor.getSnapshot());
+      document.querySelectorAll("#scene-picker button").forEach((node) => node.classList.toggle("is-active", node.dataset.scene === currentScene2));
+      renderSubstatePicker();
+      applyStateMachineSelection();
+      rerenderAll();
+      renderStateDock();
+      return;
+    }
+    const target = event.target.closest(".svg-state-target");
+    if (!target) return;
+    actor.send({ type: "LOAD_FIXTURE", fixtureId: target.dataset.scenario });
+    const currentScene = getScene(actor.getSnapshot());
+    document.querySelectorAll("#scene-picker button").forEach((node) => node.classList.toggle("is-active", node.dataset.scene === currentScene));
     renderSubstatePicker();
     applyStateMachineSelection();
     rerenderAll();
     renderStateDock();
-    return;
-  }
-  const target = event.target.closest(".svg-state-target");
-  if (!target) return;
-  currentScene = target.dataset.scene;
-  currentScenario = target.dataset.scenario;
-  document
-    .querySelectorAll("#scene-picker button")
-    .forEach((node) => node.classList.toggle("is-active", node.dataset.scene === currentScene));
-  renderSubstatePicker();
-  applyStateMachineSelection();
+  });
+  document.querySelector(".state-machine-panel").addEventListener("mouseover", (event) => {
+    const transition = event.target.closest(".svg-transition-target");
+    if (transition) {
+      focusTransition(transition);
+      return;
+    }
+    const state = event.target.closest(".svg-state-target");
+    if (state) {
+      focusState(state);
+    }
+  });
+  document.querySelectorAll(".machine-svg").forEach((svg) => {
+    svg.addEventListener("mouseleave", () => clearSvgFocus(svg));
+  });
+  document.getElementById("state-actions").addEventListener("click", (event) => {
+    const button = event.target.closest(".dock-action");
+    if (!button) return;
+    actor.send({
+      type: button.dataset.eventType,
+      targetFixtureId: button.dataset.targetFixture
+    });
+    const currentScene = getScene(actor.getSnapshot());
+    document.querySelectorAll("#scene-picker button").forEach((node) => node.classList.toggle("is-active", node.dataset.scene === currentScene));
+    renderSubstatePicker();
+    applyStateMachineSelection();
+    rerenderAll();
+    renderStateDock();
+  });
+  document.getElementById("compare-toggle").addEventListener("click", () => {
+    const section = document.getElementById("compare-section");
+    const button = document.getElementById("compare-toggle");
+    const expanded = section.classList.toggle("is-expanded");
+    section.classList.toggle("is-collapsed", !expanded);
+    button.setAttribute("aria-expanded", String(expanded));
+    button.textContent = expanded ? "\u6536\u8D77" : "\u5C55\u5F00";
+  });
   rerenderAll();
-  renderStateDock();
-});
-
-document.querySelector(".state-machine-panel").addEventListener("mouseover", (event) => {
-  const transition = event.target.closest(".svg-transition-target");
-  if (transition) {
-    focusTransition(transition);
-    return;
-  }
-
-  const state = event.target.closest(".svg-state-target");
-  if (state) {
-    focusState(state);
-  }
-});
-
-document.querySelectorAll(".machine-svg").forEach((svg) => {
-  svg.addEventListener("mouseleave", () => clearSvgFocus(svg));
-});
-
-document.getElementById("state-actions").addEventListener("click", (event) => {
-  const button = event.target.closest(".dock-action");
-  if (!button) return;
-  const target = button.dataset.target;
-  const sceneEntry = Object.entries(sceneMap).find(([, list]) => list.some((item) => item.id === target));
-  if (!sceneEntry) return;
-  currentScene = sceneEntry[0];
-  currentScenario = target;
-  document
-    .querySelectorAll("#scene-picker button")
-    .forEach((node) => node.classList.toggle("is-active", node.dataset.scene === currentScene));
+  applyVariantVisibility();
   renderSubstatePicker();
+  enhanceTransitionTargets();
   applyStateMachineSelection();
-  rerenderAll();
   renderStateDock();
-});
-
-document.getElementById("compare-toggle").addEventListener("click", () => {
-  const section = document.getElementById("compare-section");
-  const button = document.getElementById("compare-toggle");
-  const expanded = section.classList.toggle("is-expanded");
-  section.classList.toggle("is-collapsed", !expanded);
-  button.setAttribute("aria-expanded", String(expanded));
-  button.textContent = expanded ? "收起" : "展开";
-});
-
-rerenderAll();
-applyVariantVisibility();
-renderSubstatePicker();
-enhanceTransitionTargets();
-applyStateMachineSelection();
-renderStateDock();
+})();
