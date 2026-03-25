@@ -13,6 +13,7 @@ import {
   getLanguage
 } from '../app/lib/file-types'
 import { invokeAiJson } from './lib/ai-cli'
+import { hasMissingDemoConfigFiles } from './lib/demo-configs'
 import { shouldIncludeManifestFile } from './lib/manifest-files'
 
 const DASHBOARD_ROOT = process.cwd()
@@ -245,7 +246,9 @@ async function generateManifest() {
   try {
     const manifestStat = await fs.stat(MANIFEST_PATH)
     const newestMtime = await getNewestMtime([DOCUMENTS_DIR, DEMOS_DIR])
-    if (manifestStat.mtimeMs > newestMtime) {
+    const missingDemoConfigs = await hasMissingDemoConfigFiles(DEMOS_DIR)
+
+    if (manifestStat.mtimeMs > newestMtime && !missingDemoConfigs) {
       console.log('⚡ 内容未变动，跳过 manifest 生成')
       return
     }
