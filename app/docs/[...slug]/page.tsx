@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { readDocument, readManifest, flattenNavTree } from '@/app/lib/content'
+import { readDocument, readManifest, flattenNavTree, resolveDocumentTitle } from '@/app/lib/content'
 import { DocumentViewer } from '@/app/components/DocumentViewer'
 import { notFound } from 'next/navigation'
 import { Calendar, Tag, FileCode, FileText, Image, File, Download } from 'lucide-react'
@@ -39,13 +39,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   try {
     const doc = await readDocument(slugPath)
+    const metadataTitle = resolveDocumentTitle({
+      fileName: doc.title,
+      rawContent: doc.rawContent ?? '',
+      isMarkdown: doc.fileType === 'markdown',
+    })
     const description =
       typeof doc.frontmatter.description === 'string' && doc.frontmatter.description.trim()
         ? doc.frontmatter.description.trim()
         : DEFAULT_DESCRIPTION
 
     return {
-      title: `${doc.title} | PM Dashboard`,
+      title: `${metadataTitle} | PM Dashboard`,
       description,
     }
   } catch {

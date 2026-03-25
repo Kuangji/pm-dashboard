@@ -174,11 +174,6 @@ export async function readDocument(slug: string): Promise<Document> {
   // Handle text files
   if (isText) {
     const rawContent = await fs.readFile(filePath, 'utf-8')
-    const resolvedTitle = resolveDocumentTitle({
-      fileName: docItem.name,
-      rawContent,
-      isMarkdown: fileTypeInfo.category === 'markdown',
-    })
 
     // Parse frontmatter for markdown files
     let frontmatter: Record<string, any> = {}
@@ -203,7 +198,7 @@ export async function readDocument(slug: string): Promise<Document> {
 
     return {
       slug,
-      title: resolvedTitle,
+      title: docItem.name,
       content,
       rawContent,
       frontmatter,
