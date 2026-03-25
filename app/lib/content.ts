@@ -54,6 +54,36 @@ export interface Document {
   isBinary: boolean
 }
 
+interface ResolveDocumentTitleOptions {
+  fileName: string
+  rawContent: string
+  isMarkdown: boolean
+}
+
+export function resolveDocumentTitle({
+  fileName,
+  rawContent,
+  isMarkdown,
+}: ResolveDocumentTitleOptions): string {
+  if (!isMarkdown) {
+    return fileName
+  }
+
+  const parsed = matter(rawContent)
+  const frontmatterTitle = parsed.data.title
+
+  if (typeof frontmatterTitle === 'string' && frontmatterTitle.trim()) {
+    return frontmatterTitle.trim()
+  }
+
+  const headingMatch = parsed.content.match(/^#\s+(.+)$/m)
+  if (headingMatch?.[1]?.trim()) {
+    return headingMatch[1].trim()
+  }
+
+  return fileName
+}
+
 export async function readManifest(): Promise<Manifest> {
   const filePath = path.join(CONTENT_DIR, 'manifest.json')
   const content = await fs.readFile(filePath, 'utf-8')
@@ -144,6 +174,11 @@ export async function readDocument(slug: string): Promise<Document> {
   // Handle text files
   if (isText) {
     const rawContent = await fs.readFile(filePath, 'utf-8')
+    const resolvedTitle = resolveDocumentTitle({
+      fileName: docItem.name,
+      rawContent,
+      isMarkdown: fileTypeInfo.category === 'markdown',
+    })
 
     // Parse frontmatter for markdown files
     let frontmatter: Record<string, any> = {}
@@ -168,7 +203,7 @@ export async function readDocument(slug: string): Promise<Document> {
 
     return {
       slug,
-      title: docItem.name,
+      title: resolvedTitle,
       content,
       rawContent,
       frontmatter,

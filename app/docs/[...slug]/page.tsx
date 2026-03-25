@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { readDocument, readManifest, flattenNavTree } from '@/app/lib/content'
 import { DocumentViewer } from '@/app/components/DocumentViewer'
 import { notFound } from 'next/navigation'
@@ -6,6 +7,8 @@ import { Calendar, Tag, FileCode, FileText, Image, File, Download } from 'lucide
 interface Props {
   params: Promise<{ slug: string[] }>
 }
+
+const DEFAULT_DESCRIPTION = '产品管理系统'
 
 // File type icons mapping
 function getFileTypeIcon(fileType: string, isImage: boolean) {
@@ -28,6 +31,29 @@ function getFileTypeLabel(fileType: string, language?: string) {
     binary: 'Binary',
   }
   return labels[fileType] || fileType
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const slugPath = Array.isArray(slug) ? slug.map(decodeURIComponent).join('/') : decodeURIComponent(slug)
+
+  try {
+    const doc = await readDocument(slugPath)
+    const description =
+      typeof doc.frontmatter.description === 'string' && doc.frontmatter.description.trim()
+        ? doc.frontmatter.description.trim()
+        : DEFAULT_DESCRIPTION
+
+    return {
+      title: `${doc.title} | PM Dashboard`,
+      description,
+    }
+  } catch {
+    return {
+      title: 'PM Dashboard',
+      description: DEFAULT_DESCRIPTION,
+    }
+  }
 }
 
 export default async function DocPage({ params }: Props) {
