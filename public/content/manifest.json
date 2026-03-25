@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-03-25T09:39:31.572Z",
+  "updatedAt": "2026-03-25T09:52:15.055Z",
   "navigation": {
     "docs": [
       {
@@ -1871,14 +1871,14 @@
       },
       {
         "id": "cool_hello_world_v2",
-        "title": "Hello World V2",
-        "description": "NoxInfluencer 2026 现代化 UI 展示页面，采用玻璃态设计与蓝紫渐变色彩系统。",
+        "title": "Hello World v2",
+        "description": "NoxInfluencer 2026 现代化欢迎页，采用玻璃态设计与蓝紫渐变色主题。",
         "path": "demos/cool_hello_world_v2/index.html",
         "thumbnail": "",
         "tags": [
-          "UI设计",
+          "欢迎页",
           "玻璃态",
-          "品牌展示"
+          "UI组件"
         ]
       },
       {
@@ -1895,13 +1895,13 @@
       },
       {
         "id": "poe_328_bd_website",
-        "title": "POE BD收集",
-        "description": "流放之路3.28赛季开荒BD流派收集与展示网站，支持多种BD攻略浏览",
+        "title": "流放之路BD收集",
+        "description": "流放之路3.28赛季开荒流派收集站，帮助玩家快速找到适合的开荒BD",
         "path": "demos/poe_328_bd_website/index.html",
         "thumbnail": "",
         "tags": [
           "游戏工具",
-          "POE",
+          "流放之路",
           "BD收集"
         ]
       }
