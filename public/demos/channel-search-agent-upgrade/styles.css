@@ -104,6 +104,10 @@ body {
   flex-wrap: wrap;
 }
 
+.control-group.is-hidden {
+  display: none;
+}
+
 .control-label {
   min-width: 72px;
   font-size: 13px;
@@ -136,11 +140,55 @@ body {
   box-shadow: 0 10px 20px rgba(31, 37, 46, 0.16);
 }
 
+.compare-section {
+  position: sticky;
+  top: 12px;
+  z-index: 6;
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(35, 45, 60, 0.08);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.compare-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.compare-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.collapse-toggle {
+  border: 1px solid rgba(35, 45, 60, 0.1);
+  background: rgba(255, 255, 255, 0.8);
+  color: #455061;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
 .compare-stack {
   display: grid;
   grid-template-columns: 1fr;
   gap: 18px;
-  margin-bottom: 18px;
+}
+
+.compare-section.is-collapsed .compare-stack {
+  display: none;
+}
+
+.compare-section.is-collapsed .compare-header {
+  margin-bottom: 0;
 }
 
 .state-machine-panel {
@@ -275,6 +323,7 @@ body {
 
 .svg-state-target {
   cursor: pointer;
+  transition: opacity 160ms ease;
 }
 
 .svg-state-target .svg-node,
@@ -319,9 +368,11 @@ body {
 
 .svg-edge {
   fill: none;
-  stroke-width: 3;
+  stroke-width: 2.5;
   stroke-linecap: round;
   stroke-linejoin: round;
+  transition: 160ms ease;
+  pointer-events: none;
 }
 
 .svg-edge.main {
@@ -339,10 +390,80 @@ body {
   paint-order: stroke;
   stroke: rgba(255, 255, 255, 0.94);
   stroke-width: 6px;
+  transition: 160ms ease;
+  pointer-events: none;
 }
 
 .svg-edge-label.branch {
   fill: #b56a27;
+}
+
+.svg-transition-target {
+  cursor: pointer;
+  transition: opacity 160ms ease;
+}
+
+.svg-edge-hit {
+  fill: none;
+  stroke: rgba(0, 0, 0, 0);
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: stroke;
+}
+
+.svg-transition-target:hover .svg-edge.main,
+.svg-transition-target.is-selected .svg-edge.main,
+.svg-transition-target.is-highlight .svg-edge.main {
+  stroke: #2d7ff9;
+  stroke-width: 4.5;
+  filter: drop-shadow(0 0 8px rgba(45, 127, 249, 0.28));
+}
+
+.svg-transition-target:hover .svg-edge.branch,
+.svg-transition-target.is-selected .svg-edge.branch,
+.svg-transition-target.is-highlight .svg-edge.branch {
+  stroke: #ef8a2e;
+  stroke-width: 4.5;
+  filter: drop-shadow(0 0 8px rgba(239, 138, 46, 0.22));
+}
+
+.svg-transition-target:hover .svg-edge-label,
+.svg-transition-target.is-selected .svg-edge-label,
+.svg-transition-target.is-highlight .svg-edge-label {
+  fill: #1f252e;
+  font-weight: 800;
+}
+
+.svg-transition-target:hover .svg-edge-label.branch,
+.svg-transition-target.is-selected .svg-edge-label.branch,
+.svg-transition-target.is-highlight .svg-edge-label.branch {
+  fill: #a55e1f;
+}
+
+.machine-svg.is-focusing .svg-state-target.is-dim,
+.machine-svg.is-focusing .svg-transition-target.is-dim {
+  opacity: 0.18;
+}
+
+.svg-state-target.is-highlight .svg-node {
+  stroke: rgba(31, 37, 46, 0.22);
+  stroke-width: 2.8;
+  filter: drop-shadow(0 10px 20px rgba(31, 37, 46, 0.1));
+}
+
+.svg-state-target.is-highlight .svg-node-title {
+  fill: #1f252e;
+}
+
+.svg-state-target.is-context .svg-node {
+  stroke: rgba(31, 37, 46, 0.2);
+  stroke-width: 2;
+  filter: drop-shadow(0 6px 14px rgba(31, 37, 46, 0.06));
+}
+
+.svg-state-target.is-context .svg-node-title {
+  fill: #1f252e;
 }
 
 .path-grid {
@@ -368,6 +489,82 @@ body {
   font-size: 13px;
   line-height: 1.7;
   color: var(--muted);
+}
+
+.state-dock {
+  position: sticky;
+  bottom: 10px;
+  z-index: 8;
+  margin: 24px auto 0;
+  width: min(1480px, calc(100vw - 64px));
+  padding: 14px 16px;
+  border-radius: 22px;
+  background: rgba(20, 26, 38, 0.92);
+  border: 1px solid rgba(103, 122, 150, 0.18);
+  box-shadow: 0 18px 40px rgba(8, 12, 20, 0.32);
+  backdrop-filter: blur(18px);
+  color: #eef6ff;
+}
+
+.dock-section + .dock-section {
+  margin-top: 12px;
+}
+
+.dock-label {
+  margin: 0 0 8px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(214, 230, 247, 0.66);
+}
+
+.dock-triplet,
+.dock-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.triple-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.triple-chip strong {
+  font-size: 11px;
+  color: rgba(191, 224, 255, 0.78);
+}
+
+.triple-chip em {
+  font-style: normal;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.triple-chip.subtle {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.dock-action {
+  border: none;
+  padding: 9px 12px;
+  border-radius: 12px;
+  background: rgba(90, 132, 255, 0.18);
+  color: #f2f7ff;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 160ms ease;
+}
+
+.dock-action:hover {
+  background: rgba(90, 132, 255, 0.3);
 }
 
 .demo-panel {
@@ -577,6 +774,23 @@ body {
   align-items: center;
   gap: 6px;
   flex: 0 0 auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.slot-chip {
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: rgba(31, 37, 46, 0.06);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #6d7788;
+}
+
+.theme-neon .slot-chip {
+  background: rgba(107, 237, 255, 0.12);
+  color: #c7f6ff;
 }
 
 .mini-button,
@@ -608,6 +822,10 @@ body {
   flex-wrap: wrap;
   gap: 8px;
   min-height: 42px;
+}
+
+.followup-line {
+  align-items: center;
 }
 
 .query-token {
@@ -656,6 +874,28 @@ body {
   font-size: 15px;
   font-weight: 500;
   color: #253143;
+}
+
+.followup-fragment {
+  min-width: 160px;
+  padding: 2px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2d3a4d;
+}
+
+.followup-fragment.with-caret::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 26px;
+  margin-left: 5px;
+  vertical-align: -6px;
+  background: currentColor;
+}
+
+.followup-placeholder {
+  color: #8e99aa;
 }
 
 .draft-fragment.with-caret::after {
@@ -1067,5 +1307,9 @@ body {
 
   .hero {
     flex-direction: column;
+  }
+
+  .state-dock {
+    width: min(100vw - 24px, 1480px);
   }
 }

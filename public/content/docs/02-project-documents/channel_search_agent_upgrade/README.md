@@ -2,6 +2,7 @@
 
 ## 文档清单
 
+- `agent_response_contract_v1.md`
 - `state_machine_v1.md`
 - `input_v1.md`
 - `spec_v1.md`
@@ -12,9 +13,10 @@
 
 1. `input_v1.md`
 2. `state_machine_v1.md`
-3. `spec_v1.md`
-4. `design_v1.md`
-5. `prd_v1.md`
+3. `agent_response_contract_v1.md`
+4. `spec_v1.md`
+5. `design_v1.md`
+6. `prd_v1.md`
 
 ## 一句话定义
 
@@ -24,3 +26,13 @@
 - 搜索框外保持原状
 - 展开后的搜索框内部组件局部 AI 化
 - 所有后续交互修改先改状态机，再同步 Demo 与其余文档
+
+## 维护规则
+
+- 当前阶段的讨论主战场是 Demo，但 **Demo 不是单独真相源**。
+- 任何 Demo 改动都必须同步回：
+  - `state_machine_v1.md`
+  - `spec_v1.md`
+  - `design_v1.md`
+  - 必要时 `prd_v1.md`
+- 若 Demo 与文档不一致，以文档修正为优先，而不是默认以 Demo 为准。

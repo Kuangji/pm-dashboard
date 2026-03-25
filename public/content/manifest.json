@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-03-20T14:52:44.320Z",
+  "updatedAt": "2026-03-25T00:32:53.282Z",
   "navigation": {
     "docs": [
       {
@@ -43,6 +43,15 @@
                 "name": "README.md",
                 "path": "02-project-documents/channel_search_agent_upgrade/README.md",
                 "slug": "02-project-documents/channel_search_agent_upgrade/README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "agent_response_contract_v1.md",
+                "path": "02-project-documents/channel_search_agent_upgrade/agent_response_contract_v1.md",
+                "slug": "02-project-documents/channel_search_agent_upgrade/agent_response_contract_v1.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
@@ -1818,13 +1827,13 @@
       {
         "id": "cool_hello_world_v2",
         "title": "Cool Hello World v2",
-        "description": "NoxInfluencer 2026 现代玻璃态风格 UI 展示原型，采用蓝紫渐变主题色",
+        "description": "NoxInfluencer 2026 风格化展示组件，采用玻璃态设计和现代渐变配色方案。",
         "path": "demos/cool_hello_world_v2/index.html",
         "thumbnail": "",
         "tags": [
-          "UI展示",
-          "玻璃态",
-          "原型Demo"
+          "UI组件",
+          "玻璃态设计",
+          "展示"
         ]
       },
       {
@@ -1841,14 +1850,14 @@
       },
       {
         "id": "poe_328_bd_website",
-        "title": "流放之路BD库",
-        "description": "流放之路3.28赛季开荒BD收集站点，帮助玩家快速查找和选择适合的开荒流派配置。",
+        "title": "POE BD 收集站",
+        "description": "流放之路3.28 Mirage赛季开荒BD收集网站，展示各流派Build攻略与天赋配置。",
         "path": "demos/poe_328_bd_website/index.html",
         "thumbnail": "",
         "tags": [
-          "游戏",
+          "游戏工具",
           "POE",
-          "BD收集"
+          "BD攻略"
         ]
       }
     ]
