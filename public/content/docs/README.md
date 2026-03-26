@@ -21,6 +21,7 @@
 └── 03-research/  # 研究报告
     ├── channel_search_agent_upgrade/  # 频道搜索升级研究
     ├── keyword_search_竞研/  # 关键词竞品调研分析
+    ├── modash_竞研/  # Modash 竞品研究
     └── nox_ai_transform_quick_validation/  # Nox AI转型快速验证
 ```
 <!-- CONTENT-TREE-END -->
@@ -34,4 +35,4 @@
 
 ---
 
-*最后更新: 2026-02-27*
+*最后更新: 2026-03-26*

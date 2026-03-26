@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-03-25T09:52:15.055Z",
+  "updatedAt": "2026-03-26T03:53:26.539Z",
   "navigation": {
     "docs": [
       {
@@ -908,9 +908,36 @@
                 "children": [
                   {
                     "type": "file",
+                    "name": "4MWNN.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports_showcase_v2/4MWNN.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports_showcase_v2/4MWNN.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "6r1W8.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports_showcase_v2/6r1W8.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports_showcase_v2/6r1W8.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
                     "name": "SEBrk.png",
                     "path": "02-project-documents/other_social_search_741/prototype_exports_showcase_v2/SEBrk.png",
                     "slug": "02-project-documents/other_social_search_741/prototype_exports_showcase_v2/SEBrk.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "YRrJw.png",
+                    "path": "02-project-documents/other_social_search_741/prototype_exports_showcase_v2/YRrJw.png",
+                    "slug": "02-project-documents/other_social_search_741/prototype_exports_showcase_v2/YRrJw.png",
                     "fileType": "image",
                     "isText": false,
                     "isImage": true
@@ -1645,6 +1672,251 @@
           },
           {
             "type": "directory",
+            "name": "modash_竞研",
+            "path": "03-research/modash_竞研",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "03-research/modash_竞研/README.md",
+                "slug": "03-research/modash_竞研/README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "_plan.md",
+                "path": "03-research/modash_竞研/_plan.md",
+                "slug": "03-research/modash_竞研/_plan.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "directory",
+                "name": "00_executive_summary",
+                "path": "03-research/modash_竞研/00_executive_summary",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "一页版速览.md",
+                    "path": "03-research/modash_竞研/00_executive_summary/一页版速览.md",
+                    "slug": "03-research/modash_竞研/00_executive_summary/一页版速览.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "执行摘要.md",
+                    "path": "03-research/modash_竞研/00_executive_summary/执行摘要.md",
+                    "slug": "03-research/modash_竞研/00_executive_summary/执行摘要.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "01_official_positioning",
+                "path": "03-research/modash_竞研/01_official_positioning",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "modash_官方定位与产品叙事.md",
+                    "path": "03-research/modash_竞研/01_official_positioning/modash_官方定位与产品叙事.md",
+                    "slug": "03-research/modash_竞研/01_official_positioning/modash_官方定位与产品叙事.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "modash_定价与商业模式.md",
+                    "path": "03-research/modash_竞研/01_official_positioning/modash_定价与商业模式.md",
+                    "slug": "03-research/modash_竞研/01_official_positioning/modash_定价与商业模式.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "02_community_voice",
+                "path": "03-research/modash_竞研/02_community_voice",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "G2_Capterra_评论摘要.md",
+                    "path": "03-research/modash_竞研/02_community_voice/G2_Capterra_评论摘要.md",
+                    "slug": "03-research/modash_竞研/02_community_voice/G2_Capterra_评论摘要.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "Reddit_用户声音.md",
+                    "path": "03-research/modash_竞研/02_community_voice/Reddit_用户声音.md",
+                    "slug": "03-research/modash_竞研/02_community_voice/Reddit_用户声音.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "社区口碑汇总.md",
+                    "path": "03-research/modash_竞研/02_community_voice/社区口碑汇总.md",
+                    "slug": "03-research/modash_竞研/02_community_voice/社区口碑汇总.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "03_feature_teardown",
+                "path": "03-research/modash_竞研/03_feature_teardown",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "modash_侧重点判断.md",
+                    "path": "03-research/modash_竞研/03_feature_teardown/modash_侧重点判断.md",
+                    "slug": "03-research/modash_竞研/03_feature_teardown/modash_侧重点判断.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "modash_功能地图.md",
+                    "path": "03-research/modash_竞研/03_feature_teardown/modash_功能地图.md",
+                    "slug": "03-research/modash_竞研/03_feature_teardown/modash_功能地图.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "modash_能力拆解.md",
+                    "path": "03-research/modash_竞研/03_feature_teardown/modash_能力拆解.md",
+                    "slug": "03-research/modash_竞研/03_feature_teardown/modash_能力拆解.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "04_competitive_matrix",
+                "path": "03-research/modash_竞研/04_competitive_matrix",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "vs_nox_detailed_matrix.md",
+                    "path": "03-research/modash_竞研/04_competitive_matrix/vs_nox_detailed_matrix.md",
+                    "slug": "03-research/modash_竞研/04_competitive_matrix/vs_nox_detailed_matrix.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "头部平台定位图.md",
+                    "path": "03-research/modash_竞研/04_competitive_matrix/头部平台定位图.md",
+                    "slug": "03-research/modash_竞研/04_competitive_matrix/头部平台定位图.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "平台对比总表.md",
+                    "path": "03-research/modash_竞研/04_competitive_matrix/平台对比总表.md",
+                    "slug": "03-research/modash_竞研/04_competitive_matrix/平台对比总表.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "05_insights",
+                "path": "03-research/modash_竞研/05_insights",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "机会点与风险.md",
+                    "path": "03-research/modash_竞研/05_insights/机会点与风险.md",
+                    "slug": "03-research/modash_竞研/05_insights/机会点与风险.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "核心发现.md",
+                    "path": "03-research/modash_竞研/05_insights/核心发现.md",
+                    "slug": "03-research/modash_竞研/05_insights/核心发现.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "竞争优势与短板.md",
+                    "path": "03-research/modash_竞研/05_insights/竞争优势与短板.md",
+                    "slug": "03-research/modash_竞研/05_insights/竞争优势与短板.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "06_raw_sources",
+                "path": "03-research/modash_竞研/06_raw_sources",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "community_sources.md",
+                    "path": "03-research/modash_竞研/06_raw_sources/community_sources.md",
+                    "slug": "03-research/modash_竞研/06_raw_sources/community_sources.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "official_sources.md",
+                    "path": "03-research/modash_竞研/06_raw_sources/official_sources.md",
+                    "slug": "03-research/modash_竞研/06_raw_sources/official_sources.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "review_sources.md",
+                    "path": "03-research/modash_竞研/06_raw_sources/review_sources.md",
+                    "slug": "03-research/modash_竞研/06_raw_sources/review_sources.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "directory",
             "name": "nox_ai_transform_quick_validation",
             "path": "03-research/nox_ai_transform_quick_validation",
             "children": [
@@ -1871,14 +2143,14 @@
       },
       {
         "id": "cool_hello_world_v2",
-        "title": "Hello World v2",
-        "description": "NoxInfluencer 2026 现代化欢迎页，采用玻璃态设计与蓝紫渐变色主题。",
+        "title": "酷炫 Hello World V2",
+        "description": "NoxInfluencer 品牌风格的视觉展示 Demo，采用玻璃态设计与渐变配色方案",
         "path": "demos/cool_hello_world_v2/index.html",
         "thumbnail": "",
         "tags": [
-          "欢迎页",
+          "视觉设计",
           "玻璃态",
-          "UI组件"
+          "品牌展示"
         ]
       },
       {
@@ -1895,13 +2167,13 @@
       },
       {
         "id": "poe_328_bd_website",
-        "title": "流放之路BD收集",
-        "description": "流放之路3.28赛季开荒流派收集站，帮助玩家快速找到适合的开荒BD",
+        "title": "POE BD 收集站",
+        "description": "流放之路3.28幻象赛季开荒BD收集展示页面，方便玩家浏览和选择开荒流派",
         "path": "demos/poe_328_bd_website/index.html",
         "thumbnail": "",
         "tags": [
           "游戏工具",
-          "流放之路",
+          "POE",
           "BD收集"
         ]
       }
