@@ -29,10 +29,11 @@
 
 ## 维护规则
 
-- 当前阶段的讨论主战场是 Demo，但 **Demo 不是单独真相源**。
+- 当前阶段的讨论主战场是 Demo，但 **Demo 不是状态真相源**。
+- `state_machine_v1.md` 是本项目交互状态与状态映射的唯一基准。
 - 任何 Demo 改动都必须同步回：
   - `state_machine_v1.md`
   - `spec_v1.md`
   - `design_v1.md`
   - 必要时 `prd_v1.md`
-- 若 Demo 与文档不一致，以文档修正为优先，而不是默认以 Demo 为准。
+- 若 Demo 与文档不一致，先以 `state_machine_v1.md` 修正，再同步其他文档与 Demo。

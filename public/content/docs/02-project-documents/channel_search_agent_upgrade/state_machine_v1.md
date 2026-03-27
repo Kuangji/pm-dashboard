@@ -3,13 +3,13 @@
 > 文档阶段：State Machine  
 > 状态：Draft v1  
 > 创建日期：2026-03-20  
-> 作用：本项目交互状态的权威来源
+> 作用：本项目交互状态的唯一基准
 
 ---
 
 ## 一、文档职责
 
-本文件是 `channel_search_agent_upgrade` 的交互状态机权威源。
+本文件是 `channel_search_agent_upgrade` 的交互状态机唯一基准。
 
 后续所有涉及以下内容的修改，必须遵循这个顺序：
 
@@ -19,12 +19,15 @@
 4. 再同步修改 Demo
 5. 最后检查 `prd_v1.md` 和发布目录是否需要跟随更新
 
-如果 Demo、Spec、Design 与本文件冲突，以本文件为准。
+如果 Demo、Spec、Design、PRD、Agent Response Contract、XState 实现 与本文件冲突，一律以本文件为准。
 
 补充规则：
 
 - 当前阶段的所有 Demo 迭代，默认视为“状态机驱动的可视化表达”，不是独立设计探索。
 - 因此任何 Demo 改动，只要改变了状态定义、状态边界、状态触发、状态表现或状态映射，就必须先或同步修改本文件。
+- `state_machine_v1.md` 不是“优先级最高的参考文档”，而是唯一状态真相源。
+- `spec_v1.md`、`design_v1.md`、`agent_response_contract_v1.md` 只负责解释、约束或展开本状态机，不得各自新增平行状态定义。
+- Demo 与 XState machine 只负责实现和可视化本状态机，不得先于本文件发明新状态、新路径或新的默认语义。
 
 ---
 
@@ -67,6 +70,41 @@
 - 状态图中的路径点击，应与状态栏里的动作共用同一套目标状态映射
 - 对用户而言，点击路径线和点击状态栏动作，本质上都是“跳到这条转移的目标子状态”
 
+### 2.3 EFSM 约束：状态与 Context 同时定义语义
+
+本项目不是纯离散 FSM，而是 **EFSM（Extended Finite State Machine）**：
+
+- `state` 用于表达用户可感知的阶段变化
+- `context` 用于表达当前阶段下的参数、来源、局部 UI 附着与动作分派条件
+
+判断原则：
+
+- 如果差异会改变：
+  - 用户感知阶段
+  - 搜索框整体骨架
+  - 可用动作集合的一级分叉
+  则优先建模为 `state`
+- 如果差异只改变：
+  - 某个 tag 的属性
+  - 某个局部菜单是否打开
+  - 某条修正路径的来源
+  - 文案、动作排序或某动作是否显示
+  则优先建模为 `context`
+
+当前明确允许进入 context 的字段包括但不限于：
+
+- `repair_reason`
+- `query_shape`
+- `source_stage`
+- `keyword_tags[]`
+- `active_tag_id`
+- `active_tag_menu`
+
+因此：
+
+- 不允许为了单个 tag 的局部属性变化而无限新增全局输入状态
+- 不允许为了同一修正骨架的来源差异而无限新增平行修正状态
+
 ---
 
 ## 三、输入状态机
@@ -82,8 +120,25 @@
 | `followup_waiting` | 原始 query 已被系统吸收，输入框正等待用户补充下一轮自然语言 |
 | `draft_followup` | 用户正在输入新的自然语言补充 |
 | `committed_keyword` | 已被确认并固化的关键词 tag |
-| `excluded_keyword` | 已开启排除的关键词 tag |
-| `tag_scope_menu_open` | 当前关键词 tag 的匹配目标菜单已展开 |
+
+### 3.1A 关键词 tag 上下文
+
+关键词 tag 的局部属性不再单独建模为全局输入状态，而通过 context 表达。
+
+推荐字段：
+
+- `keyword_tags[]`
+  - `text`
+  - `scope`
+  - `is_excluded`
+- `active_tag_id`
+- `active_tag_menu`
+
+约束：
+
+- `is_excluded` 仅影响对应 tag，不影响其他 tag
+- `active_tag_menu` 必须附着在某个具体 tag 上，不能漂成全局设置面板
+- 切换排除、切换匹配目标、打开/关闭 tag 菜单，默认都属于 `committed_keyword` 状态下的 context 变化
 
 ### 3.2 输入状态转移
 
@@ -102,15 +157,11 @@
 | `followup_waiting` | 用户开始补充自然语言 | `draft_followup` |
 | `draft_followup` | 清空补充内容 / 取消补充 | `followup_waiting` |
 | `draft_followup` | 用户提交补充内容 | 交由容器态 / 会话态继续流转 |
-| `committed_keyword` | 点击匹配目标区域 | `tag_scope_menu_open` |
-| `tag_scope_menu_open` | 选择新的匹配目标 | `committed_keyword` |
-| `tag_scope_menu_open` | 关闭菜单 | `committed_keyword` |
-| `tag_scope_menu_open` | 打开排除开关 | `excluded_keyword` |
-| `excluded_keyword` | 点击编辑当前 tag | `editing_keyword` |
-| `excluded_keyword` | 点击匹配目标区域 | `tag_scope_menu_open` |
-| `excluded_keyword` | 关闭排除开关 | `committed_keyword` |
-| `committed_keyword` / `excluded_keyword` | 删除 tag 且仍有其他 tag | `committed_keyword` |
-| `committed_keyword` / `excluded_keyword` | 删除最后一个 tag | `empty_input` |
+| `committed_keyword` | 打开 / 关闭某个 tag 菜单 | `committed_keyword`（context 更新） |
+| `committed_keyword` | 切换匹配目标 | `committed_keyword`（context 更新） |
+| `committed_keyword` | 打开 / 关闭排除 | `committed_keyword`（context 更新） |
+| `committed_keyword` | 删除 tag 且仍有其他 tag | `committed_keyword` |
+| `committed_keyword` | 删除最后一个 tag | `empty_input` |
 
 ### 3.3 输入层约束
 
@@ -121,8 +172,7 @@
 - Agent 中间稳定态下，不再强制保留 `draft_keyword`
 - `committed_keyword` 必须保留其匹配目标配置
 - `committed_anchor` 代表一个已锁定的精确锚点，不得与普通关键词 tag 混为同一语义
-- `excluded_keyword` 仅改变该关键词自身语义，不影响其他关键词
-- `tag_scope_menu_open` 必须附着在当前 tag 上，不能漂成独立设置面板
+- `keyword tag` 的 `scope / is_excluded / active menu` 默认视为 context，不再各自膨胀为输入层全局状态
 - 输入状态机是编辑器状态机，允许局部循环；它不应被设计成单向无环流程
 - 经典态允许形成一个“复合查询种子”：
   - `0..n` 个 `committed_keyword`
@@ -206,6 +256,8 @@
 - 默认策略固定为 `先搜后追问`
 - 每次只允许一个高价值追问
 - `empty_repair` 必须留在搜索框内部完成
+- `empty_repair` 只承载“完全无结果 / 无有效召回”的修正路径
+- `low_recall`（结果极少/可用性不足）不应直接改写会话状态，而应在 `results_ready` 上附加修正提示能力
 - 结果解释、条件解释都服务于当前会话，不另起独立对话线程
 - loading 动画只允许出现在真正进行中的状态：
   - `retrieving`
@@ -234,12 +286,13 @@
 |---|---|---|
 | `natural-followup-draft` | `natural-followup-refining` | `natural-results` / `natural-clarifying` / `repair-empty` |
 | `mixed-followup-draft` | `mixed-followup-refining` | `mixed-anchor` / `mixed-clarifying` / `repair-empty` |
-| `repair-followup-draft` | `repair-followup-refining` | `repair-recovered-results` / `repair-empty` / `repair-unsupported` |
+| `repair-followup-draft` | `repair-followup-refining` | `results_ready (source_stage=post_repair)` / `repair-empty` / `repair-unsupported` |
 
 补充约束：
 
-- `repair-recovered-results` 是从修正态恢复成功后的稳定结果态
-- 它不应被硬塞回原始 `natural-results` 或 `mixed-anchor`，否则会丢失“这是修正后恢复”的语义
+- 修正态恢复成功后，会话层仍是 `results_ready`，但必须附加：
+  - `source_stage = post_repair`
+- “这是修正后恢复的结果”通过 context 保留，不再单独膨胀为 `repair-recovered-results` 会话状态
 - Demo 中必须把 `draft -> refining -> 稳定态/修正态` 这一段显式画出来，不能只画 follow-up 的入口
 
 ---
@@ -263,6 +316,12 @@
   - `committed_anchor`
   - `锚点频道` 置顶
   - 其余结果为相似频道召回
+- 在 URL 成功识别后，允许继续追加关键词形成 `URL+关键词种子`，该状态与 `关键词+URL种子` 共享同一输入语义
+- 当纯 URL 的相似召回结果极少（`low_recall`）时：
+  - 结果仍继续展示
+  - 会话保持 `results_ready`
+  - 容器保持当前态，不得自动切到 `expanded_repair`
+  - 搜索框内出现轻提示入口，等待用户手动展开修正
 
 ### 6.3 纯自然语言
 
@@ -282,6 +341,22 @@
   - `keyword` 作为显式条件
   - V1 不做前置冲突判别
   - 默认 as-is 进入首轮搜索
+  - `关键词+URL种子` 与 `URL+关键词种子` 只表示不同起手方式下的提交前编辑态
+  - 两者一旦触发搜索，必须收敛到共享的搜索后路径：
+    - `mixed-parse`
+    - `mixed-anchor`
+  - 首轮搜索的结果语义应为：
+    - 先锁定 `anchor`
+    - 召回相似频道候选
+    - `keyword` 在用户首屏可见的相似频道结果中已经生效
+  - `anchor` 作为 pinned reference 保留置顶可见
+  - `keyword` 作用于相似频道结果集，不影响 `anchor` 本身的可见性
+- 当 `anchor + keyword` 的可见结果极少（`low_recall`）时：
+  - 结果仍继续展示
+  - 会话保持 `results_ready`
+  - 容器保持当前态，不得自动切到 `expanded_repair`
+  - 修正原因标注为 `low_recall`
+  - 通过搜索框内部轻提示入口，等待用户手动展开修正
 
 ### 6.4A 中间态主动补充路径
 
@@ -367,9 +442,12 @@
 
 #### 约束
 
-- URL 精确语义优先于软偏好
-- 不得静默把 URL 解释成“找类似频道”
-- 若要从“看这个频道”变成“找类似频道”，必须显式说明或追问
+- URL 锚点语义优先于软偏好
+- URL-only 的默认基线语义已经是 `锚点搜索`：
+  - 锚点频道置顶
+  - 其余结果为相似频道召回
+- 在 URL 起手升级为 Agent 态后，不得丢失锚点语义，也不得把 URL 降格为普通关键词
+- 新增自然语言必须被解释为 refine / 附加约束 / 新任务说明之一，而不是静默覆盖既有锚点
 
 ### 6.7 Agent -> 经典态回退
 
@@ -382,6 +460,72 @@
   - 容器回到 `compact_classic`
   - 输入层保留显式 tag / anchor
   - Agent 派生解释层被移除
+
+### 6.8 `anchor + keyword` 例外路径：URL 无法生成 anchor
+
+当用户输入同时包含 URL 与 keyword，但 URL 在识别阶段无法形成有效 anchor 时：
+
+- 不得把整条输入直接判死
+- keyword 必须被保留
+- 只把 URL 这部分判定为失败并进入修正态
+
+推荐转移：
+
+1. 提交 `anchor + keyword`
+2. URL 识别失败（invalid / mismatch / unsupported）
+3. 进入 `expanded_repair + empty_repair`
+4. 用户通过修正动作继续
+
+修正动作基线（与 8.5 Action Registry 对齐）：
+
+- `A_REPAIR_FIX_URL`
+  - 语义：修正 URL 后重试解析
+  - 转移：`expanded_repair -> compact_resolving`
+- `A_REPAIR_REMOVE_ANCHOR_KEEP_KEYWORDS`
+  - 语义：删除 URL，仅保留 keyword
+  - 转移：`expanded_repair -> compact_classic`
+- `A_REPAIR_SWITCH_TO_NL`
+  - 语义：改为自然语言描述需求
+  - 转移：`expanded_repair -> expanded_agent`
+
+约束：
+
+- `A_REPAIR_REMOVE_ANCHOR_KEEP_KEYWORDS` 触发后，keyword 不得丢失
+- `A_REPAIR_SWITCH_TO_NL` 触发后，原有 keyword 仍作为显式条件保留
+- 本路径中不允许前置冲突判别拦截；失败原因仅限 URL 解析侧
+
+### 6.9 统一低召回修正路径（`low_recall`）
+
+以下两类场景统一进入同一修正分支：
+
+- `anchor-only`：锚点已生成，但相似频道结果极少或质量不足
+- `anchor + keyword`：锚点已生成，但 keyword 生效后可见结果极少或过窄
+
+统一处理：
+
+1. 首轮结果仍作为 `results_ready` 展示
+2. 附加：
+   - `repair_reason = low_recall`
+   - `repair_hint_visible = true`
+3. 容器保持当前态，不自动切到 `expanded_repair`
+4. 用户点击轻提示入口后，才进入 `expanded_repair`
+5. 输入保持可编辑（`followup_waiting` 或显式 tag/anchor）
+
+统一动作语义：
+
+- `A_HINT_OPEN_REPAIR_LOW_RECALL`
+  - 打开低召回修正区
+- `A_HINT_DISMISS_LOW_RECALL`
+  - 暂时关闭轻提示，继续浏览结果
+
+- `A_REPAIR_REPLACE_ANCHOR`
+  - 更换锚点频道后重试召回
+- `A_REPAIR_EXPAND_RECALL_SCOPE`
+  - 放宽关键词或扩大召回范围再搜索
+- `A_REPAIR_REMOVE_ANCHOR_KEEP_KEYWORDS`
+  - 删除锚点，仅保留 keyword 搜索
+- `A_REPAIR_SWITCH_TO_NL`
+  - 改为自然语言描述需求并进入解析
 
 ---
 
@@ -408,16 +552,22 @@
 2. 再选该场景下的 `子状态`
 3. 页面一次只展示一个确定状态
 
-### 8.1 场景与子状态建议映射
+### 8.1 场景与子状态映射基线
 
 | 场景 | 子状态 |
 |---|---|
-| 关键词搜索 | 初始空白态 / 输入态 / 完成态 / 多关键词 / 匹配目标态 |
-| URL 输入 | 识别中 / 精确识别成功 / 平台不匹配 / 类型不支持 / 无法识别 |
-| 自然语言 | 刚展开 / 首轮搜索中 / 首轮结果已返回 / 追问态 / 主动补充输入中 |
-| 混合输入 | 解析摘要态 / 锚点优先态 / 软条件待澄清态 / 追问态 / 主动补充输入中 |
-| 修正态 | URL 无法识别 / 平台不匹配 / 类型不支持 / 有条件无结果 / 主动补充输入中 |
+| 关键词搜索 | 初始空白态 / 输入态 / 完成态 / 编辑已有关键词 / 多关键词 / 关键词+URL种子 / 匹配目标 |
+| URL 输入 | 识别中 / 锚点搜索就绪 / URL+关键词种子 / 低召回提示态 / 平台不匹配 / 类型不支持 / 无法识别 |
+| 自然语言 | 刚展开 / 首轮搜索中 / 首轮结果已返回 / 追问态 / 主动补充输入中 / 补充后刷新中 |
+| 混合输入 | 解析摘要态 / 锚点优先态 / 软条件待澄清态 / 追问态 / 主动补充输入中 / 补充后刷新中 |
+| 修正态 | URL 无法识别 / 平台不匹配 / 类型不支持 / 有条件无结果 / 低召回修正展开态 / 主动补充输入中 / 修正后刷新中 |
 | 升级路径 | 关键词起手-触发前 / 关键词起手-升级中 / 关键词起手-升级稳定 / URL 起手-触发前 / URL 起手-升级中 / URL 起手-升级稳定 |
+
+补充约束：
+
+- 本表是 Demo、XState fixture catalog、状态图高亮映射的唯一基线。
+- Demo 若新增子状态，必须先回写本表；未回写前，该 Demo 改动视为未完成。
+- 如果 Demo 为了演示方便临时合并多个状态，必须在本文件中显式标注“展示合并”，不能静默省略。
 
 ### 8.2 展示约束
 
@@ -455,3 +605,54 @@ Demo 需要提供一个只读的底部状态栏，用于展示当前状态三元
 2. 切换到目标子状态
 3. 保持当前视觉方向不变
 4. 同步刷新状态图高亮与 Demo 主体
+
+### 8.5 Action Registry（动作注册表）
+
+为保证“所有动作可枚举、可追溯”，本项目采用 `actionId` 作为跨文档与跨实现层的稳定键。
+
+#### 8.5.1 约束
+
+- 每一条状态转移动作都必须有 `actionId`
+- `actionId` 由状态机定义，Demo/XState/后端实现只消费，不得自行发明平行编号体系
+- 文案可改、UI 可改、实现技术可改，但 `actionId` 与语义转移关系必须保持稳定
+- 追溯记录最少应包含：
+  - `from_state`
+  - `action_id`
+  - `to_state`
+  - `timestamp`
+
+#### 8.5.2 命名建议
+
+- 推荐格式：`A_<FROM>__<EVENT>__<TO>__<INDEX>`
+- 若属于导航辅助动作，可用前缀：
+  - `A_NAV_*`（场景/子状态选择）
+  - `A_PATH_*`（状态图路径点击）
+
+#### 8.5.3 修正态三动作基线（anchor 生成失败场景）
+
+| actionId | 触发语义 | from | to |
+|---|---|---|---|
+| `A_REPAIR_FIX_URL` | 修正 URL 后重试解析 | `expanded_repair` | `compact_resolving` |
+| `A_REPAIR_REMOVE_ANCHOR_KEEP_KEYWORDS` | 删除 URL，仅保留 keyword 搜索 | `expanded_repair` | `compact_classic` |
+| `A_REPAIR_SWITCH_TO_NL` | 改为自然语言描述并进入解析 | `expanded_repair` | `expanded_agent` |
+
+补充说明：
+
+- 这三条是语义基线，Demo 当前可用不同文案承载，但不得改变其转移语义
+- 后续 design 阶段只细化触发形式，不改 `actionId` 与状态转移关系
+
+#### 8.5.4 低召回修正动作基线（`low_recall` 场景）
+
+| actionId | 触发语义 | from | to |
+|---|---|---|---|
+| `A_HINT_OPEN_REPAIR_LOW_RECALL` | 手动展开低召回修正区 | `results_ready` | `expanded_repair` |
+| `A_HINT_DISMISS_LOW_RECALL` | 暂时关闭低召回轻提示 | `results_ready` | `results_ready` |
+| `A_REPAIR_REPLACE_ANCHOR` | 更换锚点后重试召回 | `expanded_repair` | `compact_resolving` |
+| `A_REPAIR_EXPAND_RECALL_SCOPE` | 放宽关键词或扩大召回范围 | `expanded_repair` | `retrieving` |
+| `A_REPAIR_REMOVE_ANCHOR_KEEP_KEYWORDS` | 删除锚点，仅保留 keyword 搜索 | `expanded_repair` | `compact_classic` |
+| `A_REPAIR_SWITCH_TO_NL` | 改为自然语言描述并进入解析 | `expanded_repair` | `expanded_agent` |
+
+补充说明：
+
+- 该动作组同时适用于 `anchor-only` 与 `anchor + keyword` 的低召回路径
+- 两类场景共用动作编号，但具体文案允许按上下文差异化

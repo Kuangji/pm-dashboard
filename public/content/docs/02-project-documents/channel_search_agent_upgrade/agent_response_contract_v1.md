@@ -217,6 +217,11 @@
 - `conditions`
 - `actions`
 
+**上下文要求**：
+- 若当前结果来自修正后恢复，应记录：
+  - `source_stage = post_repair`
+- 该来源差异不要求额外新增独立稳定状态
+
 **输入规则**：
 - 原始自然语言不继续停留在输入框里
 - 输入框切为 `followup_waiting`
@@ -240,6 +245,29 @@
 - `task_summary`
 - `conditions`
 - `actions`
+
+### 4.4A `low_recall` 提示态
+
+当结果已经返回，但数量偏少、质量不足或明显过窄时：
+
+- Agent 不得把它伪装成“正常稳定结果”
+- 也不得直接自动展开到 `expanded_repair`
+- 应保持结果继续可看，并在搜索框内部提供一个轻量 `repair_hint`
+
+**允许输出**：
+- 轻提示入口
+- 当前低召回原因的极简说明
+- 手动展开修正区的入口动作
+
+**禁止输出**：
+- 自动抢焦点展开
+- 遮挡结果区
+- 把低召回直接等同于“完全无结果”
+
+**用户可见槽位**：
+- `status`：可选
+- `repair_hint`
+- `actions`：可选，仅限轻量入口
 
 ### 4.5 `clarifying` / `expanded_clarifying`
 
@@ -303,7 +331,7 @@ Agent 必须：
 
 - 只有输入提交成功，但没有明确下游状态
 - 把 follow-up 错误解释为“重新编辑原始 query”
-- 修正态恢复成功后直接伪装成从未经过修正的普通稳定态
+- 修正态恢复成功后丢失 `source_stage = post_repair` 这一来源上下文
 
 ### 4.7 `empty_repair` / `expanded_repair`
 
@@ -329,6 +357,29 @@ Agent 必须：
 **输入规则**：
 - 修正态也允许主动输入一条修正要求
 - 输入框处于 `followup_waiting`
+
+### 4.7A `low_recall`（低召回）统一修正约束
+
+当出现以下任一情况时，进入同一修正语义：
+
+- `anchor-only` 相似结果极少或质量不足
+- `anchor + keyword` 首轮可见结果极少/过窄
+
+Agent 输出要求：
+
+- `status`：明确说明“当前是低召回修正”，不是完全无结果
+- `task_summary`：说明锚点与关键词仍被保留
+- `repair_options`：优先给以下动作语义
+  - `A_REPAIR_REPLACE_ANCHOR`
+  - `A_REPAIR_EXPAND_RECALL_SCOPE`
+  - `A_REPAIR_REMOVE_ANCHOR_KEEP_KEYWORDS`
+  - `A_REPAIR_SWITCH_TO_NL`
+
+禁止行为：
+
+- 把低召回静默当作成功结果继续推进
+- 在低召回场景额外开启多轮追问
+- 因为低召回就自动丢弃 anchor 或 keyword
 
 ### 4.8 `unsupported`
 
@@ -367,6 +418,24 @@ Agent 必须：
   - 无法识别
 - URL 精确识别成功时，Agent 应尽快退出强存在感
 
+#### 5.2A URL 失败但 keyword 仍可用（例外路径）
+
+当输入为 `anchor + keyword`，但 URL 解析失败无法生成 anchor 时：
+
+- Agent 必须把失败归因限定在 URL 解析层，不得把整条输入判死
+- Agent 必须明确告知：keyword 已被保留，可继续用于搜索
+- 默认进入修正态，并只提供以下三类动作语义：
+  - `A_REPAIR_FIX_URL`
+  - `A_REPAIR_REMOVE_ANCHOR_KEEP_KEYWORDS`
+  - `A_REPAIR_SWITCH_TO_NL`
+
+该场景输出约束：
+
+- `status`：说明 URL 失败原因（invalid / mismatch / unsupported）
+- `task_summary`：说明 keyword 已保留
+- `repair_options`：仅列上述三类修正动作，不扩展成开放聊天
+- 不做前置冲突判别拦截
+
 ### 5.3 自然语言
 
 - Agent 负责把自然语言拆成：
@@ -385,6 +454,13 @@ Agent 必须：
   - `keyword` 作为显式约束条件
   - V1 不做前置冲突判别
   - 默认直接 as-is 进入首轮搜索
+  - 首轮响应中必须让用户理解：
+    - `anchor` 已被锁定
+    - 相似频道结果正在围绕该锚点召回
+    - `keyword` 已在首轮用户可见结果中生效
+  - `anchor` 作为 pinned reference 保留置顶可见
+  - `keyword` 作用于相似频道结果集，不影响 `anchor` 本身的可见性
+  - 若结果为空、极少或明显跑偏，再进入 repair / clarify；而不是前置拦截
 
 ### 5.5 经典态升级为 Agent 态
 

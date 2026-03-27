@@ -166,14 +166,24 @@
               箭头指向哪个状态，就表示当前流程会往哪个状态走。
             </p>
           </div>
-          <div class="legend-cluster">
-            <span class="legend-pill">输入层</span>
-            <span class="legend-pill">容器层</span>
-            <span class="legend-pill">会话层</span>
-            <span class="legend-pill">→ 表示状态流向</span>
+          <div class="diagram-header-actions">
+            <div class="segmented" id="diagram-mode-picker">
+              <button class="is-active" data-diagram-mode="handdrawn">手绘版</button>
+              <button data-diagram-mode="xstate">XState版</button>
+            </div>
+            <div class="segmented is-hidden" id="xstate-scope-picker">
+              <button class="is-active" data-xstate-scope="scene">当前场景</button>
+              <button data-xstate-scope="all">全部场景</button>
+            </div>
+            <div class="legend-cluster">
+              <span class="legend-pill">输入层</span>
+              <span class="legend-pill">容器层</span>
+              <span class="legend-pill">会话层</span>
+              <span class="legend-pill">→ 表示状态流向</span>
+            </div>
           </div>
         </div>
-        <div class="diagram-stack">
+        <div class="diagram-stack" id="handdrawn-diagram-stack">
           <article class="diagram-card">
             <div class="lane-header">
               <span class="lane-index">01</span>
@@ -182,13 +192,13 @@
                 <p>关键词编辑器内部的输入、提交、作用域与排除流转</p>
               </div>
             </div>
-            <svg class="machine-svg" viewBox="0 0 1200 620" role="img" aria-label="输入状态机 SVG 图">
+            <svg class="machine-svg" viewBox="0 0 1200 720" role="img" aria-label="输入状态机 SVG 图">
               <defs>
-                <marker id="arrow-blue-sm" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-                  <path d="M0,0 L10,5 L0,10 z" fill="#5a84ff"></path>
+                <marker id="arrow-blue-sm" markerWidth="8" markerHeight="8" refX="6.4" refY="4" orient="auto">
+                  <path d="M0,0 L8,4 L0,8 z" fill="#5a84ff"></path>
                 </marker>
-                <marker id="arrow-orange-sm" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-                  <path d="M0,0 L10,5 L0,10 z" fill="#ef8a2e"></path>
+                <marker id="arrow-orange-sm" markerWidth="8" markerHeight="8" refX="6.4" refY="4" orient="auto">
+                  <path d="M0,0 L8,4 L0,8 z" fill="#ef8a2e"></path>
                 </marker>
               </defs>
 
@@ -223,95 +233,74 @@
               </g>
 
               <g class="svg-transition-target" data-target="keyword-empty" data-from="draft_keyword" data-to="empty_input">
-                <path d="M360 120 L310 120 L310 196 L154 196 L154 168" class="svg-edge main" marker-end="url(#arrow-blue-sm)"></path>
-                <text x="184" y="188" class="svg-edge-label">清空输入 / 输入为空</text>
+                <path d="M360 120 L316 120 L316 202 L154 202 L154 168" class="svg-edge main" marker-end="url(#arrow-blue-sm)"></path>
+                <text x="196" y="194" class="svg-edge-label">清空输入 / 输入为空</text>
               </g>
 
-              <text x="44" y="236" class="svg-path-title branch">分支路径：编辑已有关键词 tag</text>
+              <text x="44" y="256" class="svg-path-title branch">分支路径：编辑已有关键词 tag</text>
 
               <g class="svg-transition-target" data-target="keyword-edit" data-from="committed_keyword" data-to="editing_keyword">
-                <path d="M760 168 L760 218 L485 218 L485 250" class="svg-edge main" marker-end="url(#arrow-blue-sm)"></path>
-                <text x="576" y="210" class="svg-edge-label">点已有 tag 进入编辑</text>
+                <path d="M825 168 L825 248 L468 248 L468 300" class="svg-edge main" marker-end="url(#arrow-blue-sm)"></path>
+                <text x="610" y="240" class="svg-edge-label">点已有 tag 进入编辑</text>
               </g>
 
               <g class="svg-state-target" data-scene="keyword" data-scenario="keyword-edit" data-node="editing_keyword">
-                <rect x="360" y="250" width="250" height="88" rx="20" class="svg-node"></rect>
-                <text x="392" y="286" class="svg-node-title">editing_keyword</text>
-                <text x="392" y="315" class="svg-node-sub">正在修改已有关键词 tag</text>
+                <rect x="318" y="300" width="300" height="92" rx="20" class="svg-node"></rect>
+                <text x="350" y="338" class="svg-node-title">editing_keyword</text>
+                <text x="350" y="368" class="svg-node-sub">正在修改已有关键词 tag</text>
               </g>
 
               <g class="svg-transition-target" data-target="keyword-tag" data-from="editing_keyword" data-to="committed_keyword">
-                <path d="M610 294 L650 294 L650 206 L820 206 L820 168" class="svg-edge main" marker-end="url(#arrow-blue-sm)"></path>
-                <text x="654" y="198" class="svg-edge-label">提交编辑 / 取消编辑</text>
+                <path d="M618 346 L668 346 L668 214 L860 214 L860 168" class="svg-edge main" marker-end="url(#arrow-blue-sm)"></path>
+                <text x="678" y="206" class="svg-edge-label">提交编辑 / 取消编辑</text>
               </g>
 
               <g class="svg-transition-target" data-target="keyword-empty" data-from="editing_keyword" data-to="empty_input">
-                <path d="M360 294 L310 294 L310 222 L120 222 L120 168" class="svg-edge branch" marker-end="url(#arrow-orange-sm)"></path>
-                <text x="174" y="246" class="svg-edge-label branch">清空并确认删除</text>
+                <path d="M318 346 L274 346 L274 224 L120 224 L120 168" class="svg-edge branch" marker-end="url(#arrow-orange-sm)"></path>
+                <text x="156" y="216" class="svg-edge-label branch">清空并确认删除</text>
               </g>
 
-              <text x="658" y="236" class="svg-path-title branch">分支路径：作用域菜单与排除</text>
-
-              <g class="svg-transition-target" data-target="keyword-menu" data-from="committed_keyword" data-to="tag_scope_menu_open">
-                <path d="M890 168 L890 250" class="svg-edge main" marker-end="url(#arrow-blue-sm)"></path>
-                <text x="916" y="214" class="svg-edge-label">点关键词作用域</text>
+              <text x="700" y="256" class="svg-path-title branch">局部 context：匹配目标 / 排除 / active tag menu</text>
+              <g>
+                <rect x="700" y="300" width="360" height="106" rx="20" class="svg-node" style="stroke-dasharray:6 5; opacity:0.92;"></rect>
+                <text x="732" y="338" class="svg-node-title">tag_context (not a state)</text>
+                <text x="732" y="366" class="svg-node-sub">scope / is_excluded / active_tag_menu</text>
+                <text x="732" y="390" class="svg-node-sub">附着在 committed_keyword 上，不再单独建模为状态</text>
               </g>
 
-              <g class="svg-state-target" data-scene="keyword" data-scenario="keyword-menu" data-node="tag_scope_menu_open">
-                <rect x="700" y="250" width="250" height="88" rx="20" class="svg-node"></rect>
-                <text x="732" y="286" class="svg-node-title">tag_scope_menu_open</text>
-                <text x="732" y="315" class="svg-node-sub">打开匹配目标菜单</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="keyword-menu" data-from="tag_scope_menu_open" data-to="excluded_keyword">
-                <path d="M950 294 L980 294" class="svg-edge branch" marker-end="url(#arrow-orange-sm)"></path>
-                <text x="958" y="270" class="svg-edge-label branch">开启排除</text>
-              </g>
-
-              <g class="svg-state-target" data-scene="keyword" data-scenario="keyword-menu" data-node="excluded_keyword">
-                <rect x="980" y="250" width="180" height="88" rx="20" class="svg-node warn"></rect>
-                <text x="1012" y="286" class="svg-node-title small">excluded_keyword</text>
-                <text x="1012" y="315" class="svg-node-sub">该关键词变为排除</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="keyword-tag" data-from="excluded_keyword" data-to="committed_keyword">
-                <path d="M1070 250 L1070 206 L850 206 L850 168" class="svg-edge branch" marker-end="url(#arrow-orange-sm)"></path>
-                <text x="908" y="198" class="svg-edge-label branch">关闭排除</text>
-              </g>
-
-              <text x="44" y="390" class="svg-path-title">补充路径：锚点与 follow-up 输入位</text>
+              <text x="44" y="474" class="svg-path-title">补充路径：锚点与 follow-up 输入位</text>
 
               <g class="svg-state-target" data-scene="url" data-scenario="url-exact" data-node="committed_anchor">
-                <rect x="44" y="420" width="220" height="88" rx="20" class="svg-node active"></rect>
-                <text x="76" y="456" class="svg-node-title">committed_anchor</text>
-                <text x="76" y="485" class="svg-node-sub">URL 精确识别后收起为 badge</text>
+                <rect x="44" y="504" width="240" height="88" rx="20" class="svg-node active"></rect>
+                <text x="76" y="540" class="svg-node-title">committed_anchor</text>
+                <text x="76" y="569" class="svg-node-sub">URL 精确识别后收起为 badge</text>
               </g>
 
               <g class="svg-transition-target" data-target="keyword-empty" data-from="committed_anchor" data-to="empty_input">
-                <path d="M154 420 L154 168" class="svg-edge branch" marker-end="url(#arrow-orange-sm)"></path>
-                <text x="178" y="304" class="svg-edge-label branch">删除锚点</text>
+                <path d="M164 504 L164 640 L24 640 L24 120 L44 120" class="svg-edge branch" marker-end="url(#arrow-orange-sm)"></path>
+                <text x="42" y="632" class="svg-edge-label branch">删除锚点</text>
               </g>
 
               <g class="svg-state-target" data-scene="natural" data-scenario="natural-results" data-node="followup_waiting">
-                <rect x="384" y="420" width="250" height="88" rx="20" class="svg-node"></rect>
-                <text x="416" y="456" class="svg-node-title">followup_waiting</text>
-                <text x="416" y="485" class="svg-node-sub">原始 query 已吸收，等待补充</text>
+                <rect x="372" y="504" width="280" height="88" rx="20" class="svg-node"></rect>
+                <text x="404" y="540" class="svg-node-title">followup_waiting</text>
+                <text x="404" y="569" class="svg-node-sub">原始 query 已吸收，等待补充</text>
               </g>
 
               <g class="svg-transition-target" data-target="natural-followup-draft" data-from="followup_waiting" data-to="draft_followup">
-                <line x1="634" y1="464" x2="700" y2="464" class="svg-edge main" marker-end="url(#arrow-blue-sm)"></line>
-                <text x="646" y="440" class="svg-edge-label">开始补充一句</text>
+                <line x1="652" y1="548" x2="700" y2="548" class="svg-edge main" marker-end="url(#arrow-blue-sm)"></line>
+                <text x="650" y="524" class="svg-edge-label">开始补充一句</text>
               </g>
 
               <g class="svg-state-target" data-scene="natural" data-scenario="natural-followup-draft" data-node="draft_followup">
-                <rect x="700" y="420" width="250" height="88" rx="20" class="svg-node"></rect>
-                <text x="732" y="456" class="svg-node-title">draft_followup</text>
-                <text x="732" y="485" class="svg-node-sub">正在输入新的自然语言补充</text>
+                <rect x="700" y="504" width="260" height="88" rx="20" class="svg-node"></rect>
+                <text x="732" y="540" class="svg-node-title">draft_followup</text>
+                <text x="732" y="569" class="svg-node-sub">正在输入新的自然语言补充</text>
               </g>
 
               <g class="svg-transition-target" data-target="natural-results" data-from="draft_followup" data-to="followup_waiting">
-                <path d="M825 508 L825 548 L509 548 L509 508" class="svg-edge main" marker-end="url(#arrow-blue-sm)"></path>
-                <text x="588" y="540" class="svg-edge-label">清空补充 / 取消补充</text>
+                <path d="M830 592 L830 668 L512 668 L512 592" class="svg-edge main" marker-end="url(#arrow-blue-sm)"></path>
+                <text x="594" y="660" class="svg-edge-label">清空补充 / 取消补充</text>
               </g>
             </svg>
           </article>
@@ -539,6 +528,41 @@
                 <text x="248" y="370" class="svg-edge-label branch">提交修正并 refine</text>
               </g>
             </svg>
+          </article>
+        </div>
+
+        <div class="diagram-stack is-hidden" id="xstate-diagram-stack">
+          <article class="diagram-card">
+            <div class="lane-header">
+              <span class="lane-index">01</span>
+              <div>
+                <h3>XState 输入状态图</h3>
+                <p>由 orchestrator 可达转移自动聚合，不依赖手绘连线。</p>
+              </div>
+            </div>
+            <svg class="machine-svg xstate-machine-svg" id="xstate-input-svg" viewBox="0 0 1200 380" role="img" aria-label="XState 输入状态图"></svg>
+          </article>
+
+          <article class="diagram-card">
+            <div class="lane-header">
+              <span class="lane-index">02</span>
+              <div>
+                <h3>XState 容器状态图</h3>
+                <p>由 fixtures 事件流映射得到的容器层转移图。</p>
+              </div>
+            </div>
+            <svg class="machine-svg xstate-machine-svg" id="xstate-container-svg" viewBox="0 0 1200 320" role="img" aria-label="XState 容器状态图"></svg>
+          </article>
+
+          <article class="diagram-card">
+            <div class="lane-header">
+              <span class="lane-index">03</span>
+              <div>
+                <h3>XState 会话状态图</h3>
+                <p>由 fixtures 事件流映射得到的会话层转移图。</p>
+              </div>
+            </div>
+            <svg class="machine-svg xstate-machine-svg" id="xstate-session-svg" viewBox="0 0 1200 360" role="img" aria-label="XState 会话状态图"></svg>
           </article>
         </div>
 

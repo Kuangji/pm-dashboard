@@ -2932,9 +2932,7 @@ ${err.message}`);
       committed_keyword: {},
       committed_anchor: {},
       followup_waiting: {},
-      draft_followup: {},
-      tag_scope_menu_open: {},
-      excluded_keyword: {}
+      draft_followup: {}
     }
   };
   var inputMachine = createMachine({
@@ -3230,6 +3228,48 @@ ${err.message}`);
         soft: ["\u76F8\u4F3C\u9891\u9053\u9ED8\u8BA4\u6309\u76F8\u4F3C\u7A0B\u5EA6\u6392\u5E8F"],
         hint: "\u951A\u70B9\u9891\u9053\u4E0D\u6DF7\u5165\u666E\u901A\u76F8\u4F3C\u7ED3\u679C\u6392\u5E8F\u6D41\u3002"
       },
+      keywordFlow: {
+        draft: "",
+        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053" }],
+        openMenu: false
+      }
+    },
+    "url-keyword-seed": {
+      mode: "classic",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: null,
+      status: null,
+      session: null,
+      question: null,
+      conditions: null,
+      keywordFlow: {
+        draft: "outdoor gear",
+        tags: [
+          { text: "@HollylandTech", scope: "\u9891\u9053" },
+          { text: "swim vest", scope: "\u6807\u7B7E" },
+          { text: "water sports", scope: "\u6807\u7B7E" }
+        ],
+        openMenu: false
+      }
+    },
+    "url-low-recall-hint": {
+      mode: "classic",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: null,
+      inlineHint: {
+        text: "\u7ED3\u679C\u504F\u5C11\uFF0C\u53EF\u4F18\u5316\u6761\u4EF6",
+        caption: "\u5F53\u524D\u4ECD\u4FDD\u7559\u951A\u70B9\u9891\u9053\u4E0E\u5C11\u91CF\u76F8\u4F3C\u7ED3\u679C\uFF0C\u70B9\u51FB\u540E\u518D\u5C55\u5F00\u4FEE\u6B63\u52A8\u4F5C\u3002",
+        actionId: "A_HINT_OPEN_REPAIR_LOW_RECALL",
+        actionLabel: "\u4F18\u5316\u6761\u4EF6"
+      },
+      status: null,
+      session: null,
+      question: null,
+      conditions: null,
       keywordFlow: {
         draft: "",
         tags: [{ text: "@HollylandTech", scope: "\u9891\u9053" }],
@@ -3800,6 +3840,43 @@ ${err.message}`);
         placeholder: "\u8865\u4E00\u53E5\u653E\u5BBD\u6761\u4EF6\u7684\u8981\u6C42"
       }
     },
+    "low-recall-repair-open": {
+      mode: "expanded",
+      inputTitle: "",
+      inputHint: "",
+      miniAction: null,
+      primaryAction: null,
+      status: {
+        state: "\u7ED3\u679C\u504F\u5C11\uFF0C\u5EFA\u8BAE\u4F18\u5316\u6761\u4EF6",
+        stateClass: "warn",
+        spinner: false,
+        text: "\u5F53\u524D\u951A\u70B9\u9891\u9053\u4ECD\u4FDD\u7559\uFF0C\u5DF2\u6709\u5C11\u91CF\u76F8\u4F3C\u7ED3\u679C\u53EF\u770B\u3002\u4F60\u53EF\u4EE5\u624B\u52A8\u4F18\u5316\u53EC\u56DE\uFF0C\u800C\u4E0D\u662F\u88AB\u7CFB\u7EDF\u5F3A\u5236\u6253\u65AD\u3002"
+      },
+      session: {
+        label: "task_summary",
+        summary: "\u5F53\u524D\u5904\u4E8E low_recall \u4FEE\u6B63\u533A\uFF1A\u951A\u70B9\u9891\u9053\u4FDD\u7559\uFF0C\u7ED3\u679C\u4ECD\u53EF\u770B\uFF0C\u4F46\u5EFA\u8BAE\u6269\u5927\u53EC\u56DE\u8303\u56F4\u3002",
+        meta: ["low_recall", "manual open", "non-blocking before open"]
+      },
+      question: {
+        slot: "repair_options",
+        title: "\u4F60\u60F3\u600E\u4E48\u4F18\u5316\u5F53\u524D\u53EC\u56DE\uFF1F",
+        choices: ["\u66F4\u6362\u951A\u70B9\u9891\u9053", "\u6269\u5927\u53EC\u56DE\u8303\u56F4", "\u6539\u4E3A\u81EA\u7136\u8BED\u8A00\u63CF\u8FF0"],
+        caption: "\u8FD9\u662F\u624B\u52A8\u5C55\u5F00\u540E\u7684\u4FEE\u6B63\u533A\uFF0C\u4E0D\u4F1A\u5728 low_recall \u53D1\u751F\u65F6\u81EA\u52A8\u62A2\u7126\u70B9\u3002"
+      },
+      conditions: {
+        anchor: "\u951A\u70B9\u9891\u9053\uFF1A@HollylandTech",
+        hard: [],
+        soft: ["\u5F53\u524D\u7ED3\u679C\u504F\u5C11", "\u53EF\u5C1D\u8BD5\u6269\u5927\u53EC\u56DE\u8303\u56F4"],
+        hint: "\u6B64\u65F6\u7ED3\u679C\u4ECD\u7EE7\u7EED\u5C55\u793A\uFF0C\u53EA\u662F\u641C\u7D22\u6846\u8865\u5145\u4E86\u4FEE\u6B63\u80FD\u529B\u3002"
+      },
+      keywordFlow: {
+        draft: "",
+        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053" }],
+        openMenu: false,
+        followup: true,
+        placeholder: "\u4E5F\u53EF\u4EE5\u76F4\u63A5\u8865\u4E00\u53E5\u4F60\u771F\u6B63\u60F3\u8981\u7684\u65B9\u5411"
+      }
+    },
     "repair-followup-draft": {
       mode: "expanded",
       inputTitle: "",
@@ -3857,38 +3934,6 @@ ${err.message}`);
         openMenu: false,
         followup: true,
         placeholder: "\u6B63\u5728\u5237\u65B0\uFF0C\u8BF7\u7A0D\u5019"
-      }
-    },
-    "repair-recovered-results": {
-      mode: "expanded",
-      inputTitle: "",
-      inputHint: "",
-      miniAction: null,
-      primaryAction: "\u641C\u7D22",
-      status: {
-        state: "\u5DF2\u6062\u590D\u7ED3\u679C",
-        stateClass: "ok",
-        spinner: false,
-        text: "\u4FEE\u6B63\u540E\u7684\u6761\u4EF6\u5DF2\u7ECF\u91CD\u65B0\u53EC\u56DE\u5230\u7ED3\u679C\uFF0C\u5F53\u524D\u5DF2\u56DE\u5230\u7A33\u5B9A\u53EF\u6D4F\u89C8\u72B6\u6001\u3002"
-      },
-      session: {
-        label: "task_summary",
-        summary: "\u539F\u4FEE\u6B63\u95EE\u9898\u5DF2\u88AB\u5316\u89E3\uFF0C\u5F53\u524D\u7ED3\u679C\u6765\u81EA\u4FEE\u6B63\u540E\u7684\u65B0\u6761\u4EF6\u3002",
-        meta: ["\u4ECE repair \u6062\u590D", "\u5F53\u524D\u7ED3\u679C\u5DF2\u7A33\u5B9A", "\u53EF\u7EE7\u7EED refine"]
-      },
-      question: null,
-      conditions: {
-        anchor: null,
-        hard: ["\u7F8E\u56FD", "YouTube", "\u6237\u5916\u535A\u4E3B"],
-        soft: [],
-        hint: "\u8FD9\u662F\u4FEE\u6B63\u540E\u7684\u65B0\u7ED3\u679C\uFF0C\u4E0D\u518D\u662F\u539F\u59CB\u5931\u8D25\u6761\u4EF6\u7684\u76F4\u51FA\u3002"
-      },
-      keywordFlow: {
-        draft: "",
-        tags: [],
-        openMenu: false,
-        followup: true,
-        placeholder: "\u7EE7\u7EED\u8865\u4E00\u53E5\uFF0C\u8FDB\u4E00\u6B65 refine"
       }
     },
     "upgrade-keyword-trigger": {
@@ -4044,6 +4089,9 @@ ${err.message}`);
     url: [
       { id: "url-resolving", label: "\u8BC6\u522B\u4E2D" },
       { id: "url-exact", label: "\u951A\u70B9\u641C\u7D22\u5C31\u7EEA" },
+      { id: "url-keyword-seed", label: "URL+\u5173\u952E\u8BCD\u79CD\u5B50" },
+      { id: "url-low-recall-hint", label: "\u4F4E\u53EC\u56DE\u63D0\u793A\u6001" },
+      { id: "low-recall-repair-open", label: "\u4F4E\u53EC\u56DE\u4FEE\u6B63\u5C55\u5F00\u6001" },
       { id: "url-mismatch", label: "\u5E73\u53F0\u4E0D\u5339\u914D" },
       { id: "url-unsupported", label: "\u7C7B\u578B\u4E0D\u652F\u6301" },
       { id: "url-invalid", label: "\u65E0\u6CD5\u8BC6\u522B" }
@@ -4070,8 +4118,7 @@ ${err.message}`);
       { id: "repair-unsupported", label: "\u7C7B\u578B\u4E0D\u652F\u6301" },
       { id: "repair-empty", label: "\u6709\u6761\u4EF6\u65E0\u7ED3\u679C" },
       { id: "repair-followup-draft", label: "\u4E3B\u52A8\u8865\u5145\u8F93\u5165\u4E2D" },
-      { id: "repair-followup-refining", label: "\u4FEE\u6B63\u540E\u5237\u65B0\u4E2D" },
-      { id: "repair-recovered-results", label: "\u4FEE\u6B63\u540E\u5DF2\u6062\u590D\u7ED3\u679C" }
+      { id: "repair-followup-refining", label: "\u4FEE\u6B63\u540E\u5237\u65B0\u4E2D" }
     ],
     upgrade: [
       { id: "upgrade-keyword-trigger", label: "\u5173\u952E\u8BCD\u8D77\u624B-\u89E6\u53D1\u524D" },
@@ -4097,9 +4144,11 @@ ${err.message}`);
     "keyword-edit": ["draft_keyword", "committed_keyword", "compact_classic", "idle"],
     "keyword-multi": ["committed_keyword", "compact_classic", "idle"],
     "keyword-anchor-seed": ["draft_keyword", "committed_keyword", "committed_anchor", "compact_classic", "idle"],
-    "keyword-menu": ["tag_scope_menu_open", "excluded_keyword", "compact_classic", "idle"],
+    "keyword-menu": ["committed_keyword", "compact_classic", "idle"],
     "url-resolving": ["compact_resolving"],
     "url-exact": ["committed_anchor", "return-state"],
+    "url-keyword-seed": ["draft_keyword", "committed_keyword", "committed_anchor", "compact_classic", "idle"],
+    "url-low-recall-hint": ["committed_anchor", "return-state"],
     "url-mismatch": ["expanded_repair"],
     "url-unsupported": ["expanded_repair"],
     "url-invalid": ["expanded_repair"],
@@ -4119,9 +4168,9 @@ ${err.message}`);
     "repair-mismatch": ["expanded_repair", "followup_waiting"],
     "repair-unsupported": ["expanded_repair", "followup_waiting"],
     "repair-empty": ["empty_repair", "followup_waiting"],
+    "low-recall-repair-open": ["expanded_repair", "committed_anchor", "return-state"],
     "repair-followup-draft": ["expanded_repair", "empty_repair", "draft_followup"],
     "repair-followup-refining": ["expanded_repair", "refining", "followup_waiting"],
-    "repair-recovered-results": ["expanded_agent", "results_ready", "followup_waiting"],
     "upgrade-keyword-trigger": ["draft_keyword", "compact_classic", "idle"],
     "upgrade-keyword-transition": ["expanded_agent", "retrieving", "committed_keyword"],
     "upgrade-keyword-stable": ["expanded_agent", "results_ready", "committed_keyword", "followup_waiting"],
@@ -4136,9 +4185,11 @@ ${err.message}`);
     "keyword-edit": { input: "editing_keyword", container: "compact_classic", session: "idle" },
     "keyword-multi": { input: "draft_keyword + committed_keyword", container: "compact_classic", session: "idle" },
     "keyword-anchor-seed": { input: "committed_keyword + committed_anchor + committed_keyword + draft_keyword", container: "compact_classic", session: "idle" },
-    "keyword-menu": { input: "tag_scope_menu_open", container: "compact_classic", session: "idle" },
+    "keyword-menu": { input: "committed_keyword", container: "compact_classic", session: "idle" },
     "url-resolving": { input: "draft_keyword", container: "compact_resolving", session: "retrieving" },
     "url-exact": { input: "committed_anchor", container: "compact_classic", session: "results_ready" },
+    "url-keyword-seed": { input: "committed_anchor + committed_keyword + committed_keyword + draft_keyword", container: "compact_classic", session: "idle" },
+    "url-low-recall-hint": { input: "committed_anchor", container: "compact_classic", session: "results_ready" },
     "url-mismatch": { input: "followup_waiting", container: "expanded_repair", session: "empty_repair" },
     "url-unsupported": { input: "followup_waiting", container: "expanded_repair", session: "unsupported" },
     "url-invalid": { input: "followup_waiting", container: "expanded_repair", session: "empty_repair" },
@@ -4158,9 +4209,9 @@ ${err.message}`);
     "repair-mismatch": { input: "followup_waiting", container: "expanded_repair", session: "empty_repair" },
     "repair-unsupported": { input: "followup_waiting", container: "expanded_repair", session: "unsupported" },
     "repair-empty": { input: "followup_waiting", container: "expanded_repair", session: "empty_repair" },
+    "low-recall-repair-open": { input: "committed_anchor + followup_waiting", container: "expanded_repair", session: "results_ready" },
     "repair-followup-draft": { input: "draft_followup", container: "expanded_repair", session: "empty_repair" },
     "repair-followup-refining": { input: "followup_waiting", container: "expanded_repair", session: "refining" },
-    "repair-recovered-results": { input: "followup_waiting", container: "expanded_agent", session: "results_ready" },
     "upgrade-keyword-trigger": { input: "draft_keyword + committed_keyword", container: "compact_classic", session: "idle" },
     "upgrade-keyword-transition": { input: "draft_keyword + committed_keyword", container: "expanded_agent", session: "retrieving" },
     "upgrade-keyword-stable": { input: "committed_keyword + followup_waiting", container: "expanded_agent", session: "results_ready" },
@@ -4200,6 +4251,7 @@ ${err.message}`);
     "keyword-anchor-seed": [
       { label: "\u7EE7\u7EED\u8F93\u5165\u4E0B\u4E00\u4E2A\u5173\u952E\u8BCD", target: "keyword-anchor-seed" },
       { label: "\u5220\u9664 URL \u951A\u70B9\uFF0C\u56DE\u5230\u591A\u5173\u952E\u8BCD\u6001", target: "keyword-multi" },
+      { label: "\u89E6\u53D1\u641C\u7D22\uFF0C\u8FDB\u5165\u89E3\u6790\u6458\u8981\u6001", target: "mixed-parse" },
       { label: "\u8865\u5145\u81EA\u7136\u8BED\u8A00\u5E76\u5347\u7EA7", target: "upgrade-url-trigger" }
     ],
     "keyword-menu": [
@@ -4217,8 +4269,20 @@ ${err.message}`);
     "url-exact": [
       { label: "\u7EE7\u7EED\u6D4F\u89C8\u76F8\u4F3C\u9891\u9053\u7ED3\u679C", target: "url-exact" },
       { label: "\u53EA\u67E5\u770B\u951A\u70B9\u9891\u9053", target: "url-exact" },
+      { label: "\u8FFD\u52A0\u5173\u952E\u8BCD\u5F62\u6210 URL+\u5173\u952E\u8BCD\u79CD\u5B50", target: "url-keyword-seed" },
+      { actionId: "A_HINT_OPEN_REPAIR_LOW_RECALL", label: "\u6A21\u62DF\u4F4E\u53EC\u56DE\u63D0\u793A", target: "url-low-recall-hint" },
       { label: "\u5220\u9664\u9891\u9053\u951A\u70B9\uFF0C\u56DE\u5230\u521D\u59CB\u7A7A\u767D\u6001", target: "keyword-empty" },
       { label: "\u8865\u5145\u81EA\u7136\u8BED\u8A00\uFF0C\u5347\u7EA7\u4E3A Agent \u6001", target: "upgrade-url-trigger" }
+    ],
+    "url-keyword-seed": [
+      { label: "\u7EE7\u7EED\u8F93\u5165\u4E0B\u4E00\u4E2A\u5173\u952E\u8BCD", target: "url-keyword-seed" },
+      { label: "\u5220\u9664 URL \u951A\u70B9\uFF0C\u56DE\u5230\u591A\u5173\u952E\u8BCD\u6001", target: "keyword-multi" },
+      { label: "\u89E6\u53D1\u641C\u7D22\uFF0C\u8FDB\u5165\u89E3\u6790\u6458\u8981\u6001", target: "mixed-parse" },
+      { label: "\u8865\u5145\u81EA\u7136\u8BED\u8A00\u5E76\u5347\u7EA7", target: "upgrade-url-trigger" }
+    ],
+    "url-low-recall-hint": [
+      { actionId: "A_HINT_OPEN_REPAIR_LOW_RECALL", label: "\u624B\u52A8\u5C55\u5F00\u4FEE\u6B63\u533A", target: "low-recall-repair-open" },
+      { actionId: "A_HINT_DISMISS_LOW_RECALL", label: "\u7EE7\u7EED\u6D4F\u89C8\u5F53\u524D\u7ED3\u679C", target: "url-exact" }
     ],
     "url-mismatch": [
       { label: "\u5220\u9664\u94FE\u63A5\uFF0C\u56DE\u5230\u5173\u952E\u8BCD\u6001", target: "keyword-input" },
@@ -4259,7 +4323,7 @@ ${err.message}`);
       { label: "\u5237\u65B0\u540E\u4ECD\u65E0\u7ED3\u679C", target: "repair-empty" }
     ],
     "mixed-parse": [
-      { label: "\u6309\u951A\u70B9\u4F18\u5148\u89E3\u91CA", target: "mixed-anchor" },
+      { label: "\u89E3\u6790\u5B8C\u6210\uFF0C\u8FDB\u5165\u951A\u70B9\u4F18\u5148\u7ED3\u679C", target: "mixed-anchor" },
       { label: "\u5148\u964D\u7EA7\u8F6F\u6761\u4EF6", target: "mixed-soft" }
     ],
     "mixed-anchor": [
@@ -4286,24 +4350,29 @@ ${err.message}`);
       { label: "\u5237\u65B0\u540E\u4ECD\u65E0\u7ED3\u679C", target: "repair-empty" }
     ],
     "repair-invalid": [
-      { label: "\u91CD\u65B0\u7C98\u8D34\u94FE\u63A5", target: "url-resolving" },
-      { label: "\u6539\u4E3A\u5173\u952E\u8BCD\u641C\u7D22", target: "keyword-input" },
-      { label: "\u76F4\u63A5\u63CF\u8FF0\u4FEE\u6B63\u8981\u6C42", target: "repair-followup-draft" }
+      { actionId: "A_REPAIR_FIX_URL", label: "\u91CD\u65B0\u7C98\u8D34\u94FE\u63A5", target: "url-resolving" },
+      { actionId: "A_REPAIR_REMOVE_ANCHOR_KEEP_KEYWORDS", label: "\u6539\u4E3A\u5173\u952E\u8BCD\u641C\u7D22", target: "keyword-input" },
+      { actionId: "A_REPAIR_SWITCH_TO_NL", label: "\u76F4\u63A5\u63CF\u8FF0\u4FEE\u6B63\u8981\u6C42", target: "repair-followup-draft" }
     ],
     "repair-mismatch": [
-      { label: "\u5220\u6389\u94FE\u63A5\u7EE7\u7EED\u641C\u5F53\u524D\u5E73\u53F0", target: "keyword-input" },
-      { label: "\u6362\u5E73\u53F0\u540E\u91CD\u65B0\u5F00\u59CB", target: "url-resolving" },
-      { label: "\u76F4\u63A5\u8865\u4E00\u53E5\u4FEE\u6B63\u8981\u6C42", target: "repair-followup-draft" }
+      { actionId: "A_REPAIR_REMOVE_ANCHOR_KEEP_KEYWORDS", label: "\u5220\u6389\u94FE\u63A5\u7EE7\u7EED\u641C\u5F53\u524D\u5E73\u53F0", target: "keyword-input" },
+      { actionId: "A_REPAIR_FIX_URL", label: "\u6362\u5E73\u53F0\u540E\u91CD\u65B0\u5F00\u59CB", target: "url-resolving" },
+      { actionId: "A_REPAIR_SWITCH_TO_NL", label: "\u76F4\u63A5\u8865\u4E00\u53E5\u4FEE\u6B63\u8981\u6C42", target: "repair-followup-draft" }
     ],
     "repair-unsupported": [
       { label: "\u6539\u4E3A\u5173\u952E\u8BCD", target: "keyword-input" },
       { label: "\u6539\u4E3A\u81EA\u7136\u8BED\u8A00", target: "natural-init" },
-      { label: "\u76F4\u63A5\u8865\u4E00\u53E5\u4FEE\u6B63\u8981\u6C42", target: "repair-followup-draft" }
+      { actionId: "A_REPAIR_SWITCH_TO_NL", label: "\u76F4\u63A5\u8865\u4E00\u53E5\u4FEE\u6B63\u8981\u6C42", target: "repair-followup-draft" }
     ],
     "repair-empty": [
       { label: "\u653E\u5BBD\u6761\u4EF6\u540E\u91CD\u641C", target: "natural-retrieving" },
-      { label: "\u9000\u56DE\u7ECF\u5178\u5173\u952E\u8BCD\u6001", target: "keyword-tag" },
+      { actionId: "A_REPAIR_REMOVE_ANCHOR_KEEP_KEYWORDS", label: "\u9000\u56DE\u7ECF\u5178\u5173\u952E\u8BCD\u6001", target: "keyword-tag" },
       { label: "\u76F4\u63A5\u8865\u4E00\u53E5\u653E\u5BBD\u8981\u6C42", target: "repair-followup-draft" }
+    ],
+    "low-recall-repair-open": [
+      { actionId: "A_REPAIR_REPLACE_ANCHOR", label: "\u66F4\u6362\u951A\u70B9\u9891\u9053", target: "url-resolving" },
+      { actionId: "A_REPAIR_EXPAND_RECALL_SCOPE", label: "\u6269\u5927\u53EC\u56DE\u8303\u56F4", target: "url-exact" },
+      { actionId: "A_REPAIR_SWITCH_TO_NL", label: "\u6539\u4E3A\u81EA\u7136\u8BED\u8A00\u63CF\u8FF0", target: "natural-init" }
     ],
     "repair-followup-draft": [
       { label: "\u63D0\u4EA4\u4FEE\u6B63\u8981\u6C42\u5E76\u5237\u65B0", target: "repair-followup-refining" },
@@ -4311,14 +4380,9 @@ ${err.message}`);
       { label: "\u6539\u4E3A\u81EA\u7136\u8BED\u8A00\u641C\u7D22", target: "natural-init" }
     ],
     "repair-followup-refining": [
-      { label: "\u4FEE\u6B63\u6210\u529F\u5E76\u6062\u590D\u7ED3\u679C", target: "repair-recovered-results" },
+      { label: "\u4FEE\u6B63\u6210\u529F\u5E76\u6062\u590D\u7ED3\u679C", target: "natural-results" },
       { label: "\u4FEE\u6B63\u540E\u4ECD\u65E0\u7ED3\u679C", target: "repair-empty" },
       { label: "\u4FEE\u6B63\u540E\u4ECD\u4E0D\u652F\u6301", target: "repair-unsupported" }
-    ],
-    "repair-recovered-results": [
-      { label: "\u7EE7\u7EED\u6D4F\u89C8\u6062\u590D\u540E\u7684\u7ED3\u679C", target: "repair-recovered-results" },
-      { label: "\u7EE7\u7EED\u8865\u4E00\u53E5 refine", target: "repair-followup-draft" },
-      { label: "\u56DE\u5230\u4E00\u822C\u7A33\u5B9A\u7ED3\u679C\u6001", target: "natural-results" }
     ],
     "upgrade-keyword-trigger": [
       { label: "\u7CFB\u7EDF\u5F00\u59CB\u89E3\u91CA\u65B0\u589E\u81EA\u7136\u8BED\u8A00", target: "upgrade-keyword-transition" }
@@ -4362,6 +4426,7 @@ ${err.message}`);
     "keyword-multi::\u8865\u5145\u81EA\u7136\u8BED\u8A00\u5E76\u5347\u7EA7": "UPGRADE_TO_AGENT",
     "keyword-anchor-seed::\u7EE7\u7EED\u8F93\u5165\u4E0B\u4E00\u4E2A\u5173\u952E\u8BCD": "TYPE_KEYWORD",
     "keyword-anchor-seed::\u5220\u9664 URL \u951A\u70B9\uFF0C\u56DE\u5230\u591A\u5173\u952E\u8BCD\u6001": "REMOVE_ANCHOR",
+    "keyword-anchor-seed::\u89E6\u53D1\u641C\u7D22\uFF0C\u8FDB\u5165\u89E3\u6790\u6458\u8981\u6001": "SUBMIT_SEARCH",
     "keyword-anchor-seed::\u8865\u5145\u81EA\u7136\u8BED\u8A00\u5E76\u5347\u7EA7": "UPGRADE_TO_AGENT",
     "keyword-menu::\u5173\u95ED\u83DC\u5355": "CLOSE_TAG_SCOPE",
     "keyword-menu::\u5207\u6362\u5339\u914D\u76EE\u6807": "SET_TAG_SCOPE",
@@ -4373,8 +4438,16 @@ ${err.message}`);
     "url-resolving::\u65E0\u6CD5\u8BC6\u522B": "URL_RESOLVE_INVALID",
     "url-exact::\u7EE7\u7EED\u6D4F\u89C8\u76F8\u4F3C\u9891\u9053\u7ED3\u679C": "BROWSE_SIMILAR_RESULTS",
     "url-exact::\u53EA\u67E5\u770B\u951A\u70B9\u9891\u9053": "VIEW_ANCHOR_ONLY",
+    "url-exact::\u8FFD\u52A0\u5173\u952E\u8BCD\u5F62\u6210 URL+\u5173\u952E\u8BCD\u79CD\u5B50": "TYPE_KEYWORD",
+    "url-exact::\u6A21\u62DF\u4F4E\u53EC\u56DE\u63D0\u793A": "BROWSE_RESULTS",
     "url-exact::\u5220\u9664\u9891\u9053\u951A\u70B9\uFF0C\u56DE\u5230\u521D\u59CB\u7A7A\u767D\u6001": "REMOVE_ANCHOR",
     "url-exact::\u8865\u5145\u81EA\u7136\u8BED\u8A00\uFF0C\u5347\u7EA7\u4E3A Agent \u6001": "UPGRADE_TO_AGENT",
+    "url-keyword-seed::\u7EE7\u7EED\u8F93\u5165\u4E0B\u4E00\u4E2A\u5173\u952E\u8BCD": "TYPE_KEYWORD",
+    "url-keyword-seed::\u5220\u9664 URL \u951A\u70B9\uFF0C\u56DE\u5230\u591A\u5173\u952E\u8BCD\u6001": "REMOVE_ANCHOR",
+    "url-keyword-seed::\u89E6\u53D1\u641C\u7D22\uFF0C\u8FDB\u5165\u89E3\u6790\u6458\u8981\u6001": "SUBMIT_SEARCH",
+    "url-keyword-seed::\u8865\u5145\u81EA\u7136\u8BED\u8A00\u5E76\u5347\u7EA7": "UPGRADE_TO_AGENT",
+    "url-low-recall-hint::\u624B\u52A8\u5C55\u5F00\u4FEE\u6B63\u533A": "OPEN_REPAIR_HINT",
+    "url-low-recall-hint::\u7EE7\u7EED\u6D4F\u89C8\u5F53\u524D\u7ED3\u679C": "DISMISS_REPAIR_HINT",
     "url-mismatch::\u5220\u9664\u94FE\u63A5\uFF0C\u56DE\u5230\u5173\u952E\u8BCD\u6001": "REMOVE_ANCHOR",
     "url-mismatch::\u91CD\u65B0\u8D34\u53EF\u7528 URL": "PASTE_URL",
     "url-unsupported::\u6539\u4E3A\u5173\u952E\u8BCD": "TYPE_KEYWORD",
@@ -4395,7 +4468,7 @@ ${err.message}`);
     "natural-followup-refining::\u5237\u65B0\u540E\u7ED3\u679C\u7A33\u5B9A": "REFINE_SUCCESS",
     "natural-followup-refining::\u5237\u65B0\u540E\u9700\u8981\u4E00\u4E2A\u8FFD\u95EE": "ASK_CLARIFYING_QUESTION",
     "natural-followup-refining::\u5237\u65B0\u540E\u4ECD\u65E0\u7ED3\u679C": "REFINE_EMPTY",
-    "mixed-parse::\u6309\u951A\u70B9\u4F18\u5148\u89E3\u91CA": "RESOLVE_INTENT",
+    "mixed-parse::\u89E3\u6790\u5B8C\u6210\uFF0C\u8FDB\u5165\u951A\u70B9\u4F18\u5148\u7ED3\u679C": "RESOLVE_INTENT",
     "mixed-parse::\u5148\u964D\u7EA7\u8F6F\u6761\u4EF6": "DOWNGRADE_SOFT_CONDITIONS",
     "mixed-anchor::\u7EE7\u7EED\u6309\u951A\u70B9\u4F18\u5148\u8FD4\u56DE\u7ED3\u679C": "BROWSE_RESULTS",
     "mixed-anchor::\u8865\u4E00\u4E2A\u6F84\u6E05\u95EE\u9898": "ASK_CLARIFYING_QUESTION",
@@ -4422,15 +4495,15 @@ ${err.message}`);
     "repair-empty::\u653E\u5BBD\u6761\u4EF6\u540E\u91CD\u641C": "APPLY_REPAIR",
     "repair-empty::\u9000\u56DE\u7ECF\u5178\u5173\u952E\u8BCD\u6001": "RESET_TO_CLASSIC",
     "repair-empty::\u76F4\u63A5\u8865\u4E00\u53E5\u653E\u5BBD\u8981\u6C42": "TYPE_FOLLOWUP",
+    "low-recall-repair-open::\u66F4\u6362\u951A\u70B9\u9891\u9053": "APPLY_REPAIR",
+    "low-recall-repair-open::\u6269\u5927\u53EC\u56DE\u8303\u56F4": "APPLY_REPAIR",
+    "low-recall-repair-open::\u6539\u4E3A\u81EA\u7136\u8BED\u8A00\u63CF\u8FF0": "SUBMIT_SEARCH",
     "repair-followup-draft::\u63D0\u4EA4\u4FEE\u6B63\u8981\u6C42\u5E76\u5237\u65B0": "SUBMIT_FOLLOWUP",
     "repair-followup-draft::\u6539\u4E3A\u5173\u952E\u8BCD\u641C\u7D22": "TYPE_KEYWORD",
     "repair-followup-draft::\u6539\u4E3A\u81EA\u7136\u8BED\u8A00\u641C\u7D22": "SUBMIT_SEARCH",
     "repair-followup-refining::\u4FEE\u6B63\u6210\u529F\u5E76\u6062\u590D\u7ED3\u679C": "REFINE_SUCCESS",
     "repair-followup-refining::\u4FEE\u6B63\u540E\u4ECD\u65E0\u7ED3\u679C": "REFINE_EMPTY",
     "repair-followup-refining::\u4FEE\u6B63\u540E\u4ECD\u4E0D\u652F\u6301": "REFINE_UNSUPPORTED",
-    "repair-recovered-results::\u7EE7\u7EED\u6D4F\u89C8\u6062\u590D\u540E\u7684\u7ED3\u679C": "BROWSE_RESULTS",
-    "repair-recovered-results::\u7EE7\u7EED\u8865\u4E00\u53E5 refine": "TYPE_FOLLOWUP",
-    "repair-recovered-results::\u56DE\u5230\u4E00\u822C\u7A33\u5B9A\u7ED3\u679C\u6001": "RESET_TO_CLASSIC",
     "upgrade-keyword-trigger::\u7CFB\u7EDF\u5F00\u59CB\u89E3\u91CA\u65B0\u589E\u81EA\u7136\u8BED\u8A00": "UPGRADE_TO_AGENT",
     "upgrade-keyword-transition::\u5347\u7EA7\u5B8C\u6210\uFF0C\u8FDB\u5165\u7A33\u5B9A Agent \u6001": "RETRIEVE_SUCCESS",
     "upgrade-keyword-stable::\u7EE7\u7EED refine": "ASK_CLARIFYING_QUESTION",
@@ -4440,6 +4513,13 @@ ${err.message}`);
     "upgrade-url-stable::\u7EE7\u7EED\u770B\u8FD9\u4E2A\u9891\u9053": "BROWSE_RESULTS",
     "upgrade-url-stable::\u8F6C\u4E3A\u627E\u7C7B\u4F3C\u9891\u9053": "ASK_CLARIFYING_QUESTION"
   };
+  function normalizeActionToken(value) {
+    return String(value || "NA").toUpperCase().replace(/[^A-Z0-9]+/g, "_").replace(/^_+|_+$/g, "") || "NA";
+  }
+  function buildActionId({ fixtureId, eventType, targetFixtureId, index }) {
+    const position = String(index + 1).padStart(2, "0");
+    return `A_${normalizeActionToken(fixtureId)}__${normalizeActionToken(eventType)}__${normalizeActionToken(targetFixtureId)}__${position}`;
+  }
   function getSceneByFixtureId(fixtureId) {
     const entry = Object.entries(sceneMap).find(([, list]) => list.some((item) => item.id === fixtureId));
     return entry?.[0] || "keyword";
@@ -4449,8 +4529,6 @@ ${err.message}`);
     if (input.includes("draft_followup")) return "draft_followup";
     if (input.includes("followup_waiting")) return "followup_waiting";
     if (input.includes("editing_keyword")) return "editing_keyword";
-    if (input.includes("tag_scope_menu_open")) return "tag_scope_menu_open";
-    if (input.includes("excluded_keyword")) return "excluded_keyword";
     if (input.includes("committed_anchor")) return "committed_anchor";
     if (input.includes("draft_keyword")) return "draft_keyword";
     if (input.includes("committed_keyword")) return "committed_keyword";
@@ -4468,14 +4546,27 @@ ${err.message}`);
       Object.entries(scenarios).map(([fixtureId, ui]) => {
         const scene = getSceneByFixtureId(fixtureId);
         const sceneState = sceneMap[scene].find((item) => item.id === fixtureId);
-        const actions = (stateActions[fixtureId] || []).map((action) => ({
-          ...action,
-          targetFixtureId: action.target,
-          event: {
-            type: ACTION_EVENT_TYPE_MAP[`${fixtureId}::${action.label}`] || "LOAD_FIXTURE",
-            targetFixtureId: action.target
-          }
-        }));
+        const actions = (stateActions[fixtureId] || []).map((action, index) => {
+          const actionKey = `${fixtureId}::${action.label}`;
+          const eventType = ACTION_EVENT_TYPE_MAP[actionKey] || "LOAD_FIXTURE";
+          const targetFixtureId = action.target;
+          const actionId = action.actionId || buildActionId({
+            fixtureId,
+            eventType,
+            targetFixtureId,
+            index
+          });
+          return {
+            ...action,
+            actionId,
+            targetFixtureId,
+            event: {
+              type: eventType,
+              actionId,
+              targetFixtureId
+            }
+          };
+        });
         return [
           fixtureId,
           {
@@ -4501,18 +4592,732 @@ ${err.message}`);
     })
   );
   actor.start();
+  var DIAGRAM_MODE_HANDDRAWN = "handdrawn";
+  var DIAGRAM_MODE_XSTATE = "xstate";
+  var currentDiagramMode = DIAGRAM_MODE_HANDDRAWN;
+  var XSTATE_SCOPE_SCENE = "scene";
+  var XSTATE_SCOPE_ALL = "all";
+  var currentXStateScope = XSTATE_SCOPE_SCENE;
+  var pinnedStateBySvg = /* @__PURE__ */ new WeakMap();
+  var xstateLayerStates = {
+    input: Object.keys(inputMachineConfig.states),
+    container: Object.keys(containerMachineConfig.states),
+    session: Object.keys(sessionMachineConfig.states)
+  };
+  var xstateLayoutPresets = {
+    input: {
+      width: 1360,
+      nodeWidth: 228,
+      nodeHeight: 88,
+      rowGap: 174,
+      marginX: 52,
+      startY: 56,
+      rows: [
+        ["empty_input", "draft_keyword", "committed_keyword"],
+        ["editing_keyword"],
+        ["committed_anchor", "followup_waiting", "draft_followup"]
+      ]
+    },
+    container: {
+      width: 1360,
+      nodeWidth: 244,
+      nodeHeight: 90,
+      rowGap: 178,
+      marginX: 52,
+      startY: 56,
+      rows: [
+        ["compact_classic", "expanded_agent", "expanded_clarifying"],
+        ["compact_resolving", "expanded_repair"]
+      ]
+    },
+    session: {
+      width: 1360,
+      nodeWidth: 228,
+      nodeHeight: 88,
+      rowGap: 172,
+      marginX: 52,
+      startY: 56,
+      rows: [
+        ["idle", "retrieving", "results_ready", "clarifying"],
+        ["empty_repair", "refining", "unsupported"]
+      ]
+    }
+  };
+  var xstateEdgeSamples = /* @__PURE__ */ new Map();
+  function summarizeEvents(events) {
+    const list = [...events];
+    if (!list.length) return "";
+    if (list.length === 1) return list[0];
+    if (list.length === 2) return `${list[0]} / ${list[1]}`;
+    return `${list[0]} +${list.length - 1}`;
+  }
+  function collectLayerTransitions(layerKey, snapshot) {
+    const edges = /* @__PURE__ */ new Map();
+    const allFixtures = Object.values(fixtures);
+    const currentScene = getScene(snapshot);
+    const scopedFixtures = currentXStateScope === XSTATE_SCOPE_SCENE ? allFixtures.filter((fixture) => fixture.scene === currentScene) : allFixtures;
+    scopedFixtures.forEach((fixture) => {
+      const from = fixture.machineTriplet?.[layerKey];
+      if (!from) return;
+      (fixture.actions || []).forEach((action) => {
+        const targetFixture = fixtures[action.targetFixtureId];
+        const to = targetFixture?.machineTriplet?.[layerKey];
+        if (!to || from === to) return;
+        const key = `${from}__${to}`;
+        const existing = edges.get(key) || {
+          from,
+          to,
+          events: /* @__PURE__ */ new Set(),
+          count: 0,
+          signatures: /* @__PURE__ */ new Set(),
+          samples: []
+        };
+        existing.events.add(action.event.type);
+        existing.count += 1;
+        const signature = `${fixture.id}__${action.targetFixtureId}__${action.event.type}`;
+        if (!existing.signatures.has(signature)) {
+          existing.signatures.add(signature);
+          existing.samples.push({
+            fromFixtureId: fixture.id,
+            targetFixtureId: action.targetFixtureId,
+            eventType: action.event.type,
+            actionId: action.actionId,
+            label: action.label
+          });
+        }
+        edges.set(key, existing);
+      });
+    });
+    return [...edges.values()];
+  }
+  function buildNodeLayout(layerKey) {
+    const preset = xstateLayoutPresets[layerKey] || {
+      width: 1360,
+      nodeWidth: 228,
+      nodeHeight: 78,
+      rowGap: 166,
+      marginX: 52,
+      startY: 56,
+      rows: []
+    };
+    const {
+      width,
+      nodeWidth,
+      nodeHeight,
+      rowGap,
+      marginX,
+      startY,
+      rows: preferredRows
+    } = preset;
+    const states = xstateLayerStates[layerKey] || [];
+    const rows = (preferredRows || []).map(
+      (row) => row.filter((state) => states.includes(state))
+    );
+    const remainingStates = states.filter((state) => !rows.some((row) => row.includes(state)));
+    if (remainingStates.length) rows.push(remainingStates);
+    const layout = /* @__PURE__ */ new Map();
+    rows.forEach((rowStates, rowIndex) => {
+      const count = rowStates.length;
+      const usableWidth = width - marginX * 2;
+      const colGap = count > 1 ? Math.floor((usableWidth - nodeWidth) / (count - 1)) : 0;
+      const rowSpan = count > 1 ? nodeWidth + colGap * (count - 1) : nodeWidth;
+      const rowStartX = marginX + Math.max(0, Math.floor((usableWidth - rowSpan) / 2));
+      rowStates.forEach((state, colIndex) => {
+        const x = rowStartX + colIndex * colGap;
+        const y = startY + rowIndex * rowGap;
+        layout.set(state, { x, y, width: nodeWidth, height: nodeHeight, row: rowIndex });
+      });
+    });
+    const computedHeight = startY + Math.max(0, rows.length - 1) * rowGap + nodeHeight + 52;
+    return { layout, computedHeight, width };
+  }
+  function classifyEdge(events) {
+    const merged = [...events].join(" ");
+    if (merged.includes("REPAIR") || merged.includes("EMPTY") || merged.includes("UNSUPPORTED") || merged.includes("MISMATCH") || merged.includes("INVALID")) {
+      return "branch";
+    }
+    return "main";
+  }
+  function choosePortSides(fromBox, toBox) {
+    const fromCenterX = fromBox.x + fromBox.width / 2;
+    const toCenterX = toBox.x + toBox.width / 2;
+    const rowDiff = toBox.row - fromBox.row;
+    const colDiff = toCenterX - fromCenterX;
+    if (Math.abs(rowDiff) >= 1) {
+      if (rowDiff > 0) return { fromSide: "bottom", toSide: "top" };
+      return { fromSide: "top", toSide: "bottom" };
+    }
+    if (colDiff >= 0) return { fromSide: "right", toSide: "left" };
+    return { fromSide: "left", toSide: "right" };
+  }
+  function getPortPoint(box, side, slotIndex, slotTotal) {
+    const ratio = (slotIndex + 1) / (slotTotal + 1);
+    if (side === "left") {
+      return { x: box.x, y: box.y + box.height * ratio };
+    }
+    if (side === "right") {
+      return { x: box.x + box.width, y: box.y + box.height * ratio };
+    }
+    if (side === "top") {
+      return { x: box.x + box.width * ratio, y: box.y };
+    }
+    return { x: box.x + box.width * ratio, y: box.y + box.height };
+  }
+  function normalizePolyline(points) {
+    const normalized = [];
+    points.forEach((point) => {
+      const x = Math.round(point.x);
+      const y = Math.round(point.y);
+      const prev = normalized[normalized.length - 1];
+      if (!prev || prev.x !== x || prev.y !== y) {
+        normalized.push({ x, y });
+      }
+    });
+    let changed = true;
+    while (changed) {
+      changed = false;
+      for (let index = 1; index < normalized.length - 1; index += 1) {
+        const prev = normalized[index - 1];
+        const current = normalized[index];
+        const next = normalized[index + 1];
+        if (prev.x === current.x && current.x === next.x || prev.y === current.y && current.y === next.y) {
+          normalized.splice(index, 1);
+          changed = true;
+          break;
+        }
+      }
+    }
+    return normalized;
+  }
+  function segmentsFromPolyline(points) {
+    const segments = [];
+    for (let index = 0; index < points.length - 1; index += 1) {
+      const a = points[index];
+      const b = points[index + 1];
+      const vertical = a.x === b.x;
+      const horizontal = a.y === b.y;
+      if (!vertical && !horizontal) continue;
+      segments.push({
+        x1: a.x,
+        y1: a.y,
+        x2: b.x,
+        y2: b.y,
+        vertical,
+        horizontal,
+        minX: Math.min(a.x, b.x),
+        maxX: Math.max(a.x, b.x),
+        minY: Math.min(a.y, b.y),
+        maxY: Math.max(a.y, b.y),
+        length: Math.abs(a.x - b.x) + Math.abs(a.y - b.y)
+      });
+    }
+    return segments;
+  }
+  function rangeOverlap(a1, a2, b1, b2) {
+    const min = Math.max(Math.min(a1, a2), Math.min(b1, b2));
+    const max = Math.min(Math.max(a1, a2), Math.max(b1, b2));
+    return Math.max(0, max - min);
+  }
+  function scoreRoute(candidateSegments, placedSegments) {
+    let intersections = 0;
+    let overlaps = 0;
+    let score = 0;
+    candidateSegments.forEach((seg) => {
+      score += seg.length * 0.02;
+      placedSegments.forEach((existing) => {
+        if (seg.vertical && existing.vertical && seg.x1 === existing.x1) {
+          const overlap = rangeOverlap(seg.y1, seg.y2, existing.y1, existing.y2);
+          if (overlap > 0) {
+            overlaps += overlap;
+            score += 240 + overlap * 1.1;
+          }
+          return;
+        }
+        if (seg.horizontal && existing.horizontal && seg.y1 === existing.y1) {
+          const overlap = rangeOverlap(seg.x1, seg.x2, existing.x1, existing.x2);
+          if (overlap > 0) {
+            overlaps += overlap;
+            score += 240 + overlap * 1.1;
+          }
+          return;
+        }
+        if (seg.vertical && existing.vertical && Math.abs(seg.x1 - existing.x1) <= 14) {
+          const overlap = rangeOverlap(seg.y1, seg.y2, existing.y1, existing.y2);
+          if (overlap > 0) {
+            score += 18 + overlap * 0.18;
+          }
+          return;
+        }
+        if (seg.horizontal && existing.horizontal && Math.abs(seg.y1 - existing.y1) <= 14) {
+          const overlap = rangeOverlap(seg.x1, seg.x2, existing.x1, existing.x2);
+          if (overlap > 0) {
+            score += 18 + overlap * 0.18;
+          }
+          return;
+        }
+        if (seg.vertical && existing.horizontal) {
+          if (seg.x1 >= existing.minX && seg.x1 <= existing.maxX && existing.y1 >= seg.minY && existing.y1 <= seg.maxY) {
+            intersections += 1;
+            score += 58;
+          }
+          return;
+        }
+        if (seg.horizontal && existing.vertical) {
+          if (existing.x1 >= seg.minX && existing.x1 <= seg.maxX && seg.y1 >= existing.minY && seg.y1 <= existing.maxY) {
+            intersections += 1;
+            score += 58;
+          }
+        }
+      });
+    });
+    return { score, intersections, overlaps };
+  }
+  function buildRouteCandidates(start, end, portMeta, edgeIndex, layerHeight) {
+    const candidates = [];
+    const seen = /* @__PURE__ */ new Set();
+    const laneSeed = edgeIndex % 6;
+    const midX = Math.round((start.x + end.x) / 2);
+    const midY = Math.round((start.y + end.y) / 2);
+    const horizontalClearance = 34 + laneSeed * 12;
+    const verticalClearance = 34 + laneSeed * 10;
+    const addCandidate = (points) => {
+      const normalized = normalizePolyline(points);
+      if (normalized.length < 2) return;
+      const key = normalized.map((point) => `${point.x},${point.y}`).join("|");
+      if (seen.has(key)) return;
+      seen.add(key);
+      candidates.push(normalized);
+    };
+    addCandidate([start, { x: midX, y: start.y }, { x: midX, y: end.y }, end]);
+    addCandidate([start, { x: start.x, y: midY }, { x: end.x, y: midY }, end]);
+    for (let lane = 0; lane < 3; lane += 1) {
+      const offset = 56 + (laneSeed + lane) * 16;
+      const topY = Math.max(18, Math.min(start.y, end.y) - offset);
+      const bottomY = Math.min(layerHeight - 18, Math.max(start.y, end.y) + offset);
+      const shiftedMidX = midX + (lane - 1) * (22 + laneSeed * 4);
+      addCandidate([start, { x: start.x, y: topY }, { x: end.x, y: topY }, end]);
+      addCandidate([start, { x: start.x, y: bottomY }, { x: end.x, y: bottomY }, end]);
+      addCandidate([start, { x: shiftedMidX, y: start.y }, { x: shiftedMidX, y: end.y }, end]);
+    }
+    if (portMeta.fromSide === "right" || portMeta.fromSide === "left") {
+      const direction = portMeta.fromSide === "right" ? 1 : -1;
+      [horizontalClearance, horizontalClearance + 18, horizontalClearance + 36].forEach((spread, lane) => {
+        const outX = start.x + direction * spread;
+        const bendY = end.y + (lane % 2 === 0 ? 1 : -1) * (20 + lane * 8);
+        addCandidate([start, { x: outX, y: start.y }, { x: outX, y: end.y }, { x: end.x, y: end.y }, end]);
+        addCandidate([start, { x: outX, y: start.y }, { x: outX, y: bendY }, { x: end.x, y: bendY }, end]);
+      });
+    }
+    if (portMeta.fromSide === "top" || portMeta.fromSide === "bottom") {
+      const direction = portMeta.fromSide === "bottom" ? 1 : -1;
+      [verticalClearance, verticalClearance + 18, verticalClearance + 36].forEach((spread, lane) => {
+        const outY = start.y + direction * spread;
+        const bendX = end.x + (lane % 2 === 0 ? 1 : -1) * (22 + lane * 10);
+        addCandidate([start, { x: start.x, y: outY }, { x: end.x, y: outY }, end]);
+        addCandidate([start, { x: start.x, y: outY }, { x: bendX, y: outY }, { x: bendX, y: end.y }, end]);
+      });
+    }
+    return candidates;
+  }
+  function pickLabelPoint(polyline) {
+    const segments = segmentsFromPolyline(polyline);
+    if (!segments.length) {
+      return { x: polyline[0]?.x || 0, y: (polyline[0]?.y || 0) - 8 };
+    }
+    const longest = segments.reduce((best, seg) => seg.length > best.length ? seg : best, segments[0]);
+    if (longest.horizontal) {
+      return {
+        x: Math.round((longest.x1 + longest.x2) / 2),
+        y: longest.y1 - 9
+      };
+    }
+    return {
+      x: longest.x1 + 10,
+      y: Math.round((longest.y1 + longest.y2) / 2)
+    };
+  }
+  function polylineToPath(points) {
+    if (!points.length) return "";
+    const commands = [`M${points[0].x} ${points[0].y}`];
+    for (let index = 1; index < points.length; index += 1) {
+      commands.push(`L${points[index].x} ${points[index].y}`);
+    }
+    return commands.join(" ");
+  }
+  function renderXStateLayerChart(svgId, layerKey, snapshot) {
+    const svg = document.getElementById(svgId);
+    if (!svg) return;
+    const states = xstateLayerStates[layerKey];
+    const transitions = collectLayerTransitions(layerKey, snapshot);
+    const ns = "http://www.w3.org/2000/svg";
+    const markerBlueId = `${svgId}-arrow-main`;
+    const markerBranchId = `${svgId}-arrow-branch`;
+    const { layout, computedHeight, width } = buildNodeLayout(layerKey);
+    svg.setAttribute("viewBox", `0 0 ${width} ${computedHeight}`);
+    svg.innerHTML = "";
+    const defs = document.createElementNS(ns, "defs");
+    const markerMain = document.createElementNS(ns, "marker");
+    markerMain.setAttribute("id", markerBlueId);
+    markerMain.setAttribute("markerWidth", "7");
+    markerMain.setAttribute("markerHeight", "7");
+    markerMain.setAttribute("refX", "5.8");
+    markerMain.setAttribute("refY", "3.5");
+    markerMain.setAttribute("orient", "auto");
+    const markerMainPath = document.createElementNS(ns, "path");
+    markerMainPath.setAttribute("d", "M0,0 L7,3.5 L0,7 z");
+    markerMainPath.setAttribute("fill", "#5a84ff");
+    markerMain.appendChild(markerMainPath);
+    const markerBranch = document.createElementNS(ns, "marker");
+    markerBranch.setAttribute("id", markerBranchId);
+    markerBranch.setAttribute("markerWidth", "7");
+    markerBranch.setAttribute("markerHeight", "7");
+    markerBranch.setAttribute("refX", "5.8");
+    markerBranch.setAttribute("refY", "3.5");
+    markerBranch.setAttribute("orient", "auto");
+    const markerBranchPath = document.createElementNS(ns, "path");
+    markerBranchPath.setAttribute("d", "M0,0 L7,3.5 L0,7 z");
+    markerBranchPath.setAttribute("fill", "#ef8a2e");
+    markerBranch.appendChild(markerBranchPath);
+    defs.appendChild(markerMain);
+    defs.appendChild(markerBranch);
+    svg.appendChild(defs);
+    const routedTransitions = transitions.map((edge) => {
+      const from = layout.get(edge.from);
+      const to = layout.get(edge.to);
+      if (!from || !to) return null;
+      const portMeta = choosePortSides(from, to);
+      return {
+        ...edge,
+        fromBox: from,
+        toBox: to,
+        type: classifyEdge(edge.events),
+        edgeKey: `${layerKey}__${edge.from}__${edge.to}`,
+        portMeta
+      };
+    }).filter(Boolean).sort((a, b) => {
+      const rowSpanA = Math.abs(a.fromBox.row - a.toBox.row);
+      const rowSpanB = Math.abs(b.fromBox.row - b.toBox.row);
+      if (rowSpanA !== rowSpanB) return rowSpanA - rowSpanB;
+      if (a.fromBox.row !== b.fromBox.row) return a.fromBox.row - b.fromBox.row;
+      return a.fromBox.x - b.fromBox.x;
+    });
+    const outgoingBuckets = /* @__PURE__ */ new Map();
+    const incomingBuckets = /* @__PURE__ */ new Map();
+    routedTransitions.forEach((edge, index) => {
+      edge.routeIndex = index;
+      const outKey = `${edge.from}__${edge.portMeta.fromSide}`;
+      const inKey = `${edge.to}__${edge.portMeta.toSide}`;
+      if (!outgoingBuckets.has(outKey)) outgoingBuckets.set(outKey, []);
+      if (!incomingBuckets.has(inKey)) incomingBuckets.set(inKey, []);
+      outgoingBuckets.get(outKey).push(edge);
+      incomingBuckets.get(inKey).push(edge);
+    });
+    outgoingBuckets.forEach((bucket) => {
+      bucket.sort((a, b) => a.toBox.row - b.toBox.row || a.toBox.x - b.toBox.x).forEach((edge, slotIndex) => {
+        edge.startSlot = { index: slotIndex, total: bucket.length };
+      });
+    });
+    incomingBuckets.forEach((bucket) => {
+      bucket.sort((a, b) => a.fromBox.row - b.fromBox.row || a.fromBox.x - b.fromBox.x).forEach((edge, slotIndex) => {
+        edge.endSlot = { index: slotIndex, total: bucket.length };
+      });
+    });
+    const placedSegments = [];
+    routedTransitions.forEach((edge) => {
+      const start = getPortPoint(
+        edge.fromBox,
+        edge.portMeta.fromSide,
+        edge.startSlot?.index || 0,
+        edge.startSlot?.total || 1
+      );
+      const end = getPortPoint(
+        edge.toBox,
+        edge.portMeta.toSide,
+        edge.endSlot?.index || 0,
+        edge.endSlot?.total || 1
+      );
+      const candidates = buildRouteCandidates(start, end, edge.portMeta, edge.routeIndex, computedHeight);
+      let best = null;
+      candidates.forEach((candidate) => {
+        const segments = segmentsFromPolyline(candidate);
+        if (!segments.length) return;
+        const routeQuality = scoreRoute(segments, placedSegments);
+        const bends = Math.max(0, candidate.length - 2);
+        const totalScore = routeQuality.score + bends * 4;
+        if (!best || totalScore < best.totalScore) {
+          best = {
+            points: candidate,
+            segments,
+            totalScore
+          };
+        }
+      });
+      edge.route = best || {
+        points: normalizePolyline([start, end]),
+        segments: segmentsFromPolyline(normalizePolyline([start, end])),
+        totalScore: Number.POSITIVE_INFINITY
+      };
+      placedSegments.push(...edge.route.segments);
+    });
+    routedTransitions.forEach((edge) => {
+      const sample = (edge.samples || [])[0] || null;
+      xstateEdgeSamples.set(edge.edgeKey, edge.samples || []);
+      const group = document.createElementNS(ns, "g");
+      group.setAttribute("class", "xstate-transition-target");
+      group.setAttribute("data-layer", layerKey);
+      group.setAttribute("data-from", edge.from);
+      group.setAttribute("data-to", edge.to);
+      group.setAttribute("data-edge-key", edge.edgeKey);
+      if (sample) {
+        group.setAttribute("data-action-id", sample.actionId || "");
+        group.setAttribute("data-event-type", sample.eventType || "LOAD_FIXTURE");
+        group.setAttribute("data-target-fixture", sample.targetFixtureId || "");
+        group.setAttribute("data-source-fixture", sample.fromFixtureId || "");
+      }
+      const path = document.createElementNS(ns, "path");
+      path.setAttribute("d", polylineToPath(edge.route.points));
+      path.setAttribute("class", `xstate-edge ${edge.type}`);
+      path.setAttribute("marker-end", `url(#${edge.type === "branch" ? markerBranchId : markerBlueId})`);
+      const hit = document.createElementNS(ns, "path");
+      hit.setAttribute("d", polylineToPath(edge.route.points));
+      hit.setAttribute("class", "xstate-edge-hit");
+      group.appendChild(hit);
+      group.appendChild(path);
+      const label = document.createElementNS(ns, "text");
+      const labelPoint = pickLabelPoint(edge.route.points);
+      label.setAttribute("x", String(labelPoint.x));
+      label.setAttribute("y", String(labelPoint.y));
+      label.setAttribute("class", "xstate-edge-label");
+      label.textContent = summarizeEvents(edge.events);
+      group.appendChild(label);
+      svg.appendChild(group);
+    });
+    states.forEach((state) => {
+      const box = layout.get(state);
+      if (!box) return;
+      const group = document.createElementNS(ns, "g");
+      group.setAttribute("class", "xstate-node");
+      group.setAttribute("data-layer", layerKey);
+      group.setAttribute("data-state", state);
+      const rect = document.createElementNS(ns, "rect");
+      rect.setAttribute("x", String(box.x));
+      rect.setAttribute("y", String(box.y));
+      rect.setAttribute("width", String(box.width));
+      rect.setAttribute("height", String(box.height));
+      rect.setAttribute("rx", "16");
+      const title = document.createElementNS(ns, "text");
+      title.setAttribute("x", String(box.x + 18));
+      title.setAttribute("y", String(box.y + 34));
+      title.setAttribute("class", "xstate-title");
+      title.textContent = state;
+      const sub = document.createElementNS(ns, "text");
+      sub.setAttribute("x", String(box.x + 18));
+      sub.setAttribute("y", String(box.y + 56));
+      sub.setAttribute("class", "xstate-sub");
+      sub.textContent = layerKey === "input" ? "input layer" : layerKey === "container" ? "container layer" : "session layer";
+      group.appendChild(rect);
+      group.appendChild(title);
+      group.appendChild(sub);
+      svg.appendChild(group);
+    });
+  }
+  function renderXStateCharts() {
+    const snapshot = actor.getSnapshot();
+    xstateEdgeSamples.clear();
+    renderXStateLayerChart("xstate-input-svg", "input", snapshot);
+    renderXStateLayerChart("xstate-container-svg", "container", snapshot);
+    renderXStateLayerChart("xstate-session-svg", "session", snapshot);
+  }
+  function applyXStateSelection() {
+    const snapshot = actor.getSnapshot();
+    const triple = getTriplet(snapshot);
+    const currentFixtureId = getCurrentFixtureId(snapshot);
+    if (!triple) return;
+    const active = {
+      input: triple.input,
+      container: triple.container,
+      session: triple.session
+    };
+    document.querySelectorAll(".xstate-node").forEach((node) => {
+      const layer = node.dataset.layer;
+      const state = node.dataset.state;
+      node.classList.toggle("active", active[layer] === state);
+    });
+    document.querySelectorAll(".xstate-transition-target").forEach((edge) => {
+      edge.classList.remove("is-selected", "is-available", "is-highlight", "is-dim");
+      const layer = edge.dataset.layer;
+      const edgeKey = edge.dataset.edgeKey;
+      const samples = xstateEdgeSamples.get(edgeKey) || [];
+      const isAvailable = samples.some((item) => item.fromFixtureId === currentFixtureId);
+      const isInbound = samples.some((item) => item.targetFixtureId === currentFixtureId);
+      const fromMatch = active[layer] === edge.dataset.from;
+      if (isInbound) edge.classList.add("is-selected");
+      else if (isAvailable || fromMatch) edge.classList.add("is-available");
+    });
+  }
+  function clearXStateFocus(svg) {
+    if (!svg) return;
+    svg.classList.remove("is-focusing");
+    svg.querySelectorAll(".xstate-node").forEach((node) => {
+      node.classList.remove("is-dim", "is-highlight", "is-context");
+    });
+    svg.querySelectorAll(".xstate-transition-target").forEach((group) => {
+      group.classList.remove("is-dim", "is-highlight", "is-context");
+    });
+  }
+  function getPinnedState(svg) {
+    return pinnedStateBySvg.get(svg) || null;
+  }
+  function findPinnedStateNode(svg, pinnedState) {
+    if (!svg || !pinnedState) return null;
+    if (pinnedState.kind === "handdrawn") {
+      return [...svg.querySelectorAll(".svg-state-target")].find((node) => node.dataset.node === pinnedState.id) || null;
+    }
+    if (pinnedState.kind === "xstate") {
+      return [...svg.querySelectorAll(".xstate-node")].find((node) => node.dataset.state === pinnedState.id) || null;
+    }
+    return null;
+  }
+  function applyPinnedFocus(svg) {
+    const pinnedState = getPinnedState(svg);
+    if (!pinnedState) {
+      clearSvgFocus(svg);
+      clearXStateFocus(svg);
+      return;
+    }
+    const node = findPinnedStateNode(svg, pinnedState);
+    if (!node) {
+      pinnedStateBySvg.delete(svg);
+      clearSvgFocus(svg);
+      clearXStateFocus(svg);
+      return;
+    }
+    if (pinnedState.kind === "handdrawn") {
+      focusState(node);
+      return;
+    }
+    focusXStateState(node);
+  }
+  function setPinnedState(svg, pinnedState) {
+    if (!svg || !pinnedState?.id) return;
+    pinnedStateBySvg.set(svg, pinnedState);
+    applyPinnedFocus(svg);
+  }
+  function clearPinnedState(svg) {
+    if (!svg) return;
+    pinnedStateBySvg.delete(svg);
+    clearSvgFocus(svg);
+    clearXStateFocus(svg);
+  }
+  function restorePinnedOrClear(svg) {
+    if (!svg) return;
+    if (getPinnedState(svg)) {
+      applyPinnedFocus(svg);
+      return;
+    }
+    clearSvgFocus(svg);
+    clearXStateFocus(svg);
+  }
+  function focusXStateTransition(group) {
+    const svg = group.closest("svg");
+    if (!svg) return;
+    clearXStateFocus(svg);
+    svg.classList.add("is-focusing");
+    const from = group.dataset.from;
+    const to = group.dataset.to;
+    svg.querySelectorAll(".xstate-node").forEach((node) => node.classList.add("is-dim"));
+    svg.querySelectorAll(".xstate-transition-target").forEach((edge) => edge.classList.add("is-dim"));
+    group.classList.remove("is-dim");
+    group.classList.add("is-highlight");
+    svg.querySelectorAll(".xstate-node").forEach((node) => {
+      if (node.dataset.state === from || node.dataset.state === to) {
+        node.classList.remove("is-dim");
+        node.classList.add("is-highlight");
+      }
+    });
+  }
+  function focusXStateState(node) {
+    const svg = node.closest("svg");
+    if (!svg) return;
+    clearXStateFocus(svg);
+    svg.classList.add("is-focusing");
+    const stateId = node.dataset.state;
+    const transitions = [...svg.querySelectorAll(".xstate-transition-target")];
+    const directEdges = transitions.filter((edge) => edge.dataset.from === stateId || edge.dataset.to === stateId);
+    const directNeighborIds = new Set(
+      directEdges.flatMap((edge) => [edge.dataset.from, edge.dataset.to]).filter((id) => id && id !== stateId)
+    );
+    svg.querySelectorAll(".xstate-node").forEach((item) => item.classList.add("is-dim"));
+    svg.querySelectorAll(".xstate-transition-target").forEach((edge) => edge.classList.add("is-dim"));
+    node.classList.remove("is-dim");
+    node.classList.add("is-highlight");
+    directEdges.forEach((edge) => {
+      edge.classList.remove("is-dim");
+      edge.classList.add("is-context");
+    });
+    svg.querySelectorAll(".xstate-node").forEach((item) => {
+      if (item === node) return;
+      if (directNeighborIds.has(item.dataset.state)) {
+        item.classList.remove("is-dim");
+        item.classList.add("is-context");
+      }
+    });
+  }
+  function resolveXStateEdgeSample(group, snapshot) {
+    const edgeKey = group.dataset.edgeKey;
+    const samples = xstateEdgeSamples.get(edgeKey) || [];
+    if (!samples.length) return null;
+    const currentFixtureId = getCurrentFixtureId(snapshot);
+    const currentScene = getScene(snapshot);
+    const exact = samples.find((item) => item.fromFixtureId === currentFixtureId);
+    if (exact) return exact;
+    const sameScene = samples.find((item) => fixtures[item.fromFixtureId]?.scene === currentScene);
+    if (sameScene) return sameScene;
+    return samples[0];
+  }
+  function setDiagramMode(mode) {
+    currentDiagramMode = mode;
+    const hand = document.getElementById("handdrawn-diagram-stack");
+    const xstate = document.getElementById("xstate-diagram-stack");
+    const xstateScope = document.getElementById("xstate-scope-picker");
+    if (!hand || !xstate) return;
+    hand.classList.toggle("is-hidden", mode === DIAGRAM_MODE_XSTATE);
+    xstate.classList.toggle("is-hidden", mode !== DIAGRAM_MODE_XSTATE);
+    if (xstateScope) {
+      xstateScope.classList.toggle("is-hidden", mode !== DIAGRAM_MODE_XSTATE);
+      xstateScope.querySelectorAll("button[data-xstate-scope]").forEach((button) => {
+        button.classList.toggle("is-active", button.dataset.xstateScope === currentXStateScope);
+      });
+    }
+    document.querySelectorAll("#diagram-mode-picker button").forEach((button) => {
+      button.classList.toggle("is-active", button.dataset.diagramMode === mode);
+    });
+    document.querySelectorAll(".machine-svg").forEach((svg) => {
+      clearSvgFocus(svg);
+      clearXStateFocus(svg);
+    });
+    if (mode === DIAGRAM_MODE_XSTATE) {
+      renderXStateCharts();
+      applyXStateSelection();
+    }
+    document.querySelectorAll(".machine-svg").forEach((svg) => {
+      applyPinnedFocus(svg);
+    });
+  }
   function renderShell(themeName, target) {
     const snapshot = actor.getSnapshot();
-    const data = getFixture(snapshot, fixtures).ui;
+    const fixture = getFixture(snapshot, fixtures);
+    const data = fixture.ui;
     const isExpanded = data.mode === "expanded";
     const isResolving = data.mode === "resolving";
     const keywordFlow = data.keywordFlow;
+    const inlineHintAction = data.inlineHint?.actionId ? fixture.actions.find((action) => action.actionId === data.inlineHint.actionId) : null;
     target.innerHTML = `
     <div class="search-box ${isExpanded ? "expanded" : "classic"}">
       <div class="shell-chrome">
         <div class="search-icon">${isResolving ? "\u21BB" : "\u2315"}</div>
         <div class="main-input">
-          ${keywordFlow ? renderKeywordFlow(keywordFlow) : `<p class="line-1">${data.inputTitle}</p>`}
+          ${keywordFlow ? renderKeywordFlow(keywordFlow, data.inlineHint, inlineHintAction) : `<p class="line-1">${data.inputTitle}</p>`}
           ${data.inputHint ? `<p class="line-2">${data.inputHint}</p>` : ""}
         </div>
         ${data.miniAction || data.primaryAction ? `
@@ -4523,7 +5328,6 @@ ${err.message}`);
           </div>
         ` : ""}
       </div>
-
       <div class="stack ${data.status ? "" : "hidden"}">
         ${data.status ? renderStatus(data.status) : ""}
       </div>
@@ -4538,7 +5342,24 @@ ${err.message}`);
     </div>
   `;
   }
-  function renderKeywordFlow(flow) {
+  function renderInlineHint(inlineHint, action) {
+    return `
+    <span class="inline-hint-row">
+      <span class="inline-hint-copy">${inlineHint.text}</span>
+      ${action ? `
+        <button
+          class="inline-hint-action"
+          data-action-id="${action.actionId}"
+          data-event-type="${action.event.type}"
+          data-target-fixture="${action.targetFixtureId}"
+        >
+          ${inlineHint.actionLabel || action.label}
+        </button>
+      ` : ""}
+    </span>
+  `;
+  }
+  function renderKeywordFlow(flow, inlineHint, inlineHintAction) {
     if (flow.followup) {
       const tags2 = (flow.tags || []).map(
         (tag) => `
@@ -4550,10 +5371,12 @@ ${err.message}`);
         `
       ).join("");
       const content = flow.draft ? flow.draft : `<span class="followup-placeholder">${flow.placeholder || "\u7EE7\u7EED\u8865\u5145..."}</span>`;
+      const hint2 = inlineHint ? renderInlineHint(inlineHint, inlineHintAction) : "";
       return `
       <div class="query-line followup-line">
         ${tags2}
         <span class="followup-fragment with-caret">${content}</span>
+        ${hint2}
       </div>
     `;
     }
@@ -4567,10 +5390,12 @@ ${err.message}`);
       `
     ).join("");
     const draft = `<span class="draft-fragment with-caret">${flow.draft || ""}</span>`;
+    const hint = inlineHint ? renderInlineHint(inlineHint, inlineHintAction) : "";
     return `
     <div class="query-line">
       ${tags}
       ${draft}
+      ${hint}
     </div>
   `;
   }
@@ -4705,6 +5530,9 @@ ${err.message}`);
       if (!group.dataset.event) {
         group.dataset.event = "LOAD_FIXTURE";
       }
+      if (!group.dataset.actionId) {
+        group.dataset.actionId = `A_PATH__${normalizeActionToken(group.dataset.from)}__${normalizeActionToken(group.dataset.to)}__${normalizeActionToken(group.dataset.target)}__01`;
+      }
       if (group.querySelector(".svg-edge-hit")) return;
       const edge = group.querySelector(".svg-edge");
       if (!edge) return;
@@ -4808,27 +5636,50 @@ ${err.message}`);
     <span class="triple-chip subtle"><strong>variant</strong><em>${currentVariant}</em></span>
   `;
     document.getElementById("state-actions").innerHTML = actions.map(
-      (action) => `<button class="dock-action" data-event-type="${action.event.type}" data-target-fixture="${action.targetFixtureId}">${action.label}</button>`
+      (action) => `<button class="dock-action" data-action-id="${action.actionId}" data-event-type="${action.event.type}" data-target-fixture="${action.targetFixtureId}">${action.label}</button>`
     ).join("");
+    applyXStateSelection();
+  }
+  function syncUiAfterActorChange({ rerenderShell = true } = {}) {
+    const currentScene = getScene(actor.getSnapshot());
+    document.querySelectorAll("#scene-picker button").forEach((node) => node.classList.toggle("is-active", node.dataset.scene === currentScene));
+    renderSubstatePicker();
+    document.querySelectorAll(".machine-svg").forEach((svg) => {
+      clearSvgFocus(svg);
+      clearXStateFocus(svg);
+    });
+    applyStateMachineSelection();
+    if (rerenderShell) {
+      rerenderAll();
+    }
+    if (currentDiagramMode === DIAGRAM_MODE_XSTATE) {
+      renderXStateCharts();
+    }
+    renderStateDock();
+    document.querySelectorAll(".machine-svg").forEach((svg) => {
+      applyPinnedFocus(svg);
+    });
   }
   document.getElementById("scene-picker").addEventListener("click", (event) => {
     const button = event.target.closest("button[data-scene]");
     if (!button) return;
     const scene = button.dataset.scene;
-    actor.send({ type: "LOAD_FIXTURE", fixtureId: sceneMap[scene][0].id });
-    document.querySelectorAll("#scene-picker button").forEach((node) => node.classList.toggle("is-active", node.dataset.scene === scene));
-    renderSubstatePicker();
-    rerenderAll();
-    renderStateDock();
+    actor.send({
+      type: "LOAD_FIXTURE",
+      actionId: `A_NAV_SCENE__${normalizeActionToken(scene)}__01`,
+      fixtureId: sceneMap[scene][0].id
+    });
+    syncUiAfterActorChange();
   });
   document.getElementById("substate-picker").addEventListener("click", (event) => {
     const button = event.target.closest("button[data-scenario]");
     if (!button) return;
-    actor.send({ type: "LOAD_FIXTURE", fixtureId: button.dataset.scenario });
-    document.querySelectorAll("#substate-picker button").forEach((node) => node.classList.toggle("is-active", node === button));
-    rerenderAll();
-    applyStateMachineSelection();
-    renderStateDock();
+    actor.send({
+      type: "LOAD_FIXTURE",
+      actionId: `A_NAV_SUBSTATE__${normalizeActionToken(button.dataset.scenario)}__01`,
+      fixtureId: button.dataset.scenario
+    });
+    syncUiAfterActorChange();
   });
   document.getElementById("variant-picker").addEventListener("click", (event) => {
     const button = event.target.closest("button[data-variant]");
@@ -4838,30 +5689,95 @@ ${err.message}`);
     applyVariantVisibility();
     renderStateDock();
   });
+  document.getElementById("diagram-mode-picker").addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-diagram-mode]");
+    if (!button) return;
+    setDiagramMode(button.dataset.diagramMode);
+  });
+  document.getElementById("xstate-scope-picker").addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-xstate-scope]");
+    if (!button) return;
+    currentXStateScope = button.dataset.xstateScope === XSTATE_SCOPE_ALL ? XSTATE_SCOPE_ALL : XSTATE_SCOPE_SCENE;
+    document.querySelectorAll("#xstate-scope-picker button").forEach((node) => {
+      node.classList.toggle("is-active", node.dataset.xstateScope === currentXStateScope);
+    });
+    renderXStateCharts();
+    applyXStateSelection();
+  });
   document.querySelector(".state-machine-panel").addEventListener("click", (event) => {
+    const xstateTransition = event.target.closest(".xstate-transition-target");
+    if (xstateTransition) {
+      const svg2 = xstateTransition.closest("svg.machine-svg");
+      const snapshot = actor.getSnapshot();
+      const sample = resolveXStateEdgeSample(xstateTransition, snapshot);
+      if (!sample?.targetFixtureId) return;
+      const actionId = sample.actionId || `A_XSTATE_PATH__${normalizeActionToken(sample.fromFixtureId)}__${normalizeActionToken(sample.targetFixtureId)}__01`;
+      const eventType = sample.eventType || "LOAD_FIXTURE";
+      if (eventType === "LOAD_FIXTURE") {
+        actor.send({
+          type: "LOAD_FIXTURE",
+          actionId,
+          fixtureId: sample.targetFixtureId
+        });
+      } else {
+        actor.send({
+          type: eventType,
+          actionId,
+          targetFixtureId: sample.targetFixtureId
+        });
+        if (getCurrentFixtureId(actor.getSnapshot()) !== sample.targetFixtureId) {
+          actor.send({
+            type: "LOAD_FIXTURE",
+            actionId: `${actionId}__FALLBACK`,
+            fixtureId: sample.targetFixtureId
+          });
+        }
+      }
+      syncUiAfterActorChange();
+      setPinnedState(svg2, { kind: "xstate", id: xstateTransition.dataset.to || "" });
+      return;
+    }
+    const xstateNode = event.target.closest(".xstate-node");
+    if (xstateNode) {
+      const svg2 = xstateNode.closest("svg.machine-svg");
+      setPinnedState(svg2, { kind: "xstate", id: xstateNode.dataset.state || "" });
+      return;
+    }
     const transition = event.target.closest(".svg-transition-target");
     if (transition?.dataset.target) {
+      const svg2 = transition.closest("svg.machine-svg");
       const targetScenario = transition.dataset.target;
-      actor.send({ type: transition.dataset.event || "LOAD_FIXTURE", fixtureId: targetScenario });
-      const currentScene2 = getScene(actor.getSnapshot());
-      document.querySelectorAll("#scene-picker button").forEach((node) => node.classList.toggle("is-active", node.dataset.scene === currentScene2));
-      renderSubstatePicker();
-      applyStateMachineSelection();
-      rerenderAll();
-      renderStateDock();
+      actor.send({
+        type: transition.dataset.event || "LOAD_FIXTURE",
+        actionId: transition.dataset.actionId || `A_PATH__${normalizeActionToken(targetScenario)}__01`,
+        fixtureId: targetScenario
+      });
+      syncUiAfterActorChange();
+      setPinnedState(svg2, { kind: "handdrawn", id: transition.dataset.to || "" });
       return;
     }
     const target = event.target.closest(".svg-state-target");
-    if (!target) return;
-    actor.send({ type: "LOAD_FIXTURE", fixtureId: target.dataset.scenario });
-    const currentScene = getScene(actor.getSnapshot());
-    document.querySelectorAll("#scene-picker button").forEach((node) => node.classList.toggle("is-active", node.dataset.scene === currentScene));
-    renderSubstatePicker();
-    applyStateMachineSelection();
-    rerenderAll();
-    renderStateDock();
+    if (target) {
+      const svg2 = target.closest("svg.machine-svg");
+      setPinnedState(svg2, { kind: "handdrawn", id: target.dataset.node || "" });
+      return;
+    }
+    const svg = event.target.closest("svg.machine-svg");
+    if (svg) {
+      clearPinnedState(svg);
+    }
   });
   document.querySelector(".state-machine-panel").addEventListener("mouseover", (event) => {
+    const xstateTransition = event.target.closest(".xstate-transition-target");
+    if (xstateTransition) {
+      focusXStateTransition(xstateTransition);
+      return;
+    }
+    const xstateState = event.target.closest(".xstate-node");
+    if (xstateState) {
+      focusXStateState(xstateState);
+      return;
+    }
     const transition = event.target.closest(".svg-transition-target");
     if (transition) {
       focusTransition(transition);
@@ -4870,24 +5786,48 @@ ${err.message}`);
     const state = event.target.closest(".svg-state-target");
     if (state) {
       focusState(state);
+      return;
+    }
+    const svg = event.target.closest("svg.machine-svg");
+    if (svg) {
+      restorePinnedOrClear(svg);
     }
   });
+  document.querySelector(".state-machine-panel").addEventListener("mouseout", (event) => {
+    const leaving = event.target.closest(".svg-transition-target, .svg-state-target, .xstate-transition-target, .xstate-node");
+    if (!leaving) return;
+    const svg = leaving.closest("svg.machine-svg");
+    if (!svg) return;
+    const related = event.relatedTarget;
+    if (related && leaving.contains(related)) return;
+    const enteredSameSvgInteractive = related?.closest ? related.closest(".svg-transition-target, .svg-state-target, .xstate-transition-target, .xstate-node") && related.closest("svg.machine-svg") === svg : false;
+    if (enteredSameSvgInteractive) return;
+    restorePinnedOrClear(svg);
+  });
   document.querySelectorAll(".machine-svg").forEach((svg) => {
-    svg.addEventListener("mouseleave", () => clearSvgFocus(svg));
+    svg.addEventListener("mouseleave", () => {
+      restorePinnedOrClear(svg);
+    });
   });
   document.getElementById("state-actions").addEventListener("click", (event) => {
     const button = event.target.closest(".dock-action");
     if (!button) return;
     actor.send({
+      actionId: button.dataset.actionId,
       type: button.dataset.eventType,
       targetFixtureId: button.dataset.targetFixture
     });
-    const currentScene = getScene(actor.getSnapshot());
-    document.querySelectorAll("#scene-picker button").forEach((node) => node.classList.toggle("is-active", node.dataset.scene === currentScene));
-    renderSubstatePicker();
-    applyStateMachineSelection();
-    rerenderAll();
-    renderStateDock();
+    syncUiAfterActorChange();
+  });
+  document.querySelector(".compare-stack").addEventListener("click", (event) => {
+    const button = event.target.closest(".inline-hint-action");
+    if (!button) return;
+    actor.send({
+      actionId: button.dataset.actionId,
+      type: button.dataset.eventType,
+      targetFixtureId: button.dataset.targetFixture
+    });
+    syncUiAfterActorChange();
   });
   document.getElementById("compare-toggle").addEventListener("click", () => {
     const section = document.getElementById("compare-section");
@@ -4900,6 +5840,8 @@ ${err.message}`);
   rerenderAll();
   applyVariantVisibility();
   renderSubstatePicker();
+  renderXStateCharts();
+  setDiagramMode(DIAGRAM_MODE_HANDDRAWN);
   enhanceTransitionTargets();
   applyStateMachineSelection();
   renderStateDock();

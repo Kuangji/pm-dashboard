@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-03-26T03:53:26.539Z",
+  "updatedAt": "2026-03-27T01:53:26.970Z",
   "navigation": {
     "docs": [
       {
@@ -71,6 +71,16 @@
                 "path": "02-project-documents/channel_search_agent_upgrade/input_v1.md",
                 "slug": "02-project-documents/channel_search_agent_upgrade/input_v1.md",
                 "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "loading_copy_pool.json",
+                "path": "02-project-documents/channel_search_agent_upgrade/loading_copy_pool.json",
+                "slug": "02-project-documents/channel_search_agent_upgrade/loading_copy_pool.json",
+                "fileType": "json",
+                "language": "json",
                 "isText": true,
                 "isImage": false
               },
@@ -1089,6 +1099,15 @@
                 "name": "spec_v1.md",
                 "path": "02-project-documents/支付单暂存和预约发送/spec_v1.md",
                 "slug": "02-project-documents/支付单暂存和预约发送/spec_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "发版公告_面向用户.md",
+                "path": "02-project-documents/支付单暂存和预约发送/发版公告_面向用户.md",
+                "slug": "02-project-documents/支付单暂存和预约发送/发版公告_面向用户.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
@@ -2143,14 +2162,14 @@
       },
       {
         "id": "cool_hello_world_v2",
-        "title": "酷炫 Hello World V2",
-        "description": "NoxInfluencer 品牌风格的视觉展示 Demo，采用玻璃态设计与渐变配色方案",
+        "title": "Hello World V2",
+        "description": "NoxInfluencer 品牌欢迎页，采用深蓝紫渐变配色与玻璃态设计风格。",
         "path": "demos/cool_hello_world_v2/index.html",
         "thumbnail": "",
         "tags": [
-          "视觉设计",
-          "玻璃态",
-          "品牌展示"
+          "欢迎页",
+          "品牌展示",
+          "视觉设计"
         ]
       },
       {
@@ -2167,13 +2186,13 @@
       },
       {
         "id": "poe_328_bd_website",
-        "title": "POE BD 收集站",
-        "description": "流放之路3.28幻象赛季开荒BD收集展示页面，方便玩家浏览和选择开荒流派",
+        "title": "流放之路BD收集",
+        "description": "流放之路3.28赛季开荒BD收集展示，帮助玩家快速找到适合的开荒流派",
         "path": "demos/poe_328_bd_website/index.html",
         "thumbnail": "",
         "tags": [
           "游戏工具",
-          "POE",
+          "流放之路",
           "BD收集"
         ]
       }
