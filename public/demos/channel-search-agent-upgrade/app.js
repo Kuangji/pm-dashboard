@@ -3163,7 +3163,7 @@ ${err.message}`);
         draft: "outdoor gear",
         tags: [
           { text: "swim vest", scope: "\u6807\u7B7E" },
-          { text: "@HollylandTech", scope: "\u9891\u9053" },
+          { text: "@HollylandTech", scope: "\u9891\u9053", anchor: true, platform: "YouTube" },
           { text: "water sports", scope: "\u6807\u7B7E" }
         ],
         openMenu: false
@@ -3230,7 +3230,7 @@ ${err.message}`);
       },
       keywordFlow: {
         draft: "",
-        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053" }],
+        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053", anchor: true, platform: "YouTube" }],
         openMenu: false
       }
     },
@@ -3247,7 +3247,7 @@ ${err.message}`);
       keywordFlow: {
         draft: "outdoor gear",
         tags: [
-          { text: "@HollylandTech", scope: "\u9891\u9053" },
+          { text: "@HollylandTech", scope: "\u9891\u9053", anchor: true, platform: "YouTube" },
           { text: "swim vest", scope: "\u6807\u7B7E" },
           { text: "water sports", scope: "\u6807\u7B7E" }
         ],
@@ -3272,7 +3272,7 @@ ${err.message}`);
       conditions: null,
       keywordFlow: {
         draft: "",
-        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053" }],
+        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053", anchor: true, platform: "YouTube" }],
         openMenu: false
       }
     },
@@ -3595,7 +3595,7 @@ ${err.message}`);
       },
       keywordFlow: {
         draft: "",
-        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053" }],
+        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053", anchor: true, platform: "YouTube" }],
         openMenu: false,
         followup: true,
         placeholder: "\u7EE7\u7EED\u8865\u5145\u4F60\u771F\u6B63\u60F3\u8981\u7684\u65B9\u5411"
@@ -3632,7 +3632,7 @@ ${err.message}`);
       },
       keywordFlow: {
         draft: "",
-        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053" }],
+        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053", anchor: true, platform: "YouTube" }],
         openMenu: false,
         followup: true,
         placeholder: "\u7EE7\u7EED\u8865\u4E00\u53E5\uFF0C\u6216\u8005\u76F4\u63A5\u56DE\u7B54\u95EE\u9898"
@@ -3664,7 +3664,7 @@ ${err.message}`);
       },
       keywordFlow: {
         draft: "\u66F4\u504F\u6559\u7A0B\u7C7B\uFF0C\u4E0D\u8981\u5F00\u7BB1",
-        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053" }],
+        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053", anchor: true, platform: "YouTube" }],
         openMenu: false,
         followup: true,
         placeholder: "\u7EE7\u7EED\u8865\u5145\u4F60\u771F\u6B63\u60F3\u8981\u7684\u65B9\u5411"
@@ -3696,7 +3696,7 @@ ${err.message}`);
       },
       keywordFlow: {
         draft: "",
-        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053" }],
+        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053", anchor: true, platform: "YouTube" }],
         openMenu: false,
         followup: true,
         placeholder: "\u6B63\u5728\u5237\u65B0\uFF0C\u8BF7\u7A0D\u5019"
@@ -3865,13 +3865,16 @@ ${err.message}`);
       },
       conditions: {
         anchor: "\u951A\u70B9\u9891\u9053\uFF1A@HollylandTech",
-        hard: [],
+        hard: ["swim vest\uFF08\u6807\u7B7E\uFF09"],
         soft: ["\u5F53\u524D\u7ED3\u679C\u504F\u5C11", "\u53EF\u5C1D\u8BD5\u6269\u5927\u53EC\u56DE\u8303\u56F4"],
         hint: "\u6B64\u65F6\u7ED3\u679C\u4ECD\u7EE7\u7EED\u5C55\u793A\uFF0C\u53EA\u662F\u641C\u7D22\u6846\u8865\u5145\u4E86\u4FEE\u6B63\u80FD\u529B\u3002"
       },
       keywordFlow: {
         draft: "",
-        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053" }],
+        tags: [
+          { text: "@HollylandTech", scope: "\u9891\u9053", anchor: true, platform: "YouTube" },
+          { text: "swim vest", scope: "\u6807\u7B7E" }
+        ],
         openMenu: false,
         followup: true,
         placeholder: "\u4E5F\u53EF\u4EE5\u76F4\u63A5\u8865\u4E00\u53E5\u4F60\u771F\u6B63\u60F3\u8981\u7684\u65B9\u5411"
@@ -4014,7 +4017,7 @@ ${err.message}`);
       conditions: null,
       keywordFlow: {
         draft: "\u627E\u548C\u5B83\u7C7B\u4F3C\u7684\u7F8E\u56FD\u9891\u9053",
-        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053" }],
+        tags: [{ text: "@HollylandTech", scope: "\u9891\u9053", anchor: true, platform: "YouTube" }],
         openMenu: false
       }
     },
@@ -4128,6 +4131,141 @@ ${err.message}`);
       { id: "upgrade-url-transition", label: "URL \u8D77\u624B-\u5347\u7EA7\u4E2D" },
       { id: "upgrade-url-stable", label: "URL \u8D77\u624B-\u5347\u7EA7\u7A33\u5B9A" }
     ]
+  };
+  var KEYWORD_EXPANSION_ACTION_IDS = {
+    open: "A_OPEN_KEYWORD_EXPANSION",
+    applyOne: "A_APPLY_EXPANDED_KEYWORD",
+    applyMany: "A_APPLY_EXPANDED_KEYWORDS",
+    dismiss: "A_DISMISS_KEYWORD_EXPANSION"
+  };
+  var keywordExpansionPresets = {
+    "keyword-multi": {
+      reason: "proactive",
+      title: "\u57FA\u4E8E\u73B0\u6709\u5173\u952E\u8BCD\u8865\u66F4\u591A\u663E\u5F0F keyword",
+      caption: "\u6F14\u793A\uFF1A\u5728\u7ECF\u5178\u7F16\u8F91\u6001\u91CC\u5148\u8865\u8BCD\uFF0C\u4E0D\u81EA\u52A8\u89E6\u53D1\u641C\u7D22\u3002",
+      sourceKeywords: ["swim vest", "water sports"],
+      candidates: ["life vest", "watersports gear", "boating safety"]
+    },
+    "url-keyword-seed": {
+      reason: "proactive",
+      title: "URL + keyword \u79CD\u5B50\u4E5F\u53EF\u4EE5\u7EE7\u7EED\u6269\u8BCD",
+      caption: "\u6F14\u793A\uFF1Aanchor \u4FDD\u7559\uFF0C\u6269\u51FA\u6765\u7684\u65B0\u8BCD\u4ECD\u7136\u53EA\u662F\u666E\u901A keyword\u3002",
+      sourceKeywords: ["swim vest", "water sports"],
+      candidates: ["kayak vest", "pfd gear", "marine safety"]
+    },
+    "upgrade-keyword-stable": {
+      reason: "proactive",
+      title: "\u5347\u7EA7\u5230 Agent \u7A33\u5B9A\u6001\u540E\u4ECD\u53EF\u4E3B\u52A8\u6269\u8BCD",
+      caption: "\u6F14\u793A\uFF1A\u6269\u8BCD\u7ED3\u679C\u786E\u8BA4\u540E\u4F1A\u81EA\u52A8\u89E6\u53D1\u4E00\u6B21 refine\u3002",
+      sourceKeywords: ["swim vest"],
+      candidates: ["learn to swim", "family water sports", "pool safety"]
+    },
+    "low-recall-repair-open": {
+      reason: "low_recall_repair",
+      title: "low_recall \u65F6\u628A\u6269\u8BCD\u4F5C\u4E3A\u4FEE\u6B63\u52A8\u4F5C\u590D\u7528",
+      caption: "\u6F14\u793A\uFF1A\u7ED3\u679C\u504F\u5C11\u65F6\uFF0C\u7528\u6237\u53EF\u76F4\u63A5\u8865\u66F4\u591A\u663E\u5F0F\u5173\u952E\u8BCD\u6765\u653E\u5BBD\u53EC\u56DE\u3002",
+      sourceKeywords: ["swim vest"],
+      candidates: ["life jacket", "watersports", "boating"]
+    }
+  };
+  var keywordExpansionUiState = /* @__PURE__ */ new Map();
+  var abstractSubstateMeta = {
+    classic_editing: {
+      title: "\u7ECF\u5178\u79CD\u5B50\u7F16\u8F91",
+      summary: "\u7528\u6237\u8FD8\u5728\u7EC4\u7EC7\u5173\u952E\u8BCD / URL \u79CD\u5B50\uFF0C\u5C1A\u672A\u8FDB\u5165 Agent \u68C0\u7D22\u95ED\u73AF\u3002",
+      speakingHint: "\u5148\u8BB2\u5F53\u524D\u8F93\u5165\u6750\u6599\u5982\u4F55\u7EC4\u6210\u9996\u8F6E\u641C\u7D22 seed\uFF0C\u518D\u8BB2\u5B83\u4F1A\u5BFC\u5411\u54EA\u7C7B\u641C\u7D22\u3002",
+      actionGroups: ["seed_editing", "keyword_expansion", "search_submission", "upgrade_entry"],
+      canonicalActionIds: []
+    },
+    url_resolving: {
+      title: "URL \u8BC6\u522B\u4E2D",
+      summary: "\u7EAF URL \u5DF2\u63D0\u4EA4\uFF0C\u7CFB\u7EDF\u6B63\u5728\u5C1D\u8BD5\u5F62\u6210\u53EF\u9501\u5B9A\u7684 anchor\u3002",
+      speakingHint: "\u8FD9\u91CC\u91CD\u70B9\u89E3\u91CA URL \u8BC6\u522B\u6210\u529F\u3001\u5931\u8D25\u4E0E\u4FEE\u6B63\u5165\u53E3\u7684\u5206\u53C9\u3002",
+      actionGroups: ["resolve_success", "resolve_failure", "rewrite_or_remove_url"],
+      canonicalActionIds: []
+    },
+    classic_results: {
+      title: "\u7ECF\u5178\u7ED3\u679C\u7A33\u5B9A\u6001",
+      summary: "\u7ED3\u679C\u5DF2\u7ECF\u53EF\u6D4F\u89C8\uFF0C\u4F46\u4EA4\u4E92\u4ECD\u4EE5\u7ECF\u5178\u641C\u7D22\u4E3A\u4E3B\uFF0C\u8FD8\u6CA1\u6709\u8FDB\u5165 Agent \u89E3\u91CA\u6D41\u3002",
+      speakingHint: "\u8FD9\u91CC\u9002\u5408\u8BB2\u951A\u70B9\u9891\u9053\u7F6E\u9876\u3001\u76F8\u4F3C\u7ED3\u679C\u53EC\u56DE\uFF0C\u4EE5\u53CA low_recall \u8F7B\u63D0\u793A\u3002",
+      actionGroups: ["browse_results", "append_seed", "keyword_expansion", "upgrade_to_agent", "low_recall_hint"],
+      canonicalActionIds: ["A_HINT_OPEN_REPAIR_LOW_RECALL", "A_HINT_DISMISS_LOW_RECALL"]
+    },
+    agent_retrieving: {
+      title: "Agent \u68C0\u7D22\u8FDB\u884C\u4E2D",
+      summary: "Agent \u6B63\u5728\u89E3\u6790\u3001\u9996\u8F6E\u68C0\u7D22\uFF0C\u6216\u6839\u636E\u8FFD\u95EE / \u4FEE\u6B63\u8FDB\u884C\u5237\u65B0\u3002",
+      speakingHint: "\u8FD9\u91CC\u5F3A\u8C03\u7CFB\u7EDF\u8FD8\u5728\u5904\u7406\uFF0C\u4E0D\u5EFA\u8BAE\u628A\u5B83\u8BB2\u6210\u7A33\u5B9A\u7ED3\u679C\u6001\u3002",
+      actionGroups: ["await_result", "clarify_if_needed", "enter_repair_if_needed"],
+      canonicalActionIds: []
+    },
+    agent_stable: {
+      title: "Agent \u7A33\u5B9A\u6001",
+      summary: "Agent \u5DF2\u8FDB\u5165\u53EF\u6D4F\u89C8\u3001\u53EF\u7EE7\u7EED\u8865\u5145\u7684\u7A33\u5B9A\u533A\uFF0C\u7528\u6237\u53EF\u4EE5\u7EE7\u7EED refine\u3002",
+      speakingHint: "\u6F14\u793A\u65F6\u5148\u8BB2\u5F53\u524D\u7ED3\u679C\u7ED3\u6784\uFF0C\u518D\u8BB2\u540E\u7EED follow-up \u6216\u8865\u6761\u4EF6\u7684\u5165\u53E3\u3002",
+      actionGroups: ["followup_entry", "append_explicit_condition", "keyword_expansion", "replace_anchor", "open_repair_entry"],
+      canonicalActionIds: ["A_HINT_OPEN_REPAIR_LOW_RECALL", "A_HINT_DISMISS_LOW_RECALL"]
+    },
+    agent_clarifying: {
+      title: "Agent \u5F85\u6F84\u6E05\u6001",
+      summary: "\u7CFB\u7EDF\u5DF2\u7ECF\u660E\u786E\u63D0\u51FA\u4E00\u4E2A\u9AD8\u4EF7\u503C\u95EE\u9898\uFF0C\u5F53\u524D\u91CD\u70B9\u662F\u7B49\u5F85\u7528\u6237\u56DE\u7B54\u3002",
+      speakingHint: "\u8FD9\u91CC\u8981\u628A\u201C\u7CFB\u7EDF\u5728\u95EE\u95EE\u9898\u201D\u548C\u201C\u7528\u6237\u4E3B\u52A8\u8865\u5145\u201D\u8BB2\u6E05\u695A\u3002",
+      actionGroups: ["answer_question", "skip_to_followup", "rewrite_input"],
+      canonicalActionIds: []
+    },
+    repairing: {
+      title: "\u4FEE\u6B63\u8FDB\u884C\u6001",
+      summary: "\u641C\u7D22\u6846\u5185\u90E8\u4FEE\u6B63\u5DF2\u7ECF\u6253\u5F00\uFF0C\u9700\u8981\u5148\u4FEE\u6B63 URL / \u6761\u4EF6 / \u53EC\u56DE\u8303\u56F4\uFF0C\u518D\u7EE7\u7EED\u641C\u7D22\u3002",
+      speakingHint: "\u8FD9\u91CC\u9002\u5408\u6F14\u793A\u4FEE\u6B63\u52A8\u4F5C\u69FD\u4F4D\uFF0C\u4EE5\u53CA\u4E0D\u540C\u4FEE\u6B63\u52A8\u4F5C\u7684\u540E\u7EED\u8DEF\u5F84\u3002",
+      actionGroups: ["fix_url", "remove_anchor_keep_keywords", "switch_to_nl", "replace_anchor", "expand_recall_scope", "keyword_expansion"],
+      canonicalActionIds: [
+        "A_REPAIR_FIX_URL",
+        "A_REPAIR_REMOVE_ANCHOR_KEEP_KEYWORDS",
+        "A_REPAIR_SWITCH_TO_NL",
+        "A_REPAIR_REPLACE_ANCHOR",
+        "A_REPAIR_EXPAND_RECALL_SCOPE"
+      ]
+    }
+  };
+  var fixtureAbstractSubstateMap = {
+    "keyword-empty": "classic_editing",
+    "keyword-input": "classic_editing",
+    "keyword-tag": "classic_editing",
+    "keyword-edit": "classic_editing",
+    "keyword-multi": "classic_editing",
+    "keyword-anchor-seed": "classic_editing",
+    "keyword-menu": "classic_editing",
+    "url-resolving": "url_resolving",
+    "url-exact": "classic_results",
+    "url-keyword-seed": "classic_editing",
+    "url-low-recall-hint": "classic_results",
+    "low-recall-repair-open": "repairing",
+    "url-mismatch": "repairing",
+    "url-unsupported": "repairing",
+    "url-invalid": "repairing",
+    "natural-init": "agent_stable",
+    "natural-retrieving": "agent_retrieving",
+    "natural-results": "agent_stable",
+    "natural-clarifying": "agent_clarifying",
+    "natural-followup-draft": "agent_stable",
+    "natural-followup-refining": "agent_retrieving",
+    "mixed-parse": "agent_stable",
+    "mixed-anchor": "agent_stable",
+    "mixed-soft": "agent_stable",
+    "mixed-clarifying": "agent_clarifying",
+    "mixed-followup-draft": "agent_stable",
+    "mixed-followup-refining": "agent_retrieving",
+    "repair-invalid": "repairing",
+    "repair-mismatch": "repairing",
+    "repair-unsupported": "repairing",
+    "repair-empty": "repairing",
+    "repair-followup-draft": "repairing",
+    "repair-followup-refining": "agent_retrieving",
+    "upgrade-keyword-trigger": "classic_editing",
+    "upgrade-keyword-transition": "agent_retrieving",
+    "upgrade-keyword-stable": "agent_stable",
+    "upgrade-url-trigger": "classic_editing",
+    "upgrade-url-transition": "agent_retrieving",
+    "upgrade-url-stable": "agent_stable"
   };
   var shellTargets = {
     balanced: document.getElementById("balanced-shell"),
@@ -4524,6 +4662,13 @@ ${err.message}`);
     const entry = Object.entries(sceneMap).find(([, list]) => list.some((item) => item.id === fixtureId));
     return entry?.[0] || "keyword";
   }
+  function getAbstractSubstateByFixtureId(fixtureId) {
+    const abstractId = fixtureAbstractSubstateMap[fixtureId] || "classic_editing";
+    return {
+      id: abstractId,
+      ...abstractSubstateMeta[abstractId]
+    };
+  }
   function normalizeInputState(input) {
     if (!input) return "empty_input";
     if (input.includes("draft_followup")) return "draft_followup";
@@ -4592,9 +4737,16 @@ ${err.message}`);
     })
   );
   actor.start();
-  var DIAGRAM_MODE_HANDDRAWN = "handdrawn";
-  var DIAGRAM_MODE_XSTATE = "xstate";
-  var currentDiagramMode = DIAGRAM_MODE_HANDDRAWN;
+  var DOCK_LAYOUT_STORAGE_KEY = "channel-search-agent-upgrade-demo:dock-layout";
+  var DOCK_LAYOUT_BOTTOM = "bottom";
+  var DOCK_LAYOUT_LEFT = "left";
+  var currentDockLayout = DOCK_LAYOUT_BOTTOM;
+  try {
+    if (localStorage.getItem(DOCK_LAYOUT_STORAGE_KEY) === DOCK_LAYOUT_LEFT) {
+      currentDockLayout = DOCK_LAYOUT_LEFT;
+    }
+  } catch {
+  }
   var XSTATE_SCOPE_SCENE = "scene";
   var XSTATE_SCOPE_ALL = "all";
   var currentXStateScope = XSTATE_SCOPE_SCENE;
@@ -4644,6 +4796,51 @@ ${err.message}`);
     }
   };
   var xstateEdgeSamples = /* @__PURE__ */ new Map();
+  function isXStateSvg(svg) {
+    return Boolean(svg?.classList?.contains("xstate-machine-svg"));
+  }
+  function isPinnedLockEnabledForSvg(svg) {
+    if (!svg) return false;
+    if (!isXStateSvg(svg)) return true;
+    return currentXStateScope === XSTATE_SCOPE_SCENE;
+  }
+  function resolveXStateLayerFromSvg(svg) {
+    const svgId = svg?.id || "";
+    if (svgId.includes("input")) return "input";
+    if (svgId.includes("container")) return "container";
+    if (svgId.includes("session")) return "session";
+    return null;
+  }
+  function resolveCurrentStateIdForSvg(svg, snapshot) {
+    if (!svg) return null;
+    const layer = resolveXStateLayerFromSvg(svg);
+    const triplet = getTriplet(snapshot);
+    if (!layer || !triplet) return null;
+    return triplet[layer] || null;
+  }
+  function syncPinnedStatesWithCurrentFixture(snapshot = actor.getSnapshot()) {
+    document.querySelectorAll(".xstate-machine-svg").forEach((svg) => {
+      const existing = pinnedStateBySvg.get(svg);
+      if (!existing) return;
+      if (!isPinnedLockEnabledForSvg(svg)) {
+        pinnedStateBySvg.delete(svg);
+        clearXStateFocus(svg);
+        return;
+      }
+      const stateId = resolveCurrentStateIdForSvg(svg, snapshot);
+      if (!stateId) return;
+      pinnedStateBySvg.set(svg, { kind: existing.kind, id: stateId });
+    });
+  }
+  function ensureDefaultPinnedStates(snapshot = actor.getSnapshot()) {
+    document.querySelectorAll(".xstate-machine-svg").forEach((svg) => {
+      if (!isPinnedLockEnabledForSvg(svg)) return;
+      if (pinnedStateBySvg.has(svg)) return;
+      const stateId = resolveCurrentStateIdForSvg(svg, snapshot);
+      if (!stateId) return;
+      pinnedStateBySvg.set(svg, { kind: "xstate", id: stateId });
+    });
+  }
   function summarizeEvents(events) {
     const list = [...events];
     if (!list.length) return "";
@@ -4651,11 +4848,11 @@ ${err.message}`);
     if (list.length === 2) return `${list[0]} / ${list[1]}`;
     return `${list[0]} +${list.length - 1}`;
   }
-  function collectLayerTransitions(layerKey, snapshot) {
+  function collectLayerTransitions(layerKey, snapshot, scopeMode = currentXStateScope) {
     const edges = /* @__PURE__ */ new Map();
     const allFixtures = Object.values(fixtures);
     const currentScene = getScene(snapshot);
-    const scopedFixtures = currentXStateScope === XSTATE_SCOPE_SCENE ? allFixtures.filter((fixture) => fixture.scene === currentScene) : allFixtures;
+    const scopedFixtures = scopeMode === XSTATE_SCOPE_SCENE ? allFixtures.filter((fixture) => fixture.scene === currentScene) : allFixtures;
     scopedFixtures.forEach((fixture) => {
       const from = fixture.machineTriplet?.[layerKey];
       if (!from) return;
@@ -4689,6 +4886,22 @@ ${err.message}`);
       });
     });
     return [...edges.values()];
+  }
+  function mergeLayerTransitions(allEdges, scopedEdges) {
+    const scopedByKey = new Map(
+      scopedEdges.map((edge) => [`${edge.from}__${edge.to}`, edge])
+    );
+    return allEdges.map((edge) => {
+      const key = `${edge.from}__${edge.to}`;
+      const scoped = scopedByKey.get(key);
+      return {
+        ...edge,
+        scopedEvents: scoped?.events || /* @__PURE__ */ new Set(),
+        scopedCount: scoped?.count || 0,
+        scopedSamples: scoped?.samples || [],
+        inScope: Boolean(scoped)
+      };
+    });
   }
   function buildNodeLayout(layerKey) {
     const preset = xstateLayoutPresets[layerKey] || {
@@ -4751,17 +4964,54 @@ ${err.message}`);
     return { fromSide: "left", toSide: "right" };
   }
   function getPortPoint(box, side, slotIndex, slotTotal) {
-    const ratio = (slotIndex + 1) / (slotTotal + 1);
+    const centerOffset = slotIndex - (slotTotal - 1) / 2;
+    const verticalStep = slotTotal <= 1 ? 0 : Math.min(28, Math.max(13, (box.height - 20) / (slotTotal - 1)));
+    const horizontalStep = slotTotal <= 1 ? 0 : Math.min(52, Math.max(20, (box.width - 28) / (slotTotal - 1)));
+    const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
     if (side === "left") {
-      return { x: box.x, y: box.y + box.height * ratio };
+      return {
+        x: box.x,
+        y: Math.round(clamp(
+          box.y + box.height / 2 + centerOffset * verticalStep,
+          box.y + 10,
+          box.y + box.height - 10
+        ))
+      };
     }
     if (side === "right") {
-      return { x: box.x + box.width, y: box.y + box.height * ratio };
+      return {
+        x: box.x + box.width,
+        y: Math.round(clamp(
+          box.y + box.height / 2 + centerOffset * verticalStep,
+          box.y + 10,
+          box.y + box.height - 10
+        ))
+      };
     }
     if (side === "top") {
-      return { x: box.x + box.width * ratio, y: box.y };
+      return {
+        x: Math.round(clamp(
+          box.x + box.width / 2 + centerOffset * horizontalStep,
+          box.x + 14,
+          box.x + box.width - 14
+        )),
+        y: box.y
+      };
     }
-    return { x: box.x + box.width * ratio, y: box.y + box.height };
+    return {
+      x: Math.round(clamp(
+        box.x + box.width / 2 + centerOffset * horizontalStep,
+        box.x + 14,
+        box.x + box.width - 14
+      )),
+      y: box.y + box.height
+    };
+  }
+  function offsetPointBySide(point, side, distance) {
+    if (side === "left") return { x: point.x - distance, y: point.y };
+    if (side === "right") return { x: point.x + distance, y: point.y };
+    if (side === "top") return { x: point.x, y: point.y - distance };
+    return { x: point.x, y: point.y + distance };
   }
   function normalizePolyline(points) {
     const normalized = [];
@@ -4770,7 +5020,7 @@ ${err.message}`);
       const y = Math.round(point.y);
       const prev = normalized[normalized.length - 1];
       if (!prev || prev.x !== x || prev.y !== y) {
-        normalized.push({ x, y });
+        normalized.push({ x, y, lock: Boolean(point.lock) });
       }
     });
     let changed = true;
@@ -4780,6 +5030,7 @@ ${err.message}`);
         const prev = normalized[index - 1];
         const current = normalized[index];
         const next = normalized[index + 1];
+        if (current.lock) continue;
         if (prev.x === current.x && current.x === next.x || prev.y === current.y && current.y === next.y) {
           normalized.splice(index, 1);
           changed = true;
@@ -4818,18 +5069,41 @@ ${err.message}`);
     const max = Math.min(Math.max(a1, a2), Math.max(b1, b2));
     return Math.max(0, max - min);
   }
-  function scoreRoute(candidateSegments, placedSegments) {
+  function segmentOverlapWithBox(segment, box) {
+    const left = box.x;
+    const right = box.x + box.width;
+    const top = box.y;
+    const bottom = box.y + box.height;
+    if (segment.horizontal) {
+      if (segment.y1 <= top || segment.y1 >= bottom) return 0;
+      return rangeOverlap(segment.x1, segment.x2, left, right);
+    }
+    if (segment.vertical) {
+      if (segment.x1 <= left || segment.x1 >= right) return 0;
+      return rangeOverlap(segment.y1, segment.y2, top, bottom);
+    }
+    return 0;
+  }
+  function scoreRoute(candidateSegments, placedSegments, obstacleBoxes = []) {
     let intersections = 0;
     let overlaps = 0;
+    let obstacleHits = 0;
     let score = 0;
     candidateSegments.forEach((seg) => {
       score += seg.length * 0.02;
+      obstacleBoxes.forEach((box) => {
+        const overlap = segmentOverlapWithBox(seg, box);
+        if (overlap > 0) {
+          obstacleHits += overlap;
+          score += 12e3 + overlap * 24;
+        }
+      });
       placedSegments.forEach((existing) => {
         if (seg.vertical && existing.vertical && seg.x1 === existing.x1) {
           const overlap = rangeOverlap(seg.y1, seg.y2, existing.y1, existing.y2);
           if (overlap > 0) {
             overlaps += overlap;
-            score += 240 + overlap * 1.1;
+            score += 1600 + overlap * 5;
           }
           return;
         }
@@ -4837,87 +5111,127 @@ ${err.message}`);
           const overlap = rangeOverlap(seg.x1, seg.x2, existing.x1, existing.x2);
           if (overlap > 0) {
             overlaps += overlap;
-            score += 240 + overlap * 1.1;
+            score += 1600 + overlap * 5;
           }
           return;
         }
-        if (seg.vertical && existing.vertical && Math.abs(seg.x1 - existing.x1) <= 14) {
+        if (seg.vertical && existing.vertical && Math.abs(seg.x1 - existing.x1) <= 24) {
           const overlap = rangeOverlap(seg.y1, seg.y2, existing.y1, existing.y2);
           if (overlap > 0) {
-            score += 18 + overlap * 0.18;
+            score += 180 + overlap * 1.1;
           }
           return;
         }
-        if (seg.horizontal && existing.horizontal && Math.abs(seg.y1 - existing.y1) <= 14) {
+        if (seg.horizontal && existing.horizontal && Math.abs(seg.y1 - existing.y1) <= 24) {
           const overlap = rangeOverlap(seg.x1, seg.x2, existing.x1, existing.x2);
           if (overlap > 0) {
-            score += 18 + overlap * 0.18;
+            score += 180 + overlap * 1.1;
           }
           return;
         }
         if (seg.vertical && existing.horizontal) {
           if (seg.x1 >= existing.minX && seg.x1 <= existing.maxX && existing.y1 >= seg.minY && existing.y1 <= seg.maxY) {
             intersections += 1;
-            score += 58;
+            score += 78;
           }
           return;
         }
         if (seg.horizontal && existing.vertical) {
           if (existing.x1 >= seg.minX && existing.x1 <= seg.maxX && seg.y1 >= existing.minY && seg.y1 <= existing.maxY) {
             intersections += 1;
-            score += 58;
+            score += 78;
           }
         }
       });
     });
-    return { score, intersections, overlaps };
+    return { score, intersections, overlaps, obstacleHits };
   }
-  function buildRouteCandidates(start, end, portMeta, edgeIndex, layerHeight) {
+  function buildRouteCandidates(start, end, portMeta, edgeIndex, layerHeight, layerWidth, obstacleBoxes = []) {
     const candidates = [];
     const seen = /* @__PURE__ */ new Set();
-    const laneSeed = edgeIndex % 6;
-    const midX = Math.round((start.x + end.x) / 2);
-    const midY = Math.round((start.y + end.y) / 2);
-    const horizontalClearance = 34 + laneSeed * 12;
-    const verticalClearance = 34 + laneSeed * 10;
+    const laneSeed = edgeIndex % 8;
+    const leadDistance = 24;
+    const lockedStart = { ...start, lock: true };
+    const lockedEnd = { ...end, lock: true };
+    const routeStart = { ...offsetPointBySide(start, portMeta.fromSide, leadDistance), lock: true };
+    const routeEnd = { ...offsetPointBySide(end, portMeta.toSide, leadDistance), lock: true };
+    const midX = Math.round((routeStart.x + routeEnd.x) / 2);
+    const midY = Math.round((routeStart.y + routeEnd.y) / 2);
+    const horizontalClearance = 42 + laneSeed * 14;
+    const verticalClearance = 42 + laneSeed * 12;
     const addCandidate = (points) => {
-      const normalized = normalizePolyline(points);
+      const normalized = normalizePolyline([lockedStart, routeStart, ...points, routeEnd, lockedEnd]);
       if (normalized.length < 2) return;
       const key = normalized.map((point) => `${point.x},${point.y}`).join("|");
       if (seen.has(key)) return;
       seen.add(key);
       candidates.push(normalized);
     };
-    addCandidate([start, { x: midX, y: start.y }, { x: midX, y: end.y }, end]);
-    addCandidate([start, { x: start.x, y: midY }, { x: end.x, y: midY }, end]);
-    for (let lane = 0; lane < 3; lane += 1) {
-      const offset = 56 + (laneSeed + lane) * 16;
-      const topY = Math.max(18, Math.min(start.y, end.y) - offset);
-      const bottomY = Math.min(layerHeight - 18, Math.max(start.y, end.y) + offset);
-      const shiftedMidX = midX + (lane - 1) * (22 + laneSeed * 4);
-      addCandidate([start, { x: start.x, y: topY }, { x: end.x, y: topY }, end]);
-      addCandidate([start, { x: start.x, y: bottomY }, { x: end.x, y: bottomY }, end]);
-      addCandidate([start, { x: shiftedMidX, y: start.y }, { x: shiftedMidX, y: end.y }, end]);
+    addCandidate([routeStart, { x: midX, y: routeStart.y }, { x: midX, y: routeEnd.y }, routeEnd]);
+    addCandidate([routeStart, { x: routeStart.x, y: midY }, { x: routeEnd.x, y: midY }, routeEnd]);
+    for (let lane = 0; lane < 4; lane += 1) {
+      const offset = 72 + (laneSeed + lane) * 20;
+      const topY = Math.max(18, Math.min(routeStart.y, routeEnd.y) - offset);
+      const bottomY = Math.min(layerHeight - 18, Math.max(routeStart.y, routeEnd.y) + offset);
+      const shiftedMidX = midX + (lane - 1.5) * (34 + laneSeed * 5);
+      addCandidate([routeStart, { x: routeStart.x, y: topY }, { x: routeEnd.x, y: topY }, routeEnd]);
+      addCandidate([routeStart, { x: routeStart.x, y: bottomY }, { x: routeEnd.x, y: bottomY }, routeEnd]);
+      addCandidate([routeStart, { x: shiftedMidX, y: routeStart.y }, { x: shiftedMidX, y: routeEnd.y }, routeEnd]);
     }
     if (portMeta.fromSide === "right" || portMeta.fromSide === "left") {
       const direction = portMeta.fromSide === "right" ? 1 : -1;
-      [horizontalClearance, horizontalClearance + 18, horizontalClearance + 36].forEach((spread, lane) => {
-        const outX = start.x + direction * spread;
-        const bendY = end.y + (lane % 2 === 0 ? 1 : -1) * (20 + lane * 8);
-        addCandidate([start, { x: outX, y: start.y }, { x: outX, y: end.y }, { x: end.x, y: end.y }, end]);
-        addCandidate([start, { x: outX, y: start.y }, { x: outX, y: bendY }, { x: end.x, y: bendY }, end]);
+      [horizontalClearance, horizontalClearance + 26, horizontalClearance + 52, horizontalClearance + 78].forEach((spread, lane) => {
+        const outX = routeStart.x + direction * spread;
+        const bendY = routeEnd.y + (lane % 2 === 0 ? 1 : -1) * (26 + lane * 10);
+        addCandidate([routeStart, { x: outX, y: routeStart.y }, { x: outX, y: routeEnd.y }, routeEnd]);
+        addCandidate([routeStart, { x: outX, y: routeStart.y }, { x: outX, y: bendY }, { x: routeEnd.x, y: bendY }, routeEnd]);
+      });
+      [118, 168, 220, 274, 330].forEach((spread) => {
+        const topY = Math.max(18, Math.min(routeStart.y, routeEnd.y) - spread);
+        const bottomY = Math.min(layerHeight - 18, Math.max(routeStart.y, routeEnd.y) + spread);
+        addCandidate([routeStart, { x: routeStart.x, y: topY }, { x: routeEnd.x, y: topY }, routeEnd]);
+        addCandidate([routeStart, { x: routeStart.x, y: bottomY }, { x: routeEnd.x, y: bottomY }, routeEnd]);
+      });
+      obstacleBoxes.forEach((box) => {
+        const spansHorizontalCorridor = !(box.x + box.width < Math.min(routeStart.x, routeEnd.x) || box.x > Math.max(routeStart.x, routeEnd.x));
+        if (!spansHorizontalCorridor) return;
+        const aboveY = Math.max(18, box.y - 28);
+        const belowY = Math.min(layerHeight - 18, box.y + box.height + 28);
+        addCandidate([routeStart, { x: routeStart.x, y: aboveY }, { x: routeEnd.x, y: aboveY }, routeEnd]);
+        addCandidate([routeStart, { x: routeStart.x, y: belowY }, { x: routeEnd.x, y: belowY }, routeEnd]);
       });
     }
     if (portMeta.fromSide === "top" || portMeta.fromSide === "bottom") {
       const direction = portMeta.fromSide === "bottom" ? 1 : -1;
-      [verticalClearance, verticalClearance + 18, verticalClearance + 36].forEach((spread, lane) => {
-        const outY = start.y + direction * spread;
-        const bendX = end.x + (lane % 2 === 0 ? 1 : -1) * (22 + lane * 10);
-        addCandidate([start, { x: start.x, y: outY }, { x: end.x, y: outY }, end]);
-        addCandidate([start, { x: start.x, y: outY }, { x: bendX, y: outY }, { x: bendX, y: end.y }, end]);
+      [verticalClearance, verticalClearance + 26, verticalClearance + 52, verticalClearance + 78].forEach((spread, lane) => {
+        const outY = routeStart.y + direction * spread;
+        const bendX = routeEnd.x + (lane % 2 === 0 ? 1 : -1) * (30 + lane * 12);
+        addCandidate([routeStart, { x: routeStart.x, y: outY }, { x: routeEnd.x, y: outY }, routeEnd]);
+        addCandidate([routeStart, { x: routeStart.x, y: outY }, { x: bendX, y: outY }, { x: bendX, y: routeEnd.y }, routeEnd]);
+      });
+      [118, 168, 220, 274].forEach((spread) => {
+        const leftX = Math.max(18, Math.min(routeStart.x, routeEnd.x) - spread);
+        const rightX = Math.min(layerWidth - 18, Math.max(routeStart.x, routeEnd.x) + spread);
+        addCandidate([routeStart, { x: leftX, y: routeStart.y }, { x: leftX, y: routeEnd.y }, routeEnd]);
+        addCandidate([routeStart, { x: rightX, y: routeStart.y }, { x: rightX, y: routeEnd.y }, routeEnd]);
+      });
+      obstacleBoxes.forEach((box) => {
+        const spansVerticalCorridor = !(box.y + box.height < Math.min(routeStart.y, routeEnd.y) || box.y > Math.max(routeStart.y, routeEnd.y));
+        if (!spansVerticalCorridor) return;
+        const leftX = Math.max(18, box.x - 28);
+        const rightX = Math.min(layerWidth - 18, box.x + box.width + 28);
+        addCandidate([routeStart, { x: leftX, y: routeStart.y }, { x: leftX, y: routeEnd.y }, routeEnd]);
+        addCandidate([routeStart, { x: rightX, y: routeStart.y }, { x: rightX, y: routeEnd.y }, routeEnd]);
       });
     }
     return candidates;
+  }
+  function getBucketSortMetric(entry, side) {
+    const box = entry.peerBox;
+    if (side === "left" || side === "right") {
+      return box.y + box.height / 2;
+    }
+    return box.x + box.width / 2;
   }
   function pickLabelPoint(polyline) {
     const segments = segmentsFromPolyline(polyline);
@@ -4948,7 +5262,15 @@ ${err.message}`);
     const svg = document.getElementById(svgId);
     if (!svg) return;
     const states = xstateLayerStates[layerKey];
-    const transitions = collectLayerTransitions(layerKey, snapshot);
+    const allTransitions = collectLayerTransitions(layerKey, snapshot, XSTATE_SCOPE_ALL);
+    const scopedTransitions = currentXStateScope === XSTATE_SCOPE_ALL ? allTransitions : collectLayerTransitions(layerKey, snapshot, XSTATE_SCOPE_SCENE);
+    const transitions = currentXStateScope === XSTATE_SCOPE_ALL ? allTransitions.map((edge) => ({
+      ...edge,
+      scopedEvents: edge.events,
+      scopedCount: edge.count,
+      scopedSamples: edge.samples,
+      inScope: true
+    })) : mergeLayerTransitions(allTransitions, scopedTransitions);
     const ns = "http://www.w3.org/2000/svg";
     const markerBlueId = `${svgId}-arrow-main`;
     const markerBranchId = `${svgId}-arrow-branch`;
@@ -4965,7 +5287,7 @@ ${err.message}`);
     markerMain.setAttribute("orient", "auto");
     const markerMainPath = document.createElementNS(ns, "path");
     markerMainPath.setAttribute("d", "M0,0 L7,3.5 L0,7 z");
-    markerMainPath.setAttribute("fill", "#5a84ff");
+    markerMainPath.setAttribute("fill", "context-stroke");
     markerMain.appendChild(markerMainPath);
     const markerBranch = document.createElementNS(ns, "marker");
     markerBranch.setAttribute("id", markerBranchId);
@@ -4976,7 +5298,7 @@ ${err.message}`);
     markerBranch.setAttribute("orient", "auto");
     const markerBranchPath = document.createElementNS(ns, "path");
     markerBranchPath.setAttribute("d", "M0,0 L7,3.5 L0,7 z");
-    markerBranchPath.setAttribute("fill", "#ef8a2e");
+    markerBranchPath.setAttribute("fill", "context-stroke");
     markerBranch.appendChild(markerBranchPath);
     defs.appendChild(markerMain);
     defs.appendChild(markerBranch);
@@ -4997,33 +5319,62 @@ ${err.message}`);
     }).filter(Boolean).sort((a, b) => {
       const rowSpanA = Math.abs(a.fromBox.row - a.toBox.row);
       const rowSpanB = Math.abs(b.fromBox.row - b.toBox.row);
-      if (rowSpanA !== rowSpanB) return rowSpanA - rowSpanB;
+      if (rowSpanA !== rowSpanB) return rowSpanB - rowSpanA;
+      const distanceA = Math.abs(a.fromBox.x + a.fromBox.width / 2 - (a.toBox.x + a.toBox.width / 2)) + Math.abs(a.fromBox.y + a.fromBox.height / 2 - (a.toBox.y + a.toBox.height / 2));
+      const distanceB = Math.abs(b.fromBox.x + b.fromBox.width / 2 - (b.toBox.x + b.toBox.width / 2)) + Math.abs(b.fromBox.y + b.fromBox.height / 2 - (b.toBox.y + b.toBox.height / 2));
+      if (distanceA !== distanceB) return distanceB - distanceA;
       if (a.fromBox.row !== b.fromBox.row) return a.fromBox.row - b.fromBox.row;
       return a.fromBox.x - b.fromBox.x;
     });
-    const outgoingBuckets = /* @__PURE__ */ new Map();
-    const incomingBuckets = /* @__PURE__ */ new Map();
+    const portBuckets = /* @__PURE__ */ new Map();
     routedTransitions.forEach((edge, index) => {
       edge.routeIndex = index;
-      const outKey = `${edge.from}__${edge.portMeta.fromSide}`;
-      const inKey = `${edge.to}__${edge.portMeta.toSide}`;
-      if (!outgoingBuckets.has(outKey)) outgoingBuckets.set(outKey, []);
-      if (!incomingBuckets.has(inKey)) incomingBuckets.set(inKey, []);
-      outgoingBuckets.get(outKey).push(edge);
-      incomingBuckets.get(inKey).push(edge);
-    });
-    outgoingBuckets.forEach((bucket) => {
-      bucket.sort((a, b) => a.toBox.row - b.toBox.row || a.toBox.x - b.toBox.x).forEach((edge, slotIndex) => {
-        edge.startSlot = { index: slotIndex, total: bucket.length };
+      const startKey = `${edge.from}__${edge.portMeta.fromSide}`;
+      const endKey = `${edge.to}__${edge.portMeta.toSide}`;
+      if (!portBuckets.has(startKey)) portBuckets.set(startKey, []);
+      if (!portBuckets.has(endKey)) portBuckets.set(endKey, []);
+      portBuckets.get(startKey).push({
+        edge,
+        role: "start",
+        peerBox: edge.toBox,
+        peerState: edge.to
+      });
+      portBuckets.get(endKey).push({
+        edge,
+        role: "end",
+        peerBox: edge.fromBox,
+        peerState: edge.from
       });
     });
-    incomingBuckets.forEach((bucket) => {
-      bucket.sort((a, b) => a.fromBox.row - b.fromBox.row || a.fromBox.x - b.fromBox.x).forEach((edge, slotIndex) => {
-        edge.endSlot = { index: slotIndex, total: bucket.length };
+    portBuckets.forEach((bucket) => {
+      const side = bucket[0]?.role === "start" ? bucket[0].edge.portMeta.fromSide : bucket[0]?.edge.portMeta.toSide;
+      bucket.sort((a, b) => {
+        const metricDiff = getBucketSortMetric(a, side) - getBucketSortMetric(b, side);
+        if (metricDiff) return metricDiff;
+        const rowDiff = a.peerBox.row - b.peerBox.row;
+        if (rowDiff) return rowDiff;
+        const xDiff = a.peerBox.x - b.peerBox.x;
+        if (xDiff) return xDiff;
+        const roleDiff = a.role.localeCompare(b.role);
+        if (roleDiff) return roleDiff;
+        return a.peerState.localeCompare(b.peerState);
+      }).forEach((entry, slotIndex) => {
+        const slot = { index: slotIndex, total: bucket.length };
+        if (entry.role === "start") {
+          entry.edge.startSlot = slot;
+          return;
+        }
+        entry.edge.endSlot = slot;
       });
     });
     const placedSegments = [];
     routedTransitions.forEach((edge) => {
+      const obstacleBoxes = [...layout.entries()].filter(([state]) => state !== edge.from && state !== edge.to).map(([, box]) => ({
+        x: box.x - 18,
+        y: box.y - 18,
+        width: box.width + 36,
+        height: box.height + 36
+      }));
       const start = getPortPoint(
         edge.fromBox,
         edge.portMeta.fromSide,
@@ -5036,12 +5387,12 @@ ${err.message}`);
         edge.endSlot?.index || 0,
         edge.endSlot?.total || 1
       );
-      const candidates = buildRouteCandidates(start, end, edge.portMeta, edge.routeIndex, computedHeight);
+      const candidates = buildRouteCandidates(start, end, edge.portMeta, edge.routeIndex, computedHeight, width, obstacleBoxes);
       let best = null;
       candidates.forEach((candidate) => {
         const segments = segmentsFromPolyline(candidate);
         if (!segments.length) return;
-        const routeQuality = scoreRoute(segments, placedSegments);
+        const routeQuality = scoreRoute(segments, placedSegments, obstacleBoxes);
         const bends = Math.max(0, candidate.length - 2);
         const totalScore = routeQuality.score + bends * 4;
         if (!best || totalScore < best.totalScore) {
@@ -5061,13 +5412,21 @@ ${err.message}`);
     });
     routedTransitions.forEach((edge) => {
       const sample = (edge.samples || [])[0] || null;
-      xstateEdgeSamples.set(edge.edgeKey, edge.samples || []);
+      xstateEdgeSamples.set(edge.edgeKey, {
+        samples: edge.samples || [],
+        scopedSamples: edge.scopedSamples || edge.samples || [],
+        inScope: edge.inScope !== false
+      });
       const group = document.createElementNS(ns, "g");
       group.setAttribute("class", "xstate-transition-target");
       group.setAttribute("data-layer", layerKey);
       group.setAttribute("data-from", edge.from);
       group.setAttribute("data-to", edge.to);
       group.setAttribute("data-edge-key", edge.edgeKey);
+      group.setAttribute("data-in-scope", edge.inScope === false ? "false" : "true");
+      if (edge.inScope === false) {
+        group.classList.add("is-out-of-scope");
+      }
       if (sample) {
         group.setAttribute("data-action-id", sample.actionId || "");
         group.setAttribute("data-event-type", sample.eventType || "LOAD_FIXTURE");
@@ -5147,10 +5506,11 @@ ${err.message}`);
       edge.classList.remove("is-selected", "is-available", "is-highlight", "is-dim");
       const layer = edge.dataset.layer;
       const edgeKey = edge.dataset.edgeKey;
-      const samples = xstateEdgeSamples.get(edgeKey) || [];
-      const isAvailable = samples.some((item) => item.fromFixtureId === currentFixtureId);
-      const isInbound = samples.some((item) => item.targetFixtureId === currentFixtureId);
-      const fromMatch = active[layer] === edge.dataset.from;
+      const edgeMeta = xstateEdgeSamples.get(edgeKey) || { samples: [], scopedSamples: [] };
+      const relevantSamples = currentXStateScope === XSTATE_SCOPE_ALL ? edgeMeta.samples : edgeMeta.scopedSamples;
+      const isAvailable = relevantSamples.some((item) => item.fromFixtureId === currentFixtureId);
+      const isInbound = relevantSamples.some((item) => item.targetFixtureId === currentFixtureId);
+      const fromMatch = active[layer] === edge.dataset.from && (currentXStateScope === XSTATE_SCOPE_ALL || edge.dataset.inScope === "true");
       if (isInbound) edge.classList.add("is-selected");
       else if (isAvailable || fromMatch) edge.classList.add("is-available");
     });
@@ -5162,10 +5522,11 @@ ${err.message}`);
       node.classList.remove("is-dim", "is-highlight", "is-context");
     });
     svg.querySelectorAll(".xstate-transition-target").forEach((group) => {
-      group.classList.remove("is-dim", "is-highlight", "is-context");
+      group.classList.remove("is-dim", "is-highlight", "is-context", "is-inbound", "is-outbound");
     });
   }
   function getPinnedState(svg) {
+    if (!svg || !isPinnedLockEnabledForSvg(svg)) return null;
     return pinnedStateBySvg.get(svg) || null;
   }
   function findPinnedStateNode(svg, pinnedState) {
@@ -5179,6 +5540,13 @@ ${err.message}`);
     return null;
   }
   function applyPinnedFocus(svg) {
+    if (!svg) return;
+    if (!isPinnedLockEnabledForSvg(svg)) {
+      pinnedStateBySvg.delete(svg);
+      clearSvgFocus(svg);
+      clearXStateFocus(svg);
+      return;
+    }
     const pinnedState = getPinnedState(svg);
     if (!pinnedState) {
       clearSvgFocus(svg);
@@ -5200,6 +5568,12 @@ ${err.message}`);
   }
   function setPinnedState(svg, pinnedState) {
     if (!svg || !pinnedState?.id) return;
+    if (!isPinnedLockEnabledForSvg(svg)) {
+      pinnedStateBySvg.delete(svg);
+      clearSvgFocus(svg);
+      clearXStateFocus(svg);
+      return;
+    }
     pinnedStateBySvg.set(svg, pinnedState);
     applyPinnedFocus(svg);
   }
@@ -5254,6 +5628,8 @@ ${err.message}`);
     directEdges.forEach((edge) => {
       edge.classList.remove("is-dim");
       edge.classList.add("is-context");
+      edge.classList.toggle("is-inbound", edge.dataset.to === stateId);
+      edge.classList.toggle("is-outbound", edge.dataset.from === stateId);
     });
     svg.querySelectorAll(".xstate-node").forEach((item) => {
       if (item === node) return;
@@ -5265,7 +5641,7 @@ ${err.message}`);
   }
   function resolveXStateEdgeSample(group, snapshot) {
     const edgeKey = group.dataset.edgeKey;
-    const samples = xstateEdgeSamples.get(edgeKey) || [];
+    const samples = xstateEdgeSamples.get(edgeKey)?.samples || [];
     if (!samples.length) return null;
     const currentFixtureId = getCurrentFixtureId(snapshot);
     const currentScene = getScene(snapshot);
@@ -5275,32 +5651,49 @@ ${err.message}`);
     if (sameScene) return sameScene;
     return samples[0];
   }
-  function setDiagramMode(mode) {
-    currentDiagramMode = mode;
-    const hand = document.getElementById("handdrawn-diagram-stack");
-    const xstate = document.getElementById("xstate-diagram-stack");
+  function resolveXStateNodeFixtureId(node, snapshot) {
+    const layer = node.dataset.layer;
+    const state = node.dataset.state;
+    if (!layer || !state) return null;
+    const currentFixtureId = getCurrentFixtureId(snapshot);
+    const currentScene = getScene(snapshot);
+    const triple = getTriplet(snapshot);
+    const currentFixture = fixtures[currentFixtureId];
+    if (currentFixture?.machineTriplet?.[layer] === state) {
+      return currentFixtureId;
+    }
+    const candidates = Object.values(fixtures).filter((fixture) => fixture.machineTriplet?.[layer] === state);
+    if (!candidates.length) return null;
+    const scored = candidates.map((fixture) => {
+      let score = 0;
+      if (fixture.scene === currentScene) score += 100;
+      if (fixture.machineTriplet?.input === triple?.input) score += 30;
+      if (fixture.machineTriplet?.container === triple?.container) score += 30;
+      if (fixture.machineTriplet?.session === triple?.session) score += 30;
+      return { fixture, score };
+    }).sort((a, b) => b.score - a.score);
+    return scored[0]?.fixture?.id || candidates[0].id;
+  }
+  function updateXStateScopeNote() {
+    const note = document.getElementById("xstate-scope-note");
+    if (!note) return;
+    note.textContent = currentXStateScope === XSTATE_SCOPE_ALL ? "\u5168\u90E8\u573A\u666F\uFF1A\u70B9\u51FB\u4EC5\u5207\u6362\u5F53\u524D\u72B6\u6001\uFF0C\u4E0D\u9501\u5B9A\u53EF\u89C1\u6027\uFF1Bhover \u4ECD\u652F\u6301\u805A\u7126\u3002" : "\u5F53\u524D\u573A\u666F\uFF1A\u70B9\u51FB\u72B6\u6001\u4F1A\u5207\u6362\u5F53\u524D\u72B6\u6001\uFF0C\u5E76\u9501\u5B9A\u53EF\u89C1\u6027\u76F4\u5230\u53D6\u6D88\u3002";
+  }
+  function initializeStateMachinePanel() {
     const xstateScope = document.getElementById("xstate-scope-picker");
-    if (!hand || !xstate) return;
-    hand.classList.toggle("is-hidden", mode === DIAGRAM_MODE_XSTATE);
-    xstate.classList.toggle("is-hidden", mode !== DIAGRAM_MODE_XSTATE);
     if (xstateScope) {
-      xstateScope.classList.toggle("is-hidden", mode !== DIAGRAM_MODE_XSTATE);
       xstateScope.querySelectorAll("button[data-xstate-scope]").forEach((button) => {
         button.classList.toggle("is-active", button.dataset.xstateScope === currentXStateScope);
       });
     }
-    document.querySelectorAll("#diagram-mode-picker button").forEach((button) => {
-      button.classList.toggle("is-active", button.dataset.diagramMode === mode);
-    });
-    document.querySelectorAll(".machine-svg").forEach((svg) => {
-      clearSvgFocus(svg);
+    updateXStateScopeNote();
+    document.querySelectorAll(".xstate-machine-svg").forEach((svg) => {
       clearXStateFocus(svg);
     });
-    if (mode === DIAGRAM_MODE_XSTATE) {
-      renderXStateCharts();
-      applyXStateSelection();
-    }
-    document.querySelectorAll(".machine-svg").forEach((svg) => {
+    renderXStateCharts();
+    applyXStateSelection();
+    ensureDefaultPinnedStates(actor.getSnapshot());
+    document.querySelectorAll(".xstate-machine-svg").forEach((svg) => {
       applyPinnedFocus(svg);
     });
   }
@@ -5308,9 +5701,11 @@ ${err.message}`);
     const snapshot = actor.getSnapshot();
     const fixture = getFixture(snapshot, fixtures);
     const data = fixture.ui;
+    const keywordExpansion = getKeywordExpansionViewModel(fixture.id);
     const isExpanded = data.mode === "expanded";
     const isResolving = data.mode === "resolving";
-    const keywordFlow = data.keywordFlow;
+    const keywordFlow = appendExpandedKeywordTags(data.keywordFlow, keywordExpansion?.applied || []);
+    const conditions = appendExpandedKeywordsToConditions(data.conditions, keywordExpansion?.applied || []);
     const inlineHintAction = data.inlineHint?.actionId ? fixture.actions.find((action) => action.actionId === data.inlineHint.actionId) : null;
     target.innerHTML = `
     <div class="search-box ${isExpanded ? "expanded" : "classic"}">
@@ -5332,10 +5727,11 @@ ${err.message}`);
         ${data.status ? renderStatus(data.status) : ""}
       </div>
 
-      <div class="stack ${data.session || data.question || data.conditions ? "" : "hidden"}">
+      <div class="stack ${data.session || data.question || conditions || keywordExpansion ? "" : "hidden"}">
         ${data.session ? renderSession(data.session) : ""}
         ${data.question ? renderQuestion(data.question) : ""}
-        ${data.conditions ? renderConditions(data.conditions) : ""}
+        ${conditions ? renderConditions(conditions) : ""}
+        ${keywordExpansion ? renderKeywordExpansion(fixture.id) : ""}
       </div>
 
       ${keywordFlow?.openMenu ? renderTargetMenu() : ""}
@@ -5359,17 +5755,233 @@ ${err.message}`);
     </span>
   `;
   }
+  function ensureKeywordExpansionUiState(fixtureId) {
+    if (!keywordExpansionUiState.has(fixtureId)) {
+      keywordExpansionUiState.set(fixtureId, {
+        isOpen: false,
+        selected: [],
+        applied: [],
+        lastAppliedMode: null
+      });
+    }
+    return keywordExpansionUiState.get(fixtureId);
+  }
+  function getKeywordExpansionViewModel(fixtureId) {
+    const preset = keywordExpansionPresets[fixtureId];
+    if (!preset) return null;
+    const state = ensureKeywordExpansionUiState(fixtureId);
+    return {
+      fixtureId,
+      ...preset,
+      ...state
+    };
+  }
+  function normalizeKeywordValue(value) {
+    return String(value || "").trim().toLowerCase();
+  }
+  function appendExpandedKeywordTags(keywordFlow, appliedKeywords) {
+    if (!keywordFlow || !appliedKeywords.length) return keywordFlow;
+    const tags = [...keywordFlow.tags || []];
+    const existing = new Set(tags.map((tag) => normalizeKeywordValue(tag.text)));
+    appliedKeywords.forEach((keyword) => {
+      if (existing.has(normalizeKeywordValue(keyword))) return;
+      tags.push({ text: keyword, scope: "\u9ED8\u8BA4" });
+    });
+    return {
+      ...keywordFlow,
+      tags
+    };
+  }
+  function appendExpandedKeywordsToConditions(conditions, appliedKeywords) {
+    if (!conditions || !appliedKeywords.length) return conditions;
+    const existing = new Set((conditions.hard || []).map(normalizeKeywordValue));
+    const added = appliedKeywords.filter((keyword) => !existing.has(normalizeKeywordValue(`${keyword}\uFF08\u9ED8\u8BA4\u4F5C\u7528\u57DF\uFF09`))).map((keyword) => `${keyword}\uFF08\u9ED8\u8BA4\u4F5C\u7528\u57DF\uFF09`);
+    if (!added.length) return conditions;
+    return {
+      ...conditions,
+      hard: [...conditions.hard || [], ...added]
+    };
+  }
+  function renderKeywordExpansion(fixtureId) {
+    const expansion = getKeywordExpansionViewModel(fixtureId);
+    if (!expansion) return "";
+    const sourceKeywords = expansion.sourceKeywords.map((item) => `<span class="chip">${item}</span>`).join("");
+    const appliedKeywords = expansion.applied.map((item) => `<span class="chip soft">${item}</span>`).join("");
+    if (!expansion.isOpen) {
+      return `
+      <section class="keyword-expansion-card is-collapsed">
+        <div class="card-label">
+          <span>keyword_expansion</span>
+          <span class="state-badge">${expansion.reason === "low_recall_repair" ? "repair reuse" : "proactive"}</span>
+        </div>
+        <p class="card-text">${expansion.caption}</p>
+        <div class="meta-row" style="margin-top:10px;">${sourceKeywords}</div>
+        <div class="keyword-expansion-actions">
+          <button
+            class="keyword-expansion-action primary"
+            data-expansion-action="open"
+            data-fixture-id="${fixtureId}"
+            data-action-id="${KEYWORD_EXPANSION_ACTION_IDS.open}"
+          >
+            \u6253\u5F00\u6269\u8BCD
+          </button>
+        </div>
+      </section>
+    `;
+    }
+    const candidates = expansion.candidates.map((item) => {
+      const selected = expansion.selected.includes(item);
+      const alreadyApplied = expansion.applied.includes(item);
+      return `
+        <div class="keyword-expansion-candidate ${selected ? "is-selected" : ""} ${alreadyApplied ? "is-applied" : ""}">
+          <button
+            class="keyword-expansion-chip"
+            data-expansion-action="toggle"
+            data-fixture-id="${fixtureId}"
+            data-candidate="${item}"
+          >
+            ${item}
+          </button>
+          <button
+            class="keyword-expansion-inline-action"
+            data-expansion-action="apply-one"
+            data-fixture-id="${fixtureId}"
+            data-candidate="${item}"
+            data-action-id="${KEYWORD_EXPANSION_ACTION_IDS.applyOne}"
+          >
+            \u5355\u4E2A\u52A0\u5165
+          </button>
+        </div>
+      `;
+    }).join("");
+    const footerCopy = expansion.lastAppliedMode === "classic" ? "\u5DF2\u52A0\u5165\u8F93\u5165\uFF0C\u4F46\u4E0D\u4F1A\u81EA\u52A8\u641C\u7D22\u3002" : expansion.lastAppliedMode === "search" ? "\u5DF2\u52A0\u5165\u5E76\u81EA\u52A8\u89E6\u53D1\u4E00\u6B21\u91CD\u641C / refine\uFF08\u6F14\u793A\uFF09\u3002" : "\u65B0\u8BCD\u786E\u8BA4\u540E\u4F1A\u4F5C\u4E3A\u666E\u901A keyword\uFF0C\u9ED8\u8BA4\u843D\u5230\u7CFB\u7EDF\u9ED8\u8BA4\u4F5C\u7528\u57DF\u3002";
+    return `
+    <section class="keyword-expansion-card">
+      <div class="card-label">
+        <span>keyword_expansion</span>
+        <span class="state-badge">${expansion.reason === "low_recall_repair" ? "repair reuse" : "proactive"}</span>
+      </div>
+      <p class="card-text">${expansion.title}</p>
+      <div class="keyword-expansion-block">
+        <div class="legend">source keywords</div>
+        <div class="chip-row">${sourceKeywords}</div>
+      </div>
+      <div class="keyword-expansion-block">
+        <div class="legend">candidates</div>
+        <div class="keyword-expansion-candidate-list">${candidates}</div>
+      </div>
+      ${appliedKeywords ? `
+        <div class="keyword-expansion-block">
+          <div class="legend">\u5DF2\u52A0\u5165\u7684\u65B0\u8BCD</div>
+          <div class="chip-row">${appliedKeywords}</div>
+        </div>
+      ` : ""}
+      <p class="card-text keyword-expansion-footnote">${footerCopy}</p>
+      <div class="keyword-expansion-actions">
+        <button
+          class="keyword-expansion-action"
+          data-expansion-action="apply-selected"
+          data-fixture-id="${fixtureId}"
+          data-action-id="${KEYWORD_EXPANSION_ACTION_IDS.applyMany}"
+          ${expansion.selected.length ? "" : "disabled"}
+        >
+          \u6279\u91CF\u52A0\u5165\u5DF2\u9009\u8BCD
+        </button>
+        <button
+          class="keyword-expansion-action subtle"
+          data-expansion-action="dismiss"
+          data-fixture-id="${fixtureId}"
+          data-action-id="${KEYWORD_EXPANSION_ACTION_IDS.dismiss}"
+        >
+          \u6536\u8D77\u6269\u8BCD
+        </button>
+      </div>
+      <div class="guide-chip-row" style="margin-top:12px;">
+        <span class="guide-chip code subtle">${KEYWORD_EXPANSION_ACTION_IDS.open}</span>
+        <span class="guide-chip code subtle">${KEYWORD_EXPANSION_ACTION_IDS.applyOne}</span>
+        <span class="guide-chip code subtle">${KEYWORD_EXPANSION_ACTION_IDS.applyMany}</span>
+        <span class="guide-chip code subtle">${KEYWORD_EXPANSION_ACTION_IDS.dismiss}</span>
+      </div>
+    </section>
+  `;
+  }
+  function getAnchorPlatformShort(platform) {
+    if (platform === "YouTube") return "YT";
+    if (platform === "Instagram") return "IG";
+    if (platform === "TikTok") return "TT";
+    if (platform === "X") return "X";
+    return (platform || "AN").slice(0, 2).toUpperCase();
+  }
+  function normalizeAnchorData(anchorInput) {
+    if (!anchorInput) return null;
+    const raw = typeof anchorInput === "string" ? anchorInput : anchorInput.text || anchorInput.handle || "";
+    const handleMatch = raw.match(/@[A-Za-z0-9._-]+/);
+    const handle = typeof anchorInput === "object" ? anchorInput.handle || handleMatch?.[0] || raw : handleMatch?.[0] || raw.replace(/^[^:：]+[:：]\s*/, "").trim();
+    const label = typeof anchorInput === "object" ? anchorInput.label || "\u53C2\u8003\u9891\u9053" : raw.includes("URL \u951A\u70B9") ? "URL \u951A\u70B9" : "\u951A\u70B9\u9891\u9053";
+    const platform = typeof anchorInput === "object" ? anchorInput.platform || "YouTube" : "YouTube";
+    const subtitle = typeof anchorInput === "object" ? anchorInput.subtitle || "\u76F8\u4F3C\u9891\u9053\u8D77\u70B9" : "\u76F8\u4F3C\u9891\u9053\u8D77\u70B9";
+    const note = typeof anchorInput === "object" ? anchorInput.note || "\u7F6E\u9876\u4FDD\u7559\uFF0C\u4E0D\u53C2\u4E0E\u666E\u901A\u7ED3\u679C\u6392\u5E8F" : "\u7F6E\u9876\u4FDD\u7559\uFF0C\u4E0D\u53C2\u4E0E\u666E\u901A\u7ED3\u679C\u6392\u5E8F";
+    return {
+      label,
+      handle,
+      platform,
+      platformShort: getAnchorPlatformShort(platform),
+      subtitle,
+      note
+    };
+  }
+  function renderQueryToken(tag) {
+    if (tag.anchor) {
+      const anchor = normalizeAnchorData({
+        text: tag.text,
+        handle: tag.text,
+        platform: tag.platform,
+        label: "\u951A\u70B9",
+        subtitle: "\u76F8\u4F3C\u9891\u9053\u8D77\u70B9",
+        note: "\u7F6E\u9876\u4FDD\u7559"
+      });
+      return `
+      <span class="anchor-token" title="${anchor.handle}">
+        <span class="anchor-token-badge">${anchor.label}</span>
+        <span class="anchor-token-body">
+          <span class="anchor-token-handle">${anchor.handle}</span>
+          <span class="anchor-token-meta">${anchor.platform} \xB7 ${anchor.subtitle}</span>
+        </span>
+        <span class="anchor-token-platform">${anchor.platformShort}</span>
+      </span>
+    `;
+    }
+    return `
+    <span class="query-token ${tag.exclude ? "exclude" : ""}">
+      <span>${tag.text}</span>
+      <span class="divider"></span>
+      <span class="scope">${tag.scope}</span>
+    </span>
+  `;
+  }
+  function renderAnchorCard(anchorInput) {
+    const anchor = normalizeAnchorData(anchorInput);
+    if (!anchor) return "";
+    return `
+    <div class="anchor-card">
+      <div class="anchor-card-top">
+        <span class="anchor-card-label">${anchor.label}</span>
+        <span class="anchor-card-platform">${anchor.platform}</span>
+      </div>
+      <div class="anchor-card-main">
+        <span class="anchor-card-avatar">${anchor.platformShort}</span>
+        <span class="anchor-card-copy">
+          <strong>${anchor.handle}</strong>
+          <span>${anchor.subtitle}</span>
+        </span>
+      </div>
+      <p class="anchor-card-note">${anchor.note}</p>
+    </div>
+  `;
+  }
   function renderKeywordFlow(flow, inlineHint, inlineHintAction) {
     if (flow.followup) {
-      const tags2 = (flow.tags || []).map(
-        (tag) => `
-          <span class="query-token ${tag.exclude ? "exclude" : ""}">
-            <span>${tag.text}</span>
-            <span class="divider"></span>
-            <span class="scope">${tag.scope}</span>
-          </span>
-        `
-      ).join("");
+      const tags2 = (flow.tags || []).map(renderQueryToken).join("");
       const content = flow.draft ? flow.draft : `<span class="followup-placeholder">${flow.placeholder || "\u7EE7\u7EED\u8865\u5145..."}</span>`;
       const hint2 = inlineHint ? renderInlineHint(inlineHint, inlineHintAction) : "";
       return `
@@ -5380,15 +5992,7 @@ ${err.message}`);
       </div>
     `;
     }
-    const tags = flow.tags.map(
-      (tag) => `
-        <span class="query-token ${tag.exclude ? "exclude" : ""}">
-          <span>${tag.text}</span>
-          <span class="divider"></span>
-          <span class="scope">${tag.scope}</span>
-        </span>
-      `
-    ).join("");
+    const tags = flow.tags.map(renderQueryToken).join("");
     const draft = `<span class="draft-fragment with-caret">${flow.draft || ""}</span>`;
     const hint = inlineHint ? renderInlineHint(inlineHint, inlineHintAction) : "";
     return `
@@ -5470,9 +6074,7 @@ ${err.message}`);
       ${conditions.anchor ? `
         <div class="anchor-group">
           <div class="legend">\u951A\u70B9</div>
-          <div class="chip-row">
-            <span class="chip anchor">${conditions.anchor}</span>
-          </div>
+          ${renderAnchorCard(conditions.anchor)}
         </div>
       ` : ""}
       <div class="soft-group" style="${conditions.anchor ? "" : "margin-top:0;padding-top:0;border-top:none;"}">
@@ -5505,43 +6107,50 @@ ${err.message}`);
     const currentFixtureId = getCurrentFixtureId(snapshot);
     const picker = document.getElementById("substate-picker");
     const states = sceneMap[currentScene] || [];
-    picker.innerHTML = states.map(
-      (state) => `
+    picker.innerHTML = states.map((state) => {
+      const abstract = getAbstractSubstateByFixtureId(state.id);
+      return `
         <button data-scenario="${state.id}" class="${state.id === currentFixtureId ? "is-active" : ""}">
-          ${state.label}
+          <span class="substate-button-main">${state.label}</span>
+          <span class="substate-button-abstract">${abstract.title}</span>
         </button>
-      `
-    ).join("");
+      `;
+    }).join("");
   }
-  function applyStateMachineSelection() {
+  function renderSubstateGuide() {
     const snapshot = actor.getSnapshot();
-    const currentFixture = getFixture(snapshot, fixtures);
-    const activeNodes = new Set(currentFixture.nodeIds || []);
-    document.querySelectorAll(".svg-state-target").forEach((node) => {
-      const isActive = activeNodes.has(node.dataset.node);
-      node.classList.toggle("is-selected", isActive);
-    });
-    document.querySelectorAll(".svg-transition-target").forEach((edge) => {
-      edge.classList.toggle("is-selected", edge.dataset.target === currentFixture.id);
-    });
-  }
-  function enhanceTransitionTargets() {
-    document.querySelectorAll(".svg-transition-target").forEach((group) => {
-      if (!group.dataset.event) {
-        group.dataset.event = "LOAD_FIXTURE";
-      }
-      if (!group.dataset.actionId) {
-        group.dataset.actionId = `A_PATH__${normalizeActionToken(group.dataset.from)}__${normalizeActionToken(group.dataset.to)}__${normalizeActionToken(group.dataset.target)}__01`;
-      }
-      if (group.querySelector(".svg-edge-hit")) return;
-      const edge = group.querySelector(".svg-edge");
-      if (!edge) return;
-      const hit = edge.cloneNode(false);
-      hit.removeAttribute("marker-end");
-      hit.classList.remove("main", "branch");
-      hit.classList.add("svg-edge-hit");
-      group.insertBefore(hit, group.firstChild);
-    });
+    const currentFixtureId = getCurrentFixtureId(snapshot);
+    const fixture = getFixture(snapshot, fixtures);
+    const guide = document.getElementById("substate-guide");
+    if (!guide || !fixture) return;
+    const abstract = getAbstractSubstateByFixtureId(currentFixtureId);
+    const actionGroups = (abstract.actionGroups || []).map((item) => `<span class="guide-chip">${item}</span>`).join("");
+    const canonicalActionIds = (abstract.canonicalActionIds || []).map((item) => `<span class="guide-chip code">${item}</span>`).join("");
+    const currentActionIds = (fixture.actions || []).map((action) => `<span class="guide-chip code subtle">${action.actionId}</span>`).join("");
+    guide.hidden = false;
+    guide.innerHTML = `
+    <div class="substate-guide-header">
+      <span class="substate-guide-pill">${abstract.title}</span>
+      <span class="substate-guide-code">${abstract.id}</span>
+    </div>
+    <p>\u5F53\u524D\u5B50\u72B6\u6001 <strong>${fixture.label}</strong> \u5728\u8BB2\u89E3\u5C42\u5F52\u5C5E\u4E3A\u8FD9\u4E2A\u62BD\u8C61\u5B50\u72B6\u6001\u3002</p>
+    <p>${abstract.summary}</p>
+    <p>${abstract.speakingHint}</p>
+    <div class="substate-guide-grid">
+      <section class="guide-block">
+        <p class="guide-block-label">\u6807\u51C6\u52A8\u4F5C\u7EC4</p>
+        <div class="guide-chip-row">${actionGroups || '<span class="guide-chip subtle">\u5F53\u524D\u672A\u5355\u72EC\u62BD\u8C61</span>'}</div>
+      </section>
+      <section class="guide-block">
+        <p class="guide-block-label">\u6807\u51C6 actionId</p>
+        <div class="guide-chip-row">${canonicalActionIds || '<span class="guide-chip subtle">\u5F53\u524D\u4E3B\u8981\u4F9D\u8D56\u5B50\u72B6\u6001\u7EA7 actionId</span>'}</div>
+      </section>
+      <section class="guide-block">
+        <p class="guide-block-label">\u5F53\u524D\u5B50\u72B6\u6001 actionId</p>
+        <div class="guide-chip-row">${currentActionIds || '<span class="guide-chip subtle">\u5F53\u524D\u65E0\u52A8\u4F5C</span>'}</div>
+      </section>
+    </div>
+  `;
   }
   function setTransitionVisualState(group, state) {
     const edge = group.querySelector(".svg-edge.main, .svg-edge.branch");
@@ -5571,25 +6180,6 @@ ${err.message}`);
     svg.querySelectorAll(".svg-transition-target").forEach((group) => {
       group.classList.remove("is-dim", "is-highlight", "is-context");
       setTransitionVisualState(group, "base");
-    });
-  }
-  function focusTransition(group) {
-    const svg = group.closest("svg");
-    if (!svg) return;
-    clearSvgFocus(svg);
-    svg.classList.add("is-focusing");
-    const from = group.dataset.from;
-    const to = group.dataset.to;
-    svg.querySelectorAll(".svg-state-target").forEach((node) => node.classList.add("is-dim"));
-    svg.querySelectorAll(".svg-transition-target").forEach((edge) => edge.classList.add("is-dim"));
-    group.classList.remove("is-dim");
-    group.classList.add("is-highlight");
-    setTransitionVisualState(group, "hover");
-    svg.querySelectorAll(".svg-state-target").forEach((node) => {
-      if (node.dataset.node === from || node.dataset.node === to) {
-        node.classList.remove("is-dim");
-        node.classList.add("is-highlight");
-      }
     });
   }
   function focusState(node) {
@@ -5626,11 +6216,13 @@ ${err.message}`);
     const currentScene = getScene(snapshot);
     const currentFixtureId = getCurrentFixtureId(snapshot);
     const currentVariant = getVariant(snapshot);
+    const abstract = getAbstractSubstateByFixtureId(currentFixtureId);
     const actions = fixture.actions || [];
     document.getElementById("state-triplet").innerHTML = `
     <span class="triple-chip"><strong>input_state</strong><em>${triple?.input || "\u2014"}</em></span>
     <span class="triple-chip"><strong>container_state</strong><em>${triple?.container || "\u2014"}</em></span>
     <span class="triple-chip"><strong>session_state</strong><em>${triple?.session || "\u2014"}</em></span>
+    <span class="triple-chip subtle"><strong>abstract_state</strong><em>${abstract.id}</em></span>
     <span class="triple-chip subtle"><strong>scene</strong><em>${currentScene}</em></span>
     <span class="triple-chip subtle"><strong>substate</strong><em>${currentFixtureId}</em></span>
     <span class="triple-chip subtle"><strong>variant</strong><em>${currentVariant}</em></span>
@@ -5640,23 +6232,59 @@ ${err.message}`);
     ).join("");
     applyXStateSelection();
   }
+  function applyDockLayout() {
+    document.body.classList.toggle("is-dock-left", currentDockLayout === DOCK_LAYOUT_LEFT);
+    document.querySelectorAll("#dock-layout-picker button").forEach((button) => {
+      button.classList.toggle("is-active", button.dataset.dockLayout === currentDockLayout);
+    });
+  }
+  function syncKeywordExpansionInteraction(action, fixtureId, candidate) {
+    const preset = keywordExpansionPresets[fixtureId];
+    if (!preset) return;
+    const state = ensureKeywordExpansionUiState(fixtureId);
+    const isSearchMode = !["keyword-multi", "keyword-anchor-seed", "url-keyword-seed"].includes(fixtureId);
+    if (action === "open") {
+      state.isOpen = true;
+    } else if (action === "dismiss") {
+      state.isOpen = false;
+      state.selected = [];
+    } else if (action === "toggle" && candidate) {
+      state.isOpen = true;
+      state.selected = state.selected.includes(candidate) ? state.selected.filter((item) => item !== candidate) : [...state.selected, candidate];
+    } else if (action === "apply-one" && candidate) {
+      state.isOpen = true;
+      if (!state.applied.includes(candidate)) {
+        state.applied = [...state.applied, candidate];
+      }
+      state.lastAppliedMode = isSearchMode ? "search" : "classic";
+    } else if (action === "apply-selected") {
+      state.isOpen = true;
+      state.selected.forEach((item) => {
+        if (!state.applied.includes(item)) {
+          state.applied = [...state.applied, item];
+        }
+      });
+      state.lastAppliedMode = isSearchMode ? "search" : "classic";
+      state.selected = [];
+    }
+    rerenderAll();
+  }
   function syncUiAfterActorChange({ rerenderShell = true } = {}) {
     const currentScene = getScene(actor.getSnapshot());
     document.querySelectorAll("#scene-picker button").forEach((node) => node.classList.toggle("is-active", node.dataset.scene === currentScene));
     renderSubstatePicker();
-    document.querySelectorAll(".machine-svg").forEach((svg) => {
-      clearSvgFocus(svg);
+    renderSubstateGuide();
+    document.querySelectorAll(".xstate-machine-svg").forEach((svg) => {
       clearXStateFocus(svg);
     });
-    applyStateMachineSelection();
     if (rerenderShell) {
       rerenderAll();
     }
-    if (currentDiagramMode === DIAGRAM_MODE_XSTATE) {
-      renderXStateCharts();
-    }
+    renderXStateCharts();
+    ensureDefaultPinnedStates(actor.getSnapshot());
     renderStateDock();
-    document.querySelectorAll(".machine-svg").forEach((svg) => {
+    syncPinnedStatesWithCurrentFixture(actor.getSnapshot());
+    document.querySelectorAll(".xstate-machine-svg").forEach((svg) => {
       applyPinnedFocus(svg);
     });
   }
@@ -5689,10 +6317,15 @@ ${err.message}`);
     applyVariantVisibility();
     renderStateDock();
   });
-  document.getElementById("diagram-mode-picker").addEventListener("click", (event) => {
-    const button = event.target.closest("button[data-diagram-mode]");
+  document.getElementById("dock-layout-picker").addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-dock-layout]");
     if (!button) return;
-    setDiagramMode(button.dataset.diagramMode);
+    currentDockLayout = button.dataset.dockLayout === DOCK_LAYOUT_LEFT ? DOCK_LAYOUT_LEFT : DOCK_LAYOUT_BOTTOM;
+    try {
+      localStorage.setItem(DOCK_LAYOUT_STORAGE_KEY, currentDockLayout);
+    } catch {
+    }
+    applyDockLayout();
   });
   document.getElementById("xstate-scope-picker").addEventListener("click", (event) => {
     const button = event.target.closest("button[data-xstate-scope]");
@@ -5701,8 +6334,19 @@ ${err.message}`);
     document.querySelectorAll("#xstate-scope-picker button").forEach((node) => {
       node.classList.toggle("is-active", node.dataset.xstateScope === currentXStateScope);
     });
+    if (currentXStateScope === XSTATE_SCOPE_ALL) {
+      document.querySelectorAll(".xstate-machine-svg").forEach((svg) => {
+        pinnedStateBySvg.delete(svg);
+        clearXStateFocus(svg);
+      });
+    }
+    updateXStateScopeNote();
     renderXStateCharts();
     applyXStateSelection();
+    ensureDefaultPinnedStates(actor.getSnapshot());
+    document.querySelectorAll(".xstate-machine-svg").forEach((svg) => {
+      applyPinnedFocus(svg);
+    });
   });
   document.querySelector(".state-machine-panel").addEventListener("click", (event) => {
     const xstateTransition = event.target.closest(".xstate-transition-target");
@@ -5734,32 +6378,30 @@ ${err.message}`);
         }
       }
       syncUiAfterActorChange();
-      setPinnedState(svg2, { kind: "xstate", id: xstateTransition.dataset.to || "" });
+      if (isPinnedLockEnabledForSvg(svg2)) {
+        setPinnedState(svg2, { kind: "xstate", id: xstateTransition.dataset.to || "" });
+      } else {
+        clearPinnedState(svg2);
+      }
       return;
     }
     const xstateNode = event.target.closest(".xstate-node");
     if (xstateNode) {
       const svg2 = xstateNode.closest("svg.machine-svg");
-      setPinnedState(svg2, { kind: "xstate", id: xstateNode.dataset.state || "" });
-      return;
-    }
-    const transition = event.target.closest(".svg-transition-target");
-    if (transition?.dataset.target) {
-      const svg2 = transition.closest("svg.machine-svg");
-      const targetScenario = transition.dataset.target;
+      const snapshot = actor.getSnapshot();
+      const targetFixtureId = resolveXStateNodeFixtureId(xstateNode, snapshot);
+      if (!targetFixtureId) return;
       actor.send({
-        type: transition.dataset.event || "LOAD_FIXTURE",
-        actionId: transition.dataset.actionId || `A_PATH__${normalizeActionToken(targetScenario)}__01`,
-        fixtureId: targetScenario
+        type: "LOAD_FIXTURE",
+        actionId: `A_XSTATE_NODE__${normalizeActionToken(xstateNode.dataset.layer || "layer")}__${normalizeActionToken(xstateNode.dataset.state || "state")}__01`,
+        fixtureId: targetFixtureId
       });
       syncUiAfterActorChange();
-      setPinnedState(svg2, { kind: "handdrawn", id: transition.dataset.to || "" });
-      return;
-    }
-    const target = event.target.closest(".svg-state-target");
-    if (target) {
-      const svg2 = target.closest("svg.machine-svg");
-      setPinnedState(svg2, { kind: "handdrawn", id: target.dataset.node || "" });
+      if (isPinnedLockEnabledForSvg(svg2)) {
+        setPinnedState(svg2, { kind: "xstate", id: xstateNode.dataset.state || "" });
+      } else {
+        clearPinnedState(svg2);
+      }
       return;
     }
     const svg = event.target.closest("svg.machine-svg");
@@ -5778,29 +6420,19 @@ ${err.message}`);
       focusXStateState(xstateState);
       return;
     }
-    const transition = event.target.closest(".svg-transition-target");
-    if (transition) {
-      focusTransition(transition);
-      return;
-    }
-    const state = event.target.closest(".svg-state-target");
-    if (state) {
-      focusState(state);
-      return;
-    }
     const svg = event.target.closest("svg.machine-svg");
     if (svg) {
       restorePinnedOrClear(svg);
     }
   });
   document.querySelector(".state-machine-panel").addEventListener("mouseout", (event) => {
-    const leaving = event.target.closest(".svg-transition-target, .svg-state-target, .xstate-transition-target, .xstate-node");
+    const leaving = event.target.closest(".xstate-transition-target, .xstate-node");
     if (!leaving) return;
     const svg = leaving.closest("svg.machine-svg");
     if (!svg) return;
     const related = event.relatedTarget;
     if (related && leaving.contains(related)) return;
-    const enteredSameSvgInteractive = related?.closest ? related.closest(".svg-transition-target, .svg-state-target, .xstate-transition-target, .xstate-node") && related.closest("svg.machine-svg") === svg : false;
+    const enteredSameSvgInteractive = related?.closest ? related.closest(".xstate-transition-target, .xstate-node") && related.closest("svg.machine-svg") === svg : false;
     if (enteredSameSvgInteractive) return;
     restorePinnedOrClear(svg);
   });
@@ -5820,6 +6452,15 @@ ${err.message}`);
     syncUiAfterActorChange();
   });
   document.querySelector(".compare-stack").addEventListener("click", (event) => {
+    const expansionButton = event.target.closest("[data-expansion-action]");
+    if (expansionButton) {
+      syncKeywordExpansionInteraction(
+        expansionButton.dataset.expansionAction,
+        expansionButton.dataset.fixtureId,
+        expansionButton.dataset.candidate
+      );
+      return;
+    }
     const button = event.target.closest(".inline-hint-action");
     if (!button) return;
     actor.send({
@@ -5840,9 +6481,8 @@ ${err.message}`);
   rerenderAll();
   applyVariantVisibility();
   renderSubstatePicker();
-  renderXStateCharts();
-  setDiagramMode(DIAGRAM_MODE_HANDDRAWN);
-  enhanceTransitionTargets();
-  applyStateMachineSelection();
+  renderSubstateGuide();
+  initializeStateMachinePanel();
+  applyDockLayout();
   renderStateDock();
 })();

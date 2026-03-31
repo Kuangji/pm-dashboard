@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-03-27T01:53:26.970Z",
+  "updatedAt": "2026-03-31T01:49:07.903Z",
   "navigation": {
     "docs": [
       {
@@ -1030,6 +1030,117 @@
                     "fileType": "image",
                     "isText": false,
                     "isImage": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "search_experience_mvp_upgrade",
+            "path": "02-project-documents/search_experience_mvp_upgrade",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "02-project-documents/search_experience_mvp_upgrade/README.md",
+                "slug": "02-project-documents/search_experience_mvp_upgrade/README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "_plan.md",
+                "path": "02-project-documents/search_experience_mvp_upgrade/_plan.md",
+                "slug": "02-project-documents/search_experience_mvp_upgrade/_plan.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "directory",
+                "name": "channel_search_modes",
+                "path": "02-project-documents/search_experience_mvp_upgrade/channel_search_modes",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "design_v1.md",
+                    "path": "02-project-documents/search_experience_mvp_upgrade/channel_search_modes/design_v1.md",
+                    "slug": "02-project-documents/search_experience_mvp_upgrade/channel_search_modes/design_v1.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "input_v1.md",
+                    "path": "02-project-documents/search_experience_mvp_upgrade/channel_search_modes/input_v1.md",
+                    "slug": "02-project-documents/search_experience_mvp_upgrade/channel_search_modes/input_v1.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "internal_reference_teardown.md",
+                    "path": "02-project-documents/search_experience_mvp_upgrade/channel_search_modes/internal_reference_teardown.md",
+                    "slug": "02-project-documents/search_experience_mvp_upgrade/channel_search_modes/internal_reference_teardown.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "spec_v1.md",
+                    "path": "02-project-documents/search_experience_mvp_upgrade/channel_search_modes/spec_v1.md",
+                    "slug": "02-project-documents/search_experience_mvp_upgrade/channel_search_modes/spec_v1.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "similar_search_replacement",
+                "path": "02-project-documents/search_experience_mvp_upgrade/similar_search_replacement",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "current_flow_teardown.md",
+                    "path": "02-project-documents/search_experience_mvp_upgrade/similar_search_replacement/current_flow_teardown.md",
+                    "slug": "02-project-documents/search_experience_mvp_upgrade/similar_search_replacement/current_flow_teardown.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "design_v1.md",
+                    "path": "02-project-documents/search_experience_mvp_upgrade/similar_search_replacement/design_v1.md",
+                    "slug": "02-project-documents/search_experience_mvp_upgrade/similar_search_replacement/design_v1.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "input_v1.md",
+                    "path": "02-project-documents/search_experience_mvp_upgrade/similar_search_replacement/input_v1.md",
+                    "slug": "02-project-documents/search_experience_mvp_upgrade/similar_search_replacement/input_v1.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "spec_v1.md",
+                    "path": "02-project-documents/search_experience_mvp_upgrade/similar_search_replacement/spec_v1.md",
+                    "slug": "02-project-documents/search_experience_mvp_upgrade/similar_search_replacement/spec_v1.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
                   }
                 ]
               }
@@ -2162,14 +2273,14 @@
       },
       {
         "id": "cool_hello_world_v2",
-        "title": "Hello World V2",
-        "description": "NoxInfluencer 品牌欢迎页，采用深蓝紫渐变配色与玻璃态设计风格。",
+        "title": "设计系统 v2",
+        "description": "NoxInfluencer 设计系统 v2 展示，包含色彩规范、玻璃态效果及圆角体系。",
         "path": "demos/cool_hello_world_v2/index.html",
         "thumbnail": "",
         "tags": [
-          "欢迎页",
-          "品牌展示",
-          "视觉设计"
+          "设计系统",
+          "UI规范",
+          "玻璃态"
         ]
       },
       {
@@ -2186,14 +2297,28 @@
       },
       {
         "id": "poe_328_bd_website",
-        "title": "流放之路BD收集",
-        "description": "流放之路3.28赛季开荒BD收集展示，帮助玩家快速找到适合的开荒流派",
+        "title": "流放之路BD收集站",
+        "description": "流放之路3.28幻像赛季开荒BD收集站，帮助玩家快速找到适合的角色构建方案。",
         "path": "demos/poe_328_bd_website/index.html",
         "thumbnail": "",
         "tags": [
           "游戏工具",
           "流放之路",
           "BD收集"
+        ]
+      },
+      {
+        "id": "search-experience-mvp-upgrade",
+        "title": "搜索体验 MVP 重写 Demo",
+        "description": "统一展示频道搜索模式升级与相似网红替换两条工作流的静态交互原型。",
+        "path": "demos/search-experience-mvp-upgrade/index.html",
+        "thumbnail": "",
+        "tags": [
+          "搜索体验",
+          "MVP",
+          "静态 Demo",
+          "频道搜索",
+          "相似网红"
         ]
       }
     ]

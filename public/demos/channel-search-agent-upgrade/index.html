@@ -35,7 +35,8 @@
 
         <div class="control-group">
           <span class="control-label">子状态</span>
-          <div class="segmented" id="substate-picker"></div>
+          <div class="segmented segmented-substates" id="substate-picker"></div>
+          <div class="substate-guide" id="substate-guide"></div>
         </div>
 
         <div class="control-group is-hidden">
@@ -167,14 +168,11 @@
             </p>
           </div>
           <div class="diagram-header-actions">
-            <div class="segmented" id="diagram-mode-picker">
-              <button class="is-active" data-diagram-mode="handdrawn">手绘版</button>
-              <button data-diagram-mode="xstate">XState版</button>
-            </div>
-            <div class="segmented is-hidden" id="xstate-scope-picker">
+            <div class="segmented" id="xstate-scope-picker">
               <button class="is-active" data-xstate-scope="scene">当前场景</button>
               <button data-xstate-scope="all">全部场景</button>
             </div>
+            <p class="xstate-scope-note" id="xstate-scope-note"></p>
             <div class="legend-cluster">
               <span class="legend-pill">输入层</span>
               <span class="legend-pill">容器层</span>
@@ -183,360 +181,12 @@
             </div>
           </div>
         </div>
-        <div class="diagram-stack" id="handdrawn-diagram-stack">
+        <div class="diagram-stack" id="xstate-diagram-stack">
           <article class="diagram-card">
             <div class="lane-header">
               <span class="lane-index">01</span>
               <div>
                 <h3>输入状态机</h3>
-                <p>关键词编辑器内部的输入、提交、作用域与排除流转</p>
-              </div>
-            </div>
-            <svg class="machine-svg" viewBox="0 0 1200 720" role="img" aria-label="输入状态机 SVG 图">
-              <defs>
-                <marker id="arrow-blue-sm" markerWidth="8" markerHeight="8" refX="6.4" refY="4" orient="auto">
-                  <path d="M0,0 L8,4 L0,8 z" fill="#5a84ff"></path>
-                </marker>
-                <marker id="arrow-orange-sm" markerWidth="8" markerHeight="8" refX="6.4" refY="4" orient="auto">
-                  <path d="M0,0 L8,4 L0,8 z" fill="#ef8a2e"></path>
-                </marker>
-              </defs>
-
-              <text x="44" y="34" class="svg-path-title">主路径：空白 → 输入 → 固化为关键词 tag</text>
-
-              <g class="svg-state-target" data-scene="keyword" data-scenario="keyword-empty" data-node="empty_input">
-                <rect x="44" y="72" width="220" height="96" rx="22" class="svg-node active"></rect>
-                <text x="76" y="114" class="svg-node-title">empty_input</text>
-                <text x="76" y="145" class="svg-node-sub">搜索框完全空白</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="keyword-input" data-from="empty_input" data-to="draft_keyword">
-                <line x1="264" y1="120" x2="384" y2="120" class="svg-edge main" marker-end="url(#arrow-blue-sm)"></line>
-                <text x="298" y="96" class="svg-edge-label">开始输入</text>
-              </g>
-
-              <g class="svg-state-target" data-scene="keyword" data-scenario="keyword-input" data-node="draft_keyword">
-                <rect x="360" y="72" width="250" height="96" rx="22" class="svg-node"></rect>
-                <text x="392" y="114" class="svg-node-title">draft_keyword</text>
-                <text x="392" y="145" class="svg-node-sub">正在输入的文本</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="keyword-tag" data-from="draft_keyword" data-to="committed_keyword">
-                <line x1="610" y1="120" x2="700" y2="120" class="svg-edge main" marker-end="url(#arrow-blue-sm)"></line>
-                <text x="616" y="96" class="svg-edge-label">Enter / 失焦 / 搜索</text>
-              </g>
-
-              <g class="svg-state-target" data-scene="keyword" data-scenario="keyword-tag" data-node="committed_keyword">
-                <rect x="700" y="72" width="250" height="96" rx="22" class="svg-node"></rect>
-                <text x="732" y="114" class="svg-node-title">committed_keyword</text>
-                <text x="732" y="145" class="svg-node-sub">固化为 tag</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="keyword-empty" data-from="draft_keyword" data-to="empty_input">
-                <path d="M360 120 L316 120 L316 202 L154 202 L154 168" class="svg-edge main" marker-end="url(#arrow-blue-sm)"></path>
-                <text x="196" y="194" class="svg-edge-label">清空输入 / 输入为空</text>
-              </g>
-
-              <text x="44" y="256" class="svg-path-title branch">分支路径：编辑已有关键词 tag</text>
-
-              <g class="svg-transition-target" data-target="keyword-edit" data-from="committed_keyword" data-to="editing_keyword">
-                <path d="M825 168 L825 248 L468 248 L468 300" class="svg-edge main" marker-end="url(#arrow-blue-sm)"></path>
-                <text x="610" y="240" class="svg-edge-label">点已有 tag 进入编辑</text>
-              </g>
-
-              <g class="svg-state-target" data-scene="keyword" data-scenario="keyword-edit" data-node="editing_keyword">
-                <rect x="318" y="300" width="300" height="92" rx="20" class="svg-node"></rect>
-                <text x="350" y="338" class="svg-node-title">editing_keyword</text>
-                <text x="350" y="368" class="svg-node-sub">正在修改已有关键词 tag</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="keyword-tag" data-from="editing_keyword" data-to="committed_keyword">
-                <path d="M618 346 L668 346 L668 214 L860 214 L860 168" class="svg-edge main" marker-end="url(#arrow-blue-sm)"></path>
-                <text x="678" y="206" class="svg-edge-label">提交编辑 / 取消编辑</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="keyword-empty" data-from="editing_keyword" data-to="empty_input">
-                <path d="M318 346 L274 346 L274 224 L120 224 L120 168" class="svg-edge branch" marker-end="url(#arrow-orange-sm)"></path>
-                <text x="156" y="216" class="svg-edge-label branch">清空并确认删除</text>
-              </g>
-
-              <text x="700" y="256" class="svg-path-title branch">局部 context：匹配目标 / 排除 / active tag menu</text>
-              <g>
-                <rect x="700" y="300" width="360" height="106" rx="20" class="svg-node" style="stroke-dasharray:6 5; opacity:0.92;"></rect>
-                <text x="732" y="338" class="svg-node-title">tag_context (not a state)</text>
-                <text x="732" y="366" class="svg-node-sub">scope / is_excluded / active_tag_menu</text>
-                <text x="732" y="390" class="svg-node-sub">附着在 committed_keyword 上，不再单独建模为状态</text>
-              </g>
-
-              <text x="44" y="474" class="svg-path-title">补充路径：锚点与 follow-up 输入位</text>
-
-              <g class="svg-state-target" data-scene="url" data-scenario="url-exact" data-node="committed_anchor">
-                <rect x="44" y="504" width="240" height="88" rx="20" class="svg-node active"></rect>
-                <text x="76" y="540" class="svg-node-title">committed_anchor</text>
-                <text x="76" y="569" class="svg-node-sub">URL 精确识别后收起为 badge</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="keyword-empty" data-from="committed_anchor" data-to="empty_input">
-                <path d="M164 504 L164 640 L24 640 L24 120 L44 120" class="svg-edge branch" marker-end="url(#arrow-orange-sm)"></path>
-                <text x="42" y="632" class="svg-edge-label branch">删除锚点</text>
-              </g>
-
-              <g class="svg-state-target" data-scene="natural" data-scenario="natural-results" data-node="followup_waiting">
-                <rect x="372" y="504" width="280" height="88" rx="20" class="svg-node"></rect>
-                <text x="404" y="540" class="svg-node-title">followup_waiting</text>
-                <text x="404" y="569" class="svg-node-sub">原始 query 已吸收，等待补充</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="natural-followup-draft" data-from="followup_waiting" data-to="draft_followup">
-                <line x1="652" y1="548" x2="700" y2="548" class="svg-edge main" marker-end="url(#arrow-blue-sm)"></line>
-                <text x="650" y="524" class="svg-edge-label">开始补充一句</text>
-              </g>
-
-              <g class="svg-state-target" data-scene="natural" data-scenario="natural-followup-draft" data-node="draft_followup">
-                <rect x="700" y="504" width="260" height="88" rx="20" class="svg-node"></rect>
-                <text x="732" y="540" class="svg-node-title">draft_followup</text>
-                <text x="732" y="569" class="svg-node-sub">正在输入新的自然语言补充</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="natural-results" data-from="draft_followup" data-to="followup_waiting">
-                <path d="M830 592 L830 668 L512 668 L512 592" class="svg-edge main" marker-end="url(#arrow-blue-sm)"></path>
-                <text x="594" y="660" class="svg-edge-label">清空补充 / 取消补充</text>
-              </g>
-            </svg>
-          </article>
-
-          <article class="diagram-card">
-            <div class="lane-header">
-              <span class="lane-index">02</span>
-              <div>
-                <h3>容器状态机</h3>
-                <p>搜索框什么时候保持经典态，什么时候进入展开态或修正态</p>
-              </div>
-            </div>
-            <svg class="machine-svg" viewBox="0 0 1200 410" role="img" aria-label="容器状态机 SVG 图">
-              <defs>
-                <marker id="arrow-blue-ct" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-                  <path d="M0,0 L10,5 L0,10 z" fill="#5a84ff"></path>
-                </marker>
-                <marker id="arrow-orange-ct" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-                  <path d="M0,0 L10,5 L0,10 z" fill="#ef8a2e"></path>
-                </marker>
-              </defs>
-
-              <text x="44" y="34" class="svg-path-title">主路径：自然语言 / 混合输入进入 Agent 展开态</text>
-
-              <g class="svg-state-target" data-scene="keyword" data-scenario="keyword-input" data-node="compact_classic">
-                <rect x="44" y="72" width="250" height="96" rx="22" class="svg-node active"></rect>
-                <text x="76" y="114" class="svg-node-title">compact_classic</text>
-                <text x="76" y="145" class="svg-node-sub">经典查询编辑器</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="natural-init" data-from="compact_classic" data-to="expanded_agent">
-                <line x1="294" y1="120" x2="454" y2="120" class="svg-edge main" marker-end="url(#arrow-blue-ct)"></line>
-                <text x="316" y="96" class="svg-edge-label">提交纯自然语言 / 混合输入</text>
-              </g>
-
-              <g class="svg-state-target" data-scene="natural" data-scenario="natural-init" data-node="expanded_agent">
-                <rect x="454" y="72" width="250" height="96" rx="22" class="svg-node"></rect>
-                <text x="486" y="114" class="svg-node-title">expanded_agent</text>
-                <text x="486" y="145" class="svg-node-sub">完整 Agent 展开态</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="natural-clarifying" data-from="expanded_agent" data-to="expanded_clarifying">
-                <line x1="704" y1="120" x2="834" y2="120" class="svg-edge main" marker-end="url(#arrow-blue-ct)"></line>
-                <text x="728" y="96" class="svg-edge-label">出现高影响歧义</text>
-              </g>
-
-              <g class="svg-state-target" data-scene="natural" data-scenario="natural-clarifying" data-node="expanded_clarifying">
-                <rect x="834" y="72" width="250" height="96" rx="22" class="svg-node"></rect>
-                <text x="866" y="114" class="svg-node-title">expanded_clarifying</text>
-                <text x="866" y="145" class="svg-node-sub">搜索框内追问</text>
-              </g>
-
-              <text x="44" y="236" class="svg-path-title branch">分支路径：纯 URL 先走识别短态</text>
-
-              <g class="svg-transition-target" data-target="url-resolving" data-from="compact_classic" data-to="compact_resolving">
-                <path d="M169 168 L169 248" class="svg-edge main" marker-end="url(#arrow-blue-ct)"></path>
-                <text x="194" y="214" class="svg-edge-label">提交纯 URL</text>
-              </g>
-
-              <g class="svg-state-target" data-scene="url" data-scenario="url-resolving" data-node="compact_resolving">
-                <rect x="44" y="248" width="250" height="72" rx="18" class="svg-node"></rect>
-                <text x="76" y="278" class="svg-node-title small">compact_resolving</text>
-                <text x="76" y="302" class="svg-node-sub">URL 识别短态</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="url-exact" data-from="compact_resolving" data-to="return-state">
-                <path d="M294 284 L340 284 L340 214 L959 214 L959 248" class="svg-edge main" marker-end="url(#arrow-blue-ct)"></path>
-                <text x="622" y="206" class="svg-edge-label">识别成功</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="repair-mismatch" data-from="compact_resolving" data-to="expanded_repair">
-                <path d="M169 320 L169 360 L579 360 L579 320" class="svg-edge branch" marker-end="url(#arrow-orange-ct)"></path>
-                <text x="322" y="352" class="svg-edge-label branch">失败 / 平台不匹配</text>
-              </g>
-
-              <g class="svg-state-target" data-scene="repair" data-scenario="repair-mismatch" data-node="expanded_repair">
-                <rect x="454" y="248" width="250" height="72" rx="18" class="svg-node warn"></rect>
-                <text x="486" y="278" class="svg-node-title small">expanded_repair</text>
-                <text x="486" y="302" class="svg-node-sub">无结果 / URL 修正</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="url-exact" data-from="expanded_repair" data-to="return-state">
-                <line x1="704" y1="284" x2="834" y2="284" class="svg-edge main" marker-end="url(#arrow-blue-ct)"></line>
-                <text x="728" y="262" class="svg-edge-label">修正后重新搜索</text>
-              </g>
-
-              <g class="svg-state-target" data-scene="url" data-scenario="url-exact" data-node="return-state">
-                <rect x="834" y="248" width="250" height="72" rx="18" class="svg-node active"></rect>
-                <text x="866" y="278" class="svg-node-title small">compact_classic / expanded_agent</text>
-                <text x="866" y="302" class="svg-node-sub">取决于修正后的输入类型</text>
-              </g>
-            </svg>
-          </article>
-
-          <article class="diagram-card">
-            <div class="lane-header">
-              <span class="lane-index">03</span>
-              <div>
-                <h3>会话状态机</h3>
-                <p>一次搜索任务从起搜到 refine 的内部进程</p>
-              </div>
-            </div>
-            <svg class="machine-svg" viewBox="0 0 1200 560" role="img" aria-label="会话状态机 SVG 图">
-              <defs>
-                <marker id="arrow-blue-ss" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-                  <path d="M0,0 L10,5 L0,10 z" fill="#5a84ff"></path>
-                </marker>
-                <marker id="arrow-orange-ss" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-                  <path d="M0,0 L10,5 L0,10 z" fill="#ef8a2e"></path>
-                </marker>
-              </defs>
-
-              <text x="44" y="34" class="svg-path-title">主路径：先搜后看结果</text>
-
-              <g class="svg-state-target" data-scene="keyword" data-scenario="keyword-input" data-node="idle">
-                <rect x="44" y="72" width="220" height="92" rx="22" class="svg-node active"></rect>
-                <text x="76" y="114" class="svg-node-title">idle</text>
-                <text x="76" y="145" class="svg-node-sub">还没形成有效搜索</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="natural-retrieving" data-from="idle" data-to="retrieving">
-                <line x1="264" y1="120" x2="390" y2="120" class="svg-edge main" marker-end="url(#arrow-blue-ss)"></line>
-                <text x="300" y="96" class="svg-edge-label">发起搜索</text>
-              </g>
-
-              <g class="svg-state-target" data-scene="natural" data-scenario="natural-retrieving" data-node="retrieving">
-                <rect x="390" y="72" width="220" height="92" rx="22" class="svg-node"></rect>
-                <text x="422" y="114" class="svg-node-title">retrieving</text>
-                <text x="422" y="145" class="svg-node-sub">正在搜索</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="natural-results" data-from="retrieving" data-to="results_ready">
-                <line x1="610" y1="120" x2="700" y2="120" class="svg-edge main" marker-end="url(#arrow-blue-ss)"></line>
-                <text x="624" y="96" class="svg-edge-label">返回结果</text>
-              </g>
-
-              <g class="svg-state-target" data-scene="natural" data-scenario="natural-results" data-node="results_ready">
-                <rect x="700" y="72" width="220" height="92" rx="22" class="svg-node"></rect>
-                <text x="732" y="114" class="svg-node-title">results_ready</text>
-                <text x="732" y="145" class="svg-node-sub">结果可浏览</text>
-              </g>
-
-              <text x="44" y="224" class="svg-path-title branch">分支路径：追问与修正</text>
-
-              <g class="svg-transition-target" data-target="natural-clarifying" data-from="results_ready" data-to="clarifying">
-                <path d="M810 164 L810 206 L1040 206 L1040 248" class="svg-edge main" marker-end="url(#arrow-blue-ss)"></path>
-                <text x="874" y="198" class="svg-edge-label">需要追问</text>
-              </g>
-
-              <g class="svg-state-target" data-scene="natural" data-scenario="natural-clarifying" data-node="clarifying">
-                <rect x="930" y="248" width="220" height="72" rx="18" class="svg-node"></rect>
-                <text x="962" y="278" class="svg-node-title small">clarifying</text>
-                <text x="962" y="302" class="svg-node-sub">当前存在追问</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="natural-followup-refining" data-from="clarifying" data-to="refining">
-                <line x1="930" y1="284" x2="610" y2="284" class="svg-edge main" marker-end="url(#arrow-blue-ss)"></line>
-                <text x="740" y="262" class="svg-edge-label">回答追问</text>
-              </g>
-
-              <g class="svg-state-target" data-scene="mixed" data-scenario="mixed-clarifying" data-node="refining">
-                <rect x="390" y="248" width="220" height="72" rx="18" class="svg-node"></rect>
-                <text x="422" y="278" class="svg-node-title small">refining</text>
-                <text x="422" y="302" class="svg-node-sub">刷新结果中</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="repair-empty" data-from="refining" data-to="empty_repair">
-                <line x1="390" y1="284" x2="264" y2="284" class="svg-edge branch" marker-end="url(#arrow-orange-ss)"></line>
-                <text x="292" y="262" class="svg-edge-label branch">仍然无结果</text>
-              </g>
-
-              <g class="svg-state-target" data-scene="repair" data-scenario="repair-empty" data-node="empty_repair">
-                <rect x="44" y="248" width="220" height="72" rx="18" class="svg-node warn"></rect>
-                <text x="76" y="278" class="svg-node-title small">empty_repair</text>
-                <text x="76" y="302" class="svg-node-sub">进入修正引导</text>
-              </g>
-
-              <text x="44" y="366" class="svg-path-title">主动补充输入路径</text>
-
-              <g class="svg-state-target" data-scene="natural" data-scenario="natural-followup-draft" data-node="draft_followup-natural">
-                <rect x="700" y="410" width="220" height="70" rx="18" class="svg-node"></rect>
-                <text x="732" y="440" class="svg-node-title small">draft_followup</text>
-                <text x="732" y="464" class="svg-node-sub">自然语言：主动补充输入中</text>
-              </g>
-
-              <g class="svg-state-target" data-scene="mixed" data-scenario="mixed-followup-draft" data-node="draft_followup-mixed">
-                <rect x="930" y="410" width="220" height="70" rx="18" class="svg-node"></rect>
-                <text x="962" y="440" class="svg-node-title small">draft_followup</text>
-                <text x="962" y="464" class="svg-node-sub">混合输入：主动补充输入中</text>
-              </g>
-
-              <g class="svg-state-target" data-scene="repair" data-scenario="repair-followup-draft" data-node="draft_followup-repair">
-                <rect x="44" y="410" width="220" height="70" rx="18" class="svg-node warn"></rect>
-                <text x="76" y="440" class="svg-node-title small">draft_followup</text>
-                <text x="76" y="464" class="svg-node-sub">修正态：主动补充输入中</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="natural-followup-draft" data-from="results_ready" data-to="draft_followup-natural">
-                <path d="M750 164 L750 410" class="svg-edge main" marker-end="url(#arrow-blue-ss)"></path>
-                <text x="774" y="300" class="svg-edge-label">主动补充一句</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="mixed-followup-draft" data-from="clarifying" data-to="draft_followup-mixed">
-                <path d="M1090 320 L1090 410" class="svg-edge main" marker-end="url(#arrow-blue-ss)"></path>
-                <text x="992" y="374" class="svg-edge-label">主动再补一句</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="repair-followup-draft" data-from="empty_repair" data-to="draft_followup-repair">
-                <path d="M214 320 L214 410" class="svg-edge branch" marker-end="url(#arrow-orange-ss)"></path>
-                <text x="238" y="374" class="svg-edge-label branch">直接补一句修正要求</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="natural-followup-refining" data-from="draft_followup-natural" data-to="refining">
-                <path d="M810 410 L810 360 L560 360 L560 320" class="svg-edge main" marker-end="url(#arrow-blue-ss)"></path>
-                <text x="646" y="352" class="svg-edge-label">提交补充并 refine</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="mixed-followup-refining" data-from="draft_followup-mixed" data-to="refining">
-                <path d="M1040 410 L1040 344 L592 344 L592 320" class="svg-edge main" marker-end="url(#arrow-blue-ss)"></path>
-                <text x="780" y="336" class="svg-edge-label">提交补充并 refine</text>
-              </g>
-
-              <g class="svg-transition-target" data-target="repair-followup-refining" data-from="draft_followup-repair" data-to="refining">
-                <path d="M154 410 L154 378 L528 378 L528 320" class="svg-edge branch" marker-end="url(#arrow-orange-ss)"></path>
-                <text x="248" y="370" class="svg-edge-label branch">提交修正并 refine</text>
-              </g>
-            </svg>
-          </article>
-        </div>
-
-        <div class="diagram-stack is-hidden" id="xstate-diagram-stack">
-          <article class="diagram-card">
-            <div class="lane-header">
-              <span class="lane-index">01</span>
-              <div>
-                <h3>XState 输入状态图</h3>
                 <p>由 orchestrator 可达转移自动聚合，不依赖手绘连线。</p>
               </div>
             </div>
@@ -547,7 +197,7 @@
             <div class="lane-header">
               <span class="lane-index">02</span>
               <div>
-                <h3>XState 容器状态图</h3>
+                <h3>容器状态机</h3>
                 <p>由 fixtures 事件流映射得到的容器层转移图。</p>
               </div>
             </div>
@@ -558,7 +208,7 @@
             <div class="lane-header">
               <span class="lane-index">03</span>
               <div>
-                <h3>XState 会话状态图</h3>
+                <h3>会话状态机</h3>
                 <p>由 fixtures 事件流映射得到的会话层转移图。</p>
               </div>
             </div>
@@ -585,6 +235,16 @@
     </main>
 
     <aside class="state-dock" id="state-dock">
+      <div class="dock-toolbar">
+        <div>
+          <p class="dock-toolbar-kicker">State Dock</p>
+          <p class="dock-toolbar-title">状态栏布局</p>
+        </div>
+        <div class="segmented segmented-compact" id="dock-layout-picker">
+          <button class="is-active" data-dock-layout="bottom" type="button">底部</button>
+          <button data-dock-layout="left" type="button">左侧</button>
+        </div>
+      </div>
       <div class="dock-section">
         <p class="dock-label">当前状态（三元组）</p>
         <div class="dock-triplet" id="state-triplet"></div>

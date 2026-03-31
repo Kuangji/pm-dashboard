@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>搜索体验 MVP 重写 Demo</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="demo-page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">NoxInfluencer · Search Experience MVP</p>
+          <h1>搜索体验 MVP 重写</h1>
+          <p class="hero-copy">
+            统一展示两条工作流：频道搜索模式升级，以及相似网红替换。这个 demo
+            不再追求完整状态机，而是聚焦信息架构、入口关系、关键状态与结果消费方式。
+          </p>
+        </div>
+        <div class="hero-pill">标准搜索 / AI搜索 / 相似网红</div>
+      </header>
+
+      <section class="workspace-tabs panel">
+        <div class="toolbar-head">
+          <div>
+            <p class="kicker">Workspace</p>
+            <h2>工作流切换</h2>
+          </div>
+          <p class="toolbar-copy">一个总项目，内部切两条工作流。</p>
+        </div>
+        <div class="segmented" id="workstream-tabs"></div>
+      </section>
+
+      <div class="demo-layout">
+        <section class="preview-stack">
+          <section class="panel scene-toolbar">
+            <div class="toolbar-head compact">
+              <div>
+                <p class="kicker">Scenes</p>
+                <h2 id="section-title">工作流子域</h2>
+              </div>
+            </div>
+            <div class="toolbar-group">
+              <span class="toolbar-label">子域</span>
+              <div class="segmented" id="section-tabs"></div>
+            </div>
+            <div class="toolbar-group">
+              <span class="toolbar-label">场景</span>
+              <div class="segmented segmented-scenes" id="scene-tabs"></div>
+            </div>
+          </section>
+
+          <section class="panel preview-panel">
+            <div class="toolbar-head compact">
+              <div>
+                <p class="kicker">Preview</p>
+                <h2 id="scene-title">场景预览</h2>
+              </div>
+              <p class="toolbar-copy" id="scene-summary"></p>
+            </div>
+            <div id="preview-root"></div>
+          </section>
+        </section>
+
+        <aside class="panel inspector-panel">
+          <div class="toolbar-head compact">
+            <div>
+              <p class="kicker">Inspector</p>
+              <h2>当前场景说明</h2>
+            </div>
+          </div>
+
+          <section class="inspector-block">
+            <h3>设计目标</h3>
+            <ul id="goal-list" class="inspector-list"></ul>
+          </section>
+
+          <section class="inspector-block">
+            <h3>关键规则</h3>
+            <ul id="rule-list" class="inspector-list"></ul>
+          </section>
+
+          <section class="inspector-block">
+            <h3>验证关注点</h3>
+            <ul id="check-list" class="inspector-list"></ul>
+          </section>
+
+          <section class="inspector-block">
+            <h3>冻结决策</h3>
+            <div id="decision-tags" class="decision-tags"></div>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
