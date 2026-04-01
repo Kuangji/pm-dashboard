@@ -1,9 +1,9 @@
 {
-  "title": "Cool Hello World v2",
-  "description": "NoxInfluencer 品牌视觉展示页面，采用深色主题与玻璃态设计风格",
+  "title": "Hello World v2",
+  "description": "NoxInfluencer 现代风格问候展示组件，采用玻璃态设计和蓝紫渐变主题。",
   "tags": [
-    "视觉展示",
-    "品牌页面",
-    "玻璃态设计"
+    "UI组件",
+    "玻璃态",
+    "展示"
   ]
 }
