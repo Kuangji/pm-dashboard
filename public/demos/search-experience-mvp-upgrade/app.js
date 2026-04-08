@@ -9,14 +9,14 @@ const STANDARD_DECISIONS = [
 ];
 
 const AI_DECISIONS = [
-  "频道搜索页一级只分标准搜索与 AI搜索",
-  "AI搜索是漏斗式精选工作台，不是聊天页",
-  "从 0 开始时总池是全量频道库；带条件起手时总池是标准搜索范围",
+  "智能精选是频道列表后的 deep research 工作台，不是并列搜索模式",
+  "输入对象是冻结的结果快照 + 来源搜索条件，不是全库自由搜索",
+  "顶部顺序固定为：输入快照 -> 精选策略 -> session 集合 -> 当前轮次结果",
+  "默认动作是继续筛，重新筛必须显式触发",
+  "继续筛基于当前列表；重新筛回到本轮直接基底",
   "智能精选的 session 需要持久化，刷新后默认恢复最近活动的未归档 session",
-  "AI 页改为左侧 session 历史侧栏 + 右侧当前工作台",
-  "卡片显式动作只保留采纳 / 排除，待定不再是正式概念",
-  "已排除是硬过滤，已采纳是正向偏好信号",
-  "改 query 仍在同一个总池和同一个 session 内继续精修",
+  "session 之间彼此独立，不共享采纳 / 排除与策略进度",
+  "轻量差异只表达相对本轮基底与原始快照的收敛程度",
 ];
 
 const SIMILAR_DECISIONS = [
@@ -25,13 +25,14 @@ const SIMILAR_DECISIONS = [
   "支持 URL 携带平台 + 频道ID 直达并自动搜索",
   "旧收藏夹方案保留为页内次级 Tab",
   "新相似网红结果仍是普通结果列表",
-  "相似网红不并入 AI搜索 批次消费流程",
+  "相似网红不并入智能精选工作台流程",
 ];
 
 const BRIDGE_DECISIONS = [
   "桥接智能精选属于 v6.3.10，不属于 v6.3.9 的标准搜索交付",
   "桥接入口只保留在标准搜索结果页，不出现在 v6.3.9 的产品 UI 中",
-  "桥接带走的是标准搜索当前候选范围，而不是几条 seed 字段",
+  "桥接带走的是标准搜索当前结果快照与来源条件，而不是几条 seed 字段",
+  "桥接文案应强调“对这份结果做智能精选”，而不是“带条件继续搜索”",
 ];
 
 const RELEASE_ORDER = ["v6.3.9", "v6.3.10"];
@@ -165,12 +166,12 @@ const DATA = {
               id: "standard-bridge-ai",
               label: "桥接智能精选",
               title: "标准搜索 · 当前条件桥接智能精选",
-              summary: "这条桥接线属于 v6.3.10：把标准搜索已经收敛出的候选范围显式带到智能精选继续探索。",
+              summary: "这条桥接线属于 v6.3.10：把标准搜索已经产出的结果快照与来源条件显式带到智能精选继续处理。",
               decisions: BRIDGE_DECISIONS,
               goals: [
-                "补齐标准搜索到 AI搜索 的桥接线",
+                "补齐标准搜索到智能精选的桥接线",
                 "让用户继续看到自然语言历史与当前搜索现场",
-                "明确这是新 AI搜索 session，而不是标准搜索继续编辑",
+                "明确这是新智能精选 session，而不是标准搜索继续编辑",
               ],
               rules: [
                 "桥接动作挂在当前生效条件区",
@@ -178,9 +179,9 @@ const DATA = {
                 "关键词 / 自然语言切换仍留在输入框里",
               ],
               checks: [
-                "用户在标准搜索结果页能看见去 AI搜索 的路径",
-                "AI 桥接没有抢走自然语言继续输入的主线",
-                "标准搜索与 AI搜索 的边界仍然稳定",
+                "用户在标准搜索结果页能看见去智能精选的路径",
+                "智能精选桥接没有抢走自然语言继续输入的主线",
+                "标准搜索与智能精选的边界仍然稳定",
               ],
               render: renderStandardBridgeToAi,
             },
@@ -197,7 +198,7 @@ const DATA = {
               rules: [
                 "失败提示贴在输入框下方",
                 "旧结果继续保留，不切失败空态",
-                "不自动退回关键词，也不自动跳 AI搜索",
+                "不自动退回关键词，也不自动跳智能精选",
               ],
               checks: [
                 "失败原因与改写建议清楚",
@@ -209,49 +210,49 @@ const DATA = {
           ],
         },
         ai: {
-          label: "AI搜索（智能精选）",
+          label: "智能精选",
           decisions: AI_DECISIONS,
           scenes: [
             {
               id: "ai-blank",
-              label: "空白起手",
-              title: "AI搜索 · 从 0 开始搜索",
-              summary: "从 0 开始时，AI 搜索先建立“全量频道库”总池，再在这个总池上用自然语言做漏斗式精选。",
+              label: "等待快照",
+              title: "智能精选 · 等待输入快照",
+              summary: "智能精选不直接面向全库搜索，而是等待一份可追溯的结果快照进入工作台。",
               goals: [
-                "明确 AI搜索是独立模式",
-                "让全量总池的概念先于 query 被理解",
-                "提供带入标准搜索范围的起手入口",
+                "把智能精选定义成结果后的下一阶段",
+                "明确它的输入对象是一份结果快照",
+                "避免继续被误解成独立搜索模式",
               ],
               rules: [
-                "工作台顶部固定为：总池 -> query -> session 集合 -> 当前批次",
-                "从 0 开始时总池来自全量频道库",
-                "AI搜索与标准搜索互切时不自动同步",
+                "空态不提供全库自由搜索承诺",
+                "要明确说明需从标准搜索结果桥接进入",
+                "session 为空时也保持工作台结构感",
               ],
               checks: [
-                "用户知道当前总池来自哪里",
-                "模式切换和标准搜索边界清楚",
-                "主按钮与次级按钮层级清楚",
+                "用户不会误解这里能直接搜全库",
+                "桥接入口语义清楚",
+                "空态不抢标准搜索主路径",
               ],
               render: renderAiBlank,
             },
             {
               id: "ai-seeded",
-              label: "带条件起手",
-              title: "AI搜索 · 带条件起手",
-              summary: "从标准搜索进入时，不再停在占位页，而是直接进入带预装总池的 AI 工作台。",
+              label: "桥接进入",
+              title: "智能精选 · 标准结果桥接进入",
+              summary: "标准搜索会冻结当前结果快照与来源条件，再把这份快照送入智能精选工作台。",
               goals: [
-                "把标准搜索范围明确转译成 AI 搜索总池",
-                "让带条件起手和从 0 开始共用同一套工作台",
-                "避免把标准搜索条件误解成几条 seed 字段",
+                "把输入对象从结果范围描述改成结果快照",
+                "让用户知道这份快照来自哪里",
+                "明确这是新建 session，而不是继续编辑标准搜索",
               ],
               rules: [
-                "带入的核心是候选总池范围，而不是几条 seed 字段",
-                "总池来源必须明确显示为标准搜索范围",
+                "桥接后先展示输入快照卡，再进入首轮精选",
+                "带入的是结果快照与来源条件，不是几条 seed 字段",
                 "标准搜索原状态保留不被改写",
               ],
               checks: [
-                "用户能理解自己正基于标准搜索范围继续精选",
-                "带条件起手不是独立确认页",
+                "用户能理解自己正基于一份结果快照继续精选",
+                "桥接文案不再使用并列搜索语义",
                 "回标准搜索的路径仍清楚",
               ],
               render: renderAiSeeded,
@@ -259,111 +260,112 @@ const DATA = {
             {
               id: "ai-running",
               label: "执行中",
-              title: "AI搜索 · AI任务执行中",
-              summary: "执行态要清楚表达：系统正在当前总池里生成下一批精选候选。",
+              title: "智能精选 · 执行中",
+              summary: "执行态要清楚表达：系统正在基于输入快照和当前策略处理这一轮结果。",
               goals: [
-                "建立稳定的过程反馈",
-                "让用户知道系统正在当前总池中生成当前批次",
-                "避免误判为空态",
+                "让执行态对用户足够透明",
+                "保留输入快照和当前策略上下文",
+                "让用户知道这是一轮处理中，不是在请求另一批新结果",
               ],
               rules: [
-                "执行态必须锁定当前 query",
-                "结果区要用 skeleton 承接",
-                "不能只剩空白页面",
+                "执行态仍保留输入快照卡和 session 集合",
+                "当前策略与当前基底必须可见",
+                "结果区使用 skeleton 作为过渡",
               ],
               checks: [
-                "状态提示明显",
-                "结果区骨架稳定",
-                "下一批或修改 query 的下一步动作仍可预测",
+                "用户知道为什么正在等待",
+                "当前输入快照与策略没有丢失",
+                "继续筛 / 重新筛的后续动作仍可预测",
               ],
               render: renderAiRunning,
             },
             {
               id: "ai-batch-results",
-              label: "一批结果",
-              title: "AI搜索 · 一批结果 + 逐项消费",
-              summary: "当前批次结果返回后，用户对每项只做采纳或排除；生效后条目立即从列表移除。",
+              label: "当前轮次结果",
+              title: "智能精选 · 当前轮次结果",
+              summary: "当前轮次返回后，用户对结果做采纳或排除，并决定是继续筛还是重新筛。",
               goals: [
-                "建立漏斗式结果消费感",
                 "让采纳 / 排除动作足够轻",
-                "让下一批与改 query 成为自然出口",
+                "把结果消费与下一步策略动作分清",
+                "保持 shortlist 工作节奏顺畅",
               ],
               rules: [
                 "卡片显式动作只保留采纳 / 排除",
-                "生效后该条立即从当前列表移除",
-                "未处理项不是正式结果桶",
-                "此页仍是搜索工具，不是收藏操作页",
+                "条目被处理后立即离开当前列表",
+                "结果页主出口改为继续筛 / 重新筛",
+                "此页仍是精选工作台，不是收藏操作页",
               ],
               checks: [
-                "卡片操作层级清楚",
                 "采纳 / 排除后条目真的离开当前列表",
-                "下一批与改 query 的主次关系清楚",
+                "继续筛 / 重新筛的语义清楚",
+                "结果消费路径没有旧分批推进心智残留",
               ],
               render: renderAiBatchResults,
             },
             {
               id: "ai-summary-expanded",
-              label: "摘要展开",
-              title: "AI搜索 · 集合展开与改判",
+              label: "集合回看",
+              title: "智能精选 · 集合回看与改判",
               summary: "顶部摘要只保留已采纳 / 已排除，展开后既能回看，也能轻量改判。",
               goals: [
-                "让用户知道本次 session 已经沉淀了什么",
-                "避免固定侧栏带来的过重感",
+                "让用户知道当前 session 已沉淀了什么",
                 "支持从集合里轻量改判",
+                "不把历史结果重新塞回主列表",
               ],
               rules: [
                 "顶部主摘要只保留已采纳 / 已排除",
                 "展开后可看明细，也可改判为回当前列表",
+                "改判动作不新建 session",
                 "展开明细也不触发业务写入",
               ],
               checks: [
                 "计数与明细一致",
                 "改判入口足够轻",
-                "不会抢走当前批次结果的主视线",
+                "不会抢走当前轮次结果的主视线",
               ],
               render: renderAiSummaryExpanded,
             },
             {
               id: "ai-next-batch",
-              label: "下一批",
-              title: "AI搜索 · 手动触发下一批",
-              summary: "只要当前批次仍有未处理结果，就必须手动进入下一批；若本批已处理完，则自动进入下一批。",
+              label: "重新筛",
+              title: "智能精选 · 重新筛本轮",
+              summary: "当用户不认同本轮方向时，应显式回到本轮直接基底，重新生成这一轮，而不是继续收窄当前结果。",
               goals: [
-                "强化用户掌控节奏",
-                "让批次边界足够清楚",
-                "明确手动与自动推进的边界",
+                "把重新筛与继续筛的语义拆开",
+                "让用户知道自己在回到哪份列表重来",
+                "避免一句话同时承担两种计算语义",
               ],
               rules: [
-                "仍有未处理结果时，下一批是手动动作",
-                "本批处理完后，可经短过渡自动进入下一批",
-                "进入下一批后结果区只保留当前批次",
+                "重新筛是次级动作，不抢默认继续筛主路径",
+                "进入重新筛模式后，基底自动切到本轮直接基底",
+                "需要提供返回继续筛的退出动作",
               ],
               checks: [
-                "用户知道什么时候是手动推进",
-                "本批清空后自动推进能被理解",
-                "session 集合跨批次累计",
+                "用户明确知道自己不是在继续收窄当前结果",
+                "本轮基底信息清楚可见",
+                "模式切换没有歧义",
               ],
               render: renderAiNextBatch,
             },
             {
               id: "ai-query-adjust",
-              label: "调 query 重搜",
-              title: "AI搜索 · 改 query 重搜",
-              summary: "改 query 不是重新开始，而是在同一个总池、同一个 session 里继续精修。",
+              label: "继续筛",
+              title: "智能精选 · 继续筛",
+              summary: "继续筛默认基于当前结果列表，把一句新的精选策略继续作用在当前 shortlist 上。",
               goals: [
-                "让调优成本低",
-                "把 query 作为 AI搜索 的主编辑面",
-                "明确重搜仍在同一个总池和 session 内",
+                "保留自然语言作为策略主入口",
+                "让继续筛成为默认主路径",
+                "保持同一个 session 的连续精修心智",
               ],
               rules: [
-                "调优主要通过自然语言完成",
-                "不引入完整显式筛选器编辑器",
-                "重搜后重新进入执行态，但保留已采纳 / 已排除",
+                "默认基底是当前列表",
+                "继续筛不新建 session",
+                "前台只展示轻量系统理解摘要，不打开完整策略编辑器",
               ],
               checks: [
-                "用户理解只是换了 query，不是换了总池",
-                "新批次与上一批区别清楚",
-                "AI搜索仍保持独立 session 心智",
+                "用户知道下一条策略将作用于当前列表",
+                "继续筛不像重新开始",
+                "已采纳 / 已排除继续留在同一个 session 内",
               ],
               render: renderAiQueryAdjust,
             },
@@ -464,7 +466,7 @@ const DATA = {
               checks: [
                 "当前种子信息清楚可见",
                 "结果列表语义稳定",
-                "用户不会误以为进入了 AI搜索",
+                "用户不会误以为进入了智能精选",
               ],
               render: renderSimilarSeeded,
             },
@@ -552,6 +554,7 @@ const state = {
     rejudgeItemId: null,
     archiveExpanded: false,
     queryAdjustOpen: false,
+    rescreenOpen: false,
     sidebarCollapsed: false,
   },
 };
@@ -694,7 +697,7 @@ function handlePreviewAiAction(event) {
       createAiSessionFromStandardBridge();
       return true;
     case "create-session":
-      createAiSessionDraft({ poolSource: "global" });
+      createAiSessionDraft();
       return true;
     case "switch-session":
       switchAiSession(aiSessionId);
@@ -726,14 +729,20 @@ function handlePreviewAiAction(event) {
     case "exclude-item":
       handleAiDecision(aiItemId, "excluded");
       return true;
-    case "next-batch":
-      advanceAiBatch({ manual: true });
-      return true;
     case "open-query-adjust":
       openAiQueryAdjust();
       return true;
     case "regenerate-query":
       regenerateAiQuery();
+      return true;
+    case "open-rescreen":
+      openAiRescreen();
+      return true;
+    case "close-rescreen":
+      closeAiRescreen();
+      return true;
+    case "run-rescreen":
+      rerunAiFromBase();
       return true;
     case "open-rejudge":
       openAiRejudge(aiItemId);
@@ -939,7 +948,7 @@ function renderChannelPageTabs({
   if (showAi) {
     items.push(
       renderNavPill({
-        label: "AI搜索",
+        label: "智能精选",
         className: "page-tab",
         isActive: active === "ai",
         target: active === "ai" ? undefined : aiTarget,
@@ -952,8 +961,8 @@ function renderChannelPageTabs({
 
 function renderAiModeTabs({ standardTarget = { workstream: "channel", section: "standard" } }) {
   return `
-    ${renderNavPill({ label: "标准搜索", className: "page-tab", target: standardTarget })}
-    ${renderNavPill({ label: "AI搜索（智能精选）", className: "page-tab", isActive: true })}
+    ${renderNavPill({ label: "标准搜索结果", className: "page-tab", target: standardTarget })}
+    ${renderNavPill({ label: "智能精选", className: "page-tab", isActive: true })}
   `;
 }
 
@@ -1162,7 +1171,10 @@ function renderNaturalConditionsPanel({
   aiTarget,
   aiAttrs = "",
 }) {
-  const aiButton = aiAttrs || aiTarget ? `<button class="ghost-btn" type="button" ${aiAttrs || navAttrs(aiTarget)}>带当前条件去 AI搜索</button>` : "";
+  const aiButton =
+    aiAttrs || aiTarget
+      ? `<button class="ghost-btn" type="button" ${aiAttrs || navAttrs(aiTarget)}>对这份结果做智能精选</button>`
+      : "";
   return `
     <div class="nl-panel">
       <div class="nl-panel-head">
@@ -1334,12 +1346,13 @@ const AI_ITEM_LIBRARY = {
 
 const AI_POOL_CONFIG = {
   global: {
-    badge: "全量频道库",
-    poolScope: "当前在 YouTube 全量频道库中做精选，首轮会先按 query 从全库收窄候选。",
-    chips: ["来源：YouTube 全量频道库", "起手方式：从 0 开始", "总池：全量频道"],
+    badge: "待带入结果快照",
+    poolScope: "当前还没有带入任何结果快照。智能精选需要先从标准搜索结果页桥接一份冻结列表快照进入。",
+    chips: ["来源：等待桥接", "输入：结果快照", "状态：未开始"],
     queries: {
-      default: "帮我找美国做户外跑步装备测评、互动率高、最近一个月持续更新的 YouTube 频道",
-      refined: "帮我更偏向真实鞋类测评，不要偏 vlog，也不要泛运动资讯号。",
+      default: "从当前结果里优先保留更适合妈妈群体合作、表达真实、近期持续更新的频道。",
+      refined: "继续筛：在当前 shortlist 里更偏向真人出镜、商品表达清楚、合作气质成熟的频道。",
+      reframed: "重新筛：回到本轮基底，改为优先看近期内容专业度和真实测评感，不强调妈妈群体表达。",
     },
     defaultBatches: [
       ["run-experience", "believe-run", "daily-runner"],
@@ -1351,14 +1364,20 @@ const AI_POOL_CONFIG = {
       ["ben-parkes", "marathon-handbook", "ginger-runner"],
       ["run-experience", "roadtrailrun", "believe-run"],
     ],
+    reframedBatches: [
+      ["roadtrailrun", "doctors-running", "ben-parkes"],
+      ["believe-run", "marathon-handbook", "ginger-runner"],
+      ["doctors-running", "roadtrailrun", "run-experience"],
+    ],
   },
   standard_search_scope: {
-    badge: "标准搜索范围",
-    poolScope: "当前总池来自标准搜索先收缩出的 324 个美国 toy unboxing 候选频道，AI 搜索只在这个范围里继续精选。",
-    chips: ["来源：标准搜索范围", "关键词：toy unboxing", "地区：美国", "范围：324 个候选频道"],
+    badge: "标准结果快照",
+    poolScope: "这是一份由标准搜索冻结下来的结果快照：324 个美国 toy unboxing 候选频道。智能精选会在这份快照上继续 deep research 与精筛。",
+    chips: ["来源：标准搜索结果", "快照规模：324 个候选频道", "关键词：toy unboxing", "地区：美国"],
     queries: {
-      default: "帮我在当前候选范围里优先找更适合妈妈群体合作的真实玩具测评频道",
-      refined: "更偏向真人出镜、商品表达清楚、不是纯剧情短剧型的频道",
+      default: "从这份结果里优先保留更适合妈妈群体合作的真实玩具测评频道，排除纯剧情短剧型账号。",
+      refined: "继续筛：在当前结果里更偏向真人出镜、商品表达清楚、品牌合作气质更成熟的频道。",
+      reframed: "重新筛：回到本轮基底，改为优先看近期互动稳定、内容更专业、弱化纯亲子娱乐表达的频道。",
     },
     defaultBatches: [
       ["ryans-world", "toys-colors", "caleb-kids"],
@@ -1370,10 +1389,15 @@ const AI_POOL_CONFIG = {
       ["kids-camp", "caleb-kids", "toys-colors"],
       ["family-playlab", "toycaboodle", "kids-camp"],
     ],
+    reframedBatches: [
+      ["kids-camp", "toycaboodle", "family-playlab"],
+      ["caleb-kids", "ryans-world", "toys-colors"],
+      ["family-playlab", "kids-camp", "toycaboodle"],
+    ],
   },
 };
 
-const AI_STORAGE_KEY = "search-experience-mvp-upgrade-ai-sessions-v2";
+const AI_STORAGE_KEY = "search-experience-mvp-upgrade-ai-sessions-v3";
 
 function aiActionAttrs(action, data = {}) {
   return [
@@ -1391,7 +1415,12 @@ function cloneAiItem(itemId) {
 
 function getAiBatchIds(poolSource, queryVariant, batchIndex) {
   const config = AI_POOL_CONFIG[poolSource];
-  const batches = queryVariant === "refined" ? config.refinedBatches : config.defaultBatches;
+  const batches =
+    queryVariant === "reframed"
+      ? config.reframedBatches || config.refinedBatches
+      : queryVariant === "refined"
+        ? config.refinedBatches
+        : config.defaultBatches;
   return batches[Math.min(batchIndex, batches.length - 1)] || batches[0] || [];
 }
 
@@ -1417,11 +1446,11 @@ function createAiSessionId() {
 }
 
 function getAiEntrySource(poolSource) {
-  return poolSource === "standard_search_scope" ? "from_standard_bridge" : "from_zero";
+  return poolSource === "standard_search_scope" ? "from_standard_bridge" : "from_snapshot_waiting";
 }
 
 function buildAiSessionTitle({ poolSource, query }) {
-  const prefix = poolSource === "standard_search_scope" ? "标准范围精选" : "全量精选";
+  const prefix = poolSource === "standard_search_scope" ? "结果快照精选" : "待桥接精选";
   const detail = (query || AI_POOL_CONFIG[poolSource].poolScope).replace(/[。！]/g, "").slice(0, 18);
   return `${prefix} · ${detail}`;
 }
@@ -1499,7 +1528,12 @@ function createAiSessionStore(sessions = [], activeSessionId = null, archivedSes
 
 function normalizeAiSession(rawSession = {}, index = 0) {
   const poolSource = rawSession.poolSource in AI_POOL_CONFIG ? rawSession.poolSource : "global";
-  const queryVariant = rawSession.queryVariant === "refined" ? "refined" : "default";
+  const queryVariant =
+    rawSession.queryVariant === "reframed"
+      ? "reframed"
+      : rawSession.queryVariant === "refined"
+        ? "refined"
+        : "default";
   const acceptedIds = Array.isArray(rawSession.acceptedIds) ? rawSession.acceptedIds.filter((id) => AI_ITEM_LIBRARY[id]) : [];
   const excludedIds = Array.isArray(rawSession.excludedIds) ? rawSession.excludedIds.filter((id) => AI_ITEM_LIBRARY[id]) : [];
   const currentIds = Array.isArray(rawSession.currentIds) ? rawSession.currentIds.filter((id) => AI_ITEM_LIBRARY[id]) : undefined;
@@ -1616,6 +1650,10 @@ function getAiSceneFromSession(session) {
     return "ai-blank";
   }
 
+  if (state.aiUi.rescreenOpen) {
+    return "ai-next-batch";
+  }
+
   if (state.aiUi.queryAdjustOpen) {
     return "ai-query-adjust";
   }
@@ -1626,10 +1664,6 @@ function getAiSceneFromSession(session) {
 
   if (session.status === "running" || session.status === "auto_advancing") {
     return "ai-running";
-  }
-
-  if (session.status === "manual-next") {
-    return "ai-next-batch";
   }
 
   if (session.status === "idle" && session.poolSource === "standard_search_scope") {
@@ -1651,6 +1685,7 @@ function resetAiEphemeralUi() {
   state.aiUi.summaryExpanded = false;
   state.aiUi.rejudgeItemId = null;
   state.aiUi.queryAdjustOpen = false;
+  state.aiUi.rescreenOpen = false;
 }
 
 function toggleAiSidebar() {
@@ -1684,9 +1719,16 @@ function enterAiWorkspace() {
   state.section = "ai";
 }
 
-function createAiSessionDraft({ poolSource = "global" }) {
+function createAiSessionDraft() {
   const store = getAiSessionStore();
-  const session = buildAiSession({ poolSource, status: "idle" });
+  const baseSession = getActiveAiSession();
+  const poolSource = baseSession?.poolSource || "standard_search_scope";
+  const session = buildAiSession({
+    poolSource,
+    status: "idle",
+    queryVariant: "default",
+    query: AI_POOL_CONFIG[poolSource].queries.default,
+  });
   store.sessions.push(session);
   store.activeSessionId = session.id;
   resetAiEphemeralUi();
@@ -1705,43 +1747,55 @@ function createAiSessionFromStandardBridge() {
 }
 
 function setAiPresetForScene(sceneId) {
-  const globalSession = buildAiSession({
-    id: "preset-global",
-    title: "全量精选 · 跑步装备测评",
-    poolSource: "global",
-    status: "idle",
-    createdAt: Date.now() - 120000,
-    lastActiveAt: Date.now() - 120000,
-  });
   const seededSession = buildAiSession({
     id: "preset-seeded",
-    title: "标准范围精选 · 妈妈群体玩具测评",
+    title: "结果快照精选 · 妈妈群体玩具测评",
     poolSource: "standard_search_scope",
     status: "idle",
     createdAt: Date.now() - 90000,
     lastActiveAt: Date.now() - 90000,
   });
+  const alternateSession = buildAiSession({
+    id: "preset-alt",
+    title: "结果快照精选 · 更专业产品表达",
+    titleMode: "custom",
+    poolSource: "standard_search_scope",
+    queryVariant: "refined",
+    query: AI_POOL_CONFIG.standard_search_scope.queries.refined,
+    status: "reviewing_batch",
+    acceptedIds: ["family-playlab"],
+    excludedIds: ["toys-colors"],
+    currentIds: ["kids-camp"],
+    batchIndex: 1,
+    createdAt: Date.now() - 150000,
+    lastActiveAt: Date.now() - 110000,
+  });
   const archivedSession = buildAiSession({
     id: "preset-archived",
-    title: "全量精选 · 旧 session",
+    title: "结果快照精选 · 旧 session",
     titleMode: "custom",
-    poolSource: "global",
+    poolSource: "standard_search_scope",
     status: "archived",
-    acceptedIds: ["run-experience"],
-    excludedIds: ["daily-runner"],
-    currentIds: ["roadtrailrun"],
+    acceptedIds: ["toycaboodle"],
+    excludedIds: ["caleb-kids"],
+    currentIds: ["kids-camp"],
     createdAt: Date.now() - 300000,
     lastActiveAt: Date.now() - 200000,
     archivedAt: Date.now() - 60000,
   });
 
   const preservedSidebarCollapsed = state.aiUi?.sidebarCollapsed || false;
-  state.aiSessions = createAiSessionStore([globalSession, seededSession, archivedSession], globalSession.id, [archivedSession.id]);
+  state.aiSessions = createAiSessionStore(
+    [seededSession, alternateSession, archivedSession],
+    seededSession.id,
+    [archivedSession.id]
+  );
   state.aiUi = {
     summaryExpanded: false,
     rejudgeItemId: null,
     archiveExpanded: false,
     queryAdjustOpen: false,
+    rescreenOpen: false,
     sidebarCollapsed: preservedSidebarCollapsed,
   };
 
@@ -1753,38 +1807,39 @@ function setAiPresetForScene(sceneId) {
       state.aiSessions = createAiSessionStore([seededSession, archivedSession], seededSession.id, [archivedSession.id]);
       break;
     case "ai-running":
-      globalSession.status = "running";
-      globalSession.autoReason = "";
-      state.aiSessions.activeSessionId = globalSession.id;
+      seededSession.status = "running";
+      seededSession.autoReason = "";
+      state.aiSessions = createAiSessionStore([seededSession, alternateSession, archivedSession], seededSession.id, [archivedSession.id]);
       break;
     case "ai-batch-results":
-      globalSession.status = "reviewing_batch";
-      globalSession.currentIds = buildAiVisibleIds({ poolSource: "global" });
-      state.aiSessions.activeSessionId = globalSession.id;
+      seededSession.status = "reviewing_batch";
+      seededSession.currentIds = buildAiVisibleIds({ poolSource: "standard_search_scope" });
+      state.aiSessions = createAiSessionStore([seededSession, alternateSession, archivedSession], seededSession.id, [archivedSession.id]);
       break;
     case "ai-summary-expanded":
-      globalSession.status = "reviewing_batch";
-      globalSession.acceptedIds = ["run-experience"];
-      globalSession.excludedIds = ["daily-runner"];
-      globalSession.currentIds = ["believe-run"];
-      state.aiSessions.activeSessionId = globalSession.id;
+      seededSession.status = "reviewing_batch";
+      seededSession.acceptedIds = ["family-playlab"];
+      seededSession.excludedIds = ["toys-colors"];
+      seededSession.currentIds = ["toycaboodle"];
+      state.aiSessions = createAiSessionStore([seededSession, alternateSession, archivedSession], seededSession.id, [archivedSession.id]);
       state.aiUi.summaryExpanded = true;
       break;
     case "ai-next-batch":
-      globalSession.status = "manual-next";
-      globalSession.acceptedIds = ["run-experience"];
-      globalSession.excludedIds = ["daily-runner"];
-      globalSession.currentIds = ["believe-run"];
-      state.aiSessions.activeSessionId = globalSession.id;
+      seededSession.status = "reviewing_batch";
+      seededSession.acceptedIds = ["family-playlab"];
+      seededSession.excludedIds = ["toys-colors"];
+      seededSession.currentIds = ["toycaboodle", "kids-camp"];
+      state.aiSessions = createAiSessionStore([seededSession, alternateSession, archivedSession], seededSession.id, [archivedSession.id]);
+      state.aiUi.rescreenOpen = true;
       break;
     case "ai-query-adjust":
-      globalSession.status = "reviewing_batch";
-      globalSession.queryVariant = "refined";
-      globalSession.query = AI_POOL_CONFIG.global.queries.refined;
-      globalSession.acceptedIds = ["run-experience"];
-      globalSession.excludedIds = ["daily-runner"];
-      globalSession.currentIds = ["believe-run", "roadtrailrun"];
-      state.aiSessions.activeSessionId = globalSession.id;
+      seededSession.status = "reviewing_batch";
+      seededSession.queryVariant = "refined";
+      seededSession.query = AI_POOL_CONFIG.standard_search_scope.queries.refined;
+      seededSession.acceptedIds = ["family-playlab"];
+      seededSession.excludedIds = ["toys-colors"];
+      seededSession.currentIds = ["toycaboodle", "kids-camp"];
+      state.aiSessions = createAiSessionStore([seededSession, alternateSession, archivedSession], seededSession.id, [archivedSession.id]);
       state.aiUi.queryAdjustOpen = true;
       break;
     default:
@@ -1895,7 +1950,7 @@ function getAiState() {
     excludedItems: effectiveSession.excludedIds.map(cloneAiItem),
     currentItems: effectiveSession.currentIds.map(cloneAiItem),
     remainingCount: effectiveSession.currentIds.length,
-    batchTitle: `第 ${effectiveSession.batchIndex + 1} 批候选`,
+    batchTitle: `第 ${effectiveSession.batchIndex + 1} 轮结果`,
     isEphemeral: !session,
     sessionCount: getVisibleAiSessions().length,
     archivedCount: getArchivedAiSessions().length,
@@ -1936,6 +1991,7 @@ function openAiSummary() {
   state.aiUi.summaryExpanded = !state.aiUi.summaryExpanded;
   state.aiUi.rejudgeItemId = null;
   state.aiUi.queryAdjustOpen = false;
+  state.aiUi.rescreenOpen = false;
   syncAiScene();
   render();
 }
@@ -1943,8 +1999,24 @@ function openAiSummary() {
 function openAiQueryAdjust() {
   state.aiUi.queryAdjustOpen = true;
   state.aiUi.summaryExpanded = false;
+  state.aiUi.rescreenOpen = false;
   state.aiUi.rejudgeItemId = null;
   syncAiScene({ scene: "ai-query-adjust" });
+  render();
+}
+
+function openAiRescreen() {
+  state.aiUi.rescreenOpen = true;
+  state.aiUi.summaryExpanded = false;
+  state.aiUi.queryAdjustOpen = false;
+  state.aiUi.rejudgeItemId = null;
+  syncAiScene({ scene: "ai-next-batch" });
+  render();
+}
+
+function closeAiRescreen() {
+  state.aiUi.rescreenOpen = false;
+  syncAiScene({ scene: "ai-batch-results" });
   render();
 }
 
@@ -1956,26 +2028,6 @@ function regenerateAiQuery() {
 
   session.queryVariant = "refined";
   session.query = AI_POOL_CONFIG[session.poolSource].queries.refined;
-  session.batchIndex = 0;
-  session.currentIds = buildAiVisibleIds({
-    poolSource: session.poolSource,
-    queryVariant: session.queryVariant,
-    batchIndex: 0,
-    acceptedIds: session.acceptedIds,
-    excludedIds: session.excludedIds,
-  });
-  session.autoReason = "已基于新 query 重生成候选，本轮仍沿用同一个总池和同一个 session。";
-  touchAiSession(session, "running");
-  resetAiEphemeralUi();
-  renderAiAfterStateChange({ scene: "ai-running" });
-}
-
-function advanceAiBatch({ manual }) {
-  const session = getActiveAiSession();
-  if (!session) {
-    return;
-  }
-
   session.batchIndex += 1;
   session.currentIds = buildAiVisibleIds({
     poolSource: session.poolSource,
@@ -1984,8 +2036,30 @@ function advanceAiBatch({ manual }) {
     acceptedIds: session.acceptedIds,
     excludedIds: session.excludedIds,
   });
-  session.autoReason = manual ? "" : "本批已处理完成，正在自动获取下一批候选。";
-  touchAiSession(session, manual ? "running" : "auto_advancing");
+  session.autoReason = "正在基于当前列表和新的精选策略继续收窄结果。";
+  touchAiSession(session, "running");
+  resetAiEphemeralUi();
+  renderAiAfterStateChange({ scene: "ai-running" });
+}
+
+function rerunAiFromBase() {
+  const session = getActiveAiSession();
+  if (!session) {
+    return;
+  }
+
+  session.queryVariant = "reframed";
+  session.query = AI_POOL_CONFIG[session.poolSource].queries.reframed;
+  session.batchIndex += 1;
+  session.currentIds = buildAiVisibleIds({
+    poolSource: session.poolSource,
+    queryVariant: session.queryVariant,
+    batchIndex: session.batchIndex,
+    acceptedIds: session.acceptedIds,
+    excludedIds: session.excludedIds,
+  });
+  session.autoReason = "正在基于本轮直接基底重新生成这一轮结果。";
+  touchAiSession(session, "running");
   resetAiEphemeralUi();
   renderAiAfterStateChange({ scene: "ai-running" });
 }
@@ -2008,11 +2082,6 @@ function handleAiDecision(itemId, bucket) {
 
   state.aiUi.rejudgeItemId = null;
   touchAiSession(session, "reviewing_batch");
-
-  if (session.currentIds.length === 0) {
-    advanceAiBatch({ manual: false });
-    return;
-  }
 
   persistAiSessionStore();
   render();
@@ -2071,16 +2140,15 @@ function getAiSessionStatusCopy(session) {
   if (session.status === "running") {
     return "执行中";
   }
-  if (session.status === "auto_advancing") {
-    return "自动进入下一批";
-  }
   if (session.status === "idle" && session.poolSource === "standard_search_scope") {
-    return "已预装标准范围";
+    return "等待首轮精选";
   }
   if (session.status === "idle") {
-    return "待开始";
+    return "等待桥接";
   }
-  return `第 ${session.batchIndex + 1} 批 · 剩余 ${session.currentIds.length} 条未处理`;
+  return session.currentIds.length
+    ? `第 ${session.batchIndex + 1} 轮 · 剩余 ${session.currentIds.length} 条待处理`
+    : `第 ${session.batchIndex + 1} 轮 · 已处理完成`;
 }
 
 function renderAiSessionSidebar() {
@@ -2137,11 +2205,11 @@ function renderAiSessionSidebar() {
       <div class="ai-session-sidebar-head">
         <div>
           <h3>智能精选 session</h3>
-          <p>刷新后保留，彼此独立，不共享采纳 / 排除与 query。</p>
+          <p>刷新后保留，彼此独立，不共享采纳 / 排除与策略进度。</p>
         </div>
         <div class="ai-session-sidebar-cta">
           <button class="ghost-btn compact-btn" type="button" ${aiActionAttrs("toggle-sidebar")}>收起</button>
-          <button class="cta-btn" type="button" ${aiActionAttrs("create-session")}>新建 session</button>
+          ${activeSession ? `<button class="cta-btn" type="button" ${aiActionAttrs("create-session")}>基于当前快照新建</button>` : ""}
         </div>
       </div>
       <div class="ai-session-section">
@@ -2152,7 +2220,7 @@ function renderAiSessionSidebar() {
         ${
           visibleSessions.length
             ? `<div class="ai-session-list">${visibleSessions.map((session) => renderSessionItem(session)).join("")}</div>`
-            : `<div class="ai-session-empty">还没有未归档 session。你可以从 0 开始，或从标准搜索带入当前范围新建一个。</div>`
+            : `<div class="ai-session-empty">还没有未归档 session。请先从标准搜索结果页桥接一份结果快照进入。</div>`
         }
       </div>
       <div class="ai-session-section">
@@ -2174,7 +2242,7 @@ function renderAiPoolCard(ai) {
   return `
     <section class="context-strip ai-pool-card">
       <div class="context-copy">
-        <h3>当前候选总池</h3>
+        <h3>当前输入快照</h3>
         <p>${ai.poolScope}</p>
       </div>
       <div class="pill-row">
@@ -2204,7 +2272,7 @@ function renderAiSummaryBoard(ai, { expanded = false } = {}) {
           <h3>当前 session 集合</h3>
           <div class="bucket-row">${acceptedPill}${excludedPill}</div>
         </div>
-        <p class="bucket-empty">已采纳会作为正向偏好信号继续影响后续批次；已排除会被后续批次硬过滤。</p>
+        <p class="bucket-empty">已采纳会作为正向偏好继续影响后续轮次；已排除会在后续轮次中被硬过滤。</p>
       </section>
     `;
   }
@@ -2263,7 +2331,7 @@ function renderAiCandidateResults(ai, { scene = "results" } = {}) {
       <section class="result-board">
         <div class="board-head">
           <h3>${ai.batchTitle}</h3>
-          <div class="board-meta">批次执行中 · 预计返回少量精选候选</div>
+          <div class="board-meta">执行中 · 正在基于输入快照和当前策略处理本轮结果</div>
         </div>
         <div class="card-stack">
           ${skeletonCard()}
@@ -2275,14 +2343,14 @@ function renderAiCandidateResults(ai, { scene = "results" } = {}) {
   }
 
   const footerMeta = ai.remainingCount
-    ? `当前批次还剩 ${ai.remainingCount} 条未处理`
-    : "本批已处理完成，系统正在切换到下一批";
+    ? `当前轮次还剩 ${ai.remainingCount} 条待处理`
+    : "本轮结果已处理完成，可继续筛或重新筛本轮";
 
   return `
     <section class="result-board">
       <div class="board-head">
         <h3>${ai.batchTitle}</h3>
-        <div class="board-meta">当前总池内的漏斗式精选结果</div>
+        <div class="board-meta">基于当前策略生成的 shortlist 结果</div>
       </div>
       ${
         ai.currentItems.length
@@ -2303,15 +2371,15 @@ function renderAiCandidateResults(ai, { scene = "results" } = {}) {
             </div>`
           : `<div class="empty-state empty-state-compact">
               <div class="empty-illustration"></div>
-              <p class="empty-title">本批已处理完成</p>
-              <p class="empty-copy">正在准备下一批更贴近你偏好的候选。</p>
+              <p class="empty-title">本轮结果已处理完成</p>
+              <p class="empty-copy">你可以继续筛当前结果，或回到本轮基底重新筛一版。</p>
             </div>`
       }
       <div class="footer-cta footer-cta-between">
         <span class="footer-meta">${footerMeta}</span>
         <div class="cta-row">
-          ${ai.remainingCount ? `<button class="cta-btn" type="button" ${aiActionAttrs("next-batch")}>下一批</button>` : ""}
-          <button class="ghost-btn" type="button" ${aiActionAttrs("open-query-adjust")}>改 query 重搜</button>
+          <button class="cta-btn" type="button" ${aiActionAttrs("open-query-adjust")}>继续筛</button>
+          <button class="ghost-btn" type="button" ${aiActionAttrs("open-rescreen")}>重新筛本轮</button>
         </div>
       </div>
     </section>
@@ -2330,12 +2398,14 @@ function renderAiQueryBox(ai, {
   statusCopy,
   primaryAction,
   secondaryAction,
+  strategyMeta = "",
 }) {
   return `
     <div class="search-bar">
-      <div class="search-label"><span class="accent-dot"></span>AI 搜索工作台</div>
-      <div class="search-textarea${ai.status === "reviewing_batch" || state.aiUi.queryAdjustOpen ? " is-compact" : ""}">${ai.query}</div>
+      <div class="search-label"><span class="accent-dot"></span>精选策略指令</div>
+      <div class="search-textarea${ai.status === "reviewing_batch" || state.aiUi.queryAdjustOpen || state.aiUi.rescreenOpen ? " is-compact" : ""}">${ai.query}</div>
       ${helperText ? `<p class="nl-inline-hint">${helperText}</p>` : ""}
+      ${strategyMeta ? `<div class="pill-row">${strategyMeta}</div>` : ""}
       ${
         statusPill || statusCopy
           ? `<div class="summary-strip">
@@ -2571,9 +2641,9 @@ function renderStandardBridgeToAi() {
     <div class="summary-strip">
       ${renderNaturalConditionsPanel({
         title: "当前生效条件",
-        helper: "当前这套条件已经经过两轮自然语言整理。如果标准结果仍不理想，可直接把这套生效条件带去 AI搜索 继续探索。",
+        helper: "当前这套条件已经经过两轮自然语言整理。如果标准结果仍不理想，可直接把这份结果快照送入智能精选继续 deep research。",
         conditions: ["关键词：toy unboxing", "地区：美国", "粉丝量：10万 - 100万", "近 90 天互动率：更高", "排除：纯动画儿歌"],
-        meta: "可桥接 AI搜索",
+        meta: "可桥接智能精选",
         aiAttrs: aiActionAttrs("start-bridged-ai"),
       })}
       ${renderNaturalHistoryTimeline({
@@ -2602,11 +2672,8 @@ function renderStandardBridgeToAi() {
   return renderAppShell({
     activeTop: "search",
     pageTitle: "频道搜索 · 标准搜索到智能精选的桥接",
-    pageSummary: "这条路径属于 v6.3.10：标准搜索先产出稳定结果，再把当前候选范围桥接到智能精选继续探索。",
-    pageTabsHtml: renderChannelPageTabs({
-      active: "standard",
-      aiTarget: { workstream: "channel", section: "ai", scene: "ai-seeded" },
-    }),
+    pageSummary: "这条路径属于 v6.3.10：标准搜索先产出稳定结果，再把当前结果快照与来源条件桥接到智能精选继续处理。",
+    pageTabsHtml: renderChannelPageTabs({ active: "standard", showAi: false }),
     bodyHtml: standardSearchLayout({ activeInput: "natural", queryBox, summaryStrip, resultsHtml }),
   });
 }
@@ -2664,26 +2731,26 @@ function renderAiBlank() {
   const ai = getAiState();
   const contextStrip = renderAiPoolCard(ai);
   const searchBox = renderAiQueryBox(ai, {
-    helperText: "当前 query 的作用是在这一个总池上继续做漏斗式筛选，而不是重新定义标准搜索参数。",
-    primaryAction: `<button class="cta-btn" type="button" ${aiActionAttrs("start-ai", { poolSource: ai.poolSource })}>开始 AI搜索</button>`,
-    secondaryAction: `<button class="ghost-btn" type="button" ${aiActionAttrs("start-bridged-ai")}>带入当前标准搜索条件</button>`,
+    helperText: "智能精选需要先拿到一份结果快照，再围绕这份快照输入精选策略。它不是从全库重新发起搜索。",
+    strategyMeta: `<span class="read-pill">等待输入：标准搜索结果快照</span>`,
+    secondaryAction: `<button class="ghost-btn" type="button" ${aiActionAttrs("start-bridged-ai")}>模拟从标准搜索结果桥接进入</button>`,
   });
   const bucketBoard = renderAiSummaryBoard(ai);
   const resultsHtml = `
     <section class="result-board">
       <div class="empty-state">
         <div class="empty-illustration"></div>
-        <p class="empty-title">先确定总池，再开始精选</p>
-        <p class="empty-copy">从 0 开始时，AI 搜索会先在全量频道库里建立候选总池，再按自然语言 query 逐批给你精选结果。</p>
+        <p class="empty-title">等待一份输入快照</p>
+        <p class="empty-copy">请先从标准搜索结果页桥接一份冻结列表快照，再在这份结果上继续做智能精选。</p>
       </div>
     </section>
   `;
 
   return renderAppShell({
     activeTop: "search",
-    pageTitle: "频道搜索 · AI搜索（智能精选）",
-    pageSummary: "AI 搜索是一套带 session 侧栏的漏斗式精选工作台：左侧保留历史 session，右侧继续当前总池上的自然语言精修。",
-    pageTabsHtml: renderChannelPageTabs({ active: "ai", standardTarget: getAiStandardTarget(ai) }),
+    pageTitle: "频道搜索 · 智能精选",
+    pageSummary: "智能精选是标准搜索之后的下一阶段：输入是一份结果快照，输出是一份更可信的 shortlist。",
+    pageTabsHtml: renderAiModeTabs({ standardTarget: getAiStandardTarget(ai) }),
     bodyHtml: aiSearchLayout({ contextStrip, searchBox, bucketBoard, resultsHtml, standardTarget: getAiStandardTarget(ai) }),
   });
 }
@@ -2692,8 +2759,9 @@ function renderAiSeeded() {
   const ai = getAiState();
   const contextStrip = renderAiPoolCard(ai);
   const searchBox = renderAiQueryBox(ai, {
-    helperText: "这里带入的不是几条 seed 字段，而是已经由标准搜索收缩出的候选总池。你可以先补一句自然语言，再开始第 1 批精选。",
-    primaryAction: `<button class="cta-btn" type="button" ${aiActionAttrs("start-ai", { poolSource: ai.poolSource })}>开始 AI搜索</button>`,
+    helperText: "这里带入的不是几条 seed 字段，而是一份已经冻结下来的标准搜索结果快照。你可以先补一句精选策略，再开始首轮精选。",
+    strategyMeta: `<span class="seed-badge">基于：输入快照</span><span class="read-pill">下一条策略将作用于整份输入快照</span>`,
+    primaryAction: `<button class="cta-btn" type="button" ${aiActionAttrs("start-ai", { poolSource: ai.poolSource })}>开始首轮精选</button>`,
     secondaryAction: `<button class="ghost-btn" type="button" ${navAttrs(getAiStandardTarget(ai))}>回标准结果页</button>`,
   });
   const bucketBoard = renderAiSummaryBoard(ai);
@@ -2701,17 +2769,17 @@ function renderAiSeeded() {
     <section class="result-board">
       <div class="empty-state">
         <div class="empty-illustration"></div>
-        <p class="empty-title">已预装标准搜索候选总池</p>
-        <p class="empty-copy">当前 AI 搜索会在这 324 个标准搜索候选里继续做精选，而不是重新回到全量频道库里再搜一遍。</p>
+        <p class="empty-title">已带入标准搜索结果快照</p>
+        <p class="empty-copy">当前智能精选会在这 324 个标准搜索候选里继续做 deep research 与精筛，而不是回到全库再搜一遍。</p>
       </div>
     </section>
   `;
 
   return renderAppShell({
     activeTop: "search",
-    pageTitle: "频道搜索 · AI搜索带条件起手",
-    pageSummary: "带条件起手会新建一个独立 session，并直接进入带预装总池的 AI 搜索工作台。",
-    pageTabsHtml: renderChannelPageTabs({ active: "ai", standardTarget: getAiStandardTarget(ai) }),
+    pageTitle: "频道搜索 · 智能精选桥接进入",
+    pageSummary: "桥接会新建一个独立 session，并把标准搜索当前结果快照与来源条件一起带入智能精选工作台。",
+    pageTabsHtml: renderAiModeTabs({ standardTarget: getAiStandardTarget(ai) }),
     bodyHtml: aiSearchLayout({
       contextStrip,
       searchBox,
@@ -2726,9 +2794,12 @@ function renderAiRunning() {
   const ai = getAiState();
   const contextStrip = renderAiPoolCard(ai);
   const searchBox = renderAiQueryBox(ai, {
-    helperText: "已采纳会继续作为正向偏好信号参与后续迭代；已排除会在后续批次里被硬过滤。",
-    statusPill: ai.autoReason ? "自动进入下一批" : "AI任务执行中",
-    statusCopy: ai.autoReason || `正在从当前总池生成${ai.batchTitle}，结果返回后你仍可改 query。`,
+    helperText: "已采纳会继续作为正向偏好参与后续轮次；已排除会在后续轮次里被硬过滤。",
+    strategyMeta: `<span class="seed-badge">${
+      ai.queryVariant === "reframed" ? "基于：本轮直接基底" : ai.queryVariant === "refined" ? "基于：当前列表" : "基于：输入快照"
+    }</span><span class="read-pill">${ai.queryVariant === "reframed" ? "重新筛模式" : ai.queryVariant === "refined" ? "继续筛模式" : "首轮精选"}</span>`,
+    statusPill: "智能精选执行中",
+    statusCopy: ai.autoReason || `正在根据输入快照和当前策略生成${ai.batchTitle}。`,
     primaryAction: `<button class="cta-btn" type="button" ${aiActionAttrs("mock-complete")}>Mock 召回完成</button>`,
     secondaryAction: `<span class="list-chip">仅 demo：手动推进到结果返回</span>`,
   });
@@ -2737,9 +2808,9 @@ function renderAiRunning() {
 
   return renderAppShell({
     activeTop: "search",
-    pageTitle: "频道搜索 · AI搜索执行中",
-    pageSummary: "执行态需要清楚表达：系统正在当前 session 的总池里生成下一批精选候选。",
-    pageTabsHtml: renderChannelPageTabs({ active: "ai", standardTarget: getAiStandardTarget(ai) }),
+    pageTitle: "频道搜索 · 智能精选执行中",
+    pageSummary: "执行态需要清楚表达：系统正在当前 session 里基于输入快照和当前策略处理这一轮结果。",
+    pageTabsHtml: renderAiModeTabs({ standardTarget: getAiStandardTarget(ai) }),
     bodyHtml: aiSearchLayout({ contextStrip, searchBox, bucketBoard, resultsHtml, standardTarget: getAiStandardTarget(ai) }),
   });
 }
@@ -2748,18 +2819,19 @@ function renderAiBatchResults() {
   const ai = getAiState();
   const contextStrip = renderAiPoolCard(ai);
   const searchBox = renderAiQueryBox(ai, {
-    helperText: "当前批次只做采纳 / 排除。采纳和排除后条目会立即从当前列表消失；当前剩余工作量在结果区底部查看。",
+    helperText: "当前轮次只做采纳 / 排除。采纳和排除后条目会立即从当前列表消失；后续动作改为继续筛或重新筛。",
+    strategyMeta: `<span class="seed-badge">基于：当前列表</span><span class="read-pill">下一条策略默认继续收窄当前结果</span>`,
     statusPill: `${ai.batchTitle} 已返回`,
-    statusCopy: "采纳会作为正向偏好信号，排除会在后续批次中被硬过滤。",
+    statusCopy: "采纳会作为正向偏好信号，排除会在后续轮次中被硬过滤。",
   });
   const bucketBoard = renderAiSummaryBoard(ai);
   const resultsHtml = renderAiCandidateResults(ai);
 
   return renderAppShell({
     activeTop: "search",
-    pageTitle: "频道搜索 · AI搜索批次结果",
-    pageSummary: "当前批次只保留采纳 / 排除两个显式动作；它们只作用于当前 active session。",
-    pageTabsHtml: renderChannelPageTabs({ active: "ai", standardTarget: getAiStandardTarget(ai) }),
+    pageTitle: "频道搜索 · 智能精选当前轮次结果",
+    pageSummary: "当前轮次只保留采纳 / 排除两个显式动作；后续动作切换为继续筛或重新筛本轮。",
+    pageTabsHtml: renderAiModeTabs({ standardTarget: getAiStandardTarget(ai) }),
     bodyHtml: aiSearchLayout({ contextStrip, searchBox, bucketBoard, resultsHtml, standardTarget: getAiStandardTarget(ai) }),
   });
 }
@@ -2769,6 +2841,7 @@ function renderAiSummaryExpanded() {
   const contextStrip = renderAiPoolCard(ai);
   const searchBox = renderAiQueryBox(ai, {
     helperText: "集合展开后可以回看已采纳 / 已排除，也可以用轻量改判菜单把结果改成回当前列表未处理。",
+    strategyMeta: `<span class="seed-badge">基于：当前列表</span><span class="read-pill">当前仍停留在本轮结果回看态</span>`,
     statusPill: `${ai.batchTitle} 已返回`,
     statusCopy: "顶部摘要现在承担 session 集合查看与回修，结果区仍保留当前工作区。",
   });
@@ -2777,9 +2850,9 @@ function renderAiSummaryExpanded() {
 
   return renderAppShell({
     activeTop: "search",
-    pageTitle: "频道搜索 · AI搜索集合展开与改判",
+    pageTitle: "频道搜索 · 智能精选集合回看与改判",
     pageSummary: "顶部摘要只保留已采纳 / 已排除；展开后既能回看，也能对当前 session 做轻量改判。",
-    pageTabsHtml: renderChannelPageTabs({ active: "ai", standardTarget: getAiStandardTarget(ai) }),
+    pageTabsHtml: renderAiModeTabs({ standardTarget: getAiStandardTarget(ai) }),
     bodyHtml: aiSearchLayout({ contextStrip, searchBox, bucketBoard, resultsHtml, standardTarget: getAiStandardTarget(ai) }),
   });
 }
@@ -2788,18 +2861,21 @@ function renderAiNextBatch() {
   const ai = getAiState();
   const contextStrip = renderAiPoolCard(ai);
   const searchBox = renderAiQueryBox(ai, {
-    helperText: "只要当前批次还剩未处理结果，下一批就是手动动作；如果本批已全部采纳/排除，则会自动进入下一批。",
-    statusPill: "等待手动进入下一批",
-    statusCopy: "当前批次还有未处理结果，因此这里保留手动推进的代表态。",
+    helperText: "重新筛不是继续收窄当前结果，而是回到本轮直接基底，换一种策略重新生成这一轮。",
+    strategyMeta: `<span class="seed-badge">基于：本轮直接基底</span><span class="read-pill">重新筛模式</span>`,
+    statusPill: "重新筛模式",
+    statusCopy: "你现在将放弃当前轮次方向，改为基于本轮直接基底重新生成一版结果。",
+    primaryAction: `<button class="cta-btn" type="button" ${aiActionAttrs("run-rescreen")}>重新生成这一轮</button>`,
+    secondaryAction: `<button class="ghost-btn" type="button" ${aiActionAttrs("close-rescreen")}>返回继续筛</button>`,
   });
   const bucketBoard = renderAiSummaryBoard(ai);
   const resultsHtml = renderAiCandidateResults(ai);
 
   return renderAppShell({
     activeTop: "search",
-    pageTitle: "频道搜索 · AI搜索下一批",
-    pageSummary: "仍有未处理结果时，下一批必须由用户手动触发；本批清空时则会自动进入下一批。",
-    pageTabsHtml: renderChannelPageTabs({ active: "ai", standardTarget: getAiStandardTarget(ai) }),
+    pageTitle: "频道搜索 · 智能精选重新筛本轮",
+    pageSummary: "重新筛是显式次级动作：当你不认同本轮方向时，回到本轮直接基底重新生成一版，而不是继续收窄当前结果。",
+    pageTabsHtml: renderAiModeTabs({ standardTarget: getAiStandardTarget(ai) }),
     bodyHtml: aiSearchLayout({ contextStrip, searchBox, bucketBoard, resultsHtml, standardTarget: getAiStandardTarget(ai) }),
   });
 }
@@ -2808,10 +2884,11 @@ function renderAiQueryAdjust() {
   const ai = getAiState();
   const contextStrip = renderAiPoolCard(ai);
   const searchBox = renderAiQueryBox(ai, {
-    helperText: "改 query 不是开新 session。你仍在同一个总池上继续精修，已采纳 / 已排除都会保留下来。",
-    statusPill: "已更新 query",
-    statusCopy: "系统会基于新 query 重生成下一轮候选，但已采纳 / 已排除集合继续沿用。",
-    primaryAction: `<button class="cta-btn" type="button" ${aiActionAttrs("regenerate-query")}>重新生成候选</button>`,
+    helperText: "继续筛默认基于当前结果列表，只是换一句新的精选策略继续收窄，不会新开 session。",
+    strategyMeta: `<span class="seed-badge">基于：当前列表</span><span class="read-pill">下一条策略将继续收窄当前结果</span>`,
+    statusPill: "继续筛模式",
+    statusCopy: "系统会基于当前列表和新的精选策略生成下一轮结果，已采纳 / 已排除集合继续沿用。",
+    primaryAction: `<button class="cta-btn" type="button" ${aiActionAttrs("regenerate-query")}>执行继续筛</button>`,
     secondaryAction: `<button class="ghost-btn" type="button" ${aiActionAttrs("open-summary")}>查看已采纳 / 已排除</button>`,
   });
   const bucketBoard = renderAiSummaryBoard(ai);
@@ -2819,9 +2896,9 @@ function renderAiQueryAdjust() {
 
   return renderAppShell({
     activeTop: "search",
-    pageTitle: "频道搜索 · AI搜索改 query 重搜",
-    pageSummary: "改 query 仍在同一个总池、同一个 session 内进行；左侧侧栏里的其他 session 不受影响。",
-    pageTabsHtml: renderChannelPageTabs({ active: "ai", standardTarget: getAiStandardTarget(ai) }),
+    pageTitle: "频道搜索 · 智能精选继续筛",
+    pageSummary: "继续筛仍在同一个输入快照、同一个 session 内进行；左侧侧栏里的其他 session 不受影响。",
+    pageTabsHtml: renderAiModeTabs({ standardTarget: getAiStandardTarget(ai) }),
     bodyHtml: aiSearchLayout({ contextStrip, searchBox, bucketBoard, resultsHtml, standardTarget: getAiStandardTarget(ai) }),
   });
 }
@@ -3110,7 +3187,7 @@ function renderSimilarSeeded() {
   return renderAppShell({
     activeTop: "similar",
     pageTitle: "相似网红",
-    pageSummary: "新默认相似网红结果保持普通列表形态，不走 AI 搜索批次消费流程。",
+    pageSummary: "新默认相似网红结果保持普通列表形态，不走智能精选工作台流程。",
     pageTabsHtml: '<span class="page-tab is-active">相似网红</span>',
     bodyHtml,
   });

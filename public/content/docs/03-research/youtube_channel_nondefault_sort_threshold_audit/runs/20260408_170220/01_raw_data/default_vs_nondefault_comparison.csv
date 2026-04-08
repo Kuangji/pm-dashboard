@@ -1,0 +1,13 @@
+keyword,baseline_sort,compare_sort,compare_sort_name,baseline_result_count,compare_result_count,result_count_delta,baseline_clear_badcase,compare_clear_badcase,clear_badcase_delta,baseline_top20_clear_badcase,compare_top20_clear_badcase,top20_clear_badcase_delta,top100_overlap
+"consumer electronic","default","followers","按粉丝数排序","1444311","98949","-1345362","0","69","69","0","15","15","1"
+"consumer electronic","default","estExposure","按预估曝光量排序","1444311","98949","-1345362","0","55","55","0","12","12","0"
+"outfit","default","followers","按粉丝数排序","669954","95033","-574921","0","35","35","0","7","7","1"
+"outfit","default","estExposure","按预估曝光量排序","669954","95033","-574921","0","14","14","0","2","2","3"
+"camping","default","followers","按粉丝数排序","646183","55645","-590538","0","58","58","0","13","13","5"
+"camping","default","estExposure","按预估曝光量排序","646183","55645","-590538","0","25","25","0","10","10","14"
+"AI","default","followers","按粉丝数排序","325824","37791","-288033","4","38","34","2","9","7","0"
+"AI","default","estExposure","按预估曝光量排序","325824","37791","-288033","4","24","20","2","8","6","1"
+"game","default","followers","按粉丝数排序","5677926","1709558","-3968368","0","10","10","0","1","1","0"
+"game","default","estExposure","按预估曝光量排序","5677926","1709558","-3968368","0","13","13","0","6","6","0"
+"lifestyle","default","followers","按粉丝数排序","3187632","1776442","-1411190","0","2","2","0","0","0","0"
+"lifestyle","default","estExposure","按预估曝光量排序","3187632","1776442","-1411190","0","0","0","0","0","0","1"

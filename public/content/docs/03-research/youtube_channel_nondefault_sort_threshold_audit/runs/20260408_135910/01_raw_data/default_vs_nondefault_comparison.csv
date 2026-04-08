@@ -1,0 +1,7 @@
+keyword,baseline_sort,compare_sort,compare_sort_name,baseline_result_count,compare_result_count,result_count_delta,baseline_clear_badcase,compare_clear_badcase,clear_badcase_delta,baseline_top20_clear_badcase,compare_top20_clear_badcase,top20_clear_badcase_delta,top100_overlap
+"marathon","default","followers","按粉丝数排序","1640217","88942","-1551275","5","98","93","0","19","19","0"
+"marathon","default","estExposure","按预估曝光量排序","1640217","88942","-1551275","5","85","80","0","18","18","0"
+"cosmetics","default","followers","按粉丝数排序","153743","16343","-137400","5","24","19","0","4","4","5"
+"cosmetics","default","estExposure","按预估曝光量排序","153743","16343","-137400","5","28","23","0","3","3","4"
+"swim vest","default","followers","按粉丝数排序","195","1","-194","87","0","-87","17","0","-17","1"
+"swim vest","default","estExposure","按预估曝光量排序","195","1","-194","87","0","-87","17","0","-17","1"
