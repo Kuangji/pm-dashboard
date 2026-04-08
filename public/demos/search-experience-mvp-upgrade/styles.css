@@ -126,6 +126,13 @@ body {
   margin: 0;
 }
 
+.scene-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .toolbar-group + .toolbar-group {
   margin-top: 14px;
 }
@@ -169,7 +176,47 @@ body {
   min-height: 54px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 10px;
   text-align: left;
+}
+
+.scene-tab-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.scene-version-pill,
+.scene-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.scene-version-pill.is-current,
+.scene-meta-pill.is-current {
+  background: rgba(23, 155, 115, 0.14);
+  color: #146950;
+}
+
+.scene-version-pill.is-next,
+.scene-meta-pill.is-next {
+  background: rgba(99, 91, 255, 0.12);
+  color: #5047d6;
+}
+
+.scene-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .demo-layout {

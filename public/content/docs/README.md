@@ -17,6 +17,8 @@
 │   ├── channel_search_agent_upgrade/  # 频道搜索Agent升级
 │   ├── monitor_760/  # Monitor 监控功能
 │   ├── other_social_search_741/  # 社交搜索项目文档
+│   ├── search_experience_6310/  # 搜索体验需求6310
+│   ├── search_experience_639/  # 搜索体验需求639
 │   ├── search_experience_mvp_upgrade/  # 搜索体验MVP升级
 │   └── 支付单暂存和预约发送/  # 支付单暂存与预约发送
 └── 03-research/  # 研究报告

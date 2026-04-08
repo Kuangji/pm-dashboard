@@ -28,6 +28,42 @@ const SIMILAR_DECISIONS = [
   "相似网红不并入 AI搜索 批次消费流程",
 ];
 
+const BRIDGE_DECISIONS = [
+  "桥接智能精选属于 v6.3.10，不属于 v6.3.9 的标准搜索交付",
+  "桥接入口只保留在标准搜索结果页，不出现在 v6.3.9 的产品 UI 中",
+  "桥接带走的是标准搜索当前候选范围，而不是几条 seed 字段",
+];
+
+const RELEASE_ORDER = ["v6.3.9", "v6.3.10"];
+
+const SCENE_META = {
+  "standard-keyword": { release: "v6.3.9" },
+  "standard-natural-input": { release: "v6.3.9" },
+  "standard-natural-running": { release: "v6.3.9" },
+  "standard-natural-backfill": { release: "v6.3.9" },
+  "standard-natural-failure": { release: "v6.3.9" },
+  "similar-default": { release: "v6.3.9" },
+  "similar-ready": { release: "v6.3.9" },
+  "similar-running": { release: "v6.3.9" },
+  "similar-seeded": { release: "v6.3.9" },
+  "similar-editing": { release: "v6.3.9" },
+  "similar-editing-ready": { release: "v6.3.9" },
+  "similar-legacy-tab": { release: "v6.3.9" },
+  "standard-bridge-ai": { release: "v6.3.10", dependsOn: "v6.3.9" },
+  "ai-blank": { release: "v6.3.10", dependsOn: "v6.3.9" },
+  "ai-seeded": { release: "v6.3.10", dependsOn: "v6.3.9" },
+  "ai-running": { release: "v6.3.10", dependsOn: "v6.3.9" },
+  "ai-batch-results": { release: "v6.3.10", dependsOn: "v6.3.9" },
+  "ai-summary-expanded": { release: "v6.3.10", dependsOn: "v6.3.9" },
+  "ai-next-batch": { release: "v6.3.10", dependsOn: "v6.3.9" },
+  "ai-query-adjust": { release: "v6.3.10", dependsOn: "v6.3.9" },
+};
+
+const RELEASE_META = {
+  "v6.3.9": { label: "v6.3.9", tone: "current", title: "当前版本" },
+  "v6.3.10": { label: "v6.3.10", tone: "next", title: "下个版本" },
+};
+
 const DATA = {
   workstreams: {
     channel: {
@@ -127,9 +163,10 @@ const DATA = {
             },
             {
               id: "standard-bridge-ai",
-              label: "带条件跳转 AI",
-              title: "标准搜索 · 当前条件桥接 AI搜索",
-              summary: "AI 桥接动作挂在当前生效条件区里，表示‘带着这套已生效条件离开标准搜索去继续探索’。",
+              label: "桥接智能精选",
+              title: "标准搜索 · 当前条件桥接智能精选",
+              summary: "这条桥接线属于 v6.3.10：把标准搜索已经收敛出的候选范围显式带到智能精选继续探索。",
+              decisions: BRIDGE_DECISIONS,
               goals: [
                 "补齐标准搜索到 AI搜索 的桥接线",
                 "让用户继续看到自然语言历史与当前搜索现场",
@@ -525,11 +562,13 @@ const els = {
   sceneTabs: document.getElementById("scene-tabs"),
   sectionTitle: document.getElementById("section-title"),
   sceneTitle: document.getElementById("scene-title"),
+  sceneMeta: document.getElementById("scene-meta"),
   sceneSummary: document.getElementById("scene-summary"),
   previewRoot: document.getElementById("preview-root"),
   goalList: document.getElementById("goal-list"),
   ruleList: document.getElementById("rule-list"),
   checkList: document.getElementById("check-list"),
+  versionTags: document.getElementById("version-tags"),
   decisionTags: document.getElementById("decision-tags"),
 };
 
@@ -572,6 +611,29 @@ function getSection() {
 
 function getScene() {
   return getSection().scenes.find((scene) => scene.id === state.scene);
+}
+
+function getSceneMeta(sceneOrId) {
+  const sceneId = typeof sceneOrId === "string" ? sceneOrId : sceneOrId.id;
+  return SCENE_META[sceneId] || { release: "v6.3.9" };
+}
+
+function getReleaseMeta(release) {
+  return RELEASE_META[release] || RELEASE_META["v6.3.9"];
+}
+
+function sortScenesByRelease(scenes) {
+  return scenes
+    .map((scene, index) => ({ scene, index }))
+    .sort((left, right) => {
+      const leftRelease = RELEASE_ORDER.indexOf(getSceneMeta(left.scene).release);
+      const rightRelease = RELEASE_ORDER.indexOf(getSceneMeta(right.scene).release);
+      if (leftRelease !== rightRelease) {
+        return leftRelease - rightRelease;
+      }
+      return left.index - right.index;
+    })
+    .map(({ scene }) => scene);
 }
 
 function navigateTo({ workstream = state.workstream, section, scene }) {
@@ -689,7 +751,7 @@ function renderTabs(target, items, activeValue, onClick) {
     .map(
       (item) => `
         <button class="${item.value === activeValue ? "is-active" : ""}" data-value="${item.value}">
-          ${item.label}
+          ${item.labelHtml || item.label}
         </button>
       `
     )
@@ -698,6 +760,48 @@ function renderTabs(target, items, activeValue, onClick) {
   target.querySelectorAll("button").forEach((button) => {
     button.addEventListener("click", () => onClick(button.dataset.value));
   });
+}
+
+function renderSceneTabs(target, scenes, activeValue, onClick) {
+  renderTabs(
+    target,
+    sortScenesByRelease(scenes).map((sceneItem) => {
+      const sceneMeta = getSceneMeta(sceneItem);
+      const releaseMeta = getReleaseMeta(sceneMeta.release);
+      return {
+        value: sceneItem.id,
+        labelHtml: `
+          <span class="scene-tab-label">
+            <span>${sceneItem.label}</span>
+            <span class="scene-version-pill is-${releaseMeta.tone}">${releaseMeta.label}</span>
+          </span>
+        `,
+      };
+    }),
+    activeValue,
+    onClick
+  );
+}
+
+function renderSceneVersionMeta(scene) {
+  const sceneMeta = getSceneMeta(scene);
+  const releaseMeta = getReleaseMeta(sceneMeta.release);
+  const tags = [
+    `<span class="scene-meta-pill is-${releaseMeta.tone}">${releaseMeta.label}</span>`,
+    sceneMeta.dependsOn ? `<span class="scene-meta-pill">依赖 ${sceneMeta.dependsOn}</span>` : "",
+  ].filter(Boolean);
+  return tags.join("");
+}
+
+function renderVersionInspector(scene) {
+  const sceneMeta = getSceneMeta(scene);
+  const releaseMeta = getReleaseMeta(sceneMeta.release);
+  const tags = [
+    `<span class="decision-tag">版本：${releaseMeta.label}</span>`,
+    `<span class="decision-tag">${releaseMeta.title}</span>`,
+    sceneMeta.dependsOn ? `<span class="decision-tag">依赖：${sceneMeta.dependsOn}</span>` : "",
+  ].filter(Boolean);
+  els.versionTags.innerHTML = tags.join("");
 }
 
 function renderInspector(scene, decisions) {
@@ -732,19 +836,16 @@ function render() {
     (value) => navigateTo({ section: value })
   );
 
-  renderTabs(
-    els.sceneTabs,
-    section.scenes.map((sceneItem) => ({ value: sceneItem.id, label: sceneItem.label })),
-    state.scene,
-    (value) => navigateTo({ scene: value })
-  );
+  renderSceneTabs(els.sceneTabs, section.scenes, state.scene, (value) => navigateTo({ scene: value }));
 
   els.sectionTitle.textContent = workstream.label;
   els.sceneTitle.textContent = scene.title;
+  els.sceneMeta.innerHTML = renderSceneVersionMeta(scene);
   els.sceneSummary.textContent = scene.summary;
 
   renderPreview(scene);
-  renderInspector(scene, section.decisions);
+  renderInspector(scene, scene.decisions || section.decisions);
+  renderVersionInspector(scene);
 }
 
 function renderAppShell({ activeTop = "search", pageTitle, pageSummary, pageTabsHtml, bodyHtml }) {
@@ -820,21 +921,33 @@ function renderNavPill({ label, className, isActive = false, target }) {
   return `<button type="button" class="${classes}" ${navAttrs(target)}>${label}</button>`;
 }
 
-function renderChannelPageTabs({ active, standardTarget = { workstream: "channel", section: "standard" }, aiTarget = { workstream: "channel", section: "ai" } }) {
-  return [
+function renderChannelPageTabs({
+  active,
+  standardTarget = { workstream: "channel", section: "standard" },
+  aiTarget = { workstream: "channel", section: "ai" },
+  showAi = true,
+}) {
+  const items = [
     renderNavPill({
       label: "标准搜索",
       className: "page-tab",
       isActive: active === "standard",
       target: active === "standard" ? undefined : standardTarget,
     }),
-    renderNavPill({
-      label: "AI搜索",
-      className: "page-tab",
-      isActive: active === "ai",
-      target: active === "ai" ? undefined : aiTarget,
-    }),
-  ].join("");
+  ];
+
+  if (showAi) {
+    items.push(
+      renderNavPill({
+        label: "AI搜索",
+        className: "page-tab",
+        isActive: active === "ai",
+        target: active === "ai" ? undefined : aiTarget,
+      })
+    );
+  }
+
+  return items.join("");
 }
 
 function renderAiModeTabs({ standardTarget = { workstream: "channel", section: "standard" } }) {
@@ -1049,6 +1162,7 @@ function renderNaturalConditionsPanel({
   aiTarget,
   aiAttrs = "",
 }) {
+  const aiButton = aiAttrs || aiTarget ? `<button class="ghost-btn" type="button" ${aiAttrs || navAttrs(aiTarget)}>带当前条件去 AI搜索</button>` : "";
   return `
     <div class="nl-panel">
       <div class="nl-panel-head">
@@ -1061,9 +1175,7 @@ function renderNaturalConditionsPanel({
       <div class="pill-row">
         ${conditions.map((condition) => `<span class="read-pill">${condition}</span>`).join("")}
       </div>
-      <div class="cta-row">
-        <button class="ghost-btn" type="button" ${aiAttrs || navAttrs(aiTarget)}>带当前条件去 AI搜索</button>
-      </div>
+      ${aiButton ? `<div class="cta-row">${aiButton}</div>` : ""}
     </div>
   `;
 }
@@ -2313,7 +2425,7 @@ function renderStandardKeyword() {
     activeTop: "search",
     pageTitle: "频道搜索 · 标准搜索",
     pageSummary: "关键词模式保持现状，只在搜索区里增加输入形态切换。",
-    pageTabsHtml: renderChannelPageTabs({ active: "standard" }),
+    pageTabsHtml: renderChannelPageTabs({ active: "standard", showAi: false }),
     bodyHtml: standardSearchLayout({ activeInput: "keyword", queryBox, resultsHtml }),
   });
 }
@@ -2334,7 +2446,6 @@ function renderStandardNaturalInput() {
         helper: "你现在是从既有标准搜索现场切到自然语言模式。下一句自然语言会以这套条件为基底，除非你明确说出一条新的完整需求。",
         conditions: ["关键词：gaming", "地区：美国", "粉丝量：10万 - 100万"],
         meta: "关键词现场",
-        aiAttrs: aiActionAttrs("start-bridged-ai"),
       })}
       ${renderNaturalHistoryTimeline({ items: [] })}
     </div>
@@ -2349,7 +2460,7 @@ function renderStandardNaturalInput() {
     activeTop: "search",
     pageTitle: "频道搜索 · 标准搜索 / 自然语言",
     pageSummary: "切到自然语言后，输入框默认空白，但当前生效条件与当前标准结果现场都继续保留。",
-    pageTabsHtml: renderChannelPageTabs({ active: "standard" }),
+    pageTabsHtml: renderChannelPageTabs({ active: "standard", showAi: false }),
     bodyHtml: standardSearchLayout({ activeInput: "natural", queryBox, summaryStrip, resultsHtml }),
   });
 }
@@ -2401,7 +2512,7 @@ function renderStandardNaturalRunning() {
     activeTop: "search",
     pageTitle: "频道搜索 · 自然语言轻处理中",
     pageSummary: "这里承认系统在解析自然语言，但整个过程仍属于标准搜索，不进入独立 AI 工作流。",
-    pageTabsHtml: renderChannelPageTabs({ active: "standard" }),
+    pageTabsHtml: renderChannelPageTabs({ active: "standard", showAi: false }),
     bodyHtml: standardSearchLayout({ activeInput: "natural", queryBox, summaryStrip, resultsHtml }),
   });
 }
@@ -2410,7 +2521,7 @@ function renderStandardNaturalBackfill() {
   const queryBox = renderNaturalInputBox({
     value: "再加上近 90 天互动率更高，不要纯动画儿歌频道。",
     helperText: "结果页里的自然语言输入框始终可用。你现在输入的新一句话，会基于当前生效条件继续重建或增量调整搜索。",
-    primaryTarget: { workstream: "channel", section: "standard", scene: "standard-bridge-ai" },
+    primaryTarget: { workstream: "channel", section: "standard", scene: "standard-natural-running" },
     compact: true,
   });
 
@@ -2421,7 +2532,6 @@ function renderStandardNaturalBackfill() {
         helper: "这次自然语言已经成功把搜索条件重建为新的标准搜索现场。后续继续输入自然语言时，将以这套条件为基底。",
         conditions: ["关键词：toy unboxing", "地区：美国", "粉丝量：10万 - 100万", "活跃度：近 30 天更新"],
         meta: "自然语言已生效",
-        aiAttrs: aiActionAttrs("start-bridged-ai"),
       })}
       ${renderNaturalHistoryTimeline({
         items: [
@@ -2444,10 +2554,7 @@ function renderStandardNaturalBackfill() {
     activeTop: "search",
     pageTitle: "频道搜索 · 自然语言回填后的标准结果页",
     pageSummary: "成功回填后，页面仍是标准搜索结果页，但顶部已经变成可持续继续自然语言调参的工作台。",
-    pageTabsHtml: renderChannelPageTabs({
-      active: "standard",
-      aiTarget: { workstream: "channel", section: "ai", scene: "ai-seeded" },
-    }),
+    pageTabsHtml: renderChannelPageTabs({ active: "standard", showAi: false }),
     bodyHtml: standardSearchLayout({ activeInput: "natural", queryBox, summaryStrip, resultsHtml }),
   });
 }
@@ -2456,7 +2563,7 @@ function renderStandardBridgeToAi() {
   const queryBox = renderNaturalInputBox({
     value: "给我来点更有感觉、更能打动妈妈群体的，不用太泛。",
     helperText: "你可以继续在这里输入下一句自然语言。若措辞足够明确，系统会继续基于当前生效条件做下一轮调整。",
-    primaryTarget: { workstream: "channel", section: "standard", scene: "standard-natural-failure" },
+    primaryTarget: { workstream: "channel", section: "standard", scene: "standard-natural-running" },
     compact: true,
   });
 
@@ -2494,8 +2601,8 @@ function renderStandardBridgeToAi() {
 
   return renderAppShell({
     activeTop: "search",
-    pageTitle: "频道搜索 · 当前条件桥接 AI搜索",
-    pageSummary: "AI 桥接动作应挂在当前生效条件区，强调带走的是这套条件，而不是自然语言输入框本身。",
+    pageTitle: "频道搜索 · 标准搜索到智能精选的桥接",
+    pageSummary: "这条路径属于 v6.3.10：标准搜索先产出稳定结果，再把当前候选范围桥接到智能精选继续探索。",
     pageTabsHtml: renderChannelPageTabs({
       active: "standard",
       aiTarget: { workstream: "channel", section: "ai", scene: "ai-seeded" },
@@ -2521,7 +2628,6 @@ function renderStandardNaturalFailure() {
         helper: "本次新输入解析失败，所以当前搜索现场没有被改动。你看到的仍然是上一轮成功生效的标准搜索条件。",
         conditions: ["关键词：toy unboxing", "地区：美国", "粉丝量：10万 - 100万", "近 90 天互动率：更高", "排除：纯动画儿歌"],
         meta: "旧结果继续保留",
-        aiAttrs: aiActionAttrs("start-bridged-ai"),
       })}
       ${renderNaturalHistoryTimeline({
         items: [
@@ -2533,7 +2639,7 @@ function renderStandardNaturalFailure() {
           {
             query: "再加上近 90 天互动率更高，不要纯动画儿歌频道。",
             summary: "继续细调当前条件 · 结果 324 条",
-            target: { workstream: "channel", section: "standard", scene: "standard-bridge-ai" },
+            target: { workstream: "channel", section: "standard", scene: "standard-natural-backfill" },
           },
         ],
       })}
@@ -2549,10 +2655,7 @@ function renderStandardNaturalFailure() {
     activeTop: "search",
     pageTitle: "频道搜索 · 自然语言解析失败",
     pageSummary: "失败反馈以内联方式贴在输入框下方，旧结果和当前条件继续保留，避免一次失败就丢掉搜索现场。",
-    pageTabsHtml: renderChannelPageTabs({
-      active: "standard",
-      aiTarget: { workstream: "channel", section: "ai", scene: "ai-seeded" },
-    }),
+    pageTabsHtml: renderChannelPageTabs({ active: "standard", showAi: false }),
     bodyHtml: standardSearchLayout({ activeInput: "natural", queryBox, summaryStrip, resultsHtml }),
   });
 }

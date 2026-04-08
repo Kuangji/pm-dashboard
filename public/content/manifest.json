@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-04-01T08:00:10.874Z",
+  "updatedAt": "2026-04-08T03:25:16.644Z",
   "navigation": {
     "docs": [
       {
@@ -231,6 +231,15 @@
                 "name": "twitter_support_spec_v1.md",
                 "path": "02-project-documents/monitor_760/twitter_support_spec_v1.md",
                 "slug": "02-project-documents/monitor_760/twitter_support_spec_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "发版公告_面向用户.md",
+                "path": "02-project-documents/monitor_760/发版公告_面向用户.md",
+                "slug": "02-project-documents/monitor_760/发版公告_面向用户.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
@@ -1037,6 +1046,167 @@
           },
           {
             "type": "directory",
+            "name": "search_experience_6310",
+            "path": "02-project-documents/search_experience_6310",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "02-project-documents/search_experience_6310/README.md",
+                "slug": "02-project-documents/search_experience_6310/README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "_plan.md",
+                "path": "02-project-documents/search_experience_6310/_plan.md",
+                "slug": "02-project-documents/search_experience_6310/_plan.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "directory",
+                "name": "intelligent_curation",
+                "path": "02-project-documents/search_experience_6310/intelligent_curation",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "design_v1.md",
+                    "path": "02-project-documents/search_experience_6310/intelligent_curation/design_v1.md",
+                    "slug": "02-project-documents/search_experience_6310/intelligent_curation/design_v1.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "input_v1.md",
+                    "path": "02-project-documents/search_experience_6310/intelligent_curation/input_v1.md",
+                    "slug": "02-project-documents/search_experience_6310/intelligent_curation/input_v1.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "internal_reference_teardown.md",
+                    "path": "02-project-documents/search_experience_6310/intelligent_curation/internal_reference_teardown.md",
+                    "slug": "02-project-documents/search_experience_6310/intelligent_curation/internal_reference_teardown.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "spec_v1.md",
+                    "path": "02-project-documents/search_experience_6310/intelligent_curation/spec_v1.md",
+                    "slug": "02-project-documents/search_experience_6310/intelligent_curation/spec_v1.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "search_experience_639",
+            "path": "02-project-documents/search_experience_639",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "02-project-documents/search_experience_639/README.md",
+                "slug": "02-project-documents/search_experience_639/README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "_plan.md",
+                "path": "02-project-documents/search_experience_639/_plan.md",
+                "slug": "02-project-documents/search_experience_639/_plan.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "directory",
+                "name": "single_channel_similar_search",
+                "path": "02-project-documents/search_experience_639/single_channel_similar_search",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "design_v1.md",
+                    "path": "02-project-documents/search_experience_639/single_channel_similar_search/design_v1.md",
+                    "slug": "02-project-documents/search_experience_639/single_channel_similar_search/design_v1.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "input_v1.md",
+                    "path": "02-project-documents/search_experience_639/single_channel_similar_search/input_v1.md",
+                    "slug": "02-project-documents/search_experience_639/single_channel_similar_search/input_v1.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "spec_v1.md",
+                    "path": "02-project-documents/search_experience_639/single_channel_similar_search/spec_v1.md",
+                    "slug": "02-project-documents/search_experience_639/single_channel_similar_search/spec_v1.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "standard_search_natural_language",
+                "path": "02-project-documents/search_experience_639/standard_search_natural_language",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "design_v1.md",
+                    "path": "02-project-documents/search_experience_639/standard_search_natural_language/design_v1.md",
+                    "slug": "02-project-documents/search_experience_639/standard_search_natural_language/design_v1.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "input_v1.md",
+                    "path": "02-project-documents/search_experience_639/standard_search_natural_language/input_v1.md",
+                    "slug": "02-project-documents/search_experience_639/standard_search_natural_language/input_v1.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "spec_v1.md",
+                    "path": "02-project-documents/search_experience_639/standard_search_natural_language/spec_v1.md",
+                    "slug": "02-project-documents/search_experience_639/standard_search_natural_language/spec_v1.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "directory",
             "name": "search_experience_mvp_upgrade",
             "path": "02-project-documents/search_experience_mvp_upgrade",
             "children": [
@@ -1048,101 +1218,6 @@
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
-              },
-              {
-                "type": "file",
-                "name": "_plan.md",
-                "path": "02-project-documents/search_experience_mvp_upgrade/_plan.md",
-                "slug": "02-project-documents/search_experience_mvp_upgrade/_plan.md",
-                "fileType": "markdown",
-                "isText": true,
-                "isImage": false
-              },
-              {
-                "type": "directory",
-                "name": "channel_search_modes",
-                "path": "02-project-documents/search_experience_mvp_upgrade/channel_search_modes",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "design_v1.md",
-                    "path": "02-project-documents/search_experience_mvp_upgrade/channel_search_modes/design_v1.md",
-                    "slug": "02-project-documents/search_experience_mvp_upgrade/channel_search_modes/design_v1.md",
-                    "fileType": "markdown",
-                    "isText": true,
-                    "isImage": false
-                  },
-                  {
-                    "type": "file",
-                    "name": "input_v1.md",
-                    "path": "02-project-documents/search_experience_mvp_upgrade/channel_search_modes/input_v1.md",
-                    "slug": "02-project-documents/search_experience_mvp_upgrade/channel_search_modes/input_v1.md",
-                    "fileType": "markdown",
-                    "isText": true,
-                    "isImage": false
-                  },
-                  {
-                    "type": "file",
-                    "name": "internal_reference_teardown.md",
-                    "path": "02-project-documents/search_experience_mvp_upgrade/channel_search_modes/internal_reference_teardown.md",
-                    "slug": "02-project-documents/search_experience_mvp_upgrade/channel_search_modes/internal_reference_teardown.md",
-                    "fileType": "markdown",
-                    "isText": true,
-                    "isImage": false
-                  },
-                  {
-                    "type": "file",
-                    "name": "spec_v1.md",
-                    "path": "02-project-documents/search_experience_mvp_upgrade/channel_search_modes/spec_v1.md",
-                    "slug": "02-project-documents/search_experience_mvp_upgrade/channel_search_modes/spec_v1.md",
-                    "fileType": "markdown",
-                    "isText": true,
-                    "isImage": false
-                  }
-                ]
-              },
-              {
-                "type": "directory",
-                "name": "similar_search_replacement",
-                "path": "02-project-documents/search_experience_mvp_upgrade/similar_search_replacement",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "current_flow_teardown.md",
-                    "path": "02-project-documents/search_experience_mvp_upgrade/similar_search_replacement/current_flow_teardown.md",
-                    "slug": "02-project-documents/search_experience_mvp_upgrade/similar_search_replacement/current_flow_teardown.md",
-                    "fileType": "markdown",
-                    "isText": true,
-                    "isImage": false
-                  },
-                  {
-                    "type": "file",
-                    "name": "design_v1.md",
-                    "path": "02-project-documents/search_experience_mvp_upgrade/similar_search_replacement/design_v1.md",
-                    "slug": "02-project-documents/search_experience_mvp_upgrade/similar_search_replacement/design_v1.md",
-                    "fileType": "markdown",
-                    "isText": true,
-                    "isImage": false
-                  },
-                  {
-                    "type": "file",
-                    "name": "input_v1.md",
-                    "path": "02-project-documents/search_experience_mvp_upgrade/similar_search_replacement/input_v1.md",
-                    "slug": "02-project-documents/search_experience_mvp_upgrade/similar_search_replacement/input_v1.md",
-                    "fileType": "markdown",
-                    "isText": true,
-                    "isImage": false
-                  },
-                  {
-                    "type": "file",
-                    "name": "spec_v1.md",
-                    "path": "02-project-documents/search_experience_mvp_upgrade/similar_search_replacement/spec_v1.md",
-                    "slug": "02-project-documents/search_experience_mvp_upgrade/similar_search_replacement/spec_v1.md",
-                    "fileType": "markdown",
-                    "isText": true,
-                    "isImage": false
-                  }
-                ]
               }
             ]
           },
@@ -2273,14 +2348,14 @@
       },
       {
         "id": "cool_hello_world_v2",
-        "title": "Hello World v2",
-        "description": "NoxInfluencer 现代风格问候展示组件，采用玻璃态设计和蓝紫渐变主题。",
+        "title": "NoxInfluencer 品牌页",
+        "description": "NoxInfluencer 2026 品牌展示页面，采用深色背景与毛玻璃质感设计。",
         "path": "demos/cool_hello_world_v2/index.html",
         "thumbnail": "",
         "tags": [
-          "UI组件",
-          "玻璃态",
-          "展示"
+          "品牌展示",
+          "深色模式",
+          "毛玻璃效果"
         ]
       },
       {
@@ -2297,28 +2372,29 @@
       },
       {
         "id": "poe_328_bd_website",
-        "title": "POE BD 收集站",
-        "description": "流放之路 3.28 赛季开荒 BD 收集展示页面，帮助玩家快速选择开荒流派。",
+        "title": "POE 3.28 BD收集站",
+        "description": "流放之路3.28赛季幻象BD收集展示页面，收录各类开荒角色构建配置，支持标签筛选和评分。",
         "path": "demos/poe_328_bd_website/index.html",
         "thumbnail": "",
         "tags": [
-          "游戏",
+          "游戏工具",
           "POE",
-          "BD攻略"
+          "资料收集"
         ]
       },
       {
         "id": "search-experience-mvp-upgrade",
         "title": "搜索体验 MVP 重写 Demo",
-        "description": "统一展示频道搜索模式升级与相似网红替换两条工作流的静态交互原型。",
+        "description": "同一个静态 demo 内按版本展示 v6.3.9 与 v6.3.10 的搜索体验拆分结果。",
         "path": "demos/search-experience-mvp-upgrade/index.html",
         "thumbnail": "",
         "tags": [
           "搜索体验",
           "MVP",
           "静态 Demo",
-          "频道搜索",
-          "相似网红"
+          "v6.3.9",
+          "v6.3.10",
+          "频道搜索"
         ]
       }
     ]

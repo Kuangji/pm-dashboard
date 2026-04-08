@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>搜索体验 MVP 重写 Demo</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css?v=20260401b" />
+    <link rel="stylesheet" href="./styles.css?v=20260402a" />
   </head>
   <body>
     <main class="demo-page">
@@ -14,11 +14,11 @@
           <p class="eyebrow">NoxInfluencer · Search Experience MVP</p>
           <h1>搜索体验 MVP 重写</h1>
           <p class="hero-copy">
-            统一展示两条工作流：频道搜索模式升级，以及相似网红替换。这个 demo
-            不再追求完整状态机，而是聚焦信息架构、入口关系、关键状态与结果消费方式。
+            统一展示同一套搜索体验被拆成 `v6.3.9` 与 `v6.3.10` 两个版本后的边界。这个 demo
+            继续共用一个壳，但每个场景都明确标注所属版本，避免把当前版与下一版能力混在一起。
           </p>
         </div>
-        <div class="hero-pill">标准搜索 / AI搜索 / 相似网红</div>
+        <div class="hero-pill">v6.3.9 / v6.3.10</div>
       </header>
 
       <section class="workspace-tabs panel">
@@ -28,6 +28,7 @@
             <h2>工作流切换</h2>
           </div>
           <p class="toolbar-copy">一个总项目，内部切两条工作流。</p>
+          
         </div>
         <div class="segmented" id="workstream-tabs"></div>
       </section>
@@ -55,7 +56,10 @@
             <div class="toolbar-head compact">
               <div>
                 <p class="kicker">Preview</p>
-                <h2 id="scene-title">场景预览</h2>
+                <div class="scene-title-row">
+                  <h2 id="scene-title">场景预览</h2>
+                  <div id="scene-meta" class="scene-meta"></div>
+                </div>
               </div>
               <p class="toolbar-copy" id="scene-summary"></p>
             </div>
@@ -87,6 +91,11 @@
           </section>
 
           <section class="inspector-block">
+            <h3>版本归属</h3>
+            <div id="version-tags" class="decision-tags"></div>
+          </section>
+
+          <section class="inspector-block">
             <h3>冻结决策</h3>
             <div id="decision-tags" class="decision-tags"></div>
           </section>
@@ -94,6 +103,6 @@
       </div>
     </main>
 
-    <script src="./app.js?v=20260401b"></script>
+    <script src="./app.js?v=20260402a"></script>
   </body>
 </html>
