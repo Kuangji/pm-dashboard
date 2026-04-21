@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-04-21T01:27:24.943Z",
+  "updatedAt": "2026-04-21T03:58:39.286Z",
   "navigation": {
     "docs": [
       {
@@ -2310,6 +2310,88 @@
           },
           {
             "type": "directory",
+            "name": "noxinfluencer_全站功能地图",
+            "path": "03-research/noxinfluencer_全站功能地图",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "03-research/noxinfluencer_全站功能地图/README.md",
+                "slug": "03-research/noxinfluencer_全站功能地图/README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "_plan.md",
+                "path": "03-research/noxinfluencer_全站功能地图/_plan.md",
+                "slug": "03-research/noxinfluencer_全站功能地图/_plan.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "directory",
+                "name": "01_raw_sources",
+                "path": "03-research/noxinfluencer_全站功能地图/01_raw_sources",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "路由与页面抽样.md",
+                    "path": "03-research/noxinfluencer_全站功能地图/01_raw_sources/路由与页面抽样.md",
+                    "slug": "03-research/noxinfluencer_全站功能地图/01_raw_sources/路由与页面抽样.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "02_feature_teardown",
+                "path": "03-research/noxinfluencer_全站功能地图/02_feature_teardown",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "noxinfluencer_功能地图.md",
+                    "path": "03-research/noxinfluencer_全站功能地图/02_feature_teardown/noxinfluencer_功能地图.md",
+                    "slug": "03-research/noxinfluencer_全站功能地图/02_feature_teardown/noxinfluencer_功能地图.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "noxinfluencer_能力拆解.md",
+                    "path": "03-research/noxinfluencer_全站功能地图/02_feature_teardown/noxinfluencer_能力拆解.md",
+                    "slug": "03-research/noxinfluencer_全站功能地图/02_feature_teardown/noxinfluencer_能力拆解.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "03_insights",
+                "path": "03-research/noxinfluencer_全站功能地图/03_insights",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "模块边界与后续使用说明.md",
+                    "path": "03-research/noxinfluencer_全站功能地图/03_insights/模块边界与后续使用说明.md",
+                    "slug": "03-research/noxinfluencer_全站功能地图/03_insights/模块边界与后续使用说明.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "directory",
             "name": "youtube_channel_nondefault_sort_threshold_audit",
             "path": "03-research/youtube_channel_nondefault_sort_threshold_audit",
             "children": [
@@ -2642,6 +2724,15 @@
         "fileType": "markdown",
         "isText": true,
         "isImage": false
+      },
+      {
+        "type": "file",
+        "name": "noxinfluencer_site_common_context_v1.md",
+        "path": "noxinfluencer_site_common_context_v1.md",
+        "slug": "noxinfluencer_site_common_context_v1.md",
+        "fileType": "markdown",
+        "isText": true,
+        "isImage": false
       }
     ],
     "demos": [
@@ -2673,13 +2764,13 @@
       {
         "id": "cool_hello_world_v2",
         "title": "品牌风格演示",
-        "description": "展示 NoxInfluencer 品牌暗色主题与毛玻璃视觉效果的 Hello World 页面",
+        "description": "基于 NoxInfluencer 品牌色的深色主题玻璃态 UI 效果演示，展示现代化视觉语言。",
         "path": "demos/cool_hello_world_v2/index.html",
         "thumbnail": "",
         "tags": [
-          "UI",
-          "品牌",
-          "主题"
+          "品牌设计",
+          "深色主题",
+          "玻璃态"
         ]
       },
       {
@@ -2696,13 +2787,13 @@
       },
       {
         "id": "poe_328_bd_website",
-        "title": "流放之路BD收集",
-        "description": "流放之路3.28赛季开荒BD收集站，方便玩家浏览和查找角色构建方案。",
+        "title": "流放之路BD站",
+        "description": "POE 3.28 Mirage赛季开荒BD收集页面，展示各职业流派构建方案。",
         "path": "demos/poe_328_bd_website/index.html",
         "thumbnail": "",
         "tags": [
-          "游戏",
-          "流放之路",
+          "游戏工具",
+          "POE",
           "BD收集"
         ]
       },

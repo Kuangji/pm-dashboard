@@ -7,6 +7,7 @@
 - [架构设计](/docs/architecture/) - 了解系统架构
 - [使用指南](/docs/user-guide/) - 学习如何使用
 - [入门介绍](/docs/intro/) - 新手上路
+- [NoxInfluencer 全站公共上下文](./noxinfluencer_site_common_context_v1.md) - 进入 Nox 站级认知前先读
 
 ## 文档结构
 
@@ -26,6 +27,7 @@
     ├── keyword_search_竞研/  # 关键词竞品调研分析
     ├── modash_竞研/  # Modash 竞品研究
     ├── nox_ai_transform_quick_validation/  # Nox AI转型快速验证
+    ├── noxinfluencer_全站功能地图/  # 全站功能地图
     ├── youtube_channel_nondefault_sort_threshold_audit/  # 频道排序阈值调研
     └── youtube_to_notebooklm_teardown/  # 视频笔记产品拆解
 ```
