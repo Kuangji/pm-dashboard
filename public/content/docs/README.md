@@ -26,7 +26,8 @@
     ├── keyword_search_竞研/  # 关键词竞品调研分析
     ├── modash_竞研/  # Modash 竞品研究
     ├── nox_ai_transform_quick_validation/  # Nox AI转型快速验证
-    └── youtube_channel_nondefault_sort_threshold_audit/  # 频道排序阈值调研
+    ├── youtube_channel_nondefault_sort_threshold_audit/  # 频道排序阈值调研
+    └── youtube_to_notebooklm_teardown/  # 视频笔记产品拆解
 ```
 <!-- CONTENT-TREE-END -->
 
@@ -39,4 +40,4 @@
 
 ---
 
-*最后更新: 2026-04-08*
+*最后更新: 2026-04-21*

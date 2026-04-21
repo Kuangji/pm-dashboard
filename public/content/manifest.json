@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-04-08T09:22:51.126Z",
+  "updatedAt": "2026-04-21T01:27:24.943Z",
   "navigation": {
     "docs": [
       {
@@ -2526,6 +2526,111 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "directory",
+            "name": "youtube_to_notebooklm_teardown",
+            "path": "03-research/youtube_to_notebooklm_teardown",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "03-research/youtube_to_notebooklm_teardown/README.md",
+                "slug": "03-research/youtube_to_notebooklm_teardown/README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "调研简报.md",
+                "path": "03-research/youtube_to_notebooklm_teardown/调研简报.md",
+                "slug": "03-research/youtube_to_notebooklm_teardown/调研简报.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "directory",
+                "name": "01_raw_data",
+                "path": "03-research/youtube_to_notebooklm_teardown/01_raw_data",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "YouTube_to_NotebookLM_raw.md",
+                    "path": "03-research/youtube_to_notebooklm_teardown/01_raw_data/YouTube_to_NotebookLM_raw.md",
+                    "slug": "03-research/youtube_to_notebooklm_teardown/01_raw_data/YouTube_to_NotebookLM_raw.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "02_ux_flows",
+                "path": "03-research/youtube_to_notebooklm_teardown/02_ux_flows",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "youtube_to_notebooklm_flow.md",
+                    "path": "03-research/youtube_to_notebooklm_teardown/02_ux_flows/youtube_to_notebooklm_flow.md",
+                    "slug": "03-research/youtube_to_notebooklm_teardown/02_ux_flows/youtube_to_notebooklm_flow.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "03_teardown",
+                "path": "03-research/youtube_to_notebooklm_teardown/03_teardown",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "youtube_to_notebooklm_teardown.md",
+                    "path": "03-research/youtube_to_notebooklm_teardown/03_teardown/youtube_to_notebooklm_teardown.md",
+                    "slug": "03-research/youtube_to_notebooklm_teardown/03_teardown/youtube_to_notebooklm_teardown.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "04_matrix",
+                "path": "03-research/youtube_to_notebooklm_teardown/04_matrix",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "feature_comparison.md",
+                    "path": "03-research/youtube_to_notebooklm_teardown/04_matrix/feature_comparison.md",
+                    "slug": "03-research/youtube_to_notebooklm_teardown/04_matrix/feature_comparison.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "05_insights",
+                "path": "03-research/youtube_to_notebooklm_teardown/05_insights",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "竞品洞察.md",
+                    "path": "03-research/youtube_to_notebooklm_teardown/05_insights/竞品洞察.md",
+                    "slug": "03-research/youtube_to_notebooklm_teardown/05_insights/竞品洞察.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -2567,14 +2672,14 @@
       },
       {
         "id": "cool_hello_world_v2",
-        "title": "品牌问候页 v2",
-        "description": "NoxInfluencer 2026 暗色主题品牌展示页面，采用玻璃态设计风格。",
+        "title": "品牌风格演示",
+        "description": "展示 NoxInfluencer 品牌暗色主题与毛玻璃视觉效果的 Hello World 页面",
         "path": "demos/cool_hello_world_v2/index.html",
         "thumbnail": "",
         "tags": [
-          "品牌展示",
-          "暗色主题",
-          "玻璃态效果"
+          "UI",
+          "品牌",
+          "主题"
         ]
       },
       {
@@ -2592,13 +2697,13 @@
       {
         "id": "poe_328_bd_website",
         "title": "流放之路BD收集",
-        "description": "流放之路3.28赛季开荒BD收集展示网站，汇集各职业流派构建攻略与推荐",
+        "description": "流放之路3.28赛季开荒BD收集站，方便玩家浏览和查找角色构建方案。",
         "path": "demos/poe_328_bd_website/index.html",
         "thumbnail": "",
         "tags": [
-          "游戏工具",
-          "POE",
-          "流放之路"
+          "游戏",
+          "流放之路",
+          "BD收集"
         ]
       },
       {

@@ -1,9 +1,9 @@
 {
-  "title": "品牌问候页 v2",
-  "description": "NoxInfluencer 2026 暗色主题品牌展示页面，采用玻璃态设计风格。",
+  "title": "品牌风格演示",
+  "description": "展示 NoxInfluencer 品牌暗色主题与毛玻璃视觉效果的 Hello World 页面",
   "tags": [
-    "品牌展示",
-    "暗色主题",
-    "玻璃态效果"
+    "UI",
+    "品牌",
+    "主题"
   ]
 }
