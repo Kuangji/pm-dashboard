@@ -9,11 +9,11 @@ import matter from 'gray-matter'
 import {
   detectFileType,
   isTextFile,
-  isImageFile,
-  getLanguage
+  isImageFile
 } from '../app/lib/file-types'
 import { invokeAiJson } from './lib/ai-cli'
 import { hasMissingDemoConfigFiles } from './lib/demo-configs'
+import { ensureDemoScreenshot, hasMissingDemoScreenshots } from './lib/demo-screenshots'
 import { shouldIncludeManifestFile } from './lib/manifest-files'
 
 const DASHBOARD_ROOT = process.cwd()
@@ -125,12 +125,22 @@ async function scanDirectory(dirPath: string, relativePath: string = ''): Promis
     }
   }
 
-  return items.sort((a, b) => (a as any).order - (b as any).order)
+  return items.sort((a, b) => (a.order ?? 999) - (b.order ?? 999))
 }
 
 function cleanItems(items: NavItem[]): NavItem[] {
   return items.map((item) => {
-    const { order, ...rest } = item as any
+    const rest: Omit<NavItem, 'order'> = {
+      type: item.type,
+      name: item.name,
+      path: item.path,
+      ...(item.slug !== undefined ? { slug: item.slug } : {}),
+      ...(item.fileType !== undefined ? { fileType: item.fileType } : {}),
+      ...(item.language !== undefined ? { language: item.language } : {}),
+      ...(item.isText !== undefined ? { isText: item.isText } : {}),
+      ...(item.isImage !== undefined ? { isImage: item.isImage } : {}),
+      ...(item.children !== undefined ? { children: item.children } : {}),
+    }
     if (rest.children) {
       rest.children = cleanItems(rest.children)
     }
@@ -207,12 +217,28 @@ async function scanDemos(): Promise<DemoItem[]> {
           console.log(`   🤖 已生成 demo.json: ${entry.name}`)
         }
 
+        let generatedThumbnail = ''
+        if (!config.thumbnail) {
+          try {
+            const screenshot = await ensureDemoScreenshot({
+              demoId: entry.name,
+              demoPath,
+            })
+            generatedThumbnail = screenshot.publicPath
+            if (screenshot.generated) {
+              console.log(`   📸 已生成 demo 截图: ${entry.name}`)
+            }
+          } catch (err) {
+            console.warn(`   ⚠️  demo 截图失败，跳过缩略图: ${entry.name} - ${(err as Error).message.split('\n')[0]}`)
+          }
+        }
+
         demos.push({
           id: entry.name,
           title: config.title || entry.name,
           description: config.description || '',
           path: `demos/${entry.name}/index.html`,
-          thumbnail: config.thumbnail || '',
+          thumbnail: config.thumbnail || generatedThumbnail,
           tags: config.tags || [],
         })
       }
@@ -247,8 +273,9 @@ async function generateManifest() {
     const manifestStat = await fs.stat(MANIFEST_PATH)
     const newestMtime = await getNewestMtime([DOCUMENTS_DIR, DEMOS_DIR])
     const missingDemoConfigs = await hasMissingDemoConfigFiles(DEMOS_DIR)
+    const missingDemoScreenshots = await hasMissingDemoScreenshots(DEMOS_DIR)
 
-    if (manifestStat.mtimeMs > newestMtime && !missingDemoConfigs) {
+    if (manifestStat.mtimeMs > newestMtime && !missingDemoConfigs && !missingDemoScreenshots) {
       console.log('⚡ 内容未变动，跳过 manifest 生成')
       return
     }

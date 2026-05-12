@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-05-12T09:27:18.499Z",
+  "updatedAt": "2026-05-12T10:51:32.171Z",
   "navigation": {
     "docs": [
       {
@@ -2750,7 +2750,7 @@
         "title": "Button 组件演示",
         "description": "交互式按钮组件展示，包含多种变体、尺寸和状态",
         "path": "demos/button-component/index.html",
-        "thumbnail": "",
+        "thumbnail": "/demos/button-component/screenshot.png",
         "tags": [
           "组件",
           "UI",
@@ -2762,7 +2762,7 @@
         "title": "频道搜索 Agent 化改造 Demo",
         "description": "聚焦搜索框内部的静态原型，对比关键词编辑器、URL 识别、自然语言展开与混合输入等关键状态。",
         "path": "demos/channel-search-agent-upgrade/index.html",
-        "thumbnail": "",
+        "thumbnail": "/demos/channel-search-agent-upgrade/screenshot.png",
         "tags": [
           "搜索框",
           "Agent",
@@ -2775,7 +2775,7 @@
         "title": "品牌风格演示",
         "description": "基于 NoxInfluencer 品牌色的深色主题玻璃态 UI 效果演示，展示现代化视觉语言。",
         "path": "demos/cool_hello_world_v2/index.html",
-        "thumbnail": "",
+        "thumbnail": "/demos/cool_hello_world_v2/screenshot.png",
         "tags": [
           "品牌设计",
           "深色主题",
@@ -2787,7 +2787,7 @@
         "title": "760 监控平台 Demo",
         "description": "内容监控平台原型演示，包含任务管理、主题监控、新建任务等功能",
         "path": "demos/monitor-760/index.html",
-        "thumbnail": "",
+        "thumbnail": "/demos/monitor-760/screenshot.png",
         "tags": [
           "监控",
           "原型",
@@ -2799,7 +2799,7 @@
         "title": "761布局方案",
         "description": "内容监控761布局方案Demo，展示多种页面结构布局设计与排版样式。",
         "path": "demos/monitor_761_layout_demos/index.html",
-        "thumbnail": "",
+        "thumbnail": "/demos/monitor_761_layout_demos/screenshot.png",
         "tags": [
           "布局",
           "内容监控",
@@ -2811,7 +2811,7 @@
         "title": "流放之路BD库",
         "description": "流放之路3.28赛季开荒BD收集页面，展示各职业流派构建方案与搭配。",
         "path": "demos/poe_328_bd_website/index.html",
-        "thumbnail": "",
+        "thumbnail": "/demos/poe_328_bd_website/screenshot.png",
         "tags": [
           "POE",
           "流放之路",
@@ -2823,7 +2823,7 @@
         "title": "搜索体验 MVP 重写 Demo",
         "description": "同一个静态 demo 内按版本展示 v6.3.9 与 v6.3.10 的搜索体验拆分结果。",
         "path": "demos/search-experience-mvp-upgrade/index.html",
-        "thumbnail": "",
+        "thumbnail": "/demos/search-experience-mvp-upgrade/screenshot.png",
         "tags": [
           "搜索体验",
           "MVP",
