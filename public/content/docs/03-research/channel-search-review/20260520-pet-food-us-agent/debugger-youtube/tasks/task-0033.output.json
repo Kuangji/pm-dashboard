@@ -1,0 +1,307 @@
+{
+  "ok": true,
+  "task_id": "task-0033",
+  "keyword": "pet food",
+  "platform": "youtube",
+  "provider": "debugger",
+  "record_count": 10,
+  "completed_count": 10,
+  "failed_count": 0,
+  "duration_ms": 87073,
+  "agent_model": "gpt-5.4-mini",
+  "agent_reasoning_effort": "high",
+  "results": [
+    {
+      "channel_id": "UCY7K8bCJbL95x0GOSEx6hrA",
+      "rank": 971,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.72,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Dog",
+          "Puppy"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "萌宠娱乐向，犬类受众有重叠但缺少宠物食品意图",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0033",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCImOR95NAS86FfHEDjGK3Nw",
+      "rank": 972,
+      "total_score": 10,
+      "suggested_label": "fit",
+      "label_confidence": 0.93,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Cat Care",
+          "Cat Behavior",
+          "Cat Health",
+          "Cat Tips",
+          "Cat Grooming"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "猫咪护理健康导向，和宠物食品推广高度贴近",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0033",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCIqPLqwKlKgBlWNSeMM5V_w",
+      "rank": 973,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.68,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Pets",
+          "Cat"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "猫内容偏娱乐，受众相关但商品推广意图弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0033",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCZKPOmWQLphTdOktI9y9o6w",
+      "rank": 974,
+      "total_score": 5,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.72,
+      "score_parts": {
+        "theme_score": 5,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Pet Odor Eliminator"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物用品语境明确，但不是宠物食品类内容",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0033",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCZVPV_3fbZwCsvf_ire9Vog",
+      "rank": 975,
+      "total_score": 2,
+      "suggested_label": "badcase",
+      "label_confidence": 0.84,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Food Production",
+          "Food Processing"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "人类食品制造频道，和宠物食品受众不匹配",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0033",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCVdPM7Dgxm3cHXM2ro__bUg",
+      "rank": 976,
+      "total_score": -15,
+      "suggested_label": "badcase",
+      "label_confidence": 0.97,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "gaming",
+          "Roblox",
+          "AdoptMe"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "游戏频道且“宠物”是虚拟设定，不适合宠物食品推广",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0033",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UC_GbLRYFDUL_Bg7drthMrGw",
+      "rank": 977,
+      "total_score": 3,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.66,
+      "score_parts": {
+        "theme_score": 3,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Dog",
+          "Pet",
+          "animals"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "动物/宠物娱乐向，有受众重叠但缺少食品购买意图",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0033",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCi25TK5N0ofIz9iAORvxIGA",
+      "rank": 978,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.88,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "DIY玩具/整蛊内容，和宠物食品主题几乎无关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0033",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCv542HrgnKhQx_VjCDh2LWA",
+      "rank": 979,
+      "total_score": -15,
+      "suggested_label": "badcase",
+      "label_confidence": 0.96,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "Wildlife",
+          "Monkey",
+          "Baby Monkey"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "灵长类/野生动物内容，非宠物食品目标受众",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0033",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCnq1w-56tAvMdDup-CL6Vtg",
+      "rank": 980,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.58,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "food",
+          "health"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "购物测评频道可间接触达消费人群，但宠物食品相关性偏弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0033",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "ok": true,
+  "task_id": "retry-1-0040",
+  "keyword": "pet food",
+  "platform": "youtube",
+  "provider": "debugger",
+  "record_count": 1,
+  "completed_count": 1,
+  "failed_count": 0,
+  "duration_ms": 27011,
+  "agent_model": "gpt-5.4-mini",
+  "agent_reasoning_effort": "high",
+  "results": [
+    {
+      "channel_id": "UC9JvNAHamDSy5-aP3HVH9vQ",
+      "rank": 150,
+      "total_score": 1,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.76,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Veterinary Care"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物/兽医相关但缺少宠物食品明确购买或营养意图",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "retry-1-0040",
+      "worker_attempt": 2,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    }
+  ]
+}

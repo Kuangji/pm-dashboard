@@ -1,0 +1,43 @@
+{
+  "task_id": "retry-1-0021",
+  "worker_attempt": 2,
+  "provider": "nox",
+  "platform": "youtube",
+  "country": "us",
+  "keyword": "baby supplement",
+  "records": [
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "baby supplement",
+      "country": "us",
+      "rank": 60,
+      "channel_id": "UCPJRaQe2LVt1_StkIm6VTSw",
+      "channel_name": "Annie Wang Tamaki",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCPJRaQe2LVt1_StkIm6VTSw",
+      "channel_tags": [
+        "beauty",
+        "skincare",
+        "health",
+        "lifestyle",
+        "sunscreen cream",
+        "sunscreen",
+        "sunscreen reapplication",
+        "sunscreen for face",
+        "sunscreen review",
+        "sunscreen stick"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-baby-supplement-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    }
+  ]
+}

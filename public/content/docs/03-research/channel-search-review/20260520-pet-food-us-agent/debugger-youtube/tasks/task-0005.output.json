@@ -1,0 +1,317 @@
+{
+  "ok": true,
+  "task_id": "task-0005",
+  "keyword": "pet food",
+  "platform": "youtube",
+  "provider": "debugger",
+  "record_count": 10,
+  "completed_count": 10,
+  "failed_count": 0,
+  "duration_ms": 103662,
+  "agent_model": "gpt-5.4-mini",
+  "agent_reasoning_effort": "high",
+  "results": [
+    {
+      "channel_id": "UClOBt2j_37qv5tGd6gZdkJw",
+      "rank": 41,
+      "total_score": 10,
+      "suggested_label": "fit",
+      "label_confidence": 0.89,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "catfood",
+          "catnutrition",
+          "petcare"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "猫粮和宠物护理标签很强，适合宠物食品投放",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCaoHzhtuszfMwZ6gys82DDg",
+      "rank": 42,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.97,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "发型喜剧频道，缺少宠物食品相关受众",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCd8rbT7_-87dVo-vmeRSzGg",
+      "rank": 43,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.68,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Animals",
+          "Cute"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "动物泛内容，偏宠物受众但缺少食品意图",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCw3ufICBpeHhLNMBAt9fUcQ",
+      "rank": 44,
+      "total_score": 20,
+      "suggested_label": "fit",
+      "label_confidence": 0.99,
+      "score_parts": {
+        "theme_score": 20,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [
+          "PetFood",
+          "nulo pet food",
+          "pet food"
+        ],
+        "strong_related_tags": [
+          "PetNutrition",
+          "HealthyPets"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "直接命中宠物食品标签，品牌营养主题高度相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UC-QvL-m2Npr3KaVizEra1mw",
+      "rank": 45,
+      "total_score": 10,
+      "suggested_label": "fit",
+      "label_confidence": 0.95,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Pet Nutrition",
+          "Veterinarian Advice",
+          "Dog Food Safety",
+          "DIY Pet Treats"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物营养和兽医建议强相关，适合投放",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCNWGdQkQlOcaXqseXmEGbvA",
+      "rank": 46,
+      "total_score": 3,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.74,
+      "score_parts": {
+        "theme_score": 3,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Dog",
+          "Pet",
+          "Pets"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物搞笑内容偏受众相关，商品意图较弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCsqX0O8H0eG-H3pDQCMlyRQ",
+      "rank": 47,
+      "total_score": -15,
+      "suggested_label": "badcase",
+      "label_confidence": 0.89,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "Wildlife",
+          "AnimalFights",
+          "Nature",
+          "Predators"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "野生动物对抗内容，和宠物食品推广场景不匹配",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCDnQlLuZm8mOvlfaZrwX46g",
+      "rank": 48,
+      "total_score": 5,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.72,
+      "score_parts": {
+        "theme_score": 5,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "pug",
+          "kitten",
+          "cat",
+          "dog",
+          "pets"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物动物向内容，受众相关但食品意图不清",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCVO5BmJ8xDrUXo_og-ledXg",
+      "rank": 49,
+      "total_score": 10,
+      "suggested_label": "fit",
+      "label_confidence": 0.97,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Dog Food",
+          "Home Made Dog Food",
+          "Canine Nutrition",
+          "Raw Dog Food",
+          "Fresh Dog Food"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "狗粮和犬营养标签密集，投放匹配度高",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UC3leux6UUKfAiNxlZeiMg7g",
+      "rank": 50,
+      "total_score": 5,
+      "suggested_label": "fit",
+      "label_confidence": 0.9,
+      "score_parts": {
+        "theme_score": 5,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Dog Food"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "狗粮品牌频道，和宠物食品推广直接相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    }
+  ]
+}

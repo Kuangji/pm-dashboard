@@ -1,0 +1,295 @@
+{
+  "ok": true,
+  "task_id": "task-0023",
+  "keyword": "pet food",
+  "platform": "youtube",
+  "provider": "nox",
+  "record_count": 10,
+  "completed_count": 10,
+  "failed_count": 0,
+  "duration_ms": 128753,
+  "agent_model": "gpt-5.4-mini",
+  "agent_reasoning_effort": "high",
+  "results": [
+    {
+      "channel_id": "UC09XlyxoioF_xDT50KnUozw",
+      "rank": 221,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.16,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无宠物食品相关信号，召回价值低",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0023",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCNgeFo7od8pf0RfTpbbbhPg",
+      "rank": 222,
+      "total_score": 20,
+      "suggested_label": "fit",
+      "label_confidence": 0.97,
+      "score_parts": {
+        "theme_score": 20,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [
+          "pet food"
+        ],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物食品直相关，适合推广",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0023",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCCu86q1OZvOTlvfNUt5Frzw",
+      "rank": 223,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.22,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无明确宠物食品语义，主题不清晰",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0023",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCIXXFM0b0qgCX2SgK7h36zA",
+      "rank": 224,
+      "total_score": 1,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.54,
+      "score_parts": {
+        "theme_score": 1,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "food"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "仅有泛食物标签，宠物食品意图不足",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0023",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCMlnaK7Itr2ov66mKXeq7-A",
+      "rank": 225,
+      "total_score": 20,
+      "suggested_label": "fit",
+      "label_confidence": 0.98,
+      "score_parts": {
+        "theme_score": 20,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [
+          "pet food"
+        ],
+        "strong_related_tags": [
+          "cat food",
+          "purina",
+          "regionally sourced ingredients",
+          "sustainable ingredients",
+          "sustainably sourced ingredients"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物食品直相关，且有配方/品牌语境",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0023",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UC4eYwxHNv8ee4NFERbjwAWg",
+      "rank": 226,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.15,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无宠物食品相关信号，偏抽象内容",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0023",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCom9LN8FxBVoGjLXfcKQEhw",
+      "rank": 227,
+      "total_score": 1,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.43,
+      "score_parts": {
+        "theme_score": 1,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "food"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "生活vlog仅有泛食物信号，相关性弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0023",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCimp79C2Pl9RZRtmib3bOMA",
+      "rank": 228,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.77,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "animal",
+          "animals"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物受众明确，但以娱乐为主，缺少食品意图",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0023",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UC5DkjVMuDelgBvMnD91m6RQ",
+      "rank": 229,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.84,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "pets",
+          "dog"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "狗狗宠物受众明确，但无食品/购买语境",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0023",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCguvEu6j_FV9SOTwRCmQ9jQ",
+      "rank": 230,
+      "total_score": 1,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.33,
+      "score_parts": {
+        "theme_score": 1,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "仅名称暗示宠物主题，产品意图不足",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0023",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    }
+  ]
+}

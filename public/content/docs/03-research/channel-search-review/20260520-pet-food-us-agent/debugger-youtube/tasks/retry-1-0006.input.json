@@ -1,0 +1,63 @@
+{
+  "task_id": "retry-1-0006",
+  "worker_attempt": 2,
+  "provider": "debugger",
+  "platform": "youtube",
+  "country": "us",
+  "keyword": "pet food",
+  "records": [
+    {
+      "provider": "debugger",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 26,
+      "channel_id": "UCt0ffDkgqWINa7S8ti6wz7g",
+      "channel_name": "Lut De Lux",
+      "channel_url": "https://www.youtube.com/channel/UCt0ffDkgqWINa7S8ti6wz7g",
+      "channel_tags": [
+        "pets",
+        "puppy",
+        "feedingstreetdogs",
+        "animals",
+        "monkey",
+        "baby monkey",
+        "poor monkey's",
+        "poor animals",
+        "poor monkey's dramatic",
+        "monkey elly",
+        "poor baby monkey",
+        "lut delux",
+        "lovely puppies",
+        "feeding milk",
+        "bottle feeding milk",
+        "bobo so cute",
+        "adorable animals",
+        "playing so happy",
+        "bobo ahbee ah bouy so cute",
+        "eating",
+        "sleeping on the puppies",
+        "hugs",
+        "unbelievable",
+        "best friend",
+        "love poor pets",
+        "monkey lovely",
+        "funny monkey",
+        "smart baby monkey",
+        "little baby monkey",
+        "dog"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "debugger",
+        "country": "us",
+        "page_number": 1,
+        "source": "http://ry3.9gpu.com:17066/api/kols?sort_mode=relevance&knn_k=100&knn_threshold=1.5&platform=ytb&dsl_file=dsl.json.embedding.ytb.us.pet+food&embedding_keyword=pet+food&keyword=pet+food&page=1&page_size=50",
+        "subscriber_count": 5670,
+        "total_count": null
+      }
+    }
+  ]
+}

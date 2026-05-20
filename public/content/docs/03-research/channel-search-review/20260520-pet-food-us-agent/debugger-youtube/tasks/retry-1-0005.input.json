@@ -1,0 +1,59 @@
+{
+  "task_id": "retry-1-0005",
+  "worker_attempt": 2,
+  "provider": "debugger",
+  "platform": "youtube",
+  "country": "us",
+  "keyword": "pet food",
+  "records": [
+    {
+      "provider": "debugger",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 25,
+      "channel_id": "UCKE0vcmVUzfXlzudtoes19A",
+      "channel_name": "We Feed Raw",
+      "channel_url": "https://www.youtube.com/channel/UCKE0vcmVUzfXlzudtoes19A",
+      "channel_tags": [
+        "Raw Feeding",
+        "Dog Food",
+        "Pet Health",
+        "pets",
+        "food",
+        "we feed raw",
+        "wefeedraw.com",
+        "raw feeding",
+        "raw dog food",
+        "healthy dog food",
+        "raw feeding community",
+        "raw fed dog",
+        "tucker budzyn food",
+        "dog taste test",
+        "dog food delivery",
+        "delivery service",
+        "direct to consumer",
+        "customer service",
+        "dog food",
+        "best dog food",
+        "best raw food service",
+        "best raw food",
+        "feeding raw to dog",
+        "raw food for dogs",
+        "lifestyle",
+        "health"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "debugger",
+        "country": "us",
+        "page_number": 1,
+        "source": "http://ry3.9gpu.com:17066/api/kols?sort_mode=relevance&knn_k=100&knn_threshold=1.5&platform=ytb&dsl_file=dsl.json.embedding.ytb.us.pet+food&embedding_keyword=pet+food&keyword=pet+food&page=1&page_size=50",
+        "subscriber_count": 9140,
+        "total_count": null
+      }
+    }
+  ]
+}

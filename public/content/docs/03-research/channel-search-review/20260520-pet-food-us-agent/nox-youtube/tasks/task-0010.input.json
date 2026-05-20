@@ -1,0 +1,323 @@
+{
+  "task_id": "task-0010",
+  "worker_attempt": 1,
+  "provider": "nox",
+  "platform": "youtube",
+  "country": "us",
+  "keyword": "pet food",
+  "records": [
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 91,
+      "channel_id": "UCTp62kR9ahSGj1T9PjInm0A",
+      "channel_name": "sen sen",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCTp62kR9ahSGj1T9PjInm0A",
+      "channel_tags": [
+        "entertainment",
+        "lifestyle",
+        "house",
+        "life"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 92,
+      "channel_id": "UCal8iLbvvoIBvnrk9nKJ4-A",
+      "channel_name": "Diablo Ruby & Bane",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCal8iLbvvoIBvnrk9nKJ4-A",
+      "channel_tags": [
+        "food",
+        "you_can_whip_it",
+        "nothingisordinary",
+        "myfab5",
+        "f52grams",
+        "dailyfoodfeed",
+        "lovefood",
+        "eatingfortheinsta",
+        "flatlay",
+        "spoonfeed"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 93,
+      "channel_id": "UC0m4Wa1rUo_901ZzeZHESRQ",
+      "channel_name": "PAWDEGA",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UC0m4Wa1rUo_901ZzeZHESRQ",
+      "channel_tags": [
+        "dogs",
+        "pets",
+        "food",
+        "diydogfood",
+        "dog",
+        "rawfeddogs",
+        "health",
+        "diy",
+        "raw",
+        "raw fed dogs"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 94,
+      "channel_id": "UCi0hTpaLV4_Mg6pqTNrpHeg",
+      "channel_name": "KingOfAquariums",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCi0hTpaLV4_Mg6pqTNrpHeg",
+      "channel_tags": [
+        "reaction",
+        "meme",
+        "entertainment",
+        "funny",
+        "memes",
+        "shorts",
+        "react",
+        "comedy",
+        "trending",
+        "popular"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 95,
+      "channel_id": "UCutUv2A6NxOyiF0Fk43TRbA",
+      "channel_name": "KABOOM!",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCutUv2A6NxOyiF0Fk43TRbA",
+      "channel_tags": [
+        "funny",
+        "gadgets",
+        "life hacks",
+        "kaboom",
+        "entertainment",
+        "life",
+        "parenting",
+        "diy",
+        "parenting hacks",
+        "hacks"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 96,
+      "channel_id": "UCOjBEMPnVMu4rfLBt8L2oxw",
+      "channel_name": "Evolution Pets",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCOjBEMPnVMu4rfLBt8L2oxw",
+      "channel_tags": [
+        "pets",
+        "cute",
+        "dog",
+        "cutepet",
+        "puppy",
+        "animals",
+        "helpmemakethismakesense",
+        "cuteanimal",
+        "dothingsyoudontwanttodo",
+        "adorablepuppy"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 97,
+      "channel_id": "UCcgRY4GHylCCE46K-4D-1Iw",
+      "channel_name": "one line",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCcgRY4GHylCCE46K-4D-1Iw",
+      "channel_tags": [
+        "pets",
+        "animals",
+        "cute",
+        "funny",
+        "pepsidee",
+        "petpeeves",
+        "pepsi",
+        "entertainment",
+        "cat",
+        "pet peeves"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 98,
+      "channel_id": "UCqARyNoyVHBlfJIf8pzzRQw",
+      "channel_name": "Jackie Bites",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCqARyNoyVHBlfJIf8pzzRQw",
+      "channel_tags": [],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 99,
+      "channel_id": "UCJ2HMjSPrAp7x2JELObeb-A",
+      "channel_name": "More Media Production",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCJ2HMjSPrAp7x2JELObeb-A",
+      "channel_tags": [
+        "sarethtech",
+        "camera",
+        "technology",
+        "society",
+        "tech",
+        "science & technology",
+        "how to",
+        "shooting",
+        "make money online 2022",
+        "how to make money online 2022"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 100,
+      "channel_id": "UCljfRsDPiW_c14sdLeEHr_w",
+      "channel_name": "Her Meowjesty Cassie 👑",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCljfRsDPiW_c14sdLeEHr_w",
+      "channel_tags": [
+        "pets",
+        "music",
+        "catlover",
+        "cat",
+        "love",
+        "lover",
+        "cat lover",
+        "entertainment",
+        "golden",
+        "lifestyle"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    }
+  ]
+}

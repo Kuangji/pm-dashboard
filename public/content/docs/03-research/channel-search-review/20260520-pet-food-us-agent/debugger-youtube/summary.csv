@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+debugger,youtube,pet food,overall,350,87,24.9%
+debugger,youtube,pet food,head,300,64,21.3%
+debugger,youtube,pet food,mid,50,23,46.0%
+debugger,youtube,pet food,tail,0,0,0.0%

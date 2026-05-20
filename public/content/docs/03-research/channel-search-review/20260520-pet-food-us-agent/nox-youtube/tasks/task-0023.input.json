@@ -1,0 +1,278 @@
+{
+  "task_id": "task-0023",
+  "worker_attempt": 1,
+  "provider": "nox",
+  "platform": "youtube",
+  "country": "us",
+  "keyword": "pet food",
+  "records": [
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 221,
+      "channel_id": "UC09XlyxoioF_xDT50KnUozw",
+      "channel_name": "Li Susie",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UC09XlyxoioF_xDT50KnUozw",
+      "channel_tags": [],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 222,
+      "channel_id": "UCNgeFo7od8pf0RfTpbbbhPg",
+      "channel_name": "Pet Food Experts",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCNgeFo7od8pf0RfTpbbbhPg",
+      "channel_tags": [],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 223,
+      "channel_id": "UCCu86q1OZvOTlvfNUt5Frzw",
+      "channel_name": "Grandma Lucy's",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCCu86q1OZvOTlvfNUt5Frzw",
+      "channel_tags": [],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 224,
+      "channel_id": "UCIXXFM0b0qgCX2SgK7h36zA",
+      "channel_name": "oddlyfun.02",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCIXXFM0b0qgCX2SgK7h36zA",
+      "channel_tags": [
+        "aiart",
+        "art",
+        "ai",
+        "food",
+        "asmr",
+        "oddlysatisfying",
+        "foodart",
+        "fruit",
+        "relieve",
+        "visualasmr"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 225,
+      "channel_id": "UCMlnaK7Itr2ov66mKXeq7-A",
+      "channel_name": "Beyond Pet Food",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCMlnaK7Itr2ov66mKXeq7-A",
+      "channel_tags": [
+        "Food",
+        "Pets",
+        "People & Blogs",
+        "beyond pet food",
+        "purina",
+        "regionally sourced ingredients",
+        "sustainable ingredients",
+        "sustainably sourced ingredients",
+        "pet food",
+        "cat food"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 226,
+      "channel_id": "UC4eYwxHNv8ee4NFERbjwAWg",
+      "channel_name": "ArtificialAbsurdity",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UC4eYwxHNv8ee4NFERbjwAWg",
+      "channel_tags": [],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 227,
+      "channel_id": "UCom9LN8FxBVoGjLXfcKQEhw",
+      "channel_name": "Ana's Personal Vlog",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCom9LN8FxBVoGjLXfcKQEhw",
+      "channel_tags": [
+        "food",
+        "asmr",
+        "lifestyle"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 228,
+      "channel_id": "UCimp79C2Pl9RZRtmib3bOMA",
+      "channel_name": "CUTE PETS",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCimp79C2Pl9RZRtmib3bOMA",
+      "channel_tags": [
+        "cute",
+        "animal",
+        "ai",
+        "video",
+        "animals",
+        "pets",
+        "funny",
+        "entertainment",
+        "shorts",
+        "baby"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 229,
+      "channel_id": "UC5DkjVMuDelgBvMnD91m6RQ",
+      "channel_name": "Theo & Olaf",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UC5DkjVMuDelgBvMnD91m6RQ",
+      "channel_tags": [
+        "pets",
+        "dog",
+        "samoyed",
+        "fluffy",
+        "cute",
+        "puppy",
+        "doglife",
+        "lifestyle",
+        "love",
+        "dogs"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 230,
+      "channel_id": "UCguvEu6j_FV9SOTwRCmQ9jQ",
+      "channel_name": "simply petastic",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCguvEu6j_FV9SOTwRCmQ9jQ",
+      "channel_tags": [],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    }
+  ]
+}

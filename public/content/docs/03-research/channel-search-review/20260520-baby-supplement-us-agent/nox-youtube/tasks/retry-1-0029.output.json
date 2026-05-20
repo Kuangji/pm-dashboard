@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "task_id": "retry-1-0029",
+  "keyword": "baby supplement",
+  "platform": "youtube",
+  "provider": "nox",
+  "record_count": 1,
+  "completed_count": 1,
+  "failed_count": 0,
+  "duration_ms": 22562,
+  "agent_model": "gpt-5.4-mini",
+  "agent_reasoning_effort": "high",
+  "results": [
+    {
+      "channel_id": "UCW3Cf4j8xf5_9NyTWiWVlGA",
+      "rank": 78,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.94,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无标签和视频信号，无法支持婴儿营养补充品推广，判为不相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "retry-1-0029",
+      "worker_attempt": 2,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    }
+  ]
+}

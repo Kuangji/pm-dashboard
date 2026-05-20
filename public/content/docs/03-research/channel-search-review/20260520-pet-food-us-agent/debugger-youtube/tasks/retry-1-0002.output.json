@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "task_id": "retry-1-0002",
+  "keyword": "pet food",
+  "platform": "youtube",
+  "provider": "debugger",
+  "record_count": 1,
+  "completed_count": 1,
+  "failed_count": 0,
+  "duration_ms": 35311,
+  "agent_model": "gpt-5.4-mini",
+  "agent_reasoning_effort": "high",
+  "results": [
+    {
+      "channel_id": "UCaBU00VRgk9bxd662eDhVZA",
+      "rank": 22,
+      "total_score": 20,
+      "suggested_label": "fit",
+      "label_confidence": 0.96,
+      "score_parts": {
+        "theme_score": 20,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [
+          "Homemade Pet Food",
+          "Dog Food",
+          "Cat Food"
+        ],
+        "strong_related_tags": [
+          "Pet Nutrition",
+          "Pet Health",
+          "Raw Feeding",
+          "Homemade Pet Food"
+        ],
+        "weak_related_top5_tags": [
+          "pets",
+          "food",
+          "health"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物食品相关标签直接命中，且内容聚焦犬猫喂食与自制宠粮。",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "retry-1-0002",
+      "worker_attempt": 2,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    }
+  ]
+}

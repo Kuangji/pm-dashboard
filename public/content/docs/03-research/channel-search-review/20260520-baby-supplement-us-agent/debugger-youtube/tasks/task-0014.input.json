@@ -1,0 +1,83 @@
+{
+  "task_id": "task-0014",
+  "worker_attempt": 1,
+  "provider": "debugger",
+  "platform": "youtube",
+  "country": "us",
+  "keyword": "baby supplement",
+  "records": [
+    {
+      "provider": "debugger",
+      "platform": "youtube",
+      "keyword": "baby supplement",
+      "country": "us",
+      "rank": 131,
+      "channel_id": "UCdQKL405tptzrCZRM28IncQ",
+      "channel_name": "Funny and Humorous Channel",
+      "channel_url": "https://www.youtube.com/channel/UCdQKL405tptzrCZRM28IncQ",
+      "channel_tags": [],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "debugger",
+        "country": "us",
+        "page_number": 3,
+        "source": "http://ry3.9gpu.com:17066/api/kols?sort_mode=relevance&knn_k=100&knn_threshold=1.5&platform=ytb&dsl_file=dsl.json.embedding.ytb.us.baby+supplement&embedding_keyword=baby+supplement&keyword=baby+supplement&page=3&page_size=50",
+        "subscriber_count": 292,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "debugger",
+      "platform": "youtube",
+      "keyword": "baby supplement",
+      "country": "us",
+      "rank": 132,
+      "channel_id": "UCztq-5fJaorCiBVAaSdFpyQ",
+      "channel_name": "ViewHub",
+      "channel_url": "https://www.youtube.com/channel/UCztq-5fJaorCiBVAaSdFpyQ",
+      "channel_tags": [],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "debugger",
+        "country": "us",
+        "page_number": 3,
+        "source": "http://ry3.9gpu.com:17066/api/kols?sort_mode=relevance&knn_k=100&knn_threshold=1.5&platform=ytb&dsl_file=dsl.json.embedding.ytb.us.baby+supplement&embedding_keyword=baby+supplement&keyword=baby+supplement&page=3&page_size=50",
+        "subscriber_count": 0,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "debugger",
+      "platform": "youtube",
+      "keyword": "baby supplement",
+      "country": "us",
+      "rank": 133,
+      "channel_id": "UCDYy4_p8HihquxutyXt_-vw",
+      "channel_name": "Online Product Store",
+      "channel_url": "https://www.youtube.com/channel/UCDYy4_p8HihquxutyXt_-vw",
+      "channel_tags": [
+        "People & Blogs",
+        "Technology",
+        "Health",
+        "Life Style",
+        "Hobby",
+        "Pets"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "debugger",
+        "country": "us",
+        "page_number": 3,
+        "source": "http://ry3.9gpu.com:17066/api/kols?sort_mode=relevance&knn_k=100&knn_threshold=1.5&platform=ytb&dsl_file=dsl.json.embedding.ytb.us.baby+supplement&embedding_keyword=baby+supplement&keyword=baby+supplement&page=3&page_size=50",
+        "subscriber_count": 324,
+        "total_count": null
+      }
+    }
+  ]
+}

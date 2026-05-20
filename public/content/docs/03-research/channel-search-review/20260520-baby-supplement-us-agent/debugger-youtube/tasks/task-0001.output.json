@@ -1,0 +1,336 @@
+{
+  "ok": true,
+  "task_id": "task-0001",
+  "keyword": "baby supplement",
+  "platform": "youtube",
+  "provider": "debugger",
+  "record_count": 10,
+  "completed_count": 10,
+  "failed_count": 0,
+  "duration_ms": 59936,
+  "agent_model": "gpt-5.4-mini",
+  "agent_reasoning_effort": "high",
+  "results": [
+    {
+      "channel_id": "UCIqUoeacJrgsNtd7M9a0ipA",
+      "rank": 1,
+      "total_score": 4,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.79,
+      "score_parts": {
+        "theme_score": 4,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "feeding",
+          "babyfeeding",
+          "babyproducts",
+          "babygear"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "婴儿喂养和母婴用品相关，但缺少补充剂/营养意图",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCCdnN4v9Fia0pjUzYlUBsGg",
+      "rank": 2,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.66,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Health",
+          "Children's Health"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "儿童健康科普相关，但补充剂推广指向不够强",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UC2Wp2LM9bspvkzmDKjqTD-g",
+      "rank": 3,
+      "total_score": 10,
+      "suggested_label": "fit",
+      "label_confidence": 0.97,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Breastfeeding",
+          "Baby Safety",
+          "Pediatric Health",
+          "starting solids",
+          "baby food",
+          "homemade baby food"
+        ],
+        "weak_related_top5_tags": [
+          "baby"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "母婴喂养、辅食和儿科健康内容，适合婴儿补充剂",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCYA2E5BmmY540qoEKYB5Zkw",
+      "rank": 4,
+      "total_score": 10,
+      "suggested_label": "fit",
+      "label_confidence": 0.92,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "BabyEssentials",
+          "BabyGear",
+          "BabyComfort",
+          "babycare",
+          "babyfeeding",
+          "feedingtips"
+        ],
+        "weak_related_top5_tags": [
+          "MomLife",
+          "NewParents"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "婴儿护理与喂养用品垂直，和补充剂转化场景接近",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UC4xHcgVBRspD07FTzV8pqYw",
+      "rank": 5,
+      "total_score": 6,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.82,
+      "score_parts": {
+        "theme_score": 6,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Supplements",
+          "Nutrition",
+          "Omega-3"
+        ],
+        "weak_related_top5_tags": [
+          "Health",
+          "Wellness"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "补充剂与营养话题相关，但缺少婴儿受众信号",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCW2yHQK9_nSrK_PhLszyUgw",
+      "rank": 6,
+      "total_score": 3,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.58,
+      "score_parts": {
+        "theme_score": 3,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "baby",
+          "kids",
+          "health"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "有宝宝/家庭泛受众信号，但内容不够垂直",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCBPqMRolWUcF9EngVWz-wBQ",
+      "rank": 7,
+      "total_score": 10,
+      "suggested_label": "fit",
+      "label_confidence": 0.96,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Breastfeeding",
+          "Newborn Care",
+          "Baby Development",
+          "Feeding Tips"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "新生儿护理与喂养内容，和婴儿补充剂高度相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UC5tyOZZDQk2z4kipPuaU9pw",
+      "rank": 8,
+      "total_score": 10,
+      "suggested_label": "fit",
+      "label_confidence": 0.95,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "MaternalHealth",
+          "HealthyBaby",
+          "ChildHealth",
+          "ChildNutrition",
+          "newborncare"
+        ],
+        "weak_related_top5_tags": [
+          "PregnancyTips",
+          "HealthyPregnancy"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "围产期与儿童营养内容强相关，适合补充剂推广",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UC42K0lZlOqVH7j5gKCSvKbQ",
+      "rank": 9,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.54,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Baby",
+          "Nursery",
+          "Pregnancy"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "孕期/家庭vlog为主，婴儿补充剂转化意图弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UC58gXnWJhk6EyA8wcER2hng",
+      "rank": 10,
+      "total_score": 5,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.71,
+      "score_parts": {
+        "theme_score": 5,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "health",
+          "pregnancy",
+          "baby",
+          "breastfeeding"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "围产期健康相关，但主题偏干细胞，不是补充剂内容",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    }
+  ]
+}

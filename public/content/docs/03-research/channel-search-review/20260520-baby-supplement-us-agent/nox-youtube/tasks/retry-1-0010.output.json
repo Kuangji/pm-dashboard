@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "task_id": "retry-1-0010",
+  "keyword": "baby supplement",
+  "platform": "youtube",
+  "provider": "nox",
+  "record_count": 1,
+  "completed_count": 1,
+  "failed_count": 0,
+  "duration_ms": 24460,
+  "agent_model": "gpt-5.4-mini",
+  "agent_reasoning_effort": "high",
+  "results": [
+    {
+      "channel_id": "UCAvcQ5ydl3225_ZvRiuIuKA",
+      "rank": 29,
+      "total_score": -14,
+      "suggested_label": "badcase",
+      "label_confidence": 0.98,
+      "score_parts": {
+        "theme_score": -14,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "baby"
+        ],
+        "mutually_exclusive_top5_tags": [
+          "monkey",
+          "babymonkey",
+          "baby monkey"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "猴子日常内容，非人类婴儿营养场景，baby仅弱相关且被动物标签抵消",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "retry-1-0010",
+      "worker_attempt": 2,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "ok": true,
+  "task_id": "retry-1-0038",
+  "keyword": "pet food",
+  "platform": "youtube",
+  "provider": "debugger",
+  "record_count": 1,
+  "completed_count": 1,
+  "failed_count": 0,
+  "duration_ms": 29472,
+  "agent_model": "gpt-5.4-mini",
+  "agent_reasoning_effort": "high",
+  "results": [
+    {
+      "channel_id": "UC2-DB5avZfsI8wbBmLev1GA",
+      "rank": 148,
+      "total_score": 10,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.78,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Pet Products",
+          "pet supplier"
+        ],
+        "weak_related_top5_tags": [
+          "Cute Pet",
+          "Pets",
+          "Cat Video",
+          "Dog Video"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物类频道，但缺少宠物食品/喂养购买意图",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "retry-1-0038",
+      "worker_attempt": 2,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    }
+  ]
+}

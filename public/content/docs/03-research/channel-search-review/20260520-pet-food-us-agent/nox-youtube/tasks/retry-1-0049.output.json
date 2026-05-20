@@ -1,0 +1,45 @@
+{
+  "ok": true,
+  "task_id": "retry-1-0049",
+  "keyword": "pet food",
+  "platform": "youtube",
+  "provider": "nox",
+  "record_count": 1,
+  "completed_count": 1,
+  "failed_count": 0,
+  "duration_ms": 24930,
+  "agent_model": "gpt-5.4-mini",
+  "agent_reasoning_effort": "high",
+  "results": [
+    {
+      "channel_id": "UCK0HOXJR9OKgaZNeAg8FzCQ",
+      "rank": 149,
+      "total_score": -15,
+      "suggested_label": "badcase",
+      "label_confidence": 0.97,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "asmr",
+          "asmr relaxing sounds",
+          "asmr sounds for sleeping"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "频道是ASMR助眠内容，和宠物食品推广受众不相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "retry-1-0049",
+      "worker_attempt": 2,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    }
+  ]
+}

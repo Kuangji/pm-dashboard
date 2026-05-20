@@ -1,0 +1,318 @@
+{
+  "ok": true,
+  "task_id": "task-0011",
+  "keyword": "pet food",
+  "platform": "youtube",
+  "provider": "debugger",
+  "record_count": 10,
+  "completed_count": 10,
+  "failed_count": 0,
+  "duration_ms": 113165,
+  "agent_model": "gpt-5.4-mini",
+  "agent_reasoning_effort": "high",
+  "results": [
+    {
+      "channel_id": "UCPPQtped5pXP2bWa784LVlg",
+      "rank": 101,
+      "total_score": 3,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.61,
+      "score_parts": {
+        "theme_score": 3,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "pets",
+          "food",
+          "health"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物泛受众有一点相关，但缺少宠粮/营养意图",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0011",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UC7A8_WVCRSgDX_uh2jmEP8g",
+      "rank": 102,
+      "total_score": 10,
+      "suggested_label": "fit",
+      "label_confidence": 0.97,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Cat Nutrition",
+          "Raw Diet for Cats",
+          "Cat Care",
+          "cat nutrition guide",
+          "natural cat food",
+          "homemade cat food",
+          "cat food reviews"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "猫营养和猫粮强相关，适合宠粮投放",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0011",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCTFGtalfZF0ZGhsZ7P-eEQw",
+      "rank": 103,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.55,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "pets",
+          "cat"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "有宠物受众信号，但题材偏野生/杂项",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0011",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UC82a20zvFNpxaIo7Oq_D87Q",
+      "rank": 104,
+      "total_score": -3,
+      "suggested_label": "badcase",
+      "label_confidence": 0.91,
+      "score_parts": {
+        "theme_score": -3,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "pets",
+          "food"
+        ],
+        "mutually_exclusive_top5_tags": [
+          "Pig"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "以猪内容为主，和宠粮投放受众不匹配",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0011",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCZnIhy_MBWiHj03Bn10AMDA",
+      "rank": 105,
+      "total_score": 1,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.6,
+      "score_parts": {
+        "theme_score": 1,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "pets"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "有宠物向信号，但宠粮/喂养意图不明显",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0011",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCI0KQtizq2P1uMYBGUEaDBg",
+      "rank": 106,
+      "total_score": 11,
+      "suggested_label": "fit",
+      "label_confidence": 0.98,
+      "score_parts": {
+        "theme_score": 11,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Pet Care",
+          "Pet Health",
+          "Pet Industry"
+        ],
+        "weak_related_top5_tags": [
+          "pets"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物护理、健康和行业属性很强，适合宠粮推广",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0011",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCiHXF9m0kaUDsKzwE3CgLQA",
+      "rank": 107,
+      "total_score": 8,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.73,
+      "score_parts": {
+        "theme_score": 8,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "catsfood"
+        ],
+        "weak_related_top5_tags": [
+          "pets",
+          "cat",
+          "kitten"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "流浪猫救助与喂养相关，但商业投放意图偏弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0011",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UC0jtVC2BLkYYBZlE4adiWuw",
+      "rank": 108,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.94,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "以捡漏搬运为主，缺少宠粮相关受众",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0011",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCHXw1nv6FBmVwOGj2GiEQrg",
+      "rank": 109,
+      "total_score": 2,
+      "suggested_label": "badcase",
+      "label_confidence": 0.84,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Food",
+          "HalalFood"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "偏人类餐饮与旅行内容，和宠粮投放不对口",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0011",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCEJlsxdqnkWZGdYySJxfZtA",
+      "rank": 110,
+      "total_score": -14,
+      "suggested_label": "badcase",
+      "label_confidence": 0.96,
+      "score_parts": {
+        "theme_score": -14,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Food"
+        ],
+        "mutually_exclusive_top5_tags": [
+          "Funny",
+          "Games",
+          "Comedy"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "娱乐游戏向明显，宠粮转化场景很弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0011",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    }
+  ]
+}

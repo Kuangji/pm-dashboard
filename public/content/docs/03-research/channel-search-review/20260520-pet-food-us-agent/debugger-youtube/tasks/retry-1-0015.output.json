@@ -1,0 +1,49 @@
+{
+  "ok": true,
+  "task_id": "retry-1-0015",
+  "keyword": "pet food",
+  "platform": "youtube",
+  "provider": "debugger",
+  "record_count": 1,
+  "completed_count": 1,
+  "failed_count": 0,
+  "duration_ms": 27308,
+  "agent_model": "gpt-5.4-mini",
+  "agent_reasoning_effort": "high",
+  "results": [
+    {
+      "channel_id": "UCuxbFHJVWYfJ9R7YJEBogFQ",
+      "rank": 55,
+      "total_score": 10,
+      "suggested_label": "fit",
+      "label_confidence": 0.74,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Pet Care",
+          "Dog Health"
+        ],
+        "weak_related_top5_tags": [
+          "Dog Breeds",
+          "Dog Behavior",
+          "pets",
+          "dog"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物护理与狗健康相关，适合宠物食品推广",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "retry-1-0015",
+      "worker_attempt": 2,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    }
+  ]
+}

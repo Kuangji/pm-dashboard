@@ -1,0 +1,252 @@
+{
+  "task_id": "task-0028",
+  "worker_attempt": 1,
+  "provider": "nox",
+  "platform": "youtube",
+  "country": "us",
+  "keyword": "pet food",
+  "records": [
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 471,
+      "channel_id": "UChoKE8Gz_UzjiXoTOreOH_A",
+      "channel_name": "Judy Jack",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UChoKE8Gz_UzjiXoTOreOH_A",
+      "channel_tags": [],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 472,
+      "channel_id": "UCkS6U3-hR9dzqQTXKsyUXBA",
+      "channel_name": "Nutrena",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCkS6U3-hR9dzqQTXKsyUXBA",
+      "channel_tags": [
+        "nutrena",
+        "nutrena feed",
+        "pets",
+        "chicken",
+        "nutrena chicken",
+        "nutrena poultry",
+        "chicken feed",
+        "poultry feed",
+        "feeding chickens",
+        "pet food"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 473,
+      "channel_id": "UCLY6M4NSBXSKS-AXAJzTqcA",
+      "channel_name": "Plant Based Briefing",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCLY6M4NSBXSKS-AXAJzTqcA",
+      "channel_tags": [],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 474,
+      "channel_id": "UCKz96dNsOimbjCaAICR27Mg",
+      "channel_name": "Kider",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCKz96dNsOimbjCaAICR27Mg",
+      "channel_tags": [],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 475,
+      "channel_id": "UClIa3XbxdxbKdGstuL8VcFw",
+      "channel_name": "Random Commercials",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UClIa3XbxdxbKdGstuL8VcFw",
+      "channel_tags": [],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 476,
+      "channel_id": "UChqAvOrURlxxx1ND-WRyjdQ",
+      "channel_name": "FIT PETS",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UChqAvOrURlxxx1ND-WRyjdQ",
+      "channel_tags": [],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 477,
+      "channel_id": "UCiO4HZt86OlWCSpUlUqLn-g",
+      "channel_name": "The SAM Cooking",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCiO4HZt86OlWCSpUlUqLn-g",
+      "channel_tags": [],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 478,
+      "channel_id": "UC14jesFDzy4sIIMiVKCVuug",
+      "channel_name": "Dog Training And Care",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UC14jesFDzy4sIIMiVKCVuug",
+      "channel_tags": [],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 479,
+      "channel_id": "UCqFaHhOf6tH6VvefzL-h_zg",
+      "channel_name": "TODO MONDE",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCqFaHhOf6tH6VvefzL-h_zg",
+      "channel_tags": [
+        "travel",
+        "art",
+        "peace",
+        "tourism",
+        "humor",
+        "fypシ",
+        "food",
+        "fit",
+        "drink",
+        "fix"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 480,
+      "channel_id": "UCaWwsHlAbGpCig705EgYEqg",
+      "channel_name": "Secia New Material",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCaWwsHlAbGpCig705EgYEqg",
+      "channel_tags": [],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    }
+  ]
+}

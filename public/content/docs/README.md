@@ -21,8 +21,10 @@
 │   ├── search_experience_6310/  # 搜索体验需求6310
 │   ├── search_experience_639/  # 搜索体验需求639
 │   ├── search_experience_mvp_upgrade/  # 搜索体验MVP升级
-│   └── 支付单暂存和预约发送/  # 支付单暂存与预约发送
+│   ├── 支付单暂存和预约发送/  # 支付单暂存与预约发送
+│   └── 消消乐_0423/  # 消消乐产品文档
 └── 03-research/  # 研究报告
+    ├── channel-search-review/  # 渠道搜索评审
     ├── channel_search_agent_upgrade/  # 频道搜索升级研究
     ├── keyword_search_竞研/  # 关键词竞品调研分析
     ├── modash_竞研/  # Modash 竞品研究

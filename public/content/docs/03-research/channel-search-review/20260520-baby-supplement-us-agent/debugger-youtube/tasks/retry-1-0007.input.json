@@ -1,0 +1,63 @@
+{
+  "task_id": "retry-1-0007",
+  "worker_attempt": 2,
+  "provider": "debugger",
+  "platform": "youtube",
+  "country": "us",
+  "keyword": "baby supplement",
+  "records": [
+    {
+      "provider": "debugger",
+      "platform": "youtube",
+      "keyword": "baby supplement",
+      "country": "us",
+      "rank": 37,
+      "channel_id": "UCikjESrQRwElQ57buZRkWjg",
+      "channel_name": "Caujuan Mayo",
+      "channel_url": "https://www.youtube.com/channel/UCikjESrQRwElQ57buZRkWjg",
+      "channel_tags": [
+        "business",
+        "review",
+        "marketing",
+        "lifestyle",
+        "travel",
+        "nowsite marketing",
+        "nowsite",
+        "information",
+        "nowsite networking",
+        "networking",
+        "program",
+        "life",
+        "trvl",
+        "the real vacation lifestyle",
+        "nowsite platform",
+        "trvl review",
+        "trvl comp plan",
+        "trvl compensation plan",
+        "trvl overview",
+        "is trvl legit",
+        "trvl scam",
+        "trvl travel",
+        "trvl travel program",
+        "trvl travel savings",
+        "how to make money with trvl",
+        "travel savings",
+        "trvl bucket trips",
+        "savings",
+        "nowsite review",
+        "nowsite honest testimonial"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "debugger",
+        "country": "us",
+        "page_number": 1,
+        "source": "http://ry3.9gpu.com:17066/api/kols?sort_mode=relevance&knn_k=100&knn_threshold=1.5&platform=ytb&dsl_file=dsl.json.embedding.ytb.us.baby+supplement&embedding_keyword=baby+supplement&keyword=baby+supplement&page=1&page_size=50",
+        "subscriber_count": 28500,
+        "total_count": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "ok": true,
+  "task_id": "retry-1-0033",
+  "keyword": "pet food",
+  "platform": "youtube",
+  "provider": "debugger",
+  "record_count": 1,
+  "completed_count": 1,
+  "failed_count": 0,
+  "duration_ms": 21244,
+  "agent_model": "gpt-5.4-mini",
+  "agent_reasoning_effort": "high",
+  "results": [
+    {
+      "channel_id": "UChvX5x6mUb5pa26gslN0LCw",
+      "rank": 143,
+      "total_score": 20,
+      "suggested_label": "fit",
+      "label_confidence": 0.83,
+      "score_parts": {
+        "theme_score": 20,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [
+          "catfood",
+          "dogfood"
+        ],
+        "strong_related_tags": [
+          "pets"
+        ],
+        "weak_related_top5_tags": [
+          "petshorts",
+          "catshorts",
+          "dogshorts"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物向频道且含catfood/dogfood，和pet food推广高度相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "retry-1-0033",
+      "worker_attempt": 2,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    }
+  ]
+}

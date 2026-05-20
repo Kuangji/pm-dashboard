@@ -1,0 +1,282 @@
+{
+  "ok": false,
+  "task_id": "task-0014",
+  "keyword": "pet food",
+  "platform": "youtube",
+  "provider": "debugger",
+  "record_count": 10,
+  "completed_count": 0,
+  "failed_count": 10,
+  "duration_ms": 93237,
+  "agent_model": "gpt-5.4-mini",
+  "agent_reasoning_effort": "high",
+  "results": [
+    {
+      "channel_id": "UCpa3DJLKHcsXPT_2zzAs5gg",
+      "rank": 131,
+      "total_score": null,
+      "suggested_label": "",
+      "label_confidence": null,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "Expected ',' or ']' after array element in JSON at position 4482 (line 1 column 4483)",
+      "score_status": "failed",
+      "model_version": "nox_channel_search_agent_batch_review",
+      "task_id": "task-0014",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCA-w0MyXIyMXOO9POE0v9PA",
+      "rank": 132,
+      "total_score": null,
+      "suggested_label": "",
+      "label_confidence": null,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "Expected ',' or ']' after array element in JSON at position 4482 (line 1 column 4483)",
+      "score_status": "failed",
+      "model_version": "nox_channel_search_agent_batch_review",
+      "task_id": "task-0014",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCCJPt2eTQui4wqD_LHKKrzw",
+      "rank": 133,
+      "total_score": null,
+      "suggested_label": "",
+      "label_confidence": null,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "Expected ',' or ']' after array element in JSON at position 4482 (line 1 column 4483)",
+      "score_status": "failed",
+      "model_version": "nox_channel_search_agent_batch_review",
+      "task_id": "task-0014",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCeeD6_kIJw867W79uK9wdMg",
+      "rank": 134,
+      "total_score": null,
+      "suggested_label": "",
+      "label_confidence": null,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "Expected ',' or ']' after array element in JSON at position 4482 (line 1 column 4483)",
+      "score_status": "failed",
+      "model_version": "nox_channel_search_agent_batch_review",
+      "task_id": "task-0014",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCtIvUuy9ZX7bV5JxW_rrIDg",
+      "rank": 135,
+      "total_score": null,
+      "suggested_label": "",
+      "label_confidence": null,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "Expected ',' or ']' after array element in JSON at position 4482 (line 1 column 4483)",
+      "score_status": "failed",
+      "model_version": "nox_channel_search_agent_batch_review",
+      "task_id": "task-0014",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UC_ZA5sLRU8nNf3PyVeHtl0A",
+      "rank": 136,
+      "total_score": null,
+      "suggested_label": "",
+      "label_confidence": null,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "Expected ',' or ']' after array element in JSON at position 4482 (line 1 column 4483)",
+      "score_status": "failed",
+      "model_version": "nox_channel_search_agent_batch_review",
+      "task_id": "task-0014",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCMXMVFrlIM6iT36rKbtqWRg",
+      "rank": 137,
+      "total_score": null,
+      "suggested_label": "",
+      "label_confidence": null,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "Expected ',' or ']' after array element in JSON at position 4482 (line 1 column 4483)",
+      "score_status": "failed",
+      "model_version": "nox_channel_search_agent_batch_review",
+      "task_id": "task-0014",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCEo0uHKX2_KDwkMWfiiukgg",
+      "rank": 138,
+      "total_score": null,
+      "suggested_label": "",
+      "label_confidence": null,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "Expected ',' or ']' after array element in JSON at position 4482 (line 1 column 4483)",
+      "score_status": "failed",
+      "model_version": "nox_channel_search_agent_batch_review",
+      "task_id": "task-0014",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCmeGUc14lWiDcrrLuMWOFxA",
+      "rank": 139,
+      "total_score": null,
+      "suggested_label": "",
+      "label_confidence": null,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "Expected ',' or ']' after array element in JSON at position 4482 (line 1 column 4483)",
+      "score_status": "failed",
+      "model_version": "nox_channel_search_agent_batch_review",
+      "task_id": "task-0014",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UC5L1_tBWqrwObO20Cb0H51A",
+      "rank": 140,
+      "total_score": null,
+      "suggested_label": "",
+      "label_confidence": null,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "Expected ',' or ']' after array element in JSON at position 4482 (line 1 column 4483)",
+      "score_status": "failed",
+      "model_version": "nox_channel_search_agent_batch_review",
+      "task_id": "task-0014",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    }
+  ],
+  "errors": [
+    {
+      "message": "Expected ',' or ']' after array element in JSON at position 4482 (line 1 column 4483)",
+      "stderr_preview": "",
+      "stdout_preview": ""
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "task_id": "retry-1-0049",
+  "worker_attempt": 2,
+  "provider": "debugger",
+  "platform": "youtube",
+  "country": "us",
+  "keyword": "pet food",
+  "records": [
+    {
+      "provider": "debugger",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 208,
+      "channel_id": "UCQSIPJD64iQpvG82nDkXB6w",
+      "channel_name": "PetCare University",
+      "channel_url": "https://www.youtube.com/channel/UCQSIPJD64iQpvG82nDkXB6w",
+      "channel_tags": [
+        "Dog",
+        "Pets",
+        "Animals",
+        "pets",
+        "dog",
+        "animals",
+        "dogs",
+        "entertainment",
+        "puppy",
+        "french bulldogs",
+        "lifestyle",
+        "puppies",
+        "funny",
+        "food",
+        "rottweiler"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "debugger",
+        "country": "us",
+        "page_number": 5,
+        "source": "http://ry3.9gpu.com:17066/api/kols?sort_mode=relevance&knn_k=100&knn_threshold=1.5&platform=ytb&dsl_file=dsl.json.embedding.ytb.us.pet+food&embedding_keyword=pet+food&keyword=pet+food&page=5&page_size=50",
+        "subscriber_count": 433000,
+        "total_count": null
+      }
+    }
+  ]
+}

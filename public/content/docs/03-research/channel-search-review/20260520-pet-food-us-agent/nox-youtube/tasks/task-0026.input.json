@@ -1,0 +1,303 @@
+{
+  "task_id": "task-0026",
+  "worker_attempt": 1,
+  "provider": "nox",
+  "platform": "youtube",
+  "country": "us",
+  "keyword": "pet food",
+  "records": [
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 451,
+      "channel_id": "UCITtAMJauujpQy37SEQjTyQ",
+      "channel_name": "Pet Zone",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCITtAMJauujpQy37SEQjTyQ",
+      "channel_tags": [
+        "pets",
+        "lifestyle",
+        "hobby",
+        "fish",
+        "fyp",
+        "monster fish"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 452,
+      "channel_id": "UCn-9PpjgZpbjN2_PWTDesJA",
+      "channel_name": "Ryan Coomer",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCn-9PpjgZpbjN2_PWTDesJA",
+      "channel_tags": [
+        "music",
+        "entertainment",
+        "food",
+        "buffet",
+        "corndogs",
+        "dog",
+        "rock music",
+        "comedy",
+        "song",
+        "corn"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 453,
+      "channel_id": "UCBnyezByBHiChFfx4bVVrCA",
+      "channel_name": "Tier 1 Veterinary Medical Center",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCBnyezByBHiChFfx4bVVrCA",
+      "channel_tags": [],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 454,
+      "channel_id": "UCDiMp0DoWK6yQhgHU8DIJ8g",
+      "channel_name": "The Donna Drake Show Live It Up",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCDiMp0DoWK6yQhgHU8DIJ8g",
+      "channel_tags": [
+        "tv shows",
+        "entertainment",
+        "society",
+        "food",
+        "health",
+        "music",
+        "beauty",
+        "fashion",
+        "interview",
+        "art"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 455,
+      "channel_id": "UC1MS01D67J8mdBktuUBYJbw",
+      "channel_name": "Golden Retriever Eat TV",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UC1MS01D67J8mdBktuUBYJbw",
+      "channel_tags": [
+        "asmr",
+        "eat",
+        "eatinsounds",
+        "food",
+        "pets",
+        "eating show",
+        "golden retriever eat tv",
+        "golden retriever feeding",
+        "healthy dog diet",
+        "pet care"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 456,
+      "channel_id": "UCVBr0qoBjTkpRKERR5wVPfg",
+      "channel_name": "SDCCU",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCVBr0qoBjTkpRKERR5wVPfg",
+      "channel_tags": [
+        "giveaway",
+        "z90",
+        "mortoninthemorning",
+        "10kgiveaway",
+        "sandiego",
+        "10kpayday",
+        "sdccu",
+        "society",
+        "finance",
+        "san diego"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 457,
+      "channel_id": "UCdQ5pD6Uh8ESQEwAgeh_mMA",
+      "channel_name": "Insects and Invaders",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCdQ5pD6Uh8ESQEwAgeh_mMA",
+      "channel_tags": [],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 458,
+      "channel_id": "UCv06K5J2yxjmAkCu2Aat5_Q",
+      "channel_name": "VCA Animal Hospitals",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCv06K5J2yxjmAkCu2Aat5_Q",
+      "channel_tags": [
+        "pets",
+        "knowledge",
+        "cat",
+        "dog",
+        "health",
+        "pet health",
+        "dogs",
+        "cats",
+        "pet",
+        "vca animal hospital"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 459,
+      "channel_id": "UC7j8SnlKscF6Er2_FYZHXfg",
+      "channel_name": "Adventures with Blake",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UC7j8SnlKscF6Er2_FYZHXfg",
+      "channel_tags": [
+        "kids",
+        "funny",
+        "fun",
+        "asmr",
+        "hobby",
+        "challenge",
+        "toys",
+        "fidget",
+        "shorts",
+        "american girl"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    },
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 460,
+      "channel_id": "UCF_5i5rI9uXouB13zCcLhSQ",
+      "channel_name": "My dachshund and me.",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UCF_5i5rI9uXouB13zCcLhSQ",
+      "channel_tags": [],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-pet-food-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    }
+  ]
+}

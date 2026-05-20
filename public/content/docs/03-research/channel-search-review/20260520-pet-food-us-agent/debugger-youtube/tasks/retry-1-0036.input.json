@@ -1,0 +1,63 @@
+{
+  "task_id": "retry-1-0036",
+  "worker_attempt": 2,
+  "provider": "debugger",
+  "platform": "youtube",
+  "country": "us",
+  "keyword": "pet food",
+  "records": [
+    {
+      "provider": "debugger",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 146,
+      "channel_id": "UCq_FFmw8L0buW4c-G3AknHw",
+      "channel_name": "Deal Discoveries",
+      "channel_url": "https://www.youtube.com/channel/UCq_FFmw8L0buW4c-G3AknHw",
+      "channel_tags": [
+        "Amazon Deals",
+        "Luxury",
+        "Smart Gadgets",
+        "Cruises",
+        "Fiverr",
+        "Gaming",
+        "Citizen Watches",
+        "Golf",
+        "Backup Solutions",
+        "Hair Removal",
+        "Affordable E-bikes",
+        "explore",
+        "travel",
+        "gadgets",
+        "dealdiscoveries",
+        "beauty",
+        "fashion",
+        "amazon",
+        "2026",
+        "trending",
+        "discover",
+        "business",
+        "luxury",
+        "technology",
+        "home",
+        "amazonfinds",
+        "2025",
+        "youtube",
+        "consumer electronic",
+        "best"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "debugger",
+        "country": "us",
+        "page_number": 3,
+        "source": "http://ry3.9gpu.com:17066/api/kols?sort_mode=relevance&knn_k=100&knn_threshold=1.5&platform=ytb&dsl_file=dsl.json.embedding.ytb.us.pet+food&embedding_keyword=pet+food&keyword=pet+food&page=3&page_size=50",
+        "subscriber_count": 2260,
+        "total_count": null
+      }
+    }
+  ]
+}

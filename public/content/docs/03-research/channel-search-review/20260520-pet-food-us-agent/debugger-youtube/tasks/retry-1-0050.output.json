@@ -1,0 +1,50 @@
+{
+  "ok": true,
+  "task_id": "retry-1-0050",
+  "keyword": "pet food",
+  "platform": "youtube",
+  "provider": "debugger",
+  "record_count": 1,
+  "completed_count": 1,
+  "failed_count": 0,
+  "duration_ms": 29358,
+  "agent_model": "gpt-5.4-mini",
+  "agent_reasoning_effort": "high",
+  "results": [
+    {
+      "channel_id": "UCa_17EwmmHm7FJtIn57c9-w",
+      "rank": 209,
+      "total_score": 10,
+      "suggested_label": "fit",
+      "label_confidence": 0.88,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "PetCare",
+          "RawFood",
+          "pet care",
+          "dog food"
+        ],
+        "weak_related_top5_tags": [
+          "Animals",
+          "pets",
+          "animal husbandry"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物护理和狗粮强相关，适合宠物食品推广",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "retry-1-0050",
+      "worker_attempt": 2,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    }
+  ]
+}

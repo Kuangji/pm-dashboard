@@ -1,0 +1,43 @@
+{
+  "ok": true,
+  "task_id": "retry-1-0005",
+  "keyword": "baby supplement",
+  "platform": "youtube",
+  "provider": "debugger",
+  "record_count": 1,
+  "completed_count": 1,
+  "failed_count": 0,
+  "duration_ms": 24382,
+  "agent_model": "gpt-5.4-mini",
+  "agent_reasoning_effort": "high",
+  "results": [
+    {
+      "channel_id": "UCXitUIxYw_U-foxbSXSh04Q",
+      "rank": 35,
+      "total_score": 1,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.31,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 1,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Supplements"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "仅有通用补剂标签，缺少婴儿/母婴语境",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "retry-1-0005",
+      "worker_attempt": 2,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    }
+  ]
+}

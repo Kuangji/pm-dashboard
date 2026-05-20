@@ -1,0 +1,325 @@
+{
+  "ok": true,
+  "task_id": "task-0030",
+  "keyword": "pet food",
+  "platform": "youtube",
+  "provider": "debugger",
+  "record_count": 10,
+  "completed_count": 10,
+  "failed_count": 0,
+  "duration_ms": 106123,
+  "agent_model": "gpt-5.4-mini",
+  "agent_reasoning_effort": "high",
+  "results": [
+    {
+      "channel_id": "UCWSICv3g8I3izyYiuDqmzJQ",
+      "rank": 491,
+      "total_score": 20,
+      "suggested_label": "fit",
+      "label_confidence": 0.98,
+      "score_parts": {
+        "theme_score": 20,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [
+          "Dog Food"
+        ],
+        "strong_related_tags": [
+          "Dog Health",
+          "Dog Care",
+          "Dog Supplements"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "含Dog Food直接命中，且Dog Health/Care等强相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0030",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCSuCAO0udbOOxXHQlbY1FxA",
+      "rank": 492,
+      "total_score": -8,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.73,
+      "score_parts": {
+        "theme_score": -8,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Pets",
+          "Animals"
+        ],
+        "mutually_exclusive_top5_tags": [
+          "Humor",
+          "entertainment"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物娱乐号，只有泛宠物标签，无宠粮购买意图",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0030",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCpnSTUe-9FR5jg9bIsHtvXQ",
+      "rank": 493,
+      "total_score": -15,
+      "suggested_label": "badcase",
+      "label_confidence": 0.97,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "Food",
+          "Yummy",
+          "Breakfast"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "人类餐食频道，和宠粮推广目标明显不符",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0030",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCUIfJcbLkXkTPu3YHIn94cQ",
+      "rank": 494,
+      "total_score": 4,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.67,
+      "score_parts": {
+        "theme_score": 4,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Adorable Pets",
+          "Animal Welfare",
+          "Pet Videos",
+          "Dog Rescuers"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物救援向，受众相关但缺少宠粮/营养购买意图",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0030",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCCNwYcOSlx3rMRBfSuNrzPg",
+      "rank": 495,
+      "total_score": -9,
+      "suggested_label": "badcase",
+      "label_confidence": 0.84,
+      "score_parts": {
+        "theme_score": -9,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Animals"
+        ],
+        "mutually_exclusive_top5_tags": [
+          "Funny",
+          "Animation"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "儿童动画故事频道，宠粮推广场景不匹配",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0030",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCD_v-Mk4sVDwBlX3e6BblaA",
+      "rank": 496,
+      "total_score": -15,
+      "suggested_label": "badcase",
+      "label_confidence": 0.9,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "funny",
+          "jokes",
+          "games"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "纯娱乐笑话号，和宠粮投放目标不匹配",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0030",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCy-VCAsNrIBkoa7DhS1QGEQ",
+      "rank": 497,
+      "total_score": 10,
+      "suggested_label": "fit",
+      "label_confidence": 0.95,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Dog Care",
+          "Dog Nutrition"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "狗营养与护理强相关，适合宠粮推广",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0030",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UC6wCRf6uYNpy8pdYOobJs-A",
+      "rank": 498,
+      "total_score": -8,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.71,
+      "score_parts": {
+        "theme_score": -8,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "cats",
+          "Pets"
+        ],
+        "mutually_exclusive_top5_tags": [
+          "funny",
+          "Entertainment"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "有宠物受众但偏娱乐，宠粮转化意图弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0030",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCVxJxXoBOkuzvFDS1amJGbQ",
+      "rank": 499,
+      "total_score": -7,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.74,
+      "score_parts": {
+        "theme_score": -7,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Pets",
+          "Cats",
+          "Dogs"
+        ],
+        "mutually_exclusive_top5_tags": [
+          "Funny Pets",
+          "Funny Animals"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物受众明确，但内容偏搞笑，投放意图不强",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0030",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    },
+    {
+      "channel_id": "UCItDmit6Yy5-hazNSdoDYuA",
+      "rank": 500,
+      "total_score": -15,
+      "suggested_label": "badcase",
+      "label_confidence": 0.92,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "OffGridLiving",
+          "TinyHouse",
+          "Homesteading"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "户外自给自足频道，与宠粮推广几乎无关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0030",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high"
+    }
+  ]
+}

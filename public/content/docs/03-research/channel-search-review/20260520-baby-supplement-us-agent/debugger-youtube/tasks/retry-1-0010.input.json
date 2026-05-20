@@ -1,0 +1,63 @@
+{
+  "task_id": "retry-1-0010",
+  "worker_attempt": 2,
+  "provider": "debugger",
+  "platform": "youtube",
+  "country": "us",
+  "keyword": "baby supplement",
+  "records": [
+    {
+      "provider": "debugger",
+      "platform": "youtube",
+      "keyword": "baby supplement",
+      "country": "us",
+      "rank": 40,
+      "channel_id": "UCfz-lykI3WXViZpBLniY5qg",
+      "channel_name": "Grapefruit's Daily Life",
+      "channel_url": "https://www.youtube.com/channel/UCfz-lykI3WXViZpBLniY5qg",
+      "channel_tags": [
+        "Family",
+        "Growth record of cute kids",
+        "baby",
+        "funny",
+        "twins",
+        "cute",
+        "cutebaby",
+        "kids",
+        "sweetheart",
+        "brothers",
+        "babybrother",
+        "funnyvideos",
+        "smile",
+        "funny videos",
+        "cute baby",
+        "twin brothers",
+        "brothersbyheart",
+        "win daily life",
+        "growth record of cute kids",
+        "family life sharing",
+        "parent-child interaction fun",
+        "baby growth diary",
+        "adorable children videos",
+        "baby's first steps moments",
+        "family joyous times",
+        "children's growth journey",
+        "family education tips",
+        "baby's daily care",
+        "baby nutrition recipes",
+        "twin parenting challenges"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "debugger",
+        "country": "us",
+        "page_number": 1,
+        "source": "http://ry3.9gpu.com:17066/api/kols?sort_mode=relevance&knn_k=100&knn_threshold=1.5&platform=ytb&dsl_file=dsl.json.embedding.ytb.us.baby+supplement&embedding_keyword=baby+supplement&keyword=baby+supplement&page=1&page_size=50",
+        "subscriber_count": 809000,
+        "total_count": null
+      }
+    }
+  ]
+}

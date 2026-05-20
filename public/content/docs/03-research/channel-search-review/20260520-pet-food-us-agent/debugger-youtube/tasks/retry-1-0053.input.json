@@ -1,0 +1,63 @@
+{
+  "task_id": "retry-1-0053",
+  "worker_attempt": 2,
+  "provider": "debugger",
+  "platform": "youtube",
+  "country": "us",
+  "keyword": "pet food",
+  "records": [
+    {
+      "provider": "debugger",
+      "platform": "youtube",
+      "keyword": "pet food",
+      "country": "us",
+      "rank": 242,
+      "channel_id": "UCt3HsGlnwjVvGIS4nJ0PGTg",
+      "channel_name": "Pets Lover",
+      "channel_url": "https://www.youtube.com/channel/UCt3HsGlnwjVvGIS4nJ0PGTg",
+      "channel_tags": [
+        "USAPets",
+        "DogWelfare",
+        "FunnyDogsUSA",
+        "NewYorkDogs",
+        "CatMom",
+        "NewYorkCats",
+        "CatFight",
+        "CatReaction",
+        "DogReaction",
+        "DogExpressions",
+        "DogOutfit",
+        "CatScaring",
+        "CatInSnow",
+        "CatScreams",
+        "CatFeisty",
+        "CatDrinking",
+        "SingingCat",
+        "CatCouple",
+        "CatnipReaction",
+        "CatVsDog",
+        "CutePuppy",
+        "TailTrouble",
+        "BelgianMalinois",
+        "CatFails",
+        "pets",
+        "usapets",
+        "dog",
+        "entertainment",
+        "newyork",
+        "funny"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "debugger",
+        "country": "us",
+        "page_number": 5,
+        "source": "http://ry3.9gpu.com:17066/api/kols?sort_mode=relevance&knn_k=100&knn_threshold=1.5&platform=ytb&dsl_file=dsl.json.embedding.ytb.us.pet+food&embedding_keyword=pet+food&keyword=pet+food&page=5&page_size=50",
+        "subscriber_count": 24600,
+        "total_count": null
+      }
+    }
+  ]
+}

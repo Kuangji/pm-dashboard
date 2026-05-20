@@ -1,0 +1,43 @@
+{
+  "task_id": "retry-1-0007",
+  "worker_attempt": 2,
+  "provider": "nox",
+  "platform": "youtube",
+  "country": "us",
+  "keyword": "baby supplement",
+  "records": [
+    {
+      "provider": "nox",
+      "platform": "youtube",
+      "keyword": "baby supplement",
+      "country": "us",
+      "rank": 26,
+      "channel_id": "UC9xC5ClCMLOShjp1Ms0dbRw",
+      "channel_name": "Muscular Development Magazine",
+      "channel_url": "https://cn.noxinfluencer.com/youtube/channel/UC9xC5ClCMLOShjp1Ms0dbRw",
+      "channel_tags": [
+        "musculardevelopment",
+        "muscular development",
+        "health",
+        "fitness",
+        "mrolympia",
+        "2023arnoldclassic",
+        "mr olympia",
+        "2023newyorkpro",
+        "olympia",
+        "ron harris"
+      ],
+      "related_video_titles": [],
+      "recent_video_titles": [],
+      "related_match_count": 0,
+      "raw_meta": {
+        "provider": "nox",
+        "country": "us",
+        "page_number": null,
+        "source": "tmp/channel-search-review/20260520-baby-supplement-us-agent/nox-youtube-mcp-input.json",
+        "subscriber_count": null,
+        "total_count": null
+      }
+    }
+  ]
+}
