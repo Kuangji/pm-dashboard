@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+debugger,youtube,lawn mower,overall,1472,805,54.7%
+debugger,youtube,lawn mower,head,500,106,21.2%
+debugger,youtube,lawn mower,mid,0,0,0.0%
+debugger,youtube,lawn mower,tail,972,699,71.9%

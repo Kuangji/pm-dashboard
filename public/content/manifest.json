@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-05-20T09:08:43.433Z",
+  "updatedAt": "2026-05-21T03:22:17.617Z",
   "navigation": {
     "docs": [
       {
@@ -3048,6 +3048,1150 @@
                             "slug": "03-research/channel-search-review/20260520-baby-supplement-us-agent/nox-youtube/tasks/task-0014.output.json",
                             "fileType": "json",
                             "language": "json",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "20260520-multi-keyword-us-youtube",
+                "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/README.md",
+                    "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/README.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "missing-data-audit.md",
+                    "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/missing-data-audit.md",
+                    "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/missing-data-audit.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "provider-fine-grained-summary.md",
+                    "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/provider-fine-grained-summary.md",
+                    "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/provider-fine-grained-summary.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "directory",
+                    "name": "baby-supplement",
+                    "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/README.md",
+                        "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "debugger-youtube",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/debugger-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/debugger-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/debugger-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/debugger-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/debugger-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/debugger-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/debugger-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/debugger-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/debugger-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/nox-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/nox-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "coffee-machine",
+                    "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/README.md",
+                        "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "debugger-youtube",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/debugger-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/debugger-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/debugger-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/debugger-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/debugger-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/debugger-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/debugger-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/debugger-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/debugger-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/nox-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/nox-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "fashion",
+                    "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/README.md",
+                        "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "debugger-youtube",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/debugger-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/debugger-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/debugger-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/debugger-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/debugger-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/debugger-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/debugger-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/debugger-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/debugger-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/nox-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/nox-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "lawn-mower",
+                    "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/README.md",
+                        "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "debugger-youtube",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/debugger-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/debugger-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/debugger-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/debugger-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/debugger-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/debugger-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/debugger-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/debugger-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/debugger-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/nox-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/nox-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "lifestyle",
+                    "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/README.md",
+                        "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "debugger-youtube",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/debugger-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/debugger-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/debugger-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/debugger-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/debugger-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/debugger-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/debugger-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/debugger-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/debugger-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/nox-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/nox-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "pet-food",
+                    "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/README.md",
+                        "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "debugger-youtube",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/debugger-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/debugger-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/debugger-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/debugger-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/debugger-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/debugger-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/debugger-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/debugger-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/debugger-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/nox-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/nox-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "power-bank",
+                    "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/README.md",
+                        "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "debugger-youtube",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/debugger-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/debugger-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/debugger-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/debugger-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/debugger-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/debugger-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/debugger-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/debugger-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/debugger-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/nox-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/nox-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "swim-vest",
+                    "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/README.md",
+                        "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "debugger-youtube",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/debugger-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/debugger-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/debugger-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/debugger-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/debugger-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/debugger-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/debugger-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/debugger-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/debugger-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/nox-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/nox-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "tech",
+                    "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/README.md",
+                        "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "debugger-youtube",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/debugger-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/debugger-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/debugger-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/debugger-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/debugger-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/debugger-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/debugger-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/debugger-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/debugger-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/nox-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/nox-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "vacuum-cleaner",
+                    "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/README.md",
+                        "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "debugger-youtube",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/debugger-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/debugger-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/debugger-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/debugger-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/debugger-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/debugger-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/debugger-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/debugger-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/debugger-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/nox-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/nox-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/nox-youtube/summary.md",
+                            "fileType": "markdown",
                             "isText": true,
                             "isImage": false
                           }
