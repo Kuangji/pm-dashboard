@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+xtb,youtube,fashion,overall,1500,163,10.9%
+xtb,youtube,fashion,head,500,21,4.2%
+xtb,youtube,fashion,mid,0,0,0.0%
+xtb,youtube,fashion,tail,1000,142,14.2%

@@ -1,0 +1,998 @@
+rank,channel_id,channel_name,channel_url,score,suggested_label,why_short
+5,UCw9UnS-amGQga3rhvzGqcYA,Super Krew,https://cn.noxinfluencer.com/youtube/channel/UCw9UnS-amGQga3rhvzGqcYA,5,badcase,儿童假装玩耍频道，虽有割草机标签但受众不匹配
+9,UC3EnCMGIwSqLUSlaYILlgxQ,Schneider & Son,https://cn.noxinfluencer.com/youtube/channel/UC3EnCMGIwSqLUSlaYILlgxQ,0,badcase,无标签无内容信号，难以承接推广
+13,UCU3gQGhk0lYK-fKOR0sopgg,CarsandCameras,https://cn.noxinfluencer.com/youtube/channel/UCU3gQGhk0lYK-fKOR0sopgg,0,badcase,赛车汽车为主，和割草机推广不相关
+20,UCi71_6BH_4IknooDc5BpRWA,Best Lawn Mowers,https://cn.noxinfluencer.com/youtube/channel/UCi71_6BH_4IknooDc5BpRWA,-10,badcase,足球娱乐标签占主导，和割草机推广不符
+21,UCDSfLlvgZ0cHNDpQdNfgGwg,Ariens,https://cn.noxinfluencer.com/youtube/channel/UCDSfLlvgZ0cHNDpQdNfgGwg,0,badcase,以雪吹机为主，和割草机推广关联弱
+22,UCNffHFfYVYE4xxkzpDXg96g,The G Automotive And More,https://cn.noxinfluencer.com/youtube/channel/UCNffHFfYVYE4xxkzpDXg96g,0,badcase,汽车维修频道，缺少草坪机械相关信号
+26,UCRYTHQdVVOy3EI_KBezw29A,Vintage Moments,https://cn.noxinfluencer.com/youtube/channel/UCRYTHQdVVOy3EI_KBezw29A,0,badcase,怀旧广告内容，和割草机推广人群不匹配
+27,UC-J9tlS17r5mLQ4aYiojV3Q,Lazy Grandpa's Garage,https://cn.noxinfluencer.com/youtube/channel/UC-J9tlS17r5mLQ4aYiojV3Q,0,badcase,缺少标签与内容证据，无法判断与割草机相关
+30,UCpH76SieU--EG2A11wxcq7g,He. Andrew,https://cn.noxinfluencer.com/youtube/channel/UCpH76SieU--EG2A11wxcq7g,-10,badcase,娱乐爽感内容为主，与割草机推广场景不符
+40,UCc9N-_S7WPpyLCPlJ3GZxbA,Cool Stuff Guys Like,https://cn.noxinfluencer.com/youtube/channel/UCc9N-_S7WPpyLCPlJ3GZxbA,2,badcase,仅有泛DIY/教程弱相关，缺少草坪护理或割草机推广证据
+51,UCwitivJMVE0CTWaG0j3b_-g,Lawn & Outdoors TV,https://cn.noxinfluencer.com/youtube/channel/UCwitivJMVE0CTWaG0j3b_-g,0,badcase,频道名相关但缺少标签、视频与近期内容证据，召回相关性不足
+52,UCFvj_I4oLmGjfkZmp5UNY7A,Air Ratchet Garage,https://cn.noxinfluencer.com/youtube/channel/UCFvj_I4oLmGjfkZmp5UNY7A,0,badcase,无标签、标题或近期内容支持割草机推广相关性
+55,UCUp9imM6sZqkgZw58hsQIZQ,Average Maintenance,https://cn.noxinfluencer.com/youtube/channel/UCUp9imM6sZqkgZw58hsQIZQ,1,badcase,仅有泛科技弱相关，无园艺、草坪护理或工具推广信号
+57,UC3CNQ02Jx_XV5HQF_gk4jcw,How To DIY Moore,https://cn.noxinfluencer.com/youtube/channel/UC3CNQ02Jx_XV5HQF_gk4jcw,0,badcase,汽车/DIY 频道，与 lawn mower 推广缺乏明确相关性
+58,UCH5_GxLN3mv0GmXZOoCllNg,BTECK,https://cn.noxinfluencer.com/youtube/channel/UCH5_GxLN3mv0GmXZOoCllNg,0,badcase,无标签无内容信号，无法判断与 lawn mower 推广相关
+67,UCvG-mX0rWIsKOQ_e6AvhCeA,Mow It Wells,https://cn.noxinfluencer.com/youtube/channel/UCvG-mX0rWIsKOQ_e6AvhCeA,5,badcase,有割草机词，但主内容是ASMR割草，偏娱乐不偏推广
+68,UCrFbpwEEYsRZDli-AEfCWFw,Square2448,https://cn.noxinfluencer.com/youtube/channel/UCrFbpwEEYsRZDli-AEfCWFw,5,badcase,农场模拟游戏频道，割草机只是在游戏语境中出现
+73,UCWU6gCZsOnmOP_ypWd_KNYA,D.R.C. Productions,https://cn.noxinfluencer.com/youtube/channel/UCWU6gCZsOnmOP_ypWd_KNYA,0,badcase,无标签无内容，缺少任何相关性证据
+76,UC5WEDSpOj5kotV7a7PJ1iMQ,Geo Programmer,https://cn.noxinfluencer.com/youtube/channel/UC5WEDSpOj5kotV7a7PJ1iMQ,0,badcase,仅有泛 DIY/教程标签，缺少割草机或 lawn care 语义
+78,UCXqgb_iVJtmE73ycq43ZZwA,Kid Crew,https://cn.noxinfluencer.com/youtube/channel/UCXqgb_iVJtmE73ycq43ZZwA,20,badcase,有直击标签，但 kids/toys 受众偏玩具场景，不适合人用割草机推广
+79,UCcDOwRJNmQZ54r583alacwA,GEAR TESTED,https://cn.noxinfluencer.com/youtube/channel/UCcDOwRJNmQZ54r583alacwA,0,badcase,汽车/拖车为主，和 lawn mower 推广关联很弱
+83,UCaQSXrk9g3aw-OBwxFmVPmg,Visack72,https://cn.noxinfluencer.com/youtube/channel/UCaQSXrk9g3aw-OBwxFmVPmg,0,badcase,泛娱乐/生活类，无 lawn mower 相关信号
+86,UCM29JpL4J9yvc4lAlQcw3yA,Arts3D,https://cn.noxinfluencer.com/youtube/channel/UCM29JpL4J9yvc4lAlQcw3yA,0,badcase,无标签、无内容信号，与 lawn mower 推广无关
+92,UCbFh-R_44sgVmohjMEPzmfQ,Something 2LookAt,https://cn.noxinfluencer.com/youtube/channel/UCbFh-R_44sgVmohjMEPzmfQ,5,badcase,虽命中割草机，但ASMR/沉浸式听感为主，产品推广不合适
+94,UC6zzlBIwNS9GJZZ3rBx_WhQ,Hudson's Playground Gaming,https://cn.noxinfluencer.com/youtube/channel/UC6zzlBIwNS9GJZZ3rBx_WhQ,5,badcase,命中割草机，但核心是游戏/模拟类内容，偏离真实产品推广
+101,UChxyqA6I6Q82GaQ4CZwRhFg,Nunki Rider,https://cn.noxinfluencer.com/youtube/channel/UChxyqA6I6Q82GaQ4CZwRhFg,0,badcase,无割草机相关信号，宠物/生活方式标签与人用推广不匹配
+112,UCdLp4p4hl9DJ1V7XUbLaBWw,Jack of All Trades,https://cn.noxinfluencer.com/youtube/channel/UCdLp4p4hl9DJ1V7XUbLaBWw,0,badcase,无标签无内容，缺少 lawn mower 相关信号
+116,UCMWlbh8hYOw3SjGcZNZvtsA,Mow It Wells Plus,https://cn.noxinfluencer.com/youtube/channel/UCMWlbh8hYOw3SjGcZNZvtsA,8,badcase,有直击词但核心是ASMR割草，偏娱乐展示，不适合投放
+117,UCZ9qhtRvSWLA_51iUDTNaRA,TW Review,https://cn.noxinfluencer.com/youtube/channel/UCZ9qhtRvSWLA_51iUDTNaRA,0,badcase,无草坪割草相关信号，泛生活科技频道
+135,UCxnRe3y0u35HnuYAp9FmBGQ,Hudson's Playground,https://cn.noxinfluencer.com/youtube/channel/UCxnRe3y0u35HnuYAp9FmBGQ,10,badcase,虽有lawn mower标签，但频道偏儿童拖拉机娱乐，推广格式不匹配
+143,UCoR95Wx8C_Jre7psvQ-3uog,WholeToolBox,https://cn.noxinfluencer.com/youtube/channel/UCoR95Wx8C_Jre7psvQ-3uog,0,badcase,无标签、无内容证据，无法判断为割草机推广相关
+153,UCEvU_rDmlMhA8sNpRnO5LBA,BS Electronics,https://cn.noxinfluencer.com/youtube/channel/UCEvU_rDmlMhA8sNpRnO5LBA,0,badcase,无有效相关标签，缺少推广适配信号
+157,UCK2nT-jak_BUjN6Av-Gdyvw,VielDan,https://cn.noxinfluencer.com/youtube/channel/UCK2nT-jak_BUjN6Av-Gdyvw,7,badcase,RC车为主，割草机仅弱标签，推广适配差
+164,UCYqkOsLhrN8s70gVb6vlaZg,Let's clean up,https://cn.noxinfluencer.com/youtube/channel/UCYqkOsLhrN8s70gVb6vlaZg,10,badcase,标签直击但内容是ASMR清理/割草，偏展示氛围而非促销购买
+169,UCkkj8VTmpWTU431qYX4_Svg,AJ Restorations,https://cn.noxinfluencer.com/youtube/channel/UCkkj8VTmpWTU431qYX4_Svg,8,badcase,虽有 lawn mower，但 ASMR/修复向不适合促销
+172,UCR42bif12ji2nbnbvqBI_jw,kaiz231,https://cn.noxinfluencer.com/youtube/channel/UCR42bif12ji2nbnbvqBI_jw,0,badcase,无标签无内容信号，无法支撑割草机推广相关性
+180,UCAu5CYcuVBoKLVa_DjtVCUg,Cleaning service ASMR,https://cn.noxinfluencer.com/youtube/channel/UCAu5CYcuVBoKLVa_DjtVCUg,5,badcase,ASMR 清洁格式与割草机推广不匹配，坏例
+188,UCirpK4EoQ1cn7_1Sys-EwEA,Kevin Nadeau,https://cn.noxinfluencer.com/youtube/channel/UCirpK4EoQ1cn7_1Sys-EwEA,20,badcase,仅标签命中割草机，但频道主体是汽车内容，推广相关性弱
+195,UC2AUc-4_yMsFHLfPP9Ub8ZA,George Fan,https://cn.noxinfluencer.com/youtube/channel/UC2AUc-4_yMsFHLfPP9Ub8ZA,0,badcase,无标签和内容信号，无法判断与割草机相关
+199,UCivi_f1nniBzEOfKhRoN12Q,Grind Hard Plumbing Co,https://cn.noxinfluencer.com/youtube/channel/UCivi_f1nniBzEOfKhRoN12Q,-3,badcase,以越野/赛车为主，和割草机推广场景明显不符
+201,UCB45XvGS6eatGBh7bVIIDUw,In HIS Name Custom Design Minister,https://cn.noxinfluencer.com/youtube/channel/UCB45XvGS6eatGBh7bVIIDUw,20,badcase,宗教频道为主，虽有机械词但割草机推广场景不匹配
+207,UCg-qup2vkWUPBZX9XgkJDDQ,Sakla TV,https://cn.noxinfluencer.com/youtube/channel/UCg-qup2vkWUPBZX9XgkJDDQ,-15,badcase,游戏频道，和割草机推广场景明显不符
+208,UC4_rmRLgOpIUKsTvuqBq1dw,Rick Mammana,https://cn.noxinfluencer.com/youtube/channel/UC4_rmRLgOpIUKsTvuqBq1dw,20,badcase,美食吃播为主，割草机标签更像引流，缺少推广相关内容
+210,UCDH1jJVDoEleFIsfVnX4pgA,The LawnFellas,https://cn.noxinfluencer.com/youtube/channel/UCDH1jJVDoEleFIsfVnX4pgA,5,badcase,虽有割草机标签，但ASMR解压格式不适合产品推广
+213,UCnM3Zz5cc2KkrWu_tnj0C7g,TechUtopia,https://cn.noxinfluencer.com/youtube/channel/UCnM3Zz5cc2KkrWu_tnj0C7g,0,badcase,无割草机语义，频道偏手机/游戏
+219,UCFdqO4QaUqUn_eeWwF1ieiA,AliExpress,https://cn.noxinfluencer.com/youtube/channel/UCFdqO4QaUqUn_eeWwF1ieiA,0,badcase,无相关标签或内容，和 lawn mower 推广不匹配
+221,UC8KyyhPfL4v2sZGbcGg7b7Q,Handyman Hal,https://cn.noxinfluencer.com/youtube/channel/UC8KyyhPfL4v2sZGbcGg7b7Q,0,badcase,无草坪割草相关标签，只有通用手工/育儿主题，相关性低
+236,UC2EraglPs-95qnKVrFq4kMA,Chase Brogan,https://cn.noxinfluencer.com/youtube/channel/UC2EraglPs-95qnKVrFq4kMA,-15,badcase,游戏频道与割草机推广场景强不相关
+237,UCf76T9N5p21HMDWhaWJzC2Q,Inventor K,https://cn.noxinfluencer.com/youtube/channel/UCf76T9N5p21HMDWhaWJzC2Q,3,badcase,仅有how-to/DIY泛标签，缺少割草机采购语境
+239,UC_jtZPMdxyAK8XysGbwW7ng,Bumbox Bum,https://cn.noxinfluencer.com/youtube/channel/UC_jtZPMdxyAK8XysGbwW7ng,0,badcase,无标签无内容证据，不适合割草机推广
+244,UCpra2LkCtiSQ67ypU05lfbQ,Valentine Lewis,https://cn.noxinfluencer.com/youtube/channel/UCpra2LkCtiSQ67ypU05lfbQ,0,badcase,前5标签偏美妆时尚，无割草机推广相关性
+251,UCDEOB38c2U8XYsFBq5Oo1mg,Freshly Charged,https://cn.noxinfluencer.com/youtube/channel/UCDEOB38c2U8XYsFBq5Oo1mg,0,badcase,电子/骑行评测号，和割草机用途不相关
+252,UCjMVmz06abZGVdWjd1mAMnQ,Tech With Brett,https://cn.noxinfluencer.com/youtube/channel/UCjMVmz06abZGVdWjd1mAMnQ,0,badcase,智能家居/科技号，缺少割草机购买或使用语境
+258,UCKnGI1rKPOu_IFnVHWvSXrQ,Davey Struggle,https://cn.noxinfluencer.com/youtube/channel/UCKnGI1rKPOu_IFnVHWvSXrQ,0,badcase,无割草机相关标签，偏泛DIY内容
+259,UCNU0zwdNogJjpDnkRhc2p0A,Mr. Inventor,https://cn.noxinfluencer.com/youtube/channel/UCNU0zwdNogJjpDnkRhc2p0A,0,badcase,无割草机相关标签，偏通用创意/技巧内容
+261,UCWpME6oSrCjyyNOnZYgXm7Q,ManShed,https://cn.noxinfluencer.com/youtube/channel/UCWpME6oSrCjyyNOnZYgXm7Q,0,badcase,标签偏泛，缺少草坪/割草机使用与购买语境。
+265,UCG7VPXT0QJEFth-9EMpuFnw,Bella and Jason,https://cn.noxinfluencer.com/youtube/channel/UCG7VPXT0QJEFth-9EMpuFnw,0,badcase,骑行健身内容为主，与割草机推广无关。
+269,UCcvDAKie2xh6pLK2p_qF-7g,TheFormalPickle,https://cn.noxinfluencer.com/youtube/channel/UCcvDAKie2xh6pLK2p_qF-7g,-15,badcase,以游戏模拟为主，和真实割草机推广场景不匹配
+273,UCClIEhn8S1qZ0cgH47fryQQ,WeldPro,https://cn.noxinfluencer.com/youtube/channel/UCClIEhn8S1qZ0cgH47fryQQ,-8,badcase,焊接工具频道，缺少园艺/割草机推广相关性
+275,UCus9H-X9vLMi6iKQj2OoI1g,Watson's Reviews,https://cn.noxinfluencer.com/youtube/channel/UCus9H-X9vLMi6iKQj2OoI1g,-15,badcase,医疗健康频道，与割草机推广明显不匹配
+277,UCqq7PB4na3W3TnvR9J07ZnQ,MemphisMower,https://cn.noxinfluencer.com/youtube/channel/UCqq7PB4na3W3TnvR9J07ZnQ,5,badcase,宠物/搞笑内容为主，虽有同名标签但与割草机推广不符
+280,UConQeJRfaLwJ9LbXBS5nhxQ,Charlie Berens,https://cn.noxinfluencer.com/youtube/channel/UConQeJRfaLwJ9LbXBS5nhxQ,-15,badcase,纯娱乐/喜剧频道，与产品推广场景不符
+281,UCE5kc_Sb_RKSD0d_rZ551nQ,Something Else2LookAt,https://cn.noxinfluencer.com/youtube/channel/UCE5kc_Sb_RKSD0d_rZ551nQ,5,badcase,含割草机词但ASMR/舒缓型内容，偏展示而非产品推广
+283,UC2qGzM7mSoXdYT5MacO1khw,Suburb Chartre,https://cn.noxinfluencer.com/youtube/channel/UC2qGzM7mSoXdYT5MacO1khw,0,badcase,无有效标签与近期内容，无法判断相关性
+285,UCtOzK8P5EPSKg6fLx0LJZOg,mycustomgokart,https://cn.noxinfluencer.com/youtube/channel/UCtOzK8P5EPSKg6fLx0LJZOg,0,badcase,机械爱好但无割草机线索，相关性弱
+289,UCjEZ2_9ho0_8vyoVjfVHAEg,Fentertainment,https://cn.noxinfluencer.com/youtube/channel/UCjEZ2_9ho0_8vyoVjfVHAEg,0,badcase,高尔夫球车主题与割草机推广不相关
+293,UCbBb4sTKvz0EOq-g0YGX82w,FIX Tech Guides,https://cn.noxinfluencer.com/youtube/channel/UCbBb4sTKvz0EOq-g0YGX82w,0,badcase,标签偏泛，无园艺、草坪护理或割草机推广相关证据
+295,UCPivGkDwFySKlZR_8nO8lGA,Valid Consumer,https://cn.noxinfluencer.com/youtube/channel/UCPivGkDwFySKlZR_8nO8lGA,-15,badcase,频道偏科技游戏相机，无园艺或割草机推广场景
+296,UCZ5m9YUHugIin4qxGRuSinQ,Jonathan Stewart,https://cn.noxinfluencer.com/youtube/channel/UCZ5m9YUHugIin4qxGRuSinQ,-8,badcase,宠物和食品内容域不适合割草机推广，仅有很弱兴趣/车辆泛相关
+297,UCe6NoDrzQTCyG1ZUFdMdRsg,Tripods Garage,https://cn.noxinfluencer.com/youtube/channel/UCe6NoDrzQTCyG1ZUFdMdRsg,0,badcase,频道聚焦3D打印/科技DIY，与割草机推广缺少相关场景
+299,UCPrfNyL7yN-15Q6Eu7UYkOA,TechTrends,https://cn.noxinfluencer.com/youtube/channel/UCPrfNyL7yN-15Q6Eu7UYkOA,-15,badcase,频道偏车辆/电子/电动自行车，缺少割草机或园林工具推广语境
+300,UCgqeVuybGGlZ3s42YLrTBZQ,Chicken Schmidt Farms,https://cn.noxinfluencer.com/youtube/channel/UCgqeVuybGGlZ3s42YLrTBZQ,-14,badcase,鸡养殖内容为主，仅有泛家居弱相关，不适合割草机推广
+302,UCzS3h055sSrgs57Zr6-zG8A,Nater Tater,https://cn.noxinfluencer.com/youtube/channel/UCzS3h055sSrgs57Zr6-zG8A,0,badcase,手机网络频道，与割草机无关
+306,UCW_nJOTeCUCgOTeqadhd2MA,Hawaii Detailing,https://cn.noxinfluencer.com/youtube/channel/UCW_nJOTeCUCgOTeqadhd2MA,0,badcase,汽车清洁垂类，和割草机推广关联弱
+307,UCdFYDm_incn_jvWs5N9mcLw,"Android,ios Gaming Channel",https://cn.noxinfluencer.com/youtube/channel/UCdFYDm_incn_jvWs5N9mcLw,-15,badcase,纯游戏内容，与割草机产品推广明显不匹配
+310,UCWVH1FryFHgIktQpFRpV9uQ,TOOL BOSS,https://cn.noxinfluencer.com/youtube/channel/UCWVH1FryFHgIktQpFRpV9uQ,0,badcase,泛兴趣账号，缺少割草机相关受众和内容
+312,UCooulUwMsi9jJpOz7wfYR5Q,OldSoulMillennial,https://cn.noxinfluencer.com/youtube/channel/UCooulUwMsi9jJpOz7wfYR5Q,0,badcase,仅有生活方式与爱好标签，缺少割草机相关信号
+313,UCzwXrpOfZPOQamgwIuBkfxQ,WT Creative,https://cn.noxinfluencer.com/youtube/channel/UCzwXrpOfZPOQamgwIuBkfxQ,1,badcase,仅有DIY弱相关，缺少园艺/割草机推广意图证据
+315,UCDtnOp7jxs-OxlHrYw6QTAg,IrixGuy's Adventure Channel,https://cn.noxinfluencer.com/youtube/channel/UCDtnOp7jxs-OxlHrYw6QTAg,0,badcase,内容偏杂且无割草机或园艺推广信号
+322,UCgp7vHIv7tuoOIVDChhgLqQ,Hard Working Man,https://cn.noxinfluencer.com/youtube/channel/UCgp7vHIv7tuoOIVDChhgLqQ,0,badcase,火柴/劈木内容为主，与 lawn mower 推广关联弱
+330,UCSavPw3cMUdBItSLBS0oeZg,dramanew,https://cn.noxinfluencer.com/youtube/channel/UCSavPw3cMUdBItSLBS0oeZg,0,badcase,无相关标签和内容，无法支持割草机推广
+332,UCxZ26XBfGn-TzdH-nbyQPew,Northern Tool,https://cn.noxinfluencer.com/youtube/channel/UCxZ26XBfGn-TzdH-nbyQPew,0,badcase,缺少割草机/园艺信号，主要是吃播和家具生活内容
+334,UC5CQjzcnUbPT774XzKHc8ow,Gadgets & Gravel,https://cn.noxinfluencer.com/youtube/channel/UC5CQjzcnUbPT774XzKHc8ow,0,badcase,偏科技测评，缺少园艺或割草机使用场景
+336,UCkV78IABdS4zD1eVgUpCmaw,KhanFlicks,https://cn.noxinfluencer.com/youtube/channel/UCkV78IABdS4zD1eVgUpCmaw,0,badcase,科技娱乐向，缺少草坪/割草机相关语义，不适合推广 lawn mower
+337,UCa_x0ZHqoAsKN13oIA_8z3Q,TylerTube,https://cn.noxinfluencer.com/youtube/channel/UCa_x0ZHqoAsKN13oIA_8z3Q,0,badcase,偏测试实验杂项，缺少草坪养护与割草机购买/使用语境
+338,UCDg2pH8s5AM-vMnwCVbeTbw,SoMuchTech,https://cn.noxinfluencer.com/youtube/channel/UCDg2pH8s5AM-vMnwCVbeTbw,0,badcase,泛科技频道，和 lawn mower 的草坪养护场景关联弱
+341,UCSFOWOgB_s52kkhzRaCS2gQ,MANSCAPED®,https://cn.noxinfluencer.com/youtube/channel/UCSFOWOgB_s52kkhzRaCS2gQ,5,badcase,男士理容频道，‘lawn mower’只是字面命中，和割草机推广不符
+342,UCipIUAbN3b1UdsbQ0Uv04Ng,"Beer, Booze & B.S.",https://cn.noxinfluencer.com/youtube/channel/UCipIUAbN3b1UdsbQ0Uv04Ng,5,badcase,播客故事娱乐向，标签命中但与割草机推广场景不符
+344,UCxgKr2SDkl9r5BULsJUrteg,Adams Reviews,https://cn.noxinfluencer.com/youtube/channel/UCxgKr2SDkl9r5BULsJUrteg,0,badcase,电子测评频道，缺少园艺/割草机相关语境
+347,UC4vrZI-aLygbhd0mvgeG1ow,Off The Path With Kevin,https://cn.noxinfluencer.com/youtube/channel/UC4vrZI-aLygbhd0mvgeG1ow,0,badcase,仅泛生活标签，缺少割草机相关受众与购买意图
+350,UC2MJc19aTAUJk7TrbPrMhEQ,eufy Official,https://cn.noxinfluencer.com/youtube/channel/UC2MJc19aTAUJk7TrbPrMhEQ,0,badcase,安防科技为主，和割草机促销缺少直接关联
+351,UCKEXOVmmOGQwdL6JltTXyJQ,Erlinonthedaily,https://cn.noxinfluencer.com/youtube/channel/UCKEXOVmmOGQwdL6JltTXyJQ,0,badcase,标签偏汽车日常vlog，与割草机推广场景无关，且无近期相关内容
+358,UCyE1iLKSXcdoeyS0b8T3log,BIG HEAD JUAN,https://cn.noxinfluencer.com/youtube/channel/UCyE1iLKSXcdoeyS0b8T3log,-15,badcase,游戏娱乐向，和割草机推广场景明显不符
+364,UCPXXG0mMXuNopVsb_9xoJDA,Satisfying Lawn Care Videos,https://cn.noxinfluencer.com/youtube/channel/UCPXXG0mMXuNopVsb_9xoJDA,-15,badcase,标签全是游戏剪辑，和割草机推广不符
+366,UCl3c8-e6-5HCULFb04Wt3Rg,Fondupot's Garage,https://cn.noxinfluencer.com/youtube/channel/UCl3c8-e6-5HCULFb04Wt3Rg,2,badcase,仅有泛DIY教程弱相关，缺少草坪/园艺/割草机推广语境
+367,UC4jRFRKHlxAvrz02IfvAfEw,Pro Picks,https://cn.noxinfluencer.com/youtube/channel/UC4jRFRKHlxAvrz02IfvAfEw,0,badcase,标签集中在数码/摄影/游戏，缺少园艺或草坪设备相关性
+373,UCOQKmRk1sXtKTljKMyLIUgw,DIRT BIKE  FAB. DBF garage.,https://cn.noxinfluencer.com/youtube/channel/UCOQKmRk1sXtKTljKMyLIUgw,-5,badcase,频道聚焦越野摩托/车辆改装，与割草机推广场景不符
+375,UCFgNxNVSxneyuGavnCxvr6A,Elite Rejects,https://cn.noxinfluencer.com/youtube/channel/UCFgNxNVSxneyuGavnCxvr6A,-25,badcase,频道以GTA游戏娱乐为主，与割草机产品推广明显不符
+376,UC-7HprBDSeQXf48YDoWEEBA,Scrap & Pallet Man,https://cn.noxinfluencer.com/youtube/channel/UC-7HprBDSeQXf48YDoWEEBA,0,badcase,垃圾捡拾频道，与割草机推广无关
+377,UCEuDivNXBimHIPBbwCgUT9A,Junebug Rancho,https://cn.noxinfluencer.com/youtube/channel/UCEuDivNXBimHIPBbwCgUT9A,-10,badcase,音乐娱乐频道，和割草机推广目标明显不符
+379,UCXElckAX7CBeTPbS4FaHUcw,ALL Electric ⚡️,https://cn.noxinfluencer.com/youtube/channel/UCXElckAX7CBeTPbS4FaHUcw,0,badcase,电动车/自行车频道，缺少割草机或园林设备推广相关信号
+381,UCOD5SV_Buv32Dxz1OQDhTzA,Shaws Garage,https://cn.noxinfluencer.com/youtube/channel/UCOD5SV_Buv32Dxz1OQDhTzA,0,badcase,偏汽机车内容，和割草机推广缺少场景
+383,UCXNipNRV-wL7p5Gq9wCc1Ng,The HOA Insider,https://cn.noxinfluencer.com/youtube/channel/UCXNipNRV-wL7p5Gq9wCc1Ng,0,badcase,无标签无内容，缺少可判断的推广相关性
+384,UCS3IKzxMf7uvVE4WP9xp2WA,Homegrown How To,https://cn.noxinfluencer.com/youtube/channel/UCS3IKzxMf7uvVE4WP9xp2WA,0,badcase,园艺相关但ASMR占主导，推广格式不匹配
+386,UCwODuUYQDnvU0gn9CQpr6PQ,FREEDOM SYNDICATE,https://cn.noxinfluencer.com/youtube/channel/UCwODuUYQDnvU0gn9CQpr6PQ,0,badcase,摩托/ATV 内容与割草机推广无关
+389,UC2XT2QmmEn0gOp-hwWR6GSQ,Tony Lee Glenn,https://cn.noxinfluencer.com/youtube/channel/UC2XT2QmmEn0gOp-hwWR6GSQ,0,badcase,音乐娱乐频道，缺少园艺/工具/购买意图信号
+394,UCnLS922iaOb7jV1qui4wXfA,Darrencarfan78,https://cn.noxinfluencer.com/youtube/channel/UCnLS922iaOb7jV1qui4wXfA,0,badcase,道路旅行/动画内容，和割草机推广几乎无关
+395,UCy-_QMNoc0FimS_ib3Pgu8Q,JRMSweeps,https://cn.noxinfluencer.com/youtube/channel/UCy-_QMNoc0FimS_ib3Pgu8Q,1,badcase,宠物/钓鱼生活向，和割草机产品推广关联很弱
+397,UCDcahqqC7brWaKvQISCKjWQ,Ben Huttash,https://cn.noxinfluencer.com/youtube/channel/UCDcahqqC7brWaKvQISCKjWQ,3,badcase,仅有泛化DIY/vehicle标签，缺少割草机或园艺购买信号
+398,UCtnKybmEdcAU8nRQeNpaQ9A,Paul Naylor,https://cn.noxinfluencer.com/youtube/channel/UCtnKybmEdcAU8nRQeNpaQ9A,1,badcase,以汽车维护为主，仅有泛化DIY关联，不适合割草机推广
+402,UCViCVCY-C-LPxkEEe5mYmWg,Works IRL,https://cn.noxinfluencer.com/youtube/channel/UCViCVCY-C-LPxkEEe5mYmWg,-13,badcase,汽车维修/车辆频道，泛工具DIY弱相关，不适合割草机推广
+403,UC0RpbAavOM8a1bBPIqeiOdA,Jason Fellon,https://cn.noxinfluencer.com/youtube/channel/UC0RpbAavOM8a1bBPIqeiOdA,-8,badcase,搞笑车库内容偏娱乐，推广割草机相关性弱
+405,UCa_Z9W0BnxH84UGk0Uw_PCw,buckets garage,https://cn.noxinfluencer.com/youtube/channel/UCa_Z9W0BnxH84UGk0Uw_PCw,-4,badcase,娱乐向车库内容为主，不是割草机购买或评测场景
+410,UCkW6Dn60emUHhtx-7dRSYrQ,Big O Reviewz & Vlogz,https://cn.noxinfluencer.com/youtube/channel/UCkW6Dn60emUHhtx-7dRSYrQ,0,badcase,Vlog/美食为主，和割草机推广场景偏离
+411,UCamdel_Kj-320C6npfwCptQ,Jack and Dan,https://cn.noxinfluencer.com/youtube/channel/UCamdel_Kj-320C6npfwCptQ,0,badcase,宠物/音乐/赌场生活向，和 lawn mower 无关
+415,UCwJ0MSnM3_3OGuekYGI6bzw,Homey Vibe,https://cn.noxinfluencer.com/youtube/channel/UCwJ0MSnM3_3OGuekYGI6bzw,1,badcase,美妆短视频为主，和 lawn mower 仅弱评测词相关
+416,UCQyv_eWgJftei6aYVuW4Wyw,OldGuyDIY,https://cn.noxinfluencer.com/youtube/channel/UCQyv_eWgJftei6aYVuW4Wyw,0,badcase,仅有泛兴趣/汽车/技术标签，缺少草坪机推广场景信号
+420,UC4TK8YvBjAeMacLpPDuRuLA,bbb jim1,https://cn.noxinfluencer.com/youtube/channel/UC4TK8YvBjAeMacLpPDuRuLA,0,badcase,汽车内容为主，和草坪机推广缺少工具/园艺相关信号
+422,UCnhRi05Uv2vwIY1nRMeyo4g,Tech Wave,https://cn.noxinfluencer.com/youtube/channel/UCnhRi05Uv2vwIY1nRMeyo4g,0,badcase,仅泛科技/车辆标签，无园艺割草机推广语境
+427,UCDHto5LdWLNt7lnhdeoQWtQ,Curiosity Insight,https://cn.noxinfluencer.com/youtube/channel/UCDHto5LdWLNt7lnhdeoQWtQ,-15,badcase,宠物狗频道，受众与人用割草机推广明显不符
+429,UC3QDmfJHwEyKAam957mwfYg,MilhausHD,https://cn.noxinfluencer.com/youtube/channel/UC3QDmfJHwEyKAam957mwfYg,0,badcase,无标签、无相关视频、无近期内容证据，无法支持割草机推广
+432,UCvC11Foh_jNc3PEpi-BJZuA,Boost Addict,https://cn.noxinfluencer.com/youtube/channel/UCvC11Foh_jNc3PEpi-BJZuA,0,badcase,伐木/火柴加工方向，和草坪割草推广关联很弱
+433,UCaaNNmuNW8MhaOhC_JzoHdg,Second Chance Mowers,https://cn.noxinfluencer.com/youtube/channel/UCaaNNmuNW8MhaOhC_JzoHdg,-15,badcase,标签主域为汽车/车辆，缺少草坪割草机推广相关信号
+435,UCb0rKbdwHkmR12t3XcidH_Q,HomeToy TV,https://cn.noxinfluencer.com/youtube/channel/UCb0rKbdwHkmR12t3XcidH_Q,15,badcase,玩具/手作受众为主，虽有割草机字样但不适合真机推广
+436,UCY9zQuadSnx_dUHqvaybpiw,SmallTownUSA,https://cn.noxinfluencer.com/youtube/channel/UCY9zQuadSnx_dUHqvaybpiw,-15,badcase,车赛/拆车内容，和割草机推广场景明显不符
+439,UCoqm_TXNsezEnlZIDgFexoQ,authentic mudflood network,https://cn.noxinfluencer.com/youtube/channel/UCoqm_TXNsezEnlZIDgFexoQ,0,badcase,旅行/反应类泛娱乐频道，与割草机无关
+442,UCJJ3ifF0RHXooRnZ-CReaSQ,DIY Homefront,https://cn.noxinfluencer.com/youtube/channel/UCJJ3ifF0RHXooRnZ-CReaSQ,0,badcase,无标签、无相关视频，缺少割草机推广相关性信号
+444,UCMcCAix0u6yIvFvRY6vpg3Q,Killer Fuzz,https://cn.noxinfluencer.com/youtube/channel/UCMcCAix0u6yIvFvRY6vpg3Q,-15,badcase,频道是钓鱼内容，与割草机推广场景明显不相关
+445,UCbrWhPB4b9bMQL7AWAZ0b2A,Wrenches and Rods,https://cn.noxinfluencer.com/youtube/channel/UCbrWhPB4b9bMQL7AWAZ0b2A,0,badcase,无标签无内容，缺乏割草机推广相关信号
+448,UCBIIQCeH_v8d67hlYOBVR_Q,Prime Technology HD,https://cn.noxinfluencer.com/youtube/channel/UCBIIQCeH_v8d67hlYOBVR_Q,-15,badcase,答题脑筋急转弯频道，和割草机推广无关
+449,UCM7y11leh5Bh6o1e4j3Pgcw,FAB Video's,https://cn.noxinfluencer.com/youtube/channel/UCM7y11leh5Bh6o1e4j3Pgcw,5,badcase,虽含关键词，但主内容是搞笑失败视频，不适合推广
+452,UC1EFJJJyXa0h11EA7tqIHBw,Tool Wizard,https://cn.noxinfluencer.com/youtube/channel/UC1EFJJJyXa0h11EA7tqIHBw,0,badcase,标签偏泛，缺少割草机/园艺工具相关内容，难支撑推广
+454,UCOClvgLYa7g75eIaTdwj_vg,Consumer Reports,https://cn.noxinfluencer.com/youtube/channel/UCOClvgLYa7g75eIaTdwj_vg,-14,badcase,频道以汽车测评为主，缺少割草机/园艺购买与评测信号
+457,UClDwrumr_89G3sDUWzCvKkw,JJ Merchant,https://cn.noxinfluencer.com/youtube/channel/UClDwrumr_89G3sDUWzCvKkw,0,badcase,标签与割草机推广无关，且无相关视频信号。
+461,UCzqBuhTIXYYTL1fSzaXvwnQ,Shanti Regan,https://cn.noxinfluencer.com/youtube/channel/UCzqBuhTIXYYTL1fSzaXvwnQ,-15,badcase,频道以木工/劈木为主，与割草机推广场景明显不符
+463,UCPdASqH1xPKz0vDODUagEFQ,iToolMax,https://cn.noxinfluencer.com/youtube/channel/UCPdASqH1xPKz0vDODUagEFQ,-10,badcase,以冬季除雪工具为主，和割草机推广场景不匹配
+464,UCeBqpDw4Qy2HCYQSNod8p0g,STA-BIL Brand,https://cn.noxinfluencer.com/youtube/channel/UCeBqpDw4Qy2HCYQSNod8p0g,0,badcase,无标签和内容证据，无法支持割草机推广相关性
+465,UCnr_X0CATlYWhYtCUR2aeMw,AverageAnthony,https://cn.noxinfluencer.com/youtube/channel/UCnr_X0CATlYWhYtCUR2aeMw,0,badcase,无草坪割草机相关标签或内容信号，无法支持推广
+469,UCEV0wvwOvj-qAhqwo4eZ5dw,DMAXRYNO,https://cn.noxinfluencer.com/youtube/channel/UCEV0wvwOvj-qAhqwo4eZ5dw,-10,badcase,车类频道与割草机推广场景不匹配，且无相关内容信号
+473,UC7ssYyYxo88laKkU0tW9j9A,ThunderHead289,https://cn.noxinfluencer.com/youtube/channel/UC7ssYyYxo88laKkU0tW9j9A,0,badcase,汽车拆修内容与割草机推广缺少直接购买/使用关联。
+475,UCFXMNYKKMkmBAxcDHu_94ag,whats next garage,https://cn.noxinfluencer.com/youtube/channel/UCFXMNYKKMkmBAxcDHu_94ag,1,badcase,仅有DIY弱相关，缺少草坪护理或割草机推广证据
+476,UCbbZ6amP-YlDQuKzU7IO1ew,"Me, Myself, and my Guitar",https://cn.noxinfluencer.com/youtube/channel/UCbbZ6amP-YlDQuKzU7IO1ew,0,badcase,偏车辆/维修杂项，和割草机推广无明确相关
+477,UCh5jBjwAxQHB4-IZL4c5o3g,Video introduce the latest products,https://cn.noxinfluencer.com/youtube/channel/UCh5jBjwAxQHB4-IZL4c5o3g,0,badcase,偏电子产品频道，割草机相关性弱，难支撑投放
+479,UCvU2CCCDyotDTu_Ivo9vdEw,LD-DIY,https://cn.noxinfluencer.com/youtube/channel/UCvU2CCCDyotDTu_Ivo9vdEw,0,badcase,泛DIY频道，缺少园艺机械或购买导向信号
+480,UCRiTr7Ltnss9GFVqz_COOeQ,Thoth Mark,https://cn.noxinfluencer.com/youtube/channel/UCRiTr7Ltnss9GFVqz_COOeQ,-15,badcase,游戏内容与割草机投放场景明显不符
+481,UC8KzTTDAZ2Nh1Z9zFANPpAg,How-To-Videos,https://cn.noxinfluencer.com/youtube/channel/UC8KzTTDAZ2Nh1Z9zFANPpAg,0,badcase,汽车类标签，和割草机推广受众不匹配
+482,UClnpoBjst8FNomTOX_ufKUQ,Weezy Weeds LLC,https://cn.noxinfluencer.com/youtube/channel/UClnpoBjst8FNomTOX_ufKUQ,0,badcase,无标签和内容证据，无法证明适合推广割草机
+483,UCGoYbhZutN7mBjAg-vnt0qQ,Turningwrenches85,https://cn.noxinfluencer.com/youtube/channel/UCGoYbhZutN7mBjAg-vnt0qQ,0,badcase,偏汽车维修，缺少草坪设备受众信号
+484,UCVRlycnid9oKzfpZMJHl0fQ,DOUG and NIKI,https://cn.noxinfluencer.com/youtube/channel/UCVRlycnid9oKzfpZMJHl0fQ,0,badcase,数码/无人机标签与割草机受众不符
+486,UC2F3CDcRRXeFV9z668-A60Q,Nick's Nonsense,https://cn.noxinfluencer.com/youtube/channel/UC2F3CDcRRXeFV9z668-A60Q,1,badcase,家居/DIY/乡村生活偏泛，和割草机仅弱相关
+489,UCGdlvCinfhtyPDfUCUmLPFQ,Lab Review,https://cn.noxinfluencer.com/youtube/channel/UCGdlvCinfhtyPDfUCUmLPFQ,0,badcase,无标签、无相关视频，缺少割草机推广相关性
+490,UCiCk1qL1UUnFDjRNx1vPJdg,TechnologyX AI,https://cn.noxinfluencer.com/youtube/channel/UCiCk1qL1UUnFDjRNx1vPJdg,1,badcase,科技机器人号，缺少割草机的购买/评测/使用场景
+492,UCmX5Y6oTf-TOG5k-0NwWweQ,Robert's Video Machine,https://cn.noxinfluencer.com/youtube/channel/UCmX5Y6oTf-TOG5k-0NwWweQ,1,badcase,仅有泛车辆/DIY氛围，无草坪护理或割草机推广意图
+495,UCKkI79ZR7iqzYjwpp_YIJNg,sg media,https://cn.noxinfluencer.com/youtube/channel/UCKkI79ZR7iqzYjwpp_YIJNg,-15,badcase,动物自然内容为主，与割草机推广场景明显不符。
+498,UC25TmsJidl31Hbf5PVckK8Q,Kevin The Tech Ninja,https://cn.noxinfluencer.com/youtube/channel/UC25TmsJidl31Hbf5PVckK8Q,1,badcase,仅有 vehicle 这类泛标签，和割草机推广关联弱
+499,UCWj-DivD_-OePBvh2HAQqQQ,My Lawn Story,https://cn.noxinfluencer.com/youtube/channel/UCWj-DivD_-OePBvh2HAQqQQ,0,badcase,无标签、标题或近期内容证据支持割草机推广相关性
+4552,UCN3rhkHmloHwqgat8LHk2yg,Angry Cops,https://cn.noxinfluencer.com/youtube/channel/UCN3rhkHmloHwqgat8LHk2yg,-15,badcase,军政娱乐向频道，与草坪割草机推广场景明显不符
+4553,UCN467fmgLLlk98JddJLL51w,FordTechMakuloco,https://cn.noxinfluencer.com/youtube/channel/UCN467fmgLLlk98JddJLL51w,0,badcase,汽车维修频道，与割草机推广场景不匹配，缺少园艺或割草机相关信号
+4554,UCN46oZGvFWh_dteGrUSTA1A,Best Reviews,https://cn.noxinfluencer.com/youtube/channel/UCN46oZGvFWh_dteGrUSTA1A,0,badcase,无标签、无相关视频，缺少割草机推广相关性证据
+4555,UCN58-L5qQx2vf_tJJddVdFA,Mike Harie,https://cn.noxinfluencer.com/youtube/channel/UCN58-L5qQx2vf_tJJddVdFA,0,badcase,无相关标签、视频或近期内容证据，不适合割草机推广
+4556,UCN5cy2kvN3ZL_3nkNS0KHWQ,Turtledud3,https://cn.noxinfluencer.com/youtube/channel/UCN5cy2kvN3ZL_3nkNS0KHWQ,0,badcase,无标签与割草机相关性，缺少任何推广场景信号
+4557,UCN5vooKqMU5vBh3waQ-5bww,The Clay Way,https://cn.noxinfluencer.com/youtube/channel/UCN5vooKqMU5vBh3waQ-5bww,-5,badcase,车辆娱乐向频道，与割草机推广缺少明确购买或使用场景
+4558,UCN6bep8dhKQzJSfVub-7T_A,Scotch Tape,https://cn.noxinfluencer.com/youtube/channel/UCN6bep8dhKQzJSfVub-7T_A,0,badcase,无标签与割草机相关性，缺少推广适配信号
+4559,UCN7k_79KhHvF88TuBfWXJ4g,Cinehub Picture,https://cn.noxinfluencer.com/youtube/channel/UCN7k_79KhHvF88TuBfWXJ4g,-15,badcase,影视娱乐频道，和割草机产品推广明显不符
+4560,UCN7t-A2eB5ryyTvFgCzfV5g,Find Da Fun,https://cn.noxinfluencer.com/youtube/channel/UCN7t-A2eB5ryyTvFgCzfV5g,-15,badcase,游戏频道为主，和割草机推广场景完全不符
+4561,UCN8CcTk-qslE93W2VZzID9A,AmazonLovesMe,https://cn.noxinfluencer.com/youtube/channel/UCN8CcTk-qslE93W2VZzID9A,0,badcase,缺少标签和近期内容，无法判断与割草机推广的相关性
+4562,UCN8TPi8Nj-EPBT2S4q4zS8A,Big Cat Ranch,https://cn.noxinfluencer.com/youtube/channel/UCN8TPi8Nj-EPBT2S4q4zS8A,0,badcase,仅有频道名暗示牧场，缺少可用标签与近期内容证据
+4564,UCNA0Q_1yQVzez6I3qSeJPNg,MILTON FIRE & RESCUE,https://cn.noxinfluencer.com/youtube/channel/UCNA0Q_1yQVzez6I3qSeJPNg,-15,badcase,消防救援内容与割草机推广场景明显不匹配
+4565,UCNA1ErXKbBPruO4keB9XjTg,Kalle Beck,https://cn.noxinfluencer.com/youtube/channel/UCNA1ErXKbBPruO4keB9XjTg,0,badcase,健身强人内容与割草机推广关联弱，缺少购买/使用场景
+4566,UCNA5ZJO2nvDVjOgLIuXsLTg,WheeNC DIY - Reviews & More,https://cn.noxinfluencer.com/youtube/channel/UCNA5ZJO2nvDVjOgLIuXsLTg,0,badcase,无标签、标题或召回视频证据支持割草机推广相关性
+4567,UCNAs1q_IOizyVS3ds8FkTmw,Trail Of An Ole Kentucky Girl,https://cn.noxinfluencer.com/youtube/channel/UCNAs1q_IOizyVS3ds8FkTmw,0,badcase,频道信息为空，无法支撑割草机推广判断
+4569,UCND_2Ke3tDZ8fO3FnGnSbAw,What's Uptin?,https://cn.noxinfluencer.com/youtube/channel/UCND_2Ke3tDZ8fO3FnGnSbAw,0,badcase,旅游娱乐向，和割草机推广目标不匹配
+4570,UCNEUwPbay41SRoH39VdRaxQ,AnimeRoll,https://cn.noxinfluencer.com/youtube/channel/UCNEUwPbay41SRoH39VdRaxQ,0,badcase,动漫娱乐向，和割草机推广目标不匹配
+4571,UCNEZwnzjJ4wlw5661r8Cu6w,prankcallcity,https://cn.noxinfluencer.com/youtube/channel/UCNEZwnzjJ4wlw5661r8Cu6w,0,badcase,无相关标签和内容，缺少割草机推广所需语境
+4572,UCNE_wXV-ZXb-JsqHMweL7jQ,IDogFan41,https://cn.noxinfluencer.com/youtube/channel/UCNE_wXV-ZXb-JsqHMweL7jQ,-5,badcase,宠物/机器人/音乐频道，无园艺或割草机推广相关性
+4573,UCNFi3_8_fVaGvceC6T2iNsA,DW's Southern Cooking BBQ & Camping Adventures,https://cn.noxinfluencer.com/youtube/channel/UCNFi3_8_fVaGvceC6T2iNsA,0,badcase,户外冒险向，但未见园艺、工具或产品测评信号
+4574,UCNFoDvN7H5FmO2wzjhoBRFg,Strange Tech,https://cn.noxinfluencer.com/youtube/channel/UCNFoDvN7H5FmO2wzjhoBRFg,2,badcase,仅有泛科技/爱好弱相关，无园艺或割草机推广意图
+4575,UCNHKu-bGD-bZLjwnaq54LKw,The Carolina Cadman Outdoors,https://cn.noxinfluencer.com/youtube/channel/UCNHKu-bGD-bZLjwnaq54LKw,-10,badcase,狩猎内容与割草机推广人群明显不匹配
+4576,UCNHPCpZxOh1-iIcNI8did9A,NoFate247,https://cn.noxinfluencer.com/youtube/channel/UCNHPCpZxOh1-iIcNI8did9A,0,badcase,健身家居频道，与割草机推广场景无关
+4578,UCNIdQ-YVVBInCxQOTjNbBIQ,Mark Monlux,https://cn.noxinfluencer.com/youtube/channel/UCNIdQ-YVVBInCxQOTjNbBIQ,0,badcase,无标签、无相关视频，缺少园艺/工具推广信号
+4579,UCNJ5l21uPRLh_DrSdmQHYUA,Rob's Garage,https://cn.noxinfluencer.com/youtube/channel/UCNJ5l21uPRLh_DrSdmQHYUA,0,badcase,无标签和视频证据，无法支持割草机产品推广相关性
+4580,UCNJ9rzk2tkXS6yNTvbT07Rg,Kos Rentyuk,https://cn.noxinfluencer.com/youtube/channel/UCNJ9rzk2tkXS6yNTvbT07Rg,0,badcase,无标签、无相关视频与近期内容，缺少割草机推广相关性
+4582,UCNK9PkyIhZqDtUYizT1BYhA,Explore Abandoned Places With TattooTonyAlton,https://cn.noxinfluencer.com/youtube/channel/UCNK9PkyIhZqDtUYizT1BYhA,-15,badcase,废墟探险内容与割草机推广场景明显不符
+4583,UCNL2iABgDn_boD4j_WYsi8A,Quick Tips,https://cn.noxinfluencer.com/youtube/channel/UCNL2iABgDn_boD4j_WYsi8A,-14,badcase,汽车类频道，缺少园艺割草机推广相关信号
+4584,UCNMHb8CYuzSSsfBRc8Kj8rQ,Kendallville TV,https://cn.noxinfluencer.com/youtube/channel/UCNMHb8CYuzSSsfBRc8Kj8rQ,0,badcase,无标签无内容，缺少任何相关性证据
+4585,UCNMhaZT3GckcL5Gq6E8h1mA,Jana Hines,https://cn.noxinfluencer.com/youtube/channel/UCNMhaZT3GckcL5Gq6E8h1mA,0,badcase,无标签无内容，缺少任何相关性证据
+4586,UCNN9HrsyAY5DOzOrLZ6B4aQ,Forgotten Black History,https://cn.noxinfluencer.com/youtube/channel/UCNN9HrsyAY5DOzOrLZ6B4aQ,0,badcase,历史文化频道，与割草机推广无关
+4587,UCNNiFNjPhdoPvdlgrltZIRA,VIRAL STORIES,https://cn.noxinfluencer.com/youtube/channel/UCNNiFNjPhdoPvdlgrltZIRA,-15,badcase,娱乐短视频为主，产品推广场景不匹配
+4588,UCNNniVcJmxIl0gSfjMH2CWw,Growth Architecture,https://cn.noxinfluencer.com/youtube/channel/UCNNniVcJmxIl0gSfjMH2CWw,0,badcase,商业访谈号，和园林工具受众不搭
+4590,UCNOUcXN-JjY6P2OwyTE_daQ,The Enterprise World,https://cn.noxinfluencer.com/youtube/channel/UCNOUcXN-JjY6P2OwyTE_daQ,0,badcase,企业杂志号，和割草机促销几乎无关
+4591,UCNOkG5sJie7fnkw_bnvlkQA,Choose Wisely,https://cn.noxinfluencer.com/youtube/channel/UCNOkG5sJie7fnkw_bnvlkQA,0,badcase,无标签、无视频证据，与割草机推广无相关性
+4592,UCNOsm1Xq_tdrBXWyYGSSg6g,The HVAC Hacker,https://cn.noxinfluencer.com/youtube/channel/UCNOsm1Xq_tdrBXWyYGSSg6g,2,badcase,频道主轴是 HVAC 维修，仅有泛维修/家居弱相关，缺少割草机推广语境
+4593,UCNP-8sTozaiq-0H2FDI1o1Q,WHATS NEXT ????,https://cn.noxinfluencer.com/youtube/channel/UCNP-8sTozaiq-0H2FDI1o1Q,0,badcase,无标签无内容，缺乏割草机相关推广信号
+4594,UCNPqQ6owgF-2v_4TQ-j2NWA,Old Timer Outdoors,https://cn.noxinfluencer.com/youtube/channel/UCNPqQ6owgF-2v_4TQ-j2NWA,1,badcase,仅有泛化户外标签，偏狩猎内容，与割草机推广场景不匹配
+4595,UCNRBx0ZKOBo4f2MqL3x82jw,Brian E. Niskala,https://cn.noxinfluencer.com/youtube/channel/UCNRBx0ZKOBo4f2MqL3x82jw,0,badcase,标签偏泛，缺少割草机购买或使用相关信号，推广匹配度低
+4596,UCNRXHwAfOsAANg5tx4r-G2A,WARE Boilers,https://cn.noxinfluencer.com/youtube/channel/UCNRXHwAfOsAANg5tx4r-G2A,0,badcase,锅炉/蒸汽工业内容，与草坪割草机推广无关
+4598,UCNTEZXxZrOwKlsCFH5IP9kw,Ms. Random Reviews,https://cn.noxinfluencer.com/youtube/channel/UCNTEZXxZrOwKlsCFH5IP9kw,0,badcase,无标签且无内容信号，缺乏相关性
+4600,UCNTjodpHAF-oeA2Ny-VrZtw,Jasper’s Story,https://cn.noxinfluencer.com/youtube/channel/UCNTjodpHAF-oeA2Ny-VrZtw,-10,badcase,故事类频道，偏叙事娱乐，不适合产品推广
+4601,UCNU6GMHFEMQ0GX_Hs_zPihA,Vidsage,https://cn.noxinfluencer.com/youtube/channel/UCNU6GMHFEMQ0GX_Hs_zPihA,-15,badcase,娱乐短视频标签为主，和割草机推广目的明显不符
+4603,UCNUUJPqGGno56q4vKXDyHUw,Drey TheGamer,https://cn.noxinfluencer.com/youtube/channel/UCNUUJPqGGno56q4vKXDyHUw,-15,badcase,游戏模拟频道，和实物割草机推广无关
+4604,UCNUxxSqGpSLvaiYXtpz-hNw,Shepherd Wolf // MinecraftPro97k,https://cn.noxinfluencer.com/youtube/channel/UCNUxxSqGpSLvaiYXtpz-hNw,-10,badcase,名称指向Minecraft游戏，缺乏割草机推广相关信号
+4605,UCNV-6oZ6g0YwNc74X1YCebQ,DIY Holic,https://cn.noxinfluencer.com/youtube/channel/UCNV-6oZ6g0YwNc74X1YCebQ,0,badcase,无标签、无相关视频或近期内容，缺少割草机推广相关证据
+4607,UCNVTFmdUrrZL5D9MSa6nZhw,Total OutLet,https://cn.noxinfluencer.com/youtube/channel/UCNVTFmdUrrZL5D9MSa6nZhw,0,badcase,无频道标签、相关标题或近期内容，缺乏割草机推广相关性
+4608,UCNWtvIz7dr2W5DTAsSREsvg,Rose-Mechanical,https://cn.noxinfluencer.com/youtube/channel/UCNWtvIz7dr2W5DTAsSREsvg,-9,badcase,偏车辆摩托维修，无割草机或园艺设备推广语境
+4610,UCNXKOn8IL3XgK3T1_cPATew,Hans Moore,https://cn.noxinfluencer.com/youtube/channel/UCNXKOn8IL3XgK3T1_cPATew,0,badcase,脸绘娱乐向，和割草机投放场景不相关
+4611,UCNXvxXpDJXp-mZu3pFMzYHQ,Our Changing Climate,https://cn.noxinfluencer.com/youtube/channel/UCNXvxXpDJXp-mZu3pFMzYHQ,0,badcase,环保视频散文频道，与草坪机推广场景不匹配
+4612,UCNY1xBQAbE89io5cQvlMtsg,My Tiny Garage,https://cn.noxinfluencer.com/youtube/channel/UCNY1xBQAbE89io5cQvlMtsg,-1,badcase,无标签、无相关视频证据，无法支持割草机产品推广
+4613,UCNZ7jIkhzZp6sM8D2Kl4h1g,Health and beauty Reviews,https://cn.noxinfluencer.com/youtube/channel/UCNZ7jIkhzZp6sM8D2Kl4h1g,0,badcase,健康美妆评测向，和草坪机受众不一致
+4614,UCNZDemPm3NOMotttogSIh5w,Desert Explorer 302,https://cn.noxinfluencer.com/youtube/channel/UCNZDemPm3NOMotttogSIh5w,0,badcase,无园艺、草坪护理或割草机推广相关信号
+4615,UCN_r5o1Be7iKNQZTcDnHLSg,GQ Real Estate,https://cn.noxinfluencer.com/youtube/channel/UCN_r5o1Be7iKNQZTcDnHLSg,0,badcase,无标签、视频或近期内容证据支持割草机推广相关性
+4616,UCNaDDtVHCsld-0ImjCC_tzw,Single mom Mechanical,https://cn.noxinfluencer.com/youtube/channel/UCNaDDtVHCsld-0ImjCC_tzw,0,badcase,无标签和内容信号，缺少与割草机推广相关的受众或场景
+4617,UCNaDF4DohSzgDbTF5Z5JxGA,Xforceguy,https://cn.noxinfluencer.com/youtube/channel/UCNaDF4DohSzgDbTF5Z5JxGA,-5,badcase,娱乐向频道，缺少割草机相关场景或购买/评测信号
+4618,UCNaVoLaRZK0MrD8rP62d4ow,Diesel Legiance - Garage & Adventure!,https://cn.noxinfluencer.com/youtube/channel/UCNaVoLaRZK0MrD8rP62d4ow,0,badcase,频道偏车辆/越野生活，缺少园艺或工具购买语境
+4619,UCNb1bAhw0WVgDVKaG-in8Yw,JunkedUpKitten,https://cn.noxinfluencer.com/youtube/channel/UCNb1bAhw0WVgDVKaG-in8Yw,-10,badcase,宠物频道，与割草机推广人群不匹配
+4620,UCNc3jQAZKphqMOx5qg8zugA,Creative Curation by Kate,https://cn.noxinfluencer.com/youtube/channel/UCNc3jQAZKphqMOx5qg8zugA,0,badcase,无标签和视频相关信号，无法支持草坪割草机推广
+4621,UCNcrBlfUJ9AuIb9Eb2P64ww,Chris Williams,https://cn.noxinfluencer.com/youtube/channel/UCNcrBlfUJ9AuIb9Eb2P64ww,2,badcase,偏汽车/机械杂谈，仅有发动机类弱相关，缺少割草机购买语境
+4622,UCNcvt5do03qcy577xmWQfdw,Pura Folsom,https://cn.noxinfluencer.com/youtube/channel/UCNcvt5do03qcy577xmWQfdw,0,badcase,无标签无内容信号，与割草机推广无关
+4623,UCNdkXcdGT17f-mS_PnByvkA,Driftwood Music,https://cn.noxinfluencer.com/youtube/channel/UCNdkXcdGT17f-mS_PnByvkA,-9,badcase,偏生存/新闻话题，和割草机商品推广场景不符
+4624,UCNeJT-myUaHT-YdOyHIB_kA,Coleen Sews & Chats,https://cn.noxinfluencer.com/youtube/channel/UCNeJT-myUaHT-YdOyHIB_kA,-10,badcase,缝纫ASMR频道，属于强格式不匹配
+4625,UCNeLxcK09ZnpQIggO1KnJ1A,WinterMG,https://cn.noxinfluencer.com/youtube/channel/UCNeLxcK09ZnpQIggO1KnJ1A,-15,badcase,纯游戏频道，与割草机推广完全不符
+4628,UCNfK001ZTSwGe9LJ5gVSJww,Ray Roman,https://cn.noxinfluencer.com/youtube/channel/UCNfK001ZTSwGe9LJ5gVSJww,-15,badcase,娱乐喜剧内容为主，属于明显不适合的推广格式
+4630,UCNfsoRAJn5I2clwQtqngGow,GameZine,https://cn.noxinfluencer.com/youtube/channel/UCNfsoRAJn5I2clwQtqngGow,-15,badcase,游戏娱乐内容为主，与草坪机这类实体产品推广不匹配
+4631,UCNhWbB3fyYtUFFez9Mqs7Sg,CHEST'ER LIFE,https://cn.noxinfluencer.com/youtube/channel/UCNhWbB3fyYtUFFez9Mqs7Sg,1,badcase,仅有DIY弱相关，缺少草坪护理或割草机推广语境
+4632,UCNhkGpSySgw7OWAKAuRRseQ,Swimming in the Deep,https://cn.noxinfluencer.com/youtube/channel/UCNhkGpSySgw7OWAKAuRRseQ,-15,badcase,泳池水疗频道，与割草机推广场景不匹配
+4633,UCNhmOF-7XMymHPT-oWHLpuQ,NCALIB,https://cn.noxinfluencer.com/youtube/channel/UCNhmOF-7XMymHPT-oWHLpuQ,-15,badcase,音乐/无版权音乐为主，属于明显推广格式不适配
+4634,UCNir0Bxv9coISE7D3pr1I2w,Caleb’s Gaming World,https://cn.noxinfluencer.com/youtube/channel/UCNir0Bxv9coISE7D3pr1I2w,-10,badcase,游戏频道与割草机产品推广场景不匹配
+4635,UCNj0Yau_lcKsr7tGIuo6P2g,The Battle Family,https://cn.noxinfluencer.com/youtube/channel/UCNj0Yau_lcKsr7tGIuo6P2g,-5,badcase,家庭娱乐运动宠物频道，缺少园艺割草机推广语境
+4637,UCNkETBwkARrGDx-G7P-jLJg,BUZZR,https://cn.noxinfluencer.com/youtube/channel/UCNkETBwkARrGDx-G7P-jLJg,-15,badcase,以游戏节目娱乐为主，与割草机推广场景无关
+4638,UCNkhSr8Lks45eIPKQqYbBXA,Kris Aguilar,https://cn.noxinfluencer.com/youtube/channel/UCNkhSr8Lks45eIPKQqYbBXA,0,badcase,无标签、无相关视频和近期内容，缺少割草机推广相关证据
+4639,UCNl7tte5b1iOhVt9URTse9Q,BELLA ROSE CHANNEL,https://cn.noxinfluencer.com/youtube/channel/UCNl7tte5b1iOhVt9URTse9Q,-1,badcase,美食生活频道，无园艺或割草机推广相关信号
+4640,UCNm0lESU_elO6tLdnpzJhJA,Brodie Morrison,https://cn.noxinfluencer.com/youtube/channel/UCNm0lESU_elO6tLdnpzJhJA,0,badcase,无标签和内容证据，无法支持割草机推广相关性
+4641,UCNm2EPE31WFCO0r5Yniiv4g,BAM Racing Videos,https://cn.noxinfluencer.com/youtube/channel/UCNm2EPE31WFCO0r5Yniiv4g,0,badcase,赛车体育向，和割草机推广场景不匹配
+4642,UCNmT3zkQj2A5V3Dq6tWejpw,Valdez Ventures,https://cn.noxinfluencer.com/youtube/channel/UCNmT3zkQj2A5V3Dq6tWejpw,0,badcase,无标签、标题或近期内容证据，无法支持割草机推广相关性
+4643,UCNmbiSN1kj47lyJVOEgKBgg,BYU Universe,https://cn.noxinfluencer.com/youtube/channel/UCNmbiSN1kj47lyJVOEgKBgg,-10,badcase,社会宗教体育频道，与割草机推广场景不匹配
+4644,UCNn3RDttD-GdhB1anX4sVEA,Smart Machinery Explorer,https://cn.noxinfluencer.com/youtube/channel/UCNn3RDttD-GdhB1anX4sVEA,0,badcase,缺少标签与视频证据，无法判断适合割草机推广
+4645,UCNnaa3wOREFWNT0VtFwCUXw,Steininger family.,https://cn.noxinfluencer.com/youtube/channel/UCNnaa3wOREFWNT0VtFwCUXw,2,badcase,娱乐音乐向，只有泛生活爱好标签，难支撑推广
+4646,UCNnamAtgJS-hIUkgwFzx3yA,The Leak Doctor with John Stephenson,https://cn.noxinfluencer.com/youtube/channel/UCNnamAtgJS-hIUkgwFzx3yA,1,badcase,仅有管道/工具泛词，和割草机推广关联很弱
+4647,UCNodyF2xvWBrmtKk_Jht5ZQ,H&S Automotive,https://cn.noxinfluencer.com/youtube/channel/UCNodyF2xvWBrmtKk_Jht5ZQ,-15,badcase,汽车维修频道，受众与割草机推广明显错位
+4649,UCNpVGE8hjXDUaqfJs6fM-fQ,Sweet Angel MTV,https://cn.noxinfluencer.com/youtube/channel/UCNpVGE8hjXDUaqfJs6fM-fQ,-15,badcase,纯音乐/娱乐频道，属于明显格式错配
+4650,UCNpv8ESwyf3iyiYAZPzGogw,GoAsFarAsYouCanSee,https://cn.noxinfluencer.com/youtube/channel/UCNpv8ESwyf3iyiYAZPzGogw,0,badcase,内容过于泛化，缺少割草机相关购买或使用信号
+4651,UCNqJmP8jAVGF16QNvQwTf8w,Hackers50Maker,https://cn.noxinfluencer.com/youtube/channel/UCNqJmP8jAVGF16QNvQwTf8w,0,badcase,RC娱乐内容，和割草机购买/使用场景不符
+4652,UCNqMU1FnvHOEt80fxx87eQA,Mike Duwe,https://cn.noxinfluencer.com/youtube/channel/UCNqMU1FnvHOEt80fxx87eQA,0,badcase,赛车/生活方式频道，缺少园艺或工具购买信号
+4653,UCNqf6cy5TLNeBV5cF3yKY8A,Taylor Ray,https://cn.noxinfluencer.com/youtube/channel/UCNqf6cy5TLNeBV5cF3yKY8A,1,badcase,赛车改装为主，只有泛化tool，和割草机弱相关
+4654,UCNqm8bcdCKD6AaaYFrHRO5Q,Inspiring Yard,https://cn.noxinfluencer.com/youtube/channel/UCNqm8bcdCKD6AaaYFrHRO5Q,0,badcase,无标签、相关视频或近期内容证据，无法支持割草机推广
+4655,UCNrT-lKe7r-Qi2KHQR109WQ,TurboFan,https://cn.noxinfluencer.com/youtube/channel/UCNrT-lKe7r-Qi2KHQR109WQ,0,badcase,无相关标签或内容线索，难支持割草机推广
+4656,UCNrhacmqJHnrdp7PuLa3mJA,Scottimus Coffield,https://cn.noxinfluencer.com/youtube/channel/UCNrhacmqJHnrdp7PuLa3mJA,0,badcase,无相关标签且无视频信号，难以匹配割草机推广
+4657,UCNsZOz2Fy6ZJu-XbO6V00wA,ChrisBassettDIY,https://cn.noxinfluencer.com/youtube/channel/UCNsZOz2Fy6ZJu-XbO6V00wA,-15,badcase,游戏内容为主，与割草机推广场景明显不符
+4659,UCNu4a7Y38t7gfquzDDMhzeA,66Oliver,https://cn.noxinfluencer.com/youtube/channel/UCNu4a7Y38t7gfquzDDMhzeA,0,badcase,vehicle/lifestyle/hobby 过泛，缺少园艺或家居工具相关性
+4660,UCNwBe7dEAZz3XKKNT1C1XgA,Chilly Moose,https://cn.noxinfluencer.com/youtube/channel/UCNwBe7dEAZz3XKKNT1C1XgA,0,badcase,无相关标签与视频信号，匹配度低
+4661,UCNwDP_EJ1zuS5gzOwvxeF6Q,TocoTV,https://cn.noxinfluencer.com/youtube/channel/UCNwDP_EJ1zuS5gzOwvxeF6Q,-15,badcase,娱乐宠物频道，缺少园艺/割草语境且推广格式不合
+4662,UCNyHsf-B4lg-twSTk4EHT0A,HOT PRODUCT,https://cn.noxinfluencer.com/youtube/channel/UCNyHsf-B4lg-twSTk4EHT0A,0,badcase,无标签无内容，无法判断与割草机推广的相关性
+4663,UCNzG61Bzo2v-D7g3mSd2g0Q,Aarron and Renee Franklin Ranch,https://cn.noxinfluencer.com/youtube/channel/UCNzG61Bzo2v-D7g3mSd2g0Q,-8,badcase,仅生活/兴趣弱相关，主标签偏美容健康，缺少园艺割草推广意图
+4664,UCNzitVaaYIsBJKXel5eM2UA,Home Square,https://cn.noxinfluencer.com/youtube/channel/UCNzitVaaYIsBJKXel5eM2UA,0,badcase,仅有家庭语义，缺少割草或园艺内容证据
+4665,UCNzszbnvQeFzObW0ghk0Ckw,Dave's Garage,https://cn.noxinfluencer.com/youtube/channel/UCNzszbnvQeFzObW0ghk0Ckw,0,badcase,频道偏计算机与电子技术，无园艺或割草机推广相关信号
+4666,UCO-pf2FLK6--lEbLqaolGLQ,Lopatofsky Auction LLC,https://cn.noxinfluencer.com/youtube/channel/UCO-pf2FLK6--lEbLqaolGLQ,0,badcase,无标签和内容相关证据，无法支撑割草机推广
+4667,UCO-ukObWnK0VV9uBQO78U7A,Temhang,https://cn.noxinfluencer.com/youtube/channel/UCO-ukObWnK0VV9uBQO78U7A,0,badcase,仅有4K视频与评测泛标签，和割草机推广无直接关联
+4668,UCO1Lg5J7OhUVDFRyR6NRKRQ,WIFR TV,https://cn.noxinfluencer.com/youtube/channel/UCO1Lg5J7OhUVDFRyR6NRKRQ,0,badcase,新闻政治体育频道，和割草机产品推广场景不匹配
+4669,UCO2DX0cGbOAeb9UuJELrBmw,Twin Cities Adventures,https://cn.noxinfluencer.com/youtube/channel/UCO2DX0cGbOAeb9UuJELrBmw,0,badcase,古董与回收内容，和割草机购买推广场景不相关
+4670,UCO2MGN9M-0rBlSUK4GaqHkA,otherr,https://cn.noxinfluencer.com/youtube/channel/UCO2MGN9M-0rBlSUK4GaqHkA,0,badcase,无可用标签和内容证据，判定为不相关频道
+4671,UCO2RafvMgqlepmwhg5iuJYg,Matt Gonzalez,https://cn.noxinfluencer.com/youtube/channel/UCO2RafvMgqlepmwhg5iuJYg,0,badcase,科技数码频道，与割草机推广场景无关
+4672,UCO2SvMI_kjR93DWoN72bfNQ,PigNut,https://cn.noxinfluencer.com/youtube/channel/UCO2SvMI_kjR93DWoN72bfNQ,0,badcase,无标签无内容，缺少任何相关性证据
+4673,UCO3UTBPrgnfMhbjUcHB-2CQ,Authorized Dealer,https://cn.noxinfluencer.com/youtube/channel/UCO3UTBPrgnfMhbjUcHB-2CQ,0,badcase,无标签无内容，无法判断为割草机相关
+4674,UCO3fUkjCFTAuaIKHSdvKKIQ,Zy Unlimited Music,https://cn.noxinfluencer.com/youtube/channel/UCO3fUkjCFTAuaIKHSdvKKIQ,0,badcase,音乐生活类频道，缺少割草机推广意图
+4676,UCO46OVVy03bHpMuGmEpzc0g,RTG FAMILY,https://cn.noxinfluencer.com/youtube/channel/UCO46OVVy03bHpMuGmEpzc0g,-10,badcase,游戏娱乐向频道，与割草机推广场景明显不符
+4677,UCO4alIAsCWzFaJ414P9Mwcw,TheDIYGuyDOTnet,https://cn.noxinfluencer.com/youtube/channel/UCO4alIAsCWzFaJ414P9Mwcw,2,badcase,仅有DIY/Howto泛泛相关，频道主体偏汽车领域，缺少割草机推广语境
+4678,UCO4rvxZ-bJ6uGDeSkMCmzEg,Bay Area Buggs,https://cn.noxinfluencer.com/youtube/channel/UCO4rvxZ-bJ6uGDeSkMCmzEg,-15,badcase,游戏GTA角色扮演频道，与割草机推广无关，受众和场景完全不匹配
+4679,UCO5Jeark1e_JP36mY3ua19g,The Commodity,https://cn.noxinfluencer.com/youtube/channel/UCO5Jeark1e_JP36mY3ua19g,-5,badcase,娱乐反应类频道，和割草机推广场景不匹配
+4680,UCO5WZpf4iKvzK2fW8ozxQcA,Maleick Fleming,https://cn.noxinfluencer.com/youtube/channel/UCO5WZpf4iKvzK2fW8ozxQcA,-10,badcase,频道以游戏内容为主，与割草机推广场景明显不符
+4681,UCO5f-SEbMeMFrftOAIf4RFA,Stolen Bones,https://cn.noxinfluencer.com/youtube/channel/UCO5f-SEbMeMFrftOAIf4RFA,0,badcase,无标签、无标题与lawn mower相关信号，不适合推广
+4682,UCO5wtDLVsCHJjVChis-j1qg,BrockHard Entertainment,https://cn.noxinfluencer.com/youtube/channel/UCO5wtDLVsCHJjVChis-j1qg,0,badcase,游戏音乐频道，与割草机推广无关
+4683,UCO5zEj6SsBMX1QAA0tNQMWA,Sheila Chandler,https://cn.noxinfluencer.com/youtube/channel/UCO5zEj6SsBMX1QAA0tNQMWA,0,badcase,无标签、无相关视频或近期内容，缺少草坪割草机推广相关证据
+4684,UCO62AVOyfSy9gXyINfkgQKQ,Innovative Techs,https://cn.noxinfluencer.com/youtube/channel/UCO62AVOyfSy9gXyINfkgQKQ,3,badcase,仅有泛科技标签，无割草机/园艺/评测采购语境
+4686,UCO6ZvzP8p8KKGSIYNNx_Reg,Captain Crunch,https://cn.noxinfluencer.com/youtube/channel/UCO6ZvzP8p8KKGSIYNNx_Reg,-15,badcase,游戏/娱乐频道，和割草机推广场景明显不符
+4687,UCO6kzQ-7wcG0x8W5LpBA9RQ,NewsChannel 5,https://cn.noxinfluencer.com/youtube/channel/UCO6kzQ-7wcG0x8W5LpBA9RQ,0,badcase,新闻频道，无园艺或工具推广相关信号
+4688,UCO6rDmP_HNVZU2H1xkNrNNA,Eddie,https://cn.noxinfluencer.com/youtube/channel/UCO6rDmP_HNVZU2H1xkNrNNA,0,badcase,无标签和内容证据，缺少草坪割草机推广相关性
+4690,UCO7QcFOxqH6WLVyBjJ6oGjw,The Pawsome Show,https://cn.noxinfluencer.com/youtube/channel/UCO7QcFOxqH6WLVyBjJ6oGjw,0,badcase,无标签和内容相关信号，频道名偏宠物娱乐，与割草机推广不相关
+4691,UCO7VxDH0CQxehyMR7XAoWNg,Neal Peterson,https://cn.noxinfluencer.com/youtube/channel/UCO7VxDH0CQxehyMR7XAoWNg,0,badcase,无标签、无相关视频，缺少割草机推广相关信号
+4692,UCO86zw-y9s_kQ5EeX0lAqPw,New Creations,https://cn.noxinfluencer.com/youtube/channel/UCO86zw-y9s_kQ5EeX0lAqPw,0,badcase,无标签、无标题、无近期内容，缺乏割草机推广相关性
+4693,UCO8CCHcmMFQGxwfl92X9WWg,BACKWOODZ CUSTOMZ 15,https://cn.noxinfluencer.com/youtube/channel/UCO8CCHcmMFQGxwfl92X9WWg,-15,badcase,汽车维修频道，与 lawn mower 推广场景明显不匹配
+4694,UCO8LjK5WHhMNzj3pSzf_yTA,The Pink Envelope,https://cn.noxinfluencer.com/youtube/channel/UCO8LjK5WHhMNzj3pSzf_yTA,1,badcase,频道偏订阅盒子和时尚内容，与割草机推广几乎无关
+4695,UCO8UmA8DnkZB3P0G6wTAZqA,Marlon from Manchester MFM,https://cn.noxinfluencer.com/youtube/channel/UCO8UmA8DnkZB3P0G6wTAZqA,0,badcase,无标签、无相关视频，缺乏割草机推广相关证据
+4697,UCO8fQqYM_EeHxiGYONWt-fg,Peachy,https://cn.noxinfluencer.com/youtube/channel/UCO8fQqYM_EeHxiGYONWt-fg,0,badcase,娱乐搞笑频道，与割草机推广无关
+4698,UCO8xHStFIvFQo9aitEpa0fw,Eric Sarra,https://cn.noxinfluencer.com/youtube/channel/UCO8xHStFIvFQo9aitEpa0fw,0,badcase,无标签、相关视频或近期内容，缺少割草机推广相关性
+4699,UCO9SZMWz2Qs7IKJEaTIT80A,northwoods discovery,https://cn.noxinfluencer.com/youtube/channel/UCO9SZMWz2Qs7IKJEaTIT80A,0,badcase,偏狩猎/赛车/生活方式，和割草机投放不匹配
+4700,UCO9efbiatDh1xxbTSYfsD0A,Home Canvas,https://cn.noxinfluencer.com/youtube/channel/UCO9efbiatDh1xxbTSYfsD0A,0,badcase,无标签、无相关标题或近期内容，缺少割草机推广相关性证据
+4701,UCOA9OdLPN9t5dkc6H5b8jsA,PowerSports,https://cn.noxinfluencer.com/youtube/channel/UCOA9OdLPN9t5dkc6H5b8jsA,0,badcase,赛车/汽车频道，与割草机推广场景不匹配
+4702,UCOBgIlmJNMBH2Nxe_2Opryw,Muddy Throttle Outdoors,https://cn.noxinfluencer.com/youtube/channel/UCOBgIlmJNMBH2Nxe_2Opryw,-15,badcase,狩猎/水禽内容，和割草机投放目的不相关
+4703,UCOCWJDGJBrgmIi7vjh-gTKw,chẩu thị nhạ farm's daily life,https://cn.noxinfluencer.com/youtube/channel/UCOCWJDGJBrgmIi7vjh-gTKw,1,badcase,仅有弱户外场景，缺少草坪护理/割草机推广语境
+4704,UCOD_Wt7UlDl1cvycVbTxjlA,dirtmister16,https://cn.noxinfluencer.com/youtube/channel/UCOD_Wt7UlDl1cvycVbTxjlA,0,badcase,无标签无内容线索，无法判断为有效投放频道
+4705,UCODa_o-u3ih7_7ZtfBhJLxw,Testimonies4Life,https://cn.noxinfluencer.com/youtube/channel/UCODa_o-u3ih7_7ZtfBhJLxw,-15,badcase,宗教频道，受众与割草机推广目标明显不符
+4706,UCODdqxhlkjLuXKmYoKC5Kzg,Craigs Docks,https://cn.noxinfluencer.com/youtube/channel/UCODdqxhlkjLuXKmYoKC5Kzg,0,badcase,无标签无内容，无法判断为割草机相关
+4709,UCOF0szqi1qecLKNnejYz5lA,Useful Item,https://cn.noxinfluencer.com/youtube/channel/UCOF0szqi1qecLKNnejYz5lA,0,badcase,无标签无内容，缺少相关性证据
+4710,UCOF3ROEnNwN_YybWgfDiaxg,Scott Pycik,https://cn.noxinfluencer.com/youtube/channel/UCOF3ROEnNwN_YybWgfDiaxg,0,badcase,无标签无内容，缺少相关性证据
+4711,UCOFRobUuj3ctLS7tQ_2Aj_w,aMaliciousMafia,https://cn.noxinfluencer.com/youtube/channel/UCOFRobUuj3ctLS7tQ_2Aj_w,0,badcase,无任何相关标签或内容信号，难以用于割草机推广
+4712,UCOGE7wqjkvkGPn-xKHK05dw,Farm Alarm,https://cn.noxinfluencer.com/youtube/channel/UCOGE7wqjkvkGPn-xKHK05dw,-10,badcase,频道偏拖拉机拉力/柴油车赛事，非割草机购买或园艺工具场景
+4713,UCOGGxKRwQAfD_knwWMemedw,Katana Lightn3ngCat,https://cn.noxinfluencer.com/youtube/channel/UCOGGxKRwQAfD_knwWMemedw,-15,badcase,娱乐/游戏向，属于明显不适合的推广场景
+4714,UCOGNyvtgStVA88tAhoCMYGw,korguenkomodo,https://cn.noxinfluencer.com/youtube/channel/UCOGNyvtgStVA88tAhoCMYGw,0,badcase,手机评测向，与割草机品类不相关
+4715,UCOGapLolOewsy_KOkhdTrOQ,TECH REVIEW,https://cn.noxinfluencer.com/youtube/channel/UCOGapLolOewsy_KOkhdTrOQ,0,badcase,科技泛评测，缺少割草机的使用或购买语境
+4716,UCOGspNko0U6vBMuJW0nAdmg,SteeveGMTECH,https://cn.noxinfluencer.com/youtube/channel/UCOGspNko0U6vBMuJW0nAdmg,0,badcase,汽车/工具泛标签，缺少草坪、园艺或割草机场景
+4717,UCOHGIv5BG80gDndp5dCMMKw,James Gadget,https://cn.noxinfluencer.com/youtube/channel/UCOHGIv5BG80gDndp5dCMMKw,0,badcase,无标签无视频，缺少任何割草机相关信号
+4720,UCOIhoH8ASAfSZCixhGridFA,EmersonBiggens1,https://cn.noxinfluencer.com/youtube/channel/UCOIhoH8ASAfSZCixhGridFA,0,badcase,音乐娱乐频道，与割草机产品推广场景不相关
+4721,UCOIxh4XCX3lTJIrHm5FLLPA,DadHav,https://cn.noxinfluencer.com/youtube/channel/UCOIxh4XCX3lTJIrHm5FLLPA,0,badcase,无标签和内容，缺少割草机推广相关信号
+4722,UCOKYFsR5ek0fF18yCCF_qig,Red Stag Co,https://cn.noxinfluencer.com/youtube/channel/UCOKYFsR5ek0fF18yCCF_qig,-15,badcase,汽车卡车频道，和割草机推广场景明显不匹配
+4723,UCOLkhOth-qb8uvPrClkQD5A,Paving New Paths,https://cn.noxinfluencer.com/youtube/channel/UCOLkhOth-qb8uvPrClkQD5A,0,badcase,RV生活频道偏生活方式，缺少园艺家用产品语境
+4725,UCON22rnJtnLjbHAjcLdkgqQ,BIG Feathers Farm,https://cn.noxinfluencer.com/youtube/channel/UCON22rnJtnLjbHAjcLdkgqQ,-13,badcase,鸡类养殖/后院鸡主题占主导，缺少割草机或庭院工具推广语境
+4726,UCOO6_C9wTXV09JSbgLAm7OA,Show Me Firearms,https://cn.noxinfluencer.com/youtube/channel/UCOO6_C9wTXV09JSbgLAm7OA,-15,badcase,枪械频道与割草机推广场景明显不符
+4728,UCOOUuwm1HQ7CNlx25JxUm3A,MineLand,https://cn.noxinfluencer.com/youtube/channel/UCOOUuwm1HQ7CNlx25JxUm3A,0,badcase,游戏娱乐频道，与割草机推广无关
+4729,UCOP1VuV2bE3xbczLB22GRCQ,Hovey Smith,https://cn.noxinfluencer.com/youtube/channel/UCOP1VuV2bE3xbczLB22GRCQ,0,badcase,内容过泛，缺少草坪工具购买意图
+4730,UCOQpwkOs-nHO7mu5orIDIHA,Trending Deal Hub,https://cn.noxinfluencer.com/youtube/channel/UCOQpwkOs-nHO7mu5orIDIHA,0,badcase,无标签无内容，无法判断相关性
+4731,UCOR-MtiRIwTnkCmPcBVu8-w,BACKYARD BROADHEADS,https://cn.noxinfluencer.com/youtube/channel/UCOR-MtiRIwTnkCmPcBVu8-w,-15,badcase,狩猎/十字弓受众与割草机推广场景不符
+4732,UCOR77EBV1DMVEHLJSSztZpA,Cariani Farms,https://cn.noxinfluencer.com/youtube/channel/UCOR77EBV1DMVEHLJSSztZpA,-10,badcase,农场场景相关但频道偏宠物马匹动物，不适合割草机推广
+4733,UCOR8jXz9qVeFbv8LYFOL_AQ,Sirrom0206,https://cn.noxinfluencer.com/youtube/channel/UCOR8jXz9qVeFbv8LYFOL_AQ,-2,badcase,频道偏载具/飞机/知识内容，缺少园艺工具或草坪养护推广语境
+4735,UCOSINWvR8JOnnqCP7I6O8TQ,"Erik ""ProCharger"" Radzins",https://cn.noxinfluencer.com/youtube/channel/UCOSINWvR8JOnnqCP7I6O8TQ,-15,badcase,汽车改装受众与割草机促销场景不匹配
+4736,UCOSshv8pSc6hsiyxffDTD7g,StarlightReview,https://cn.noxinfluencer.com/youtube/channel/UCOSshv8pSc6hsiyxffDTD7g,0,badcase,宠物/健身/科技为主，与草坪割草机推广无关
+4738,UCOUVsAJAuWhotcnm5KMgDWA,GKGF Garage,https://cn.noxinfluencer.com/youtube/channel/UCOUVsAJAuWhotcnm5KMgDWA,0,badcase,车库/机动车泛泛相关，缺少园艺机械或割草场景
+4740,UCOUlPJv3fRgRNMM2HvX2qMg,Bena Covame,https://cn.noxinfluencer.com/youtube/channel/UCOUlPJv3fRgRNMM2HvX2qMg,0,badcase,无标签无内容信号，无法判断相关性
+4741,UCOVDYdVQoRf-A2wOx318KVw,Chy repair,https://cn.noxinfluencer.com/youtube/channel/UCOVDYdVQoRf-A2wOx318KVw,0,badcase,缺少割草机/园艺工具语义，相关性弱
+4742,UCOVe_njM0_4OqQT0qD90sGg,Please Plant Me,https://cn.noxinfluencer.com/youtube/channel/UCOVe_njM0_4OqQT0qD90sGg,0,badcase,无相关标签与内容信号
+4743,UCOWMu6kQgYHoBHn576WAeDA,Benji The Bobcat,https://cn.noxinfluencer.com/youtube/channel/UCOWMu6kQgYHoBHn576WAeDA,-15,badcase,游戏娱乐频道，和割草机推广场景明显不符
+4744,UCOWUFS6T51u1I2q1qkMMa4g,PodcastPulse,https://cn.noxinfluencer.com/youtube/channel/UCOWUFS6T51u1I2q1qkMMa4g,0,badcase,无相关标签与内容信号
+4745,UCOX6wbzmsfz_fs8hEqVxSrA,BackerGeek丨Kickstarter x Indiegogo,https://cn.noxinfluencer.com/youtube/channel/UCOX6wbzmsfz_fs8hEqVxSrA,0,badcase,仅众筹平台泛标签，无草坪机或园艺推广相关信号
+4746,UCOXq5Z1jWjzE9xh2u33rbdA,King Leon Lionheart,https://cn.noxinfluencer.com/youtube/channel/UCOXq5Z1jWjzE9xh2u33rbdA,0,badcase,标签全是体育娱乐，和割草机推广无关
+4748,UCOZdqcYIXrn6yNtpAZvgq6w,PREPARED ENVY,https://cn.noxinfluencer.com/youtube/channel/UCOZdqcYIXrn6yNtpAZvgq6w,0,badcase,没有标签和视频内容，无法判断为相关
+4749,UCOZmnFyVdO8MbvUpjcOudCg,wilimovich,https://cn.noxinfluencer.com/youtube/channel/UCOZmnFyVdO8MbvUpjcOudCg,0,badcase,赛车车模内容为主，与割草机推广不匹配
+4750,UCO_AhGPy8QHl6PDSm4iqNLA,Bubba Sawyer,https://cn.noxinfluencer.com/youtube/channel/UCO_AhGPy8QHl6PDSm4iqNLA,0,badcase,娱乐生活类频道，不适合割草机产品推广
+4751,UCO_G1mj0plTZ4O4T1zS5xOA,girl repair,https://cn.noxinfluencer.com/youtube/channel/UCO_G1mj0plTZ4O4T1zS5xOA,0,badcase,无标签、无相关视频或近期内容，无法证明适合割草机推广
+4752,UCOa-EJaylf1qVBKh5oufTaQ,KonaBlueSVT,https://cn.noxinfluencer.com/youtube/channel/UCOa-EJaylf1qVBKh5oufTaQ,-13,badcase,汽车改装频道，与割草机推广场景不符
+4753,UCOaJRTMf-myiVe0eLTENq-g,Silver Cymbal Workshop,https://cn.noxinfluencer.com/youtube/channel/UCOaJRTMf-myiVe0eLTENq-g,1,badcase,仅有泛生活方式标签，无园艺或割草机推广证据
+4754,UCOaXsqGu4PeoJSE2wA-A3sQ,Lucrativesoldier,https://cn.noxinfluencer.com/youtube/channel/UCOaXsqGu4PeoJSE2wA-A3sQ,-4,badcase,汽车/斯巴鲁频道，草坪机推广相关性弱
+4755,UCOae78VuF2CkrdgKc3dR_Zw,The Johnston Family Homestead,https://cn.noxinfluencer.com/youtube/channel/UCOae78VuF2CkrdgKc3dR_Zw,0,badcase,无标签、标题或近期内容证据支持割草机推广相关性
+4756,UCOaogrST4O_AHAKqbNs6gxA,REVIEWS POINT,https://cn.noxinfluencer.com/youtube/channel/UCOaogrST4O_AHAKqbNs6gxA,0,badcase,无标签、视频或近期内容证据支持割草机推广相关性
+4757,UCObntZ4F7bHdc-qHu5ng8Nw,s h q a,https://cn.noxinfluencer.com/youtube/channel/UCObntZ4F7bHdc-qHu5ng8Nw,0,badcase,无标签、无相关视频、无近期内容，缺少割草机推广相关证据
+4758,UCOc-grOdNldKHl8PCNvWktA,Bug Bmx,https://cn.noxinfluencer.com/youtube/channel/UCOc-grOdNldKHl8PCNvWktA,-10,badcase,汽车恶搞/娱乐向，和割草机推广场景不匹配
+4759,UCOcmgbAhAJamhv7ZZ8d9Rgg,RaceRogue,https://cn.noxinfluencer.com/youtube/channel/UCOcmgbAhAJamhv7ZZ8d9Rgg,-15,badcase,重型工程机械/搞笑内容，缺少草坪养护或割草机推广意图
+4760,UCOdD3OTvRiSksreDVTmOguQ,DarthLuck,https://cn.noxinfluencer.com/youtube/channel/UCOdD3OTvRiSksreDVTmOguQ,0,badcase,无标签、无相关视频和近期内容，缺少草坪机推广相关证据
+4762,UCOg-k-qLDLqh9AvAwm1TOdw,Lava Tools,https://cn.noxinfluencer.com/youtube/channel/UCOg-k-qLDLqh9AvAwm1TOdw,0,badcase,无标签、相关视频或近期内容证据，无法支持割草机推广
+4764,UCOgm5rZS9rGMgyIWU0axtZg,Best Find Today,https://cn.noxinfluencer.com/youtube/channel/UCOgm5rZS9rGMgyIWU0axtZg,0,badcase,无标签或内容证据，无法支持割草机产品推广相关性
+4765,UCOgwnhxJNRUK5EUvFoFMJMw,Mini Epics,https://cn.noxinfluencer.com/youtube/channel/UCOgwnhxJNRUK5EUvFoFMJMw,-5,badcase,宠物娱乐向，和割草机推广不匹配
+4766,UCOhbzVLoyAjZhGoY8n4MBJQ,Household Hooligans,https://cn.noxinfluencer.com/youtube/channel/UCOhbzVLoyAjZhGoY8n4MBJQ,0,badcase,无标签、无相关视频或近期内容，缺少草坪机推广相关证据
+4767,UCOhs6kGT_zQYi9clGRe-eCg,Naomi Guzman,https://cn.noxinfluencer.com/youtube/channel/UCOhs6kGT_zQYi9clGRe-eCg,-10,badcase,无标签、无相关视频、无近期内容，缺少割草机推广相关证据
+4768,UCOhthtWpNlWPjguvc3AJBGQ,American Smoke,https://cn.noxinfluencer.com/youtube/channel/UCOhthtWpNlWPjguvc3AJBGQ,0,badcase,烹饪BBQ频道，和割草机的购买推广场景不重叠
+4769,UCOiXrPKkSmPcfIlQvY6pcMQ,waygsGT,https://cn.noxinfluencer.com/youtube/channel/UCOiXrPKkSmPcfIlQvY6pcMQ,-15,badcase,游戏频道，和割草机产品推广场景明显不匹配
+4770,UCOiYFgUGMIB1lE-1xhEwtvA,I Love Lucy,https://cn.noxinfluencer.com/youtube/channel/UCOiYFgUGMIB1lE-1xhEwtvA,-10,badcase,娱乐怀旧内容，和割草机推广受众不一致
+4771,UCOigKXvbWJ8TU5bBQSDYsEQ,TopBestBox,https://cn.noxinfluencer.com/youtube/channel/UCOigKXvbWJ8TU5bBQSDYsEQ,0,badcase,标签过泛，缺少草坪割草机的购买或使用场景相关性
+4772,UCOj-q-37b_P-AZfv-AAN40A,⭐ Authentic Insights with Karen⭐,https://cn.noxinfluencer.com/youtube/channel/UCOj-q-37b_P-AZfv-AAN40A,0,badcase,无标签、无相关视频，缺少园艺/工具/购买意图信号
+4773,UCOkN_uIenYe8Qm4kMUsvHHQ,NO4DS4ME,https://cn.noxinfluencer.com/youtube/channel/UCOkN_uIenYe8Qm4kMUsvHHQ,0,badcase,无割草机相关标签，均为泛主题，缺乏推广适配信号
+4774,UCOkNbsKJTp51bvBun8sy8VA,650ib,https://cn.noxinfluencer.com/youtube/channel/UCOkNbsKJTp51bvBun8sy8VA,-15,badcase,频道是摩托车/赛车内容，与割草机推广场景不匹配
+4775,UCOkw18NNjyvciXsI0MTGjmQ,Review Preview,https://cn.noxinfluencer.com/youtube/channel/UCOkw18NNjyvciXsI0MTGjmQ,1,badcase,偏科技/游戏评测频道，与割草机推广场景缺乏直接相关。
+4778,UCOmcA3f_RrH6b9NmcNa4tdg,CNET,https://cn.noxinfluencer.com/youtube/channel/UCOmcA3f_RrH6b9NmcNa4tdg,0,badcase,科技数码频道，和割草机主主题偏离明显
+4779,UCOmsEhmSHx1i87mqBpg0Bgw,Redline Powersports Sumter,https://cn.noxinfluencer.com/youtube/channel/UCOmsEhmSHx1i87mqBpg0Bgw,0,badcase,无有效标签和内容证据，难判断与割草机推广相关
+4780,UCOnPZVFryKPaXumPB9NrAiQ,Neon Barracuda,https://cn.noxinfluencer.com/youtube/channel/UCOnPZVFryKPaXumPB9NrAiQ,2,badcase,摩托/两轮车内容为主，与割草机推广场景不匹配
+4781,UCOnpP6I-3QdZsZI-lDpOBpg,Tools & Tech,https://cn.noxinfluencer.com/youtube/channel/UCOnpP6I-3QdZsZI-lDpOBpg,0,badcase,无标签且无相关内容，缺少推广匹配信号
+4782,UCOnxASOjJw0Xl18Eqz3he3Q,Cooper Turner,https://cn.noxinfluencer.com/youtube/channel/UCOnxASOjJw0Xl18Eqz3he3Q,0,badcase,户外vlog为主，和割草机购买意图弱相关
+4783,UCOnyeE7kzaV2gKyEwpa1hsQ,Chad Her,https://cn.noxinfluencer.com/youtube/channel/UCOnyeE7kzaV2gKyEwpa1hsQ,-10,badcase,娱乐短片为主，主题格式不适合产品推广
+4784,UCOoNc7Q2oDHxgK1DLyMon1A,Dillon Street Boys,https://cn.noxinfluencer.com/youtube/channel/UCOoNc7Q2oDHxgK1DLyMon1A,0,badcase,无标签无内容，无法判断为相关频道
+4786,UCOpxWA2UC4SaKLC1i-f4skw,MyRobotWorkForce,https://cn.noxinfluencer.com/youtube/channel/UCOpxWA2UC4SaKLC1i-f4skw,0,badcase,无标签、无内容命中，缺少割草机推广相关性
+4787,UCOqe5hbqi5UXnAWTfRx4D_Q,Douglas Dunn,https://cn.noxinfluencer.com/youtube/channel/UCOqe5hbqi5UXnAWTfRx4D_Q,0,badcase,无标签、无内容命中，缺少割草机推广相关性
+4789,UCOr1pN3XHqNzbqHiht8-EsA,Kids World Siha,https://cn.noxinfluencer.com/youtube/channel/UCOr1pN3XHqNzbqHiht8-EsA,0,badcase,无标签、无内容命中，缺少割草机推广相关性
+4790,UCOr3uCLECtUnuFllGR6YLcA,Michael Less,https://cn.noxinfluencer.com/youtube/channel/UCOr3uCLECtUnuFllGR6YLcA,0,badcase,旅行vlog与割草机购买推广场景不匹配
+4791,UCOrA6ueaiiFmqlWBtgqHEdA,BassSniperScooter,https://cn.noxinfluencer.com/youtube/channel/UCOrA6ueaiiFmqlWBtgqHEdA,1,badcase,户外泛主题，缺少草坪/园艺/割草语境
+4792,UCOrMIQ3PlIFdYZB71W0TbtQ,MrHG78,https://cn.noxinfluencer.com/youtube/channel/UCOrMIQ3PlIFdYZB71W0TbtQ,0,badcase,消费电子泛题材，和割草机推广无关
+4793,UCOrRz1TrGEqF6q21gtQ4gOQ,ZZPerformance,https://cn.noxinfluencer.com/youtube/channel/UCOrRz1TrGEqF6q21gtQ4gOQ,0,badcase,汽车播客频道，与割草机推广关联弱
+4795,UCOrY4jt1Qh_mMIKZfHXIA2A,Old Nerd Playing Old PC Games,https://cn.noxinfluencer.com/youtube/channel/UCOrY4jt1Qh_mMIKZfHXIA2A,-15,badcase,游戏娱乐频道，和割草机推广格式不匹配
+4797,UCOrcIaT19a4kwktG-kB0Rrw,Vacuum Chef,https://cn.noxinfluencer.com/youtube/channel/UCOrcIaT19a4kwktG-kB0Rrw,0,badcase,吸尘器垂类与割草机差异大，缺少园艺/工具受众信号
+4798,UCOrdBJSPsmsdTyZSF43Fwsw,Dr. Cullen Hardy,https://cn.noxinfluencer.com/youtube/channel/UCOrdBJSPsmsdTyZSF43Fwsw,0,badcase,无标签无内容信号，无法判断为相关推广频道
+4799,UCOreuvMn8d-SZ1dNKcpGqBA,Love Aliex,https://cn.noxinfluencer.com/youtube/channel/UCOreuvMn8d-SZ1dNKcpGqBA,0,badcase,无标签无内容信号，无法判断为相关推广频道
+4800,UCOsiNFTvkXQoemx3A5uM9_g,FutureTech Zone,https://cn.noxinfluencer.com/youtube/channel/UCOsiNFTvkXQoemx3A5uM9_g,-9,badcase,频道偏汽车与未来科技，缺少割草机或园艺工具推广语境
+4801,UCOsp6qFVia36rBLFCLVpbNw,novel gates,https://cn.noxinfluencer.com/youtube/channel/UCOsp6qFVia36rBLFCLVpbNw,0,badcase,无草坪机、园艺、工具或购买评测相关证据
+4802,UCOspJRNtGHlkKkSpUSchN0Q,LC Family,https://cn.noxinfluencer.com/youtube/channel/UCOspJRNtGHlkKkSpUSchN0Q,0,badcase,标签偏家庭生活，缺少园艺/工具/割草机相关信号
+4803,UCOswNVmXxQLHYUuapDtqLOw,DJE,https://cn.noxinfluencer.com/youtube/channel/UCOswNVmXxQLHYUuapDtqLOw,0,badcase,标签偏健康娱乐，缺少园艺/家居/工具相关性
+4804,UCOtcBmI_2JrDSIu6nEIz5Ow,Cozy Habitat,https://cn.noxinfluencer.com/youtube/channel/UCOtcBmI_2JrDSIu6nEIz5Ow,-3,badcase,泛家居DIY弱相关，但无园艺割草机推广意图，偏生活爱好频道
+4805,UCOti8vp5kSIznALDYtDIHhQ,chicagospots,https://cn.noxinfluencer.com/youtube/channel/UCOti8vp5kSIznALDYtDIHhQ,-15,badcase,娱乐/影视/音乐/宠物频道，与割草机推广场景明显不符
+4806,UCOtoxvHLKrIlWbt4MRBWfbQ,RawBeautyKristi,https://cn.noxinfluencer.com/youtube/channel/UCOtoxvHLKrIlWbt4MRBWfbQ,0,badcase,美妆频道，与割草机推广场景无关
+4807,UCOtzDXJsCS78HWtdTSz48Vg,CCR Industrial,https://cn.noxinfluencer.com/youtube/channel/UCOtzDXJsCS78HWtdTSz48Vg,0,badcase,无标签、相关视频或近期内容证据，无法支持割草机推广
+4808,UCOu53MA-k2RpJUX7NAs_2dA,Chris Asipyan,https://cn.noxinfluencer.com/youtube/channel/UCOu53MA-k2RpJUX7NAs_2dA,-3,badcase,仅有泛工具/技术弱相关，频道偏美食生活，缺少草坪护理推广证据
+4809,UCOuJHdEZ6QuJZ6v-YDyb9FA,Gym Girls,https://cn.noxinfluencer.com/youtube/channel/UCOuJHdEZ6QuJZ6v-YDyb9FA,-10,badcase,频道名偏健身女性，与割草机推广无相关证据
+4810,UCOuLCBH7x-SdkBZ_EILfQRA,WF Video Productions - Worthless Films,https://cn.noxinfluencer.com/youtube/channel/UCOuLCBH7x-SdkBZ_EILfQRA,0,badcase,影视制作频道，不是割草机推广目标受众
+4811,UCOuReOu1bQgl-zc6vf927Wg,Tommy Vlogs,https://cn.noxinfluencer.com/youtube/channel/UCOuReOu1bQgl-zc6vf927Wg,0,badcase,机车/自行车内容，与割草机推广场景无关
+4812,UCOurkuAuyM3YZrChp2lJKKA,New Review World,https://cn.noxinfluencer.com/youtube/channel/UCOurkuAuyM3YZrChp2lJKKA,0,badcase,无标签无内容信号，无法支持割草机推广
+4813,UCOuu74B_kTji3BQpZFCZnng,Logan Gamble,https://cn.noxinfluencer.com/youtube/channel/UCOuu74B_kTji3BQpZFCZnng,0,badcase,无标签无内容信号，无法判断与割草机相关
+4814,UCOvcRp2yOyS7MooiT_5Qxmg,Humans React,https://cn.noxinfluencer.com/youtube/channel/UCOvcRp2yOyS7MooiT_5Qxmg,0,badcase,娱乐/游戏/器材泛内容，缺少家用园艺购买意图
+4815,UCOwUXo048uVOUtclcxp9DlQ,Erie Pa Happenings,https://cn.noxinfluencer.com/youtube/channel/UCOwUXo048uVOUtclcxp9DlQ,0,badcase,骑行生活方式内容，与割草机受众不匹配
+4817,UCOwkh0DHEyOkjwa9FW2g8nw,ProductHype,https://cn.noxinfluencer.com/youtube/channel/UCOwkh0DHEyOkjwa9FW2g8nw,0,badcase,标签过泛，和割草机推广缺少明确场景关联
+4819,UCOxYX1mG3gSJ6h3l43OhG9Q,the40yogamer,https://cn.noxinfluencer.com/youtube/channel/UCOxYX1mG3gSJ6h3l43OhG9Q,0,badcase,无标签无内容信号，无法判断与割草机相关
+4820,UCOxoGn23BBHWghJelrqGkhg,Braydon Price,https://cn.noxinfluencer.com/youtube/channel/UCOxoGn23BBHWghJelrqGkhg,-2,badcase,机车/赛车向，和割草机受众与内容场景不匹配
+4822,UCOyot971eVeruW2fMZPvwmw,Muaz Latest Fashion,https://cn.noxinfluencer.com/youtube/channel/UCOyot971eVeruW2fMZPvwmw,0,badcase,时尚频道，缺少割草机相关标签与内容，推广相关性极低
+4823,UCOytZrDuHpmpfdtRU9SCHXA,Feather Films,https://cn.noxinfluencer.com/youtube/channel/UCOytZrDuHpmpfdtRU9SCHXA,-15,badcase,影视解说/剧情号，与割草机推广场景完全不符
+4824,UCOzmP954XSxwD5herNE-g-Q,PissedConsumer Video Reviews,https://cn.noxinfluencer.com/youtube/channel/UCOzmP954XSxwD5herNE-g-Q,0,badcase,标签无割草机相关信号，且缺少产品评测或购买意图内容
+4825,UCP-5MqzjBhS1vLcaBDKbJjQ,Jungle Jay Adventures,https://cn.noxinfluencer.com/youtube/channel/UCP-5MqzjBhS1vLcaBDKbJjQ,1,badcase,仅有泛户外标签，缺少割草机购买或使用相关信号
+4826,UCP0PxuXp_xZOV0yhbA9noYw,Renegade Garage,https://cn.noxinfluencer.com/youtube/channel/UCP0PxuXp_xZOV0yhbA9noYw,-9,badcase,汽车/雪佛兰车库频道，仅DIY弱相关，无割草机或园艺证据
+4828,UCP0uc7nNk_goehJRGIF2n0Q,kick stand “kick stand” outdoors,https://cn.noxinfluencer.com/youtube/channel/UCP0uc7nNk_goehJRGIF2n0Q,0,badcase,无可用标签与内容证据，无法判断为割草机推广相关
+4829,UCP1N9j-Jl890PHJjD3VnhLg,Melissa Metrano,https://cn.noxinfluencer.com/youtube/channel/UCP1N9j-Jl890PHJjD3VnhLg,1,badcase,生活娱乐向为主，只有 home 弱相关，不适合割草机推广
+4830,UCP1pRRcTrorolz3CFe6NZ5Q,Steve Guidi,https://cn.noxinfluencer.com/youtube/channel/UCP1pRRcTrorolz3CFe6NZ5Q,0,badcase,缺少标签与内容信息，相关性证据不足
+4831,UCP2pxY8FndLmqC6yFg4PpRA,Gun For Hire,https://cn.noxinfluencer.com/youtube/channel/UCP2pxY8FndLmqC6yFg4PpRA,-15,badcase,枪械/政治向频道，与割草机推广场景明显不匹配
+4832,UCP39CCSg0HR8Cpze6R6H0cA,L&R Rusch Farms,https://cn.noxinfluencer.com/youtube/channel/UCP39CCSg0HR8Cpze6R6H0cA,0,badcase,偏农场/生活方式，缺少割草机购买或测评意图
+4833,UCP3EawdMvsIN1j9qPa335eA,Christ Centered Gamer,https://cn.noxinfluencer.com/youtube/channel/UCP3EawdMvsIN1j9qPa335eA,-15,badcase,游戏娱乐频道，与割草机推广场景明显不匹配
+4835,UCP4QpEC4LGuYmLs3qPKicvQ,SyncalTrades,https://cn.noxinfluencer.com/youtube/channel/UCP4QpEC4LGuYmLs3qPKicvQ,0,badcase,无标签、相关视频或近期内容证据，无法支持割草机推广
+4836,UCP4oXlE0ZoCYx4oO3J49lPg,Steve F,https://cn.noxinfluencer.com/youtube/channel/UCP4oXlE0ZoCYx4oO3J49lPg,0,badcase,无标签和内容信号，无法判断为相关频道
+4838,UCP6RbngljRhgR0Tplnd9RxQ,Chroma™,https://cn.noxinfluencer.com/youtube/channel/UCP6RbngljRhgR0Tplnd9RxQ,-15,badcase,游戏/梗内容为主，与割草机促销场景明显不符
+4839,UCP6aTjEDBP_o-F02xvzFUmg,Ben's Honest Reviews,https://cn.noxinfluencer.com/youtube/channel/UCP6aTjEDBP_o-F02xvzFUmg,0,badcase,缺少标签和内容证据，无法证明有家电/园艺推广适配
+4840,UCP7IjGWy5wx-TomaOtYD9sg,Nobroc Games,https://cn.noxinfluencer.com/youtube/channel/UCP7IjGWy5wx-TomaOtYD9sg,-15,badcase,纯游戏短内容，与割草机购买推广高度不匹配
+4841,UCP7Oufy9AsIuPYbqBNA8r5Q,NEWSBIT Trending News Daily,https://cn.noxinfluencer.com/youtube/channel/UCP7Oufy9AsIuPYbqBNA8r5Q,-9,badcase,宠物/狗向频道，与割草机推广场景不匹配
+4842,UCP7VBZA3R-ostxNueaZNCfA,Shakoor201,https://cn.noxinfluencer.com/youtube/channel/UCP7VBZA3R-ostxNueaZNCfA,0,badcase,无标签和视频主题信号，缺少割草机推广相关性
+4843,UCP7W4eDbwxh1ju6IoTHjHkQ,Best Store,https://cn.noxinfluencer.com/youtube/channel/UCP7W4eDbwxh1ju6IoTHjHkQ,0,badcase,无标签、无标题信号，缺少割草机推广相关证据
+4844,UCP7lwUtWOIQR5uI7TzzE09A,ZETSUBO,https://cn.noxinfluencer.com/youtube/channel/UCP7lwUtWOIQR5uI7TzzE09A,5,badcase,动漫娱乐频道，虽有 lawn mower 标签但无产品内容，推广适配差
+4845,UCP83baPjNK53Q40zkv_OEsA,Smokin with Hass,https://cn.noxinfluencer.com/youtube/channel/UCP83baPjNK53Q40zkv_OEsA,0,badcase,无标签和内容证据，缺少割草机推广相关性
+4846,UCP87lB2-KTmNbAfELkRwRJA,breaf on ted,https://cn.noxinfluencer.com/youtube/channel/UCP87lB2-KTmNbAfELkRwRJA,0,badcase,无标签和内容证据，无法支持割草机产品推广相关性
+4847,UCP97X5jONxK60DUTdcYhRIg,Mark Plante's Vlog,https://cn.noxinfluencer.com/youtube/channel/UCP97X5jONxK60DUTdcYhRIg,1,badcase,仅有泛兴趣标签，缺少草坪护理、园艺或割草机推广意图
+4848,UCP99KiHKMsXj4RYv5khj3Qw,Down South Pickin' n Stackin',https://cn.noxinfluencer.com/youtube/channel/UCP99KiHKMsXj4RYv5khj3Qw,0,badcase,无标签、相关视频或近期内容证据，无法支持割草机推广相关性
+4849,UCPALLPNv882MCszcUjU5DmQ,LDSreliance,https://cn.noxinfluencer.com/youtube/channel/UCPALLPNv882MCszcUjU5DmQ,-10,badcase,频道聚焦电源/太阳能，与割草机推广场景不匹配
+4850,UCPAe0GE55kBIDRqzGfaRwUw,Kitchen Wizardry,https://cn.noxinfluencer.com/youtube/channel/UCPAe0GE55kBIDRqzGfaRwUw,0,badcase,无标签、无相关视频或近期内容，缺少草坪机推广相关性证据
+4851,UCPAelQT6eJ7JjB5SJMS_uVA,#Milo2023,https://cn.noxinfluencer.com/youtube/channel/UCPAelQT6eJ7JjB5SJMS_uVA,0,badcase,无标签无内容，和割草机推广缺少任何相关信号
+4852,UCPBNk4so6BO8ReWqdoE-8jA,Robert's Ride Along,https://cn.noxinfluencer.com/youtube/channel/UCPBNk4so6BO8ReWqdoE-8jA,1,badcase,偏宝石/爱好/娱乐，和割草机推广无关
+4855,UCPC65iPjPrFTHQE0bnKYzBw,Johnson Family Mobile,https://cn.noxinfluencer.com/youtube/channel/UCPC65iPjPrFTHQE0bnKYzBw,0,badcase,无标签无内容，无法判断与割草机推广相关
+4856,UCPCc4i_lIw-fW9oBXh6yTnw,NURK FPV,https://cn.noxinfluencer.com/youtube/channel/UCPCc4i_lIw-fW9oBXh6yTnw,0,badcase,无人机/相机频道，与割草机推广几乎无关
+4857,UCPDQgn1p5Jeti_OUeDmB2gw,TechTested,https://cn.noxinfluencer.com/youtube/channel/UCPDQgn1p5Jeti_OUeDmB2gw,0,badcase,无标签，无相关推广线索
+4858,UCPDis9pjXuqyI7RYLJ-TTSA,FailArmy,https://cn.noxinfluencer.com/youtube/channel/UCPDis9pjXuqyI7RYLJ-TTSA,-15,badcase,搞笑娱乐内容，和割草机推广场景不匹配
+4859,UCPGuBhvp_ThFTmVgzjFu_Zw,Robert,https://cn.noxinfluencer.com/youtube/channel/UCPGuBhvp_ThFTmVgzjFu_Zw,0,badcase,无标签，无相关推广线索
+4860,UCPGw4ro8ymF5q3DxdU9ex-Q,Show-Me Fish Tales,https://cn.noxinfluencer.com/youtube/channel/UCPGw4ro8ymF5q3DxdU9ex-Q,0,badcase,钓鱼宠物频道，与割草机采购场景不相关
+4861,UCPHiAIqnpC4ZCnU5t9AvcJg,Riza & Me,https://cn.noxinfluencer.com/youtube/channel/UCPHiAIqnpC4ZCnU5t9AvcJg,-15,badcase,频道以车辆、无人机爱好为主，缺少园艺割草机推广相关性
+4862,UCPIJy0kVEu4KQbPk7CGuYJw,tech express,https://cn.noxinfluencer.com/youtube/channel/UCPIJy0kVEu4KQbPk7CGuYJw,0,badcase,无标签与内容信号，难判断为割草机推广相关
+4863,UCPIc49FrwXL3sx768IehRRg,Destination DeRo,https://cn.noxinfluencer.com/youtube/channel/UCPIc49FrwXL3sx768IehRRg,0,badcase,旅游生活向，和割草机推广场景不匹配
+4864,UCPJ5Cpis3WL2Bif0VHqbYfQ,Brogen Davis,https://cn.noxinfluencer.com/youtube/channel/UCPJ5Cpis3WL2Bif0VHqbYfQ,0,badcase,无标签与内容信号，难判断为割草机推广相关
+4866,UCPJDQL7kAPAAabG1OQe2kcw,ArasXY,https://cn.noxinfluencer.com/youtube/channel/UCPJDQL7kAPAAabG1OQe2kcw,-10,badcase,宠物娱乐向，和割草机推广场景不符
+4867,UCPJfA21R6tFK2bERpkBXEhg,TonetteandFamily,https://cn.noxinfluencer.com/youtube/channel/UCPJfA21R6tFK2bERpkBXEhg,1,badcase,家庭短视频为主，仅有泛生活标签，和割草机关联弱
+4868,UCPK3zF1esTI1dnA5L_aOhPw,Hiking with Pixie,https://cn.noxinfluencer.com/youtube/channel/UCPK3zF1esTI1dnA5L_aOhPw,2,badcase,音乐/生活向，缺少园艺或家电购买意图
+4871,UCPKuXIhUhXS8Y9INCG-qqYw,databug88,https://cn.noxinfluencer.com/youtube/channel/UCPKuXIhUhXS8Y9INCG-qqYw,0,badcase,标签偏运动/生活方式，与割草机推广无关
+4872,UCPL6WV4Zrwu1WE_xRIb0TRQ,Roshan Store,https://cn.noxinfluencer.com/youtube/channel/UCPL6WV4Zrwu1WE_xRIb0TRQ,0,badcase,无标签无内容，缺少割草机相关证据
+4873,UCPLRnMNnvJQ0-SSBQbXtyGA,The Achristopats Adventure And Homestead Channel,https://cn.noxinfluencer.com/youtube/channel/UCPLRnMNnvJQ0-SSBQbXtyGA,0,badcase,无标签、无相关视频或近期内容，缺少割草机推广相关证据
+4874,UCPLm9YsvshnBBfrK2aJoIug,Nikki Morissette,https://cn.noxinfluencer.com/youtube/channel/UCPLm9YsvshnBBfrK2aJoIug,0,badcase,无标签无内容，无法判断适合推广割草机
+4875,UCPM5Mychu5p3kUzMfnxItjQ,First On Auto Parts,https://cn.noxinfluencer.com/youtube/channel/UCPM5Mychu5p3kUzMfnxItjQ,0,badcase,汽车配件方向与割草机推广不匹配
+4876,UCPMBYHQNNCAdYPwxU4fOGtA,Steve Tristan's Best,https://cn.noxinfluencer.com/youtube/channel/UCPMBYHQNNCAdYPwxU4fOGtA,2,badcase,仅有手作/爱好弱相关，宠物标签偏离割草机推广场景
+4877,UCPMIXPIhGp2WJzocPRQiM1w,JMTech,https://cn.noxinfluencer.com/youtube/channel/UCPMIXPIhGp2WJzocPRQiM1w,-15,badcase,相机科技频道，受众与割草机购买场景明显不符
+4878,UCPN-jCN1cXa-vnPcnZAbMIA,MyFarmLife,https://cn.noxinfluencer.com/youtube/channel/UCPN-jCN1cXa-vnPcnZAbMIA,0,badcase,无标签和内容证据，无法支持割草机推广相关性
+4879,UCPNIAGYnxdow7qWgxF-ztTw,Michael Salerno,https://cn.noxinfluencer.com/youtube/channel/UCPNIAGYnxdow7qWgxF-ztTw,-15,badcase,纯段子娱乐频道，缺少园艺/工具购买场景
+4880,UCPNIbNv3IGlEOzWzOVMygqA,Joey W Lee,https://cn.noxinfluencer.com/youtube/channel/UCPNIbNv3IGlEOzWzOVMygqA,0,badcase,缺少标签、标题和近期内容，无法证明相关性
+4882,UCPOJwWF7N_of4zmz40oIu1w,Gia Armani,https://cn.noxinfluencer.com/youtube/channel/UCPOJwWF7N_of4zmz40oIu1w,0,badcase,娱乐宠物向，和家用割草机推广场景关联弱。
+4883,UCPO_L3hLqGPV91aEqUJ4fAA,Random!,https://cn.noxinfluencer.com/youtube/channel/UCPO_L3hLqGPV91aEqUJ4fAA,0,badcase,无标签无内容，无法判断为割草机相关创作者。
+4885,UCPQWe7qo9-oP-2HqbflURSQ,ᥫ᭡ The Puig Family ᥫ᭡,https://cn.noxinfluencer.com/youtube/channel/UCPQWe7qo9-oP-2HqbflURSQ,-15,badcase,家庭娱乐短视频号，格式与割草机产品推广明显不匹配。
+4886,UCPS4UnKvqZidaXYCtMS9ZfA,Shawn TFT Plus,https://cn.noxinfluencer.com/youtube/channel/UCPS4UnKvqZidaXYCtMS9ZfA,-15,badcase,游戏娱乐频道，与割草机推广场景明显不符
+4887,UCPS70N8TjDVAIRHf1i_FV8A,Craftivox,https://cn.noxinfluencer.com/youtube/channel/UCPS70N8TjDVAIRHf1i_FV8A,0,badcase,无标签无内容信号，无法判断与割草机相关
+4889,UCPS_X3rQ0v6rfnHewRxLABA,Dabawenya Wife In America,https://cn.noxinfluencer.com/youtube/channel/UCPS_X3rQ0v6rfnHewRxLABA,0,badcase,移民签证主题，和割草机推广无关
+4891,UCPSerfKwdf2NQS0vtRIBk3w,Trusted Tech & Gadget,https://cn.noxinfluencer.com/youtube/channel/UCPSerfKwdf2NQS0vtRIBk3w,0,badcase,无相关标签或视频信号，难以用于割草机推广
+4892,UCPSfjD7o1CQZXzdAy56c8kg,Uncle Rob,https://cn.noxinfluencer.com/youtube/channel/UCPSfjD7o1CQZXzdAy56c8kg,0,badcase,缺少标签和内容线索，和割草机推广无明确相关性
+4893,UCPSpb94dgcisxrTkrM-nN4Q,County Fair Guy,https://cn.noxinfluencer.com/youtube/channel/UCPSpb94dgcisxrTkrM-nN4Q,0,badcase,没有主题或标题证据，和割草机推广匹配度很低
+4894,UCPSq1Ud8qgHhpETLs7gPvkQ,Tiki Taka,https://cn.noxinfluencer.com/youtube/channel/UCPSq1Ud8qgHhpETLs7gPvkQ,-15,badcase,宠物/宝宝娱乐向标签，和割草机推广场景明显不符
+4895,UCPThCKgBrcKJ_GoXP4zBsbQ,IL Knierim,https://cn.noxinfluencer.com/youtube/channel/UCPThCKgBrcKJ_GoXP4zBsbQ,0,badcase,无可用相关信号，当前不适合割草机推广
+4896,UCPUP92zu5r07F77zgNt15og,Sonata's Antics,https://cn.noxinfluencer.com/youtube/channel/UCPUP92zu5r07F77zgNt15og,-5,badcase,娱乐音乐向内容为主，与割草机推广场景明显不符
+4897,UCPUPKgG_zR8slF82LZjc_9Q,Logo Lee,https://cn.noxinfluencer.com/youtube/channel/UCPUPKgG_zR8slF82LZjc_9Q,0,badcase,无标签、无相关视频或近期内容，缺少割草机推广相关性证据
+4899,UCPVjcX6q7OYJd89B_-G_9XA,Harv-Movies,https://cn.noxinfluencer.com/youtube/channel/UCPVjcX6q7OYJd89B_-G_9XA,0,badcase,无标签和相关内容，缺少草坪割草机推广相关性
+4901,UCPVsg9e_grA9xLRN0gD9nmg,Joe Root,https://cn.noxinfluencer.com/youtube/channel/UCPVsg9e_grA9xLRN0gD9nmg,0,badcase,无相关标签和内容线索，无法支持割草机推广
+4902,UCPWgdcHE748xf_qRaUjznXQ,The Minto Show,https://cn.noxinfluencer.com/youtube/channel/UCPWgdcHE748xf_qRaUjznXQ,0,badcase,缺少与割草机相关的园艺或家用场景信号
+4904,UCPXpeL_1wyu89nnl37jz3Eg,23rd Garage,https://cn.noxinfluencer.com/youtube/channel/UCPXpeL_1wyu89nnl37jz3Eg,0,badcase,汽车内容为主，与割草机推广场景不匹配
+4905,UCPYIvn7VNKShSob8HgnXbHA,The_Rev_Room,https://cn.noxinfluencer.com/youtube/channel/UCPYIvn7VNKShSob8HgnXbHA,1,badcase,有泛化review标签，但主体偏食物/娱乐，相关性弱
+4906,UCPZE9Kf7IwnRFJ-P_0bOf9A,Breeze Offroad,https://cn.noxinfluencer.com/youtube/channel/UCPZE9Kf7IwnRFJ-P_0bOf9A,0,badcase,越野卡车频道，和草坪割草机推广无直接相关
+4907,UCPZcyRDfRGf-1orDdIm_uig,MJP Games,https://cn.noxinfluencer.com/youtube/channel/UCPZcyRDfRGf-1orDdIm_uig,-15,badcase,纯游戏频道，和割草机购买/使用场景不符
+4908,UCPaEkk38FFA1YZiq14_nhjg,The Lawn Channel,https://cn.noxinfluencer.com/youtube/channel/UCPaEkk38FFA1YZiq14_nhjg,0,badcase,仅有lifestyle/law标签，无割草机或庭院设备推广相关证据
+4909,UCPbY-5j5clYwT1qUkVbrdHQ,Garden Staudinger,https://cn.noxinfluencer.com/youtube/channel/UCPbY-5j5clYwT1qUkVbrdHQ,0,badcase,无标签、相关视频或近期内容证据，无法支持割草机推广
+4910,UCPcWPxsLN4OYG8vDpN5dq7Q,Mhaya Scott Acres,https://cn.noxinfluencer.com/youtube/channel/UCPcWPxsLN4OYG8vDpN5dq7Q,0,badcase,以宠物狗内容为主，缺少草坪维护购买场景
+4911,UCPchRA_SXTEfBla6MTm69xg,PicRic,https://cn.noxinfluencer.com/youtube/channel/UCPchRA_SXTEfBla6MTm69xg,-15,badcase,ASMR格式与割草机推广场景严重不匹配
+4912,UCPciVvGcQZu43FTOg-f85Ug,The OG Frenchy,https://cn.noxinfluencer.com/youtube/channel/UCPciVvGcQZu43FTOg-f85Ug,-4,badcase,刀具锻造手作频道，仅DIY弱相关，不适合割草机推广
+4913,UCPdUTQRqw3y2PdSuJwpYdhw,Taylor Elmore,https://cn.noxinfluencer.com/youtube/channel/UCPdUTQRqw3y2PdSuJwpYdhw,0,badcase,美食日常频道，与割草机推广无关
+4914,UCPdZb69InsnBkLkDPHska8g,OxyOsbourne,https://cn.noxinfluencer.com/youtube/channel/UCPdZb69InsnBkLkDPHska8g,0,badcase,无标签、标题或近期内容证据支持割草机推广相关性
+4915,UCPe01VhAox_45mFe8bTOQKA,GameraidersLIVE,https://cn.noxinfluencer.com/youtube/channel/UCPe01VhAox_45mFe8bTOQKA,-15,badcase,游戏娱乐频道，不适合割草机产品推广
+4916,UCPeBdd3RNWKurQbg6W-2wng,Your Comedy Minute,https://cn.noxinfluencer.com/youtube/channel/UCPeBdd3RNWKurQbg6W-2wng,-25,badcase,娱乐短视频号，和割草机推广场景明显不符
+4917,UCPepVjJzIp1ByahJ2RUFPhw,HOA Drama Stories,https://cn.noxinfluencer.com/youtube/channel/UCPepVjJzIp1ByahJ2RUFPhw,-15,badcase,剧情故事号，缺少工具评测或购买意图
+4918,UCPf4WI-lhlUU9kerqfNVxYw,Ericca Reloaded,https://cn.noxinfluencer.com/youtube/channel/UCPf4WI-lhlUU9kerqfNVxYw,-2,badcase,乡村生活/vlog仅弱场景相关，时尚主题不适合割草机推广
+4920,UCPg0nYsiqqcxvu2fl9dKhMQ,Shelby Fortney,https://cn.noxinfluencer.com/youtube/channel/UCPg0nYsiqqcxvu2fl9dKhMQ,1,badcase,仅有泛家居弱相关，无园艺或割草机推广意图证据
+4921,UCPgXhd019oOk_1t1XBvhvJQ,WalStreet,https://cn.noxinfluencer.com/youtube/channel/UCPgXhd019oOk_1t1XBvhvJQ,0,badcase,无标签和内容相关信号，缺少割草机推广匹配
+4923,UCPggskwAxYayfFSf6yRrfHw,Gadget Waves,https://cn.noxinfluencer.com/youtube/channel/UCPggskwAxYayfFSf6yRrfHw,0,badcase,科技小家电频道，缺少割草机/园艺/户外设备信号
+4924,UCPgjWCKL9eUk_u4-KRP4jdw,2 Mostly Bald Guys,https://cn.noxinfluencer.com/youtube/channel/UCPgjWCKL9eUk_u4-KRP4jdw,0,badcase,标签集中在摩托/越野车，与割草机推广几乎无关
+4925,UCPgnXcdbHMjt16B1Pd5Crnw,Outside Sam,https://cn.noxinfluencer.com/youtube/channel/UCPgnXcdbHMjt16B1Pd5Crnw,0,badcase,无标签、视频或近期内容证据支持割草机推广相关性
+4926,UCPgxr5wjhcISFlLBl4-VkfA,brandtech pro,https://cn.noxinfluencer.com/youtube/channel/UCPgxr5wjhcISFlLBl4-VkfA,0,badcase,无相关标签和内容证据，无法支持割草机推广
+4927,UCPha-Mlmzj5OuM5kWweWJmQ,Alexey,https://cn.noxinfluencer.com/youtube/channel/UCPha-Mlmzj5OuM5kWweWJmQ,0,badcase,无相关标签和内容证据，无法支持割草机推广
+4928,UCPhckk25N7P8OI580ucRidA,Ctop,https://cn.noxinfluencer.com/youtube/channel/UCPhckk25N7P8OI580ucRidA,-15,badcase,游戏内容为主，与割草机推广场景明显不符
+4929,UCPiF5663rbPWFUzfU0SfNcQ,Eclectic Ideas,https://cn.noxinfluencer.com/youtube/channel/UCPiF5663rbPWFUzfU0SfNcQ,0,badcase,仅家庭/泳池生活泛标签，缺少割草机购买或使用意图
+4930,UCPiydZxfhRk1T79CpTSavIw,MODRN GOLF,https://cn.noxinfluencer.com/youtube/channel/UCPiydZxfhRk1T79CpTSavIw,0,badcase,高尔夫内容与割草机推广目标无直接关联
+4931,UCPk60LLfMuknzxNoCyNmSIw,Key In Hand,https://cn.noxinfluencer.com/youtube/channel/UCPk60LLfMuknzxNoCyNmSIw,0,badcase,无标签与内容证据，和割草机推广无关
+4932,UCPl7XqV9beQowDNsaeC9Q5A,Almond Consulting,https://cn.noxinfluencer.com/youtube/channel/UCPl7XqV9beQowDNsaeC9Q5A,0,badcase,安全合规科技号，与割草机推广无关
+4933,UCPlA-Z-8VyXiByZlndxt7eQ,Leigh Ann,https://cn.noxinfluencer.com/youtube/channel/UCPlA-Z-8VyXiByZlndxt7eQ,0,badcase,生活娱乐频道，缺少园艺工具购买语境
+4934,UCPm8GueZ60mKYCKh35XBw-w,The Meme Den,https://cn.noxinfluencer.com/youtube/channel/UCPm8GueZ60mKYCKh35XBw-w,0,badcase,无标签与内容证据，和割草机推广无关
+4935,UCPmBD8Rik97quc1lZ8dvDIQ,Future's Past,https://cn.noxinfluencer.com/youtube/channel/UCPmBD8Rik97quc1lZ8dvDIQ,-15,badcase,箱包仿牌内容，和割草机品类明显不相关
+4936,UCPmBhhdBqxhXldH-W9ZQmYQ,SlashStreams Network,https://cn.noxinfluencer.com/youtube/channel/UCPmBhhdBqxhXldH-W9ZQmYQ,0,badcase,无标签和视频证据，难支持 lawn mower 推广
+4937,UCPmOeU4l0bmZ9pojzH-TqZg,JeromeQ Comedy Reactions,https://cn.noxinfluencer.com/youtube/channel/UCPmOeU4l0bmZ9pojzH-TqZg,-15,badcase,娱乐梗图反应号，与草坪割草机推广场景明显不符
+4938,UCPmQ-_5Pyad4GuHqBvctV_w,"KFVS12 | Heartland News, Weather & Sports",https://cn.noxinfluencer.com/youtube/channel/UCPmQ-_5Pyad4GuHqBvctV_w,0,badcase,新闻体育频道，与割草机推广几乎无关
+4939,UCPmcnf9YWiBzOQd_JTHd1TQ,Pet Secrets,https://cn.noxinfluencer.com/youtube/channel/UCPmcnf9YWiBzOQd_JTHd1TQ,0,badcase,无相关标签或内容，缺乏园艺/工具/购买意图信号
+4940,UCPnIuXqlPCGoqUaC2JfWSVw,DarkStoneCastle,https://cn.noxinfluencer.com/youtube/channel/UCPnIuXqlPCGoqUaC2JfWSVw,0,badcase,仅有泛兴趣标签，缺少割草机相关场景或购买/测评意图
+4941,UCPnR4L9QqvZFeORA5FavfAw,CheapGeek,https://cn.noxinfluencer.com/youtube/channel/UCPnR4L9QqvZFeORA5FavfAw,0,badcase,偏车旅DIY频道，与割草机促销场景不匹配
+4943,UCPpVRUgj13nXYgqQMI7mrqA,Channel Dior,https://cn.noxinfluencer.com/youtube/channel/UCPpVRUgj13nXYgqQMI7mrqA,-15,badcase,美食内容与割草机推广主题明显不相关
+4944,UCPq9DSHjSk14ipHiuvaXYZw,The Petrol Vault,https://cn.noxinfluencer.com/youtube/channel/UCPq9DSHjSk14ipHiuvaXYZw,0,badcase,无标签、标题或近期内容证据支持割草机推广相关性
+4945,UCPqcNy58EjfmuP_waUknRSw,Artisan Loop,https://cn.noxinfluencer.com/youtube/channel/UCPqcNy58EjfmuP_waUknRSw,0,badcase,无标签、无相关视频或近期内容，缺少草坪机推广相关证据
+4947,UCPt1jEbRWkTBcioPEGPJY9w,All4Shawn,https://cn.noxinfluencer.com/youtube/channel/UCPt1jEbRWkTBcioPEGPJY9w,-15,badcase,车类频道，受众与割草机购买使用场景明显不符
+4948,UCPtX_10IErGI2Ka-dluvopw,Matthew Finlay,https://cn.noxinfluencer.com/youtube/channel/UCPtX_10IErGI2Ka-dluvopw,-5,badcase,个人车类/3D打印内容为主，与割草机推广弱相关
+4949,UCPu0ecwq5xvekhh-WOvQIMA,Brian's Fix & Repair,https://cn.noxinfluencer.com/youtube/channel/UCPu0ecwq5xvekhh-WOvQIMA,0,badcase,无标签无内容，缺少判断割草机相关性的证据
+4951,UCPv0gW1pt9ZMcFNn_DyV2IQ,old64goat,https://cn.noxinfluencer.com/youtube/channel/UCPv0gW1pt9ZMcFNn_DyV2IQ,0,badcase,标签多为泛兴趣和集市内容，缺少园艺/割草机购买意图
+4952,UCPv6_GljwnFHvHWcsU074qQ,electronicsNmore,https://cn.noxinfluencer.com/youtube/channel/UCPv6_GljwnFHvHWcsU074qQ,-15,badcase,频道标签偏法律/保险/药品，和割草机推广场景不相关
+4953,UCPvMUGIfjJ1xDJeWckkROgA,STeamReviews,https://cn.noxinfluencer.com/youtube/channel/UCPvMUGIfjJ1xDJeWckkROgA,1,badcase,仅有泛科技弱相关，缺少割草机购买/评测/使用语境
+4954,UCPvaceZxrow7yy0L2e71fLA,Exchanging Wisdom,https://cn.noxinfluencer.com/youtube/channel/UCPvaceZxrow7yy0L2e71fLA,0,badcase,无标签和内容证据，无法支持割草机推广
+4955,UCPvqG1xrvBpSntpvFrk1ZuA,TRAILPOWER,https://cn.noxinfluencer.com/youtube/channel/UCPvqG1xrvBpSntpvFrk1ZuA,0,badcase,频道偏越野/太阳能设备，与割草机推广无明显相关
+4956,UCPw65G6OIwmDcMl623N_9Wg,Top Rated,https://cn.noxinfluencer.com/youtube/channel/UCPw65G6OIwmDcMl623N_9Wg,-3,badcase,偏车辆/电子/游戏科技频道，缺少草坪修剪或园艺推广语境
+4957,UCPw98sSWeIWKoYLaEoZQj0Q,Sleep Better,https://cn.noxinfluencer.com/youtube/channel/UCPw98sSWeIWKoYLaEoZQj0Q,0,badcase,无标签无内容，缺少任何与割草机相关的受众或品类信号
+4958,UCPwVnyPbolHLtTF25MG1OrQ,Vtuber Clip & Subs Ch.,https://cn.noxinfluencer.com/youtube/channel/UCPwVnyPbolHLtTF25MG1OrQ,-15,badcase,VTuber游戏切片为主，娱乐内容与割草机推广场景不符
+4959,UCPw_W4aLUvehrX05otxqrWA,Just Matilda,https://cn.noxinfluencer.com/youtube/channel/UCPw_W4aLUvehrX05otxqrWA,0,badcase,本地旅行/车辆内容，和园艺割草工具缺少相关受众
+4960,UCPwcBIPFyRai2vCDe07KtzA,tgvyhbujnikm,https://cn.noxinfluencer.com/youtube/channel/UCPwcBIPFyRai2vCDe07KtzA,-15,badcase,娱乐宠物梗内容为主，不适合做割草机类商品推广
+4962,UCPxlQ-GyNf2YOCF66rgbZgQ,GeekSpin,https://cn.noxinfluencer.com/youtube/channel/UCPxlQ-GyNf2YOCF66rgbZgQ,0,badcase,标签偏泛科技，与割草机推广无直接相关
+4963,UCPyzFFQ_ss4YbVpN57ENYwA,ThriftStore Hacker,https://cn.noxinfluencer.com/youtube/channel/UCPyzFFQ_ss4YbVpN57ENYwA,-14,badcase,频道以加密/金融为主，和割草机推广场景明显不符
+4964,UCPz8utAr93VsJbjEvq8g_gA,Wades RC,https://cn.noxinfluencer.com/youtube/channel/UCPz8utAr93VsJbjEvq8g_gA,-15,badcase,RC玩具车频道，和割草机推广场景明显不符
+4965,UCQ-ZokRbnuK-QOy0bDQWgFQ,Rosel Simpson TV,https://cn.noxinfluencer.com/youtube/channel/UCQ-ZokRbnuK-QOy0bDQWgFQ,-15,badcase,烹饪频道与割草机推广场景明显不符，主题错配严重
+4966,UCQ-ut6ag6YOVsppZy9oHoFQ,Unboxing Synapses,https://cn.noxinfluencer.com/youtube/channel/UCQ-ut6ag6YOVsppZy9oHoFQ,0,badcase,无标签无内容，缺少割草机相关或购买场景信号
+4967,UCQ0BJ4N7T6iOYzauUKJLb_w,Orschell Excavating,https://cn.noxinfluencer.com/youtube/channel/UCQ0BJ4N7T6iOYzauUKJLb_w,0,badcase,频道主打挖掘施工，与割草机推广缺少相关与购买场景信号
+4968,UCQ0jAaVdQUrERhRpxhk6DgA,Marlon Makes,https://cn.noxinfluencer.com/youtube/channel/UCQ0jAaVdQUrERhRpxhk6DgA,3,badcase,偏DIY木工频道，只有泛家装相关，缺少割草机推广意图
+4969,UCQ0pIvf4i7UWJ9sHq3Zhfpg,NextCube Tech,https://cn.noxinfluencer.com/youtube/channel/UCQ0pIvf4i7UWJ9sHq3Zhfpg,0,badcase,无标签/无标题线索，缺少割草机相关受众与购买意图
+4970,UCQ1L-38wxgWDjMt6EAFwGbA,TLCee Updates,https://cn.noxinfluencer.com/youtube/channel/UCQ1L-38wxgWDjMt6EAFwGbA,-4,badcase,娱乐向频道，缺少割草机购买/评测/使用场景，不适合推广
+4971,UCQ1staeBJ2dVtaJRJoc8EWw,5BestPro,https://cn.noxinfluencer.com/youtube/channel/UCQ1staeBJ2dVtaJRJoc8EWw,0,badcase,无标签与内容信号，难支撑割草机推广
+4972,UCQ3XNnLmleIeIMAvHsVr28Q,Ferraiz Hinkes,https://cn.noxinfluencer.com/youtube/channel/UCQ3XNnLmleIeIMAvHsVr28Q,0,badcase,无标签与内容信号，难判断相关性
+4974,UCQ41JPfk4Bemp6G-GSjI0lg,DoRite Fabrication,https://cn.noxinfluencer.com/youtube/channel/UCQ41JPfk4Bemp6G-GSjI0lg,1,badcase,兴趣标签过泛，缺少割草机使用或购买信号
+4975,UCQ4a3sKgqz0cwGrPeJoFeyw,Midwest Option Hunt Channel,https://cn.noxinfluencer.com/youtube/channel/UCQ4a3sKgqz0cwGrPeJoFeyw,-15,badcase,狩猎户外为主，和割草机推广明显错位
+4976,UCQ4rXeLWokPiRANuSh1fraQ,DMR Heroes,https://cn.noxinfluencer.com/youtube/channel/UCQ4rXeLWokPiRANuSh1fraQ,-15,badcase,游戏娱乐频道，和割草机推广场景明显不匹配
+4977,UCQ4s9mZhxslK-dd7LbDUzrQ,Best Aliexpress Products House,https://cn.noxinfluencer.com/youtube/channel/UCQ4s9mZhxslK-dd7LbDUzrQ,0,badcase,无相关标签和内容，缺少园艺/割草机推广信号
+4978,UCQ5x2mP8b--MTVYwwQUbBaw,MBJ DIY,https://cn.noxinfluencer.com/youtube/channel/UCQ5x2mP8b--MTVYwwQUbBaw,0,badcase,仅有泛创作者标签，无园艺/工具/购买意图，相关性很弱
+4979,UCQ61Iqy6U6fgjfQa8DmF1HQ,Silent Scars,https://cn.noxinfluencer.com/youtube/channel/UCQ61Iqy6U6fgjfQa8DmF1HQ,-15,badcase,频道主打娱乐喜剧，与割草机推广场景明显不匹配
+4981,UCQ7K0Dh7xCgU6r3buWMYUIg,Braaaplive2strokes,https://cn.noxinfluencer.com/youtube/channel/UCQ7K0Dh7xCgU6r3buWMYUIg,0,badcase,偏摩托车/生活类，和草坪割草机推广关联弱
+4982,UCQ8styy6s8d98ohSdFwtLAg,Troy Shaw,https://cn.noxinfluencer.com/youtube/channel/UCQ8styy6s8d98ohSdFwtLAg,1,badcase,家庭vlog和生活方式标签泛化，缺少草坪养护语境
+4983,UCQ94b18vowJ4NhRmVJ6du9A,jasminealvey,https://cn.noxinfluencer.com/youtube/channel/UCQ94b18vowJ4NhRmVJ6du9A,0,badcase,无标签与内容信号，无法支撑割草机推广
+4984,UCQ9e0JHba7ApNz_-HL-p_6A,GREENPOWERSCIENCE,https://cn.noxinfluencer.com/youtube/channel/UCQ9e0JHba7ApNz_-HL-p_6A,1,badcase,科学科技泛主题，缺少园艺或设备评测场景
+4986,UCQ9v466uLBE3v5-GlSRTIBg,Mechanic Huong Lan,https://cn.noxinfluencer.com/youtube/channel/UCQ9v466uLBE3v5-GlSRTIBg,0,badcase,无标签无内容证据，缺少 lawn mower 推广相关性
+4988,UCQAqjLdh4F_IJ2NS8kndlWQ,Jordan Sherrod,https://cn.noxinfluencer.com/youtube/channel/UCQAqjLdh4F_IJ2NS8kndlWQ,-15,badcase,娱乐短视频为主，和 lawn mower 产品推广场景不匹配
+4990,UCQBDJOxoFi8cZHItAiyrLag,ReviewNest Daily,https://cn.noxinfluencer.com/youtube/channel/UCQBDJOxoFi8cZHItAiyrLag,0,badcase,无标签与内容证据，无法支持 lawn mower 推广
+4991,UCQBMdhVX8w_Q6J8UrEglvkg,bigshredder,https://cn.noxinfluencer.com/youtube/channel/UCQBMdhVX8w_Q6J8UrEglvkg,0,badcase,回收生活号，与割草机推广无明显交集
+4992,UCQBUk316SB9hvgMgC32GT-A,Sean Does DIY,https://cn.noxinfluencer.com/youtube/channel/UCQBUk316SB9hvgMgC32GT-A,2,badcase,仅有DIY弱相关，缺少草坪护理或割草机推广意图
+4994,UCQC_9JswYck-ciNICA1x1Qg,Josh Cobb,https://cn.noxinfluencer.com/youtube/channel/UCQC_9JswYck-ciNICA1x1Qg,0,badcase,生活科技健身号，缺少园艺/工具购买场景
+4995,UCQCo2L7U7WU0eNIFQ7WzFjw,Gymnanigains,https://cn.noxinfluencer.com/youtube/channel/UCQCo2L7U7WU0eNIFQ7WzFjw,-10,badcase,宠物受众为主，不适合割草机推广
+4997,UCQENNJK7HHVmoy34WPjebkw,BT Build Things - Home Edition,https://cn.noxinfluencer.com/youtube/channel/UCQENNJK7HHVmoy34WPjebkw,0,badcase,无标签、无相关视频、无近期内容证据支持割草机推广
+4998,UCQEoqaxNfIzgQMtj52v3ajA,Armata099,https://cn.noxinfluencer.com/youtube/channel/UCQEoqaxNfIzgQMtj52v3ajA,0,badcase,以游戏和体育为主，和家用割草机推广明显不匹配
+4999,UCQF-_-CrbxhCpOypu9EpvsA,Diamonds 4 Linda,https://cn.noxinfluencer.com/youtube/channel/UCQF-_-CrbxhCpOypu9EpvsA,1,badcase,手工贴钻为主，仅有泛DIY弱关联，和割草机推广不匹配
+5001,UCQFHEbYXUiL_ZkVEp40BYZw,The Search For Awesome,https://cn.noxinfluencer.com/youtube/channel/UCQFHEbYXUiL_ZkVEp40BYZw,0,badcase,科技/游戏频道，缺少割草机购买或使用相关信号
+5002,UCQFOonrE-VWoxCmjfrOQJuw,Subariblet,https://cn.noxinfluencer.com/youtube/channel/UCQFOonrE-VWoxCmjfrOQJuw,0,badcase,无标签无内容信号，无法支撑割草机推广
+5003,UCQGKkMsv7i46stflWnzousg,Cleanup Relax,https://cn.noxinfluencer.com/youtube/channel/UCQGKkMsv7i46stflWnzousg,5,badcase,有mowing信号，但ASMR清理型内容与产品推广格式明显不匹配
+5004,UCQHVG5IiPTgrk97MYbCA9dw,Spc_Munguia,https://cn.noxinfluencer.com/youtube/channel/UCQHVG5IiPTgrk97MYbCA9dw,0,badcase,宠物/杂项频道，和割草机推广目标不匹配
+5005,UCQHtL22b8-GZDlOUfx_bI-w,Amazing Tools  Technology,https://cn.noxinfluencer.com/youtube/channel/UCQHtL22b8-GZDlOUfx_bI-w,1,badcase,仅有泛工具属性，和割草机场景弱相关
+5006,UCQHxjvq8S_Ebdy9Pg5LUBVQ,Tech Estate,https://cn.noxinfluencer.com/youtube/channel/UCQHxjvq8S_Ebdy9Pg5LUBVQ,0,badcase,无相关标签或内容，无法判断与割草机推广匹配
+5007,UCQIuYbDXvFHEQEoDkehakDA,david crackerfeller,https://cn.noxinfluencer.com/youtube/channel/UCQIuYbDXvFHEQEoDkehakDA,0,badcase,偏汽车维修评测，和割草机推广关联很弱
+5008,UCQIu_26F7QbUB9suoofqELg,Outdoors with Cam,https://cn.noxinfluencer.com/youtube/channel/UCQIu_26F7QbUB9suoofqELg,0,badcase,户外/狩猎取向，缺少家用园艺或产品评测语境
+5009,UCQJSPycOxbb7MJag0IrbyAg,Premium Fuel Only,https://cn.noxinfluencer.com/youtube/channel/UCQJSPycOxbb7MJag0IrbyAg,0,badcase,无标签无内容，缺少任何推广相关信号
+5011,UCQKYq1113r9bBMwP-SGhJhQ,iWill,https://cn.noxinfluencer.com/youtube/channel/UCQKYq1113r9bBMwP-SGhJhQ,0,badcase,无草坪机相关标签或内容，推广相关性很弱
+5012,UCQKgEiUF-1lk6-_u4vURW9w,Leo Reiffen,https://cn.noxinfluencer.com/youtube/channel/UCQKgEiUF-1lk6-_u4vURW9w,0,badcase,无草坪机相关标签或内容，推广相关性很弱
+5013,UCQLrfkfocwCyJvtADciH2Pw,Mike Trull Amsoil dealer,https://cn.noxinfluencer.com/youtube/channel/UCQLrfkfocwCyJvtADciH2Pw,0,badcase,偏车辆与生活杂项，缺少草坪机购置或使用语境
+5014,UCQM9bsQAUmz6fOvRbkFUq9A,Being Barton,https://cn.noxinfluencer.com/youtube/channel/UCQM9bsQAUmz6fOvRbkFUq9A,0,badcase,以生活和巴士改装为主，不适合草坪机推广
+5015,UCQMgecWdiyjXqIQaq3pe3tA,Genuine show,https://cn.noxinfluencer.com/youtube/channel/UCQMgecWdiyjXqIQaq3pe3tA,0,badcase,音乐和旅行杂项频道，与草坪机推广不匹配
+5016,UCQN7NhtBqADmNaRA3yc_mAQ,TK Bay,https://cn.noxinfluencer.com/youtube/channel/UCQN7NhtBqADmNaRA3yc_mAQ,0,badcase,消费电子/手机教程频道，与割草机产品推广关联很弱
+5017,UCQN8SmllNRGCSQWaxS3TpCw,myrna reyes,https://cn.noxinfluencer.com/youtube/channel/UCQN8SmllNRGCSQWaxS3TpCw,-15,badcase,音乐与表演内容为主，和割草机推广明显错配
+5018,UCQNUmQcMMvg8xZcfh94jT4w,PIXIEDRAW1,https://cn.noxinfluencer.com/youtube/channel/UCQNUmQcMMvg8xZcfh94jT4w,-15,badcase,音乐娱乐型频道，属于割草机推广的明显错配
+5019,UCQNuGDUxuWFGB6834b2KMWw,The Open Booth,https://cn.noxinfluencer.com/youtube/channel/UCQNuGDUxuWFGB6834b2KMWw,0,badcase,无标签、视频或近期内容证据支持割草机推广相关性
+5020,UCQNvo_31eXdsdqhXjiH0Jcw,Double D Kicks,https://cn.noxinfluencer.com/youtube/channel/UCQNvo_31eXdsdqhXjiH0Jcw,-15,badcase,球鞋时尚频道，和割草机产品推广不相关
+5022,UCQObd2W7coJIAYe-sZmO6ew,The Art of Craftsmanship,https://cn.noxinfluencer.com/youtube/channel/UCQObd2W7coJIAYe-sZmO6ew,0,badcase,手工刀具为主，和割草机推广无关
+5023,UCQOcC69izcQucP1vG3Lg3pw,IMARC Group,https://cn.noxinfluencer.com/youtube/channel/UCQOcC69izcQucP1vG3Lg3pw,0,badcase,无频道标签和内容，无法判断相关性
+5024,UCQOqIF4Zew28WPPCufn4WJg,BladeCraft Studio,https://cn.noxinfluencer.com/youtube/channel/UCQOqIF4Zew28WPPCufn4WJg,0,badcase,无标签与内容，缺少割草机相关信号
+5025,UCQPEB-S1aFUXeaKhfjLU0Pg,Review Amazon,https://cn.noxinfluencer.com/youtube/channel/UCQPEB-S1aFUXeaKhfjLU0Pg,0,badcase,无标签、相关视频或近期内容证据，无法支持割草机推广召回
+5026,UCQPUyWu5Ad_XBwbDDT19WDA,Rusty Hammer Forge,https://cn.noxinfluencer.com/youtube/channel/UCQPUyWu5Ad_XBwbDDT19WDA,0,badcase,无标签无内容线索，无法支持割草机推广
+5027,UCQQZu8jY4sCC1YoyvbOjHBQ,Best Of Top 10,https://cn.noxinfluencer.com/youtube/channel/UCQQZu8jY4sCC1YoyvbOjHBQ,0,badcase,泛娱乐合集频道，缺少家居工具购买或使用场景
+5028,UCQQ_1WMbkV9hmItH9N5NOrA,Resell Signals,https://cn.noxinfluencer.com/youtube/channel/UCQQ_1WMbkV9hmItH9N5NOrA,1,badcase,仅有HomeDepot弱购物关联，频道偏转卖赚钱，缺少割草机推广语境
+5029,UCQRC7AmywmL3PTePI_tP2_Q,Henry Pug  & Brothers,https://cn.noxinfluencer.com/youtube/channel/UCQRC7AmywmL3PTePI_tP2_Q,-15,badcase,宠物搞笑内容与割草机推广目标明显不匹配
+5030,UCQRS3G_F99qEZvjX0cPOX0w,Business Assurance,https://cn.noxinfluencer.com/youtube/channel/UCQRS3G_F99qEZvjX0cPOX0w,0,badcase,无相关标签与视频线索，推广关联度很低
+5031,UCQS5UMV_xc6KKJyn0mE7OIQ,LYRIX559,https://cn.noxinfluencer.com/youtube/channel/UCQS5UMV_xc6KKJyn0mE7OIQ,0,badcase,无标签无内容信号，无法判断为割草机相关
+5032,UCQS_eZyxVAPYYAaMzvGfaQw,SMOKIN' EAGLES ROD SHOP,https://cn.noxinfluencer.com/youtube/channel/UCQS_eZyxVAPYYAaMzvGfaQw,-2,badcase,汽车维修频道，仅弱机械相关，无草坪园艺或割草机证据
+5033,UCQT0TzzyEUUfAEHyemf5z8w,Corey's World,https://cn.noxinfluencer.com/youtube/channel/UCQT0TzzyEUUfAEHyemf5z8w,0,badcase,无有效标签或近期内容，缺少推广相关证据
+5034,UCQTu7scwnv2GmnWx6vHEY3g,The Random Channel And More,https://cn.noxinfluencer.com/youtube/channel/UCQTu7scwnv2GmnWx6vHEY3g,0,badcase,无标签无内容，和割草机推广无明显关系
+5035,UCQUyPDkIW4B6K69-LFL2lKA,Kola,https://cn.noxinfluencer.com/youtube/channel/UCQUyPDkIW4B6K69-LFL2lKA,0,badcase,科技评测偏AR眼镜，与割草机受众和品类不匹配
+5037,UCQV1mr6-WFws1bwbYRviefg,Joman,https://cn.noxinfluencer.com/youtube/channel/UCQV1mr6-WFws1bwbYRviefg,0,badcase,频道偏娱乐/生活杂项，和割草机推广无明确产品或购买意图相关
+5038,UCQXSy_ZZ4hlvgC15k6ZErsQ,Callhampterofficial,https://cn.noxinfluencer.com/youtube/channel/UCQXSy_ZZ4hlvgC15k6ZErsQ,-10,badcase,宠物仓鼠娱乐频道，与割草机推广场景明显不符
+5040,UCQYkGYBG_y4WZUpV6nz82fQ,MITEEman,https://cn.noxinfluencer.com/youtube/channel/UCQYkGYBG_y4WZUpV6nz82fQ,0,badcase,标签偏健康生活，与割草机推广无明显相关
+5042,UCQZ8dhO-XHZyi7ktak2lKCw,Only Garden,https://cn.noxinfluencer.com/youtube/channel/UCQZ8dhO-XHZyi7ktak2lKCw,0,badcase,无标签无内容信号，无法判断与割草机推广相关
+5043,UCQZB6kPdZuTlZJmbwIIjO9Q,Stephanie McDee,https://cn.noxinfluencer.com/youtube/channel/UCQZB6kPdZuTlZJmbwIIjO9Q,-15,badcase,音乐娱乐频道，和割草机推广主题完全不匹配
+5045,UCQZjDglw_BT6Wfc_PK3wGUw,Shannon Cornthwaite Advocacy,https://cn.noxinfluencer.com/youtube/channel/UCQZjDglw_BT6Wfc_PK3wGUw,0,badcase,无相关标签与内容线索，不适合割草机推广
+5046,UCQ_28m8T35_zYFViEh4SSlQ,Jan Mark Garcia,https://cn.noxinfluencer.com/youtube/channel/UCQ_28m8T35_zYFViEh4SSlQ,-12,badcase,ASMR/满足感内容，与割草机推广的产品场景不匹配
+5048,UCQa5oIUiCBtBupkTCaJnCog,LIFE OF JAEE,https://cn.noxinfluencer.com/youtube/channel/UCQa5oIUiCBtBupkTCaJnCog,0,badcase,无标签无内容信号，和割草机推广无关
+5049,UCQaW717EYFMqyh3od5g3wsQ,Loving Life as Megan,https://cn.noxinfluencer.com/youtube/channel/UCQaW717EYFMqyh3od5g3wsQ,1,badcase,仅有家居泛标签，缺少草坪工具或购买意图
+5050,UCQahJ7jP0Ob5IRxcNV42Wdw,SanJoseMaxwell,https://cn.noxinfluencer.com/youtube/channel/UCQahJ7jP0Ob5IRxcNV42Wdw,0,badcase,音乐娱乐运动为主，和割草机推广基本无关
+9151,UCwA7LU4-jps613RuewhWWDg,Funny Business Podcast,https://cn.noxinfluencer.com/youtube/channel/UCwA7LU4-jps613RuewhWWDg,0,badcase,无园艺、割草机或产品推广相关信号
+9152,UCwACkX9cFJbYKFR5GQmbpFQ,2407,https://cn.noxinfluencer.com/youtube/channel/UCwACkX9cFJbYKFR5GQmbpFQ,-15,badcase,宠物/仓鼠内容为主，与割草机推广受众明显不符
+9153,UCwANALid9svUEijHG__9MQQ,Houston,https://cn.noxinfluencer.com/youtube/channel/UCwANALid9svUEijHG__9MQQ,0,badcase,无标签、无相关视频、无近期内容，缺少割草机推广相关性
+9154,UCwAipLlg4-a06hqWLLBg78g,MrSmallCakes,https://cn.noxinfluencer.com/youtube/channel/UCwAipLlg4-a06hqWLLBg78g,0,badcase,无标签、标题或近期内容证据支持割草机推广相关性
+9155,UCwC22Aa1YxYADvxDgguoWrA,Creative KH,https://cn.noxinfluencer.com/youtube/channel/UCwC22Aa1YxYADvxDgguoWrA,-4,badcase,DIY弱相关，但频道偏RC/自制科技，缺少园艺割草机推广语境
+9156,UCwCFra2KKDdmgowL_pSrDVg,Matt Verley,https://cn.noxinfluencer.com/youtube/channel/UCwCFra2KKDdmgowL_pSrDVg,0,badcase,车辆/工坊泛题材，缺少割草机购买或测评意图
+9157,UCwCQpGV4q91UNqAshwHnoTw,TWIN ideas,https://cn.noxinfluencer.com/youtube/channel/UCwCQpGV4q91UNqAshwHnoTw,0,badcase,频道偏水泵/手工创意，缺少草坪护理或割草机推广语境
+9158,UCwFFBHFyBjs98mv2ep4B8tw,Reviews Products Store,https://cn.noxinfluencer.com/youtube/channel/UCwFFBHFyBjs98mv2ep4B8tw,0,badcase,无标签、无相关视频和近期内容，缺少草坪机推广相关证据
+9159,UCwFnxeT6z_ZO-fG2zGubPLw,Ron Placone,https://cn.noxinfluencer.com/youtube/channel/UCwFnxeT6z_ZO-fG2zGubPLw,0,badcase,政治社会内容，和割草机推广场景不匹配
+9160,UCwHPEp_OVJQSMWhsZvhaCXQ,DavidinDigital,https://cn.noxinfluencer.com/youtube/channel/UCwHPEp_OVJQSMWhsZvhaCXQ,0,badcase,无标签无内容证据，相关性不足
+9161,UCwHYSEZ5WOV9s0YkJdRUGkQ,Saber The Wolf,https://cn.noxinfluencer.com/youtube/channel/UCwHYSEZ5WOV9s0YkJdRUGkQ,0,badcase,无相关标签或内容信号，无法支持割草机推广
+9162,UCwJOLhqkBHVnT5wA1mkOzdg,Busted Knuckle Films,https://cn.noxinfluencer.com/youtube/channel/UCwJOLhqkBHVnT5wA1mkOzdg,-10,badcase,越野车娱乐频道，主题与割草机推广明显不符
+9163,UCwJqTK2MXPLSvRPuuu5AQJQ,Gideon Joseph,https://cn.noxinfluencer.com/youtube/channel/UCwJqTK2MXPLSvRPuuu5AQJQ,0,badcase,缺少任何可用的产品或场景相关信号
+9164,UCwK1xB_TKCFkbA6a9unT5Tg,WJ Handy Dad,https://cn.noxinfluencer.com/youtube/channel/UCwK1xB_TKCFkbA6a9unT5Tg,1,badcase,仅有DIY弱相关，且主体偏车辆内容，转化价值低
+9166,UCwKVY45FVWqbirt7AUglClA,TinyTaleHub,https://cn.noxinfluencer.com/youtube/channel/UCwKVY45FVWqbirt7AUglClA,0,badcase,无标签无内容，缺少与割草机推广相关的判断依据
+9167,UCwLi1unPbXUvnzEXbtdh8uw,tallboyyyy,https://cn.noxinfluencer.com/youtube/channel/UCwLi1unPbXUvnzEXbtdh8uw,-15,badcase,汽车类频道为主，与割草机促销场景明显不匹配
+9168,UCwMUhtrxiw6xMCfcFyuhjGA,NO LOOK GAMING,https://cn.noxinfluencer.com/youtube/channel/UCwMUhtrxiw6xMCfcFyuhjGA,0,badcase,无标签无内容，无法建立割草机推广相关性
+9170,UCwOTAktfkD-1X10GQBumf9Q,Joe,https://cn.noxinfluencer.com/youtube/channel/UCwOTAktfkD-1X10GQBumf9Q,0,badcase,无标签无内容，缺少割草机相关信号
+9171,UCwOU49duGMyeMIGWb_xUYRA,Cutting Up With Mac-D,https://cn.noxinfluencer.com/youtube/channel/UCwOU49duGMyeMIGWb_xUYRA,-10,badcase,发型美容频道，和割草机推广场景明显不相关
+9172,UCwOd93UOsr_Qk_S6sQycVBw,That Good News Girl,https://cn.noxinfluencer.com/youtube/channel/UCwOd93UOsr_Qk_S6sQycVBw,-15,badcase,宠物/动物娱乐频道，与人用割草机推广互斥
+9173,UCwOgVPb_J7fFeqysg_MJWVQ,Engineering Knowledge Hub,https://cn.noxinfluencer.com/youtube/channel/UCwOgVPb_J7fFeqysg_MJWVQ,0,badcase,无标签、无相关视频或近期内容，缺少割草机推广相关证据
+9175,UCwPRc8h1en-M46IiDfovs0w,Dave Medicus,https://cn.noxinfluencer.com/youtube/channel/UCwPRc8h1en-M46IiDfovs0w,-8,badcase,偏汽车/机械DIY标签，无割草机或园艺设备推广证据
+9177,UCwR_rHovDME6YXxyki_UUrQ,Yard Hero,https://cn.noxinfluencer.com/youtube/channel/UCwR_rHovDME6YXxyki_UUrQ,0,badcase,无标签无内容，无法判断为割草机推广相关
+9178,UCwRxw-O21OZeXG73mJmTHLQ,Thunderbear,https://cn.noxinfluencer.com/youtube/channel/UCwRxw-O21OZeXG73mJmTHLQ,0,badcase,无标签无内容，缺少与割草机相关的可用信号
+9179,UCwSx3N0xJJJ7cYVhGii-X1w,I Don't Getcha,https://cn.noxinfluencer.com/youtube/channel/UCwSx3N0xJJJ7cYVhGii-X1w,-10,badcase,娱乐向频道，和园艺器具推广场景明显不符
+9181,UCwTk5y2BRuUyzQtyz6EA3nQ,AT Reviews,https://cn.noxinfluencer.com/youtube/channel/UCwTk5y2BRuUyzQtyz6EA3nQ,0,badcase,无标签无内容证据，和割草机推广无关
+9182,UCwTxz18ns5ppjusCTBXxuUQ,DIY TOOLS & EQUIPMENT,https://cn.noxinfluencer.com/youtube/channel/UCwTxz18ns5ppjusCTBXxuUQ,-9,badcase,有户外工具邻近信号，但迷你工具/模型主题不适合割草机推广
+9183,UCwVGuACqrxQ-ysoUDPm_CyA,"Ava, Kya, Mason & Nori",https://cn.noxinfluencer.com/youtube/channel/UCwVGuACqrxQ-ysoUDPm_CyA,0,badcase,篮球家庭vlog，和割草机推广关联弱
+9184,UCwVOFz4eM5cblo6Kik61iQg,Tech AI Shorts,https://cn.noxinfluencer.com/youtube/channel/UCwVOFz4eM5cblo6Kik61iQg,0,badcase,无标签无内容，无法支持割草机推广
+9185,UCwWbNLEcpiuO6Kh-TWp3IQg,Arni Atlason,https://cn.noxinfluencer.com/youtube/channel/UCwWbNLEcpiuO6Kh-TWp3IQg,0,badcase,无标签无内容，和割草机推广无关
+9186,UCwY00Eze4hBJSlD1V__8a4g,neogeoriffic,https://cn.noxinfluencer.com/youtube/channel/UCwY00Eze4hBJSlD1V__8a4g,-15,badcase,娱乐音乐频道，与割草机推广无关，且无购买或测评意图
+9187,UCwZHzrYeOdvJG2fBtLEglWA,JRL Local,https://cn.noxinfluencer.com/youtube/channel/UCwZHzrYeOdvJG2fBtLEglWA,0,badcase,无标签、标题或近期内容证据，无法支持割草机推广相关性
+9188,UCwZLpt15sYAFT-aOEHMpcYg,bortsdale,https://cn.noxinfluencer.com/youtube/channel/UCwZLpt15sYAFT-aOEHMpcYg,-15,badcase,游戏频道，和割草机推广场景不符，缺少任何购买或评测信号
+9189,UCwZrVop0roENOhVyE33ZF-A,Testing times story,https://cn.noxinfluencer.com/youtube/channel/UCwZrVop0roENOhVyE33ZF-A,0,badcase,无标签、无内容证据，无法支持割草机推广
+9190,UCwZwEdFe1MfWw_EoXivyWUQ,TacoPotatoMustaNg,https://cn.noxinfluencer.com/youtube/channel/UCwZwEdFe1MfWw_EoXivyWUQ,-15,badcase,汽车频道，内容域与割草机推广明显不符
+9191,UCw_RyEbk9UcES-LbOGLbFRA,2StallGarage,https://cn.noxinfluencer.com/youtube/channel/UCw_RyEbk9UcES-LbOGLbFRA,-15,badcase,频道以汽车/Jeep维修为主，与割草机推广场景不匹配
+9192,UCw_XUBm5YV6QtUyi9QRjWFg,E FooLy,https://cn.noxinfluencer.com/youtube/channel/UCw_XUBm5YV6QtUyi9QRjWFg,-15,badcase,游戏娱乐频道，和割草机推广明显不符
+9193,UCw_lQ_KhJBX4hAQ6rqbg0Bw,Kentucky Ballistics,https://cn.noxinfluencer.com/youtube/channel/UCw_lQ_KhJBX4hAQ6rqbg0Bw,-15,badcase,枪械内容，与割草机推广无关
+9194,UCw_lZC41uQWYBl9vFeqx0cg,Small Town Southern Wife,https://cn.noxinfluencer.com/youtube/channel/UCw_lZC41uQWYBl9vFeqx0cg,-5,badcase,美食烹饪频道，与割草机产品推广场景不匹配
+9195,UCwaFCCk4aLTCyNVH-gU7naA,PANDAG,https://cn.noxinfluencer.com/youtube/channel/UCwaFCCk4aLTCyNVH-gU7naA,0,badcase,无标签无内容，无法判断为相关频道
+9196,UCwaGKyDj76cxanSlX84p8Yw,Best Quality,https://cn.noxinfluencer.com/youtube/channel/UCwaGKyDj76cxanSlX84p8Yw,0,badcase,无标签和视频证据，无法支持割草机推广匹配
+9197,UCwal5bM_SeD87Sr9r8y-ydw,Repair girl VN,https://cn.noxinfluencer.com/youtube/channel/UCwal5bM_SeD87Sr9r8y-ydw,0,badcase,无标签和视频证据，无法判断为割草机相关频道
+9198,UCwbbd5c554Mbbb45STR5jNg,Gorillas Random Thoughts,https://cn.noxinfluencer.com/youtube/channel/UCwbbd5c554Mbbb45STR5jNg,0,badcase,无标签和视频证据，频道主题未体现园艺工具内容
+9199,UCwbk-VBHXkOs_5nBAiqREww,Colton Medlin,https://cn.noxinfluencer.com/youtube/channel/UCwbk-VBHXkOs_5nBAiqREww,0,badcase,无标签和视频证据，缺少割草机购买或使用场景
+9200,UCwcJnS4vlI9vIqLmZNk9yEw,Smartysmart,https://cn.noxinfluencer.com/youtube/channel/UCwcJnS4vlI9vIqLmZNk9yEw,0,badcase,无标签和视频证据，无法支持割草机推广相关性
+9201,UCwccbiFVL7Cj-Zi3sHXL0dQ,413RC,https://cn.noxinfluencer.com/youtube/channel/UCwccbiFVL7Cj-Zi3sHXL0dQ,-15,badcase,频道以拳击/RC车/运动爱好为主，缺少割草机推广相关性
+9203,UCwdVL0L9ljq3McWMXWrUVdg,Think Like A Horse,https://cn.noxinfluencer.com/youtube/channel/UCwdVL0L9ljq3McWMXWrUVdg,-15,badcase,全是马匹训练/宠物内容，和割草机人群不匹配
+9205,UCwdx8ruzMqXKgoU4XsdHl8g,The Awesome Lawsons,https://cn.noxinfluencer.com/youtube/channel/UCwdx8ruzMqXKgoU4XsdHl8g,-15,badcase,家庭搞笑娱乐频道，和割草机推广场景不符
+9207,UCwe8Bfq5N24hCwiiYoxdR1g,HomeWithJoan,https://cn.noxinfluencer.com/youtube/channel/UCwe8Bfq5N24hCwiiYoxdR1g,0,badcase,无标签无内容信号，和割草机推广无相关证据
+9208,UCweRqj_qJmVNBrdO_mVA-ng,VizvaTec,https://cn.noxinfluencer.com/youtube/channel/UCweRqj_qJmVNBrdO_mVA-ng,0,badcase,无标签、视频或近期内容证据，缺少割草机推广相关性
+9209,UCweS67L_KwnVD7tuk6QuMhg,TimmyME,https://cn.noxinfluencer.com/youtube/channel/UCweS67L_KwnVD7tuk6QuMhg,0,badcase,频道偏旅游游戏时尚，和割草机推广缺少园艺/工具购买语境
+9210,UCwefCyQJx3qXUfWQ86DYp4g,Aaron Rankin,https://cn.noxinfluencer.com/youtube/channel/UCwefCyQJx3qXUfWQ86DYp4g,0,badcase,无割草机相关标签，内容偏泛生活杂项，缺少购买或使用场景
+9211,UCwfnrksZZRyamQ-cVrD7ayw,Kids Channel Toy Collector - Fun Learning Videos,https://cn.noxinfluencer.com/youtube/channel/UCwfnrksZZRyamQ-cVrD7ayw,-15,badcase,儿童玩具频道，与割草机推广目标明显不符
+9212,UCwg4F1sN-qaA2CrxRhYbbJg,Jared Desrosiers,https://cn.noxinfluencer.com/youtube/channel/UCwg4F1sN-qaA2CrxRhYbbJg,0,badcase,food/lifestyle过于泛化，缺少割草机相关场景
+9213,UCwgURKfUA7e0Z7_qE3TvBFQ,devinsupertramp,https://cn.noxinfluencer.com/youtube/channel/UCwgURKfUA7e0Z7_qE3TvBFQ,-15,badcase,娱乐游戏向频道，与割草机商品推广场景冲突
+9214,UCwgcmcn_iifLGs_38JIF6kw,Tech Know How,https://cn.noxinfluencer.com/youtube/channel/UCwgcmcn_iifLGs_38JIF6kw,0,badcase,数据/软件教程频道，和割草机受众与场景不匹配
+9215,UCwgxo2WmMPspTZ-uYPdyvVA,A-Gifts,https://cn.noxinfluencer.com/youtube/channel/UCwgxo2WmMPspTZ-uYPdyvVA,0,badcase,无标签、标题或近期内容证据，缺少割草机推广相关性
+9216,UCwis55-_BfQ9NjGSCQ6BfBg,Tim Reviews Everything & The Warehouse Series,https://cn.noxinfluencer.com/youtube/channel/UCwis55-_BfQ9NjGSCQ6BfBg,2,badcase,仓储培训为主，仅有家庭/生活泛标签，和草坪机受众不匹配
+9217,UCwj6oOeRzSTDDsPnUAZ2JLg,Blue XPU,https://cn.noxinfluencer.com/youtube/channel/UCwj6oOeRzSTDDsPnUAZ2JLg,0,badcase,无标签无内容，无法建立草坪机推广相关性
+9218,UCwj7QNKKVJWE9Juci3TWtmg,LifeProjX,https://cn.noxinfluencer.com/youtube/channel/UCwj7QNKKVJWE9Juci3TWtmg,-5,badcase,娱乐短视频为主，和草坪机促销受众不匹配
+9219,UCwnEg8mctzBqKQZ8ysTCQOA,Toasty Gaming,https://cn.noxinfluencer.com/youtube/channel/UCwnEg8mctzBqKQZ8ysTCQOA,0,badcase,缺少标签和内容信号，游戏向频道不适合草坪机推广
+9220,UCwniJTQKm5a5gBnvnpX4Y_Q,Francisco Romeo Leis,https://cn.noxinfluencer.com/youtube/channel/UCwniJTQKm5a5gBnvnpX4Y_Q,-14,badcase,汽车维修/车辆频道，缺少草坪机或园艺设备推广相关性
+9221,UCwo3D5mCN2BEzGnYXjTIJhg,EL FENOMENAL,https://cn.noxinfluencer.com/youtube/channel/UCwo3D5mCN2BEzGnYXjTIJhg,-15,badcase,音乐娱乐频道，与割草机推广主题明显不相关
+9222,UCwoZNCkDfXUOQT8HybYkg7w,Lets Fix IT,https://cn.noxinfluencer.com/youtube/channel/UCwoZNCkDfXUOQT8HybYkg7w,0,badcase,仅有泛化标签，无割草机推广相关信号
+9223,UCwpjq8zglcKQ1Ilql9uSYXQ,Recall Connection,https://cn.noxinfluencer.com/youtube/channel/UCwpjq8zglcKQ1Ilql9uSYXQ,0,badcase,无相关标签、标题或近期内容，缺少割草机推广相关性证据
+9224,UCwpruMDXt2h9__w4f-WH_iA,Rob Isquierdo Jr.,https://cn.noxinfluencer.com/youtube/channel/UCwpruMDXt2h9__w4f-WH_iA,0,badcase,无标签、无相关视频和近期内容，缺少割草机推广相关性证据
+9225,UCwq4cKz0xJvGUiyEyZO_SYQ,Single mom Hồng,https://cn.noxinfluencer.com/youtube/channel/UCwq4cKz0xJvGUiyEyZO_SYQ,0,badcase,无标签无视频证据，无法判断与割草机推广相关
+9228,UCwsHhGOYRYCkEhgDUadhD-g,DuC,https://cn.noxinfluencer.com/youtube/channel/UCwsHhGOYRYCkEhgDUadhD-g,0,badcase,缺少标签和内容信号，难判断与割草机推广相关
+9229,UCwsdSKP5sTkzu4A-hFN6o9g,TECH TIMES Official,https://cn.noxinfluencer.com/youtube/channel/UCwsdSKP5sTkzu4A-hFN6o9g,0,badcase,缺少标签和内容信号，难判断与割草机推广相关
+9230,UCwt2Y5VBPJyvsSJMfROErug,Ze Bunker,https://cn.noxinfluencer.com/youtube/channel/UCwt2Y5VBPJyvsSJMfROErug,0,badcase,缺少标签和内容信号，难判断与割草机推广相关
+9231,UCwtWgY-hkH1IXqGG8yEwmpQ,RCG Racing,https://cn.noxinfluencer.com/youtube/channel/UCwtWgY-hkH1IXqGG8yEwmpQ,-10,badcase,频道偏赛车/车辆内容，与割草机推广场景不匹配
+9232,UCwtX9597lpktZizMuF4Ldhw,Reality After Show,https://cn.noxinfluencer.com/youtube/channel/UCwtX9597lpktZizMuF4Ldhw,-15,badcase,真人秀娱乐频道，与割草机推广场景明显不符
+9233,UCwtnHVaD_n8gcqWQ_CyLYQQ,Grease Belly Garage,https://cn.noxinfluencer.com/youtube/channel/UCwtnHVaD_n8gcqWQ_CyLYQQ,0,badcase,汽车维修/DIY频道，与割草机推广缺少直接场景，且无近期内容支撑
+9235,UCwtzPNKOXMNd3YLHExs0rHA,Eric’s Tech World,https://cn.noxinfluencer.com/youtube/channel/UCwtzPNKOXMNd3YLHExs0rHA,-15,badcase,滑板内容频道，与割草机推广场景明显不符
+9237,UCwvBC9y2KP_75A8ynU7DvPw,Tutorials By Larry,https://cn.noxinfluencer.com/youtube/channel/UCwvBC9y2KP_75A8ynU7DvPw,0,badcase,无标签与内容信号，无法判断与割草机推广相关
+9238,UCwvDpMLieM443yydUrgofVg,AliPick Review,https://cn.noxinfluencer.com/youtube/channel/UCwvDpMLieM443yydUrgofVg,0,badcase,仅有review字样，缺少园林/工具类受众证据
+9239,UCwvbdTPP7N1dqENWsTCJj8Q,Ghetto Garage,https://cn.noxinfluencer.com/youtube/channel/UCwvbdTPP7N1dqENWsTCJj8Q,0,badcase,汽车娱乐向，缺少割草机购买或使用语境
+9240,UCwwr0yoRC5XV73jQZtjU0eA,Gadget Gear,https://cn.noxinfluencer.com/youtube/channel/UCwwr0yoRC5XV73jQZtjU0eA,0,badcase,仅有泛化gear倾向，缺少园艺设备相关信号
+9241,UCwwspeTdyPEwtkRMQSMUCRw,Krazy Karl Projects,https://cn.noxinfluencer.com/youtube/channel/UCwwspeTdyPEwtkRMQSMUCRw,0,badcase,无标签和内容信号，无法支撑割草机推广
+9242,UCwxEwzYrgKWuWXJYg2vSbAQ,Isaiah Wehrmann,https://cn.noxinfluencer.com/youtube/channel/UCwxEwzYrgKWuWXJYg2vSbAQ,0,badcase,缺少任何与割草机相关的推广或受众信号
+9243,UCwxXDrITYzGQBipInkv-NlQ,Wood-Ridge Parents Podcast,https://cn.noxinfluencer.com/youtube/channel/UCwxXDrITYzGQBipInkv-NlQ,0,badcase,播客频道，非园艺/工具推广场景
+9244,UCwy7UwW7hz5c2rp8W2rkMUA,Lift Arc Studios,https://cn.noxinfluencer.com/youtube/channel/UCwy7UwW7hz5c2rp8W2rkMUA,-5,badcase,焊接加工频道，与割草机推广缺少明确购买或使用场景
+9245,UCwyLcy4TN62GYuc3g8m0Hdg,Joshua Freeman,https://cn.noxinfluencer.com/youtube/channel/UCwyLcy4TN62GYuc3g8m0Hdg,0,badcase,赛车生活类频道，与割草机推广关联很弱
+9246,UCwycfJqCYKOpjwdsPqlhxfA,Stahl Racing,https://cn.noxinfluencer.com/youtube/channel/UCwycfJqCYKOpjwdsPqlhxfA,-15,badcase,赛车卡丁内容与割草机推广人群不匹配
+9248,UCwzN1Ie-1HS_8AzJ8SXnu1w,Fusion G,https://cn.noxinfluencer.com/youtube/channel/UCwzN1Ie-1HS_8AzJ8SXnu1w,-15,badcase,娱乐游戏频道，属于明显主题错配
+9249,UCwzVgQpegTZP9gKBCaMKirg,Tiểu Dung vn,https://cn.noxinfluencer.com/youtube/channel/UCwzVgQpegTZP9gKBCaMKirg,0,badcase,仅有泛兴趣标签，缺少园艺工具购买意图
+9250,UCwzcUYt7KzuAEoHhymsS5IA,Lofi Ghost,https://cn.noxinfluencer.com/youtube/channel/UCwzcUYt7KzuAEoHhymsS5IA,0,badcase,重型机械内容过泛，和家用割草机关联弱
+9251,UCx-MIYqgoEU8eYk85hAkWOQ,Omar Correa,https://cn.noxinfluencer.com/youtube/channel/UCx-MIYqgoEU8eYk85hAkWOQ,-15,badcase,电子数码频道，和割草机推广场景明显不匹配
+9252,UCx-rlvba7g9MaNkUhbMvTUA,TIPS FOR DUMMIES,https://cn.noxinfluencer.com/youtube/channel/UCx-rlvba7g9MaNkUhbMvTUA,0,badcase,题材过泛，缺少园艺/工具/购买意图信号
+9253,UCx-u87wpBgVpMnMriJyU1yQ,TopTech EN,https://cn.noxinfluencer.com/youtube/channel/UCx-u87wpBgVpMnMriJyU1yQ,-10,badcase,以科技数码为主，和割草机品类不在同一受众
+9254,UCx06WyxD6NOrIUp5o7X1T4w,HowToDoIt,https://cn.noxinfluencer.com/youtube/channel/UCx06WyxD6NOrIUp5o7X1T4w,0,badcase,无标签、无相关视频或近期内容，缺少割草机推广相关证据
+9256,UCx0EgpQbARS85axN7QtT1qA,MindFuel – Self Growth Shorts,https://cn.noxinfluencer.com/youtube/channel/UCx0EgpQbARS85axN7QtT1qA,0,badcase,无割草机相关信号，频道偏自我成长短视频，与产品推广不相关
+9257,UCx0L_c3tNLQOhRlNp5q9WLw,Vernier Motorsports,https://cn.noxinfluencer.com/youtube/channel/UCx0L_c3tNLQOhRlNp5q9WLw,0,badcase,无割草机相关标签或视频信号，难以支持产品推广
+9258,UCx1ulKBf1kIaST3zONVCS_Q,eternal atlas,https://cn.noxinfluencer.com/youtube/channel/UCx1ulKBf1kIaST3zONVCS_Q,0,badcase,无标签和视频证据，无法支持割草机推广
+9259,UCx2D0M3F3h1qdg4D31mQ24g,Being Zimmer,https://cn.noxinfluencer.com/youtube/channel/UCx2D0M3F3h1qdg4D31mQ24g,0,badcase,无标签无内容证据，和草坪割草机推广无相关性
+9260,UCx2LYWLYl5Wpbvamywbd-xA,Little Zebra Dragons #LZDRV,https://cn.noxinfluencer.com/youtube/channel/UCx2LYWLYl5Wpbvamywbd-xA,0,badcase,标签多为泛类与宠物向，缺少草坪割草机推广相关性
+9261,UCx2x1EI-ZnvAOMsWkzhZqSw,jimbolaiya,https://cn.noxinfluencer.com/youtube/channel/UCx2x1EI-ZnvAOMsWkzhZqSw,0,badcase,无相关标签或视频，缺少割草机推广相关信号
+9262,UCx3n6rHJaI8EfNn-5S13TNQ,Blake Banks,https://cn.noxinfluencer.com/youtube/channel/UCx3n6rHJaI8EfNn-5S13TNQ,-15,badcase,音乐娱乐频道，和割草机推广场景明显不符
+9263,UCx554p1Bu_Mp1q0H_bEtZ1Q,Rotten Tomatoes Family,https://cn.noxinfluencer.com/youtube/channel/UCx554p1Bu_Mp1q0H_bEtZ1Q,-15,badcase,影视预告娱乐向，非家用园艺产品推广场景
+9264,UCx5Ah7b1qtWScj-Yoq-PFqw,Bigfoot Tests Things,https://cn.noxinfluencer.com/youtube/channel/UCx5Ah7b1qtWScj-Yoq-PFqw,0,badcase,无标签无近期内容，无法证明与割草机推广相关
+9265,UCx5KB2QDUDH-o8PFnF3yJCQ,The Basic Filmmaker,https://cn.noxinfluencer.com/youtube/channel/UCx5KB2QDUDH-o8PFnF3yJCQ,0,badcase,教程向但缺少园艺/工具购买意图，不适合推广
+9266,UCx5zX4SoWwjVpqEPY6tz-PQ,247 Tech Talk,https://cn.noxinfluencer.com/youtube/channel/UCx5zX4SoWwjVpqEPY6tz-PQ,0,badcase,泛科技/生活方式频道，缺少割草机购买或使用场景
+9267,UCx7Dz-Tem_uFSFuThMrXAxA,Nicolette Gray,https://cn.noxinfluencer.com/youtube/channel/UCx7Dz-Tem_uFSFuThMrXAxA,0,badcase,个人八卦vlog，和割草机推广无关
+9268,UCx7UBfsf7PXtWdLPnPKaI5Q,FM99 WNOR,https://cn.noxinfluencer.com/youtube/channel/UCx7UBfsf7PXtWdLPnPKaI5Q,-10,badcase,音乐娱乐型频道，属于明显的产品推广格式错配
+9271,UCx8Y4_e_PwZ8uSjDGBpY2Xw,Life With Chase,https://cn.noxinfluencer.com/youtube/channel/UCx8Y4_e_PwZ8uSjDGBpY2Xw,0,badcase,以重型机械/推土机内容为主，与割草机家庭推广场景不匹配
+9272,UCx8bJjhIoyUbeNtu6DXh_2A,Joe Mkhitaryan,https://cn.noxinfluencer.com/youtube/channel/UCx8bJjhIoyUbeNtu6DXh_2A,0,badcase,政治/商业/个人成长内容，和割草机推广无关
+9273,UCx8dVm84hPW-bRr7luT4-nw,HotRodGuyGarage,https://cn.noxinfluencer.com/youtube/channel/UCx8dVm84hPW-bRr7luT4-nw,0,badcase,以汽车/野马内容为主，不适合割草机推广
+9274,UCxBDBQrCfAEqHS1lpBapzDA,msj191961,https://cn.noxinfluencer.com/youtube/channel/UCxBDBQrCfAEqHS1lpBapzDA,0,badcase,泛车载与生活方式内容，缺少草坪/园艺购买意图
+9275,UCxCOJgGZDuK-NLZJrrtTYZg,Remodelando LaCasa,https://cn.noxinfluencer.com/youtube/channel/UCxCOJgGZDuK-NLZJrrtTYZg,1,badcase,仅有宽泛家居标签，缺少草坪护理或割草机推广证据
+9276,UCxCPvTII_rIj0oVujsfal0A,Phillip Ino,https://cn.noxinfluencer.com/youtube/channel/UCxCPvTII_rIj0oVujsfal0A,-10,badcase,娱乐/玩具向，和割草机推广场景明显不符
+9277,UCxC_XW195SFmxkesCeSu12g,Tony's Coffee House,https://cn.noxinfluencer.com/youtube/channel/UCxC_XW195SFmxkesCeSu12g,-1,badcase,咖啡主题频道，无草坪护理或割草机推广相关证据
+9278,UCxCdfVyiuZsMNqdqMShOQ3A,The Yard Freako,https://cn.noxinfluencer.com/youtube/channel/UCxCdfVyiuZsMNqdqMShOQ3A,0,badcase,无标签、相关视频和近期内容证据，无法支持割草机推广召回
+9279,UCxDCKkjC5kekQ_l768c1nVQ,Lego Cartoon Funny,https://cn.noxinfluencer.com/youtube/channel/UCxDCKkjC5kekQ_l768c1nVQ,-10,badcase,卡通娱乐向，和园艺/工具类推广不匹配
+9280,UCxDNth_YZCP94Br6AV6tKgw,Javier Goodwin,https://cn.noxinfluencer.com/youtube/channel/UCxDNth_YZCP94Br6AV6tKgw,0,badcase,无标签、无相关视频或近期内容，缺少割草机推广相关性
+9281,UCxE0QtrfWTPifNIUXUXuK6Q,"Granger, The CEO Lifestyle",https://cn.noxinfluencer.com/youtube/channel/UCxE0QtrfWTPifNIUXUXuK6Q,-15,badcase,汽车时尚生活频道，缺少割草机推广相关内容
+9282,UCxEem0UJG0t1PWfDinOEfdQ,Nitro Country,https://cn.noxinfluencer.com/youtube/channel/UCxEem0UJG0t1PWfDinOEfdQ,-15,badcase,短视频搞笑娱乐频道，缺少工具/家居购买意图，割草机推广不适合。
+9283,UCxFnVuPu3a0ohVw-BGRpzXA,Philip Gaynor,https://cn.noxinfluencer.com/youtube/channel/UCxFnVuPu3a0ohVw-BGRpzXA,0,badcase,偏摩托旅行与生活方式，和割草机购买/使用场景关联很弱。
+9284,UCxFuOP-Y62tQyO2Q9NTrbKw,Horsepower House,https://cn.noxinfluencer.com/youtube/channel/UCxFuOP-Y62tQyO2Q9NTrbKw,-10,badcase,摩托车娱乐/短视频为主，缺少园艺工具内容，推广割草机不匹配。
+9286,UCxGVcLLcI_ccRuWsFywxXtw,1Dude,https://cn.noxinfluencer.com/youtube/channel/UCxGVcLLcI_ccRuWsFywxXtw,-14,badcase,以游戏娱乐为主，与割草机推广场景明显不符
+9287,UCxH_SaWgmWo5dw_Mm4Q4osw,Pat & Jackie,https://cn.noxinfluencer.com/youtube/channel/UCxH_SaWgmWo5dw_Mm4Q4osw,0,badcase,标签多为家庭vlog与生活记录，和割草机推广缺少产品/场景相关性
+9288,UCxHiBALGm5NnpeCVpnN7TUw,TECHAERIS,https://cn.noxinfluencer.com/youtube/channel/UCxHiBALGm5NnpeCVpnN7TUw,0,badcase,科技数码频道，与草坪割草机推广场景无明显相关
+9289,UCxHxjf3qaxGhksBtEMIYWOw,Sweethess,https://cn.noxinfluencer.com/youtube/channel/UCxHxjf3qaxGhksBtEMIYWOw,-15,badcase,娱乐喜剧频道，与割草机推广场景明显不符
+9290,UCxI4Yhs_Q9Otm5GAJOTHNvQ,Fools.Errand,https://cn.noxinfluencer.com/youtube/channel/UCxI4Yhs_Q9Otm5GAJOTHNvQ,0,badcase,频道内容偏神秘/生活类，与割草机推广缺乏产品相关性
+9291,UCxI8s0Ti7tBlLgsmYov99dA,The Watchman News,https://cn.noxinfluencer.com/youtube/channel/UCxI8s0Ti7tBlLgsmYov99dA,-5,badcase,新闻政治类频道，与割草机促销场景无关
+9292,UCxJXbXHSWB-ZDlg9PK8lEZw,Orange St Films,https://cn.noxinfluencer.com/youtube/channel/UCxJXbXHSWB-ZDlg9PK8lEZw,-15,badcase,恐怖娱乐号，和割草机促销完全错位
+9294,UCxKn4TOEe-6E5vm8Wtx_g0g,DiventionTechnologies,https://cn.noxinfluencer.com/youtube/channel/UCxKn4TOEe-6E5vm8Wtx_g0g,0,badcase,无标签、标题或近期内容证据，无法支持割草机产品推广
+9295,UCxLQdy59MatW2PzI7Sebjeg,Transcended Engineering,https://cn.noxinfluencer.com/youtube/channel/UCxLQdy59MatW2PzI7Sebjeg,2,badcase,仅泛howto弱相关，频道偏汽车机械，缺少园艺割草机语境
+9296,UCxLc6qKl_RBkXbpL32X6BHg,Memoria ASMR,https://cn.noxinfluencer.com/youtube/channel/UCxLc6qKl_RBkXbpL32X6BHg,-12,badcase,ASMR音频向频道，与割草机推广场景明显不匹配
+9297,UCxMMoanJKFHmyt1udi1hv_w,IzzyDude,https://cn.noxinfluencer.com/youtube/channel/UCxMMoanJKFHmyt1udi1hv_w,0,badcase,无标签、无相关视频，缺乏割草机推广相关性
+9298,UCxMPyWXsKB9auC_tCBbiJeg,Jones Falconry - Jeremy Jones,https://cn.noxinfluencer.com/youtube/channel/UCxMPyWXsKB9auC_tCBbiJeg,0,badcase,动物/狩猎频道，与割草机推广场景无关
+9299,UCxMQ6sfFbKpYGqD9zLFrJqg,ULTIMATE VISION GADGETS,https://cn.noxinfluencer.com/youtube/channel/UCxMQ6sfFbKpYGqD9zLFrJqg,0,badcase,无标签和视频证据，无法支持割草机推广相关性
+9300,UCxMbBBSvwFofgKDKAblusZA,NoGasNiko - The EV Life,https://cn.noxinfluencer.com/youtube/channel/UCxMbBBSvwFofgKDKAblusZA,0,badcase,频道偏汽车/电车内容，与割草机推广受众不匹配
+9301,UCxN2yvHhw1YGWz0_bMHb0cw,Matt Magna,https://cn.noxinfluencer.com/youtube/channel/UCxN2yvHhw1YGWz0_bMHb0cw,0,badcase,频道偏AI/科技/艺术，和割草机推广无关
+9302,UCxNMZU2Fka-HApzuxUgGNGA,AI_Nikitka93,https://cn.noxinfluencer.com/youtube/channel/UCxNMZU2Fka-HApzuxUgGNGA,-15,badcase,娱乐AI视频频道，和割草机推广场景明显不符
+9303,UCxNR0Oz_WgQO6d5o8Gmq8dg,sedgetool,https://cn.noxinfluencer.com/youtube/channel/UCxNR0Oz_WgQO6d5o8Gmq8dg,-3,badcase,木工/车间工具频道，无园艺或草坪设备推广语境
+9304,UCxO1WbPs9HWKgpDwPxYSUHw,Tool Up Handyman,https://cn.noxinfluencer.com/youtube/channel/UCxO1WbPs9HWKgpDwPxYSUHw,0,badcase,无标签与内容证据，虽为维修频道，但未见割草机相关推广场景
+9306,UCxOInq41W0nZoqOqlq7CErg,Clean With Confidence,https://cn.noxinfluencer.com/youtube/channel/UCxOInq41W0nZoqOqlq7CErg,-1,badcase,清洁生活方式频道，缺少园艺割草机推广相关信号
+9307,UCxOKf-yU3l47Fr3AdhfnZ4w,fhfuwsa,https://cn.noxinfluencer.com/youtube/channel/UCxOKf-yU3l47Fr3AdhfnZ4w,0,badcase,无标签无内容，无法判断为相关创作者
+9308,UCxOOU1nVk_G8h_cnZ5eH1pA,RDAllen,https://cn.noxinfluencer.com/youtube/channel/UCxOOU1nVk_G8h_cnZ5eH1pA,-15,badcase,游戏娱乐频道，和割草机推广场景明显不符
+9309,UCxOSP6n0wTzGIDWfNHqHCgA,wortheffort,https://cn.noxinfluencer.com/youtube/channel/UCxOSP6n0wTzGIDWfNHqHCgA,-9,badcase,木工家具频道，仅有DIY弱相关，缺少草坪护理或割草机推广语境
+9310,UCxPipvU4GMbfnU8EbF4INPg,Decorify,https://cn.noxinfluencer.com/youtube/channel/UCxPipvU4GMbfnU8EbF4INPg,0,badcase,无可用标签与内容，相关性证据不足
+9311,UCxQhwuAIoiu534fMo2_20sw,Tech Connect,https://cn.noxinfluencer.com/youtube/channel/UCxQhwuAIoiu534fMo2_20sw,-13,badcase,科技评测号偏数码人群，和割草机推广不匹配
+9312,UCxR-BAurUlm11gJ6GhRfY_g,Yo_Adrian!,https://cn.noxinfluencer.com/youtube/channel/UCxR-BAurUlm11gJ6GhRfY_g,-15,badcase,游戏娱乐频道，与割草机推广场景明显不符
+9313,UCxRD8MpMaND39car2l4829A,Basecamp Unbounded,https://cn.noxinfluencer.com/youtube/channel/UCxRD8MpMaND39car2l4829A,0,badcase,仅车辆和生活方式标签，无草坪护理或割草机推广相关信号
+9315,UCxReU314F2P9sTZ0228QViA,LoveLee Hu$tles,https://cn.noxinfluencer.com/youtube/channel/UCxReU314F2P9sTZ0228QViA,0,badcase,创业/业务向内容，与割草机产品基本无关
+9316,UCxS0KMeoJwaKd1Jq9sy5XKQ,KrissieDeathy,https://cn.noxinfluencer.com/youtube/channel/UCxS0KMeoJwaKd1Jq9sy5XKQ,0,badcase,标签偏二次元/游戏创作，与割草机推广无关
+9317,UCxS4z5eG2ieJbXKodQ7pPHQ,Weston517,https://cn.noxinfluencer.com/youtube/channel/UCxS4z5eG2ieJbXKodQ7pPHQ,-10,badcase,无标签、无相关视频和近期内容，缺少园艺工具推广证据
+9318,UCxSKo116b6NU9R9uZccsxkA,Valentíno Quiñones,https://cn.noxinfluencer.com/youtube/channel/UCxSKo116b6NU9R9uZccsxkA,0,badcase,健身/模特/生活方式频道，与割草机推广无关
+9319,UCxT7eX5aGGJjBpg5dxTSjbA,PVZ 69,https://cn.noxinfluencer.com/youtube/channel/UCxT7eX5aGGJjBpg5dxTSjbA,-15,badcase,游戏频道，与割草机推广场景明显不符
+9320,UCxTUjS5_gWAUm1IlT0jxykA,Sharkie626,https://cn.noxinfluencer.com/youtube/channel/UCxTUjS5_gWAUm1IlT0jxykA,-2,badcase,偏家电维修/维护语境，与割草机推广关联弱
+9321,UCxTl64I4RjqifnUm6uwNOQw,Odin a Viking Service Dog,https://cn.noxinfluencer.com/youtube/channel/UCxTl64I4RjqifnUm6uwNOQw,-10,badcase,频道为宠物服务犬方向，与割草机推广场景明显不符
+9322,UCxTu7kMoIlc26H63M09xrMw,13djdave13,https://cn.noxinfluencer.com/youtube/channel/UCxTu7kMoIlc26H63M09xrMw,0,badcase,标签多为个人兴趣，缺少割草机推广相关性
+9323,UCxUXyfPZpUvKl8ik32_V6Ew,Max and Nicole,https://cn.noxinfluencer.com/youtube/channel/UCxUXyfPZpUvKl8ik32_V6Ew,0,badcase,生活娱乐标签为主，无割草机相关产品、测评或购买信号
+9324,UCxVG-V4STUAgulJzAMKyB8w,Eric Adcock This Awkward Life,https://cn.noxinfluencer.com/youtube/channel/UCxVG-V4STUAgulJzAMKyB8w,0,badcase,无标签、无相关视频，缺乏割草机推广所需的园艺/购买信号
+9327,UCxWqXxMVwHNl2DmL70nGakA,pé ni cuti,https://cn.noxinfluencer.com/youtube/channel/UCxWqXxMVwHNl2DmL70nGakA,0,badcase,无标签、无相关内容，和割草机推广无明显关联
+9329,UCxYeXqFUNJKMR_dNV69R1_Q,Amplify Zone,https://cn.noxinfluencer.com/youtube/channel/UCxYeXqFUNJKMR_dNV69R1_Q,-15,badcase,游戏娱乐频道，与割草机推广场景明显不符
+9330,UCxYjdVe0zV-4II06kD7z5fw,LSRW,https://cn.noxinfluencer.com/youtube/channel/UCxYjdVe0zV-4II06kD7z5fw,-15,badcase,汽车/皮卡方向，和 lawn mower 推广目标明显不匹配
+9332,UCxZwQ5zjhW10LtyqsA00IZA,The SaaS Spot,https://cn.noxinfluencer.com/youtube/channel/UCxZwQ5zjhW10LtyqsA00IZA,0,badcase,科技配件/手电主题，和割草机推广关联很弱
+9333,UCxZyVqaJy1ZKYvC-qo0WY1g,MTW Shorts,https://cn.noxinfluencer.com/youtube/channel/UCxZyVqaJy1ZKYvC-qo0WY1g,0,badcase,手机数码短视频频道，和割草机完全不相关
+9334,UCxajhAarfFwx-p-aDwqVEUw,Josh DaVid,https://cn.noxinfluencer.com/youtube/channel/UCxajhAarfFwx-p-aDwqVEUw,-10,badcase,玩具娱乐频道，受众与割草机推广明显不匹配
+9336,UCxdETYuflpCC6KOLPvrVIpA,Timmy,https://cn.noxinfluencer.com/youtube/channel/UCxdETYuflpCC6KOLPvrVIpA,0,badcase,无标签无内容，缺少任何割草机相关信号。
+9339,UCxeGIz6PVuH_xNq1hmi47vQ,Single Mother 1992,https://cn.noxinfluencer.com/youtube/channel/UCxeGIz6PVuH_xNq1hmi47vQ,2,badcase,水泵DIY仅弱工具重叠，无草坪养护或割草机推广意图
+9340,UCxefiFLkMEq5M1Vn31SehcA,Sonic Vlogs,https://cn.noxinfluencer.com/youtube/channel/UCxefiFLkMEq5M1Vn31SehcA,-15,badcase,娱乐玩偶频道，和割草机推广场景明显不符。
+9341,UCxf3A7ipm0YjF56LrI5eCnQ,Leeman Geophysical,https://cn.noxinfluencer.com/youtube/channel/UCxf3A7ipm0YjF56LrI5eCnQ,0,badcase,工程地球物理频道，缺少割草机购买或使用场景
+9342,UCxha-Cwkpgmr4ywNYlHAjPw,Vacationtime247,https://cn.noxinfluencer.com/youtube/channel/UCxha-Cwkpgmr4ywNYlHAjPw,0,badcase,标签仅为泛生活/爱好/车辆，缺少割草机推广相关性
+9343,UCxi3iYavQbXeZV_Oa9nj-nw,Supercar Street Racing,https://cn.noxinfluencer.com/youtube/channel/UCxi3iYavQbXeZV_Oa9nj-nw,-5,badcase,赛车汽车频道与割草机推广场景不匹配
+9344,UCxiXQ8zzUVyzGtlxHx144Tw,925 Twaun,https://cn.noxinfluencer.com/youtube/channel/UCxiXQ8zzUVyzGtlxHx144Tw,-10,badcase,宠物/娱乐健身取向，与割草机推广场景不匹配
+9345,UCxj5hjxQR3KmeM6imfUrrKA,J.D. Grace Clips,https://cn.noxinfluencer.com/youtube/channel/UCxj5hjxQR3KmeM6imfUrrKA,0,badcase,无相关标签或内容证据，无法支持割草机推广
+9346,UCxjkoxSWrBtgKraRiWXKwVQ,Tool Time John,https://cn.noxinfluencer.com/youtube/channel/UCxjkoxSWrBtgKraRiWXKwVQ,0,badcase,无标签无内容，难判断为割草机相关
+9347,UCxjroBB6UWp-pBAmd9kEzPg,First Responder Garage,https://cn.noxinfluencer.com/youtube/channel/UCxjroBB6UWp-pBAmd9kEzPg,-14,badcase,汽车/卡车车库主题，缺少草坪修剪设备推广语境
+9348,UCxk3mICjFwYmYRIdbKQRywA,What Are We Going To Do Today?,https://cn.noxinfluencer.com/youtube/channel/UCxk3mICjFwYmYRIdbKQRywA,0,badcase,无标签无内容，缺少推广相关信号
+9349,UCxmAokMDVBOUvE6VODWJFHQ,Hey! I'm Kyle,https://cn.noxinfluencer.com/youtube/channel/UCxmAokMDVBOUvE6VODWJFHQ,0,badcase,无标签无内容，缺少推广相关信号
+9350,UCxmXKv5fV4OT9q1ZCazFZhA,BUILD YOUR TECH,https://cn.noxinfluencer.com/youtube/channel/UCxmXKv5fV4OT9q1ZCazFZhA,0,badcase,无标签无内容，缺少推广相关信号
+9351,UCxnWbzSwLOxOivyh1WG9l-Q,Peak Tech,https://cn.noxinfluencer.com/youtube/channel/UCxnWbzSwLOxOivyh1WG9l-Q,0,badcase,无标签、相关视频或近期内容证据，无法支持割草机推广
+9352,UCxnxdGSix18nFycz8fve5wg,NotebookMovies,https://cn.noxinfluencer.com/youtube/channel/UCxnxdGSix18nFycz8fve5wg,-15,badcase,娱乐喜剧频道，和割草机产品推广明显不符
+9353,UCxoCFIVi_DnirguBlo0mv6g,Phil Crockett,https://cn.noxinfluencer.com/youtube/channel/UCxoCFIVi_DnirguBlo0mv6g,-3,badcase,仅有泛DIY/教程信号，缺少草坪护理或割草机推广语境
+9354,UCxoUQlxpbQtSKZQNhLy72tw,Manju's Crafts & Quotes,https://cn.noxinfluencer.com/youtube/channel/UCxoUQlxpbQtSKZQNhLy72tw,-10,badcase,以娱乐/音乐/语录为主，不适合割草机推广
+9355,UCxooLUfyEk08dt1CTaC-J5Q,Regina So Section 8 Hood,https://cn.noxinfluencer.com/youtube/channel/UCxooLUfyEk08dt1CTaC-J5Q,-1,badcase,美食生活购物泛内容，无园艺割草机推广意图
+9356,UCxp03gQQAkwUifq0Jjfayng,Trusted Tech 2.0,https://cn.noxinfluencer.com/youtube/channel/UCxp03gQQAkwUifq0Jjfayng,0,badcase,科技手机频道，与割草机推广缺乏直接相关性
+9357,UCxq8TWRRzy6u2piKCe-SKVw,Mr. YOLO (You Only Live Once),https://cn.noxinfluencer.com/youtube/channel/UCxq8TWRRzy6u2piKCe-SKVw,0,badcase,无标签无内容，无法判断为割草机相关频道
+9358,UCxqhGYDufMx9pzmn7bES5uQ,Top Practical Picks,https://cn.noxinfluencer.com/youtube/channel/UCxqhGYDufMx9pzmn7bES5uQ,0,badcase,缺少标签和视频证据，暂无割草机推广相关性
+9359,UCxqmlztVA1plOoXqYigJy9g,New Games Daily,https://cn.noxinfluencer.com/youtube/channel/UCxqmlztVA1plOoXqYigJy9g,-15,badcase,游戏娱乐频道，与割草机推广场景明显不符
+9360,UCxrXIkYADgY4XzxP60IUeJg,BlazerGuy1983,https://cn.noxinfluencer.com/youtube/channel/UCxrXIkYADgY4XzxP60IUeJg,0,badcase,汽车生活频道，和割草机产品推广不匹配
+9361,UCxsaOv-fmO_4P8LYfoAbR9w,Ish Motorparts,https://cn.noxinfluencer.com/youtube/channel/UCxsaOv-fmO_4P8LYfoAbR9w,0,badcase,汽车生活类与割草机推广关联弱
+9362,UCxtHpMnm-4_y4XY-NcgYQhQ,Getting Things Done with Matt,https://cn.noxinfluencer.com/youtube/channel/UCxtHpMnm-4_y4XY-NcgYQhQ,0,badcase,无标签无内容，缺少相关性证据
+9363,UCxuvDkUxwEERVG9OZkxBtaA,The DickeyDines Show,https://cn.noxinfluencer.com/youtube/channel/UCxuvDkUxwEERVG9OZkxBtaA,-15,badcase,娱乐音乐喜剧类，与割草机推广明显不符
+9364,UCxvEPDWGiG8QoVRMcmrDCHg,The Gas Tap,https://cn.noxinfluencer.com/youtube/channel/UCxvEPDWGiG8QoVRMcmrDCHg,-15,badcase,汽车竞速频道，和割草机受众不匹配
+9366,UCxv_TzSgKaDH_aBWgR87pEA,KingKorova,https://cn.noxinfluencer.com/youtube/channel/UCxv_TzSgKaDH_aBWgR87pEA,-15,badcase,游戏频道与割草机推广场景明显不符
+9367,UCxwJb0YA49udqycyYd72sIQ,Mellowmatic,https://cn.noxinfluencer.com/youtube/channel/UCxwJb0YA49udqycyYd72sIQ,-15,badcase,游戏频道与割草机推广场景明显不符
+9368,UCxwnC4xH7CYQ-rP-dJqMJ-g,NotWilshire,https://cn.noxinfluencer.com/youtube/channel/UCxwnC4xH7CYQ-rP-dJqMJ-g,-12,badcase,缺少可用标签与内容信号，难判断为相关
+9369,UCxwpPbohmehmxUNXyZuDx1Q,Linda's Favorite Finds,https://cn.noxinfluencer.com/youtube/channel/UCxwpPbohmehmxUNXyZuDx1Q,-12,badcase,缺少可用标签与内容信号，难判断为相关
+9370,UCxwrzkmJYHHyeFU3aOa7jNw,Mikey Polis,https://cn.noxinfluencer.com/youtube/channel/UCxwrzkmJYHHyeFU3aOa7jNw,-12,badcase,缺少可用标签与内容信号，难判断为相关
+9371,UCxxyUdkDZS0NSz76pPlqW9A,Mellow Wanderer,https://cn.noxinfluencer.com/youtube/channel/UCxxyUdkDZS0NSz76pPlqW9A,0,badcase,无标签无内容证据，无法支撑割草机推广
+9372,UCxyZo7KblThjfQRk1l0VClQ,JH McMillan,https://cn.noxinfluencer.com/youtube/channel/UCxyZo7KblThjfQRk1l0VClQ,0,badcase,无标签无内容证据，无法支撑割草机推广
+9373,UCxyrUpIa1fmuHTKU8H2DD6A,BUTCHY KID VIDEOS,https://cn.noxinfluencer.com/youtube/channel/UCxyrUpIa1fmuHTKU8H2DD6A,-15,badcase,娱乐怪谈向频道，和割草机推广场景明显不符
+9375,UCxzdQn36xt91iXrnhZRun1g,Thomas Newcomb,https://cn.noxinfluencer.com/youtube/channel/UCxzdQn36xt91iXrnhZRun1g,0,badcase,无标签无内容证据，无法支撑割草机推广
+9376,UCxzt4nxBJ5sISrEs2B572Hg,"Weight, Build, Dig!",https://cn.noxinfluencer.com/youtube/channel/UCxzt4nxBJ5sISrEs2B572Hg,0,badcase,重型施工设备频道，与割草机消费场景不强相关
+9377,UCy-0c4aFdC-9u2am4rGn2IA,TeddyCavachon,https://cn.noxinfluencer.com/youtube/channel/UCy-0c4aFdC-9u2am4rGn2IA,0,badcase,无标签、无相关视频、无近期内容证据支持割草机推广
+9378,UCy1UWcxN1XPMSnwsMDdHIPw,The Big Dan Show,https://cn.noxinfluencer.com/youtube/channel/UCy1UWcxN1XPMSnwsMDdHIPw,-10,badcase,牧场牲畜内容为主，与割草机推广场景不匹配
+9379,UCy2978_sRKGeUeXtbf4HTNg,Richard Montalvo,https://cn.noxinfluencer.com/youtube/channel/UCy2978_sRKGeUeXtbf4HTNg,0,badcase,赛车改装频道，与割草机推广关联弱
+9380,UCy2PYTD5AF2IM_oTg42qoog,OpEpicGaming,https://cn.noxinfluencer.com/youtube/channel/UCy2PYTD5AF2IM_oTg42qoog,-5,badcase,游戏频道为娱乐内容，不适合割草机推广
+9381,UCy2lUlukHrRoxB8tCSPYVrg,korn76live,https://cn.noxinfluencer.com/youtube/channel/UCy2lUlukHrRoxB8tCSPYVrg,0,badcase,无标签、无相关视频、无近期内容证据，无法支持割草机推广
+9382,UCy4xjgUGWfAwZ5BR-zI9Wsg,1194video,https://cn.noxinfluencer.com/youtube/channel/UCy4xjgUGWfAwZ5BR-zI9Wsg,0,badcase,汽车改装频道，与割草机推广无关
+9383,UCy56owuDW1VjC1qElUJ2_Vg,Paul-IE-Repairs,https://cn.noxinfluencer.com/youtube/channel/UCy56owuDW1VjC1qElUJ2_Vg,0,badcase,无标签和视频证据，无法判断割草机推广相关性
+9384,UCy5O92ukU6ZWWL6VYVviiKQ,Smart Cart,https://cn.noxinfluencer.com/youtube/channel/UCy5O92ukU6ZWWL6VYVviiKQ,3,badcase,仅有泛科技/教程标签，缺少割草机或园艺相关内容，适配度低
+9385,UCy5fkurPzOS8wROe7tibxng,Both Sides Revenge,https://cn.noxinfluencer.com/youtube/channel/UCy5fkurPzOS8wROe7tibxng,0,badcase,无相关标签或内容，缺乏割草机推广相关性
+9386,UCy5oE8LQ5CYRKlP5qq8rFpg,ROBERT BRIGGS,https://cn.noxinfluencer.com/youtube/channel/UCy5oE8LQ5CYRKlP5qq8rFpg,-15,badcase,娱乐宠物号，与割草机推广场景明显不匹配
+9387,UCy5vo70_HCTG8LkuCcRzKfQ,Top 5 Best,https://cn.noxinfluencer.com/youtube/channel/UCy5vo70_HCTG8LkuCcRzKfQ,-15,badcase,厨房小家电榜单号，品类与割草机完全偏离
+9388,UCy68GRAjB7M5vA8PkL0TWFA,JAY D3E,https://cn.noxinfluencer.com/youtube/channel/UCy68GRAjB7M5vA8PkL0TWFA,0,badcase,无标签无内容，缺少任何割草机相关信号
+9391,UCy7n2qVXXtws879EDhYIstw,KAYNELL FARM,https://cn.noxinfluencer.com/youtube/channel/UCy7n2qVXXtws879EDhYIstw,1,badcase,仅有home弱场景相关，无草坪机或园艺工具推广信号
+9392,UCy8JqhOROijuo7WTVRCpxGQ,Life At MYYY Ranchito,https://cn.noxinfluencer.com/youtube/channel/UCy8JqhOROijuo7WTVRCpxGQ,0,badcase,无标签、视频标题或近期内容证据支持割草机推广相关性
+9394,UCy9E3U626Pm2LAR_x8JZ9SA,Bingey,https://cn.noxinfluencer.com/youtube/channel/UCy9E3U626Pm2LAR_x8JZ9SA,-15,badcase,游戏/VR娱乐与割草机推广场景不符
+9395,UCyA-T4bK9KIsp7Eer8pp0HA,Selling Products,https://cn.noxinfluencer.com/youtube/channel/UCyA-T4bK9KIsp7Eer8pp0HA,0,badcase,无割草机垂直证据，泛卖货不足以判相关
+9396,UCyA88apZCh-elgPOvNAi5RQ,MORENA CEBUANA,https://cn.noxinfluencer.com/youtube/channel/UCyA88apZCh-elgPOvNAi5RQ,0,badcase,无相关标签或视频信号，无法支持割草机推广
+9397,UCyBPqY6jGoQbzHFiQK-4F8w,Tacked Video,https://cn.noxinfluencer.com/youtube/channel/UCyBPqY6jGoQbzHFiQK-4F8w,0,badcase,无标签、无标题与割草机推广相关，缺少可用相关性信号
+9398,UCyC2w7wVyddFPv4NKp5PnwQ,Jace Milner,https://cn.noxinfluencer.com/youtube/channel/UCyC2w7wVyddFPv4NKp5PnwQ,0,badcase,无标签、标题或近期内容证据支持割草机推广相关性
+9399,UCyCyTe_1bT2aIPwG_gxbyeg,Daily Bumps,https://cn.noxinfluencer.com/youtube/channel/UCyCyTe_1bT2aIPwG_gxbyeg,0,badcase,亲子日常vlog频道，与割草机推广无明显场景相关
+9400,UCyD37DHjgnrMiAM8ZRiABnw,Mountain Extreme Powersports,https://cn.noxinfluencer.com/youtube/channel/UCyD37DHjgnrMiAM8ZRiABnw,0,badcase,无标签/无视频相关，缺乏割草机推广场景
+9401,UCyDPf-Son4Xb6kLLm8Us1gA,Boo Reviews,https://cn.noxinfluencer.com/youtube/channel/UCyDPf-Son4Xb6kLLm8Us1gA,0,badcase,泛生活/宠物/科技杂，和割草机推广关联弱
+9402,UCyEETaqmowYsN7h9RRj-Cew,Elevated Fabworks,https://cn.noxinfluencer.com/youtube/channel/UCyEETaqmowYsN7h9RRj-Cew,0,badcase,越野车生活方式偏离割草机购买场景
+9403,UCyEUwhHGPCsvJUJbxtfqIDA,CJ Maclin,https://cn.noxinfluencer.com/youtube/channel/UCyEUwhHGPCsvJUJbxtfqIDA,0,badcase,无标签无内容证据，无法支持割草机推广
+9408,UCyGm1NkZFoBLUzmsM6WWGoA,10 Hot Topic,https://cn.noxinfluencer.com/youtube/channel/UCyGm1NkZFoBLUzmsM6WWGoA,0,badcase,无标签无内容，无法判断为割草机相关
+9410,UCyHKXNPjfaOC7Krqj-ZD_Ig,bektasuygar btka,https://cn.noxinfluencer.com/youtube/channel/UCyHKXNPjfaOC7Krqj-ZD_Ig,0,badcase,无标签无内容，相关性不足
+9411,UCyHX5j6cvdDlDFarayCObRA,WLFITV,https://cn.noxinfluencer.com/youtube/channel/UCyHX5j6cvdDlDFarayCObRA,0,badcase,标签多为社会/体育/政经，和割草机推广无关
+9412,UCyHXMVlcebJM9xXfaUONaBQ,Merry Boozer RC,https://cn.noxinfluencer.com/youtube/channel/UCyHXMVlcebJM9xXfaUONaBQ,0,badcase,RC飞机/航空爱好频道，与割草机推广无明显相关
+9413,UCyHmx3YTqLn7PdU4Qw6a_2Q,Thomas Fix It,https://cn.noxinfluencer.com/youtube/channel/UCyHmx3YTqLn7PdU4Qw6a_2Q,0,badcase,以福特卡车维修为主，和割草机受众不匹配
+9414,UCyHr0u6liwHA36HMbxyf5wA,Honest Review,https://cn.noxinfluencer.com/youtube/channel/UCyHr0u6liwHA36HMbxyf5wA,0,badcase,缺少标签和内容信号，无法支持割草机推广
+9416,UCyIBT0wqPgkO-rGjjUEAUIg,PARR,https://cn.noxinfluencer.com/youtube/channel/UCyIBT0wqPgkO-rGjjUEAUIg,0,badcase,无标签、无相关视频或近期内容，缺乏割草机推广相关性
+9417,UCyID-TWItZdFpisg_SL0x2A,N - Pact Playa,https://cn.noxinfluencer.com/youtube/channel/UCyID-TWItZdFpisg_SL0x2A,-10,badcase,宠物/娱乐向，受众与割草机推广明显不符
+9419,UCyIhiS6WG2AuTTR3bYwdShw,PubFix,https://cn.noxinfluencer.com/youtube/channel/UCyIhiS6WG2AuTTR3bYwdShw,-15,badcase,ASMR清洁音效为主，和割草机产品推广格式不匹配
+9420,UCyInJ01tHhDnoST58pxH0rQ,Go Social with Daan,https://cn.noxinfluencer.com/youtube/channel/UCyInJ01tHhDnoST58pxH0rQ,0,badcase,无标签、相关视频或近期内容证据，无法支持割草机推广
+9421,UCyJ26Pokn3-v1puK5ADyyzA,Sophia Strong,https://cn.noxinfluencer.com/youtube/channel/UCyJ26Pokn3-v1puK5ADyyzA,-15,badcase,医疗康复频道，和割草机推广场景明显不符
+9422,UCyJkf5xX1yXU2pJLDY7Zq6Q,Best Product,https://cn.noxinfluencer.com/youtube/channel/UCyJkf5xX1yXU2pJLDY7Zq6Q,2,badcase,仅泛产品标签，无割草机、草坪园艺或户外工具相关信号
+9423,UCyKCmRDcQNulWuTatVuJL9Q,Cosmic,https://cn.noxinfluencer.com/youtube/channel/UCyKCmRDcQNulWuTatVuJL9Q,0,badcase,无标签无内容信号，无法支持割草机推广
+9424,UCyL1XjiuXMGfbw_sK_sD3LQ,I Am A Fixer,https://cn.noxinfluencer.com/youtube/channel/UCyL1XjiuXMGfbw_sK_sD3LQ,2,badcase,仅有泛维修弱相关，无园艺或割草机推广证据
+9425,UCyLNR2Hi4Y9mM6P3HPbG6xg,Gold Pony Vlogs,https://cn.noxinfluencer.com/youtube/channel/UCyLNR2Hi4Y9mM6P3HPbG6xg,0,badcase,家庭 vlog 频道，只有泛生活场景，缺少产品意图
+9426,UCyLRqNt0CBvVJIrnz0B0bdg,Ben Bannister,https://cn.noxinfluencer.com/youtube/channel/UCyLRqNt0CBvVJIrnz0B0bdg,0,badcase,无相关标签和内容，无法支撑割草机推广
+9427,UCyMRfzEUw-JCSnPFAWPeIcQ,Sounds So Relaxing,https://cn.noxinfluencer.com/youtube/channel/UCyMRfzEUw-JCSnPFAWPeIcQ,-12,badcase,放松音频向，属于产品推广格式不匹配
+9429,UCyMhD8dJTxj6ySmf63czoMA,Trendroid Reviews,https://cn.noxinfluencer.com/youtube/channel/UCyMhD8dJTxj6ySmf63czoMA,0,badcase,无相关标签和内容，基本无推广相关性
+9431,UCyO9Rwe2odEjmMAEbwaQdYA,Baba Jimmy & family - Wajumbe Records,https://cn.noxinfluencer.com/youtube/channel/UCyO9Rwe2odEjmMAEbwaQdYA,-3,badcase,泛生活娱乐家庭频道，缺少园艺、草坪护理或工具推广语境
+9432,UCyP6yYCHWoAnl5dLtdfHDcQ,Something About Chie,https://cn.noxinfluencer.com/youtube/channel/UCyP6yYCHWoAnl5dLtdfHDcQ,-5,badcase,美食/影像频道与割草机推广场景不符
+9433,UCyQMJXMNIEBxTVDEtlv612g,Josh Lehew,https://cn.noxinfluencer.com/youtube/channel/UCyQMJXMNIEBxTVDEtlv612g,0,badcase,无标签无内容证据，无法判断为割草机相关频道
+9434,UCyQmPiqu65jh7Zn81IhHrzQ,Rabbi Duvi Bensoussan Official,https://cn.noxinfluencer.com/youtube/channel/UCyQmPiqu65jh7Zn81IhHrzQ,-10,badcase,宗教内容受众与割草机消费场景不匹配
+9435,UCyR7hy8XDVnqzBhdpRirOtg,Automatic Addison,https://cn.noxinfluencer.com/youtube/channel/UCyR7hy8XDVnqzBhdpRirOtg,-5,badcase,编程教程频道偏技术学习，不是割草机使用/购买内容
+9438,UCyRnRvGEQud32eZpyqQ0dmw,ASMR Unique,https://cn.noxinfluencer.com/youtube/channel/UCyRnRvGEQud32eZpyqQ0dmw,-12,badcase,ASMR是明显的音频氛围格式，与割草机推广不匹配
+9439,UCyRwWaxveppeF-yMH2Hagbg,Glass Media,https://cn.noxinfluencer.com/youtube/channel/UCyRwWaxveppeF-yMH2Hagbg,-3,badcase,娱乐和科技杂内容为主，和园艺机械推广弱相关
+9440,UCySCfe48-Sy8xUsjYM8ZrDA,Tom's Key Company,https://cn.noxinfluencer.com/youtube/channel/UCySCfe48-Sy8xUsjYM8ZrDA,-10,badcase,汽车钥匙编程频道，和割草机受众与场景都不匹配
+9441,UCySiX9Kc-F7hKvrqyBBiz3w,DaveSplains,https://cn.noxinfluencer.com/youtube/channel/UCySiX9Kc-F7hKvrqyBBiz3w,0,badcase,无标签、无视频线索，和割草机推广无关
+9442,UCyU-dbdefLBIkclaXaMxD_g,Aerica Lee,https://cn.noxinfluencer.com/youtube/channel/UCyU-dbdefLBIkclaXaMxD_g,0,badcase,无草坪机、园艺或户外工具相关信号
+9443,UCyUAzFQVlsOzhGQ-PL4kLQg,The Hillyards,https://cn.noxinfluencer.com/youtube/channel/UCyUAzFQVlsOzhGQ-PL4kLQg,-15,badcase,频道以汽车/越野/Ford内容为主，缺少割草机推广相关性
+9444,UCyUE1HNAq7xFRanR2Oz97Iw,BaoTech,https://cn.noxinfluencer.com/youtube/channel/UCyUE1HNAq7xFRanR2Oz97Iw,0,badcase,无标签、无视频线索，无法支撑割草机推广
+9445,UCyUb6i5Lcxzg7LvX9zsbt3Q,Life With Zach,https://cn.noxinfluencer.com/youtube/channel/UCyUb6i5Lcxzg7LvX9zsbt3Q,0,badcase,无标签、无视频线索，无法支撑割草机推广
+9446,UCyV2r7XWPvSfY_ZYatG4ttA,EndWrench Rookie,https://cn.noxinfluencer.com/youtube/channel/UCyV2r7XWPvSfY_ZYatG4ttA,1,badcase,偏汽车工具兴趣号，仅有泛化tool，缺少割草机推广相关性
+9447,UCyVAbbuIsFF06XSk1DwyjFQ,chris NO MAN,https://cn.noxinfluencer.com/youtube/channel/UCyVAbbuIsFF06XSk1DwyjFQ,-15,badcase,汽车摩托向频道，与割草机推广场景明显不符
+9449,UCyVWWK6SkBa-dzDsWz6aBNg,Forsaken Steel,https://cn.noxinfluencer.com/youtube/channel/UCyVWWK6SkBa-dzDsWz6aBNg,0,badcase,汽车改装频道，与草坪割草机推广无直接相关性
+9450,UCyVsEez1zaTsruTKCtiQQiA,Amazing Grace,https://cn.noxinfluencer.com/youtube/channel/UCyVsEez1zaTsruTKCtiQQiA,0,badcase,无标签、无相关视频，缺少任何草坪割草机推广相关性信号
+9451,UCyVzM64Uh98XDx_vogOKUbQ,Amena Kay,https://cn.noxinfluencer.com/youtube/channel/UCyVzM64Uh98XDx_vogOKUbQ,0,badcase,缺少任何园艺/割草相关信号
+9452,UCyWK1nBfIwCzwkn1NJYrp2A,AgriGadget Picks,https://cn.noxinfluencer.com/youtube/channel/UCyWK1nBfIwCzwkn1NJYrp2A,0,badcase,无标签与视频内容可判断
+9453,UCyWUFhFfDHuwu0yT99rgNNA,Trending Shiit,https://cn.noxinfluencer.com/youtube/channel/UCyWUFhFfDHuwu0yT99rgNNA,1,badcase,仅有garden弱场景词，主体偏娱乐
+9454,UCyWz7EKqS_PpGYfTOJ7HdPQ,Spencer Scott Pugh,https://cn.noxinfluencer.com/youtube/channel/UCyWz7EKqS_PpGYfTOJ7HdPQ,0,badcase,偏极简/桌搭/消费电子，缺少割草场景
+9455,UCyX14mBoac-cx0GFRJjdfcw,Priority Electric and Lighting,https://cn.noxinfluencer.com/youtube/channel/UCyX14mBoac-cx0GFRJjdfcw,0,badcase,电工/照明领域，和 lawn mower 关联弱
+9456,UCyXbWcDuAkBNl5c5UdIWoOg,Narbeedeals,https://cn.noxinfluencer.com/youtube/channel/UCyXbWcDuAkBNl5c5UdIWoOg,0,badcase,无标签、相关视频或近期内容，缺少割草机推广相关性
+9457,UCyXnqbBzbTYQhQy8jS-XrYw,Speedy Tempo Racing,https://cn.noxinfluencer.com/youtube/channel/UCyXnqbBzbTYQhQy8jS-XrYw,0,badcase,赛车内容与割草机促销关联弱，缺少可用证据
+9458,UCyXwvIg-wZuPRR5wgREfP6Q,Algiere Homestead,https://cn.noxinfluencer.com/youtube/channel/UCyXwvIg-wZuPRR5wgREfP6Q,0,badcase,无标签、相关视频或近期内容证据，无法支持割草机推广召回
+9459,UCyYXHYS6DscFI3C50GXtv9Q,Nymrad Hickey,https://cn.noxinfluencer.com/youtube/channel/UCyYXHYS6DscFI3C50GXtv9Q,-10,badcase,游戏/零食向频道，与割草机产品促销场景不匹配
+9460,UCyYfBeEzvtBcHDA4zecvkjQ,Global Drippin,https://cn.noxinfluencer.com/youtube/channel/UCyYfBeEzvtBcHDA4zecvkjQ,-10,badcase,娱乐/情感向频道，和割草机促销目标明显不符
+9461,UCyYfNzxSeoSrL_4BSCCLG0w,Chavez DIY,https://cn.noxinfluencer.com/youtube/channel/UCyYfNzxSeoSrL_4BSCCLG0w,-14,badcase,频道主域为电子、电脑和手机维修，缺少草坪机推广场景
+9462,UCyYjt6FDIQ558K9FQpaJbWA,Products Reviews by Carrie,https://cn.noxinfluencer.com/youtube/channel/UCyYjt6FDIQ558K9FQpaJbWA,0,badcase,无标签或视频证据支持割草机推广相关性
+9463,UCyYuaFoFxkVFOgs7692uBJg,Lý Thị Giang,https://cn.noxinfluencer.com/youtube/channel/UCyYuaFoFxkVFOgs7692uBJg,-10,badcase,车辆摩托维修为主，与割草机推广场景不匹配
+9464,UCyYy45jNaHTB6_BH5turjnw,LOVE STORY,https://cn.noxinfluencer.com/youtube/channel/UCyYy45jNaHTB6_BH5turjnw,-10,badcase,故事娱乐频道，和割草机推广的购买/使用场景不匹配
+9465,UCy_PJ5pBYUlTLHOp3xvnjzQ,2B Clean Auto Detailing LLC,https://cn.noxinfluencer.com/youtube/channel/UCy_PJ5pBYUlTLHOp3xvnjzQ,0,badcase,汽车美容服务号，和割草机的核心使用场景不一致
+9466,UCyaDGnWB-Vf3Aaj6fVeKG8g,The Ponder's Vlog,https://cn.noxinfluencer.com/youtube/channel/UCyaDGnWB-Vf3Aaj6fVeKG8g,-10,badcase,娱乐vlog/短视频为主，缺少园艺工具受众
+9467,UCyaYnjlGhgk8cx53gQrSWMA,Durham Humor,https://cn.noxinfluencer.com/youtube/channel/UCyaYnjlGhgk8cx53gQrSWMA,-15,badcase,搞笑娱乐频道，和割草机推广场景明显不符
+9468,UCyc6dmsMG3wJuNRkDaMBGbg,D3RPZILLA,https://cn.noxinfluencer.com/youtube/channel/UCyc6dmsMG3wJuNRkDaMBGbg,0,badcase,汽车改装频道，缺少园艺工具和购买意图
+9469,UCycF46ILJ8EgmxOiaitKDqw,Will Smith Hit and Miss,https://cn.noxinfluencer.com/youtube/channel/UCycF46ILJ8EgmxOiaitKDqw,0,badcase,蒸汽展和车辆内容为主，与家用割草机关联弱
+9470,UCycrzA2LboVshHJfmj0DvGg,Orphans Hoàng Nhân,https://cn.noxinfluencer.com/youtube/channel/UCycrzA2LboVshHJfmj0DvGg,-5,badcase,孤儿生存日常频道，无草坪护理或割草机推广语境
+9471,UCyd7BVQn_XZ4laT4HVB8qYw,Moose,https://cn.noxinfluencer.com/youtube/channel/UCyd7BVQn_XZ4laT4HVB8qYw,-14,badcase,摩托/车辆户外频道，缺少园艺割草机推广意图
+9472,UCydSSbHDJq2hdXQne40Fywg,Norton Railway,https://cn.noxinfluencer.com/youtube/channel/UCydSSbHDJq2hdXQne40Fywg,-15,badcase,gaming 为强娱乐内容，与割草机推广场景明显不符
+9473,UCydpY_3a9o-yb_0hidcTMYw,Off-Grid Engineering,https://cn.noxinfluencer.com/youtube/channel/UCydpY_3a9o-yb_0hidcTMYw,0,badcase,无标签、标题或近期内容证据支持割草机推广相关性
+9474,UCyeVUMJspKUfzKf8NlOc9Iw,iSmart Home Gadgets,https://cn.noxinfluencer.com/youtube/channel/UCyeVUMJspKUfzKf8NlOc9Iw,0,badcase,无标签、视频或近期内容证据，无法支持割草机推广相关性
+9475,UCyfxIVRGeIf207Xq5N55Acg,Good Guy's Winning,https://cn.noxinfluencer.com/youtube/channel/UCyfxIVRGeIf207Xq5N55Acg,-4,badcase,旅游美食频道，与割草机推广场景不匹配
+9476,UCyhVSnFMFOvlK56Pk4Ktk-g,Neilogical,https://cn.noxinfluencer.com/youtube/channel/UCyhVSnFMFOvlK56Pk4Ktk-g,-10,badcase,游戏频道，BeamNG为主，与割草机推广无关，缺少购买/测评语境。
+9477,UCyiQWe24FTrxDxvo7hxar1Q,Amani,https://cn.noxinfluencer.com/youtube/channel/UCyiQWe24FTrxDxvo7hxar1Q,2,badcase,仅有家居/建造泛标签，缺少割草机购买或评测语境，内容不匹配
+9478,UCyiXSzw6ajwFDbHjDIV8n8Q,Wrench Sense,https://cn.noxinfluencer.com/youtube/channel/UCyiXSzw6ajwFDbHjDIV8n8Q,0,badcase,仅有车辆/爱好/生活方式标签，无割草机或园艺推广证据
+9480,UCyj5OG4nbnQMnueBOvryi9g,Cleanerwatt,https://cn.noxinfluencer.com/youtube/channel/UCyj5OG4nbnQMnueBOvryi9g,-10,badcase,汽车/Tesla科技频道，与草坪割草机推广场景不相关
+9481,UCyjG6lv5AOwxWoHhUd9Q0bA,Musical Instrument,https://cn.noxinfluencer.com/youtube/channel/UCyjG6lv5AOwxWoHhUd9Q0bA,-15,badcase,音乐娱乐频道，和割草机推广明显不相关
+9483,UCykULI9Q4EHpaSeVVBZTVUw,"This Is How I Did It - Solar Panels, Hydro Power",https://cn.noxinfluencer.com/youtube/channel/UCykULI9Q4EHpaSeVVBZTVUw,2,badcase,仅有家居泛相关，频道主轴为太阳能，缺少草坪/园艺工具意图
+9484,UCyl3Xz7S0iE4lJjRU6yV5LA,Joe Blond,https://cn.noxinfluencer.com/youtube/channel/UCyl3Xz7S0iE4lJjRU6yV5LA,-15,badcase,纯娱乐整活频道，和割草机推广不匹配
+9485,UCyl9uou_AZYKs7TWH7Y4Ung,Hot Rod Dave,https://cn.noxinfluencer.com/youtube/channel/UCyl9uou_AZYKs7TWH7Y4Ung,-5,badcase,汽车改装/赛车频道，缺少园艺割草机推广语境
+9486,UCylBiIxH8xtZUrYBq4qnIyg,Tyler Randolph,https://cn.noxinfluencer.com/youtube/channel/UCylBiIxH8xtZUrYBq4qnIyg,0,badcase,无相关标签或内容，难以支撑割草机推广
+9487,UCym0Zng_h4QJvgC0cUpQ3ug,infinigrove,https://cn.noxinfluencer.com/youtube/channel/UCym0Zng_h4QJvgC0cUpQ3ug,0,badcase,仅有vehicle/lifestyle泛标签，缺少园艺工具意图
+9488,UCym6ee8Uao-214lF6mkUGYg,Richard Clack,https://cn.noxinfluencer.com/youtube/channel/UCym6ee8Uao-214lF6mkUGYg,0,badcase,无相关标签或内容，难以支撑割草机推广
+9489,UCym9ny6cqQwMn3o-SPp8L_g,AnalyticalBest,https://cn.noxinfluencer.com/youtube/channel/UCym9ny6cqQwMn3o-SPp8L_g,0,badcase,无相关标签或内容，难以支撑割草机推广
+9490,UCyml8uvi67wM30Bhu_EmYyQ,Grammy,https://cn.noxinfluencer.com/youtube/channel/UCyml8uvi67wM30Bhu_EmYyQ,-15,badcase,游戏/赛车标签占主导，属于明显内容场景错配
+9492,UCymxhDVgeIO527urCzcvv1Q,Militarian Tech,https://cn.noxinfluencer.com/youtube/channel/UCymxhDVgeIO527urCzcvv1Q,0,badcase,无相关标签或内容，无法支撑割草机推广
+9493,UCymySKUCz5QUAoVUjZbhX6w,D&E In The Garage,https://cn.noxinfluencer.com/youtube/channel/UCymySKUCz5QUAoVUjZbhX6w,-1,badcase,车库/车辆兴趣频道，无草坪护理或割草机推广语境
+9494,UCynAXhgeBdp6CnT5bnmvlmQ,Animal1 Guy,https://cn.noxinfluencer.com/youtube/channel/UCynAXhgeBdp6CnT5bnmvlmQ,-15,badcase,宠物爬宠内容与人用割草机受众明显不符
+9495,UCypbzAi9dkQK9LVgZfHrnlw,Alberto Guerrero,https://cn.noxinfluencer.com/youtube/channel/UCypbzAi9dkQK9LVgZfHrnlw,1,badcase,仅有DIY弱相关，主内容偏运动骑行焊接，缺少园林工具推广意图
+9496,UCyproP3h3WH-of-zhxOpxWg,iheartMcCulloughs,https://cn.noxinfluencer.com/youtube/channel/UCyproP3h3WH-of-zhxOpxWg,-4,badcase,家庭旅行美食vlog，与割草机推广场景不符
+9497,UCyq3Nr9ZcTjoQFEGFwjkQ8A,MadChill TV,https://cn.noxinfluencer.com/youtube/channel/UCyq3Nr9ZcTjoQFEGFwjkQ8A,-15,badcase,音乐娱乐频道，内容形态与园林器械促销不匹配
+9499,UCyqOJzsPgqYllzrInbCWT_A,House Of Clips,https://cn.noxinfluencer.com/youtube/channel/UCyqOJzsPgqYllzrInbCWT_A,-10,badcase,电视剪辑与健身娱乐为主，和割草机购买推广不符
+9500,UCyqS56KQbCYwZn1pcoovPBw,Glow & Gossip,https://cn.noxinfluencer.com/youtube/channel/UCyqS56KQbCYwZn1pcoovPBw,-15,badcase,动漫娱乐频道，受众与割草机产品推广不匹配
+9501,UCyqkmu98H1_jrNSlNJUFLng,Machine Genius,https://cn.noxinfluencer.com/youtube/channel/UCyqkmu98H1_jrNSlNJUFLng,0,badcase,无相关标签或内容信号，难支持割草机推广
+9502,UCyrAOGvvdck2Zysha7gNt-w,Happening Now With Hammer- Newport Beach Podcast,https://cn.noxinfluencer.com/youtube/channel/UCyrAOGvvdck2Zysha7gNt-w,-15,badcase,娱乐播客为主，和园艺工具推广明显不匹配
+9503,UCyr_d4awxaLdUm1C6xKdtSw,DKDOESGAMING989,https://cn.noxinfluencer.com/youtube/channel/UCyr_d4awxaLdUm1C6xKdtSw,0,badcase,无相关标签或内容信号，难支持割草机推广
+9504,UCyrupMgIjI-FMAN_bWdxn7w,RsXeN,https://cn.noxinfluencer.com/youtube/channel/UCyrupMgIjI-FMAN_bWdxn7w,0,badcase,无相关标签或内容信号，难支持割草机推广
+9505,UCysrLtMd8M_FvgnZjQ875qw,Tech It Before You Wreck It,https://cn.noxinfluencer.com/youtube/channel/UCysrLtMd8M_FvgnZjQ875qw,2,badcase,仅泛科技/开箱弱相关，缺少园艺割草机推广语境
+9506,UCyt1bDib2J1J01cbLA_isgg,Etienne Najman,https://cn.noxinfluencer.com/youtube/channel/UCyt1bDib2J1J01cbLA_isgg,0,badcase,标签仅泛娱乐/生活方式，缺少割草机或园艺购买场景
+9507,UCytNjNHGO1OZLfwAegZDilw,ConnorIGL+,https://cn.noxinfluencer.com/youtube/channel/UCytNjNHGO1OZLfwAegZDilw,-15,badcase,游戏频道，与 lawn mower 推广场景明显不符
+9508,UCytgnJE6TrzTTq19GYCOyTg,Tyler Blanchard,https://cn.noxinfluencer.com/youtube/channel/UCytgnJE6TrzTTq19GYCOyTg,0,badcase,娱乐创作者频道，与割草机推广场景无关
+9509,UCyuhCVgFbNflAYvJxlxL-nQ,Moms On The Clock,https://cn.noxinfluencer.com/youtube/channel/UCyuhCVgFbNflAYvJxlxL-nQ,0,badcase,频道偏生活娱乐，与割草机推广场景无关
+9510,UCyvvqJ-n2uMIa2aiKKt5gUw,True Choice,https://cn.noxinfluencer.com/youtube/channel/UCyvvqJ-n2uMIa2aiKKt5gUw,0,badcase,无标签和内容信号，无法支持割草机推广
+9511,UCyvxYhikgLWHH5tyyhZXJaQ,brucesbees,https://cn.noxinfluencer.com/youtube/channel/UCyvxYhikgLWHH5tyyhZXJaQ,-5,badcase,养蜂频道与割草机推广场景不匹配，缺少园艺设备信号
+9512,UCyyKvWc_AB3zewr4B9YUquw,Castles 4 Kids,https://cn.noxinfluencer.com/youtube/channel/UCyyKvWc_AB3zewr4B9YUquw,0,badcase,无标签、标题或近期内容支持割草机推广相关性
+9513,UCyyllgQsd-aXgbLeghA86NQ,TriboTEX,https://cn.noxinfluencer.com/youtube/channel/UCyyllgQsd-aXgbLeghA86NQ,-15,badcase,频道偏汽车/卡车/纳米发动机技术，缺少割草机推广场景
+9514,UCyyuPjU5IyVfWkJ0aw8HYog,The Dirt Cowboy,https://cn.noxinfluencer.com/youtube/channel/UCyyuPjU5IyVfWkJ0aw8HYog,0,badcase,仅有名称线索，缺少园艺/割草相关内容证据
+9515,UCyz5C0kieDZrf3C8CdwLA3A,Tim Unkert,https://cn.noxinfluencer.com/youtube/channel/UCyz5C0kieDZrf3C8CdwLA3A,0,badcase,无标签、无相关视频、无近期内容证据，无法支持割草机推广
+9516,UCyz7_0JKvNdNx0-ykHy11ww,Steve@Night,https://cn.noxinfluencer.com/youtube/channel/UCyz7_0JKvNdNx0-ykHy11ww,0,badcase,无标签、标题或近期内容证据支持割草机推广相关性
+9517,UCyzGHKIJjYT-H0x_bzP52SQ,Goblin,https://cn.noxinfluencer.com/youtube/channel/UCyzGHKIJjYT-H0x_bzP52SQ,-15,badcase,以游戏娱乐为主，和割草机推广场景明显不符
+9518,UCyzUsOOLAjm2oEaBi48C7lw,Joe Thurman,https://cn.noxinfluencer.com/youtube/channel/UCyzUsOOLAjm2oEaBi48C7lw,-5,badcase,汽车维修频道，DIY仅弱相关，不适合割草机推广
+9519,UCyzmUPvYs8xOWTqo0WVsYDA,Usa family vlog-02,https://cn.noxinfluencer.com/youtube/channel/UCyzmUPvYs8xOWTqo0WVsYDA,-10,badcase,频道偏钓鱼宠物生活，无草坪/园艺设备推广语境
+9521,UCz1PSVV7jGcLNxSF1QrsT0w,Ben Butler,https://cn.noxinfluencer.com/youtube/channel/UCz1PSVV7jGcLNxSF1QrsT0w,0,badcase,个人vlog频道，与割草机推广无产品或使用场景关联
+9522,UCz1sdvXpateFRbqNHMwU86Q,th19940305,https://cn.noxinfluencer.com/youtube/channel/UCz1sdvXpateFRbqNHMwU86Q,0,badcase,无标签、无相关标题，缺少割草机推广相关信号
+9523,UCz2JUCVhwdVK1YVch7hhGaw,packymck,https://cn.noxinfluencer.com/youtube/channel/UCz2JUCVhwdVK1YVch7hhGaw,0,badcase,无标签、无内容证据，和 lawn mower 推广无明显相关性
+9524,UCz2TF2wf91emlCf7GmpmtsQ,Beamish Look,https://cn.noxinfluencer.com/youtube/channel/UCz2TF2wf91emlCf7GmpmtsQ,0,badcase,仅有DIY/技巧泛标签，缺少割草机购买或使用相关信号
+9525,UCz3VazzhY4lkAER3cTRMigw,Eric Hernandez,https://cn.noxinfluencer.com/youtube/channel/UCz3VazzhY4lkAER3cTRMigw,0,badcase,频道内容偏电动自行车，与割草机推广无明显相关
+9526,UCz4AB7vKZIbTboPtRUKZJrQ,Shoaib Daniels,https://cn.noxinfluencer.com/youtube/channel/UCz4AB7vKZIbTboPtRUKZJrQ,0,badcase,无标签、无视频证据，与割草机推广关联不足
+9528,UCz66ad6dpieqXl3fJ9mkUHQ,Awesomes Restoration,https://cn.noxinfluencer.com/youtube/channel/UCz66ad6dpieqXl3fJ9mkUHQ,0,badcase,修复类频道但缺少标签和内容证据，相关性偏低
+9531,UCz8KBcDric5H83WAhVZ7PQQ,Forged in Fire,https://cn.noxinfluencer.com/youtube/channel/UCz8KBcDric5H83WAhVZ7PQQ,-15,badcase,娱乐刀剑综艺频道，主题与割草机推广场景无关
+9532,UCz9qusAe1wX7u1ywKflhADA,Nived_,https://cn.noxinfluencer.com/youtube/channel/UCz9qusAe1wX7u1ywKflhADA,0,badcase,无标签、无相关视频或近期内容，缺少割草机推广相关性证据
+9533,UCz9uE-AueCg_TMEGTzBtjoA,Nikko Ortiz Shorts,https://cn.noxinfluencer.com/youtube/channel/UCz9uE-AueCg_TMEGTzBtjoA,-15,badcase,游戏搞笑短视频频道，和割草机推广不匹配
+9534,UCzAyg27piVL0uXkj_TqaC1A,Life and Godliness,https://cn.noxinfluencer.com/youtube/channel/UCzAyg27piVL0uXkj_TqaC1A,-10,badcase,宗教短视频频道，受众与割草机推广无关
+9535,UCzBEXqMMfoIdCrLsZUd5QUw,Leo did it!,https://cn.noxinfluencer.com/youtube/channel/UCzBEXqMMfoIdCrLsZUd5QUw,0,badcase,无标签、标题或近期内容证据支持割草机推广相关性
+9536,UCzBibS6mZT0USQaDlMZPipg,Maximum DIY Garage,https://cn.noxinfluencer.com/youtube/channel/UCzBibS6mZT0USQaDlMZPipg,0,badcase,标签与割草机无关，缺乏园艺或设备购买/评测意图
+9537,UCzBwlxTswRy7rC-utpXOQVA,RCDriver_Online,https://cn.noxinfluencer.com/youtube/channel/UCzBwlxTswRy7rC-utpXOQVA,-15,badcase,RC车/模型车频道，非园艺割草机推广受众
+9538,UCzCNFIZLe-YX-Qg0rApzRWg,Michael Fulton (MFWoodShop),https://cn.noxinfluencer.com/youtube/channel/UCzCNFIZLe-YX-Qg0rApzRWg,0,badcase,木工手作频道，和割草机推广无直接或场景相关性
+9539,UCzD7h-AFRbUzekPO2FCa-EQ,~RBL Product Reviews,https://cn.noxinfluencer.com/youtube/channel/UCzD7h-AFRbUzekPO2FCa-EQ,0,badcase,无标签、无相关视频，缺乏割草机推广相关性
+9540,UCzDBPstVwVTVV1GGiRC2jqw,Ronald Tipton,https://cn.noxinfluencer.com/youtube/channel/UCzDBPstVwVTVV1GGiRC2jqw,0,badcase,频道以娱乐/生活方式为主，与割草机推广无直接相关
+9541,UCzDKKRYoiLzsLaDruWVlxyA,Average Joel's Garage,https://cn.noxinfluencer.com/youtube/channel/UCzDKKRYoiLzsLaDruWVlxyA,0,badcase,无草坪机相关词，标签仅泛泛车辆/爱好，缺少购买或评测意图
+9542,UCzDWbKlONEklAFArLlo9g4g,Ancorako,https://cn.noxinfluencer.com/youtube/channel/UCzDWbKlONEklAFArLlo9g4g,0,badcase,无频道标签、相关视频或近期内容证据，无法支持割草机推广
+9543,UCzDlfBBYYX_YNQbafIBJKcA,plasticpimps,https://cn.noxinfluencer.com/youtube/channel/UCzDlfBBYYX_YNQbafIBJKcA,0,badcase,无标签和视频信号，无法判断与割草机推广相关
+9544,UCzF7s2Afm92FGVioam-2e9w,Mikhails Meats n Motors,https://cn.noxinfluencer.com/youtube/channel/UCzF7s2Afm92FGVioam-2e9w,0,badcase,无标签、无标题证据，和割草机推广无关
+9545,UCzFRX-gnxFd_O8w1Oni7WQQ,IndigoInk,https://cn.noxinfluencer.com/youtube/channel/UCzFRX-gnxFd_O8w1Oni7WQQ,0,badcase,无标签和内容证据，无法支持割草机推广相关性
+9546,UCzFnWV2ctgzpH4u4n9yD8pg,Socket-Media,https://cn.noxinfluencer.com/youtube/channel/UCzFnWV2ctgzpH4u4n9yD8pg,0,badcase,无标签无内容，缺少任何推广相关信号
+9547,UCzG2ya3tSUdaskNaLDXprBg,Самоделки KG,https://cn.noxinfluencer.com/youtube/channel/UCzG2ya3tSUdaskNaLDXprBg,2,badcase,DIY仅弱相关，娱乐属性重，缺少售卖或评测意图
+9549,UCzGnAD86SUsNvlZshAiDEYw,Jeremy Duke Jackson,https://cn.noxinfluencer.com/youtube/channel/UCzGnAD86SUsNvlZshAiDEYw,0,badcase,偏娱乐与个人生活，和割草机推广缺少场景关联
+9550,UCzHwD8hkD9_qukgCgoy_P9w,White's Trash,https://cn.noxinfluencer.com/youtube/channel/UCzHwD8hkD9_qukgCgoy_P9w,0,badcase,以摩托/车辆为主，和 lawn mower 促销场景不匹配
+9551,UCzIiBGCjhGMf24i1C-skgEw,HiFi Huff,https://cn.noxinfluencer.com/youtube/channel/UCzIiBGCjhGMf24i1C-skgEw,0,badcase,音频评测频道，与割草机推广场景不相关
+9552,UCzJ3x4HxVmFjSzMghGmyqDg,JD The OT Product Reviews,https://cn.noxinfluencer.com/youtube/channel/UCzJ3x4HxVmFjSzMghGmyqDg,0,badcase,无标签、相关视频或近期内容证据支持割草机推广
+9553,UCzJQ12RO3NAslY0W_8OcuHg,Stan Cravens,https://cn.noxinfluencer.com/youtube/channel/UCzJQ12RO3NAslY0W_8OcuHg,0,badcase,安全驾驶内容与割草机产品推广无关
+9555,UCzKAsXTRt4SnnJhFxMfl7zA,JGD16,https://cn.noxinfluencer.com/youtube/channel/UCzKAsXTRt4SnnJhFxMfl7zA,-5,badcase,频道偏车辆/RC/漂移，与割草机推广场景不匹配
+9557,UCzKmhu4BwV8DGYiFI_vozVQ,The Blue Collar Life,https://cn.noxinfluencer.com/youtube/channel/UCzKmhu4BwV8DGYiFI_vozVQ,0,badcase,仅泛车生活科技标签，与割草机推广无关
+9558,UCzLOQKUGmFy0LIf3xICw-hw,Dmitri Q,https://cn.noxinfluencer.com/youtube/channel/UCzLOQKUGmFy0LIf3xICw-hw,-5,badcase,音乐娱乐频道，和割草机购买推广场景不符
+9559,UCzLZ1b3AcwHxeR-rNALTjew,Zawaha Nanodi,https://cn.noxinfluencer.com/youtube/channel/UCzLZ1b3AcwHxeR-rNALTjew,0,badcase,无标签无内容，无法判断与割草机相关
+9560,UCzLcHbRiDIsSr4nHX4HCBtw,Review Gizmo,https://cn.noxinfluencer.com/youtube/channel/UCzLcHbRiDIsSr4nHX4HCBtw,1,badcase,仅有泛家居和评测倾向，缺少割草机相关性
+9561,UCzM7UjQ0myvzUxMXgDCDJOQ,Under Par Acres,https://cn.noxinfluencer.com/youtube/channel/UCzM7UjQ0myvzUxMXgDCDJOQ,0,badcase,高尔夫频道，与割草机推广无关
+9562,UCzMDjXt7Ax8VPVfnr8Nvr2Q,Consumer Pick,https://cn.noxinfluencer.com/youtube/channel/UCzMDjXt7Ax8VPVfnr8Nvr2Q,0,badcase,无标签无内容，缺少相关性证据
+9563,UCzMmoCfzBNr5lMviUnsi02g,PNWDad206,https://cn.noxinfluencer.com/youtube/channel/UCzMmoCfzBNr5lMviUnsi02g,0,badcase,礼物带货频道，和割草机品类不匹配
+9564,UCzOAU6K8RdUr1ZOh-_QweCw,hightechNow,https://cn.noxinfluencer.com/youtube/channel/UCzOAU6K8RdUr1ZOh-_QweCw,0,badcase,偏科技杂项，无割草机购买场景
+9565,UCzOvkFeMuSZ0OJobGtUZP9w,Just Jess Reviews,https://cn.noxinfluencer.com/youtube/channel/UCzOvkFeMuSZ0OJobGtUZP9w,0,badcase,无标签与内容，无法支持割草机推广
+9566,UCzPKHhQaR2WLP_3Obt-QEcw,BibuGames,https://cn.noxinfluencer.com/youtube/channel/UCzPKHhQaR2WLP_3Obt-QEcw,-15,badcase,游戏频道，Top5含Gaming/GTA，与割草机推广场景明显不符
+9567,UCzQKr315OriP9Wzk096gGvA,AbiliTV Live,https://cn.noxinfluencer.com/youtube/channel/UCzQKr315OriP9Wzk096gGvA,0,badcase,缺少标签与内容信号，无法判断与割草机推广相关
+9568,UCzRBgG4x8lTLdcCK5-Hc83A,Edith Medina,https://cn.noxinfluencer.com/youtube/channel/UCzRBgG4x8lTLdcCK5-Hc83A,0,badcase,缺少标签与内容信号，无法判断与割草机推广相关
+9569,UCzRbEDL7f5PmiwtbgVKZsWQ,Fetti & Erica TV,https://cn.noxinfluencer.com/youtube/channel/UCzRbEDL7f5PmiwtbgVKZsWQ,-5,badcase,家庭vlog偏泛娱乐生活向，与割草机推广缺少明确相关场景
+9570,UCzRsFcEbQU3nBBBYjR8a8XQ,Dana Vento,https://cn.noxinfluencer.com/youtube/channel/UCzRsFcEbQU3nBBBYjR8a8XQ,-9,badcase,以美食食谱为主，DIY仅弱相关，不适合割草机推广
+9571,UCzTg5BeMcy1QvuqOHeJlhnQ,Legorio Vlog,https://cn.noxinfluencer.com/youtube/channel/UCzTg5BeMcy1QvuqOHeJlhnQ,0,badcase,家庭美食育儿内容，缺少园艺/割草机相关信号
+9572,UCzTnzmwTgd-06-JJZNgBJBQ,Freak World,https://cn.noxinfluencer.com/youtube/channel/UCzTnzmwTgd-06-JJZNgBJBQ,0,badcase,无标签无内容，无法判断为割草机推广相关
+9573,UCzUOiqxi0Ry5bPh4N8WnHDg,Armon & Co.,https://cn.noxinfluencer.com/youtube/channel/UCzUOiqxi0Ry5bPh4N8WnHDg,0,badcase,无标签无内容，缺少工具或园艺场景
+9574,UCzUikNwgHvqqfdnr-BnE74w,Jenelle Evans,https://cn.noxinfluencer.com/youtube/channel/UCzUikNwgHvqqfdnr-BnE74w,0,badcase,生活方式/娱乐向，和割草机推广关联弱
+9575,UCzVJZ8-3OV6pAoqgOILR4Xg,Wharncliffewhittler,https://cn.noxinfluencer.com/youtube/channel/UCzVJZ8-3OV6pAoqgOILR4Xg,0,badcase,无标签无内容，缺少割草机或园艺相关性
+9576,UCzVdIthK0ScUgAwlGNH7bOA,Greeks Garage,https://cn.noxinfluencer.com/youtube/channel/UCzVdIthK0ScUgAwlGNH7bOA,-9,badcase,频道偏车辆和快艇DIY，缺少草坪护理或割草机推广意图
+9577,UCzVsSmCfXGkaNmYaZnjhzYw,chevyforddodge4x4,https://cn.noxinfluencer.com/youtube/channel/UCzVsSmCfXGkaNmYaZnjhzYw,0,badcase,无标签无内容，缺少与割草机推广相关信号
+9579,UCzXnk8HpOUHNNN-J2G34tHg,USA Best Gadgets . 50k . views 3 hour,https://cn.noxinfluencer.com/youtube/channel/UCzXnk8HpOUHNNN-J2G34tHg,0,badcase,仅有泛泛的gadget名，缺少可验证的割草机相关信号
+9580,UCzYXLhnpOy8htiWjLXsx3xg,pieater31415,https://cn.noxinfluencer.com/youtube/channel/UCzYXLhnpOy8htiWjLXsx3xg,-15,badcase,娱乐搞笑内容，和割草机商品推广场景明显不匹配
+9581,UCzYZ2_fZOk2BkvDipnSxgKA,AirgunHaven,https://cn.noxinfluencer.com/youtube/channel/UCzYZ2_fZOk2BkvDipnSxgKA,0,badcase,无草坪机、园艺或户外工具相关标签和内容证据
+9582,UCzZ3G_-yMtU7utTriE9Mrfg,G Mech,https://cn.noxinfluencer.com/youtube/channel/UCzZ3G_-yMtU7utTriE9Mrfg,0,badcase,无标签且无相关视频，缺少割草机推广相关性
+9584,UCzZu7Upv1RwiQSfCjxzsTjg,Lý xuân Kiều,https://cn.noxinfluencer.com/youtube/channel/UCzZu7Upv1RwiQSfCjxzsTjg,-10,badcase,音乐娱乐频道，和割草机推广场景明显不符
+9585,UCz_Ciuh3qifEp0jP7MucVmg,Tech Grid Zone,https://cn.noxinfluencer.com/youtube/channel/UCz_Ciuh3qifEp0jP7MucVmg,0,badcase,无草坪机相关标签或内容，频道偏科技，缺乏推广匹配
+9586,UCzb38jD7T6jcydYvAYFiNlg,Samuel and Crystal Mitchell,https://cn.noxinfluencer.com/youtube/channel/UCzb38jD7T6jcydYvAYFiNlg,0,badcase,无标签与内容线索，和割草机推广无关
+9587,UCzbdVrSOGgjRNFotsJGxfnA,Jake Lesada,https://cn.noxinfluencer.com/youtube/channel/UCzbdVrSOGgjRNFotsJGxfnA,0,badcase,标签偏生活/食物/喷涂工具，缺少割草机购买意图
+9588,UCzbnSI0JwP7q5Axj1XhAJ7w,Brady’s Land,https://cn.noxinfluencer.com/youtube/channel/UCzbnSI0JwP7q5Axj1XhAJ7w,0,badcase,体育旅游生活标签为主，与割草机推广关联弱
+9589,UCzcbcDCyLhonGpjmTJAuXYw,Home Service Millionaire,https://cn.noxinfluencer.com/youtube/channel/UCzcbcDCyLhonGpjmTJAuXYw,0,badcase,商业投资类频道，不适合割草机产品推广
+9590,UCzcgZYDA-bpqZvoi90fGZMg,7Lover Tone,https://cn.noxinfluencer.com/youtube/channel/UCzcgZYDA-bpqZvoi90fGZMg,0,badcase,缺少任何相关标签或内容，无法支撑推广
+9591,UCzcrOoqX84goHttVYzNy1dw,Oops Pets,https://cn.noxinfluencer.com/youtube/channel/UCzcrOoqX84goHttVYzNy1dw,-15,badcase,故事娱乐宠物频道，和割草机推广完全不搭
+9592,UCzd-lJIwibm3W15lFxAA6bQ,Ron's Food Vlog,https://cn.noxinfluencer.com/youtube/channel/UCzd-lJIwibm3W15lFxAA6bQ,0,badcase,健康饮食频道，缺少割草机购买或使用场景
+9593,UCzdIuVyykPMtDJRcifPJlkg,JayPiper UnEdited,https://cn.noxinfluencer.com/youtube/channel/UCzdIuVyykPMtDJRcifPJlkg,0,badcase,旅游生活车类频道，与割草机推广关联很弱
+9594,UCzdTszcXKaN3E3hXVdHVubA,PeT Ya,https://cn.noxinfluencer.com/youtube/channel/UCzdTszcXKaN3E3hXVdHVubA,-5,badcase,汽车/焊机技术频道，与割草机推广场景不匹配
+9595,UCzdZZJmSqlraqAHZT8SMlBQ,Boosted Kev,https://cn.noxinfluencer.com/youtube/channel/UCzdZZJmSqlraqAHZT8SMlBQ,0,badcase,改装车频道，受众与割草机购买场景不匹配
+9597,UCzec6bKdEonx7vijCxKQpzw,MindTide,https://cn.noxinfluencer.com/youtube/channel/UCzec6bKdEonx7vijCxKQpzw,0,badcase,无标签无内容，无法建立与割草机推广的相关性
+9598,UCzetHrBADyuEBkrt3__4iCA,jason,https://cn.noxinfluencer.com/youtube/channel/UCzetHrBADyuEBkrt3__4iCA,0,badcase,无标签无内容，无法建立与割草机推广的相关性
+9599,UCzfbAzfyL0sgBrwm8aBtPCw,Smartlist Plus,https://cn.noxinfluencer.com/youtube/channel/UCzfbAzfyL0sgBrwm8aBtPCw,0,badcase,无标签无内容，无法建立与割草机推广的相关性
+9600,UCzgVkoODygm7kW8V6q3m3Cw,LAF filmfest,https://cn.noxinfluencer.com/youtube/channel/UCzgVkoODygm7kW8V6q3m3Cw,0,badcase,以卡车/车辆内容为主，和割草机促销场景相关度低
+9601,UCzi2zBrshFERuwddclpw64A,DHammiam,https://cn.noxinfluencer.com/youtube/channel/UCzi2zBrshFERuwddclpw64A,-15,badcase,赛车/运动频道，和割草机推广主题明显不符
+9602,UCziVOQO5nrrl37_EaUiGLpQ,Not Your Average Explorer,https://cn.noxinfluencer.com/youtube/channel/UCziVOQO5nrrl37_EaUiGLpQ,0,badcase,RV旅行频道，无园艺或家居设备推广信号
+9603,UCzibnawme64ITgLzb2Tr4Ug,Matt Beckett,https://cn.noxinfluencer.com/youtube/channel/UCzibnawme64ITgLzb2Tr4Ug,0,badcase,无标签无内容，缺少任何相关性证据
+9604,UCzjVxdSrawk9lrrloYEGarg,Things To Enjoy Daily,https://cn.noxinfluencer.com/youtube/channel/UCzjVxdSrawk9lrrloYEGarg,0,badcase,无标签无内容，缺少任何相关性证据
+9605,UCzjeYW9vRusiN56C465vg9Q,Green Auto Technology,https://cn.noxinfluencer.com/youtube/channel/UCzjeYW9vRusiN56C465vg9Q,0,badcase,汽车技术方向偏车类，缺少割草机相关内容
+9608,UCzmRUnGm3Vl3WFIn19fiSdw,Truck This Garage,https://cn.noxinfluencer.com/youtube/channel/UCzmRUnGm3Vl3WFIn19fiSdw,0,badcase,无标签无内容，缺少任何相关性证据
+9610,UCzm_skdphUSCqp9XrC5Xj5A,IKnowGadgets,https://cn.noxinfluencer.com/youtube/channel/UCzm_skdphUSCqp9XrC5Xj5A,0,badcase,无标签无内容，相关性证据不足
+9611,UCzmwnZ_ZElg6kuE6e5QS4pg,Brian Tong,https://cn.noxinfluencer.com/youtube/channel/UCzmwnZ_ZElg6kuE6e5QS4pg,-15,badcase,科技数码垂类，和割草机受众与使用场景明显不符
+9613,UCznCMXigion1DEPIPz--Y0Q,Herbies Garage LLC,https://cn.noxinfluencer.com/youtube/channel/UCznCMXigion1DEPIPz--Y0Q,-15,badcase,摩托车频道，和割草机推广场景不匹配
+9615,UCznXfgfOt4m1BXr3ObRIwPA,LAB FIVE,https://cn.noxinfluencer.com/youtube/channel/UCznXfgfOt4m1BXr3ObRIwPA,-10,badcase,娱乐+车辆向频道，主场景与割草机推广无关
+9617,UCzorFJQFaQILd3zSOf3CoBg,DANDLINC,https://cn.noxinfluencer.com/youtube/channel/UCzorFJQFaQILd3zSOf3CoBg,0,badcase,无割草机/园艺工具相关信号，仅泛车辆宠物生活标签
+9620,UCzqx1rkdCvWifxbVomHGH3A,DIY Save,https://cn.noxinfluencer.com/youtube/channel/UCzqx1rkdCvWifxbVomHGH3A,0,badcase,仅有泛生活/车辆/科技标签，无草坪养护或园林设备信号
+9622,UCzsEIF7YBmfyhkCdTcWpgbw,Perrodin the Project Specialist,https://cn.noxinfluencer.com/youtube/channel/UCzsEIF7YBmfyhkCdTcWpgbw,0,badcase,无标签无内容证据，和割草机推广无相关性
+9623,UCzsaFt-ZZPmrXiiEuKZf0ow,Pro Controller 630,https://cn.noxinfluencer.com/youtube/channel/UCzsaFt-ZZPmrXiiEuKZf0ow,0,badcase,无标签、无相关视频或近期内容，缺乏割草机推广相关性
+9624,UCzuNXzqbmgYypxVBe60jZ0g,React Wow,https://cn.noxinfluencer.com/youtube/channel/UCzuNXzqbmgYypxVBe60jZ0g,-15,badcase,音乐娱乐频道，与割草机推广场景明显不符
+9625,UCzuiAz4DEI37fa6npTH-pZg,xjoe81x,https://cn.noxinfluencer.com/youtube/channel/UCzuiAz4DEI37fa6npTH-pZg,-15,badcase,频道以汽车/电子为主，缺少割草机或园艺工具推广相关性
+9626,UCzuu-pH3ulvUIOfop3HF5kg,Lightendog,https://cn.noxinfluencer.com/youtube/channel/UCzuu-pH3ulvUIOfop3HF5kg,0,badcase,仅有生活方式标签，缺少割草机推广相关证据
+9627,UCzv7zcXFgFC16nzww5qKn7w,No Effort Income,https://cn.noxinfluencer.com/youtube/channel/UCzv7zcXFgFC16nzww5qKn7w,0,badcase,无标签无视频，无法判断与割草机推广相关
+9628,UCzvL3hcB_ZZLXjs5jx8zX2Q,HomeTech,https://cn.noxinfluencer.com/youtube/channel/UCzvL3hcB_ZZLXjs5jx8zX2Q,0,badcase,无标签无视频，缺少割草机产品推广信号
+9629,UCzvXvQRMtbjySH7aM13adbw,Ryan Mundy,https://cn.noxinfluencer.com/youtube/channel/UCzvXvQRMtbjySH7aM13adbw,0,badcase,无标签无视频，无法支持割草机推广相关性
+9630,UCzwMuqA437eR5SUET_XMwDg,Harroun Auto Parts and 3D Prints,https://cn.noxinfluencer.com/youtube/channel/UCzwMuqA437eR5SUET_XMwDg,0,badcase,汽车配件和3D打印方向，和割草机推广不符
+9631,UCzx3apuyv9gzJ9iSFgpsBlA,Best Crowdfunding Campaigns,https://cn.noxinfluencer.com/youtube/channel/UCzx3apuyv9gzJ9iSFgpsBlA,0,badcase,众筹数码泛频道，缺少割草机或园艺购买场景
+9632,UCzxBrNJpZyR0gUzRupY4cnQ,Oh Lotus,https://cn.noxinfluencer.com/youtube/channel/UCzxBrNJpZyR0gUzRupY4cnQ,0,badcase,无标签无内容，无法支持割草机推广
+9633,UCzxDZO0L5L__b3_au7aU_1A,SceneSpotlight,https://cn.noxinfluencer.com/youtube/channel/UCzxDZO0L5L__b3_au7aU_1A,0,badcase,宠物/故事类混杂，和家用割草机推广关联弱
+9634,UCzxWAyEH7JSeFqPCP32chtw,MySpore100,https://cn.noxinfluencer.com/youtube/channel/UCzxWAyEH7JSeFqPCP32chtw,0,badcase,运动相机/车辆泛频道，与割草机无关
+9636,UCzyOoCfsi-yq4KxOdzsMVqw,Doughboy,https://cn.noxinfluencer.com/youtube/channel/UCzyOoCfsi-yq4KxOdzsMVqw,-10,badcase,政治内容为主，与割草机推广场景不符
+9637,UCzzRHys6UEBpxoa_2BAn1AQ,Lowery's True Value,https://cn.noxinfluencer.com/youtube/channel/UCzzRHys6UEBpxoa_2BAn1AQ,0,badcase,无标签和视频证据，无法证明适合推广割草机

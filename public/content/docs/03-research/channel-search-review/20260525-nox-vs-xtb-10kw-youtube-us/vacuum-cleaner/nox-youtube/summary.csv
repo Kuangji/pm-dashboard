@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+nox,youtube,vacuum cleaner,overall,1500,1093,72.9%
+nox,youtube,vacuum cleaner,head,500,218,43.6%
+nox,youtube,vacuum cleaner,mid,0,0,0.0%
+nox,youtube,vacuum cleaner,tail,1000,875,87.5%

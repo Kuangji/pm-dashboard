@@ -1,0 +1,182 @@
+[
+  {
+    "kw": "coffee-machine",
+    "provider": "nox-youtube",
+    "totalPages": 101,
+    "commonPages": 101,
+    "desired": "1,2,3,4,5,6,7,8,9,10,46,47,48,49,50,51,52,53,54,55,92,93,94,95,96,97,98,99,100,101",
+    "missing": "",
+    "extra": ""
+  },
+  {
+    "kw": "coffee-machine",
+    "provider": "xtb-youtube",
+    "totalPages": 200,
+    "commonPages": 101,
+    "desired": "1,2,3,4,5,6,7,8,9,10,46,47,48,49,50,51,52,53,54,55,92,93,94,95,96,97,98,99,100,101",
+    "missing": "46,47,48,49,50,51,52,53,54,55,92,93,94,95",
+    "extra": "102,103,104,105,191,192,193,194,195,196,197,198,199,200"
+  },
+  {
+    "kw": "lawn-mower",
+    "provider": "nox-youtube",
+    "totalPages": 193,
+    "commonPages": 193,
+    "desired": "1,2,3,4,5,6,7,8,9,10,92,93,94,95,96,97,98,99,100,101,184,185,186,187,188,189,190,191,192,193",
+    "missing": "",
+    "extra": ""
+  },
+  {
+    "kw": "lawn-mower",
+    "provider": "xtb-youtube",
+    "totalPages": 200,
+    "commonPages": 193,
+    "desired": "1,2,3,4,5,6,7,8,9,10,92,93,94,95,96,97,98,99,100,101,184,185,186,187,188,189,190,191,192,193",
+    "missing": "92,93,94,95,184,185,186,187,188,189,190",
+    "extra": "102,103,104,105,194,195,196,197,198,199,200"
+  },
+  {
+    "kw": "tech",
+    "provider": "nox-youtube",
+    "totalPages": 200,
+    "commonPages": 200,
+    "desired": "1,2,3,4,5,6,7,8,9,10,96,97,98,99,100,101,102,103,104,105,191,192,193,194,195,196,197,198,199,200",
+    "missing": "",
+    "extra": ""
+  },
+  {
+    "kw": "tech",
+    "provider": "xtb-youtube",
+    "totalPages": 200,
+    "commonPages": 200,
+    "desired": "1,2,3,4,5,6,7,8,9,10,96,97,98,99,100,101,102,103,104,105,191,192,193,194,195,196,197,198,199,200",
+    "missing": "",
+    "extra": ""
+  },
+  {
+    "kw": "fashion",
+    "provider": "nox-youtube",
+    "totalPages": 200,
+    "commonPages": 200,
+    "desired": "1,2,3,4,5,6,7,8,9,10,96,97,98,99,100,101,102,103,104,105,191,192,193,194,195,196,197,198,199,200",
+    "missing": "",
+    "extra": ""
+  },
+  {
+    "kw": "fashion",
+    "provider": "xtb-youtube",
+    "totalPages": 200,
+    "commonPages": 200,
+    "desired": "1,2,3,4,5,6,7,8,9,10,96,97,98,99,100,101,102,103,104,105,191,192,193,194,195,196,197,198,199,200",
+    "missing": "",
+    "extra": ""
+  },
+  {
+    "kw": "lifestyle",
+    "provider": "nox-youtube",
+    "totalPages": 200,
+    "commonPages": 200,
+    "desired": "1,2,3,4,5,6,7,8,9,10,96,97,98,99,100,101,102,103,104,105,191,192,193,194,195,196,197,198,199,200",
+    "missing": "",
+    "extra": ""
+  },
+  {
+    "kw": "lifestyle",
+    "provider": "xtb-youtube",
+    "totalPages": 200,
+    "commonPages": 200,
+    "desired": "1,2,3,4,5,6,7,8,9,10,96,97,98,99,100,101,102,103,104,105,191,192,193,194,195,196,197,198,199,200",
+    "missing": "",
+    "extra": ""
+  },
+  {
+    "kw": "power-bank",
+    "provider": "nox-youtube",
+    "totalPages": 200,
+    "commonPages": 200,
+    "desired": "1,2,3,4,5,6,7,8,9,10,96,97,98,99,100,101,102,103,104,105,191,192,193,194,195,196,197,198,199,200",
+    "missing": "",
+    "extra": ""
+  },
+  {
+    "kw": "power-bank",
+    "provider": "xtb-youtube",
+    "totalPages": 200,
+    "commonPages": 200,
+    "desired": "1,2,3,4,5,6,7,8,9,10,96,97,98,99,100,101,102,103,104,105,191,192,193,194,195,196,197,198,199,200",
+    "missing": "",
+    "extra": ""
+  },
+  {
+    "kw": "swim-vest",
+    "provider": "nox-youtube",
+    "totalPages": 2,
+    "commonPages": 2,
+    "desired": "1,2",
+    "missing": "",
+    "extra": ""
+  },
+  {
+    "kw": "swim-vest",
+    "provider": "xtb-youtube",
+    "totalPages": 200,
+    "commonPages": 2,
+    "desired": "1,2",
+    "missing": "",
+    "extra": "3,4,5,6,7,8,9,10,96,97,98,99,100,101,102,103,104,105,191,192,193,194,195,196,197,198,199,200"
+  },
+  {
+    "kw": "vacuum-cleaner",
+    "provider": "nox-youtube",
+    "totalPages": 200,
+    "commonPages": 200,
+    "desired": "1,2,3,4,5,6,7,8,9,10,96,97,98,99,100,101,102,103,104,105,191,192,193,194,195,196,197,198,199,200",
+    "missing": "",
+    "extra": ""
+  },
+  {
+    "kw": "vacuum-cleaner",
+    "provider": "xtb-youtube",
+    "totalPages": 200,
+    "commonPages": 200,
+    "desired": "1,2,3,4,5,6,7,8,9,10,96,97,98,99,100,101,102,103,104,105,191,192,193,194,195,196,197,198,199,200",
+    "missing": "",
+    "extra": ""
+  },
+  {
+    "kw": "baby-supplement",
+    "provider": "nox-youtube",
+    "totalPages": 3,
+    "commonPages": 3,
+    "desired": "1,2,3",
+    "missing": "",
+    "extra": ""
+  },
+  {
+    "kw": "baby-supplement",
+    "provider": "xtb-youtube",
+    "totalPages": 200,
+    "commonPages": 3,
+    "desired": "1,2,3",
+    "missing": "",
+    "extra": "4,5,6,7,8,9,10,96,97,98,99,100,101,102,103,104,105,191,192,193,194,195,196,197,198,199,200"
+  },
+  {
+    "kw": "pet-food",
+    "provider": "nox-youtube",
+    "totalPages": 100,
+    "commonPages": 100,
+    "desired": "1,2,3,4,5,6,7,8,9,10,46,47,48,49,50,51,52,53,54,55,91,92,93,94,95,96,97,98,99,100",
+    "missing": "",
+    "extra": ""
+  },
+  {
+    "kw": "pet-food",
+    "provider": "xtb-youtube",
+    "totalPages": 200,
+    "commonPages": 100,
+    "desired": "1,2,3,4,5,6,7,8,9,10,46,47,48,49,50,51,52,53,54,55,91,92,93,94,95,96,97,98,99,100",
+    "missing": "46,47,48,49,50,51,52,53,54,55,91,92,93,94,95",
+    "extra": "101,102,103,104,105,191,192,193,194,195,196,197,198,199,200"
+  }
+]

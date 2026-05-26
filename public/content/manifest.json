@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-05-21T03:22:17.617Z",
+  "updatedAt": "2026-05-26T02:32:18.422Z",
   "navigation": {
     "docs": [
       {
@@ -243,6 +243,875 @@
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "monitor_761",
+            "path": "02-project-documents/monitor_761",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "02-project-documents/monitor_761/README.md",
+                "slug": "02-project-documents/monitor_761/README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "current_state_facts_v0.md",
+                "path": "02-project-documents/monitor_761/current_state_facts_v0.md",
+                "slug": "02-project-documents/monitor_761/current_state_facts_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "dashboard_metric_planning_v0.md",
+                "path": "02-project-documents/monitor_761/dashboard_metric_planning_v0.md",
+                "slug": "02-project-documents/monitor_761/dashboard_metric_planning_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "design_options_v0.md",
+                "path": "02-project-documents/monitor_761/design_options_v0.md",
+                "slug": "02-project-documents/monitor_761/design_options_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "design_v1.md",
+                "path": "02-project-documents/monitor_761/design_v1.md",
+                "slug": "02-project-documents/monitor_761/design_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "discussion_questions.md",
+                "path": "02-project-documents/monitor_761/discussion_questions.md",
+                "slug": "02-project-documents/monitor_761/discussion_questions.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "evidence_brief.md",
+                "path": "02-project-documents/monitor_761/evidence_brief.md",
+                "slug": "02-project-documents/monitor_761/evidence_brief.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "feedback_analysis_v0.md",
+                "path": "02-project-documents/monitor_761/feedback_analysis_v0.md",
+                "slug": "02-project-documents/monitor_761/feedback_analysis_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "input_v1.md",
+                "path": "02-project-documents/monitor_761/input_v1.md",
+                "slug": "02-project-documents/monitor_761/input_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "input_v1_draft.md",
+                "path": "02-project-documents/monitor_761/input_v1_draft.md",
+                "slug": "02-project-documents/monitor_761/input_v1_draft.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "pre_input_decisions_v0.md",
+                "path": "02-project-documents/monitor_761/pre_input_decisions_v0.md",
+                "slug": "02-project-documents/monitor_761/pre_input_decisions_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "pre_input_v0.md",
+                "path": "02-project-documents/monitor_761/pre_input_v0.md",
+                "slug": "02-project-documents/monitor_761/pre_input_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "spec_v1.md",
+                "path": "02-project-documents/monitor_761/spec_v1.md",
+                "slug": "02-project-documents/monitor_761/spec_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "directory",
+                "name": "feedback_screenshots",
+                "path": "02-project-documents/monitor_761/feedback_screenshots",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "ID_005194BB38B8461AA5CC145090BD3383.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_005194BB38B8461AA5CC145090BD3383.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_005194BB38B8461AA5CC145090BD3383.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_08A785A8DCE34D94A494DCE21DFA4F52.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_08A785A8DCE34D94A494DCE21DFA4F52.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_08A785A8DCE34D94A494DCE21DFA4F52.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_08C8257D8ED349408D7F305C51423E53.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_08C8257D8ED349408D7F305C51423E53.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_08C8257D8ED349408D7F305C51423E53.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_09BB6E5197C54F1DBD83DBC9035DC3B4.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_09BB6E5197C54F1DBD83DBC9035DC3B4.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_09BB6E5197C54F1DBD83DBC9035DC3B4.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_09D8FA28D8E54F9F88211BA208BB75D2.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_09D8FA28D8E54F9F88211BA208BB75D2.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_09D8FA28D8E54F9F88211BA208BB75D2.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_0C3481B9D76545BD9416B8922C6B63D5.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_0C3481B9D76545BD9416B8922C6B63D5.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_0C3481B9D76545BD9416B8922C6B63D5.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_0CCD94375BBC4317B00D70A0F184671E.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_0CCD94375BBC4317B00D70A0F184671E.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_0CCD94375BBC4317B00D70A0F184671E.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_0CEA2F6ED8574010B6D98781862AF569.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_0CEA2F6ED8574010B6D98781862AF569.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_0CEA2F6ED8574010B6D98781862AF569.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_0F09750701BB4831A7EE2955AB04777A.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_0F09750701BB4831A7EE2955AB04777A.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_0F09750701BB4831A7EE2955AB04777A.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_0FFD0A29AAC14A6CBBB75DC39EBEDE0C.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_0FFD0A29AAC14A6CBBB75DC39EBEDE0C.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_0FFD0A29AAC14A6CBBB75DC39EBEDE0C.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_10989C7E23BC4CACB5A4FEB50067A1A2.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_10989C7E23BC4CACB5A4FEB50067A1A2.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_10989C7E23BC4CACB5A4FEB50067A1A2.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_12283DD282AE42EE9E6DF9DAB706C83F.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_12283DD282AE42EE9E6DF9DAB706C83F.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_12283DD282AE42EE9E6DF9DAB706C83F.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_1313C2B5CB6B4FFDB64CEAAA822B977A.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_1313C2B5CB6B4FFDB64CEAAA822B977A.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_1313C2B5CB6B4FFDB64CEAAA822B977A.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_1404FE9F917B4C339B83C524D5E4B668.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_1404FE9F917B4C339B83C524D5E4B668.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_1404FE9F917B4C339B83C524D5E4B668.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_1772F5F0D31B495185BBF64AD0E3F902.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_1772F5F0D31B495185BBF64AD0E3F902.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_1772F5F0D31B495185BBF64AD0E3F902.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_1A0569085CB44B5CBB2FA7FFF7E61AB9.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_1A0569085CB44B5CBB2FA7FFF7E61AB9.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_1A0569085CB44B5CBB2FA7FFF7E61AB9.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_25E54EFEAE9C4AE2992E87325139C8FD.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_25E54EFEAE9C4AE2992E87325139C8FD.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_25E54EFEAE9C4AE2992E87325139C8FD.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_2B6E3BF9662F41A1B172E6727A9FB2F3.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_2B6E3BF9662F41A1B172E6727A9FB2F3.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_2B6E3BF9662F41A1B172E6727A9FB2F3.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_2BC4E9754BCE453E8656CBF937ED5CAC.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_2BC4E9754BCE453E8656CBF937ED5CAC.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_2BC4E9754BCE453E8656CBF937ED5CAC.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_2D5C97D9452349309C3A1C2A44866A62.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_2D5C97D9452349309C3A1C2A44866A62.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_2D5C97D9452349309C3A1C2A44866A62.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_37282CC0F8604EF1A992D56EF1003829.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_37282CC0F8604EF1A992D56EF1003829.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_37282CC0F8604EF1A992D56EF1003829.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_3793BCD0F28241548EC867724088E7A6.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_3793BCD0F28241548EC867724088E7A6.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_3793BCD0F28241548EC867724088E7A6.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_3937CFD7BD9E4653A744C7CA5F176729.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_3937CFD7BD9E4653A744C7CA5F176729.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_3937CFD7BD9E4653A744C7CA5F176729.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_3E14B726EF8B4658A8E2C893D0007B5C.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_3E14B726EF8B4658A8E2C893D0007B5C.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_3E14B726EF8B4658A8E2C893D0007B5C.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_40B91D561A3A484B9F4115A2F9831CE0.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_40B91D561A3A484B9F4115A2F9831CE0.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_40B91D561A3A484B9F4115A2F9831CE0.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_481227EC8B054344B6098FCB9AFC5E20.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_481227EC8B054344B6098FCB9AFC5E20.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_481227EC8B054344B6098FCB9AFC5E20.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_4F3394E879DF4DDCB4EBF94DCA810E1C.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_4F3394E879DF4DDCB4EBF94DCA810E1C.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_4F3394E879DF4DDCB4EBF94DCA810E1C.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_51A32A95811C4E47BD4082F9FA1E7363.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_51A32A95811C4E47BD4082F9FA1E7363.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_51A32A95811C4E47BD4082F9FA1E7363.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_52D065753D0E4655A396E2E2F839AA54.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_52D065753D0E4655A396E2E2F839AA54.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_52D065753D0E4655A396E2E2F839AA54.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_533760C309CC48E8AAECBD0A265E731F.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_533760C309CC48E8AAECBD0A265E731F.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_533760C309CC48E8AAECBD0A265E731F.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_53499C0DFBA44A2A8900DAF540480FF7.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_53499C0DFBA44A2A8900DAF540480FF7.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_53499C0DFBA44A2A8900DAF540480FF7.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_58815C9C5A514F03BEAF8437FB9A8049.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_58815C9C5A514F03BEAF8437FB9A8049.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_58815C9C5A514F03BEAF8437FB9A8049.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_5D51DB2B09D7486395FBE9C2D2424B00.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_5D51DB2B09D7486395FBE9C2D2424B00.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_5D51DB2B09D7486395FBE9C2D2424B00.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_6E9EDC43A8284256A162FC4D09E2F6E1.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_6E9EDC43A8284256A162FC4D09E2F6E1.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_6E9EDC43A8284256A162FC4D09E2F6E1.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_71BBF01892C0403586065161965897A7.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_71BBF01892C0403586065161965897A7.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_71BBF01892C0403586065161965897A7.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_774ACFFA09E8433DA2E8E484288B90F2.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_774ACFFA09E8433DA2E8E484288B90F2.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_774ACFFA09E8433DA2E8E484288B90F2.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_79B15802CC6845A2919F46E8F8C13B00.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_79B15802CC6845A2919F46E8F8C13B00.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_79B15802CC6845A2919F46E8F8C13B00.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_7A2AF8C523824F97B1A6BF5A54827879.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_7A2AF8C523824F97B1A6BF5A54827879.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_7A2AF8C523824F97B1A6BF5A54827879.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_7A43CDABD6FF40E2A80DCFC14CFA734E.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_7A43CDABD6FF40E2A80DCFC14CFA734E.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_7A43CDABD6FF40E2A80DCFC14CFA734E.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_7FB38E5F712E4D6AB9537C8E612D6160.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_7FB38E5F712E4D6AB9537C8E612D6160.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_7FB38E5F712E4D6AB9537C8E612D6160.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_854F6C8BA8B649E4871F60B4D546C4FE.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_854F6C8BA8B649E4871F60B4D546C4FE.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_854F6C8BA8B649E4871F60B4D546C4FE.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_8A1FD870CFCB488DB88E8F3ED3C4FCD8.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_8A1FD870CFCB488DB88E8F3ED3C4FCD8.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_8A1FD870CFCB488DB88E8F3ED3C4FCD8.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_8E2EBE5352634F99BB7D7F7FF160AE98.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_8E2EBE5352634F99BB7D7F7FF160AE98.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_8E2EBE5352634F99BB7D7F7FF160AE98.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_92CDE4E5E184447EBCB530FE788125C7.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_92CDE4E5E184447EBCB530FE788125C7.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_92CDE4E5E184447EBCB530FE788125C7.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_9394AA21346D486B99B1367FFE6A7564.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_9394AA21346D486B99B1367FFE6A7564.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_9394AA21346D486B99B1367FFE6A7564.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_963CE418441D456B9F92923D69BF8389.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_963CE418441D456B9F92923D69BF8389.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_963CE418441D456B9F92923D69BF8389.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_9648EACA36574C419E0634594259A8D6.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_9648EACA36574C419E0634594259A8D6.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_9648EACA36574C419E0634594259A8D6.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_997C5D65F42D4E96A7280B015713036B.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_997C5D65F42D4E96A7280B015713036B.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_997C5D65F42D4E96A7280B015713036B.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_9BEB75CE478D47BBBBFB4EB4BEB7963D.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_9BEB75CE478D47BBBBFB4EB4BEB7963D.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_9BEB75CE478D47BBBBFB4EB4BEB7963D.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_9E0E7F7FFF574748B2F413F933D5F28E.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_9E0E7F7FFF574748B2F413F933D5F28E.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_9E0E7F7FFF574748B2F413F933D5F28E.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_A0E80B136FB4445FB660FB1CD2774A5B.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_A0E80B136FB4445FB660FB1CD2774A5B.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_A0E80B136FB4445FB660FB1CD2774A5B.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_A0F2084A919C4DD4BD5E5683B6D292D7.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_A0F2084A919C4DD4BD5E5683B6D292D7.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_A0F2084A919C4DD4BD5E5683B6D292D7.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_A2C25B5BF9524BB488701683BBA200F3.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_A2C25B5BF9524BB488701683BBA200F3.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_A2C25B5BF9524BB488701683BBA200F3.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_AB6247FFBC014ADD9E683D309576BF67.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_AB6247FFBC014ADD9E683D309576BF67.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_AB6247FFBC014ADD9E683D309576BF67.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_AD6087BA09F846EB8ABFD467E3FEBF3E.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_AD6087BA09F846EB8ABFD467E3FEBF3E.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_AD6087BA09F846EB8ABFD467E3FEBF3E.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_AE28AD61AE474C8793984384E42048ED.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_AE28AD61AE474C8793984384E42048ED.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_AE28AD61AE474C8793984384E42048ED.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_B8BCC8CB923246D8B44C4858AB0F600D.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_B8BCC8CB923246D8B44C4858AB0F600D.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_B8BCC8CB923246D8B44C4858AB0F600D.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_BFFFC294965247C7A83467116A745BB9.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_BFFFC294965247C7A83467116A745BB9.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_BFFFC294965247C7A83467116A745BB9.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_C09549C8E5A04330BCE41541493DA03C.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_C09549C8E5A04330BCE41541493DA03C.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_C09549C8E5A04330BCE41541493DA03C.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_C53F82C628EB494986CC09061B617EB3.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_C53F82C628EB494986CC09061B617EB3.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_C53F82C628EB494986CC09061B617EB3.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_C7E2EC2920464EB2A08D0BE0B67E98BA.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_C7E2EC2920464EB2A08D0BE0B67E98BA.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_C7E2EC2920464EB2A08D0BE0B67E98BA.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_C86E4226A9B0482BB77D108059AFBD2D.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_C86E4226A9B0482BB77D108059AFBD2D.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_C86E4226A9B0482BB77D108059AFBD2D.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_C8EA8E1B98A8466A83409661A3323F7D.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_C8EA8E1B98A8466A83409661A3323F7D.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_C8EA8E1B98A8466A83409661A3323F7D.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_CC8B05624CB7422AB5D12491A55DAE9C.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_CC8B05624CB7422AB5D12491A55DAE9C.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_CC8B05624CB7422AB5D12491A55DAE9C.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_CF758F324546421BBEAB89FDB12AB2A2.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_CF758F324546421BBEAB89FDB12AB2A2.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_CF758F324546421BBEAB89FDB12AB2A2.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_D30814BDDC01452887100DE3EC245831.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_D30814BDDC01452887100DE3EC245831.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_D30814BDDC01452887100DE3EC245831.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_D5450C46A5C64540BE02D201E66CE3A9.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_D5450C46A5C64540BE02D201E66CE3A9.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_D5450C46A5C64540BE02D201E66CE3A9.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_D9395D197D4B4D0189698E86A895B9C3.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_D9395D197D4B4D0189698E86A895B9C3.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_D9395D197D4B4D0189698E86A895B9C3.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_DBDA55C4D8F24C5ABCA83F06070248E0.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_DBDA55C4D8F24C5ABCA83F06070248E0.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_DBDA55C4D8F24C5ABCA83F06070248E0.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_DD51BCE255B54ACAB5B5021C5D3151BB.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_DD51BCE255B54ACAB5B5021C5D3151BB.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_DD51BCE255B54ACAB5B5021C5D3151BB.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_E142C215ABE7494EB1638CE027BDDB4F.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_E142C215ABE7494EB1638CE027BDDB4F.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_E142C215ABE7494EB1638CE027BDDB4F.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_E527BA34CD3C4EC88C69AEA07212A13B.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_E527BA34CD3C4EC88C69AEA07212A13B.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_E527BA34CD3C4EC88C69AEA07212A13B.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_E9427F146DAF498D87D045E9E24C7D28.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_E9427F146DAF498D87D045E9E24C7D28.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_E9427F146DAF498D87D045E9E24C7D28.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_E9BF8A09C70F43DBB4196A39F7B03ED3.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_E9BF8A09C70F43DBB4196A39F7B03ED3.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_E9BF8A09C70F43DBB4196A39F7B03ED3.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_ECB8E67CAF894AC08D8C8B7DD83FBFF1.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_ECB8E67CAF894AC08D8C8B7DD83FBFF1.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_ECB8E67CAF894AC08D8C8B7DD83FBFF1.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_EEB4564BD1BB4FE3A9DDAD4A8E0CC993.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_EEB4564BD1BB4FE3A9DDAD4A8E0CC993.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_EEB4564BD1BB4FE3A9DDAD4A8E0CC993.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_F0344A804F0A48A495F7B19A62164142.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_F0344A804F0A48A495F7B19A62164142.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_F0344A804F0A48A495F7B19A62164142.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_F05F13967E6B48BC8615DF150D173F6A.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_F05F13967E6B48BC8615DF150D173F6A.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_F05F13967E6B48BC8615DF150D173F6A.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_F9527A7FB13C4A51B92AEBE86A86FBD3.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_F9527A7FB13C4A51B92AEBE86A86FBD3.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_F9527A7FB13C4A51B92AEBE86A86FBD3.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_FB6C7464FC3848EAA6CCD1C8BD618498.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_FB6C7464FC3848EAA6CCD1C8BD618498.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_FB6C7464FC3848EAA6CCD1C8BD618498.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_FBDAC949D8ED48D28AFD8E50960ADAC1.png",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_FBDAC949D8ED48D28AFD8E50960ADAC1.png",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_FBDAC949D8ED48D28AFD8E50960ADAC1.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "ID_FC42FD0E93E647598465A5D175D269CA.jpeg",
+                    "path": "02-project-documents/monitor_761/feedback_screenshots/ID_FC42FD0E93E647598465A5D175D269CA.jpeg",
+                    "slug": "02-project-documents/monitor_761/feedback_screenshots/ID_FC42FD0E93E647598465A5D175D269CA.jpeg",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  }
+                ]
               }
             ]
           },
@@ -8379,6 +9248,1353 @@
                         "fileType": "markdown",
                         "isText": true,
                         "isImage": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "20260525-nox-vs-xtb-10kw-youtube-us",
+                "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "COMMON_DEPTH_FINAL_SUMMARY.md",
+                    "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/COMMON_DEPTH_FINAL_SUMMARY.md",
+                    "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/COMMON_DEPTH_FINAL_SUMMARY.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/README.md",
+                    "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/README.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "common-depth-missing-after-supplement.csv",
+                    "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-missing-after-supplement.csv",
+                    "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-missing-after-supplement.csv",
+                    "fileType": "binary",
+                    "isText": false,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "common-depth-page-level.csv",
+                    "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-page-level.csv",
+                    "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-page-level.csv",
+                    "fileType": "binary",
+                    "isText": false,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "common-depth-page-partition-aggregation.csv",
+                    "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-page-partition-aggregation.csv",
+                    "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-page-partition-aggregation.csv",
+                    "fileType": "binary",
+                    "isText": false,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "common-depth-page-plan.json",
+                    "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-page-plan.json",
+                    "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-page-plan.json",
+                    "fileType": "json",
+                    "language": "json",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "common-depth-provider-overview.csv",
+                    "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-provider-overview.csv",
+                    "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-provider-overview.csv",
+                    "fileType": "binary",
+                    "isText": false,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "extended-tail-diagnostics.csv",
+                    "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/extended-tail-diagnostics.csv",
+                    "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/extended-tail-diagnostics.csv",
+                    "fileType": "binary",
+                    "isText": false,
+                    "isImage": false
+                  },
+                  {
+                    "type": "directory",
+                    "name": "baby-supplement",
+                    "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/README.md",
+                        "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/nox-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/nox-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "xtb-youtube",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/xtb-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/xtb-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/xtb-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/xtb-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/xtb-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/xtb-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/xtb-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/xtb-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/xtb-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "coffee-machine",
+                    "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/README.md",
+                        "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/nox-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/nox-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "xtb-youtube",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/xtb-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/xtb-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/xtb-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/xtb-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/xtb-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/xtb-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/xtb-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/xtb-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/xtb-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "common-depth-supplement",
+                    "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement",
+                    "children": [
+                      {
+                        "type": "directory",
+                        "name": "coffee-machine",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/coffee-machine",
+                        "children": [
+                          {
+                            "type": "directory",
+                            "name": "xtb-youtube",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/coffee-machine/xtb-youtube",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "README.md",
+                                "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/coffee-machine/xtb-youtube/README.md",
+                                "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/coffee-machine/xtb-youtube/README.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "badcases.csv",
+                                "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/coffee-machine/xtb-youtube/badcases.csv",
+                                "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/coffee-machine/xtb-youtube/badcases.csv",
+                                "fileType": "binary",
+                                "isText": false,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.csv",
+                                "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/coffee-machine/xtb-youtube/summary.csv",
+                                "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/coffee-machine/xtb-youtube/summary.csv",
+                                "fileType": "binary",
+                                "isText": false,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.md",
+                                "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/coffee-machine/xtb-youtube/summary.md",
+                                "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/coffee-machine/xtb-youtube/summary.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "lawn-mower",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/lawn-mower",
+                        "children": [
+                          {
+                            "type": "directory",
+                            "name": "xtb-youtube",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/lawn-mower/xtb-youtube",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "README.md",
+                                "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/lawn-mower/xtb-youtube/README.md",
+                                "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/lawn-mower/xtb-youtube/README.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "badcases.csv",
+                                "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/lawn-mower/xtb-youtube/badcases.csv",
+                                "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/lawn-mower/xtb-youtube/badcases.csv",
+                                "fileType": "binary",
+                                "isText": false,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.csv",
+                                "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/lawn-mower/xtb-youtube/summary.csv",
+                                "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/lawn-mower/xtb-youtube/summary.csv",
+                                "fileType": "binary",
+                                "isText": false,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.md",
+                                "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/lawn-mower/xtb-youtube/summary.md",
+                                "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/lawn-mower/xtb-youtube/summary.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "pet-food",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/pet-food",
+                        "children": [
+                          {
+                            "type": "directory",
+                            "name": "xtb-youtube",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/pet-food/xtb-youtube",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "README.md",
+                                "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/pet-food/xtb-youtube/README.md",
+                                "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/pet-food/xtb-youtube/README.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "badcases.csv",
+                                "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/pet-food/xtb-youtube/badcases.csv",
+                                "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/pet-food/xtb-youtube/badcases.csv",
+                                "fileType": "binary",
+                                "isText": false,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.csv",
+                                "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/pet-food/xtb-youtube/summary.csv",
+                                "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/pet-food/xtb-youtube/summary.csv",
+                                "fileType": "binary",
+                                "isText": false,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.md",
+                                "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/pet-food/xtb-youtube/summary.md",
+                                "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/pet-food/xtb-youtube/summary.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "fashion",
+                    "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/README.md",
+                        "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/nox-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/nox-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "xtb-youtube",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/xtb-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/xtb-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/xtb-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/xtb-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/xtb-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/xtb-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/xtb-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/xtb-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/xtb-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "lawn-mower",
+                    "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/README.md",
+                        "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/nox-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/nox-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "xtb-youtube",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/xtb-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/xtb-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/xtb-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/xtb-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/xtb-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/xtb-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/xtb-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/xtb-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/xtb-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "lifestyle",
+                    "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/README.md",
+                        "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/nox-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/nox-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "xtb-youtube",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/xtb-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/xtb-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/xtb-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/xtb-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/xtb-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/xtb-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/xtb-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/xtb-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/xtb-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "pet-food",
+                    "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/README.md",
+                        "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/nox-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/nox-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "xtb-youtube",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/xtb-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/xtb-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/xtb-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/xtb-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/xtb-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/xtb-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/xtb-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/xtb-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/xtb-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "power-bank",
+                    "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/README.md",
+                        "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/nox-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/nox-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "xtb-youtube",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/xtb-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/xtb-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/xtb-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/xtb-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/xtb-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/xtb-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/xtb-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/xtb-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/xtb-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "swim-vest",
+                    "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/README.md",
+                        "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/nox-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/nox-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "xtb-youtube",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/xtb-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/xtb-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/xtb-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/xtb-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/xtb-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/xtb-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/xtb-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/xtb-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/xtb-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "tech",
+                    "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/README.md",
+                        "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/nox-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/nox-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "xtb-youtube",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/xtb-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/xtb-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/xtb-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/xtb-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/xtb-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/xtb-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/xtb-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/xtb-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/xtb-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "vacuum-cleaner",
+                    "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/README.md",
+                        "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/nox-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/nox-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "xtb-youtube",
+                        "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/xtb-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/xtb-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/xtb-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/xtb-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/xtb-youtube/badcases.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/xtb-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/xtb-youtube/summary.csv",
+                            "fileType": "binary",
+                            "isText": false,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/xtb-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/xtb-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
                       }
                     ]
                   }

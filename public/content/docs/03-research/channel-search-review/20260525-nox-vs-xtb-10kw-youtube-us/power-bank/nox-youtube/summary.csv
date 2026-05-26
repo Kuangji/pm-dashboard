@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+nox,youtube,power bank,overall,1500,893,59.5%
+nox,youtube,power bank,head,500,160,32.0%
+nox,youtube,power bank,mid,0,0,0.0%
+nox,youtube,power bank,tail,1000,733,73.3%

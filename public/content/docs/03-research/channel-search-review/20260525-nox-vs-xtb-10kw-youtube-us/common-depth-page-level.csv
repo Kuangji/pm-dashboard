@@ -1,0 +1,491 @@
+keyword,provider,page,sample_scope,total,fit,adjacent,badcase,failed,badcase_rate
+coffee machine,nox,1,common_depth_sample,50,27,13,10,0,20.0%
+coffee machine,nox,2,common_depth_sample,50,20,14,16,0,32.0%
+coffee machine,nox,3,common_depth_sample,50,19,12,19,0,38.0%
+coffee machine,nox,4,common_depth_sample,50,13,12,25,0,50.0%
+coffee machine,nox,5,common_depth_sample,50,18,12,20,0,40.0%
+coffee machine,nox,6,common_depth_sample,50,16,15,19,0,38.0%
+coffee machine,nox,7,common_depth_sample,50,20,10,20,0,40.0%
+coffee machine,nox,8,common_depth_sample,50,13,14,23,0,46.0%
+coffee machine,nox,9,common_depth_sample,50,17,9,24,0,48.0%
+coffee machine,nox,10,common_depth_sample,50,16,16,18,0,36.0%
+coffee machine,nox,46,common_depth_sample,50,8,7,35,0,70.0%
+coffee machine,nox,47,common_depth_sample,50,6,11,33,0,66.0%
+coffee machine,nox,48,common_depth_sample,50,9,8,33,0,66.0%
+coffee machine,nox,49,common_depth_sample,50,8,9,33,0,66.0%
+coffee machine,nox,50,common_depth_sample,50,4,10,36,0,72.0%
+coffee machine,nox,51,common_depth_sample,50,6,9,35,0,70.0%
+coffee machine,nox,52,common_depth_sample,50,5,7,38,0,76.0%
+coffee machine,nox,53,common_depth_sample,50,10,9,31,0,62.0%
+coffee machine,nox,54,common_depth_sample,50,11,6,33,0,66.0%
+coffee machine,nox,55,common_depth_sample,50,9,6,35,0,70.0%
+coffee machine,nox,92,common_depth_sample,50,8,10,32,0,64.0%
+coffee machine,nox,93,common_depth_sample,50,8,4,38,0,76.0%
+coffee machine,nox,94,common_depth_sample,50,12,5,33,0,66.0%
+coffee machine,nox,95,common_depth_sample,50,12,5,33,0,66.0%
+coffee machine,nox,96,common_depth_sample,50,9,7,34,0,68.0%
+coffee machine,nox,97,common_depth_sample,50,9,7,34,0,68.0%
+coffee machine,nox,98,common_depth_sample,50,6,10,34,0,68.0%
+coffee machine,nox,99,common_depth_sample,50,7,6,37,0,74.0%
+coffee machine,nox,100,common_depth_sample,50,7,3,40,0,80.0%
+coffee machine,nox,101,common_depth_sample,10,1,1,8,0,80.0%
+coffee machine,xtb,1,common_depth_sample,50,34,9,7,0,14.0%
+coffee machine,xtb,2,common_depth_sample,50,18,12,20,0,40.0%
+coffee machine,xtb,3,common_depth_sample,50,20,7,23,0,46.0%
+coffee machine,xtb,4,common_depth_sample,50,9,9,32,0,64.0%
+coffee machine,xtb,5,common_depth_sample,50,6,10,34,0,68.0%
+coffee machine,xtb,6,common_depth_sample,50,7,9,34,0,68.0%
+coffee machine,xtb,7,common_depth_sample,50,4,10,36,0,72.0%
+coffee machine,xtb,8,common_depth_sample,50,6,4,40,0,80.0%
+coffee machine,xtb,9,common_depth_sample,50,3,8,39,0,78.0%
+coffee machine,xtb,10,common_depth_sample,50,6,5,39,0,78.0%
+coffee machine,xtb,46,common_depth_sample,50,4,4,42,0,84.0%
+coffee machine,xtb,47,common_depth_sample,50,6,7,37,0,74.0%
+coffee machine,xtb,48,common_depth_sample,50,5,4,41,0,82.0%
+coffee machine,xtb,49,common_depth_sample,50,3,5,42,0,84.0%
+coffee machine,xtb,50,common_depth_sample,50,7,7,36,0,72.0%
+coffee machine,xtb,51,common_depth_sample,50,4,3,43,0,86.0%
+coffee machine,xtb,52,common_depth_sample,50,1,4,45,0,90.0%
+coffee machine,xtb,53,common_depth_sample,50,2,8,40,0,80.0%
+coffee machine,xtb,54,common_depth_sample,50,4,5,41,0,82.0%
+coffee machine,xtb,55,common_depth_sample,50,6,6,38,0,76.0%
+coffee machine,xtb,92,common_depth_sample,50,0,3,47,0,94.0%
+coffee machine,xtb,93,common_depth_sample,50,1,3,46,0,92.0%
+coffee machine,xtb,94,common_depth_sample,50,2,3,45,0,90.0%
+coffee machine,xtb,95,common_depth_sample,50,1,4,45,0,90.0%
+coffee machine,xtb,96,common_depth_sample,50,4,5,41,0,82.0%
+coffee machine,xtb,97,common_depth_sample,50,3,4,43,0,86.0%
+coffee machine,xtb,98,common_depth_sample,50,3,1,46,0,92.0%
+coffee machine,xtb,99,common_depth_sample,50,0,1,49,0,98.0%
+coffee machine,xtb,100,common_depth_sample,50,1,1,48,0,96.0%
+coffee machine,xtb,101,common_depth_sample,50,1,4,45,0,90.0%
+lawn mower,nox,1,common_depth_sample,50,28,12,10,0,20.0%
+lawn mower,nox,2,common_depth_sample,50,31,4,15,0,30.0%
+lawn mower,nox,3,common_depth_sample,50,37,7,6,0,12.0%
+lawn mower,nox,4,common_depth_sample,50,38,3,9,0,18.0%
+lawn mower,nox,5,common_depth_sample,50,33,6,11,0,22.0%
+lawn mower,nox,6,common_depth_sample,50,16,13,21,0,42.0%
+lawn mower,nox,7,common_depth_sample,50,18,13,19,0,38.0%
+lawn mower,nox,8,common_depth_sample,50,13,18,19,0,38.0%
+lawn mower,nox,9,common_depth_sample,50,11,18,21,0,42.0%
+lawn mower,nox,10,common_depth_sample,50,17,8,25,0,50.0%
+lawn mower,nox,92,common_depth_sample,50,1,7,42,0,84.0%
+lawn mower,nox,93,common_depth_sample,50,2,6,42,0,84.0%
+lawn mower,nox,94,common_depth_sample,50,1,4,45,0,90.0%
+lawn mower,nox,95,common_depth_sample,50,3,7,40,0,80.0%
+lawn mower,nox,96,common_depth_sample,50,1,7,42,0,84.0%
+lawn mower,nox,97,common_depth_sample,50,0,6,44,0,88.0%
+lawn mower,nox,98,common_depth_sample,50,1,10,39,0,78.0%
+lawn mower,nox,99,common_depth_sample,50,0,6,44,0,88.0%
+lawn mower,nox,100,common_depth_sample,50,1,8,41,0,82.0%
+lawn mower,nox,101,common_depth_sample,50,1,6,43,0,86.0%
+lawn mower,nox,184,common_depth_sample,50,1,4,45,0,90.0%
+lawn mower,nox,185,common_depth_sample,50,1,7,42,0,84.0%
+lawn mower,nox,186,common_depth_sample,50,1,4,45,0,90.0%
+lawn mower,nox,187,common_depth_sample,50,0,9,41,0,82.0%
+lawn mower,nox,188,common_depth_sample,50,1,4,45,0,90.0%
+lawn mower,nox,189,common_depth_sample,50,0,12,38,0,76.0%
+lawn mower,nox,190,common_depth_sample,50,0,4,46,0,92.0%
+lawn mower,nox,191,common_depth_sample,50,1,4,45,0,90.0%
+lawn mower,nox,192,common_depth_sample,50,1,4,45,0,90.0%
+lawn mower,nox,193,common_depth_sample,37,4,6,27,0,73.0%
+lawn mower,xtb,1,common_depth_sample,50,39,6,5,0,10.0%
+lawn mower,xtb,2,common_depth_sample,50,42,6,2,0,4.0%
+lawn mower,xtb,3,common_depth_sample,50,40,7,3,0,6.0%
+lawn mower,xtb,4,common_depth_sample,50,32,13,5,0,10.0%
+lawn mower,xtb,5,common_depth_sample,50,31,11,8,0,16.0%
+lawn mower,xtb,6,common_depth_sample,50,25,9,16,0,32.0%
+lawn mower,xtb,7,common_depth_sample,50,26,11,13,0,26.0%
+lawn mower,xtb,8,common_depth_sample,50,23,13,14,0,28.0%
+lawn mower,xtb,9,common_depth_sample,50,22,11,17,0,34.0%
+lawn mower,xtb,10,common_depth_sample,50,16,10,24,0,48.0%
+lawn mower,xtb,92,common_depth_sample,50,2,4,44,0,88.0%
+lawn mower,xtb,93,common_depth_sample,50,6,6,38,0,76.0%
+lawn mower,xtb,94,common_depth_sample,50,2,4,44,0,88.0%
+lawn mower,xtb,95,common_depth_sample,50,0,10,40,0,80.0%
+lawn mower,xtb,96,common_depth_sample,50,3,11,36,0,72.0%
+lawn mower,xtb,97,common_depth_sample,50,2,9,39,0,78.0%
+lawn mower,xtb,98,common_depth_sample,50,2,11,37,0,74.0%
+lawn mower,xtb,99,common_depth_sample,50,4,9,37,0,74.0%
+lawn mower,xtb,100,common_depth_sample,50,1,9,40,0,80.0%
+lawn mower,xtb,101,common_depth_sample,50,1,4,45,0,90.0%
+lawn mower,xtb,184,common_depth_sample,50,3,2,45,0,90.0%
+lawn mower,xtb,185,common_depth_sample,50,3,2,45,0,90.0%
+lawn mower,xtb,186,common_depth_sample,50,2,3,45,0,90.0%
+lawn mower,xtb,187,common_depth_sample,50,1,4,45,0,90.0%
+lawn mower,xtb,188,common_depth_sample,50,0,3,47,0,94.0%
+lawn mower,xtb,189,common_depth_sample,50,1,4,45,0,90.0%
+lawn mower,xtb,190,common_depth_sample,50,1,6,43,0,86.0%
+lawn mower,xtb,191,common_depth_sample,50,0,3,47,0,94.0%
+lawn mower,xtb,192,common_depth_sample,50,2,2,46,0,92.0%
+lawn mower,xtb,193,common_depth_sample,50,0,5,45,0,90.0%
+tech,nox,1,common_depth_sample,50,42,6,2,0,4.0%
+tech,nox,2,common_depth_sample,50,48,2,0,0,0.0%
+tech,nox,3,common_depth_sample,50,47,3,0,0,0.0%
+tech,nox,4,common_depth_sample,50,45,3,2,0,4.0%
+tech,nox,5,common_depth_sample,50,45,5,0,0,0.0%
+tech,nox,6,common_depth_sample,50,37,6,7,0,14.0%
+tech,nox,7,common_depth_sample,50,35,10,5,0,10.0%
+tech,nox,8,common_depth_sample,50,42,4,4,0,8.0%
+tech,nox,9,common_depth_sample,50,37,6,7,0,14.0%
+tech,nox,10,common_depth_sample,50,35,9,6,0,12.0%
+tech,nox,96,common_depth_sample,50,31,10,9,0,18.0%
+tech,nox,97,common_depth_sample,50,22,12,16,0,32.0%
+tech,nox,98,common_depth_sample,50,22,12,16,0,32.0%
+tech,nox,99,common_depth_sample,50,27,11,12,0,24.0%
+tech,nox,100,common_depth_sample,50,29,8,13,0,26.0%
+tech,nox,101,common_depth_sample,50,20,16,14,0,28.0%
+tech,nox,102,common_depth_sample,50,27,14,9,0,18.0%
+tech,nox,103,common_depth_sample,50,32,11,7,0,14.0%
+tech,nox,104,common_depth_sample,50,27,13,10,0,20.0%
+tech,nox,105,common_depth_sample,50,29,10,11,0,22.0%
+tech,nox,191,common_depth_sample,50,15,14,21,0,42.0%
+tech,nox,192,common_depth_sample,50,20,11,19,0,38.0%
+tech,nox,193,common_depth_sample,50,24,13,13,0,26.0%
+tech,nox,194,common_depth_sample,50,15,11,24,0,48.0%
+tech,nox,195,common_depth_sample,50,15,13,22,0,44.0%
+tech,nox,196,common_depth_sample,50,15,7,28,0,56.0%
+tech,nox,197,common_depth_sample,50,20,8,22,0,44.0%
+tech,nox,198,common_depth_sample,50,21,7,22,0,44.0%
+tech,nox,199,common_depth_sample,50,17,14,19,0,38.0%
+tech,nox,200,common_depth_sample,50,16,12,22,0,44.0%
+tech,xtb,1,common_depth_sample,50,44,5,1,0,2.0%
+tech,xtb,2,common_depth_sample,50,39,8,3,0,6.0%
+tech,xtb,3,common_depth_sample,50,42,7,1,0,2.0%
+tech,xtb,4,common_depth_sample,50,38,6,6,0,12.0%
+tech,xtb,5,common_depth_sample,50,38,9,3,0,6.0%
+tech,xtb,6,common_depth_sample,50,38,5,7,0,14.0%
+tech,xtb,7,common_depth_sample,50,37,6,7,0,14.0%
+tech,xtb,8,common_depth_sample,50,40,9,1,0,2.0%
+tech,xtb,9,common_depth_sample,50,34,11,5,0,10.0%
+tech,xtb,10,common_depth_sample,50,43,6,1,0,2.0%
+tech,xtb,96,common_depth_sample,50,19,13,18,0,36.0%
+tech,xtb,97,common_depth_sample,50,20,9,21,0,42.0%
+tech,xtb,98,common_depth_sample,50,22,13,15,0,30.0%
+tech,xtb,99,common_depth_sample,50,17,10,23,0,46.0%
+tech,xtb,100,common_depth_sample,50,18,15,17,0,34.0%
+tech,xtb,101,common_depth_sample,50,16,11,23,0,46.0%
+tech,xtb,102,common_depth_sample,50,18,11,21,0,42.0%
+tech,xtb,103,common_depth_sample,50,19,14,17,0,34.0%
+tech,xtb,104,common_depth_sample,50,16,11,23,0,46.0%
+tech,xtb,105,common_depth_sample,50,18,11,21,0,42.0%
+tech,xtb,191,common_depth_sample,50,25,10,15,0,30.0%
+tech,xtb,192,common_depth_sample,50,31,7,12,0,24.0%
+tech,xtb,193,common_depth_sample,50,30,9,11,0,22.0%
+tech,xtb,194,common_depth_sample,50,27,7,16,0,32.0%
+tech,xtb,195,common_depth_sample,50,31,8,11,0,22.0%
+tech,xtb,196,common_depth_sample,50,19,13,18,0,36.0%
+tech,xtb,197,common_depth_sample,50,27,12,11,0,22.0%
+tech,xtb,198,common_depth_sample,50,33,8,9,0,18.0%
+tech,xtb,199,common_depth_sample,50,30,5,15,0,30.0%
+tech,xtb,200,common_depth_sample,50,32,3,15,0,30.0%
+fashion,nox,1,common_depth_sample,50,48,2,0,0,0.0%
+fashion,nox,2,common_depth_sample,50,47,3,0,0,0.0%
+fashion,nox,3,common_depth_sample,50,50,0,0,0,0.0%
+fashion,nox,4,common_depth_sample,50,49,0,1,0,2.0%
+fashion,nox,5,common_depth_sample,50,42,7,1,0,2.0%
+fashion,nox,6,common_depth_sample,50,46,3,1,0,2.0%
+fashion,nox,7,common_depth_sample,50,47,2,1,0,2.0%
+fashion,nox,8,common_depth_sample,50,50,0,0,0,0.0%
+fashion,nox,9,common_depth_sample,50,47,3,0,0,0.0%
+fashion,nox,10,common_depth_sample,50,50,0,0,0,0.0%
+fashion,nox,96,common_depth_sample,50,33,5,12,0,24.0%
+fashion,nox,97,common_depth_sample,50,33,5,12,0,24.0%
+fashion,nox,98,common_depth_sample,50,24,4,22,0,44.0%
+fashion,nox,99,common_depth_sample,50,32,5,13,0,26.0%
+fashion,nox,100,common_depth_sample,50,41,3,6,0,12.0%
+fashion,nox,101,common_depth_sample,50,28,6,16,0,32.0%
+fashion,nox,102,common_depth_sample,50,34,5,11,0,22.0%
+fashion,nox,103,common_depth_sample,50,25,5,20,0,40.0%
+fashion,nox,104,common_depth_sample,50,25,6,19,0,38.0%
+fashion,nox,105,common_depth_sample,50,21,12,17,0,34.0%
+fashion,nox,191,common_depth_sample,50,17,10,23,0,46.0%
+fashion,nox,192,common_depth_sample,50,23,5,22,0,44.0%
+fashion,nox,193,common_depth_sample,50,23,4,23,0,46.0%
+fashion,nox,194,common_depth_sample,50,15,12,23,0,46.0%
+fashion,nox,195,common_depth_sample,50,23,2,25,0,50.0%
+fashion,nox,196,common_depth_sample,50,23,4,23,0,46.0%
+fashion,nox,197,common_depth_sample,50,18,7,25,0,50.0%
+fashion,nox,198,common_depth_sample,50,22,1,27,0,54.0%
+fashion,nox,199,common_depth_sample,50,22,5,23,0,46.0%
+fashion,nox,200,common_depth_sample,50,25,6,19,0,38.0%
+fashion,xtb,1,common_depth_sample,50,48,2,0,0,0.0%
+fashion,xtb,2,common_depth_sample,50,46,2,2,0,4.0%
+fashion,xtb,3,common_depth_sample,50,41,7,2,0,4.0%
+fashion,xtb,4,common_depth_sample,50,47,3,0,0,0.0%
+fashion,xtb,5,common_depth_sample,50,41,6,3,0,6.0%
+fashion,xtb,6,common_depth_sample,50,44,5,1,0,2.0%
+fashion,xtb,7,common_depth_sample,50,47,1,2,0,4.0%
+fashion,xtb,8,common_depth_sample,50,39,8,3,0,6.0%
+fashion,xtb,9,common_depth_sample,50,40,6,4,0,8.0%
+fashion,xtb,10,common_depth_sample,50,42,4,4,0,8.0%
+fashion,xtb,96,common_depth_sample,50,34,13,3,0,6.0%
+fashion,xtb,97,common_depth_sample,50,29,17,4,0,8.0%
+fashion,xtb,98,common_depth_sample,50,37,8,5,0,10.0%
+fashion,xtb,99,common_depth_sample,50,38,7,5,0,10.0%
+fashion,xtb,100,common_depth_sample,50,31,13,6,0,12.0%
+fashion,xtb,101,common_depth_sample,50,35,13,2,0,4.0%
+fashion,xtb,102,common_depth_sample,50,37,10,3,0,6.0%
+fashion,xtb,103,common_depth_sample,50,31,14,5,0,10.0%
+fashion,xtb,104,common_depth_sample,50,38,11,1,0,2.0%
+fashion,xtb,105,common_depth_sample,50,35,12,3,0,6.0%
+fashion,xtb,191,common_depth_sample,50,26,10,14,0,28.0%
+fashion,xtb,192,common_depth_sample,50,31,6,13,0,26.0%
+fashion,xtb,193,common_depth_sample,50,28,14,8,0,16.0%
+fashion,xtb,194,common_depth_sample,50,34,10,6,0,12.0%
+fashion,xtb,195,common_depth_sample,50,30,10,10,0,20.0%
+fashion,xtb,196,common_depth_sample,50,35,7,8,0,16.0%
+fashion,xtb,197,common_depth_sample,50,27,10,13,0,26.0%
+fashion,xtb,198,common_depth_sample,50,37,4,9,0,18.0%
+fashion,xtb,199,common_depth_sample,50,21,17,12,0,24.0%
+fashion,xtb,200,common_depth_sample,50,30,8,12,0,24.0%
+lifestyle,nox,1,common_depth_sample,50,49,1,0,0,0.0%
+lifestyle,nox,2,common_depth_sample,50,49,1,0,0,0.0%
+lifestyle,nox,3,common_depth_sample,50,49,1,0,0,0.0%
+lifestyle,nox,4,common_depth_sample,50,45,5,0,0,0.0%
+lifestyle,nox,5,common_depth_sample,50,44,6,0,0,0.0%
+lifestyle,nox,6,common_depth_sample,50,48,2,0,0,0.0%
+lifestyle,nox,7,common_depth_sample,50,49,1,0,0,0.0%
+lifestyle,nox,8,common_depth_sample,50,43,7,0,0,0.0%
+lifestyle,nox,9,common_depth_sample,50,44,6,0,0,0.0%
+lifestyle,nox,10,common_depth_sample,50,43,6,1,0,2.0%
+lifestyle,nox,96,common_depth_sample,50,31,12,7,0,14.0%
+lifestyle,nox,97,common_depth_sample,50,33,11,6,0,12.0%
+lifestyle,nox,98,common_depth_sample,50,36,10,4,0,8.0%
+lifestyle,nox,99,common_depth_sample,50,28,11,11,0,22.0%
+lifestyle,nox,100,common_depth_sample,50,33,8,9,0,18.0%
+lifestyle,nox,101,common_depth_sample,50,31,11,8,0,16.0%
+lifestyle,nox,102,common_depth_sample,50,40,6,4,0,8.0%
+lifestyle,nox,103,common_depth_sample,50,38,8,4,0,8.0%
+lifestyle,nox,104,common_depth_sample,50,31,11,8,0,16.0%
+lifestyle,nox,105,common_depth_sample,50,34,10,6,0,12.0%
+lifestyle,nox,191,common_depth_sample,50,33,12,5,0,10.0%
+lifestyle,nox,192,common_depth_sample,50,26,14,10,0,20.0%
+lifestyle,nox,193,common_depth_sample,50,35,7,8,0,16.0%
+lifestyle,nox,194,common_depth_sample,50,27,16,7,0,14.0%
+lifestyle,nox,195,common_depth_sample,50,32,13,5,0,10.0%
+lifestyle,nox,196,common_depth_sample,50,37,9,4,0,8.0%
+lifestyle,nox,197,common_depth_sample,50,35,7,8,0,16.0%
+lifestyle,nox,198,common_depth_sample,50,36,6,8,0,16.0%
+lifestyle,nox,199,common_depth_sample,50,20,21,9,0,18.0%
+lifestyle,nox,200,common_depth_sample,50,35,9,6,0,12.0%
+lifestyle,xtb,1,common_depth_sample,50,50,0,0,0,0.0%
+lifestyle,xtb,2,common_depth_sample,50,48,2,0,0,0.0%
+lifestyle,xtb,3,common_depth_sample,50,49,0,1,0,2.0%
+lifestyle,xtb,4,common_depth_sample,50,47,3,0,0,0.0%
+lifestyle,xtb,5,common_depth_sample,50,49,1,0,0,0.0%
+lifestyle,xtb,6,common_depth_sample,50,46,3,1,0,2.0%
+lifestyle,xtb,7,common_depth_sample,50,45,4,1,0,2.0%
+lifestyle,xtb,8,common_depth_sample,50,46,4,0,0,0.0%
+lifestyle,xtb,9,common_depth_sample,50,49,0,1,0,2.0%
+lifestyle,xtb,10,common_depth_sample,50,42,7,1,0,2.0%
+lifestyle,xtb,96,common_depth_sample,50,37,7,6,0,12.0%
+lifestyle,xtb,97,common_depth_sample,50,41,4,5,0,10.0%
+lifestyle,xtb,98,common_depth_sample,50,37,7,6,0,12.0%
+lifestyle,xtb,99,common_depth_sample,50,40,6,4,0,8.0%
+lifestyle,xtb,100,common_depth_sample,50,36,10,4,0,8.0%
+lifestyle,xtb,101,common_depth_sample,50,37,7,6,0,12.0%
+lifestyle,xtb,102,common_depth_sample,50,43,7,0,0,0.0%
+lifestyle,xtb,103,common_depth_sample,50,38,8,4,0,8.0%
+lifestyle,xtb,104,common_depth_sample,50,39,6,5,0,10.0%
+lifestyle,xtb,105,common_depth_sample,50,33,8,9,0,18.0%
+lifestyle,xtb,191,common_depth_sample,50,36,7,7,0,14.0%
+lifestyle,xtb,192,common_depth_sample,50,29,12,9,0,18.0%
+lifestyle,xtb,193,common_depth_sample,50,36,11,3,0,6.0%
+lifestyle,xtb,194,common_depth_sample,50,31,13,6,0,12.0%
+lifestyle,xtb,195,common_depth_sample,50,25,16,9,0,18.0%
+lifestyle,xtb,196,common_depth_sample,50,37,8,5,0,10.0%
+lifestyle,xtb,197,common_depth_sample,50,32,11,7,0,14.0%
+lifestyle,xtb,198,common_depth_sample,50,33,9,8,0,16.0%
+lifestyle,xtb,199,common_depth_sample,50,35,7,8,0,16.0%
+lifestyle,xtb,200,common_depth_sample,50,39,4,7,0,14.0%
+power bank,nox,1,common_depth_sample,50,14,23,13,0,26.0%
+power bank,nox,2,common_depth_sample,50,22,13,15,0,30.0%
+power bank,nox,3,common_depth_sample,50,32,8,10,0,20.0%
+power bank,nox,4,common_depth_sample,50,13,27,10,0,20.0%
+power bank,nox,5,common_depth_sample,50,13,23,14,0,28.0%
+power bank,nox,6,common_depth_sample,50,14,25,11,0,22.0%
+power bank,nox,7,common_depth_sample,50,12,26,12,0,24.0%
+power bank,nox,8,common_depth_sample,50,7,27,16,0,32.0%
+power bank,nox,9,common_depth_sample,50,6,20,24,0,48.0%
+power bank,nox,10,common_depth_sample,50,2,13,35,0,70.0%
+power bank,nox,96,common_depth_sample,50,3,6,41,0,82.0%
+power bank,nox,97,common_depth_sample,50,2,14,34,0,68.0%
+power bank,nox,98,common_depth_sample,50,1,11,38,0,76.0%
+power bank,nox,99,common_depth_sample,50,4,14,32,0,64.0%
+power bank,nox,100,common_depth_sample,50,1,11,38,0,76.0%
+power bank,nox,101,common_depth_sample,50,1,6,43,0,86.0%
+power bank,nox,102,common_depth_sample,50,4,18,28,0,56.0%
+power bank,nox,103,common_depth_sample,50,1,12,37,0,74.0%
+power bank,nox,104,common_depth_sample,50,2,12,36,0,72.0%
+power bank,nox,105,common_depth_sample,50,0,9,41,0,82.0%
+power bank,nox,191,common_depth_sample,50,2,9,39,0,78.0%
+power bank,nox,192,common_depth_sample,50,2,11,37,0,74.0%
+power bank,nox,193,common_depth_sample,50,2,17,31,0,62.0%
+power bank,nox,194,common_depth_sample,50,0,12,38,0,76.0%
+power bank,nox,195,common_depth_sample,50,1,10,39,0,78.0%
+power bank,nox,196,common_depth_sample,50,0,14,36,0,72.0%
+power bank,nox,197,common_depth_sample,50,3,13,34,0,68.0%
+power bank,nox,198,common_depth_sample,50,2,14,34,0,68.0%
+power bank,nox,199,common_depth_sample,50,0,11,39,0,78.0%
+power bank,nox,200,common_depth_sample,50,2,10,38,0,76.0%
+power bank,xtb,1,common_depth_sample,50,39,8,3,0,6.0%
+power bank,xtb,2,common_depth_sample,50,29,10,11,0,22.0%
+power bank,xtb,3,common_depth_sample,50,27,14,9,0,18.0%
+power bank,xtb,4,common_depth_sample,50,21,13,16,0,32.0%
+power bank,xtb,5,common_depth_sample,50,23,16,11,0,22.0%
+power bank,xtb,6,common_depth_sample,50,21,14,15,0,30.0%
+power bank,xtb,7,common_depth_sample,50,23,20,7,0,14.0%
+power bank,xtb,8,common_depth_sample,50,14,19,17,0,34.0%
+power bank,xtb,9,common_depth_sample,50,14,20,16,0,32.0%
+power bank,xtb,10,common_depth_sample,50,16,24,10,0,20.0%
+power bank,xtb,96,common_depth_sample,50,6,5,39,0,78.0%
+power bank,xtb,97,common_depth_sample,50,6,7,37,0,74.0%
+power bank,xtb,98,common_depth_sample,50,10,12,28,0,56.0%
+power bank,xtb,99,common_depth_sample,50,7,9,34,0,68.0%
+power bank,xtb,100,common_depth_sample,50,9,12,29,0,58.0%
+power bank,xtb,101,common_depth_sample,50,9,7,34,0,68.0%
+power bank,xtb,102,common_depth_sample,50,7,12,31,0,62.0%
+power bank,xtb,103,common_depth_sample,50,6,13,31,0,62.0%
+power bank,xtb,104,common_depth_sample,50,10,9,31,0,62.0%
+power bank,xtb,105,common_depth_sample,50,5,13,32,0,64.0%
+power bank,xtb,191,common_depth_sample,50,0,2,48,0,96.0%
+power bank,xtb,192,common_depth_sample,50,2,7,41,0,82.0%
+power bank,xtb,193,common_depth_sample,50,2,5,43,0,86.0%
+power bank,xtb,194,common_depth_sample,50,0,8,42,0,84.0%
+power bank,xtb,195,common_depth_sample,50,1,4,45,0,90.0%
+power bank,xtb,196,common_depth_sample,50,1,5,44,0,88.0%
+power bank,xtb,197,common_depth_sample,50,4,3,43,0,86.0%
+power bank,xtb,198,common_depth_sample,50,3,9,38,0,76.0%
+power bank,xtb,199,common_depth_sample,50,3,3,44,0,88.0%
+power bank,xtb,200,common_depth_sample,50,1,7,42,0,84.0%
+swim vest,nox,1,common_depth_sample,50,1,7,42,0,84.0%
+swim vest,nox,2,common_depth_sample,20,0,3,17,0,85.0%
+swim vest,xtb,1,common_depth_sample,50,13,8,29,0,58.0%
+swim vest,xtb,2,common_depth_sample,50,4,19,27,0,54.0%
+vacuum cleaner,nox,1,common_depth_sample,50,17,5,28,0,56.0%
+vacuum cleaner,nox,2,common_depth_sample,50,28,3,19,0,38.0%
+vacuum cleaner,nox,3,common_depth_sample,50,26,4,20,0,40.0%
+vacuum cleaner,nox,4,common_depth_sample,50,23,10,17,0,34.0%
+vacuum cleaner,nox,5,common_depth_sample,50,18,17,15,0,30.0%
+vacuum cleaner,nox,6,common_depth_sample,50,18,13,19,0,38.0%
+vacuum cleaner,nox,7,common_depth_sample,50,8,20,22,0,44.0%
+vacuum cleaner,nox,8,common_depth_sample,50,11,12,27,0,54.0%
+vacuum cleaner,nox,9,common_depth_sample,50,11,16,23,0,46.0%
+vacuum cleaner,nox,10,common_depth_sample,50,8,14,28,0,56.0%
+vacuum cleaner,nox,96,common_depth_sample,50,0,6,44,0,88.0%
+vacuum cleaner,nox,97,common_depth_sample,50,0,8,42,0,84.0%
+vacuum cleaner,nox,98,common_depth_sample,50,1,8,41,0,82.0%
+vacuum cleaner,nox,99,common_depth_sample,50,0,2,48,0,96.0%
+vacuum cleaner,nox,100,common_depth_sample,50,2,6,42,0,84.0%
+vacuum cleaner,nox,101,common_depth_sample,50,0,3,47,0,94.0%
+vacuum cleaner,nox,102,common_depth_sample,50,1,4,45,0,90.0%
+vacuum cleaner,nox,103,common_depth_sample,50,1,5,44,0,88.0%
+vacuum cleaner,nox,104,common_depth_sample,50,1,6,43,0,86.0%
+vacuum cleaner,nox,105,common_depth_sample,50,0,4,46,0,92.0%
+vacuum cleaner,nox,191,common_depth_sample,50,0,3,47,0,94.0%
+vacuum cleaner,nox,192,common_depth_sample,50,1,9,40,0,80.0%
+vacuum cleaner,nox,193,common_depth_sample,50,0,6,44,0,88.0%
+vacuum cleaner,nox,194,common_depth_sample,50,1,5,44,0,88.0%
+vacuum cleaner,nox,195,common_depth_sample,50,0,7,43,0,86.0%
+vacuum cleaner,nox,196,common_depth_sample,50,1,8,41,0,82.0%
+vacuum cleaner,nox,197,common_depth_sample,50,0,6,44,0,88.0%
+vacuum cleaner,nox,198,common_depth_sample,50,0,8,42,0,84.0%
+vacuum cleaner,nox,199,common_depth_sample,50,0,5,45,0,90.0%
+vacuum cleaner,nox,200,common_depth_sample,50,0,7,43,0,86.0%
+vacuum cleaner,xtb,1,common_depth_sample,50,33,7,10,0,20.0%
+vacuum cleaner,xtb,2,common_depth_sample,50,36,4,10,0,20.0%
+vacuum cleaner,xtb,3,common_depth_sample,50,19,15,16,0,32.0%
+vacuum cleaner,xtb,4,common_depth_sample,50,19,12,19,0,38.0%
+vacuum cleaner,xtb,5,common_depth_sample,50,22,16,12,0,24.0%
+vacuum cleaner,xtb,6,common_depth_sample,50,15,13,22,0,44.0%
+vacuum cleaner,xtb,7,common_depth_sample,50,15,14,21,0,42.0%
+vacuum cleaner,xtb,8,common_depth_sample,50,14,12,24,0,48.0%
+vacuum cleaner,xtb,9,common_depth_sample,50,13,14,23,0,46.0%
+vacuum cleaner,xtb,10,common_depth_sample,50,16,9,25,0,50.0%
+vacuum cleaner,xtb,96,common_depth_sample,50,4,5,41,0,82.0%
+vacuum cleaner,xtb,97,common_depth_sample,50,1,5,44,0,88.0%
+vacuum cleaner,xtb,98,common_depth_sample,50,6,5,39,0,78.0%
+vacuum cleaner,xtb,99,common_depth_sample,50,2,9,39,0,78.0%
+vacuum cleaner,xtb,100,common_depth_sample,50,6,6,38,0,76.0%
+vacuum cleaner,xtb,101,common_depth_sample,50,3,4,43,0,86.0%
+vacuum cleaner,xtb,102,common_depth_sample,50,1,6,43,0,86.0%
+vacuum cleaner,xtb,103,common_depth_sample,50,2,8,40,0,80.0%
+vacuum cleaner,xtb,104,common_depth_sample,50,1,7,42,0,84.0%
+vacuum cleaner,xtb,105,common_depth_sample,50,4,4,42,0,84.0%
+vacuum cleaner,xtb,191,common_depth_sample,50,1,10,39,0,78.0%
+vacuum cleaner,xtb,192,common_depth_sample,50,6,4,40,0,80.0%
+vacuum cleaner,xtb,193,common_depth_sample,50,4,5,41,0,82.0%
+vacuum cleaner,xtb,194,common_depth_sample,50,2,4,44,0,88.0%
+vacuum cleaner,xtb,195,common_depth_sample,50,1,3,46,0,92.0%
+vacuum cleaner,xtb,196,common_depth_sample,50,5,5,40,0,80.0%
+vacuum cleaner,xtb,197,common_depth_sample,50,4,5,41,0,82.0%
+vacuum cleaner,xtb,198,common_depth_sample,50,2,3,45,0,90.0%
+vacuum cleaner,xtb,199,common_depth_sample,50,1,3,46,0,92.0%
+vacuum cleaner,xtb,200,common_depth_sample,50,4,4,42,0,84.0%
+baby supplement,nox,1,common_depth_sample,50,2,12,36,0,72.0%
+baby supplement,nox,2,common_depth_sample,50,1,7,42,0,84.0%
+baby supplement,nox,3,common_depth_sample,36,0,10,26,0,72.2%
+baby supplement,xtb,1,common_depth_sample,50,15,19,16,0,32.0%
+baby supplement,xtb,2,common_depth_sample,50,11,16,23,0,46.0%
+baby supplement,xtb,3,common_depth_sample,50,9,11,30,0,60.0%
+pet food,nox,1,common_depth_sample,50,25,10,15,0,30.0%
+pet food,nox,2,common_depth_sample,50,11,19,20,0,40.0%
+pet food,nox,3,common_depth_sample,50,16,12,22,0,44.0%
+pet food,nox,4,common_depth_sample,50,12,12,26,0,52.0%
+pet food,nox,5,common_depth_sample,50,8,13,29,0,58.0%
+pet food,nox,6,common_depth_sample,50,5,18,27,0,54.0%
+pet food,nox,7,common_depth_sample,50,8,11,31,0,62.0%
+pet food,nox,8,common_depth_sample,50,11,17,22,0,44.0%
+pet food,nox,9,common_depth_sample,50,3,14,33,0,66.0%
+pet food,nox,10,common_depth_sample,50,4,18,28,0,56.0%
+pet food,nox,46,common_depth_sample,50,2,17,31,0,62.0%
+pet food,nox,47,common_depth_sample,50,2,12,36,0,72.0%
+pet food,nox,48,common_depth_sample,50,1,9,40,0,80.0%
+pet food,nox,49,common_depth_sample,50,0,10,40,0,80.0%
+pet food,nox,50,common_depth_sample,50,2,13,35,0,70.0%
+pet food,nox,51,common_depth_sample,50,1,5,44,0,88.0%
+pet food,nox,52,common_depth_sample,50,4,14,32,0,64.0%
+pet food,nox,53,common_depth_sample,50,2,13,35,0,70.0%
+pet food,nox,54,common_depth_sample,50,1,6,43,0,86.0%
+pet food,nox,55,common_depth_sample,50,4,7,39,0,78.0%
+pet food,nox,91,common_depth_sample,50,1,12,37,0,74.0%
+pet food,nox,92,common_depth_sample,50,1,9,40,0,80.0%
+pet food,nox,93,common_depth_sample,50,5,12,33,0,66.0%
+pet food,nox,94,common_depth_sample,50,1,13,36,0,72.0%
+pet food,nox,95,common_depth_sample,50,2,11,37,0,74.0%
+pet food,nox,96,common_depth_sample,50,1,13,36,0,72.0%
+pet food,nox,97,common_depth_sample,50,1,14,35,0,70.0%
+pet food,nox,98,common_depth_sample,50,1,8,41,0,82.0%
+pet food,nox,99,common_depth_sample,50,0,14,36,0,72.0%
+pet food,nox,100,common_depth_sample,15,1,3,11,0,73.3%
+pet food,xtb,1,common_depth_sample,50,30,11,9,0,18.0%
+pet food,xtb,2,common_depth_sample,50,16,11,23,0,46.0%
+pet food,xtb,3,common_depth_sample,50,17,11,22,0,44.0%
+pet food,xtb,4,common_depth_sample,50,8,8,34,0,68.0%
+pet food,xtb,5,common_depth_sample,50,11,11,28,0,56.0%
+pet food,xtb,6,common_depth_sample,50,11,12,27,0,54.0%
+pet food,xtb,7,common_depth_sample,50,4,12,34,0,68.0%
+pet food,xtb,8,common_depth_sample,50,5,15,30,0,60.0%
+pet food,xtb,9,common_depth_sample,50,6,15,29,0,58.0%
+pet food,xtb,10,common_depth_sample,50,7,9,34,0,68.0%
+pet food,xtb,46,common_depth_sample,50,2,7,41,0,82.0%
+pet food,xtb,47,common_depth_sample,50,1,11,38,0,76.0%
+pet food,xtb,48,common_depth_sample,50,6,8,36,0,72.0%
+pet food,xtb,49,common_depth_sample,50,4,9,37,0,74.0%
+pet food,xtb,50,common_depth_sample,50,2,8,40,0,80.0%
+pet food,xtb,51,common_depth_sample,50,3,9,38,0,76.0%
+pet food,xtb,52,common_depth_sample,50,5,12,33,0,66.0%
+pet food,xtb,53,common_depth_sample,50,5,11,34,0,68.0%
+pet food,xtb,54,common_depth_sample,50,2,6,42,0,84.0%
+pet food,xtb,55,common_depth_sample,50,1,9,40,0,80.0%
+pet food,xtb,91,common_depth_sample,50,1,7,42,0,84.0%
+pet food,xtb,92,common_depth_sample,50,4,9,37,0,74.0%
+pet food,xtb,93,common_depth_sample,50,1,8,41,0,82.0%
+pet food,xtb,94,common_depth_sample,50,2,9,39,0,78.0%
+pet food,xtb,95,common_depth_sample,50,2,4,44,0,88.0%
+pet food,xtb,96,common_depth_sample,50,3,7,40,0,80.0%
+pet food,xtb,97,common_depth_sample,50,4,14,32,0,64.0%
+pet food,xtb,98,common_depth_sample,50,5,8,37,0,74.0%
+pet food,xtb,99,common_depth_sample,50,4,11,35,0,70.0%
+pet food,xtb,100,common_depth_sample,50,2,10,38,0,76.0%

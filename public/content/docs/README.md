@@ -17,6 +17,7 @@
 ├── 02-project-documents/  # 项目文档
 │   ├── channel_search_agent_upgrade/  # 频道搜索Agent升级
 │   ├── monitor_760/  # Monitor 监控功能
+│   ├── monitor_761/  # 监控平台文档
 │   ├── other_social_search_741/  # 社交搜索项目文档
 │   ├── search_experience_6310/  # 搜索体验需求6310
 │   ├── search_experience_639/  # 搜索体验需求639
