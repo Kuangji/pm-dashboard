@@ -44,7 +44,7 @@ export function SidebarLinks() {
 
 export function Sidebar() {
   return (
-    <aside className="hidden md:block w-64 bg-zinc-50 border-r border-zinc-200 h-screen sticky top-0 shrink-0">
+    <aside className="h-screen bg-zinc-50 border-r border-zinc-200 shrink-0 relative">
       <div className="p-6">
         <h1 className="text-xl font-bold text-zinc-900">PM Dashboard</h1>
         <p className="text-sm text-zinc-500 mt-1">产品管理系统</p>

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-05-26T02:32:18.422Z",
+  "updatedAt": "2026-05-26T03:20:52.559Z",
   "navigation": {
     "docs": [
       {
@@ -2310,8 +2310,9 @@
                         "name": "badcases.csv",
                         "path": "03-research/channel-search-review/20260520-baby-supplement-us-agent/debugger-youtube/badcases.csv",
                         "slug": "03-research/channel-search-review/20260520-baby-supplement-us-agent/debugger-youtube/badcases.csv",
-                        "fileType": "binary",
-                        "isText": false,
+                        "fileType": "table",
+                        "language": "csv",
+                        "isText": true,
                         "isImage": false
                       },
                       {
@@ -2359,8 +2360,9 @@
                         "name": "summary.csv",
                         "path": "03-research/channel-search-review/20260520-baby-supplement-us-agent/debugger-youtube/summary.csv",
                         "slug": "03-research/channel-search-review/20260520-baby-supplement-us-agent/debugger-youtube/summary.csv",
-                        "fileType": "binary",
-                        "isText": false,
+                        "fileType": "table",
+                        "language": "csv",
+                        "isText": true,
                         "isImage": false
                       },
                       {
@@ -2880,8 +2882,9 @@
                         "name": "badcases.csv",
                         "path": "03-research/channel-search-review/20260520-baby-supplement-us-agent/debugger-youtube-dry-run/badcases.csv",
                         "slug": "03-research/channel-search-review/20260520-baby-supplement-us-agent/debugger-youtube-dry-run/badcases.csv",
-                        "fileType": "binary",
-                        "isText": false,
+                        "fileType": "table",
+                        "language": "csv",
+                        "isText": true,
                         "isImage": false
                       },
                       {
@@ -2919,8 +2922,9 @@
                         "name": "summary.csv",
                         "path": "03-research/channel-search-review/20260520-baby-supplement-us-agent/debugger-youtube-dry-run/summary.csv",
                         "slug": "03-research/channel-search-review/20260520-baby-supplement-us-agent/debugger-youtube-dry-run/summary.csv",
-                        "fileType": "binary",
-                        "isText": false,
+                        "fileType": "table",
+                        "language": "csv",
+                        "isText": true,
                         "isImage": false
                       },
                       {
@@ -2953,8 +2957,9 @@
                         "name": "badcases.csv",
                         "path": "03-research/channel-search-review/20260520-baby-supplement-us-agent/nox-youtube/badcases.csv",
                         "slug": "03-research/channel-search-review/20260520-baby-supplement-us-agent/nox-youtube/badcases.csv",
-                        "fileType": "binary",
-                        "isText": false,
+                        "fileType": "table",
+                        "language": "csv",
+                        "isText": true,
                         "isImage": false
                       },
                       {
@@ -3002,8 +3007,9 @@
                         "name": "summary.csv",
                         "path": "03-research/channel-search-review/20260520-baby-supplement-us-agent/nox-youtube/summary.csv",
                         "slug": "03-research/channel-search-review/20260520-baby-supplement-us-agent/nox-youtube/summary.csv",
-                        "fileType": "binary",
-                        "isText": false,
+                        "fileType": "table",
+                        "language": "csv",
+                        "isText": true,
                         "isImage": false
                       },
                       {
@@ -4000,8 +4006,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/debugger-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/debugger-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4009,8 +4016,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/debugger-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/debugger-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4043,8 +4051,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/nox-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/nox-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4052,8 +4061,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/nox-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/baby-supplement/nox-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4111,8 +4121,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/debugger-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/debugger-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4120,8 +4131,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/debugger-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/debugger-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4154,8 +4166,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/nox-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/nox-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4163,8 +4176,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/nox-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/coffee-machine/nox-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4222,8 +4236,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/debugger-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/debugger-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4231,8 +4246,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/debugger-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/debugger-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4265,8 +4281,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/nox-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/nox-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4274,8 +4291,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/nox-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/fashion/nox-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4333,8 +4351,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/debugger-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/debugger-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4342,8 +4361,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/debugger-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/debugger-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4376,8 +4396,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/nox-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/nox-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4385,8 +4406,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/nox-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lawn-mower/nox-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4444,8 +4466,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/debugger-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/debugger-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4453,8 +4476,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/debugger-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/debugger-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4487,8 +4511,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/nox-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/nox-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4496,8 +4521,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/nox-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/lifestyle/nox-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4555,8 +4581,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/debugger-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/debugger-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4564,8 +4591,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/debugger-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/debugger-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4598,8 +4626,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/nox-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/nox-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4607,8 +4636,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/nox-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/pet-food/nox-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4666,8 +4696,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/debugger-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/debugger-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4675,8 +4706,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/debugger-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/debugger-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4709,8 +4741,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/nox-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/nox-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4718,8 +4751,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/nox-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/power-bank/nox-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4777,8 +4811,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/debugger-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/debugger-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4786,8 +4821,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/debugger-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/debugger-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4820,8 +4856,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/nox-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/nox-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4829,8 +4866,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/nox-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/swim-vest/nox-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4888,8 +4926,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/debugger-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/debugger-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4897,8 +4936,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/debugger-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/debugger-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4931,8 +4971,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/nox-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/nox-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4940,8 +4981,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/nox-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/tech/nox-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -4999,8 +5041,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/debugger-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/debugger-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -5008,8 +5051,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/debugger-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/debugger-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -5042,8 +5086,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/nox-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/nox-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -5051,8 +5096,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/nox-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260520-multi-keyword-us-youtube/vacuum-cleaner/nox-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -5122,8 +5168,9 @@
                         "name": "badcases.csv",
                         "path": "03-research/channel-search-review/20260520-pet-food-us-agent/debugger-youtube/badcases.csv",
                         "slug": "03-research/channel-search-review/20260520-pet-food-us-agent/debugger-youtube/badcases.csv",
-                        "fileType": "binary",
-                        "isText": false,
+                        "fileType": "table",
+                        "language": "csv",
+                        "isText": true,
                         "isImage": false
                       },
                       {
@@ -5171,8 +5218,9 @@
                         "name": "summary.csv",
                         "path": "03-research/channel-search-review/20260520-pet-food-us-agent/debugger-youtube/summary.csv",
                         "slug": "03-research/channel-search-review/20260520-pet-food-us-agent/debugger-youtube/summary.csv",
-                        "fileType": "binary",
-                        "isText": false,
+                        "fileType": "table",
+                        "language": "csv",
+                        "isText": true,
                         "isImage": false
                       },
                       {
@@ -7123,8 +7171,9 @@
                         "name": "badcases.csv",
                         "path": "03-research/channel-search-review/20260520-pet-food-us-agent/debugger-youtube-dry-run/badcases.csv",
                         "slug": "03-research/channel-search-review/20260520-pet-food-us-agent/debugger-youtube-dry-run/badcases.csv",
-                        "fileType": "binary",
-                        "isText": false,
+                        "fileType": "table",
+                        "language": "csv",
+                        "isText": true,
                         "isImage": false
                       },
                       {
@@ -7162,8 +7211,9 @@
                         "name": "summary.csv",
                         "path": "03-research/channel-search-review/20260520-pet-food-us-agent/debugger-youtube-dry-run/summary.csv",
                         "slug": "03-research/channel-search-review/20260520-pet-food-us-agent/debugger-youtube-dry-run/summary.csv",
-                        "fileType": "binary",
-                        "isText": false,
+                        "fileType": "table",
+                        "language": "csv",
+                        "isText": true,
                         "isImage": false
                       },
                       {
@@ -7196,8 +7246,9 @@
                         "name": "badcases.csv",
                         "path": "03-research/channel-search-review/20260520-pet-food-us-agent/nox-youtube/badcases.csv",
                         "slug": "03-research/channel-search-review/20260520-pet-food-us-agent/nox-youtube/badcases.csv",
-                        "fileType": "binary",
-                        "isText": false,
+                        "fileType": "table",
+                        "language": "csv",
+                        "isText": true,
                         "isImage": false
                       },
                       {
@@ -7245,8 +7296,9 @@
                         "name": "summary.csv",
                         "path": "03-research/channel-search-review/20260520-pet-food-us-agent/nox-youtube/summary.csv",
                         "slug": "03-research/channel-search-review/20260520-pet-food-us-agent/nox-youtube/summary.csv",
-                        "fileType": "binary",
-                        "isText": false,
+                        "fileType": "table",
+                        "language": "csv",
+                        "isText": true,
                         "isImage": false
                       },
                       {
@@ -9197,8 +9249,9 @@
                         "name": "badcases.csv",
                         "path": "03-research/channel-search-review/20260520-pet-food-us-agent/nox-youtube-dry-run/badcases.csv",
                         "slug": "03-research/channel-search-review/20260520-pet-food-us-agent/nox-youtube-dry-run/badcases.csv",
-                        "fileType": "binary",
-                        "isText": false,
+                        "fileType": "table",
+                        "language": "csv",
+                        "isText": true,
                         "isImage": false
                       },
                       {
@@ -9236,8 +9289,9 @@
                         "name": "summary.csv",
                         "path": "03-research/channel-search-review/20260520-pet-food-us-agent/nox-youtube-dry-run/summary.csv",
                         "slug": "03-research/channel-search-review/20260520-pet-food-us-agent/nox-youtube-dry-run/summary.csv",
-                        "fileType": "binary",
-                        "isText": false,
+                        "fileType": "table",
+                        "language": "csv",
+                        "isText": true,
                         "isImage": false
                       },
                       {
@@ -9281,8 +9335,9 @@
                     "name": "common-depth-missing-after-supplement.csv",
                     "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-missing-after-supplement.csv",
                     "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-missing-after-supplement.csv",
-                    "fileType": "binary",
-                    "isText": false,
+                    "fileType": "table",
+                    "language": "csv",
+                    "isText": true,
                     "isImage": false
                   },
                   {
@@ -9290,8 +9345,9 @@
                     "name": "common-depth-page-level.csv",
                     "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-page-level.csv",
                     "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-page-level.csv",
-                    "fileType": "binary",
-                    "isText": false,
+                    "fileType": "table",
+                    "language": "csv",
+                    "isText": true,
                     "isImage": false
                   },
                   {
@@ -9299,8 +9355,9 @@
                     "name": "common-depth-page-partition-aggregation.csv",
                     "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-page-partition-aggregation.csv",
                     "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-page-partition-aggregation.csv",
-                    "fileType": "binary",
-                    "isText": false,
+                    "fileType": "table",
+                    "language": "csv",
+                    "isText": true,
                     "isImage": false
                   },
                   {
@@ -9318,8 +9375,9 @@
                     "name": "common-depth-provider-overview.csv",
                     "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-provider-overview.csv",
                     "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-provider-overview.csv",
-                    "fileType": "binary",
-                    "isText": false,
+                    "fileType": "table",
+                    "language": "csv",
+                    "isText": true,
                     "isImage": false
                   },
                   {
@@ -9327,8 +9385,9 @@
                     "name": "extended-tail-diagnostics.csv",
                     "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/extended-tail-diagnostics.csv",
                     "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/extended-tail-diagnostics.csv",
-                    "fileType": "binary",
-                    "isText": false,
+                    "fileType": "table",
+                    "language": "csv",
+                    "isText": true,
                     "isImage": false
                   },
                   {
@@ -9373,8 +9432,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/nox-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/nox-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -9382,8 +9442,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/nox-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/nox-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -9416,8 +9477,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/xtb-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/xtb-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -9425,8 +9487,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/xtb-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement/xtb-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -9484,8 +9547,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/nox-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/nox-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -9493,8 +9557,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/nox-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/nox-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -9527,8 +9592,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/xtb-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/xtb-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -9536,8 +9602,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/xtb-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/coffee-machine/xtb-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -9582,8 +9649,9 @@
                                 "name": "badcases.csv",
                                 "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/coffee-machine/xtb-youtube/badcases.csv",
                                 "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/coffee-machine/xtb-youtube/badcases.csv",
-                                "fileType": "binary",
-                                "isText": false,
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
                                 "isImage": false
                               },
                               {
@@ -9591,8 +9659,9 @@
                                 "name": "summary.csv",
                                 "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/coffee-machine/xtb-youtube/summary.csv",
                                 "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/coffee-machine/xtb-youtube/summary.csv",
-                                "fileType": "binary",
-                                "isText": false,
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
                                 "isImage": false
                               },
                               {
@@ -9632,8 +9701,9 @@
                                 "name": "badcases.csv",
                                 "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/lawn-mower/xtb-youtube/badcases.csv",
                                 "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/lawn-mower/xtb-youtube/badcases.csv",
-                                "fileType": "binary",
-                                "isText": false,
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
                                 "isImage": false
                               },
                               {
@@ -9641,8 +9711,9 @@
                                 "name": "summary.csv",
                                 "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/lawn-mower/xtb-youtube/summary.csv",
                                 "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/lawn-mower/xtb-youtube/summary.csv",
-                                "fileType": "binary",
-                                "isText": false,
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
                                 "isImage": false
                               },
                               {
@@ -9682,8 +9753,9 @@
                                 "name": "badcases.csv",
                                 "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/pet-food/xtb-youtube/badcases.csv",
                                 "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/pet-food/xtb-youtube/badcases.csv",
-                                "fileType": "binary",
-                                "isText": false,
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
                                 "isImage": false
                               },
                               {
@@ -9691,8 +9763,9 @@
                                 "name": "summary.csv",
                                 "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/pet-food/xtb-youtube/summary.csv",
                                 "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/common-depth-supplement/pet-food/xtb-youtube/summary.csv",
-                                "fileType": "binary",
-                                "isText": false,
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
                                 "isImage": false
                               },
                               {
@@ -9752,8 +9825,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/nox-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/nox-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -9761,8 +9835,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/nox-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/nox-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -9795,8 +9870,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/xtb-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/xtb-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -9804,8 +9880,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/xtb-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/fashion/xtb-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -9863,8 +9940,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/nox-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/nox-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -9872,8 +9950,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/nox-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/nox-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -9906,8 +9985,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/xtb-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/xtb-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -9915,8 +9995,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/xtb-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lawn-mower/xtb-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -9974,8 +10055,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/nox-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/nox-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -9983,8 +10065,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/nox-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/nox-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10017,8 +10100,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/xtb-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/xtb-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10026,8 +10110,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/xtb-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/lifestyle/xtb-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10085,8 +10170,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/nox-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/nox-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10094,8 +10180,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/nox-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/nox-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10128,8 +10215,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/xtb-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/xtb-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10137,8 +10225,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/xtb-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/pet-food/xtb-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10196,8 +10285,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/nox-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/nox-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10205,8 +10295,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/nox-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/nox-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10239,8 +10330,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/xtb-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/xtb-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10248,8 +10340,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/xtb-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/power-bank/xtb-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10307,8 +10400,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/nox-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/nox-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10316,8 +10410,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/nox-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/nox-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10350,8 +10445,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/xtb-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/xtb-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10359,8 +10455,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/xtb-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/swim-vest/xtb-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10418,8 +10515,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/nox-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/nox-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10427,8 +10525,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/nox-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/nox-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10461,8 +10560,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/xtb-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/xtb-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10470,8 +10570,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/xtb-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/tech/xtb-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10529,8 +10630,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/nox-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/nox-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10538,8 +10640,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/nox-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/nox-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10572,8 +10675,9 @@
                             "name": "badcases.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/xtb-youtube/badcases.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/xtb-youtube/badcases.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10581,8 +10685,9 @@
                             "name": "summary.csv",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/xtb-youtube/summary.csv",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/xtb-youtube/summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -10875,7 +10980,7 @@
                     "name": "dreame_Export_Result_NoxInfluencer_20260305205844409.xlsx",
                     "path": "03-research/keyword_search_竞研/01_raw_data/dreame_Export_Result_NoxInfluencer_20260305205844409.xlsx",
                     "slug": "03-research/keyword_search_竞研/01_raw_data/dreame_Export_Result_NoxInfluencer_20260305205844409.xlsx",
-                    "fileType": "binary",
+                    "fileType": "table",
                     "isText": false,
                     "isImage": false
                   },
@@ -10884,7 +10989,7 @@
                     "name": "dreame_keywords_search_creators_report.xlsx",
                     "path": "03-research/keyword_search_竞研/01_raw_data/dreame_keywords_search_creators_report.xlsx",
                     "slug": "03-research/keyword_search_竞研/01_raw_data/dreame_keywords_search_creators_report.xlsx",
-                    "fileType": "binary",
+                    "fileType": "table",
                     "isText": false,
                     "isImage": false
                   },
@@ -10893,7 +10998,7 @@
                     "name": "dreame_keywords_search_posts_report.xlsx",
                     "path": "03-research/keyword_search_竞研/01_raw_data/dreame_keywords_search_posts_report.xlsx",
                     "slug": "03-research/keyword_search_竞研/01_raw_data/dreame_keywords_search_posts_report.xlsx",
-                    "fileType": "binary",
+                    "fileType": "table",
                     "isText": false,
                     "isImage": false
                   },
@@ -10981,7 +11086,7 @@
                         "name": "noxinfluencer_brand_monitor_content_20260368 _tiktok.xlsx",
                         "path": "03-research/keyword_search_竞研/01_raw_data/Swarovski/noxinfluencer_brand_monitor_content_20260368 _tiktok.xlsx",
                         "slug": "03-research/keyword_search_竞研/01_raw_data/Swarovski/noxinfluencer_brand_monitor_content_20260368 _tiktok.xlsx",
-                        "fileType": "binary",
+                        "fileType": "table",
                         "isText": false,
                         "isImage": false
                       },
@@ -10990,7 +11095,7 @@
                         "name": "noxinfluencer_brand_monitor_content_20260368 instagram.xlsx",
                         "path": "03-research/keyword_search_竞研/01_raw_data/Swarovski/noxinfluencer_brand_monitor_content_20260368 instagram.xlsx",
                         "slug": "03-research/keyword_search_竞研/01_raw_data/Swarovski/noxinfluencer_brand_monitor_content_20260368 instagram.xlsx",
-                        "fileType": "binary",
+                        "fileType": "table",
                         "isText": false,
                         "isImage": false
                       },
@@ -10999,7 +11104,7 @@
                         "name": "noxinfluencer_brand_monitor_content_20260368_youtube.xlsx",
                         "path": "03-research/keyword_search_竞研/01_raw_data/Swarovski/noxinfluencer_brand_monitor_content_20260368_youtube.xlsx",
                         "slug": "03-research/keyword_search_竞研/01_raw_data/Swarovski/noxinfluencer_brand_monitor_content_20260368_youtube.xlsx",
-                        "fileType": "binary",
+                        "fileType": "table",
                         "isText": false,
                         "isImage": false
                       },
@@ -11017,7 +11122,7 @@
                         "name": "tarsight_exclusive_content.xlsx",
                         "path": "03-research/keyword_search_竞研/01_raw_data/Swarovski/tarsight_exclusive_content.xlsx",
                         "slug": "03-research/keyword_search_竞研/01_raw_data/Swarovski/tarsight_exclusive_content.xlsx",
-                        "fileType": "binary",
+                        "fileType": "table",
                         "isText": false,
                         "isImage": false
                       },
@@ -11026,7 +11131,7 @@
                         "name": "tarsight_noise_content.xlsx",
                         "path": "03-research/keyword_search_竞研/01_raw_data/Swarovski/tarsight_noise_content.xlsx",
                         "slug": "03-research/keyword_search_竞研/01_raw_data/Swarovski/tarsight_noise_content.xlsx",
-                        "fileType": "binary",
+                        "fileType": "table",
                         "isText": false,
                         "isImage": false
                       },
@@ -11035,7 +11140,7 @@
                         "name": "tarsight_swarovski_2mon_posts_top10k.xlsx",
                         "path": "03-research/keyword_search_竞研/01_raw_data/Swarovski/tarsight_swarovski_2mon_posts_top10k.xlsx",
                         "slug": "03-research/keyword_search_竞研/01_raw_data/Swarovski/tarsight_swarovski_2mon_posts_top10k.xlsx",
-                        "fileType": "binary",
+                        "fileType": "table",
                         "isText": false,
                         "isImage": false
                       }
@@ -11701,8 +11806,9 @@
                             "name": "default_vs_nondefault_comparison.csv",
                             "path": "03-research/youtube_channel_nondefault_sort_threshold_audit/runs/20260408_135910/01_raw_data/default_vs_nondefault_comparison.csv",
                             "slug": "03-research/youtube_channel_nondefault_sort_threshold_audit/runs/20260408_135910/01_raw_data/default_vs_nondefault_comparison.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -11710,8 +11816,9 @@
                             "name": "sample_summary.csv",
                             "path": "03-research/youtube_channel_nondefault_sort_threshold_audit/runs/20260408_135910/01_raw_data/sample_summary.csv",
                             "slug": "03-research/youtube_channel_nondefault_sort_threshold_audit/runs/20260408_135910/01_raw_data/sample_summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -11719,8 +11826,9 @@
                             "name": "top100_detail.csv",
                             "path": "03-research/youtube_channel_nondefault_sort_threshold_audit/runs/20260408_135910/01_raw_data/top100_detail.csv",
                             "slug": "03-research/youtube_channel_nondefault_sort_threshold_audit/runs/20260408_135910/01_raw_data/top100_detail.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           }
                         ]
@@ -11799,8 +11907,9 @@
                             "name": "default_vs_nondefault_comparison.csv",
                             "path": "03-research/youtube_channel_nondefault_sort_threshold_audit/runs/20260408_170220/01_raw_data/default_vs_nondefault_comparison.csv",
                             "slug": "03-research/youtube_channel_nondefault_sort_threshold_audit/runs/20260408_170220/01_raw_data/default_vs_nondefault_comparison.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -11808,8 +11917,9 @@
                             "name": "sample_summary.csv",
                             "path": "03-research/youtube_channel_nondefault_sort_threshold_audit/runs/20260408_170220/01_raw_data/sample_summary.csv",
                             "slug": "03-research/youtube_channel_nondefault_sort_threshold_audit/runs/20260408_170220/01_raw_data/sample_summary.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           },
                           {
@@ -11817,8 +11927,9 @@
                             "name": "top100_detail.csv",
                             "path": "03-research/youtube_channel_nondefault_sort_threshold_audit/runs/20260408_170220/01_raw_data/top100_detail.csv",
                             "slug": "03-research/youtube_channel_nondefault_sort_threshold_audit/runs/20260408_170220/01_raw_data/top100_detail.csv",
-                            "fileType": "binary",
-                            "isText": false,
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
                             "isImage": false
                           }
                         ]

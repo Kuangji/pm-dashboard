@@ -20,6 +20,10 @@ const DASHBOARD_ROOT = process.cwd()
 const DOCUMENTS_DIR = path.join(DASHBOARD_ROOT, 'public/content/docs')
 const DEMOS_DIR = path.join(DASHBOARD_ROOT, 'public/demos')
 const MANIFEST_PATH = path.join(DASHBOARD_ROOT, 'public/content/manifest.json')
+const MANIFEST_GENERATOR_INPUTS = [
+  path.join(DASHBOARD_ROOT, 'scripts/generate-manifest.ts'),
+  path.join(DASHBOARD_ROOT, 'app/lib/file-types.ts'),
+]
 
 interface NavItem {
   type: 'file' | 'directory'
@@ -271,7 +275,10 @@ async function generateManifest() {
 
   try {
     const manifestStat = await fs.stat(MANIFEST_PATH)
-    const newestMtime = await getNewestMtime([DOCUMENTS_DIR, DEMOS_DIR])
+    const newestMtime = Math.max(
+      await getNewestMtime([DOCUMENTS_DIR, DEMOS_DIR]),
+      await getNewestMtime(MANIFEST_GENERATOR_INPUTS)
+    )
     const missingDemoConfigs = await hasMissingDemoConfigFiles(DEMOS_DIR)
     const missingDemoScreenshots = await hasMissingDemoScreenshots(DEMOS_DIR)
 

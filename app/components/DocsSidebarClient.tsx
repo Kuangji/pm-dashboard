@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
-import { FileText, Code, Image, File, Download, ChevronDown, ChevronUp } from 'lucide-react'
+import { FileText, Code, ImageIcon, File, Download, ChevronDown, ChevronUp, Table2 } from 'lucide-react'
 import {
   Collapsible,
   CollapsibleContent,
@@ -92,7 +92,7 @@ function splitAtLeaf10(items: NavItem[]): { visible: NavItem[]; hidden: NavItem[
  */
 function FileTypeIcon({ item }: { item: NavItem }) {
   if (item.isImage) {
-    return <Image className="w-4 h-4 flex-shrink-0 text-[#57606a]" />
+    return <ImageIcon className="w-4 h-4 flex-shrink-0 text-[#57606a]" />
   }
   if (item.fileType === 'markdown') {
     return <FileText className="w-4 h-4 flex-shrink-0 text-[#57606a]" />
@@ -102,6 +102,9 @@ function FileTypeIcon({ item }: { item: NavItem }) {
   }
   if (item.fileType === 'text') {
     return <FileText className="w-4 h-4 flex-shrink-0 text-[#57606a]" />
+  }
+  if (item.fileType === 'table') {
+    return <Table2 className="w-4 h-4 flex-shrink-0 text-[#57606a]" />
   }
   return <File className="w-4 h-4 flex-shrink-0 text-[#57606a]" />
 }
@@ -137,7 +140,7 @@ export function DocsSidebarClient({ manifest }: DocsSidebarClientProps) {
 
   // 桌面端：原有样式
   const desktopSidebar = (
-    <aside className="hidden md:flex md:flex-col w-72 h-screen sticky top-0 bg-white border-r border-[#d0d7de] shrink-0">
+    <aside className="hidden md:flex md:flex-col h-screen bg-white border-r border-[#d0d7de] shrink-0">
       {/* Header */}
       <div className="p-4 border-b border-[#d0d7de]">
         <Link href="/" className="block">

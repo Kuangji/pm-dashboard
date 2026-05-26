@@ -3,7 +3,7 @@
  * Supports multiple file types for the PM Dashboard document browser
  */
 
-export type FileCategory = 'markdown' | 'text' | 'json' | 'yaml' | 'code' | 'image' | 'binary'
+export type FileCategory = 'markdown' | 'text' | 'json' | 'yaml' | 'code' | 'image' | 'table' | 'binary'
 
 export interface FileTypeInfo {
   category: FileCategory
@@ -20,6 +20,13 @@ export const FILE_TYPE_MAP: Record<string, FileTypeInfo> = {
 
   // Text
   '.txt': { category: 'text', mimeType: 'text/plain', icon: 'file' },
+
+  // Tables / spreadsheets
+  '.csv': { category: 'table', mimeType: 'text/csv', language: 'csv', icon: 'table' },
+  '.tsv': { category: 'table', mimeType: 'text/tab-separated-values', language: 'tsv', icon: 'table' },
+  '.xlsx': { category: 'table', mimeType: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', icon: 'table' },
+  '.xls': { category: 'table', mimeType: 'application/vnd.ms-excel', icon: 'table' },
+  '.ods': { category: 'table', mimeType: 'application/vnd.oasis.opendocument.spreadsheet', icon: 'table' },
 
   // JSON
   '.json': { category: 'json', mimeType: 'application/json', language: 'json', icon: 'file-json' },
@@ -109,6 +116,9 @@ export const SUPPORTED_EXTENSIONS = Object.keys(FILE_TYPE_MAP)
 // Text-based file categories that can be read as text
 export const TEXT_CATEGORIES: FileCategory[] = ['markdown', 'text', 'json', 'yaml', 'code']
 
+// Delimited table formats that can be read as text
+export const TEXT_TABLE_EXTENSIONS = new Set(['.csv', '.tsv'])
+
 // Image categories
 export const IMAGE_CATEGORIES: FileCategory[] = ['image']
 
@@ -133,7 +143,8 @@ export function getExtension(filename: string): string {
  */
 export function isTextFile(filename: string): boolean {
   const info = detectFileType(filename)
-  return TEXT_CATEGORIES.includes(info.category)
+  const ext = getExtension(filename).toLowerCase()
+  return TEXT_CATEGORIES.includes(info.category) || TEXT_TABLE_EXTENSIONS.has(ext)
 }
 
 /**

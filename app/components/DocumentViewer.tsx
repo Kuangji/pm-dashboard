@@ -4,6 +4,7 @@ import { JsonViewer } from './JsonViewer'
 import { CodeViewer } from './CodeViewer'
 import { ImageViewer } from './ImageViewer'
 import { BinaryViewer } from './BinaryViewer'
+import { TableViewer } from './TableViewer'
 
 interface DocumentViewerProps {
   doc: Document
@@ -19,6 +20,17 @@ export function DocumentViewer({ doc }: DocumentViewerProps) {
 
   if (fileType === 'json') {
     return <JsonViewer content={doc.content} />
+  }
+
+  if (fileType === 'table') {
+    return (
+      <TableViewer
+        slug={doc.slug}
+        title={doc.title}
+        content={doc.content}
+        extension={doc.extension}
+      />
+    )
   }
 
   if (isImage) {

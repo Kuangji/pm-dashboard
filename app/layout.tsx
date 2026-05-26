@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Sidebar } from "./components/Sidebar";
-import { MobileNav } from "./components/MobileNav";
+import { ResizableAppShell } from "./components/ResizableAppShell";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,15 +29,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
-        <div className="flex min-h-screen overflow-x-hidden">
-          <Sidebar />
-          <div className="flex flex-col flex-1 min-w-0">
-            <MobileNav />
-            <main className="flex-1 bg-white min-w-0">
-              {children}
-            </main>
-          </div>
-        </div>
+        <ResizableAppShell>{children}</ResizableAppShell>
       </body>
     </html>
   );
