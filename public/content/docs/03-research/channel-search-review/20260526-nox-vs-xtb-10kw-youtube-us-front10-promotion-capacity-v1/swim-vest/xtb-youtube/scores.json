@@ -1,0 +1,2405 @@
+{
+  "provider": "xtb",
+  "platform": "youtube",
+  "keyword": "swim vest",
+  "rule_version": "promotion-capacity-v1",
+  "prompt_path": "/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/.agents/skills/nox-channel-search-agent-batch-review/references/score_prompt.md",
+  "prompt_sha256": "b87da85cf79a29abb827034a8dfa97295f6fa4495d191a48a7bef5f1d068b983",
+  "prompt_hash": "b87da85cf79a",
+  "raw_record_count": 78,
+  "record_count": 78,
+  "completed_count": 78,
+  "failed_count": 0,
+  "low_confidence_review": {
+    "enabled": false,
+    "confidence_threshold": 0.7,
+    "review_agent_model": "gpt-5.5",
+    "review_agent_reasoning_effort": "high",
+    "reviewed_count": 0,
+    "changed_label_count": 0
+  },
+  "runtime_metrics": {
+    "task_count": 9,
+    "total_task_duration_ms": 1093346,
+    "average_task_duration_ms": 121483,
+    "max_task_duration_ms": 169556,
+    "total_records_in_timed_tasks": 79,
+    "average_record_duration_ms": 13840
+  },
+  "results": [
+    {
+      "channel_id": "UCEMPa4bpp9lqYWXStM5fUqA",
+      "rank": 1,
+      "total_score": 15,
+      "suggested_label": "fit",
+      "label_confidence": 0.93,
+      "score_parts": {
+        "theme_score": 15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "allthingswater",
+          "paddleboard",
+          "Wetsuits",
+          "Surfing",
+          "ProductReview"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "水上运动/装备评测渠道，含 life jackets 相关内容",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UC2fxodqLa5qSQTNZjbMP17w",
+      "rank": 2,
+      "total_score": -10,
+      "suggested_label": "badcase",
+      "label_confidence": 0.95,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "狩猎/钓鱼频道，缺少水上安全或装备推广场景",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCUGtIoVKcmd3Z4MrlcZcjuw",
+      "rank": 3,
+      "total_score": 5,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.79,
+      "score_parts": {
+        "theme_score": 5,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "swimsuit",
+          "bikini",
+          "swim suit",
+          "swimwear",
+          "activewear"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "泳装时尚号，有水上受众但缺少装备测评/导购",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCLi4Kb77jWgr9gT-lHkgY4g",
+      "rank": 4,
+      "total_score": -10,
+      "suggested_label": "badcase",
+      "label_confidence": 0.95,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "以狩猎装备为主，近10条也都是狩猎/盲棚内容",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCEgAb8cx0XG1XSWxvXzvNsg",
+      "rank": 5,
+      "total_score": 10,
+      "suggested_label": "fit",
+      "label_confidence": 0.96,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Wakeboarding",
+          "Wakesurfing",
+          "Foil Tech",
+          "Tech Talk",
+          "Athlete Driven Innovation"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "水上运动装备号，近期有 life jacket/vest 系列",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCKX9TMP_sx82SRSV8qjDIcg",
+      "rank": 6,
+      "total_score": -10,
+      "suggested_label": "badcase",
+      "label_confidence": 0.9,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "战术健身号，近内容偏 weight vest，不是水上泳装/救生装备",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UC1c_rFyt1fGqvdiSauAijAg",
+      "rank": 7,
+      "total_score": 10,
+      "suggested_label": "fit",
+      "label_confidence": 0.97,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Safety",
+          "Boating",
+          "Life Jacket",
+          "Wakeboarding"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "航海安全频道，life jacket 场景高度贴近 swim vest",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCPebP56QemIt41_UNTZPcpA",
+      "rank": 8,
+      "total_score": -8,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.56,
+      "score_parts": {
+        "theme_score": 1,
+        "recall_count_score": 0,
+        "recency_penalty": -9
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 9
+      },
+      "why_short": "宠物/娱乐号为主，仅偶发产品测评，匹配很弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UC4-DZzt7swq7uj83bg-P9HA",
+      "rank": 9,
+      "total_score": -25,
+      "suggested_label": "badcase",
+      "label_confidence": 0.99,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "Pets",
+          "pet toys",
+          "Dog & Cat Supplies"
+        ],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "宠物用品店，目标是猫狗用品，与人用 swim vest 互斥",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCR57UuwuMxWBgzDbVE59RMA",
+      "rank": 10,
+      "total_score": 6,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.86,
+      "score_parts": {
+        "theme_score": 6,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Product Review",
+          "Outdoor Gear",
+          "Sports Equipment",
+          "Travel Gear"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "测评导购号，户外/运动品类可承接泛用装备推广",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UC06syzMZqkuy63K6uzVnnBQ",
+      "rank": 11,
+      "total_score": 4,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.67,
+      "score_parts": {
+        "theme_score": 4,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "泛产品评测号，可承接推广，但与游泳背心类目不直接相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCBBJOKspoiEETdczTtxk-dA",
+      "rank": 12,
+      "total_score": 10,
+      "suggested_label": "fit",
+      "label_confidence": 0.93,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Swim Gear",
+          "training swimwear"
+        ],
+        "weak_related_top5_tags": [
+          "swimsuit"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "游泳用品/泳装类频道，和游泳背心同属强相关品类",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCIwi08Vb_jpzNzUncSYe9NA",
+      "rank": 13,
+      "total_score": 4,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.58,
+      "score_parts": {
+        "theme_score": 4,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "数码配件评测号，具备推广能力，但与游泳背心类目不相邻",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCN7XemrXixMRMH8UvviuG6A",
+      "rank": 14,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.53,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "海淘/穿搭 haul 号能做商品推广，但与游泳背心匹配弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCXtf9tCG665OV0wyTyn81sg",
+      "rank": 15,
+      "total_score": -10,
+      "suggested_label": "badcase",
+      "label_confidence": 0.96,
+      "score_parts": {
+        "theme_score": -10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "泳池/水下场景内容，非商品推广型频道，不适合卖货",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UC_iA9vZtxWwP4AHYyEczSgg",
+      "rank": 16,
+      "total_score": 10,
+      "suggested_label": "fit",
+      "label_confidence": 0.81,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Outdoor Gear"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "评测导购号且有 Outdoor Gear 类目，适合承接游泳背心推广",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCcEiLg23lFfGN-vWjGDrRKQ",
+      "rank": 17,
+      "total_score": 4,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.62,
+      "score_parts": {
+        "theme_score": 4,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "通用商品测评号，能做推广，但与游泳背心类目不相连",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCcH6Mo0jvunvQCHFE6OAqUQ",
+      "rank": 18,
+      "total_score": -10,
+      "suggested_label": "badcase",
+      "label_confidence": 0.91,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "家庭/宠物日常频道，缺少商品测评或导购能力",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCvTw1J7hv11o19Ceb6Eb_oQ",
+      "rank": 19,
+      "total_score": -25,
+      "suggested_label": "badcase",
+      "label_confidence": 0.98,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "asmr",
+          "shortsvideo",
+          "shorts"
+        ],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "ASMR/娱乐短视频号，和游泳背心推广格式强冲突",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCzVPJ7-3fmrrjAflleOiHSQ",
+      "rank": 20,
+      "total_score": 1,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.48,
+      "score_parts": {
+        "theme_score": 1,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "母婴/日常 vlog 受众可承接轻推广，但与游泳背心不直接相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UC0TdrXZIq_-e-Tm6AnQ5zhQ",
+      "rank": 21,
+      "total_score": -20,
+      "suggested_label": "badcase",
+      "label_confidence": 0.99,
+      "score_parts": {
+        "theme_score": -10,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "宠物狗内容，和人用 swim vest 推广完全不符",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UC14glhf581fzJOYoHGxWTsg",
+      "rank": 22,
+      "total_score": -20,
+      "suggested_label": "badcase",
+      "label_confidence": 0.98,
+      "score_parts": {
+        "theme_score": -10,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "动物剧情/娱乐号，和 swim vest 促销不匹配",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UC19lNj4oH91poIlAPgCRz1g",
+      "rank": 23,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.54,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "mom",
+          "Indian Mom"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "亲子生活号，受众可用但和 swim vest 仅弱相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UC2-FSZ85oiy5QV3IgVEaI_w",
+      "rank": 24,
+      "total_score": 8,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.88,
+      "score_parts": {
+        "theme_score": 8,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "产品测评号，适合做 swim vest 这类商品推广",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UC34zgo49DqyjmKJbo-2OAPQ",
+      "rank": 25,
+      "total_score": -15,
+      "suggested_label": "badcase",
+      "label_confidence": 0.94,
+      "score_parts": {
+        "theme_score": -5,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "swimming pool",
+          "swimming"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "有 swimming 相关词，但主体是娱乐/ASMR，格式不匹配",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UC4TjKDo2hyYAr_3jswUY1jw",
+      "rank": 26,
+      "total_score": 10,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.79,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "swimming",
+          "underwater",
+          "Ocean",
+          "pool"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "游泳/水下内容强相关，但偏展示型，缺少购买意图",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UC8E1t_MXN8xHGdkq_Yqpz7Q",
+      "rank": 27,
+      "total_score": 8,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.86,
+      "score_parts": {
+        "theme_score": 8,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "测评号且覆盖多品类，适合做 swim vest 商品推广",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCBhwktEfRUytcc2z_rr44kw",
+      "rank": 28,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.47,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "parenting",
+          "mom"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "育儿受众存在，但频道重心是 homeschooling，相关性偏弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCCHcDNftAWMacace8MmOYdA",
+      "rank": 29,
+      "total_score": 10,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.78,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Dog Training",
+          "Working Dog"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "狗训内容不适合人用 swim vest，但有宠物相关受众",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCFMyyO3widMf0JC1V9G2p_A",
+      "rank": 30,
+      "total_score": 8,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.84,
+      "score_parts": {
+        "theme_score": 8,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "有产品测评能力，但与 swim vest 只有泛消费品关联",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCFu4-VQQ-K3wFRfHvHOFcTA",
+      "rank": 31,
+      "total_score": -8,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.52,
+      "score_parts": {
+        "theme_score": 1,
+        "recall_count_score": 0,
+        "recency_penalty": -9
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Sports"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 9
+      },
+      "why_short": "泛生活户外，只有 Sports 弱相关，近10条多为节日/杂项",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCHCl8-idaFT5kwaMglVjDeg",
+      "rank": 32,
+      "total_score": 4,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.82,
+      "score_parts": {
+        "theme_score": 5,
+        "recall_count_score": 0,
+        "recency_penalty": -1
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 1
+      },
+      "why_short": "多品类测评号，具备带货能力，但有1条宠物救生衣不直相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCHFNzIJkEayT5T7iuxeVYZA",
+      "rank": 33,
+      "total_score": 5,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.91,
+      "score_parts": {
+        "theme_score": 5,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "水上装备评测/教程密集，和 swim vest 同属水上用品",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCHsKQz9R0FUCPgPzu616rGw",
+      "rank": 34,
+      "total_score": 5,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.89,
+      "score_parts": {
+        "theme_score": 5,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "Best Products 多品类测评，近期还有泳池配件内容",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCJ971OJexE13JbU6jGvd2cA",
+      "rank": 35,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.72,
+      "score_parts": {
+        "theme_score": 5,
+        "recall_count_score": 0,
+        "recency_penalty": -3
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "how"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 3
+      },
+      "why_short": "有 Product Review，但近期偏演员/生活内容，稳定性一般",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCLHIeofA7RKnYzPexZDnoMA",
+      "rank": 36,
+      "total_score": -25,
+      "suggested_label": "badcase",
+      "label_confidence": 0.99,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "dog",
+          "pets",
+          "dog fight",
+          "road trip with dog",
+          "maligator mom"
+        ],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "犬类内容占主导，和人用 swim vest 受众互斥",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCMhOtPRnqG1ZGd-4nWMfzNQ",
+      "rank": 37,
+      "total_score": -5,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.6,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": -7
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "home"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 7
+      },
+      "why_short": "偏汽车维修/DIY，具备实用演示能力但不贴合泳装",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCNheH0af92GRtQMnzyV3WxQ",
+      "rank": 38,
+      "total_score": -22,
+      "suggested_label": "badcase",
+      "label_confidence": 0.98,
+      "score_parts": {
+        "theme_score": -12,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "库存素材/人物镜头为主，明显不是产品推广频道",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCNjsoaLHhxEUUpOIEbo2l_Q",
+      "rank": 39,
+      "total_score": -5,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.56,
+      "score_parts": {
+        "theme_score": 1,
+        "recall_count_score": 0,
+        "recency_penalty": -6
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 6
+      },
+      "why_short": "科普/技巧频道可承接工具类推广，但对 swim vest 很弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCOyakc0fyOTMPY6bAhXRwMA",
+      "rank": 40,
+      "total_score": -7,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.58,
+      "score_parts": {
+        "theme_score": 1,
+        "recall_count_score": 0,
+        "recency_penalty": -8
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 8
+      },
+      "why_short": "母婴家庭向，能触达家庭消费，但缺少产品评测内容",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCR0U0x3ApEOc5cTtDjumPZQ",
+      "rank": 41,
+      "total_score": -10,
+      "suggested_label": "badcase",
+      "label_confidence": 0.97,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "迪士尼旅行/短视频号，近10条全是游园内容，和泳衣推广不相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCR5EYXXjjT-33yAyWKeZY5g",
+      "rank": 42,
+      "total_score": 4,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.74,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": -6
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "unboxing",
+          "amazonfinds",
+          "founditonamazon",
+          "amazonhacks"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 6
+      },
+      "why_short": "开箱种草号，具备带货能力，近期多为泳池/水上产品但非泳衣",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCTfiE1yHE2v9rktymo4GuHg",
+      "rank": 43,
+      "total_score": -8,
+      "suggested_label": "badcase",
+      "label_confidence": 0.63,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "health",
+          "mom"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "亲子自闭症内容为主，缺少商品评测和购买导向，泳衣关联弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCUz0mrJmLmUtCAIvVP-sBOw",
+      "rank": 44,
+      "total_score": 8,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.84,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": -2
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Product Review",
+          "Outdoor",
+          "Sports"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 2
+      },
+      "why_short": "评测导购频道，户外/运动类可承接，能推广但暂无泳衣直证",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCVh1hdcRrM4D2k6D42mOjAA",
+      "rank": 45,
+      "total_score": -8,
+      "suggested_label": "badcase",
+      "label_confidence": 0.86,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "kids",
+          "cutebaby"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "家庭日常号，近10条几乎全是生活/节日内容，不适合泳衣推广",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCW5be2zb0NhPaZ2kLw1mEEw",
+      "rank": 46,
+      "total_score": 10,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.88,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "全是TOP5导购，带货能力强，但没有泳衣/救生衣的直接命中",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCWbcuS7FkBzVkVviOaJTYqA",
+      "rank": 47,
+      "total_score": 1,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.68,
+      "score_parts": {
+        "theme_score": 7,
+        "recall_count_score": 0,
+        "recency_penalty": -6
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "amazonfinds",
+          "amazonhome"
+        ],
+        "weak_related_top5_tags": [
+          "home",
+          "kitchen",
+          "diy"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 6
+      },
+      "why_short": "Amazon种草+家居DIY号，能承接商品推广，但近10条偏创作/维修",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCWdcSeS9zBFnNKnGve2D88w",
+      "rank": 48,
+      "total_score": 7,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.76,
+      "score_parts": {
+        "theme_score": 8,
+        "recall_count_score": 0,
+        "recency_penalty": -1
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "unboxing",
+          "review",
+          "Product Review",
+          "firstimpressions"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 1
+      },
+      "why_short": "开箱测评型频道，具备带货能力，但主赛道是时尚美妆而非泳衣",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCX8HTsRCZjz_rCrqRwRVxBA",
+      "rank": 49,
+      "total_score": 20,
+      "suggested_label": "fit",
+      "label_confidence": 0.99,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 10,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "近10条几乎都是life jacket/life vest/pool，和swim vest同类",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCYS56i2CumQk9LD2YQpfuCg",
+      "rank": 50,
+      "total_score": 11,
+      "suggested_label": "fit",
+      "label_confidence": 0.97,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 3,
+        "recency_penalty": -2
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Amazon Finds",
+          "Unboxing",
+          "Swimwear",
+          "Survival Gear"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 2
+      },
+      "why_short": "有泳装/开箱/必买标签，且最近直接做过swim vest，适合推广",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCZbNOg2fHR3jMpo27oqXDyg",
+      "rank": 51,
+      "total_score": -4,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.78,
+      "score_parts": {
+        "theme_score": 6,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "产品测评型频道，带货能力强，但与泳衣背心类目不直连",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCbgO1bzVFhrYT3CtnL95qeA",
+      "rank": 52,
+      "total_score": -25,
+      "suggested_label": "badcase",
+      "label_confidence": 0.97,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "近期是宠物救生衣/商品目录，面向宠物场景，与人用泳衣背心相斥",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCd8C1d30Mw5dokaaNUPSiew",
+      "rank": 53,
+      "total_score": -25,
+      "suggested_label": "badcase",
+      "label_confidence": 0.96,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "pets",
+          "malamute",
+          "alaskanmalamute"
+        ],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "纯宠物马拉缪特 vlog，宠物人群与人用泳衣背心不兼容",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCeLHEJ5FHV5aY8a8xXytsHQ",
+      "rank": 54,
+      "total_score": -25,
+      "suggested_label": "badcase",
+      "label_confidence": 0.95,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "AI 猫家庭剧情号，叙事娱乐向，不适合做人用泳衣背心推广",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCfK690FJZSD_BbyGM2YwnFA",
+      "rank": 55,
+      "total_score": -5,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.59,
+      "score_parts": {
+        "theme_score": 5,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "泛商品/穿搭/健康工具号，有带货形式，但与泳衣背心类目偏远",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCfsMK0RrT5APhnRVDTG0w4g",
+      "rank": 56,
+      "total_score": -10,
+      "suggested_label": "badcase",
+      "label_confidence": 0.72,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "生活记录+狗狗内容，缺少水上用品/测评/购物导向",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCgSMwkFikRyg_5uQesXtmrQ",
+      "rank": 57,
+      "total_score": -10,
+      "suggested_label": "badcase",
+      "label_confidence": 0.76,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "科技资讯号，近期话题与水上装备无关，缺少商品测评/购物语境",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UChEu-bhAL8mylw7qfQ7WEuw",
+      "rank": 58,
+      "total_score": 9,
+      "suggested_label": "fit",
+      "label_confidence": 0.91,
+      "score_parts": {
+        "theme_score": 12,
+        "recall_count_score": 0,
+        "recency_penalty": -3
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "surfshop",
+          "surfing"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 3
+      },
+      "why_short": "冲浪器材店，水上用品与购物语境强，适合推广水上装备",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UChfEMBC9sHvd3RNDHURMv4g",
+      "rank": 59,
+      "total_score": 6,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.66,
+      "score_parts": {
+        "theme_score": 6,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "surfshop"
+        ],
+        "weak_related_top5_tags": [
+          "Sports",
+          "surfing"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "冲浪器材店，具备水上运动商品推广能力，但缺少泳衣/救生类直接信号",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "retry-1-0001",
+      "worker_attempt": 2,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCjH4vQSss-wcoWkr9M3YZ1w",
+      "rank": 60,
+      "total_score": -25,
+      "suggested_label": "badcase",
+      "label_confidence": 0.98,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "chihuahua",
+          "puppies",
+          "pets"
+        ],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "纯犬类频道，宠物救生衣语境与人用泳衣背心互斥",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCjypOZf2o5kFMXNXWfW6E5g",
+      "rank": 61,
+      "total_score": -5,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.43,
+      "score_parts": {
+        "theme_score": 5,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "电商带货频道，商品推广能力强，但无泳背心直接相关信号",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0007",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCkJ8ESPiwBe5TICjnlO1aqQ",
+      "rank": 62,
+      "total_score": 1,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.67,
+      "score_parts": {
+        "theme_score": 7,
+        "recall_count_score": 0,
+        "recency_penalty": -6
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "health",
+          "lifestyle"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 6
+      },
+      "why_short": "母婴/生活类且有测评能力，近内容含泳池场景，相关性中等",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0007",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCkaLNO8qXV3E629Lzw9uQ1g",
+      "rank": 63,
+      "total_score": -4,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.42,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": -6
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 6
+      },
+      "why_short": "家庭出游与水上场景较多，可借场景推广，但缺少测评信号",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0007",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCknDK-6tF84vSoRrc0bDkVg",
+      "rank": 64,
+      "total_score": -4,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.62,
+      "score_parts": {
+        "theme_score": 6,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "review",
+          "amazon"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "亚马逊测评频道，具备商品推广能力，但无泳背心直接相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0007",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UClR8YIQX5Fb8J2wmsUKLhvQ",
+      "rank": 65,
+      "total_score": -14,
+      "suggested_label": "badcase",
+      "label_confidence": 0.83,
+      "score_parts": {
+        "theme_score": -4,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "health",
+          "lifestyle"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "儿科健康资讯频道，非商品推广型，和泳背心促销契合度低",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0007",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCle6Sb_PTohfDddJkbYvj3Q",
+      "rank": 66,
+      "total_score": -2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.71,
+      "score_parts": {
+        "theme_score": 8,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "family"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "重度产品测评号，能卖货，但近期内容未见泳背心直接相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0007",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCljYUFAqDTIB0DlJPEO6wrA",
+      "rank": 67,
+      "total_score": -25,
+      "suggested_label": "badcase",
+      "label_confidence": 0.97,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "近期出现狗用游泳背心，属于宠物场景，与人用泳背心不符",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0007",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCoD24sN6sKc7kxvVsCxgUCg",
+      "rank": 68,
+      "total_score": -6,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.57,
+      "score_parts": {
+        "theme_score": 3,
+        "recall_count_score": 0,
+        "recency_penalty": -9
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 9
+      },
+      "why_short": "折扣带货型频道，近期有泳背心标题，但整体证据仍偏弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0007",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCov5nPlmB8jzyhyaCarhISA",
+      "rank": 69,
+      "total_score": -3,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.76,
+      "score_parts": {
+        "theme_score": 7,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "泛品测评频道，推广能力强，但与泳背心只有泛化类目接近",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0007",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCpcgi2CJ2nL9NM0ULtgXZMw",
+      "rank": 70,
+      "total_score": -4,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.69,
+      "score_parts": {
+        "theme_score": 6,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "家居/小工具短视频带货能力强，但无泳背心直接匹配",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0007",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCq5DkV0DD8pEH_7qCX6Uk5w",
+      "rank": 71,
+      "total_score": -9,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.35,
+      "score_parts": {
+        "theme_score": 1,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "family"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "亲子家庭向，可碰儿童泳具，但近期内容与 swim vest 相关性弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0008",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCs40wi62dBIGnnzSazyuA5g",
+      "rank": 72,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.74,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": -8
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Outdoor Gear",
+          "Product Review"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 8
+      },
+      "why_short": "户外商品测评号，具备推广能力，但无泳具直接证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0008",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCtBQ0cK8YkeBOtfqjEiICOQ",
+      "rank": 73,
+      "total_score": 3,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.69,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": -7
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "fishing gear",
+          "kayak",
+          "Fishing Gear Review"
+        ],
+        "weak_related_top5_tags": [
+          "fishing"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 7
+      },
+      "why_short": "钓鱼/皮划艇户外测评号，能接水上安全装备",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0008",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCwX1CwrcL7RTqBCSE3n3qKw",
+      "rank": 74,
+      "total_score": -10,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.44,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "泛购物优惠码频道，能带货但缺少泳具类垂类证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0008",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCxb9Lj_r2dsGecbK6JJq10w",
+      "rank": 75,
+      "total_score": -3,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.52,
+      "score_parts": {
+        "theme_score": 5,
+        "recall_count_score": 0,
+        "recency_penalty": -8
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Product Testing",
+          "Quality Inspection",
+          "Inspection Services"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 8
+      },
+      "why_short": "偏验货和FBA供货，不是面向消费者的泳具推广频道",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0008",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCyWh44S7FvpCQuBfDSKRFtA",
+      "rank": 76,
+      "total_score": -20,
+      "suggested_label": "badcase",
+      "label_confidence": 0.92,
+      "score_parts": {
+        "theme_score": -10,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "寶寶成長日記"
+        ],
+        "mutually_exclusive_top5_tags": [
+          "Education",
+          "VLOG"
+        ],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "儿童故事/教育向，娱乐属性重，不适合 swim vest 推广",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0008",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCfRKXoEpMz_4gzezGjMWu7Q",
+      "rank": 77,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.78,
+      "score_parts": {
+        "theme_score": 1,
+        "recall_count_score": 3,
+        "recency_penalty": -2
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "family friendly",
+          "family"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 2
+      },
+      "why_short": "儿童浮水教学视频出现救生衣/浮圈，相关但偏娱乐",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0008",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    },
+    {
+      "channel_id": "UCssaa7o6N8HouKNMrMQGG3g",
+      "rank": 78,
+      "total_score": -5,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.41,
+      "score_parts": {
+        "theme_score": 5,
+        "recall_count_score": 0,
+        "recency_penalty": -10
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "Product Testing",
+          "Review"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 10
+      },
+      "why_short": "汽车改装测评号有商品能力，但与 swim vest 类目很远",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0008",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "promotion-capacity-v1"
+    }
+  ],
+  "task_reports": [
+    {
+      "task_id": "task-0003",
+      "record_count": 10,
+      "ok": true,
+      "code": 0,
+      "signal": null,
+      "stderr": "",
+      "duration_ms": 91109,
+      "input": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/tasks/task-0003.input.json",
+      "output": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/tasks/task-0003.output.json",
+      "stderr_preview": ""
+    },
+    {
+      "task_id": "task-0001",
+      "record_count": 10,
+      "ok": true,
+      "code": 0,
+      "signal": null,
+      "stderr": "",
+      "duration_ms": 103131,
+      "input": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/tasks/task-0001.input.json",
+      "output": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/tasks/task-0001.output.json",
+      "stderr_preview": ""
+    },
+    {
+      "task_id": "task-0002",
+      "record_count": 10,
+      "ok": true,
+      "code": 0,
+      "signal": null,
+      "stderr": "",
+      "duration_ms": 161678,
+      "input": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/tasks/task-0002.input.json",
+      "output": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/tasks/task-0002.output.json",
+      "stderr_preview": ""
+    },
+    {
+      "task_id": "task-0004",
+      "record_count": 10,
+      "ok": true,
+      "code": 0,
+      "signal": null,
+      "stderr": "",
+      "duration_ms": 169556,
+      "input": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/tasks/task-0004.input.json",
+      "output": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/tasks/task-0004.output.json",
+      "stderr_preview": ""
+    },
+    {
+      "task_id": "task-0006",
+      "record_count": 10,
+      "ok": true,
+      "code": 0,
+      "signal": null,
+      "stderr": "",
+      "duration_ms": 123887,
+      "input": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/tasks/task-0006.input.json",
+      "output": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/tasks/task-0006.output.json",
+      "stderr_preview": ""
+    },
+    {
+      "task_id": "task-0005",
+      "record_count": 10,
+      "ok": true,
+      "code": 0,
+      "signal": null,
+      "stderr": "",
+      "duration_ms": 145831,
+      "input": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/tasks/task-0005.input.json",
+      "output": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/tasks/task-0005.output.json",
+      "stderr_preview": ""
+    },
+    {
+      "task_id": "task-0008",
+      "record_count": 8,
+      "ok": true,
+      "code": 0,
+      "signal": null,
+      "stderr": "",
+      "duration_ms": 122258,
+      "input": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/tasks/task-0008.input.json",
+      "output": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/tasks/task-0008.output.json",
+      "stderr_preview": ""
+    },
+    {
+      "task_id": "task-0007",
+      "record_count": 10,
+      "ok": true,
+      "code": 0,
+      "signal": null,
+      "stderr": "",
+      "duration_ms": 130248,
+      "input": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/tasks/task-0007.input.json",
+      "output": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/tasks/task-0007.output.json",
+      "stderr_preview": ""
+    },
+    {
+      "task_id": "retry-1-0001",
+      "record_count": 1,
+      "ok": true,
+      "code": 0,
+      "signal": null,
+      "stderr": "",
+      "duration_ms": 45648,
+      "input": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/tasks/retry-1-0001.input.json",
+      "output": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/tasks/retry-1-0001.output.json",
+      "stderr_preview": ""
+    }
+  ],
+  "updated_at": "2026-05-26T17:02:23.239Z"
+}

@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+xtb,youtube,lawn mower,overall,500,64,12.8%
+xtb,youtube,lawn mower,head,500,64,12.8%
+xtb,youtube,lawn mower,mid,0,0,0.0%
+xtb,youtube,lawn mower,tail,0,0,0.0%

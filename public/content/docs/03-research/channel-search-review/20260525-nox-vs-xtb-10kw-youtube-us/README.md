@@ -10,10 +10,11 @@
 - `common-depth-page-level.csv`: 逐页聚合。
 - `extended-tail-diagnostics.csv`: 长 provider 多抓页诊断。
 - `common-depth-missing-after-supplement.csv`: 补跑后空页缺失检查；当前无缺失行。
+- `review-package.jsonl.gz`: 插件人工复核压缩单文件包，包含 20 个基础 provider run 和 3 个共同深度补跑 run；首行为包元数据，后续为逐条 record 的 gzip JSONL。
 
 ## 子目录说明
 
-每个 keyword 目录保留原始 `README.md`、`provider-comparison.md` 以及 nox / xtb 单 provider 的 `summary.md`、`summary.csv`、`badcases.csv`，用于查看该关键词下的子结论、badcase 明细和成因说明。最终横向结论仍以根目录共同深度口径为准；keyword 子目录里的 `provider-comparison.md` 是原始细粒度证据，不覆盖共同深度补跑后的根级结论。
+每个 keyword 目录保留原始 `README.md`、`provider-comparison.md` 以及 nox / xtb 单 provider 的 `summary.md`、`summary.csv`、`badcases.csv`，用于查看该关键词下的子结论、badcase 明细和成因说明。插件人工复核入口统一使用根目录 `review-package.jsonl.gz`；最终横向结论仍以根目录共同深度口径为准；keyword 子目录里的 `provider-comparison.md` 是原始细粒度证据，不覆盖共同深度补跑后的根级结论。
 
 ## 页面聚合分组对比结论
 

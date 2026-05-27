@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+nox,youtube,coffee machine,overall,500,172,34.4%
+nox,youtube,coffee machine,head,500,172,34.4%
+nox,youtube,coffee machine,mid,0,0,0.0%
+nox,youtube,coffee machine,tail,0,0,0.0%

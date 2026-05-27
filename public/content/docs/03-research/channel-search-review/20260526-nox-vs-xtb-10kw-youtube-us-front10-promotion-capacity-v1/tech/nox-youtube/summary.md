@@ -1,0 +1,66 @@
+# Channel Search Batch Review
+
+- provider: nox
+- platform: youtube
+- keyword: tech
+- total: 500
+- badcase率: 8.6%
+- labels: fit 285, adjacent 172, badcase 43, failed 0
+- score distribution: <0 6, 0-9 36, 10-19 25, 20+ 433
+- 平均 shard 执行时间: 92.7s（51 个 shard）
+- 平均单频道执行时间: 9.4s
+
+## Buckets
+| bucket | total | badcase | badcase_rate |
+|---|---:|---:|---:|
+| overall | 500 | 43 | 8.6% |
+| head | 500 | 43 | 8.6% |
+| mid | 0 | 0 | 0.0% |
+| tail | 0 | 0 | 0.0% |
+
+## Badcases
+| rank | channel | url | score | reason |
+|---:|---|---|---:|---|
+| 10 | DarkPlayzz | https://cn.noxinfluencer.com/youtube/channel/UCMGRqpXjTYTqlnnGTjMmigw | 5 | 宗教诵读主频道，与科技推广不符 |
+| 40 | Plainrock124 | https://cn.noxinfluencer.com/youtube/channel/UCFUsBdbrNe2a8tnVsxBwoZw | 5 | 破坏式娱乐内容，不适合做科技产品推广 |
+| 84 | ABEiiiKU | https://cn.noxinfluencer.com/youtube/channel/UC4xU1pYKI2mXcGP8qdxLL6g | 10 | 虽有开箱，但ASMR导向强，产品推广适配差 |
+| 89 | MOIN BLAZE | https://cn.noxinfluencer.com/youtube/channel/UCS65Cob8tlnYCjStAM8sdxg | 5 | 宗教主内容为主，科技仅弱标签，明显不适合 |
+| 165 | Rad | https://cn.noxinfluencer.com/youtube/channel/UCZ7znURDSO1B6Zk8dCntqew | 8 | ASMR/氛围型，不适合做科技产品推广 |
+| 174 | Hamster Kombat | https://cn.noxinfluencer.com/youtube/channel/UCozwejESfvl88CBBL0KgEhw | 0 | 加密金融频道，与科技推广主题不匹配 |
+| 215 | Digital Express Universe | https://cn.noxinfluencer.com/youtube/channel/UCWnXgKA2DvgVcL6Itd76Waw | 8 | 有tech但ASMR/游戏混杂，格式不匹配 |
+| 237 | VOZOL RUSSIA | https://cn.noxinfluencer.com/youtube/channel/UC4ppc207yFcH_b9Td3hxaCQ | 10 | ASMR+品牌向内容，tech词不改成可投放的推广位 |
+| 259 | Becca Farsace | https://cn.noxinfluencer.com/youtube/channel/UCEbFX3P9ADiJvle5Z0Qyw2A | 0 | 缺少科技产品语义，偏生活方式频道，不适合 |
+| 262 | Christian Perez | https://cn.noxinfluencer.com/youtube/channel/UCf41OY0yx1wdO6980jAHRmw | 0 | 纯游戏娱乐向，和科技产品推广关联弱 |
+| 273 | TECH Tire Repairs | https://cn.noxinfluencer.com/youtube/channel/UCHunTRJxHj8dZIdBQJzxWLQ | 2 | 汽车轮胎维修向，tech标签疑似泛化 |
+| 276 | WSJ Podcasts | https://cn.noxinfluencer.com/youtube/channel/UCYmFKw7swKPJiaMloRmptHw | 0 | 新闻播客，缺少科技或产品信号 |
+| 278 | TechLead | https://cn.noxinfluencer.com/youtube/channel/UC4xKdmAXFh4ACyhpiQ_3qBw | 0 | 财经加加密为主，tech标签缺位 |
+| 280 | Kelson01 | https://cn.noxinfluencer.com/youtube/channel/UCUhejRdj-jaI5H8u4t4ra_Q | 0 | 游戏内容，和科技产品推广关联弱 |
+| 289 | MudiwAura👑 | https://cn.noxinfluencer.com/youtube/channel/UC8fOlR6nYZmeFE9SOUSo35g | -15 | 音乐舞蹈娱乐向，和科技产品推广场景不匹配 |
+| 298 | Elastic Dimension Records | https://cn.noxinfluencer.com/youtube/channel/UCK5fzlNLiXwKm8PgJcJh5lw | 5 | 音乐/techno频道，tech为风格词，不适合科技产品推广 |
+| 302 | Socially Inept | https://cn.noxinfluencer.com/youtube/channel/UCFe2Kq8Hg15UomoVYdmRg_Q | 0 | 娱乐电影幽默号，与 tech 推广无关 |
+| 306 | Our Future | https://cn.noxinfluencer.com/youtube/channel/UC2htIc3-njRI5BKTJ2QqNfA | 10 | story/shorts 叙事向，tech 仅弱挂钩 |
+| 312 | NatureBased | https://cn.noxinfluencer.com/youtube/channel/UCr5plgyYkHldqPu4MNd0cvA | 8 | 科幻娱乐为主，tech仅陪衬，产品推广适配弱 |
+| 315 | ALCHIMIST-ZIO | https://cn.noxinfluencer.com/youtube/channel/UCSWtRrNcggq98qF1uLHnACA | 7 | 娱乐搞笑为主，tech仅陪衬，不适合产品推广 |
+| 318 | panda tech | https://cn.noxinfluencer.com/youtube/channel/UCkehTo1bcI7FdAkaUTsNShQ | 5 | ASMR/放松音效为主，和科技产品推广格式强冲突 |
+| 325 | Bloomberg Television | https://cn.noxinfluencer.com/youtube/channel/UCIALMKvObZNtJ6AmdCLP7Lg | 0 | 新闻财经频道，和tech产品推广目标不匹配 |
+| 327 | The Investor Channel | https://cn.noxinfluencer.com/youtube/channel/UC7r4-nZ4icT8SIcnisXFSHQ | 0 | 仅股票相关，缺少tech主题与产品推广场景 |
+| 352 | Tech Design | https://cn.noxinfluencer.com/youtube/channel/UCjSYpiJmYW-dMiP-F0TiJNA | 0 | 纯娱乐故事向，缺少科技产品推广能力 |
+| 362 | Hobby Explorer | https://cn.noxinfluencer.com/youtube/channel/UCYqXh1HzJSYYYmbaoK4veDw | 0 | 移民生活类频道，与 tech 产品推广无关 |
+| 368 | Gary Woo | https://cn.noxinfluencer.com/youtube/channel/UC282ml8xvsICSg5hv-VG7zw | 0 | 生活/美食/时尚向，与 tech 产品推广无关 |
+| 369 | Rolex Facts | https://cn.noxinfluencer.com/youtube/channel/UCDhosqE7xK5U-Z-MMZYse_g | -15 | 娱乐卡通向，和 tech 产品推广不匹配 |
+| 370 | @annalifeunedited | https://cn.noxinfluencer.com/youtube/channel/UCDwSBQ3r4xa50vKjnyqUHXg | 13 | ASMR/日常向，虽有 tech 标签但产品推广匹配度差 |
+| 378 | TK TAMILAN | https://cn.noxinfluencer.com/youtube/channel/UCd_qbmDWHuMl9tANh724Bbg | -15 | 娱乐/动漫/搞笑为主，与科技推广明显不符 |
+| 389 | The Klyshe Code | https://cn.noxinfluencer.com/youtube/channel/UCjoQZyJEejRlmUd7Ir-n6VA | 10 | ASMR/娱乐主导，虽有unboxing但不适合产品推广 |
+| 395 | HackHerApp | https://cn.noxinfluencer.com/youtube/channel/UCClY17Q2X0BB7lN_A7u20yw | -15 | 纯政治娱乐内容，与 tech 产品推广不匹配 |
+| 423 | Phono Tech | https://cn.noxinfluencer.com/youtube/channel/UC-BtgQhGDzFnImxqr9Ago2Q | -15 | 放松音景频道，和科技推广格式不符 |
+| 426 | Kickstarter | https://cn.noxinfluencer.com/youtube/channel/UCPV33YGEVLwtOotz9ZG0XQw | 0 | 仅生活类标签，缺少科技相关信号 |
+| 429 | Nexus Dim | https://cn.noxinfluencer.com/youtube/channel/UCT_Bq1rLN37ktkBX_jVz5Ag | -15 | 宗教诵读频道，与科技推广完全不符 |
+| 433 | Social X Files | https://cn.noxinfluencer.com/youtube/channel/UC0jetkarmcwY7xc620S2c4Q | 0 | 短视频+魔术+激励向，和tech推广关联弱 |
+| 436 | Ali Huseyn Mobileshop | https://cn.noxinfluencer.com/youtube/channel/UCOVMva_PlXYXaONPBiXFcKA | 0 | 娱乐喜剧频道，缺少科技/电子受众 |
+| 437 | PC BUILD-ASMR | https://cn.noxinfluencer.com/youtube/channel/UCer2gPEPPvg5cBAP0GATwFA | 10 | tech直标但ASMR格式强不匹配，不适合产品推广 |
+| 452 | MR SRV | https://cn.noxinfluencer.com/youtube/channel/UCXS4UzXqpKt7n4lO9XFbN4w | 0 | 无 tech 相关标签，内容偏奢侈生活/超跑，和科技推广不匹配 |
+| 467 | Tech Bag Trey | https://cn.noxinfluencer.com/youtube/channel/UC7m5BD3_cmT1GnwJBU03cNQ | 10 | tech sales偏销售职业内容，不是科技产品推广 |
+| 469 | PlatterMatterMusic | https://cn.noxinfluencer.com/youtube/channel/UCHtkmZB7CTsANOV0zabn71g | 5 | 音乐娱乐为主，tech只是边缘词，不适合数码推广 |
+| 475 | The Parcero | https://cn.noxinfluencer.com/youtube/channel/UCEqqBTPIffJt1SMI2AOOt9g | 10 | ASMR感官内容占比高，和科技推广格式不匹配 |
+| 492 | Shorts 24 | https://cn.noxinfluencer.com/youtube/channel/UC7sF9uHV3dZcxWjm5_5A5Qg | 0 | 无标签无内容，无法判断为科技类创作者 |
+| 500 | The Information | https://cn.noxinfluencer.com/youtube/channel/UCoKqUtcUtf8QPb0GWxe5e7Q | 0 | 偏商业新闻，不是科技产品推广频道 |

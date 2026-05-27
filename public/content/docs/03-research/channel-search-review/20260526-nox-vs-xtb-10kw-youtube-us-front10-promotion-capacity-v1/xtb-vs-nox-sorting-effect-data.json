@@ -1,0 +1,3664 @@
+{
+  "comparisons": [
+    {
+      "keyword": "baby supplement",
+      "nox": {
+        "runDir": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/nox-youtube",
+        "provider": "nox",
+        "keyword": "baby supplement",
+        "pageSize": 50,
+        "total": 135,
+        "completed": 135,
+        "failed": 0,
+        "labels": {
+          "fit": 7,
+          "adjacent": 56,
+          "badcase": 72,
+          "failed": 0
+        },
+        "badcaseRate": 0.5333333333333333,
+        "goodRate": 0.4666666666666667,
+        "recallCount": 135,
+        "sampledCount": 135,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "fit": 3,
+            "adjacent": 23,
+            "badcase": 24,
+            "failed": 0,
+            "badcaseRate": 0.48,
+            "goodRate": 0.52
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "fit": 4,
+            "adjacent": 19,
+            "badcase": 27,
+            "failed": 0,
+            "badcaseRate": 0.54,
+            "goodRate": 0.46
+          },
+          {
+            "page": 3,
+            "total": 35,
+            "fit": 0,
+            "adjacent": 14,
+            "badcase": 21,
+            "failed": 0,
+            "badcaseRate": 0.6,
+            "goodRate": 0.4
+          }
+        ],
+        "runtimeMetrics": {
+          "task_count": 6,
+          "total_task_duration_ms": 1100473,
+          "average_task_duration_ms": 183412,
+          "max_task_duration_ms": 269839,
+          "total_records_in_timed_tasks": 135,
+          "average_record_duration_ms": 8152
+        },
+        "ruleVersion": "promotion-capacity-v1",
+        "promptHash": "b87da85cf79a"
+      },
+      "xtb": {
+        "runDir": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/xtb-youtube",
+        "provider": "xtb",
+        "keyword": "baby supplement",
+        "pageSize": 50,
+        "total": 187,
+        "completed": 187,
+        "failed": 0,
+        "labels": {
+          "fit": 38,
+          "adjacent": 84,
+          "badcase": 65,
+          "failed": 0
+        },
+        "badcaseRate": 0.34759358288770054,
+        "goodRate": 0.6524064171122995,
+        "recallCount": 188,
+        "sampledCount": 187,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "fit": 11,
+            "adjacent": 33,
+            "badcase": 6,
+            "failed": 0,
+            "badcaseRate": 0.12,
+            "goodRate": 0.88
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "fit": 11,
+            "adjacent": 19,
+            "badcase": 20,
+            "failed": 0,
+            "badcaseRate": 0.4,
+            "goodRate": 0.6
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "fit": 10,
+            "adjacent": 19,
+            "badcase": 21,
+            "failed": 0,
+            "badcaseRate": 0.42,
+            "goodRate": 0.58
+          },
+          {
+            "page": 4,
+            "total": 37,
+            "fit": 6,
+            "adjacent": 13,
+            "badcase": 18,
+            "failed": 0,
+            "badcaseRate": 0.4864864864864865,
+            "goodRate": 0.5135135135135135
+          }
+        ],
+        "runtimeMetrics": {
+          "task_count": 10,
+          "total_task_duration_ms": 2357917,
+          "average_task_duration_ms": 235792,
+          "max_task_duration_ms": 444461,
+          "total_records_in_timed_tasks": 189,
+          "average_record_duration_ms": 12476
+        },
+        "ruleVersion": "promotion-capacity-v1",
+        "promptHash": "b87da85cf79a"
+      },
+      "rows": [
+        {
+          "keyword": "baby supplement",
+          "page": 1,
+          "noxTotal": 50,
+          "noxBadcase": 24,
+          "noxBadcaseRate": 0.48,
+          "xtbTotal": 50,
+          "xtbBadcase": 6,
+          "xtbBadcaseRate": 0.12,
+          "comparable": true,
+          "delta": -0.36,
+          "total": 50
+        },
+        {
+          "keyword": "baby supplement",
+          "page": 2,
+          "noxTotal": 50,
+          "noxBadcase": 27,
+          "noxBadcaseRate": 0.54,
+          "xtbTotal": 50,
+          "xtbBadcase": 20,
+          "xtbBadcaseRate": 0.4,
+          "comparable": true,
+          "delta": -0.14,
+          "total": 50
+        },
+        {
+          "keyword": "baby supplement",
+          "page": 3,
+          "noxTotal": 35,
+          "noxBadcase": 21,
+          "noxBadcaseRate": 0.6,
+          "xtbTotal": 50,
+          "xtbBadcase": 21,
+          "xtbBadcaseRate": 0.42,
+          "comparable": true,
+          "delta": -0.18,
+          "total": 35
+        },
+        {
+          "keyword": "baby supplement",
+          "page": 4,
+          "noxTotal": 0,
+          "noxBadcase": 0,
+          "noxBadcaseRate": 0,
+          "xtbTotal": 37,
+          "xtbBadcase": 18,
+          "xtbBadcaseRate": 0.4864864864864865,
+          "comparable": false,
+          "delta": null,
+          "total": 0
+        }
+      ],
+      "avgDelta": -0.23185185185185186,
+      "frontDelta": -0.23185185185185186,
+      "tailDelta": 0,
+      "xtbSlope": 0.11194594594594594,
+      "noxSlope": -0.13799999999999998,
+      "slopeDelta": 0.24994594594594594,
+      "expectedPageWins": 3,
+      "comparablePages": 3,
+      "conclusion": "符合预期"
+    },
+    {
+      "keyword": "coffee machine",
+      "nox": {
+        "runDir": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/nox-youtube",
+        "provider": "nox",
+        "keyword": "coffee machine",
+        "pageSize": 50,
+        "total": 500,
+        "completed": 500,
+        "failed": 0,
+        "labels": {
+          "fit": 55,
+          "adjacent": 273,
+          "badcase": 172,
+          "failed": 0
+        },
+        "badcaseRate": 0.344,
+        "goodRate": 0.656,
+        "recallCount": 5006,
+        "sampledCount": 500,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "fit": 19,
+            "adjacent": 20,
+            "badcase": 11,
+            "failed": 0,
+            "badcaseRate": 0.22,
+            "goodRate": 0.78
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "fit": 8,
+            "adjacent": 27,
+            "badcase": 15,
+            "failed": 0,
+            "badcaseRate": 0.3,
+            "goodRate": 0.7
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "fit": 8,
+            "adjacent": 28,
+            "badcase": 14,
+            "failed": 0,
+            "badcaseRate": 0.28,
+            "goodRate": 0.72
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "fit": 4,
+            "adjacent": 22,
+            "badcase": 24,
+            "failed": 0,
+            "badcaseRate": 0.48,
+            "goodRate": 0.52
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "fit": 6,
+            "adjacent": 29,
+            "badcase": 15,
+            "failed": 0,
+            "badcaseRate": 0.3,
+            "goodRate": 0.7
+          },
+          {
+            "page": 6,
+            "total": 50,
+            "fit": 5,
+            "adjacent": 29,
+            "badcase": 16,
+            "failed": 0,
+            "badcaseRate": 0.32,
+            "goodRate": 0.68
+          },
+          {
+            "page": 7,
+            "total": 50,
+            "fit": 0,
+            "adjacent": 32,
+            "badcase": 18,
+            "failed": 0,
+            "badcaseRate": 0.36,
+            "goodRate": 0.64
+          },
+          {
+            "page": 8,
+            "total": 50,
+            "fit": 1,
+            "adjacent": 26,
+            "badcase": 23,
+            "failed": 0,
+            "badcaseRate": 0.46,
+            "goodRate": 0.54
+          },
+          {
+            "page": 9,
+            "total": 50,
+            "fit": 3,
+            "adjacent": 30,
+            "badcase": 17,
+            "failed": 0,
+            "badcaseRate": 0.34,
+            "goodRate": 0.66
+          },
+          {
+            "page": 10,
+            "total": 50,
+            "fit": 1,
+            "adjacent": 30,
+            "badcase": 19,
+            "failed": 0,
+            "badcaseRate": 0.38,
+            "goodRate": 0.62
+          }
+        ],
+        "runtimeMetrics": {
+          "task_count": 47,
+          "total_task_duration_ms": 5010961,
+          "average_task_duration_ms": 106616,
+          "max_task_duration_ms": 372878,
+          "total_records_in_timed_tasks": 527,
+          "average_record_duration_ms": 9508
+        },
+        "ruleVersion": "promotion-capacity-v1",
+        "promptHash": "b87da85cf79a"
+      },
+      "xtb": {
+        "runDir": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/xtb-youtube",
+        "provider": "xtb",
+        "keyword": "coffee machine",
+        "pageSize": 50,
+        "total": 500,
+        "completed": 500,
+        "failed": 0,
+        "labels": {
+          "fit": 162,
+          "adjacent": 232,
+          "badcase": 106,
+          "failed": 0
+        },
+        "badcaseRate": 0.212,
+        "goodRate": 0.788,
+        "recallCount": 5012,
+        "sampledCount": 500,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "fit": 36,
+            "adjacent": 8,
+            "badcase": 6,
+            "failed": 0,
+            "badcaseRate": 0.12,
+            "goodRate": 0.88
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "fit": 20,
+            "adjacent": 20,
+            "badcase": 10,
+            "failed": 0,
+            "badcaseRate": 0.2,
+            "goodRate": 0.8
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "fit": 10,
+            "adjacent": 28,
+            "badcase": 12,
+            "failed": 0,
+            "badcaseRate": 0.24,
+            "goodRate": 0.76
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "fit": 15,
+            "adjacent": 28,
+            "badcase": 7,
+            "failed": 0,
+            "badcaseRate": 0.14,
+            "goodRate": 0.86
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "fit": 9,
+            "adjacent": 25,
+            "badcase": 16,
+            "failed": 0,
+            "badcaseRate": 0.32,
+            "goodRate": 0.68
+          },
+          {
+            "page": 6,
+            "total": 50,
+            "fit": 17,
+            "adjacent": 22,
+            "badcase": 11,
+            "failed": 0,
+            "badcaseRate": 0.22,
+            "goodRate": 0.78
+          },
+          {
+            "page": 7,
+            "total": 50,
+            "fit": 18,
+            "adjacent": 21,
+            "badcase": 11,
+            "failed": 0,
+            "badcaseRate": 0.22,
+            "goodRate": 0.78
+          },
+          {
+            "page": 8,
+            "total": 50,
+            "fit": 14,
+            "adjacent": 27,
+            "badcase": 9,
+            "failed": 0,
+            "badcaseRate": 0.18,
+            "goodRate": 0.82
+          },
+          {
+            "page": 9,
+            "total": 50,
+            "fit": 14,
+            "adjacent": 27,
+            "badcase": 9,
+            "failed": 0,
+            "badcaseRate": 0.18,
+            "goodRate": 0.82
+          },
+          {
+            "page": 10,
+            "total": 50,
+            "fit": 9,
+            "adjacent": 26,
+            "badcase": 15,
+            "failed": 0,
+            "badcaseRate": 0.3,
+            "goodRate": 0.7
+          }
+        ],
+        "runtimeMetrics": {
+          "task_count": 47,
+          "total_task_duration_ms": 8990216,
+          "average_task_duration_ms": 191281,
+          "max_task_duration_ms": 600084,
+          "total_records_in_timed_tasks": 595,
+          "average_record_duration_ms": 15110
+        },
+        "ruleVersion": "promotion-capacity-v1",
+        "promptHash": "b87da85cf79a"
+      },
+      "rows": [
+        {
+          "keyword": "coffee machine",
+          "page": 1,
+          "noxTotal": 50,
+          "noxBadcase": 11,
+          "noxBadcaseRate": 0.22,
+          "xtbTotal": 50,
+          "xtbBadcase": 6,
+          "xtbBadcaseRate": 0.12,
+          "comparable": true,
+          "delta": -0.1,
+          "total": 50
+        },
+        {
+          "keyword": "coffee machine",
+          "page": 2,
+          "noxTotal": 50,
+          "noxBadcase": 15,
+          "noxBadcaseRate": 0.3,
+          "xtbTotal": 50,
+          "xtbBadcase": 10,
+          "xtbBadcaseRate": 0.2,
+          "comparable": true,
+          "delta": -0.09999999999999998,
+          "total": 50
+        },
+        {
+          "keyword": "coffee machine",
+          "page": 3,
+          "noxTotal": 50,
+          "noxBadcase": 14,
+          "noxBadcaseRate": 0.28,
+          "xtbTotal": 50,
+          "xtbBadcase": 12,
+          "xtbBadcaseRate": 0.24,
+          "comparable": true,
+          "delta": -0.040000000000000036,
+          "total": 50
+        },
+        {
+          "keyword": "coffee machine",
+          "page": 4,
+          "noxTotal": 50,
+          "noxBadcase": 24,
+          "noxBadcaseRate": 0.48,
+          "xtbTotal": 50,
+          "xtbBadcase": 7,
+          "xtbBadcaseRate": 0.14,
+          "comparable": true,
+          "delta": -0.33999999999999997,
+          "total": 50
+        },
+        {
+          "keyword": "coffee machine",
+          "page": 5,
+          "noxTotal": 50,
+          "noxBadcase": 15,
+          "noxBadcaseRate": 0.3,
+          "xtbTotal": 50,
+          "xtbBadcase": 16,
+          "xtbBadcaseRate": 0.32,
+          "comparable": true,
+          "delta": 0.020000000000000018,
+          "total": 50
+        },
+        {
+          "keyword": "coffee machine",
+          "page": 6,
+          "noxTotal": 50,
+          "noxBadcase": 16,
+          "noxBadcaseRate": 0.32,
+          "xtbTotal": 50,
+          "xtbBadcase": 11,
+          "xtbBadcaseRate": 0.22,
+          "comparable": true,
+          "delta": -0.1,
+          "total": 50
+        },
+        {
+          "keyword": "coffee machine",
+          "page": 7,
+          "noxTotal": 50,
+          "noxBadcase": 18,
+          "noxBadcaseRate": 0.36,
+          "xtbTotal": 50,
+          "xtbBadcase": 11,
+          "xtbBadcaseRate": 0.22,
+          "comparable": true,
+          "delta": -0.13999999999999999,
+          "total": 50
+        },
+        {
+          "keyword": "coffee machine",
+          "page": 8,
+          "noxTotal": 50,
+          "noxBadcase": 23,
+          "noxBadcaseRate": 0.46,
+          "xtbTotal": 50,
+          "xtbBadcase": 9,
+          "xtbBadcaseRate": 0.18,
+          "comparable": true,
+          "delta": -0.28,
+          "total": 50
+        },
+        {
+          "keyword": "coffee machine",
+          "page": 9,
+          "noxTotal": 50,
+          "noxBadcase": 17,
+          "noxBadcaseRate": 0.34,
+          "xtbTotal": 50,
+          "xtbBadcase": 9,
+          "xtbBadcaseRate": 0.18,
+          "comparable": true,
+          "delta": -0.16000000000000003,
+          "total": 50
+        },
+        {
+          "keyword": "coffee machine",
+          "page": 10,
+          "noxTotal": 50,
+          "noxBadcase": 19,
+          "noxBadcaseRate": 0.38,
+          "xtbTotal": 50,
+          "xtbBadcase": 15,
+          "xtbBadcaseRate": 0.3,
+          "comparable": true,
+          "delta": -0.08000000000000002,
+          "total": 50
+        }
+      ],
+      "avgDelta": -0.132,
+      "frontDelta": -0.08000000000000002,
+      "tailDelta": -0.17333333333333337,
+      "xtbSlope": 0.008,
+      "noxSlope": 0.01381818181818182,
+      "slopeDelta": -0.0058181818181818196,
+      "expectedPageWins": 9,
+      "comparablePages": 10,
+      "conclusion": "符合预期"
+    },
+    {
+      "keyword": "fashion",
+      "nox": {
+        "runDir": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/nox-youtube",
+        "provider": "nox",
+        "keyword": "fashion",
+        "pageSize": 50,
+        "total": 500,
+        "completed": 500,
+        "failed": 0,
+        "labels": {
+          "fit": 378,
+          "adjacent": 114,
+          "badcase": 8,
+          "failed": 0
+        },
+        "badcaseRate": 0.016,
+        "goodRate": 0.984,
+        "recallCount": 10000,
+        "sampledCount": 500,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "fit": 35,
+            "adjacent": 15,
+            "badcase": 0,
+            "failed": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "fit": 38,
+            "adjacent": 10,
+            "badcase": 2,
+            "failed": 0,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "fit": 31,
+            "adjacent": 18,
+            "badcase": 1,
+            "failed": 0,
+            "badcaseRate": 0.02,
+            "goodRate": 0.98
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "fit": 35,
+            "adjacent": 14,
+            "badcase": 1,
+            "failed": 0,
+            "badcaseRate": 0.02,
+            "goodRate": 0.98
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "fit": 43,
+            "adjacent": 6,
+            "badcase": 1,
+            "failed": 0,
+            "badcaseRate": 0.02,
+            "goodRate": 0.98
+          },
+          {
+            "page": 6,
+            "total": 50,
+            "fit": 32,
+            "adjacent": 16,
+            "badcase": 2,
+            "failed": 0,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          },
+          {
+            "page": 7,
+            "total": 50,
+            "fit": 38,
+            "adjacent": 11,
+            "badcase": 1,
+            "failed": 0,
+            "badcaseRate": 0.02,
+            "goodRate": 0.98
+          },
+          {
+            "page": 8,
+            "total": 50,
+            "fit": 46,
+            "adjacent": 4,
+            "badcase": 0,
+            "failed": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 9,
+            "total": 50,
+            "fit": 37,
+            "adjacent": 13,
+            "badcase": 0,
+            "failed": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 10,
+            "total": 50,
+            "fit": 43,
+            "adjacent": 7,
+            "badcase": 0,
+            "failed": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          }
+        ],
+        "runtimeMetrics": {
+          "task_count": 53,
+          "total_task_duration_ms": 4604248,
+          "average_task_duration_ms": 86873,
+          "max_task_duration_ms": 167569,
+          "total_records_in_timed_tasks": 615,
+          "average_record_duration_ms": 7487
+        },
+        "ruleVersion": "promotion-capacity-v1",
+        "promptHash": "b87da85cf79a"
+      },
+      "xtb": {
+        "runDir": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/xtb-youtube",
+        "provider": "xtb",
+        "keyword": "fashion",
+        "pageSize": 50,
+        "total": 500,
+        "completed": 500,
+        "failed": 0,
+        "labels": {
+          "fit": 329,
+          "adjacent": 136,
+          "badcase": 35,
+          "failed": 0
+        },
+        "badcaseRate": 0.07,
+        "goodRate": 0.93,
+        "recallCount": 10000,
+        "sampledCount": 500,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "fit": 39,
+            "adjacent": 10,
+            "badcase": 1,
+            "failed": 0,
+            "badcaseRate": 0.02,
+            "goodRate": 0.98
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "fit": 29,
+            "adjacent": 17,
+            "badcase": 4,
+            "failed": 0,
+            "badcaseRate": 0.08,
+            "goodRate": 0.92
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "fit": 33,
+            "adjacent": 12,
+            "badcase": 5,
+            "failed": 0,
+            "badcaseRate": 0.1,
+            "goodRate": 0.9
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "fit": 33,
+            "adjacent": 15,
+            "badcase": 2,
+            "failed": 0,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "fit": 34,
+            "adjacent": 11,
+            "badcase": 5,
+            "failed": 0,
+            "badcaseRate": 0.1,
+            "goodRate": 0.9
+          },
+          {
+            "page": 6,
+            "total": 50,
+            "fit": 33,
+            "adjacent": 12,
+            "badcase": 5,
+            "failed": 0,
+            "badcaseRate": 0.1,
+            "goodRate": 0.9
+          },
+          {
+            "page": 7,
+            "total": 50,
+            "fit": 29,
+            "adjacent": 19,
+            "badcase": 2,
+            "failed": 0,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          },
+          {
+            "page": 8,
+            "total": 50,
+            "fit": 29,
+            "adjacent": 18,
+            "badcase": 3,
+            "failed": 0,
+            "badcaseRate": 0.06,
+            "goodRate": 0.94
+          },
+          {
+            "page": 9,
+            "total": 50,
+            "fit": 32,
+            "adjacent": 12,
+            "badcase": 6,
+            "failed": 0,
+            "badcaseRate": 0.12,
+            "goodRate": 0.88
+          },
+          {
+            "page": 10,
+            "total": 50,
+            "fit": 38,
+            "adjacent": 10,
+            "badcase": 2,
+            "failed": 0,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          }
+        ],
+        "runtimeMetrics": {
+          "task_count": 52,
+          "total_task_duration_ms": 6573598,
+          "average_task_duration_ms": 126415,
+          "max_task_duration_ms": 272114,
+          "total_records_in_timed_tasks": 502,
+          "average_record_duration_ms": 13095
+        },
+        "ruleVersion": "promotion-capacity-v1",
+        "promptHash": "b87da85cf79a"
+      },
+      "rows": [
+        {
+          "keyword": "fashion",
+          "page": 1,
+          "noxTotal": 50,
+          "noxBadcase": 0,
+          "noxBadcaseRate": 0,
+          "xtbTotal": 50,
+          "xtbBadcase": 1,
+          "xtbBadcaseRate": 0.02,
+          "comparable": true,
+          "delta": 0.02,
+          "total": 50
+        },
+        {
+          "keyword": "fashion",
+          "page": 2,
+          "noxTotal": 50,
+          "noxBadcase": 2,
+          "noxBadcaseRate": 0.04,
+          "xtbTotal": 50,
+          "xtbBadcase": 4,
+          "xtbBadcaseRate": 0.08,
+          "comparable": true,
+          "delta": 0.04,
+          "total": 50
+        },
+        {
+          "keyword": "fashion",
+          "page": 3,
+          "noxTotal": 50,
+          "noxBadcase": 1,
+          "noxBadcaseRate": 0.02,
+          "xtbTotal": 50,
+          "xtbBadcase": 5,
+          "xtbBadcaseRate": 0.1,
+          "comparable": true,
+          "delta": 0.08,
+          "total": 50
+        },
+        {
+          "keyword": "fashion",
+          "page": 4,
+          "noxTotal": 50,
+          "noxBadcase": 1,
+          "noxBadcaseRate": 0.02,
+          "xtbTotal": 50,
+          "xtbBadcase": 2,
+          "xtbBadcaseRate": 0.04,
+          "comparable": true,
+          "delta": 0.02,
+          "total": 50
+        },
+        {
+          "keyword": "fashion",
+          "page": 5,
+          "noxTotal": 50,
+          "noxBadcase": 1,
+          "noxBadcaseRate": 0.02,
+          "xtbTotal": 50,
+          "xtbBadcase": 5,
+          "xtbBadcaseRate": 0.1,
+          "comparable": true,
+          "delta": 0.08,
+          "total": 50
+        },
+        {
+          "keyword": "fashion",
+          "page": 6,
+          "noxTotal": 50,
+          "noxBadcase": 2,
+          "noxBadcaseRate": 0.04,
+          "xtbTotal": 50,
+          "xtbBadcase": 5,
+          "xtbBadcaseRate": 0.1,
+          "comparable": true,
+          "delta": 0.060000000000000005,
+          "total": 50
+        },
+        {
+          "keyword": "fashion",
+          "page": 7,
+          "noxTotal": 50,
+          "noxBadcase": 1,
+          "noxBadcaseRate": 0.02,
+          "xtbTotal": 50,
+          "xtbBadcase": 2,
+          "xtbBadcaseRate": 0.04,
+          "comparable": true,
+          "delta": 0.02,
+          "total": 50
+        },
+        {
+          "keyword": "fashion",
+          "page": 8,
+          "noxTotal": 50,
+          "noxBadcase": 0,
+          "noxBadcaseRate": 0,
+          "xtbTotal": 50,
+          "xtbBadcase": 3,
+          "xtbBadcaseRate": 0.06,
+          "comparable": true,
+          "delta": 0.06,
+          "total": 50
+        },
+        {
+          "keyword": "fashion",
+          "page": 9,
+          "noxTotal": 50,
+          "noxBadcase": 0,
+          "noxBadcaseRate": 0,
+          "xtbTotal": 50,
+          "xtbBadcase": 6,
+          "xtbBadcaseRate": 0.12,
+          "comparable": true,
+          "delta": 0.12,
+          "total": 50
+        },
+        {
+          "keyword": "fashion",
+          "page": 10,
+          "noxTotal": 50,
+          "noxBadcase": 0,
+          "noxBadcaseRate": 0,
+          "xtbTotal": 50,
+          "xtbBadcase": 2,
+          "xtbBadcaseRate": 0.04,
+          "comparable": true,
+          "delta": 0.04,
+          "total": 50
+        }
+      ],
+      "avgDelta": 0.054,
+      "frontDelta": 0.04666666666666667,
+      "tailDelta": 0.07333333333333333,
+      "xtbSlope": 0.0015757575757575748,
+      "noxSlope": -0.002181818181818182,
+      "slopeDelta": 0.0037575757575757564,
+      "expectedPageWins": 0,
+      "comparablePages": 10,
+      "conclusion": "未体现改善"
+    },
+    {
+      "keyword": "lawn mower",
+      "nox": {
+        "runDir": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/nox-youtube",
+        "provider": "nox",
+        "keyword": "lawn mower",
+        "pageSize": 50,
+        "total": 500,
+        "completed": 500,
+        "failed": 0,
+        "labels": {
+          "fit": 221,
+          "adjacent": 161,
+          "badcase": 118,
+          "failed": 0
+        },
+        "badcaseRate": 0.236,
+        "goodRate": 0.764,
+        "recallCount": 9639,
+        "sampledCount": 500,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "fit": 26,
+            "adjacent": 13,
+            "badcase": 11,
+            "failed": 0,
+            "badcaseRate": 0.22,
+            "goodRate": 0.78
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "fit": 26,
+            "adjacent": 12,
+            "badcase": 12,
+            "failed": 0,
+            "badcaseRate": 0.24,
+            "goodRate": 0.76
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "fit": 31,
+            "adjacent": 15,
+            "badcase": 4,
+            "failed": 0,
+            "badcaseRate": 0.08,
+            "goodRate": 0.92
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "fit": 33,
+            "adjacent": 9,
+            "badcase": 8,
+            "failed": 0,
+            "badcaseRate": 0.16,
+            "goodRate": 0.84
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "fit": 33,
+            "adjacent": 8,
+            "badcase": 9,
+            "failed": 0,
+            "badcaseRate": 0.18,
+            "goodRate": 0.82
+          },
+          {
+            "page": 6,
+            "total": 50,
+            "fit": 15,
+            "adjacent": 22,
+            "badcase": 13,
+            "failed": 0,
+            "badcaseRate": 0.26,
+            "goodRate": 0.74
+          },
+          {
+            "page": 7,
+            "total": 50,
+            "fit": 16,
+            "adjacent": 21,
+            "badcase": 13,
+            "failed": 0,
+            "badcaseRate": 0.26,
+            "goodRate": 0.74
+          },
+          {
+            "page": 8,
+            "total": 50,
+            "fit": 13,
+            "adjacent": 20,
+            "badcase": 17,
+            "failed": 0,
+            "badcaseRate": 0.34,
+            "goodRate": 0.66
+          },
+          {
+            "page": 9,
+            "total": 50,
+            "fit": 13,
+            "adjacent": 21,
+            "badcase": 16,
+            "failed": 0,
+            "badcaseRate": 0.32,
+            "goodRate": 0.68
+          },
+          {
+            "page": 10,
+            "total": 50,
+            "fit": 15,
+            "adjacent": 20,
+            "badcase": 15,
+            "failed": 0,
+            "badcaseRate": 0.3,
+            "goodRate": 0.7
+          }
+        ],
+        "runtimeMetrics": {
+          "task_count": 52,
+          "total_task_duration_ms": 6076388,
+          "average_task_duration_ms": 116854,
+          "max_task_duration_ms": 462615,
+          "total_records_in_timed_tasks": 502,
+          "average_record_duration_ms": 12104
+        },
+        "ruleVersion": "promotion-capacity-v1",
+        "promptHash": "b87da85cf79a"
+      },
+      "xtb": {
+        "runDir": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/xtb-youtube",
+        "provider": "xtb",
+        "keyword": "lawn mower",
+        "pageSize": 50,
+        "total": 500,
+        "completed": 500,
+        "failed": 0,
+        "labels": {
+          "fit": 290,
+          "adjacent": 146,
+          "badcase": 64,
+          "failed": 0
+        },
+        "badcaseRate": 0.128,
+        "goodRate": 0.872,
+        "recallCount": 9667,
+        "sampledCount": 500,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "fit": 39,
+            "adjacent": 7,
+            "badcase": 4,
+            "failed": 0,
+            "badcaseRate": 0.08,
+            "goodRate": 0.92
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "fit": 37,
+            "adjacent": 12,
+            "badcase": 1,
+            "failed": 0,
+            "badcaseRate": 0.02,
+            "goodRate": 0.98
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "fit": 32,
+            "adjacent": 12,
+            "badcase": 6,
+            "failed": 0,
+            "badcaseRate": 0.12,
+            "goodRate": 0.88
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "fit": 26,
+            "adjacent": 16,
+            "badcase": 8,
+            "failed": 0,
+            "badcaseRate": 0.16,
+            "goodRate": 0.84
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "fit": 28,
+            "adjacent": 15,
+            "badcase": 7,
+            "failed": 0,
+            "badcaseRate": 0.14,
+            "goodRate": 0.86
+          },
+          {
+            "page": 6,
+            "total": 50,
+            "fit": 21,
+            "adjacent": 19,
+            "badcase": 10,
+            "failed": 0,
+            "badcaseRate": 0.2,
+            "goodRate": 0.8
+          },
+          {
+            "page": 7,
+            "total": 50,
+            "fit": 29,
+            "adjacent": 17,
+            "badcase": 4,
+            "failed": 0,
+            "badcaseRate": 0.08,
+            "goodRate": 0.92
+          },
+          {
+            "page": 8,
+            "total": 50,
+            "fit": 30,
+            "adjacent": 13,
+            "badcase": 7,
+            "failed": 0,
+            "badcaseRate": 0.14,
+            "goodRate": 0.86
+          },
+          {
+            "page": 9,
+            "total": 50,
+            "fit": 27,
+            "adjacent": 17,
+            "badcase": 6,
+            "failed": 0,
+            "badcaseRate": 0.12,
+            "goodRate": 0.88
+          },
+          {
+            "page": 10,
+            "total": 50,
+            "fit": 21,
+            "adjacent": 18,
+            "badcase": 11,
+            "failed": 0,
+            "badcaseRate": 0.22,
+            "goodRate": 0.78
+          }
+        ],
+        "runtimeMetrics": {
+          "task_count": 56,
+          "total_task_duration_ms": 8289223,
+          "average_task_duration_ms": 148022,
+          "max_task_duration_ms": 310251,
+          "total_records_in_timed_tasks": 506,
+          "average_record_duration_ms": 16382
+        },
+        "ruleVersion": "promotion-capacity-v1",
+        "promptHash": "b87da85cf79a"
+      },
+      "rows": [
+        {
+          "keyword": "lawn mower",
+          "page": 1,
+          "noxTotal": 50,
+          "noxBadcase": 11,
+          "noxBadcaseRate": 0.22,
+          "xtbTotal": 50,
+          "xtbBadcase": 4,
+          "xtbBadcaseRate": 0.08,
+          "comparable": true,
+          "delta": -0.14,
+          "total": 50
+        },
+        {
+          "keyword": "lawn mower",
+          "page": 2,
+          "noxTotal": 50,
+          "noxBadcase": 12,
+          "noxBadcaseRate": 0.24,
+          "xtbTotal": 50,
+          "xtbBadcase": 1,
+          "xtbBadcaseRate": 0.02,
+          "comparable": true,
+          "delta": -0.22,
+          "total": 50
+        },
+        {
+          "keyword": "lawn mower",
+          "page": 3,
+          "noxTotal": 50,
+          "noxBadcase": 4,
+          "noxBadcaseRate": 0.08,
+          "xtbTotal": 50,
+          "xtbBadcase": 6,
+          "xtbBadcaseRate": 0.12,
+          "comparable": true,
+          "delta": 0.039999999999999994,
+          "total": 50
+        },
+        {
+          "keyword": "lawn mower",
+          "page": 4,
+          "noxTotal": 50,
+          "noxBadcase": 8,
+          "noxBadcaseRate": 0.16,
+          "xtbTotal": 50,
+          "xtbBadcase": 8,
+          "xtbBadcaseRate": 0.16,
+          "comparable": true,
+          "delta": 0,
+          "total": 50
+        },
+        {
+          "keyword": "lawn mower",
+          "page": 5,
+          "noxTotal": 50,
+          "noxBadcase": 9,
+          "noxBadcaseRate": 0.18,
+          "xtbTotal": 50,
+          "xtbBadcase": 7,
+          "xtbBadcaseRate": 0.14,
+          "comparable": true,
+          "delta": -0.03999999999999998,
+          "total": 50
+        },
+        {
+          "keyword": "lawn mower",
+          "page": 6,
+          "noxTotal": 50,
+          "noxBadcase": 13,
+          "noxBadcaseRate": 0.26,
+          "xtbTotal": 50,
+          "xtbBadcase": 10,
+          "xtbBadcaseRate": 0.2,
+          "comparable": true,
+          "delta": -0.06,
+          "total": 50
+        },
+        {
+          "keyword": "lawn mower",
+          "page": 7,
+          "noxTotal": 50,
+          "noxBadcase": 13,
+          "noxBadcaseRate": 0.26,
+          "xtbTotal": 50,
+          "xtbBadcase": 4,
+          "xtbBadcaseRate": 0.08,
+          "comparable": true,
+          "delta": -0.18,
+          "total": 50
+        },
+        {
+          "keyword": "lawn mower",
+          "page": 8,
+          "noxTotal": 50,
+          "noxBadcase": 17,
+          "noxBadcaseRate": 0.34,
+          "xtbTotal": 50,
+          "xtbBadcase": 7,
+          "xtbBadcaseRate": 0.14,
+          "comparable": true,
+          "delta": -0.2,
+          "total": 50
+        },
+        {
+          "keyword": "lawn mower",
+          "page": 9,
+          "noxTotal": 50,
+          "noxBadcase": 16,
+          "noxBadcaseRate": 0.32,
+          "xtbTotal": 50,
+          "xtbBadcase": 6,
+          "xtbBadcaseRate": 0.12,
+          "comparable": true,
+          "delta": -0.2,
+          "total": 50
+        },
+        {
+          "keyword": "lawn mower",
+          "page": 10,
+          "noxTotal": 50,
+          "noxBadcase": 15,
+          "noxBadcaseRate": 0.3,
+          "xtbTotal": 50,
+          "xtbBadcase": 11,
+          "xtbBadcaseRate": 0.22,
+          "comparable": true,
+          "delta": -0.07999999999999999,
+          "total": 50
+        }
+      ],
+      "avgDelta": -0.108,
+      "frontDelta": -0.10666666666666667,
+      "tailDelta": -0.16,
+      "xtbSlope": 0.011393939393939394,
+      "noxSlope": 0.017939393939393943,
+      "slopeDelta": -0.006545454545454549,
+      "expectedPageWins": 8,
+      "comparablePages": 10,
+      "conclusion": "符合预期"
+    },
+    {
+      "keyword": "lifestyle",
+      "nox": {
+        "runDir": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/nox-youtube",
+        "provider": "nox",
+        "keyword": "lifestyle",
+        "pageSize": 50,
+        "total": 500,
+        "completed": 500,
+        "failed": 0,
+        "labels": {
+          "fit": 376,
+          "adjacent": 118,
+          "badcase": 6,
+          "failed": 0
+        },
+        "badcaseRate": 0.012,
+        "goodRate": 0.988,
+        "recallCount": 10000,
+        "sampledCount": 500,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "fit": 41,
+            "adjacent": 8,
+            "badcase": 1,
+            "failed": 0,
+            "badcaseRate": 0.02,
+            "goodRate": 0.98
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "fit": 42,
+            "adjacent": 8,
+            "badcase": 0,
+            "failed": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "fit": 44,
+            "adjacent": 6,
+            "badcase": 0,
+            "failed": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "fit": 35,
+            "adjacent": 12,
+            "badcase": 3,
+            "failed": 0,
+            "badcaseRate": 0.06,
+            "goodRate": 0.94
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "fit": 30,
+            "adjacent": 20,
+            "badcase": 0,
+            "failed": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 6,
+            "total": 50,
+            "fit": 32,
+            "adjacent": 18,
+            "badcase": 0,
+            "failed": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 7,
+            "total": 50,
+            "fit": 44,
+            "adjacent": 6,
+            "badcase": 0,
+            "failed": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 8,
+            "total": 50,
+            "fit": 36,
+            "adjacent": 14,
+            "badcase": 0,
+            "failed": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 9,
+            "total": 50,
+            "fit": 41,
+            "adjacent": 9,
+            "badcase": 0,
+            "failed": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 10,
+            "total": 50,
+            "fit": 31,
+            "adjacent": 17,
+            "badcase": 2,
+            "failed": 0,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          }
+        ],
+        "runtimeMetrics": {
+          "task_count": 50,
+          "total_task_duration_ms": 3245764,
+          "average_task_duration_ms": 64915,
+          "max_task_duration_ms": 154076,
+          "total_records_in_timed_tasks": 500,
+          "average_record_duration_ms": 6492
+        },
+        "ruleVersion": "promotion-capacity-v1",
+        "promptHash": "b87da85cf79a"
+      },
+      "xtb": {
+        "runDir": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/xtb-youtube",
+        "provider": "xtb",
+        "keyword": "lifestyle",
+        "pageSize": 50,
+        "total": 500,
+        "completed": 500,
+        "failed": 0,
+        "labels": {
+          "fit": 379,
+          "adjacent": 94,
+          "badcase": 27,
+          "failed": 0
+        },
+        "badcaseRate": 0.054,
+        "goodRate": 0.946,
+        "recallCount": 10000,
+        "sampledCount": 500,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "fit": 37,
+            "adjacent": 12,
+            "badcase": 1,
+            "failed": 0,
+            "badcaseRate": 0.02,
+            "goodRate": 0.98
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "fit": 40,
+            "adjacent": 8,
+            "badcase": 2,
+            "failed": 0,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "fit": 40,
+            "adjacent": 9,
+            "badcase": 1,
+            "failed": 0,
+            "badcaseRate": 0.02,
+            "goodRate": 0.98
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "fit": 42,
+            "adjacent": 6,
+            "badcase": 2,
+            "failed": 0,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "fit": 39,
+            "adjacent": 8,
+            "badcase": 3,
+            "failed": 0,
+            "badcaseRate": 0.06,
+            "goodRate": 0.94
+          },
+          {
+            "page": 6,
+            "total": 50,
+            "fit": 38,
+            "adjacent": 9,
+            "badcase": 3,
+            "failed": 0,
+            "badcaseRate": 0.06,
+            "goodRate": 0.94
+          },
+          {
+            "page": 7,
+            "total": 50,
+            "fit": 40,
+            "adjacent": 6,
+            "badcase": 4,
+            "failed": 0,
+            "badcaseRate": 0.08,
+            "goodRate": 0.92
+          },
+          {
+            "page": 8,
+            "total": 50,
+            "fit": 33,
+            "adjacent": 12,
+            "badcase": 5,
+            "failed": 0,
+            "badcaseRate": 0.1,
+            "goodRate": 0.9
+          },
+          {
+            "page": 9,
+            "total": 50,
+            "fit": 37,
+            "adjacent": 11,
+            "badcase": 2,
+            "failed": 0,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          },
+          {
+            "page": 10,
+            "total": 50,
+            "fit": 33,
+            "adjacent": 13,
+            "badcase": 4,
+            "failed": 0,
+            "badcaseRate": 0.08,
+            "goodRate": 0.92
+          }
+        ],
+        "runtimeMetrics": {
+          "task_count": 50,
+          "total_task_duration_ms": 5751535,
+          "average_task_duration_ms": 115031,
+          "max_task_duration_ms": 222169,
+          "total_records_in_timed_tasks": 500,
+          "average_record_duration_ms": 11503
+        },
+        "ruleVersion": "promotion-capacity-v1",
+        "promptHash": "b87da85cf79a"
+      },
+      "rows": [
+        {
+          "keyword": "lifestyle",
+          "page": 1,
+          "noxTotal": 50,
+          "noxBadcase": 1,
+          "noxBadcaseRate": 0.02,
+          "xtbTotal": 50,
+          "xtbBadcase": 1,
+          "xtbBadcaseRate": 0.02,
+          "comparable": true,
+          "delta": 0,
+          "total": 50
+        },
+        {
+          "keyword": "lifestyle",
+          "page": 2,
+          "noxTotal": 50,
+          "noxBadcase": 0,
+          "noxBadcaseRate": 0,
+          "xtbTotal": 50,
+          "xtbBadcase": 2,
+          "xtbBadcaseRate": 0.04,
+          "comparable": true,
+          "delta": 0.04,
+          "total": 50
+        },
+        {
+          "keyword": "lifestyle",
+          "page": 3,
+          "noxTotal": 50,
+          "noxBadcase": 0,
+          "noxBadcaseRate": 0,
+          "xtbTotal": 50,
+          "xtbBadcase": 1,
+          "xtbBadcaseRate": 0.02,
+          "comparable": true,
+          "delta": 0.02,
+          "total": 50
+        },
+        {
+          "keyword": "lifestyle",
+          "page": 4,
+          "noxTotal": 50,
+          "noxBadcase": 3,
+          "noxBadcaseRate": 0.06,
+          "xtbTotal": 50,
+          "xtbBadcase": 2,
+          "xtbBadcaseRate": 0.04,
+          "comparable": true,
+          "delta": -0.019999999999999997,
+          "total": 50
+        },
+        {
+          "keyword": "lifestyle",
+          "page": 5,
+          "noxTotal": 50,
+          "noxBadcase": 0,
+          "noxBadcaseRate": 0,
+          "xtbTotal": 50,
+          "xtbBadcase": 3,
+          "xtbBadcaseRate": 0.06,
+          "comparable": true,
+          "delta": 0.06,
+          "total": 50
+        },
+        {
+          "keyword": "lifestyle",
+          "page": 6,
+          "noxTotal": 50,
+          "noxBadcase": 0,
+          "noxBadcaseRate": 0,
+          "xtbTotal": 50,
+          "xtbBadcase": 3,
+          "xtbBadcaseRate": 0.06,
+          "comparable": true,
+          "delta": 0.06,
+          "total": 50
+        },
+        {
+          "keyword": "lifestyle",
+          "page": 7,
+          "noxTotal": 50,
+          "noxBadcase": 0,
+          "noxBadcaseRate": 0,
+          "xtbTotal": 50,
+          "xtbBadcase": 4,
+          "xtbBadcaseRate": 0.08,
+          "comparable": true,
+          "delta": 0.08,
+          "total": 50
+        },
+        {
+          "keyword": "lifestyle",
+          "page": 8,
+          "noxTotal": 50,
+          "noxBadcase": 0,
+          "noxBadcaseRate": 0,
+          "xtbTotal": 50,
+          "xtbBadcase": 5,
+          "xtbBadcaseRate": 0.1,
+          "comparable": true,
+          "delta": 0.1,
+          "total": 50
+        },
+        {
+          "keyword": "lifestyle",
+          "page": 9,
+          "noxTotal": 50,
+          "noxBadcase": 0,
+          "noxBadcaseRate": 0,
+          "xtbTotal": 50,
+          "xtbBadcase": 2,
+          "xtbBadcaseRate": 0.04,
+          "comparable": true,
+          "delta": 0.04,
+          "total": 50
+        },
+        {
+          "keyword": "lifestyle",
+          "page": 10,
+          "noxTotal": 50,
+          "noxBadcase": 2,
+          "noxBadcaseRate": 0.04,
+          "xtbTotal": 50,
+          "xtbBadcase": 4,
+          "xtbBadcaseRate": 0.08,
+          "comparable": true,
+          "delta": 0.04,
+          "total": 50
+        }
+      ],
+      "avgDelta": 0.042,
+      "frontDelta": 0.02,
+      "tailDelta": 0.06,
+      "xtbSlope": 0.006424242424242424,
+      "noxSlope": -3.3643121958338077e-19,
+      "slopeDelta": 0.006424242424242424,
+      "expectedPageWins": 1,
+      "comparablePages": 10,
+      "conclusion": "未体现改善"
+    },
+    {
+      "keyword": "pet food",
+      "nox": {
+        "runDir": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/nox-youtube",
+        "provider": "nox",
+        "keyword": "pet food",
+        "pageSize": 50,
+        "total": 500,
+        "completed": 500,
+        "failed": 0,
+        "labels": {
+          "fit": 88,
+          "adjacent": 203,
+          "badcase": 209,
+          "failed": 0
+        },
+        "badcaseRate": 0.418,
+        "goodRate": 0.582,
+        "recallCount": 4968,
+        "sampledCount": 500,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "fit": 20,
+            "adjacent": 18,
+            "badcase": 12,
+            "failed": 0,
+            "badcaseRate": 0.24,
+            "goodRate": 0.76
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "fit": 10,
+            "adjacent": 23,
+            "badcase": 17,
+            "failed": 0,
+            "badcaseRate": 0.34,
+            "goodRate": 0.66
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "fit": 12,
+            "adjacent": 21,
+            "badcase": 17,
+            "failed": 0,
+            "badcaseRate": 0.34,
+            "goodRate": 0.66
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "fit": 10,
+            "adjacent": 21,
+            "badcase": 19,
+            "failed": 0,
+            "badcaseRate": 0.38,
+            "goodRate": 0.62
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "fit": 7,
+            "adjacent": 21,
+            "badcase": 22,
+            "failed": 0,
+            "badcaseRate": 0.44,
+            "goodRate": 0.56
+          },
+          {
+            "page": 6,
+            "total": 50,
+            "fit": 3,
+            "adjacent": 25,
+            "badcase": 22,
+            "failed": 0,
+            "badcaseRate": 0.44,
+            "goodRate": 0.56
+          },
+          {
+            "page": 7,
+            "total": 50,
+            "fit": 9,
+            "adjacent": 19,
+            "badcase": 22,
+            "failed": 0,
+            "badcaseRate": 0.44,
+            "goodRate": 0.56
+          },
+          {
+            "page": 8,
+            "total": 50,
+            "fit": 8,
+            "adjacent": 19,
+            "badcase": 23,
+            "failed": 0,
+            "badcaseRate": 0.46,
+            "goodRate": 0.54
+          },
+          {
+            "page": 9,
+            "total": 50,
+            "fit": 3,
+            "adjacent": 16,
+            "badcase": 31,
+            "failed": 0,
+            "badcaseRate": 0.62,
+            "goodRate": 0.38
+          },
+          {
+            "page": 10,
+            "total": 50,
+            "fit": 6,
+            "adjacent": 20,
+            "badcase": 24,
+            "failed": 0,
+            "badcaseRate": 0.48,
+            "goodRate": 0.52
+          }
+        ],
+        "runtimeMetrics": {
+          "task_count": 50,
+          "total_task_duration_ms": 5560074,
+          "average_task_duration_ms": 111201,
+          "max_task_duration_ms": 374921,
+          "total_records_in_timed_tasks": 500,
+          "average_record_duration_ms": 11120
+        },
+        "ruleVersion": "promotion-capacity-v1",
+        "promptHash": "b87da85cf79a"
+      },
+      "xtb": {
+        "runDir": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/xtb-youtube",
+        "provider": "xtb",
+        "keyword": "pet food",
+        "pageSize": 50,
+        "total": 500,
+        "completed": 500,
+        "failed": 0,
+        "labels": {
+          "fit": 136,
+          "adjacent": 169,
+          "badcase": 195,
+          "failed": 0
+        },
+        "badcaseRate": 0.39,
+        "goodRate": 0.61,
+        "recallCount": 5028,
+        "sampledCount": 500,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "fit": 24,
+            "adjacent": 16,
+            "badcase": 10,
+            "failed": 0,
+            "badcaseRate": 0.2,
+            "goodRate": 0.8
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "fit": 16,
+            "adjacent": 15,
+            "badcase": 19,
+            "failed": 0,
+            "badcaseRate": 0.38,
+            "goodRate": 0.62
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "fit": 17,
+            "adjacent": 16,
+            "badcase": 17,
+            "failed": 0,
+            "badcaseRate": 0.34,
+            "goodRate": 0.66
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "fit": 14,
+            "adjacent": 17,
+            "badcase": 19,
+            "failed": 0,
+            "badcaseRate": 0.38,
+            "goodRate": 0.62
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "fit": 6,
+            "adjacent": 22,
+            "badcase": 22,
+            "failed": 0,
+            "badcaseRate": 0.44,
+            "goodRate": 0.56
+          },
+          {
+            "page": 6,
+            "total": 50,
+            "fit": 13,
+            "adjacent": 16,
+            "badcase": 21,
+            "failed": 0,
+            "badcaseRate": 0.42,
+            "goodRate": 0.58
+          },
+          {
+            "page": 7,
+            "total": 50,
+            "fit": 13,
+            "adjacent": 16,
+            "badcase": 21,
+            "failed": 0,
+            "badcaseRate": 0.42,
+            "goodRate": 0.58
+          },
+          {
+            "page": 8,
+            "total": 50,
+            "fit": 12,
+            "adjacent": 16,
+            "badcase": 22,
+            "failed": 0,
+            "badcaseRate": 0.44,
+            "goodRate": 0.56
+          },
+          {
+            "page": 9,
+            "total": 50,
+            "fit": 9,
+            "adjacent": 18,
+            "badcase": 23,
+            "failed": 0,
+            "badcaseRate": 0.46,
+            "goodRate": 0.54
+          },
+          {
+            "page": 10,
+            "total": 50,
+            "fit": 12,
+            "adjacent": 17,
+            "badcase": 21,
+            "failed": 0,
+            "badcaseRate": 0.42,
+            "goodRate": 0.58
+          }
+        ],
+        "runtimeMetrics": {
+          "task_count": 66,
+          "total_task_duration_ms": 8430248,
+          "average_task_duration_ms": 127731,
+          "max_task_duration_ms": 371218,
+          "total_records_in_timed_tasks": 516,
+          "average_record_duration_ms": 16338
+        },
+        "ruleVersion": "promotion-capacity-v1",
+        "promptHash": "b87da85cf79a"
+      },
+      "rows": [
+        {
+          "keyword": "pet food",
+          "page": 1,
+          "noxTotal": 50,
+          "noxBadcase": 12,
+          "noxBadcaseRate": 0.24,
+          "xtbTotal": 50,
+          "xtbBadcase": 10,
+          "xtbBadcaseRate": 0.2,
+          "comparable": true,
+          "delta": -0.03999999999999998,
+          "total": 50
+        },
+        {
+          "keyword": "pet food",
+          "page": 2,
+          "noxTotal": 50,
+          "noxBadcase": 17,
+          "noxBadcaseRate": 0.34,
+          "xtbTotal": 50,
+          "xtbBadcase": 19,
+          "xtbBadcaseRate": 0.38,
+          "comparable": true,
+          "delta": 0.03999999999999998,
+          "total": 50
+        },
+        {
+          "keyword": "pet food",
+          "page": 3,
+          "noxTotal": 50,
+          "noxBadcase": 17,
+          "noxBadcaseRate": 0.34,
+          "xtbTotal": 50,
+          "xtbBadcase": 17,
+          "xtbBadcaseRate": 0.34,
+          "comparable": true,
+          "delta": 0,
+          "total": 50
+        },
+        {
+          "keyword": "pet food",
+          "page": 4,
+          "noxTotal": 50,
+          "noxBadcase": 19,
+          "noxBadcaseRate": 0.38,
+          "xtbTotal": 50,
+          "xtbBadcase": 19,
+          "xtbBadcaseRate": 0.38,
+          "comparable": true,
+          "delta": 0,
+          "total": 50
+        },
+        {
+          "keyword": "pet food",
+          "page": 5,
+          "noxTotal": 50,
+          "noxBadcase": 22,
+          "noxBadcaseRate": 0.44,
+          "xtbTotal": 50,
+          "xtbBadcase": 22,
+          "xtbBadcaseRate": 0.44,
+          "comparable": true,
+          "delta": 0,
+          "total": 50
+        },
+        {
+          "keyword": "pet food",
+          "page": 6,
+          "noxTotal": 50,
+          "noxBadcase": 22,
+          "noxBadcaseRate": 0.44,
+          "xtbTotal": 50,
+          "xtbBadcase": 21,
+          "xtbBadcaseRate": 0.42,
+          "comparable": true,
+          "delta": -0.020000000000000018,
+          "total": 50
+        },
+        {
+          "keyword": "pet food",
+          "page": 7,
+          "noxTotal": 50,
+          "noxBadcase": 22,
+          "noxBadcaseRate": 0.44,
+          "xtbTotal": 50,
+          "xtbBadcase": 21,
+          "xtbBadcaseRate": 0.42,
+          "comparable": true,
+          "delta": -0.020000000000000018,
+          "total": 50
+        },
+        {
+          "keyword": "pet food",
+          "page": 8,
+          "noxTotal": 50,
+          "noxBadcase": 23,
+          "noxBadcaseRate": 0.46,
+          "xtbTotal": 50,
+          "xtbBadcase": 22,
+          "xtbBadcaseRate": 0.44,
+          "comparable": true,
+          "delta": -0.020000000000000018,
+          "total": 50
+        },
+        {
+          "keyword": "pet food",
+          "page": 9,
+          "noxTotal": 50,
+          "noxBadcase": 31,
+          "noxBadcaseRate": 0.62,
+          "xtbTotal": 50,
+          "xtbBadcase": 23,
+          "xtbBadcaseRate": 0.46,
+          "comparable": true,
+          "delta": -0.15999999999999998,
+          "total": 50
+        },
+        {
+          "keyword": "pet food",
+          "page": 10,
+          "noxTotal": 50,
+          "noxBadcase": 24,
+          "noxBadcaseRate": 0.48,
+          "xtbTotal": 50,
+          "xtbBadcase": 21,
+          "xtbBadcaseRate": 0.42,
+          "comparable": true,
+          "delta": -0.06,
+          "total": 50
+        }
+      ],
+      "avgDelta": -0.028000000000000004,
+      "frontDelta": 0,
+      "tailDelta": -0.08,
+      "xtbSlope": 0.019030303030303026,
+      "noxSlope": 0.029696969696969687,
+      "slopeDelta": -0.010666666666666661,
+      "expectedPageWins": 6,
+      "comparablePages": 10,
+      "conclusion": "符合预期"
+    },
+    {
+      "keyword": "power bank",
+      "nox": {
+        "runDir": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/nox-youtube",
+        "provider": "nox",
+        "keyword": "power bank",
+        "pageSize": 50,
+        "total": 500,
+        "completed": 500,
+        "failed": 0,
+        "labels": {
+          "fit": 120,
+          "adjacent": 264,
+          "badcase": 116,
+          "failed": 0
+        },
+        "badcaseRate": 0.232,
+        "goodRate": 0.768,
+        "recallCount": 10000,
+        "sampledCount": 500,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "fit": 9,
+            "adjacent": 31,
+            "badcase": 10,
+            "failed": 0,
+            "badcaseRate": 0.2,
+            "goodRate": 0.8
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "fit": 21,
+            "adjacent": 13,
+            "badcase": 16,
+            "failed": 0,
+            "badcaseRate": 0.32,
+            "goodRate": 0.68
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "fit": 29,
+            "adjacent": 13,
+            "badcase": 8,
+            "failed": 0,
+            "badcaseRate": 0.16,
+            "goodRate": 0.84
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "fit": 11,
+            "adjacent": 30,
+            "badcase": 9,
+            "failed": 0,
+            "badcaseRate": 0.18,
+            "goodRate": 0.82
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "fit": 6,
+            "adjacent": 32,
+            "badcase": 12,
+            "failed": 0,
+            "badcaseRate": 0.24,
+            "goodRate": 0.76
+          },
+          {
+            "page": 6,
+            "total": 50,
+            "fit": 11,
+            "adjacent": 30,
+            "badcase": 9,
+            "failed": 0,
+            "badcaseRate": 0.18,
+            "goodRate": 0.82
+          },
+          {
+            "page": 7,
+            "total": 50,
+            "fit": 18,
+            "adjacent": 26,
+            "badcase": 6,
+            "failed": 0,
+            "badcaseRate": 0.12,
+            "goodRate": 0.88
+          },
+          {
+            "page": 8,
+            "total": 50,
+            "fit": 6,
+            "adjacent": 34,
+            "badcase": 10,
+            "failed": 0,
+            "badcaseRate": 0.2,
+            "goodRate": 0.8
+          },
+          {
+            "page": 9,
+            "total": 50,
+            "fit": 7,
+            "adjacent": 27,
+            "badcase": 16,
+            "failed": 0,
+            "badcaseRate": 0.32,
+            "goodRate": 0.68
+          },
+          {
+            "page": 10,
+            "total": 50,
+            "fit": 2,
+            "adjacent": 28,
+            "badcase": 20,
+            "failed": 0,
+            "badcaseRate": 0.4,
+            "goodRate": 0.6
+          }
+        ],
+        "runtimeMetrics": {
+          "task_count": 50,
+          "total_task_duration_ms": 5472091,
+          "average_task_duration_ms": 109442,
+          "max_task_duration_ms": 322300,
+          "total_records_in_timed_tasks": 500,
+          "average_record_duration_ms": 10944
+        },
+        "ruleVersion": "promotion-capacity-v1",
+        "promptHash": "b87da85cf79a"
+      },
+      "xtb": {
+        "runDir": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/xtb-youtube",
+        "provider": "xtb",
+        "keyword": "power bank",
+        "pageSize": 50,
+        "total": 500,
+        "completed": 500,
+        "failed": 0,
+        "labels": {
+          "fit": 237,
+          "adjacent": 209,
+          "badcase": 54,
+          "failed": 0
+        },
+        "badcaseRate": 0.108,
+        "goodRate": 0.892,
+        "recallCount": 10000,
+        "sampledCount": 500,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "fit": 38,
+            "adjacent": 9,
+            "badcase": 3,
+            "failed": 0,
+            "badcaseRate": 0.06,
+            "goodRate": 0.94
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "fit": 30,
+            "adjacent": 17,
+            "badcase": 3,
+            "failed": 0,
+            "badcaseRate": 0.06,
+            "goodRate": 0.94
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "fit": 43,
+            "adjacent": 4,
+            "badcase": 3,
+            "failed": 0,
+            "badcaseRate": 0.06,
+            "goodRate": 0.94
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "fit": 28,
+            "adjacent": 17,
+            "badcase": 5,
+            "failed": 0,
+            "badcaseRate": 0.1,
+            "goodRate": 0.9
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "fit": 18,
+            "adjacent": 25,
+            "badcase": 7,
+            "failed": 0,
+            "badcaseRate": 0.14,
+            "goodRate": 0.86
+          },
+          {
+            "page": 6,
+            "total": 50,
+            "fit": 13,
+            "adjacent": 31,
+            "badcase": 6,
+            "failed": 0,
+            "badcaseRate": 0.12,
+            "goodRate": 0.88
+          },
+          {
+            "page": 7,
+            "total": 50,
+            "fit": 18,
+            "adjacent": 26,
+            "badcase": 6,
+            "failed": 0,
+            "badcaseRate": 0.12,
+            "goodRate": 0.88
+          },
+          {
+            "page": 8,
+            "total": 50,
+            "fit": 16,
+            "adjacent": 27,
+            "badcase": 7,
+            "failed": 0,
+            "badcaseRate": 0.14,
+            "goodRate": 0.86
+          },
+          {
+            "page": 9,
+            "total": 50,
+            "fit": 17,
+            "adjacent": 26,
+            "badcase": 7,
+            "failed": 0,
+            "badcaseRate": 0.14,
+            "goodRate": 0.86
+          },
+          {
+            "page": 10,
+            "total": 50,
+            "fit": 16,
+            "adjacent": 27,
+            "badcase": 7,
+            "failed": 0,
+            "badcaseRate": 0.14,
+            "goodRate": 0.86
+          }
+        ],
+        "runtimeMetrics": {
+          "task_count": 54,
+          "total_task_duration_ms": 7286672,
+          "average_task_duration_ms": 134938,
+          "max_task_duration_ms": 237069,
+          "total_records_in_timed_tasks": 504,
+          "average_record_duration_ms": 14458
+        },
+        "ruleVersion": "promotion-capacity-v1",
+        "promptHash": "b87da85cf79a"
+      },
+      "rows": [
+        {
+          "keyword": "power bank",
+          "page": 1,
+          "noxTotal": 50,
+          "noxBadcase": 10,
+          "noxBadcaseRate": 0.2,
+          "xtbTotal": 50,
+          "xtbBadcase": 3,
+          "xtbBadcaseRate": 0.06,
+          "comparable": true,
+          "delta": -0.14,
+          "total": 50
+        },
+        {
+          "keyword": "power bank",
+          "page": 2,
+          "noxTotal": 50,
+          "noxBadcase": 16,
+          "noxBadcaseRate": 0.32,
+          "xtbTotal": 50,
+          "xtbBadcase": 3,
+          "xtbBadcaseRate": 0.06,
+          "comparable": true,
+          "delta": -0.26,
+          "total": 50
+        },
+        {
+          "keyword": "power bank",
+          "page": 3,
+          "noxTotal": 50,
+          "noxBadcase": 8,
+          "noxBadcaseRate": 0.16,
+          "xtbTotal": 50,
+          "xtbBadcase": 3,
+          "xtbBadcaseRate": 0.06,
+          "comparable": true,
+          "delta": -0.1,
+          "total": 50
+        },
+        {
+          "keyword": "power bank",
+          "page": 4,
+          "noxTotal": 50,
+          "noxBadcase": 9,
+          "noxBadcaseRate": 0.18,
+          "xtbTotal": 50,
+          "xtbBadcase": 5,
+          "xtbBadcaseRate": 0.1,
+          "comparable": true,
+          "delta": -0.07999999999999999,
+          "total": 50
+        },
+        {
+          "keyword": "power bank",
+          "page": 5,
+          "noxTotal": 50,
+          "noxBadcase": 12,
+          "noxBadcaseRate": 0.24,
+          "xtbTotal": 50,
+          "xtbBadcase": 7,
+          "xtbBadcaseRate": 0.14,
+          "comparable": true,
+          "delta": -0.09999999999999998,
+          "total": 50
+        },
+        {
+          "keyword": "power bank",
+          "page": 6,
+          "noxTotal": 50,
+          "noxBadcase": 9,
+          "noxBadcaseRate": 0.18,
+          "xtbTotal": 50,
+          "xtbBadcase": 6,
+          "xtbBadcaseRate": 0.12,
+          "comparable": true,
+          "delta": -0.06,
+          "total": 50
+        },
+        {
+          "keyword": "power bank",
+          "page": 7,
+          "noxTotal": 50,
+          "noxBadcase": 6,
+          "noxBadcaseRate": 0.12,
+          "xtbTotal": 50,
+          "xtbBadcase": 6,
+          "xtbBadcaseRate": 0.12,
+          "comparable": true,
+          "delta": 0,
+          "total": 50
+        },
+        {
+          "keyword": "power bank",
+          "page": 8,
+          "noxTotal": 50,
+          "noxBadcase": 10,
+          "noxBadcaseRate": 0.2,
+          "xtbTotal": 50,
+          "xtbBadcase": 7,
+          "xtbBadcaseRate": 0.14,
+          "comparable": true,
+          "delta": -0.06,
+          "total": 50
+        },
+        {
+          "keyword": "power bank",
+          "page": 9,
+          "noxTotal": 50,
+          "noxBadcase": 16,
+          "noxBadcaseRate": 0.32,
+          "xtbTotal": 50,
+          "xtbBadcase": 7,
+          "xtbBadcaseRate": 0.14,
+          "comparable": true,
+          "delta": -0.18,
+          "total": 50
+        },
+        {
+          "keyword": "power bank",
+          "page": 10,
+          "noxTotal": 50,
+          "noxBadcase": 20,
+          "noxBadcaseRate": 0.4,
+          "xtbTotal": 50,
+          "xtbBadcase": 7,
+          "xtbBadcaseRate": 0.14,
+          "comparable": true,
+          "delta": -0.26,
+          "total": 50
+        }
+      ],
+      "avgDelta": -0.124,
+      "frontDelta": -0.16666666666666666,
+      "tailDelta": -0.16666666666666666,
+      "xtbSlope": 0.010424242424242426,
+      "noxSlope": 0.010666666666666668,
+      "slopeDelta": -0.0002424242424242419,
+      "expectedPageWins": 9,
+      "comparablePages": 10,
+      "conclusion": "符合预期"
+    },
+    {
+      "keyword": "swim vest",
+      "nox": {
+        "runDir": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/nox-youtube",
+        "provider": "nox",
+        "keyword": "swim vest",
+        "pageSize": 50,
+        "total": 71,
+        "completed": 71,
+        "failed": 0,
+        "labels": {
+          "fit": 1,
+          "adjacent": 37,
+          "badcase": 33,
+          "failed": 0
+        },
+        "badcaseRate": 0.4647887323943662,
+        "goodRate": 0.5352112676056338,
+        "recallCount": 71,
+        "sampledCount": 71,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "fit": 1,
+            "adjacent": 25,
+            "badcase": 24,
+            "failed": 0,
+            "badcaseRate": 0.48,
+            "goodRate": 0.52
+          },
+          {
+            "page": 2,
+            "total": 21,
+            "fit": 0,
+            "adjacent": 12,
+            "badcase": 9,
+            "failed": 0,
+            "badcaseRate": 0.42857142857142855,
+            "goodRate": 0.5714285714285714
+          }
+        ],
+        "runtimeMetrics": {
+          "task_count": 8,
+          "total_task_duration_ms": 854644,
+          "average_task_duration_ms": 106831,
+          "max_task_duration_ms": 218324,
+          "total_records_in_timed_tasks": 71,
+          "average_record_duration_ms": 12037
+        },
+        "ruleVersion": "promotion-capacity-v1",
+        "promptHash": "b87da85cf79a"
+      },
+      "xtb": {
+        "runDir": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube",
+        "provider": "xtb",
+        "keyword": "swim vest",
+        "pageSize": 50,
+        "total": 78,
+        "completed": 78,
+        "failed": 0,
+        "labels": {
+          "fit": 8,
+          "adjacent": 46,
+          "badcase": 24,
+          "failed": 0
+        },
+        "badcaseRate": 0.3076923076923077,
+        "goodRate": 0.6923076923076923,
+        "recallCount": 78,
+        "sampledCount": 78,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "fit": 7,
+            "adjacent": 28,
+            "badcase": 15,
+            "failed": 0,
+            "badcaseRate": 0.3,
+            "goodRate": 0.7
+          },
+          {
+            "page": 2,
+            "total": 28,
+            "fit": 1,
+            "adjacent": 18,
+            "badcase": 9,
+            "failed": 0,
+            "badcaseRate": 0.32142857142857145,
+            "goodRate": 0.6785714285714286
+          }
+        ],
+        "runtimeMetrics": {
+          "task_count": 9,
+          "total_task_duration_ms": 1093346,
+          "average_task_duration_ms": 121483,
+          "max_task_duration_ms": 169556,
+          "total_records_in_timed_tasks": 79,
+          "average_record_duration_ms": 13840
+        },
+        "ruleVersion": "promotion-capacity-v1",
+        "promptHash": "b87da85cf79a"
+      },
+      "rows": [
+        {
+          "keyword": "swim vest",
+          "page": 1,
+          "noxTotal": 50,
+          "noxBadcase": 24,
+          "noxBadcaseRate": 0.48,
+          "xtbTotal": 50,
+          "xtbBadcase": 15,
+          "xtbBadcaseRate": 0.3,
+          "comparable": true,
+          "delta": -0.18,
+          "total": 50
+        },
+        {
+          "keyword": "swim vest",
+          "page": 2,
+          "noxTotal": 21,
+          "noxBadcase": 9,
+          "noxBadcaseRate": 0.42857142857142855,
+          "xtbTotal": 28,
+          "xtbBadcase": 9,
+          "xtbBadcaseRate": 0.32142857142857145,
+          "comparable": true,
+          "delta": -0.1071428571428571,
+          "total": 21
+        }
+      ],
+      "avgDelta": -0.15845070422535212,
+      "frontDelta": -0.15845070422535212,
+      "tailDelta": 0,
+      "xtbSlope": 0.021428571428571463,
+      "noxSlope": -0.051428571428571435,
+      "slopeDelta": 0.0728571428571429,
+      "expectedPageWins": 2,
+      "comparablePages": 2,
+      "conclusion": "符合预期"
+    },
+    {
+      "keyword": "tech",
+      "nox": {
+        "runDir": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/nox-youtube",
+        "provider": "nox",
+        "keyword": "tech",
+        "pageSize": 50,
+        "total": 500,
+        "completed": 500,
+        "failed": 0,
+        "labels": {
+          "fit": 285,
+          "adjacent": 172,
+          "badcase": 43,
+          "failed": 0
+        },
+        "badcaseRate": 0.086,
+        "goodRate": 0.914,
+        "recallCount": 10000,
+        "sampledCount": 500,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "fit": 29,
+            "adjacent": 19,
+            "badcase": 2,
+            "failed": 0,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "fit": 34,
+            "adjacent": 14,
+            "badcase": 2,
+            "failed": 0,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "fit": 33,
+            "adjacent": 17,
+            "badcase": 0,
+            "failed": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "fit": 36,
+            "adjacent": 12,
+            "badcase": 2,
+            "failed": 0,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "fit": 26,
+            "adjacent": 22,
+            "badcase": 2,
+            "failed": 0,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          },
+          {
+            "page": 6,
+            "total": 50,
+            "fit": 29,
+            "adjacent": 13,
+            "badcase": 8,
+            "failed": 0,
+            "badcaseRate": 0.16,
+            "goodRate": 0.84
+          },
+          {
+            "page": 7,
+            "total": 50,
+            "fit": 20,
+            "adjacent": 23,
+            "badcase": 7,
+            "failed": 0,
+            "badcaseRate": 0.14,
+            "goodRate": 0.86
+          },
+          {
+            "page": 8,
+            "total": 50,
+            "fit": 27,
+            "adjacent": 15,
+            "badcase": 8,
+            "failed": 0,
+            "badcaseRate": 0.16,
+            "goodRate": 0.84
+          },
+          {
+            "page": 9,
+            "total": 50,
+            "fit": 21,
+            "adjacent": 23,
+            "badcase": 6,
+            "failed": 0,
+            "badcaseRate": 0.12,
+            "goodRate": 0.88
+          },
+          {
+            "page": 10,
+            "total": 50,
+            "fit": 30,
+            "adjacent": 14,
+            "badcase": 6,
+            "failed": 0,
+            "badcaseRate": 0.12,
+            "goodRate": 0.88
+          }
+        ],
+        "runtimeMetrics": {
+          "task_count": 51,
+          "total_task_duration_ms": 4725761,
+          "average_task_duration_ms": 92662,
+          "max_task_duration_ms": 180338,
+          "total_records_in_timed_tasks": 501,
+          "average_record_duration_ms": 9433
+        },
+        "ruleVersion": "promotion-capacity-v1",
+        "promptHash": "b87da85cf79a"
+      },
+      "xtb": {
+        "runDir": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/xtb-youtube",
+        "provider": "xtb",
+        "keyword": "tech",
+        "pageSize": 50,
+        "total": 500,
+        "completed": 500,
+        "failed": 0,
+        "labels": {
+          "fit": 218,
+          "adjacent": 242,
+          "badcase": 40,
+          "failed": 0
+        },
+        "badcaseRate": 0.08,
+        "goodRate": 0.92,
+        "recallCount": 10000,
+        "sampledCount": 500,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "fit": 25,
+            "adjacent": 24,
+            "badcase": 1,
+            "failed": 0,
+            "badcaseRate": 0.02,
+            "goodRate": 0.98
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "fit": 22,
+            "adjacent": 24,
+            "badcase": 4,
+            "failed": 0,
+            "badcaseRate": 0.08,
+            "goodRate": 0.92
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "fit": 19,
+            "adjacent": 27,
+            "badcase": 4,
+            "failed": 0,
+            "badcaseRate": 0.08,
+            "goodRate": 0.92
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "fit": 26,
+            "adjacent": 20,
+            "badcase": 4,
+            "failed": 0,
+            "badcaseRate": 0.08,
+            "goodRate": 0.92
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "fit": 20,
+            "adjacent": 24,
+            "badcase": 6,
+            "failed": 0,
+            "badcaseRate": 0.12,
+            "goodRate": 0.88
+          },
+          {
+            "page": 6,
+            "total": 50,
+            "fit": 21,
+            "adjacent": 27,
+            "badcase": 2,
+            "failed": 0,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          },
+          {
+            "page": 7,
+            "total": 50,
+            "fit": 26,
+            "adjacent": 20,
+            "badcase": 4,
+            "failed": 0,
+            "badcaseRate": 0.08,
+            "goodRate": 0.92
+          },
+          {
+            "page": 8,
+            "total": 50,
+            "fit": 21,
+            "adjacent": 24,
+            "badcase": 5,
+            "failed": 0,
+            "badcaseRate": 0.1,
+            "goodRate": 0.9
+          },
+          {
+            "page": 9,
+            "total": 50,
+            "fit": 21,
+            "adjacent": 26,
+            "badcase": 3,
+            "failed": 0,
+            "badcaseRate": 0.06,
+            "goodRate": 0.94
+          },
+          {
+            "page": 10,
+            "total": 50,
+            "fit": 17,
+            "adjacent": 26,
+            "badcase": 7,
+            "failed": 0,
+            "badcaseRate": 0.14,
+            "goodRate": 0.86
+          }
+        ],
+        "runtimeMetrics": {
+          "task_count": 50,
+          "total_task_duration_ms": 6769935,
+          "average_task_duration_ms": 135399,
+          "max_task_duration_ms": 315369,
+          "total_records_in_timed_tasks": 500,
+          "average_record_duration_ms": 13540
+        },
+        "ruleVersion": "promotion-capacity-v1",
+        "promptHash": "b87da85cf79a"
+      },
+      "rows": [
+        {
+          "keyword": "tech",
+          "page": 1,
+          "noxTotal": 50,
+          "noxBadcase": 2,
+          "noxBadcaseRate": 0.04,
+          "xtbTotal": 50,
+          "xtbBadcase": 1,
+          "xtbBadcaseRate": 0.02,
+          "comparable": true,
+          "delta": -0.02,
+          "total": 50
+        },
+        {
+          "keyword": "tech",
+          "page": 2,
+          "noxTotal": 50,
+          "noxBadcase": 2,
+          "noxBadcaseRate": 0.04,
+          "xtbTotal": 50,
+          "xtbBadcase": 4,
+          "xtbBadcaseRate": 0.08,
+          "comparable": true,
+          "delta": 0.04,
+          "total": 50
+        },
+        {
+          "keyword": "tech",
+          "page": 3,
+          "noxTotal": 50,
+          "noxBadcase": 0,
+          "noxBadcaseRate": 0,
+          "xtbTotal": 50,
+          "xtbBadcase": 4,
+          "xtbBadcaseRate": 0.08,
+          "comparable": true,
+          "delta": 0.08,
+          "total": 50
+        },
+        {
+          "keyword": "tech",
+          "page": 4,
+          "noxTotal": 50,
+          "noxBadcase": 2,
+          "noxBadcaseRate": 0.04,
+          "xtbTotal": 50,
+          "xtbBadcase": 4,
+          "xtbBadcaseRate": 0.08,
+          "comparable": true,
+          "delta": 0.04,
+          "total": 50
+        },
+        {
+          "keyword": "tech",
+          "page": 5,
+          "noxTotal": 50,
+          "noxBadcase": 2,
+          "noxBadcaseRate": 0.04,
+          "xtbTotal": 50,
+          "xtbBadcase": 6,
+          "xtbBadcaseRate": 0.12,
+          "comparable": true,
+          "delta": 0.07999999999999999,
+          "total": 50
+        },
+        {
+          "keyword": "tech",
+          "page": 6,
+          "noxTotal": 50,
+          "noxBadcase": 8,
+          "noxBadcaseRate": 0.16,
+          "xtbTotal": 50,
+          "xtbBadcase": 2,
+          "xtbBadcaseRate": 0.04,
+          "comparable": true,
+          "delta": -0.12,
+          "total": 50
+        },
+        {
+          "keyword": "tech",
+          "page": 7,
+          "noxTotal": 50,
+          "noxBadcase": 7,
+          "noxBadcaseRate": 0.14,
+          "xtbTotal": 50,
+          "xtbBadcase": 4,
+          "xtbBadcaseRate": 0.08,
+          "comparable": true,
+          "delta": -0.06000000000000001,
+          "total": 50
+        },
+        {
+          "keyword": "tech",
+          "page": 8,
+          "noxTotal": 50,
+          "noxBadcase": 8,
+          "noxBadcaseRate": 0.16,
+          "xtbTotal": 50,
+          "xtbBadcase": 5,
+          "xtbBadcaseRate": 0.1,
+          "comparable": true,
+          "delta": -0.06,
+          "total": 50
+        },
+        {
+          "keyword": "tech",
+          "page": 9,
+          "noxTotal": 50,
+          "noxBadcase": 6,
+          "noxBadcaseRate": 0.12,
+          "xtbTotal": 50,
+          "xtbBadcase": 3,
+          "xtbBadcaseRate": 0.06,
+          "comparable": true,
+          "delta": -0.06,
+          "total": 50
+        },
+        {
+          "keyword": "tech",
+          "page": 10,
+          "noxTotal": 50,
+          "noxBadcase": 6,
+          "noxBadcaseRate": 0.12,
+          "xtbTotal": 50,
+          "xtbBadcase": 7,
+          "xtbBadcaseRate": 0.14,
+          "comparable": true,
+          "delta": 0.020000000000000018,
+          "total": 50
+        }
+      ],
+      "avgDelta": -0.005999999999999998,
+      "frontDelta": 0.03333333333333333,
+      "tailDelta": -0.033333333333333326,
+      "xtbSlope": 0.005818181818181819,
+      "noxSlope": 0.015151515151515154,
+      "slopeDelta": -0.009333333333333336,
+      "expectedPageWins": 5,
+      "comparablePages": 10,
+      "conclusion": "整体改善但头部不足"
+    },
+    {
+      "keyword": "vacuum cleaner",
+      "nox": {
+        "runDir": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/nox-youtube",
+        "provider": "nox",
+        "keyword": "vacuum cleaner",
+        "pageSize": 50,
+        "total": 500,
+        "completed": 500,
+        "failed": 0,
+        "labels": {
+          "fit": 157,
+          "adjacent": 184,
+          "badcase": 159,
+          "failed": 0
+        },
+        "badcaseRate": 0.318,
+        "goodRate": 0.682,
+        "recallCount": 10000,
+        "sampledCount": 500,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "fit": 17,
+            "adjacent": 10,
+            "badcase": 23,
+            "failed": 0,
+            "badcaseRate": 0.46,
+            "goodRate": 0.54
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "fit": 27,
+            "adjacent": 7,
+            "badcase": 16,
+            "failed": 0,
+            "badcaseRate": 0.32,
+            "goodRate": 0.68
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "fit": 22,
+            "adjacent": 11,
+            "badcase": 17,
+            "failed": 0,
+            "badcaseRate": 0.34,
+            "goodRate": 0.66
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "fit": 20,
+            "adjacent": 21,
+            "badcase": 9,
+            "failed": 0,
+            "badcaseRate": 0.18,
+            "goodRate": 0.82
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "fit": 20,
+            "adjacent": 16,
+            "badcase": 14,
+            "failed": 0,
+            "badcaseRate": 0.28,
+            "goodRate": 0.72
+          },
+          {
+            "page": 6,
+            "total": 50,
+            "fit": 17,
+            "adjacent": 22,
+            "badcase": 11,
+            "failed": 0,
+            "badcaseRate": 0.22,
+            "goodRate": 0.78
+          },
+          {
+            "page": 7,
+            "total": 50,
+            "fit": 8,
+            "adjacent": 25,
+            "badcase": 17,
+            "failed": 0,
+            "badcaseRate": 0.34,
+            "goodRate": 0.66
+          },
+          {
+            "page": 8,
+            "total": 50,
+            "fit": 11,
+            "adjacent": 19,
+            "badcase": 20,
+            "failed": 0,
+            "badcaseRate": 0.4,
+            "goodRate": 0.6
+          },
+          {
+            "page": 9,
+            "total": 50,
+            "fit": 7,
+            "adjacent": 29,
+            "badcase": 14,
+            "failed": 0,
+            "badcaseRate": 0.28,
+            "goodRate": 0.72
+          },
+          {
+            "page": 10,
+            "total": 50,
+            "fit": 8,
+            "adjacent": 24,
+            "badcase": 18,
+            "failed": 0,
+            "badcaseRate": 0.36,
+            "goodRate": 0.64
+          }
+        ],
+        "runtimeMetrics": {
+          "task_count": 51,
+          "total_task_duration_ms": 5183129,
+          "average_task_duration_ms": 101630,
+          "max_task_duration_ms": 210443,
+          "total_records_in_timed_tasks": 501,
+          "average_record_duration_ms": 10346
+        },
+        "ruleVersion": "promotion-capacity-v1",
+        "promptHash": "b87da85cf79a"
+      },
+      "xtb": {
+        "runDir": "tmp/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/xtb-youtube",
+        "provider": "xtb",
+        "keyword": "vacuum cleaner",
+        "pageSize": 50,
+        "total": 500,
+        "completed": 500,
+        "failed": 0,
+        "labels": {
+          "fit": 264,
+          "adjacent": 152,
+          "badcase": 84,
+          "failed": 0
+        },
+        "badcaseRate": 0.168,
+        "goodRate": 0.832,
+        "recallCount": 10000,
+        "sampledCount": 500,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "fit": 31,
+            "adjacent": 8,
+            "badcase": 11,
+            "failed": 0,
+            "badcaseRate": 0.22,
+            "goodRate": 0.78
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "fit": 33,
+            "adjacent": 11,
+            "badcase": 6,
+            "failed": 0,
+            "badcaseRate": 0.12,
+            "goodRate": 0.88
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "fit": 25,
+            "adjacent": 14,
+            "badcase": 11,
+            "failed": 0,
+            "badcaseRate": 0.22,
+            "goodRate": 0.78
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "fit": 31,
+            "adjacent": 13,
+            "badcase": 6,
+            "failed": 0,
+            "badcaseRate": 0.12,
+            "goodRate": 0.88
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "fit": 29,
+            "adjacent": 6,
+            "badcase": 15,
+            "failed": 0,
+            "badcaseRate": 0.3,
+            "goodRate": 0.7
+          },
+          {
+            "page": 6,
+            "total": 50,
+            "fit": 35,
+            "adjacent": 7,
+            "badcase": 8,
+            "failed": 0,
+            "badcaseRate": 0.16,
+            "goodRate": 0.84
+          },
+          {
+            "page": 7,
+            "total": 50,
+            "fit": 21,
+            "adjacent": 23,
+            "badcase": 6,
+            "failed": 0,
+            "badcaseRate": 0.12,
+            "goodRate": 0.88
+          },
+          {
+            "page": 8,
+            "total": 50,
+            "fit": 17,
+            "adjacent": 23,
+            "badcase": 10,
+            "failed": 0,
+            "badcaseRate": 0.2,
+            "goodRate": 0.8
+          },
+          {
+            "page": 9,
+            "total": 50,
+            "fit": 22,
+            "adjacent": 23,
+            "badcase": 5,
+            "failed": 0,
+            "badcaseRate": 0.1,
+            "goodRate": 0.9
+          },
+          {
+            "page": 10,
+            "total": 50,
+            "fit": 20,
+            "adjacent": 24,
+            "badcase": 6,
+            "failed": 0,
+            "badcaseRate": 0.12,
+            "goodRate": 0.88
+          }
+        ],
+        "runtimeMetrics": {
+          "task_count": 60,
+          "total_task_duration_ms": 8230505,
+          "average_task_duration_ms": 137175,
+          "max_task_duration_ms": 354410,
+          "total_records_in_timed_tasks": 510,
+          "average_record_duration_ms": 16138
+        },
+        "ruleVersion": "promotion-capacity-v1",
+        "promptHash": "b87da85cf79a"
+      },
+      "rows": [
+        {
+          "keyword": "vacuum cleaner",
+          "page": 1,
+          "noxTotal": 50,
+          "noxBadcase": 23,
+          "noxBadcaseRate": 0.46,
+          "xtbTotal": 50,
+          "xtbBadcase": 11,
+          "xtbBadcaseRate": 0.22,
+          "comparable": true,
+          "delta": -0.24000000000000002,
+          "total": 50
+        },
+        {
+          "keyword": "vacuum cleaner",
+          "page": 2,
+          "noxTotal": 50,
+          "noxBadcase": 16,
+          "noxBadcaseRate": 0.32,
+          "xtbTotal": 50,
+          "xtbBadcase": 6,
+          "xtbBadcaseRate": 0.12,
+          "comparable": true,
+          "delta": -0.2,
+          "total": 50
+        },
+        {
+          "keyword": "vacuum cleaner",
+          "page": 3,
+          "noxTotal": 50,
+          "noxBadcase": 17,
+          "noxBadcaseRate": 0.34,
+          "xtbTotal": 50,
+          "xtbBadcase": 11,
+          "xtbBadcaseRate": 0.22,
+          "comparable": true,
+          "delta": -0.12000000000000002,
+          "total": 50
+        },
+        {
+          "keyword": "vacuum cleaner",
+          "page": 4,
+          "noxTotal": 50,
+          "noxBadcase": 9,
+          "noxBadcaseRate": 0.18,
+          "xtbTotal": 50,
+          "xtbBadcase": 6,
+          "xtbBadcaseRate": 0.12,
+          "comparable": true,
+          "delta": -0.06,
+          "total": 50
+        },
+        {
+          "keyword": "vacuum cleaner",
+          "page": 5,
+          "noxTotal": 50,
+          "noxBadcase": 14,
+          "noxBadcaseRate": 0.28,
+          "xtbTotal": 50,
+          "xtbBadcase": 15,
+          "xtbBadcaseRate": 0.3,
+          "comparable": true,
+          "delta": 0.019999999999999962,
+          "total": 50
+        },
+        {
+          "keyword": "vacuum cleaner",
+          "page": 6,
+          "noxTotal": 50,
+          "noxBadcase": 11,
+          "noxBadcaseRate": 0.22,
+          "xtbTotal": 50,
+          "xtbBadcase": 8,
+          "xtbBadcaseRate": 0.16,
+          "comparable": true,
+          "delta": -0.06,
+          "total": 50
+        },
+        {
+          "keyword": "vacuum cleaner",
+          "page": 7,
+          "noxTotal": 50,
+          "noxBadcase": 17,
+          "noxBadcaseRate": 0.34,
+          "xtbTotal": 50,
+          "xtbBadcase": 6,
+          "xtbBadcaseRate": 0.12,
+          "comparable": true,
+          "delta": -0.22000000000000003,
+          "total": 50
+        },
+        {
+          "keyword": "vacuum cleaner",
+          "page": 8,
+          "noxTotal": 50,
+          "noxBadcase": 20,
+          "noxBadcaseRate": 0.4,
+          "xtbTotal": 50,
+          "xtbBadcase": 10,
+          "xtbBadcaseRate": 0.2,
+          "comparable": true,
+          "delta": -0.2,
+          "total": 50
+        },
+        {
+          "keyword": "vacuum cleaner",
+          "page": 9,
+          "noxTotal": 50,
+          "noxBadcase": 14,
+          "noxBadcaseRate": 0.28,
+          "xtbTotal": 50,
+          "xtbBadcase": 5,
+          "xtbBadcaseRate": 0.1,
+          "comparable": true,
+          "delta": -0.18000000000000002,
+          "total": 50
+        },
+        {
+          "keyword": "vacuum cleaner",
+          "page": 10,
+          "noxTotal": 50,
+          "noxBadcase": 18,
+          "noxBadcaseRate": 0.36,
+          "xtbTotal": 50,
+          "xtbBadcase": 6,
+          "xtbBadcaseRate": 0.12,
+          "comparable": true,
+          "delta": -0.24,
+          "total": 50
+        }
+      ],
+      "avgDelta": -0.15,
+      "frontDelta": -0.18666666666666668,
+      "tailDelta": -0.20666666666666667,
+      "xtbSlope": -0.007757575757575757,
+      "noxSlope": -0.002787878787878788,
+      "slopeDelta": -0.004969696969696969,
+      "expectedPageWins": 9,
+      "comparablePages": 10,
+      "conclusion": "符合预期"
+    }
+  ],
+  "byPage": [
+    {
+      "page": 1,
+      "noxBadcaseRate": 0.236,
+      "xtbBadcaseRate": 0.116,
+      "delta": -0.12,
+      "keywords": 10
+    },
+    {
+      "page": 2,
+      "noxBadcaseRate": 0.24628450106157113,
+      "xtbBadcaseRate": 0.16317991631799164,
+      "delta": -0.08545647558386411,
+      "keywords": 10
+    },
+    {
+      "page": 3,
+      "noxBadcaseRate": 0.18850574712643678,
+      "xtbBadcaseRate": 0.17777777777777778,
+      "delta": -0.019080459770114945,
+      "keywords": 9
+    },
+    {
+      "page": 4,
+      "noxBadcaseRate": 0.1875,
+      "xtbBadcaseRate": 0.16247139588100687,
+      "delta": -0.055,
+      "keywords": 8
+    },
+    {
+      "page": 5,
+      "noxBadcaseRate": 0.1875,
+      "xtbBadcaseRate": 0.2025,
+      "delta": 0.015,
+      "keywords": 8
+    },
+    {
+      "page": 6,
+      "noxBadcaseRate": 0.2025,
+      "xtbBadcaseRate": 0.165,
+      "delta": -0.0375,
+      "keywords": 8
+    },
+    {
+      "page": 7,
+      "noxBadcaseRate": 0.21,
+      "xtbBadcaseRate": 0.145,
+      "delta": -0.065,
+      "keywords": 8
+    },
+    {
+      "page": 8,
+      "noxBadcaseRate": 0.2525,
+      "xtbBadcaseRate": 0.17,
+      "delta": -0.0825,
+      "keywords": 8
+    },
+    {
+      "page": 9,
+      "noxBadcaseRate": 0.25,
+      "xtbBadcaseRate": 0.1525,
+      "delta": -0.0975,
+      "keywords": 8
+    },
+    {
+      "page": 10,
+      "noxBadcaseRate": 0.26,
+      "xtbBadcaseRate": 0.1825,
+      "delta": -0.0775,
+      "keywords": 8
+    }
+  ]
+}

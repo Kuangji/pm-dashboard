@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-05-26T03:20:52.559Z",
+  "updatedAt": "2026-05-27T02:04:58.028Z",
   "navigation": {
     "docs": [
       {
@@ -9391,6 +9391,15 @@
                     "isImage": false
                   },
                   {
+                    "type": "file",
+                    "name": "review-package.jsonl.gz",
+                    "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/review-package.jsonl.gz",
+                    "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/review-package.jsonl.gz",
+                    "fileType": "binary",
+                    "isText": false,
+                    "isImage": false
+                  },
+                  {
                     "type": "directory",
                     "name": "baby-supplement",
                     "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/baby-supplement",
@@ -10695,6 +10704,1400 @@
                             "name": "summary.md",
                             "path": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/xtb-youtube/summary.md",
                             "slug": "03-research/channel-search-review/20260525-nox-vs-xtb-10kw-youtube-us/vacuum-cleaner/xtb-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1",
+                "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/README.md",
+                    "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/README.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "review-package.jsonl.gz",
+                    "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/review-package.jsonl.gz",
+                    "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/review-package.jsonl.gz",
+                    "fileType": "binary",
+                    "isText": false,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "xtb-vs-nox-sorting-effect-data.json",
+                    "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/xtb-vs-nox-sorting-effect-data.json",
+                    "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/xtb-vs-nox-sorting-effect-data.json",
+                    "fileType": "json",
+                    "language": "json",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "xtb-vs-nox-sorting-effect-report.md",
+                    "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/xtb-vs-nox-sorting-effect-report.md",
+                    "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/xtb-vs-nox-sorting-effect-report.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "directory",
+                    "name": "baby-supplement",
+                    "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/README.md",
+                        "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/nox-youtube/badcases.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "scores.json",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/nox-youtube/scores.json",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/nox-youtube/scores.json",
+                            "fileType": "json",
+                            "language": "json",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/nox-youtube/summary.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "xtb-youtube",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/xtb-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/xtb-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/xtb-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/xtb-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/xtb-youtube/badcases.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "scores.json",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/xtb-youtube/scores.json",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/xtb-youtube/scores.json",
+                            "fileType": "json",
+                            "language": "json",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/xtb-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/xtb-youtube/summary.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/xtb-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/baby-supplement/xtb-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "coffee-machine",
+                    "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/README.md",
+                        "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/nox-youtube/badcases.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "scores.json",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/nox-youtube/scores.json",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/nox-youtube/scores.json",
+                            "fileType": "json",
+                            "language": "json",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/nox-youtube/summary.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "xtb-youtube",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/xtb-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/xtb-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/xtb-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/xtb-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/xtb-youtube/badcases.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "scores.json",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/xtb-youtube/scores.json",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/xtb-youtube/scores.json",
+                            "fileType": "json",
+                            "language": "json",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/xtb-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/xtb-youtube/summary.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/xtb-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/coffee-machine/xtb-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "fashion",
+                    "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/README.md",
+                        "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/nox-youtube/badcases.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "scores.json",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/nox-youtube/scores.json",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/nox-youtube/scores.json",
+                            "fileType": "json",
+                            "language": "json",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/nox-youtube/summary.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "xtb-youtube",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/xtb-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/xtb-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/xtb-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/xtb-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/xtb-youtube/badcases.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "scores.json",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/xtb-youtube/scores.json",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/xtb-youtube/scores.json",
+                            "fileType": "json",
+                            "language": "json",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/xtb-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/xtb-youtube/summary.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/xtb-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/fashion/xtb-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "lawn-mower",
+                    "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/README.md",
+                        "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/nox-youtube/badcases.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "scores.json",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/nox-youtube/scores.json",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/nox-youtube/scores.json",
+                            "fileType": "json",
+                            "language": "json",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/nox-youtube/summary.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "xtb-youtube",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/xtb-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/xtb-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/xtb-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/xtb-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/xtb-youtube/badcases.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "scores.json",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/xtb-youtube/scores.json",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/xtb-youtube/scores.json",
+                            "fileType": "json",
+                            "language": "json",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/xtb-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/xtb-youtube/summary.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/xtb-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lawn-mower/xtb-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "lifestyle",
+                    "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/README.md",
+                        "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/nox-youtube/badcases.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "scores.json",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/nox-youtube/scores.json",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/nox-youtube/scores.json",
+                            "fileType": "json",
+                            "language": "json",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/nox-youtube/summary.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "xtb-youtube",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/xtb-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/xtb-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/xtb-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/xtb-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/xtb-youtube/badcases.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "scores.json",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/xtb-youtube/scores.json",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/xtb-youtube/scores.json",
+                            "fileType": "json",
+                            "language": "json",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/xtb-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/xtb-youtube/summary.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/xtb-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/lifestyle/xtb-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "pet-food",
+                    "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/README.md",
+                        "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/nox-youtube/badcases.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "scores.json",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/nox-youtube/scores.json",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/nox-youtube/scores.json",
+                            "fileType": "json",
+                            "language": "json",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/nox-youtube/summary.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "xtb-youtube",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/xtb-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/xtb-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/xtb-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/xtb-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/xtb-youtube/badcases.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "scores.json",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/xtb-youtube/scores.json",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/xtb-youtube/scores.json",
+                            "fileType": "json",
+                            "language": "json",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/xtb-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/xtb-youtube/summary.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/xtb-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/pet-food/xtb-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "power-bank",
+                    "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/README.md",
+                        "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/nox-youtube/badcases.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "scores.json",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/nox-youtube/scores.json",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/nox-youtube/scores.json",
+                            "fileType": "json",
+                            "language": "json",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/nox-youtube/summary.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "xtb-youtube",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/xtb-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/xtb-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/xtb-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/xtb-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/xtb-youtube/badcases.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "scores.json",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/xtb-youtube/scores.json",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/xtb-youtube/scores.json",
+                            "fileType": "json",
+                            "language": "json",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/xtb-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/xtb-youtube/summary.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/xtb-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/power-bank/xtb-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "swim-vest",
+                    "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/README.md",
+                        "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/nox-youtube/badcases.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "scores.json",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/nox-youtube/scores.json",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/nox-youtube/scores.json",
+                            "fileType": "json",
+                            "language": "json",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/nox-youtube/summary.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "xtb-youtube",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/badcases.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "scores.json",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/scores.json",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/scores.json",
+                            "fileType": "json",
+                            "language": "json",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/summary.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/swim-vest/xtb-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "tech",
+                    "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/README.md",
+                        "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/nox-youtube/badcases.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "scores.json",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/nox-youtube/scores.json",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/nox-youtube/scores.json",
+                            "fileType": "json",
+                            "language": "json",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/nox-youtube/summary.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "xtb-youtube",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/xtb-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/xtb-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/xtb-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/xtb-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/xtb-youtube/badcases.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "scores.json",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/xtb-youtube/scores.json",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/xtb-youtube/scores.json",
+                            "fileType": "json",
+                            "language": "json",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/xtb-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/xtb-youtube/summary.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/xtb-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/tech/xtb-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "vacuum-cleaner",
+                    "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/README.md",
+                        "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-comparison.md",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/provider-comparison.md",
+                        "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/provider-comparison.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "nox-youtube",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/nox-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/nox-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/nox-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/nox-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/nox-youtube/badcases.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "scores.json",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/nox-youtube/scores.json",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/nox-youtube/scores.json",
+                            "fileType": "json",
+                            "language": "json",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/nox-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/nox-youtube/summary.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/nox-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/nox-youtube/summary.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "xtb-youtube",
+                        "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/xtb-youtube",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/xtb-youtube/README.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/xtb-youtube/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "badcases.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/xtb-youtube/badcases.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/xtb-youtube/badcases.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "scores.json",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/xtb-youtube/scores.json",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/xtb-youtube/scores.json",
+                            "fileType": "json",
+                            "language": "json",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.csv",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/xtb-youtube/summary.csv",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/xtb-youtube/summary.csv",
+                            "fileType": "table",
+                            "language": "csv",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "summary.md",
+                            "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/xtb-youtube/summary.md",
+                            "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/vacuum-cleaner/xtb-youtube/summary.md",
                             "fileType": "markdown",
                             "isText": true,
                             "isImage": false
