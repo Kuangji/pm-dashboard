@@ -1,6 +1,6 @@
 import { readManifest, flattenNavTree } from './lib/content'
 import { readRecentContentActivity, type ContentActivity } from './lib/git-activity'
-import { FileText, PlayCircle, FolderOpen, GitCommit, Clock3, Sparkles } from 'lucide-react'
+import { FileText, PlayCircle, FolderOpen, Clock3, Sparkles } from 'lucide-react'
 import Link from 'next/link'
 
 function formatActivityDate(value: string) {
@@ -27,24 +27,34 @@ function getChangeLabel(changeType: ContentActivity['changeType']) {
 }
 
 function ActivityItem({ activity }: { activity: ContentActivity }) {
+  const itemTypeLabel = activity.type === 'demo' ? 'Demo' : '项目'
+  const changeLabel = getChangeLabel(activity.changeType)
+  const changeSummary = activity.type === 'demo'
+    ? `${changeLabel}了 Demo`
+    : `${changeLabel}了 ${activity.context} 下的${itemTypeLabel}`
   const content = (
-    <div className="group rounded-lg border border-zinc-100 bg-white p-3 transition-all hover:border-zinc-300 hover:shadow-sm">
-      <div className="flex items-start justify-between gap-3">
-        <div className="min-w-0">
-          <div className="flex items-center gap-2">
-            <span className="rounded-full bg-zinc-100 px-2 py-0.5 text-[11px] font-medium text-zinc-600">
-              {getChangeLabel(activity.changeType)}
+    <div className="group rounded-xl border border-zinc-100 bg-white p-4 transition-all hover:border-zinc-300 hover:shadow-sm">
+      <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+        <div className="min-w-0 flex-1">
+          <div className="mb-2 flex flex-wrap items-center gap-2">
+            <span className="rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-semibold text-blue-700">
+              {changeLabel}
             </span>
-            <span className="truncate text-sm font-medium text-zinc-900 group-hover:text-zinc-700">
-              {activity.title}
+            <span className="rounded-full bg-zinc-100 px-2.5 py-1 text-[11px] font-medium text-zinc-600">
+              {itemTypeLabel}
             </span>
+            <span className="text-xs text-zinc-400">{activity.context}</span>
           </div>
-          <p className="mt-1 truncate text-xs text-zinc-500">{activity.path}</p>
-          <p className="mt-2 line-clamp-1 text-xs text-zinc-600">{activity.message}</p>
+          <h3 className="text-base font-semibold text-zinc-900 group-hover:text-zinc-700">
+            {activity.title}
+          </h3>
+          <p className="mt-1 text-sm text-zinc-500">
+            {changeSummary}
+          </p>
         </div>
-        <div className="shrink-0 text-right text-[11px] text-zinc-400">
-          <div>{formatActivityDate(activity.committedAt)}</div>
-          <div className="mt-1 font-mono">{activity.shortCommit}</div>
+        <div className="flex shrink-0 items-center gap-3 text-xs text-zinc-400 md:items-start">
+          <Clock3 className="mt-0.5 h-3.5 w-3.5" />
+          <span>{formatActivityDate(activity.committedAt)}</span>
         </div>
       </div>
     </div>
@@ -59,28 +69,11 @@ function ActivityItem({ activity }: { activity: ContentActivity }) {
   )
 }
 
-function ActivityColumn({
-  title,
-  count,
-  activities,
-  emptyText,
-}: {
-  title: string
-  count: number
-  activities: ContentActivity[]
-  emptyText: string
-}) {
+function ActivityTimeline({ activities }: { activities: ContentActivity[] }) {
   return (
-    <div className="rounded-xl border border-zinc-100 bg-zinc-50 p-4">
-      <div className="mb-3 flex items-center justify-between gap-3">
-        <h3 className="text-sm font-semibold text-zinc-900">{title}</h3>
-        <span className="rounded-full bg-white px-2.5 py-1 text-xs text-zinc-500">
-          最近 {count} 项
-        </span>
-      </div>
-
+    <div className="rounded-2xl border border-zinc-100 bg-zinc-50 p-4">
       {activities.length > 0 ? (
-        <div className="space-y-2">
+        <div className="space-y-3">
           {activities.map((activity) => (
             <ActivityItem
               key={`${activity.type}-${activity.path}-${activity.shortCommit}`}
@@ -89,8 +82,8 @@ function ActivityColumn({
           ))}
         </div>
       ) : (
-        <div className="rounded-lg border border-dashed border-zinc-200 bg-white p-4 text-sm text-zinc-500">
-          {emptyText}
+        <div className="rounded-xl border border-dashed border-zinc-200 bg-white p-6 text-sm text-zinc-500">
+          最近提交里没有找到项目或 Demo 更新。
         </div>
       )}
     </div>
@@ -165,39 +158,31 @@ export default async function Home() {
           <div>
             <div className="mb-2 flex items-center gap-2 text-sm font-medium text-blue-600">
               <Sparkles className="h-4 w-4" />
-              Git 提交记录
+              内容更新
             </div>
-            <h2 className="text-lg font-semibold text-zinc-900">最近更新</h2>
+            <h2 className="text-lg font-semibold text-zinc-900">更新日志</h2>
             <p className="mt-1 text-sm text-zinc-500">
-              根据最近提交中变更的文档和 Demo 文件自动汇总。
+              按项目和 Demo 自动归并最近发布变更。
             </p>
           </div>
           <div className="flex items-center gap-3 text-xs text-zinc-500">
             <span className="flex items-center gap-1.5">
               <Clock3 className="h-3.5 w-3.5" />
-              最近提交
-            </span>
-            <span className="flex items-center gap-1.5">
-              <GitCommit className="h-3.5 w-3.5" />
-              内容变更
+              最近发布
             </span>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-          <ActivityColumn
-            title="文档更新"
-            count={activity.docCount}
-            activities={activity.docs}
-            emptyText="最近提交里没有找到文档更新。"
-          />
-          <ActivityColumn
-            title="Demo 更新"
-            count={activity.demoCount}
-            activities={activity.demos}
-            emptyText="最近提交里没有找到 Demo 更新。"
-          />
+        <div className="mb-3 flex flex-wrap gap-2 text-xs text-zinc-500">
+          <span className="rounded-full bg-zinc-100 px-2.5 py-1">
+            项目 {activity.docCount}
+          </span>
+          <span className="rounded-full bg-zinc-100 px-2.5 py-1">
+            Demo {activity.demoCount}
+          </span>
         </div>
+
+        <ActivityTimeline activities={activity.items} />
       </section>
 
       <section>

@@ -12,6 +12,7 @@ export type ActivityChangeType = 'added' | 'modified' | 'deleted' | 'renamed'
 export interface ActivityTarget {
   type: ActivityTargetType
   title: string
+  context: string
   href?: string
   path: string
 }
@@ -25,6 +26,7 @@ export interface ContentActivity extends ActivityTarget {
 }
 
 export interface ActivitySummary {
+  items: ContentActivity[]
   docs: ContentActivity[]
   demos: ContentActivity[]
   docCount: number
@@ -49,17 +51,53 @@ function getChangeType(status: string): ActivityChangeType {
   return 'modified'
 }
 
-function getDisplayTitle(path: string) {
-  const parts = path.split('/').filter(Boolean)
-  return parts.at(-1) || path
+function mergeChangeType(
+  current: ActivityChangeType,
+  next: ActivityChangeType
+): ActivityChangeType {
+  if (current === next) return current
+  if (current === 'deleted' && next === 'deleted') return 'deleted'
+  if (current === 'added' && next === 'added') return 'added'
+  return 'modified'
+}
+
+function humanizePathSegment(segment: string) {
+  return segment.replace(/[-_]+/g, ' ').trim()
 }
 
 function findDocByPath(relativePath: string, docs: NavItem[]) {
   return docs.find((doc) => doc.path === relativePath || doc.slug === relativePath)
 }
 
+function findDocReadmeByProjectPath(projectPath: string, docs: NavItem[]) {
+  return docs.find((doc) => {
+    return doc.slug === `${projectPath}/README.md` || doc.path === `${projectPath}/README.md`
+  })
+}
+
 function findDemoById(demoId: string, demos: DemoItem[]) {
   return demos.find((demo) => demo.id === demoId || demo.path === `demos/${demoId}/index.html`)
+}
+
+function getDocProjectInfo(relativePath: string) {
+  const parts = relativePath.split('/').filter(Boolean)
+
+  if (parts.length < 2) return null
+
+  const projectDepth = parts[0] === '03-research' && parts[1] === 'channel-search-review'
+    ? 3
+    : Math.min(2, parts.length)
+
+  const projectParts = parts.slice(0, projectDepth)
+  const contextParts = parts.slice(0, Math.max(1, projectDepth - 1))
+  const titleSegment = projectParts.at(-1) || parts[0]
+  const contextSegment = contextParts.at(-1) || parts[0]
+
+  return {
+    projectPath: projectParts.join('/'),
+    title: humanizePathSegment(titleSegment),
+    context: humanizePathSegment(contextSegment),
+  }
 }
 
 export function mapChangedPathToActivityTarget(
@@ -72,12 +110,19 @@ export function mapChangedPathToActivityTarget(
 
   if (changedPath.startsWith(docsPrefix)) {
     const path = changedPath.slice(docsPrefix.length)
-    const doc = findDocByPath(path, docs)
+    const projectInfo = getDocProjectInfo(path)
+    if (!projectInfo) return null
+
+    const readme = findDocReadmeByProjectPath(projectInfo.projectPath, docs)
+    const exactDoc = findDocByPath(path, docs)
+    const hrefSlug = readme?.slug || exactDoc?.slug
+
     return {
       type: 'doc',
-      title: doc?.name || getDisplayTitle(path),
-      href: doc?.slug ? `/docs/${encodeSlug(doc.slug)}` : undefined,
-      path,
+      title: projectInfo.title,
+      context: projectInfo.context,
+      href: hrefSlug ? `/docs/${encodeSlug(hrefSlug)}` : undefined,
+      path: projectInfo.projectPath,
     }
   }
 
@@ -88,8 +133,9 @@ export function mapChangedPathToActivityTarget(
     return {
       type: 'demo',
       title: demo?.title || demoId,
+      context: 'Demo',
       href: demoId ? `/demos/${encodeURIComponent(demoId)}` : undefined,
-      path,
+      path: demoId,
     }
   }
 
@@ -120,6 +166,7 @@ export function parseGitActivityLog(
 ): ContentActivity[] {
   const activities: ContentActivity[] = []
   let currentCommit: GitCommitContext | null = null
+  const commitTargets = new Map<string, ContentActivity>()
 
   for (const line of logOutput.split('\n')) {
     if (!line.trim()) continue
@@ -138,11 +185,23 @@ export function parseGitActivityLog(
 
     if (!target) continue
 
-    activities.push({
+    const key = `${currentCommit.commit}:${target.type}:${target.path}`
+    const previous = commitTargets.get(key)
+    const nextChangeType = getChangeType(status)
+
+    if (previous) {
+      previous.changeType = mergeChangeType(previous.changeType, nextChangeType)
+      continue
+    }
+
+    const activity = {
       ...target,
       ...currentCommit,
-      changeType: getChangeType(status),
-    })
+      changeType: nextChangeType,
+    }
+
+    commitTargets.set(key, activity)
+    activities.push(activity)
   }
 
   return activities
@@ -167,6 +226,7 @@ export function summarizeActivities(
   const demos = deduped.filter((activity) => activity.type === 'demo')
 
   return {
+    items: deduped.slice(0, limitPerType * 2),
     docs: docs.slice(0, limitPerType),
     demos: demos.slice(0, limitPerType),
     docCount: docs.length,
