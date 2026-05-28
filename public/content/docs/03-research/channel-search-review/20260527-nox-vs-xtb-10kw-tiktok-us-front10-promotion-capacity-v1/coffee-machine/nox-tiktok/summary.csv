@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+nox,tiktok,coffee machine,overall,500,223,44.6%
+nox,tiktok,coffee machine,head,500,223,44.6%
+nox,tiktok,coffee machine,mid,0,0,0.0%
+nox,tiktok,coffee machine,tail,0,0,0.0%

@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+nox,tiktok,pet food,overall,500,188,37.6%
+nox,tiktok,pet food,head,500,188,37.6%
+nox,tiktok,pet food,mid,0,0,0.0%
+nox,tiktok,pet food,tail,0,0,0.0%

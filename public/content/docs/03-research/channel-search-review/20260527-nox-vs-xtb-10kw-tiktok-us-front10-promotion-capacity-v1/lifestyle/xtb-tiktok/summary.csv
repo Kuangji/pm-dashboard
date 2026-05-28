@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+xtb,tiktok,lifestyle,overall,500,9,1.8%
+xtb,tiktok,lifestyle,head,500,9,1.8%
+xtb,tiktok,lifestyle,mid,0,0,0.0%
+xtb,tiktok,lifestyle,tail,0,0,0.0%

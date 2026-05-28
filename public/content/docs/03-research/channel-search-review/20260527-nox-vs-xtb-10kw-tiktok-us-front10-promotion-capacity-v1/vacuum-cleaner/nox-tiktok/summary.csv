@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+nox,tiktok,vacuum cleaner,overall,500,160,32.0%
+nox,tiktok,vacuum cleaner,head,500,160,32.0%
+nox,tiktok,vacuum cleaner,mid,0,0,0.0%
+nox,tiktok,vacuum cleaner,tail,0,0,0.0%
