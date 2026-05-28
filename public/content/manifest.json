@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-05-28T01:58:25.006Z",
+  "updatedAt": "2026-05-28T06:18:38.289Z",
   "navigation": {
     "docs": [
       {
@@ -10724,6 +10724,15 @@
                     "name": "README.md",
                     "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/README.md",
                     "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/README.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "provider-fine-grained-summary.md",
+                    "path": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/provider-fine-grained-summary.md",
+                    "slug": "03-research/channel-search-review/20260526-nox-vs-xtb-10kw-youtube-us-front10-promotion-capacity-v1/provider-fine-grained-summary.md",
                     "fileType": "markdown",
                     "isText": true,
                     "isImage": false

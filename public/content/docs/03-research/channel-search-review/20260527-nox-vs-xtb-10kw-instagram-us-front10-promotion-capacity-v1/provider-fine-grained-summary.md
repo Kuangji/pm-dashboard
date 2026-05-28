@@ -1,5 +1,10 @@
 # Instagram US Channel Search Front10 Review
 
+## 文档定位
+
+本文档承接 root README 中拆出的细粒度数据，重点保留 provider × keyword × page 的横向聚合表、runtime 表和明细入口；root README 仅保留范围、关键结论和导航。
+
+
 ## Scope
 - 本轮范围：Instagram / US / nox vs xtb / 10 keywords / 前 10 页 / 每页 50 条 / Agent 评分。
 - Nox 侧使用 Playwright MCP 真实浏览器上下文采集输入文件，原因是本地 headless/Node 未走代理会触发 Nox 403；评分仍全部走同一 Agent prompt 与模型。
