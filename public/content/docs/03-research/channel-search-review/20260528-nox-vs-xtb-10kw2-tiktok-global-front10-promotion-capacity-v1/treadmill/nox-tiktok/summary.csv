@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+nox,tiktok,treadmill,overall,500,196,39.2%
+nox,tiktok,treadmill,head,500,196,39.2%
+nox,tiktok,treadmill,mid,0,0,0.0%
+nox,tiktok,treadmill,tail,0,0,0.0%

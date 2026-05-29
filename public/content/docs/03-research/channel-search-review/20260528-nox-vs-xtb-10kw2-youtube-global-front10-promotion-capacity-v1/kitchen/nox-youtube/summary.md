@@ -1,0 +1,201 @@
+# Channel Search Batch Review
+
+- provider: nox
+- platform: youtube
+- keyword: kitchen
+- total: 500
+- badcase率: 35.6%
+- labels: fit 169, adjacent 153, badcase 178, failed 0
+- score distribution: <0 20, 0-9 209, 10-19 24, 20+ 247
+- 平均 shard 执行时间: 173.8s（22 个 shard）
+- 平均单频道执行时间: 7.6s
+
+## Buckets
+| bucket | total | badcase | badcase_rate |
+|---|---:|---:|---:|
+| overall | 500 | 178 | 35.6% |
+| head | 500 | 178 | 35.6% |
+| mid | 0 | 0 | 0.0% |
+| tail | 0 | 0 | 0.0% |
+
+## Badcases
+| rank | channel | url | score | reason |
+|---:|---|---|---:|---|
+| 2 | Love toys | https://cn.noxinfluencer.com/youtube/channel/UC1TUgGLEoqd76pjpY8cP2Dg | 5 | 玩具ASMR频道，厨房词命中但受众不符 |
+| 5 | That Little Puff | https://cn.noxinfluencer.com/youtube/channel/UClFN9LShD_Pv0wnSeUKbUZw | -15 | 猫咪娱乐内容，和厨房产品推广无关 |
+| 13 | ToyToy Unboxing | https://cn.noxinfluencer.com/youtube/channel/UCibwPGKNJfUwAbChSgF5dCg | 5 | 玩具ASMR为主，厨房产品受众不对 |
+| 17 | Alex Do Reaction | https://cn.noxinfluencer.com/youtube/channel/UCOA68X77Fu7-He2CnLnNWxg | 5 | 新闻反应向，和厨房商品推广不匹配 |
+| 24 | Tiny King | https://cn.noxinfluencer.com/youtube/channel/UC97W_FE-wnyyCk-9n3nzjZA | 5 | 玩具厨房和ASMR，非真实厨房受众 |
+| 27 | Toys Drama | https://cn.noxinfluencer.com/youtube/channel/UCtJ38CLkge_ezbQoAYrRKPg | 5 | 玩具ASMR娱乐号，和厨房产品推广场景冲突 |
+| 37 | Emily Askin | https://cn.noxinfluencer.com/youtube/channel/UCgrPjre5JS5KG9VdM2PkhgA | -8 | ASMR生活号，缺少厨房主题且格式不匹配 |
+| 57 | Vovchiki.funhouse | https://cn.noxinfluencer.com/youtube/channel/UCMc_ucC5qT1e1n2W5nXH6Dg | 5 | 娱乐短视频为主，与厨房推广不匹配 |
+| 62 | CHINALY | https://cn.noxinfluencer.com/youtube/channel/UC0gAkSxhXuF1C-xsALSCZjQ | 1 | 缺少厨房语义，相关性很弱 |
+| 72 | BaRaDa | https://cn.noxinfluencer.com/youtube/channel/UCUC_P0yFC89FtW66tIJW0Qw | -15 | 挑战恶搞内容，与厨房推广明显冲突 |
+| 73 | Kami Larae | https://cn.noxinfluencer.com/youtube/channel/UCRyZenBMc4UhH-CvaxNk10w | 10 | ASMR格式不利于实体产品推广 |
+| 78 | Cardboard World | https://cn.noxinfluencer.com/youtube/channel/UCHa7PRKgRz6s_gJb8Xad6eA | 0 | 迷你手工/房间场景，厨房相关很弱 |
+| 82 | Taste Maker Tok | https://cn.noxinfluencer.com/youtube/channel/UCBSPKJ8u-p0-RQcT9Tf8lzg | 5 | ASMR清洁型，促销场景不匹配 |
+| 85 | DRAMANIYA | https://cn.noxinfluencer.com/youtube/channel/UCz9bf-ivt9hNqcD6q2oic7A | 5 | 娱乐短视频，厨房只是泛标签 |
+| 86 | TechMoodern | https://cn.noxinfluencer.com/youtube/channel/UC1iGyuT5uL5YHgAptxKdXlg | -15 | 电影解说娱乐，和厨房无关 |
+| 92 | Parvina_sharipova_sam | https://cn.noxinfluencer.com/youtube/channel/UCdg5OzKKXBQEDSwqhMCqADA | 5 | 舞蹈音乐娱乐，厨房受众不符 |
+| 93 | Jeremy Clyde | https://cn.noxinfluencer.com/youtube/channel/UCifaMlWn5TbeoT46jqqvIbw | 0 | 时尚生活向，厨房相关很弱 |
+| 94 | NAA PERU SIRI | https://cn.noxinfluencer.com/youtube/channel/UCr-XT5CLxrWBxDxkX-v0ohQ | 0 | 泰卢固vlog向，厨房相关很弱 |
+| 96 | Official short rells | https://cn.noxinfluencer.com/youtube/channel/UC6mgfyp5xMBEeCWcEvHk-Hg | 5 | 泛娱乐短内容，厨房只是辅助标签 |
+| 97 | 4Teen Challenge | https://cn.noxinfluencer.com/youtube/channel/UC-rhtOEonrzUNe5BOS9a9yA | -15 | 挑战恶搞向，和厨房推广不符 |
+| 98 | The Hayeks | https://cn.noxinfluencer.com/youtube/channel/UChsz_u-8KIqfzXRb6tJSdZw | -15 | 宠物ASMR，和人用厨房不符 |
+| 102 | Jelly DO | https://cn.noxinfluencer.com/youtube/channel/UCrpufLiqG97URaAqMPDrJsA | -10 | 挑战/恶作剧为主，厨房推广格式不匹配 |
+| 104 | Kuehnhold Pavella | https://cn.noxinfluencer.com/youtube/channel/UCqmjJ8MOFQWj4eJ1EDHxC-g | -15 | 娱乐短视频/电影向，和厨房推广目标明显不符 |
+| 112 | TrailVent 2.0 | https://cn.noxinfluencer.com/youtube/channel/UCShp9GecGXIvvhKYQlqxUtg | 0 | 美妆发型频道，与厨房主题无关 |
+| 114 | Alkan stone | https://cn.noxinfluencer.com/youtube/channel/UCHf7hwfrPgFHXcUwgtfO-BQ | 0 | 无有效标签，无法判断厨房相关性 |
+| 117 | Mimi's Art | https://cn.noxinfluencer.com/youtube/channel/UC3xRz0KtqOdATu3mpUe4XFQ | 0 | 娱乐向为主，厨房相关信号很弱 |
+| 127 | TKempDigital | https://cn.noxinfluencer.com/youtube/channel/UCYH8juKW2tmYKbyvDwDTPuA | 0 | 情感家庭向，与厨房产品无关 |
+| 129 | Multi DO Joy | https://cn.noxinfluencer.com/youtube/channel/UCrw0kiY-0K4Nf4ALgZj-AkA | 0 | 挑战整蛊频道，与厨房产品不匹配 |
+| 131 | BaRaDa Gold | https://cn.noxinfluencer.com/youtube/channel/UCrw7BJwZk0cP3zXcliT41fw | 0 | 整蛊挑战频道，不适合厨房产品推广 |
+| 132 | ProAssembler | https://cn.noxinfluencer.com/youtube/channel/UCqfB2fjF1-SMXCP3o3VBYOw | 0 | 装配类但无厨房场景，相关性不足 |
+| 135 | BaRaDa Challenge | https://cn.noxinfluencer.com/youtube/channel/UCdUWAHAZnt6He3N-Lj8I2zw | 0 | 挑战整蛊频道，不适合厨房产品推广 |
+| 137 | Kolter Winton | https://cn.noxinfluencer.com/youtube/channel/UClotrDvHGsXHDYq3ubVJZzQ | 0 | 无可用标签，相关性无法判断为正向 |
+| 139 | construction tips trick | https://cn.noxinfluencer.com/youtube/channel/UCXHa7mKSBNOcTM7NahFAtVA | 0 | 泛生活技巧频道，厨房相关证据不足 |
+| 142 | RSRONYP | https://cn.noxinfluencer.com/youtube/channel/UCFjay_6NUHEgFOP45u-HH2Q | 0 | 博彩推广混杂，和厨房产品无关 |
+| 145 | 7MM | https://cn.noxinfluencer.com/youtube/channel/UC2cEB-EZWBpft05GCEZZQTw | 0 | 宗教励志频道，与厨房产品无关 |
+| 146 | Whats Next | https://cn.noxinfluencer.com/youtube/channel/UCaCHVpg46crfQOZx3hoEUyA | 8 | ASMR/满足感强，厨房词不等于可推广场景 |
+| 148 | Nasibullo_Ismatullayev | https://cn.noxinfluencer.com/youtube/channel/UCvxy3ypFT-drQXWgYK-UPmA | 0 | 艺术时尚音乐向，与厨房产品无关 |
+| 149 | Mouth Wide Open | https://cn.noxinfluencer.com/youtube/channel/UCErSuffy8hCre4WFDIUdOLg | 0 | 杂项娱乐频道，厨房相关性不足 |
+| 155 | Chris Petrone | https://cn.noxinfluencer.com/youtube/channel/UC93cY7N8zvkZi2vqjafqSxQ | 0 | 缺少厨房或家居相关内容，相关性弱 |
+| 160 | Lina Kitchen | https://cn.noxinfluencer.com/youtube/channel/UCYq4xlLyXfhzoVfZGUgjfVw | -12 | ASMR/玩具开箱为主，和厨房产品推广不匹配 |
+| 164 | ALL IN REAL ESTATE | https://cn.noxinfluencer.com/youtube/channel/UCiTsWZaXcon2OANYXhQRn-g | 0 | 几乎无厨房相关信号，无法匹配 |
+| 166 | PromoCodePal | https://cn.noxinfluencer.com/youtube/channel/UCi3IzXpx5NDRwON3hRbMhHg | 0 | 纯娱乐表情包向，与厨房产品无关 |
+| 175 | Mini Yummy | https://cn.noxinfluencer.com/youtube/channel/UCF2qXppRwjoIUZNxIa9fdZA | 8 | 微缩厨房与ASMR格式，和常规厨房产品不对口 |
+| 180 | CUTE TOYS | https://cn.noxinfluencer.com/youtube/channel/UC-0QTZh5N_OnODuN2I9oWdQ | 5 | 玩具ASMR为主，厨房词不代表真实受众 |
+| 181 | RaPaPa Challenge | https://cn.noxinfluencer.com/youtube/channel/UCVsypXbu7P8k7eay_X2QDuA | -15 | 挑战娱乐为主，与厨房产品不匹配 |
+| 183 | My Toys World | https://cn.noxinfluencer.com/youtube/channel/UCFS8vxhzeRNZl_XmBFs0j_A | 5 | 玩具/ASMR频道，厨房标签被娱乐内容稀释 |
+| 187 | Margaux Fans | https://cn.noxinfluencer.com/youtube/channel/UCX4cxRoZZ22vUs1V9mWhSMQ | 0 | 粉丝娱乐向，缺少厨房消费场景 |
+| 189 | MaxPlus | https://cn.noxinfluencer.com/youtube/channel/UCo__F6zozvSDwB7aUapbDJQ | 0 | 无标签无内容证据，相关性不足 |
+| 193 | BarleyTheBurr | https://cn.noxinfluencer.com/youtube/channel/UCk3Iz1aYlt7tQ-MCi-Ukudw | 5 | 直播剪辑/娱乐占主，厨房内容不稳定 |
+| 196 | Mini Cooking | https://cn.noxinfluencer.com/youtube/channel/UCOjkzRBrbUWpt-y7Zh-g-Hg | 5 | 微缩ASMR内容，非真实厨房受众 |
+| 199 | GymLover Daily Shorts | https://cn.noxinfluencer.com/youtube/channel/UCLXUY_cnVd4ZscaJ_mdk8qA | 0 | 手工玩具向，和厨房产品关联弱 |
+| 201 | TEA COMFORT | https://cn.noxinfluencer.com/youtube/channel/UCJA_sJypbff342ys_3eO_BA | 1 | 音乐放松向，仅有食物弱相关，厨房推广不合适 |
+| 202 | HerStoryTime | https://cn.noxinfluencer.com/youtube/channel/UCyAc7YqV5fEigVhpSv0076A | 10 | 娱乐短视频占主，厨房标签不代表推广能力 |
+| 207 | Momoji | https://cn.noxinfluencer.com/youtube/channel/UCgPEtJ7IGtz5v_XOJXXbnRQ | 1 | 美妆健康向，仅有食物弱相关，厨房推广不合适 |
+| 208 | Anzu's Kitchen | https://cn.noxinfluencer.com/youtube/channel/UCKUHJzOzyOkMNRTSXy9nJHg | 0 | 手工实验向，内容与厨房商品不匹配 |
+| 209 | 4HYPE | https://cn.noxinfluencer.com/youtube/channel/UC-FGZIq9mfPMqJAg3e7NwFA | 1 | 娱乐挑战向，仅有食物弱相关 |
+| 212 | OH MY TOYS | https://cn.noxinfluencer.com/youtube/channel/UC61uQkFN4fJBYCc7abDMa2Q | 5 | 玩具ASMR频道，虽有kitchen标签，但主体偏玩具娱乐，不适合厨房产品推广 |
+| 213 | DHgate | https://cn.noxinfluencer.com/youtube/channel/UCTIxI4IRZ7sM8DG_CAB8Flw | 10 | 故事娱乐向，厨房标签不稳定 |
+| 216 | Blue Chrome Inc | https://cn.noxinfluencer.com/youtube/channel/UC2QSJXdahKm9NqhSATitvjw | 0 | 宠物/时尚杂谈向，厨房相关性低 |
+| 217 | Lawanna Lux | https://cn.noxinfluencer.com/youtube/channel/UClSIOc14j98R2S8Kk3MIK0A | 1 | 饮品内容为主，仅有食物弱相关 |
+| 219 | Sammyshomekitchen | https://cn.noxinfluencer.com/youtube/channel/UCarmDM8rp2KwOBeSWTB6Y-w | 0 | 缺少标签与视频证据，无法判断 |
+| 221 | Meow Meow | https://cn.noxinfluencer.com/youtube/channel/UCx5ERAjfcMwu9FCSIiw-eRA | 0 | 舞美妆健康向，与厨房投放无关 |
+| 223 | Shop Easier | https://cn.noxinfluencer.com/youtube/channel/UCLD_WWuqtyARxCFA-LkhSZQ | 0 | 无标签证据，相关性不足 |
+| 226 | Korean Rookie | https://cn.noxinfluencer.com/youtube/channel/UCdMcAYysNrIe9Bo-Z_KVjvA | 5 | 迷你厨房/ASMR玩具向，真实厨房推广错位 |
+| 227 | My Re-ment mini kitchen ♡ | https://cn.noxinfluencer.com/youtube/channel/UCdeTMoHt13rA68pKIFvYzvA | 5 | 迷你厨房手作/ASMR向，不适合真实厨房推广 |
+| 231 | Tina Unboxing Toys | https://cn.noxinfluencer.com/youtube/channel/UCxaZ0oJZJlRQ8wQihzwzsWg | 10 | 玩具开箱/ASMR向，厨房词只是表面出现 |
+| 232 | Tiny Toys | https://cn.noxinfluencer.com/youtube/channel/UC4oYGEBJKwgs4tceiUzZC_w | -15 | 纯玩具ASMR，和厨房推广明显不匹配 |
+| 234 | Drive With me | https://cn.noxinfluencer.com/youtube/channel/UCBQ_eNV2rjUB06pNVVTCHmQ | 0 | 车内生活内容，与厨房关联弱 |
+| 235 | Hoàng Hương | https://cn.noxinfluencer.com/youtube/channel/UCN4FK2FL1wUB7INMV3gw3kQ | 0 | 原始生存技能为主，厨房推广关联很弱 |
+| 241 | DaRaDa Best | https://cn.noxinfluencer.com/youtube/channel/UCee6taxG9fRkaCKSgtyLFGg | 0 | 挑战/恶搞内容，与厨房推广无关 |
+| 242 | BRAVO - F4 phantom | https://cn.noxinfluencer.com/youtube/channel/UCDx7tahLj6oZY77Thd69r4g | 0 | 战争游戏向，与厨房无关 |
+| 246 | My Toys ASMR | https://cn.noxinfluencer.com/youtube/channel/UCp0Iz3KrIoFw864z5t1lygA | 10 | 玩具ASMR/开箱，厨房词不代表真实厨房受众 |
+| 247 | Candy DO | https://cn.noxinfluencer.com/youtube/channel/UCp9ZRnSU8P6niNvEX7apQWg | 0 | 纯挑战恶搞内容，厨房推广不适配 |
+| 250 | Your Selection | https://cn.noxinfluencer.com/youtube/channel/UC3AfnbKHNkhO81S7ENOVtLg | 0 | 美妆/玩具科技混合，和厨房无关 |
+| 252 | Crystal Ransons | https://cn.noxinfluencer.com/youtube/channel/UC8TaQQ2gzfuk43S5NXrQskw | 0 | 生活方式母婴号，与厨房品类无关 |
+| 256 | Wow Princess Toys | https://cn.noxinfluencer.com/youtube/channel/UCSCBWyS87AOTG_bYSwCNvtA | 8 | 玩具厨房和ASMR，偏儿童玩具，不适合真人厨房产品 |
+| 258 | My Toys Wow | https://cn.noxinfluencer.com/youtube/channel/UCDM0rPmBL4FfEkRuUwyo5Bw | 8 | 玩具开箱+ASMR，厨房词只是玩具题材 |
+| 262 | sweaty is pretty | https://cn.noxinfluencer.com/youtube/channel/UC_L7k9VNUCY2jiuEWbpP7Cw | 0 | 娱乐/舞蹈擦边内容，与厨房推广不匹配 |
+| 263 | Think Lore | https://cn.noxinfluencer.com/youtube/channel/UC6rY4DU5LJ2xN5MrYRiHdmA | 0 | 泛知识娱乐号，缺少厨房相关受众 |
+| 264 | Tana Toys ASMR | https://cn.noxinfluencer.com/youtube/channel/UClPmQ59Dyz_e8go3E58ISHw | 8 | 玩具+ASMR+厨房套装，偏儿童玩法，不适合真人厨房产品 |
+| 266 | Mini Kitchen 2.0 | https://cn.noxinfluencer.com/youtube/channel/UC-xQm13wMu8nqsTtBjcXx5A | 7 | 迷你厨房玩具内容，非真人厨房消费场景 |
+| 268 | Mini toys | https://cn.noxinfluencer.com/youtube/channel/UCCE8i8uNyzmsvScf-o1_QVQ | 8 | 玩具开箱和ASMR，厨房词是玩具语境 |
+| 270 | The Kitchen Pickleball | https://cn.noxinfluencer.com/youtube/channel/UC8Kri-ozieZq01LLzQSNavQ | 5 | 球类运动频道，kitchen是球场术语，不是厨房产品 |
+| 271 | Play Unboxing | https://cn.noxinfluencer.com/youtube/channel/UCUHWTnn10Dxb31sGqs5SmYg | 8 | 玩具开箱+ASMR，厨房词只是玩具套装题材 |
+| 275 | Warrenn | https://cn.noxinfluencer.com/youtube/channel/UC0s_GBWqDq3mr5DS_5m8LDQ | 0 | 宠物和泛娱乐杂项，厨房受众不成立 |
+| 280 | AeroMx8 | https://cn.noxinfluencer.com/youtube/channel/UCGfWhQ0ZyFqanqlSEq1wdqg | 2 | 游戏为主，只有少量食物/DIY弱相关 |
+| 284 | C-Drama Clips | https://cn.noxinfluencer.com/youtube/channel/UCbWyuoKSLm9_bmpS2atDTcQ | 5 | 剧情娱乐为主，厨房标签被娱乐属性压过 |
+| 286 | Toy Toy ASMR | https://cn.noxinfluencer.com/youtube/channel/UCGzM8waeLkCkpHbxxiwX6JA | 5 | ASMR玩具号，非真人厨房场景 |
+| 287 | Mina Mini Kitchen | https://cn.noxinfluencer.com/youtube/channel/UC4IKC-s8Y6SGHfboMRuoSog | 5 | 微缩迷你厨房，非真人厨房推广 |
+| 289 | KaZaZa Challenge | https://cn.noxinfluencer.com/youtube/channel/UCeJ227L0hltglL_eEIhetHQ | -4 | 挑战娱乐号，厨房产品相关性很低 |
+| 291 | AZaZa | https://cn.noxinfluencer.com/youtube/channel/UCFn8jtNaVtiM606FjX3BpGw | -9 | 挑战/恶搞娱乐为主，厨房相关性很低 |
+| 292 | Kea Home | https://cn.noxinfluencer.com/youtube/channel/UCWKuAOf73EYBdhBuFkYGqtA | 0 | 无标签且无内容证据，难判断 |
+| 294 | Toys House | https://cn.noxinfluencer.com/youtube/channel/UC1ia1zkGBeipRLsJ0XTmi5A | 5 | 玩具开箱/ASMR号，偏玩具厨房 |
+| 295 | Channel 1 TV - Ethiopia | https://cn.noxinfluencer.com/youtube/channel/UCcFi99pVZMmb6W0mNbX0dWA | 5 | 音乐/娱乐为主，厨房标签只是表层 |
+| 298 | Clay Miniatures | https://cn.noxinfluencer.com/youtube/channel/UCW6U6qJU1sbOwEywAM07G_A | 5 | 微缩手作厨房，非真人厨房推广 |
+| 302 | Stuff You Actually Need Every Day! | https://cn.noxinfluencer.com/youtube/channel/UCbibWANrb0dxnmBhx1UaTuA | 0 | 无标签无视频证据，难判断为厨房推广人群 |
+| 304 | My Doll Toys Tv | https://cn.noxinfluencer.com/youtube/channel/UCUdzFacoj5Wy2uXJ-OnFpWQ | 5 | 微缩玩具厨房，不是面向真实厨房用品 |
+| 305 | SodoIndustries | https://cn.noxinfluencer.com/youtube/channel/UCSVFxXSDC__mhznPvPY0INg | 0 | 缺少任何内容证据，厨房相关性无法建立 |
+| 306 | The Gadget Game Show: What The Heck Is That?! | https://cn.noxinfluencer.com/youtube/channel/UCyW6UbaLhwIzQxRHEYNAHCQ | 5 | 游戏秀娱乐为主，厨房词命中不代表可推广 |
+| 308 | DeRage | https://cn.noxinfluencer.com/youtube/channel/UCzZh5Y7huuIKrj_kzM6TLjw | 0 | 纯游戏内容，与厨房产品推广无关 |
+| 309 | My Mini Toys | https://cn.noxinfluencer.com/youtube/channel/UCEMZJ8aMm0pbYDm1seDPeEQ | 5 | 玩具ASMR厨房套装偏娱乐展示，不适合真实厨房产品 |
+| 310 | honey toys ASMR | https://cn.noxinfluencer.com/youtube/channel/UCL2I18-bwQL8zL_LQraw6WA | 5 | ASMR玩具厨房内容，和真实厨房推广错位 |
+| 311 | Mini Toys World | https://cn.noxinfluencer.com/youtube/channel/UC30GHwfSH64XHT9zjEAfeXA | 5 | 玩具ASMR厨房套装，偏娱乐不偏产品推广 |
+| 313 | Vein Match Countertops | https://cn.noxinfluencer.com/youtube/channel/UCn2G15Q9nnLL9WqB-sa0ueA | 0 | 无标签无视频，证据过少，不宜判为厨房推广 |
+| 316 | Charles Reed | https://cn.noxinfluencer.com/youtube/channel/UCdpoPY8b8ZWnBTotu1nz9Eg | 0 | 无内容证据，厨房推广相关性无法确认 |
+| 323 | MainoTV | https://cn.noxinfluencer.com/youtube/channel/UCwyMAzUikhwHCwfVG03y3_Q | 5 | 播客音乐娱乐为主，厨房词命中不代表可推广 |
+| 331 | Sweeps Casino Academy | https://cn.noxinfluencer.com/youtube/channel/UCO38G4m_fCKuvx3s9lAitdg | 0 | 博彩/金融/科技标签，与厨房产品无关 |
+| 333 | Tus Unboxing | https://cn.noxinfluencer.com/youtube/channel/UC_k5x-DcCujFwHocaHt7Jjg | 5 | 玩具开箱+ASMR为主，厨房词是玩具语境，不适合实物厨房推广 |
+| 334 | Princess Box Magic | https://cn.noxinfluencer.com/youtube/channel/UCLr6jmrRbpqQ1H8N1YtP6lQ | 5 | 玩具和粉色厨房玩具为主，属于儿童玩具域 |
+| 335 | OkeAudio | https://cn.noxinfluencer.com/youtube/channel/UCHPaUeeZ49s5YcXFmec9uBg | 0 | 无有效标签和内容线索，相关性不足 |
+| 336 | Delicious Miniature | https://cn.noxinfluencer.com/youtube/channel/UCksR6YTRfmEwxMoM7VSbrzw | 5 | 微缩烹饪/ASMR偏娱乐，不适合真实厨房产品推广 |
+| 337 | Shruti Review | https://cn.noxinfluencer.com/youtube/channel/UCNxC-ueIqG1PVAwo5jqQOow | 5 | 开箱+ASMR且偏厨房玩具，和真实厨房产品不匹配 |
+| 339 | LOVE MY TOYS | https://cn.noxinfluencer.com/youtube/channel/UCJvakmPtQRvf4BKaXzVTINw | 5 | 玩具/ASMR频道，厨房词只是玩具语境 |
+| 340 | Mickey Unboxing | https://cn.noxinfluencer.com/youtube/channel/UCb2jveHvSiwdA0SfdIXqQBA | 5 | 玩具开箱频道，厨房词指向玩具厨房，不适合真实产品 |
+| 341 | Mini Review | https://cn.noxinfluencer.com/youtube/channel/UC7Tgeh3GAjdiDb3LAmRRhUQ | 5 | ASMR玩具频道，厨房词不代表真实厨房消费场景 |
+| 342 | BaRaFun | https://cn.noxinfluencer.com/youtube/channel/UCt9xlP5VDoClr19LMGv9JTQ | -14 | 挑战娱乐频道，食物只是陪衬，和厨房产品不匹配 |
+| 346 | Petite Cooking | https://cn.noxinfluencer.com/youtube/channel/UCUsd5wXgIC5bYIa3riGAtug | 5 | 微缩/ASMR烹饪娱乐，和真实厨房产品偏离 |
+| 349 | Loot Deals 🛍️ | https://cn.noxinfluencer.com/youtube/channel/UCRvHgOjFp5kSBviJvcyP6IA | 0 | 无标签线索，无法判断厨房相关性 |
+| 351 | therhodeshow | https://cn.noxinfluencer.com/youtube/channel/UCgshKBtxkqc6P_YyF25OHyQ | -9 | 娱乐/社会话题频道，与厨房产品推广不匹配 |
+| 352 | Farming On The Rocks | https://cn.noxinfluencer.com/youtube/channel/UCk_NdSWI7kn9gMQI1mt7cMQ | 8 | ASMR格式与厨房产品推广冲突，虽有 kitchen 标签也偏不适合 |
+| 354 | batau toys ASMR | https://cn.noxinfluencer.com/youtube/channel/UC-CjX5sy-LdaamYJxByWrtw | 5 | 玩具ASMR为主，厨房标签不足以支撑厨房产品推广 |
+| 358 | Fun Challenge | https://cn.noxinfluencer.com/youtube/channel/UCgkL_zur_9F_j59RyuOhfJg | -15 | 纯挑战/恶搞娱乐频道，不适合厨房产品推广 |
+| 359 | Siba Decor | https://cn.noxinfluencer.com/youtube/channel/UCsFbsZopHF4TemsPcvPs6PQ | 0 | 标签缺失，无法判断为厨房相关创作者 |
+| 361 | Kitchen Nightmares - Full Episodes | https://cn.noxinfluencer.com/youtube/channel/UCttMm3hHlDSqXGYmp7tqrEA | 8 | 电视节目全集频道，更像内容分发而非创作者推广 |
+| 362 | Subi Unbox | https://cn.noxinfluencer.com/youtube/channel/UCZA1CCYIT6gu9vAW0Dy7GSg | 5 | 玩具开箱+ASMR 为主，厨房标签是弱干扰信号 |
+| 367 | FlynnMasters | https://cn.noxinfluencer.com/youtube/channel/UCR0LijddG9Jt3vvrgoSpWqg | 5 | 娱乐评论/电视节目向，厨房推广场景不合适 |
+| 370 | Joel Erkkinen | https://cn.noxinfluencer.com/youtube/channel/UCmznyimoOweWJ92ZZfMz6zQ | 5 | 娱乐舞蹈梗频道，厨房标签不改变主体不适配 |
+| 376 | Opening Stuff | https://cn.noxinfluencer.com/youtube/channel/UC5HR6nTx0zqD8PZihz0eg6Q | 0 | 无标签且无厨房相关信号 |
+| 377 | House Tin | https://cn.noxinfluencer.com/youtube/channel/UC1DNS7giGlgRr5EXk7yHuRQ | 5 | 玩具ASMR为主，厨房词只是字面相关 |
+| 379 | Tina Toys ASMR | https://cn.noxinfluencer.com/youtube/channel/UCsFbJ7TzspLUuhXi1ym8Oag | 5 | 玩具ASMR内容为主，不适合真厨房品 |
+| 381 | Suzanne Bagheri | https://cn.noxinfluencer.com/youtube/channel/UCYpY9Ge8isJQvkgzuQMEhfg | 0 | 家居改造向，与厨房推广无关 |
+| 384 | Hanahomedecor | https://cn.noxinfluencer.com/youtube/channel/UCniMfrLwvIMaspsk5UHD9IA | 0 | 无标签与内容证据，无法判断相关 |
+| 386 | modern decor | https://cn.noxinfluencer.com/youtube/channel/UCu4tgQkPGTzBS1GWsytMEYg | 0 | 仅有泛装饰信息，缺少厨房信号 |
+| 387 | Kismile Official | https://cn.noxinfluencer.com/youtube/channel/UC9V-LA8C7BuTr3Aag-jo1VA | 0 | 无标签和内容信息，无法支撑相关性 |
+| 389 | Young House Love | https://cn.noxinfluencer.com/youtube/channel/UCA-Ur7VjL9_qlfwymyInvSw | 0 | 生活方式泛号，与厨房推广关联弱 |
+| 390 | Teeny Yummy | https://cn.noxinfluencer.com/youtube/channel/UCMK7Mkddof5JNLwavUF1DTw | 5 | 微缩厨房偏手作展示，不适合真厨房品 |
+| 393 | Yeah My Toys | https://cn.noxinfluencer.com/youtube/channel/UCq_xuJdzaEAH6yg6KhMfRTA | 5 | 玩具ASMR为主，真实厨房受众不匹配 |
+| 398 | Tiny House | https://cn.noxinfluencer.com/youtube/channel/UC9HFShz8tm12CMOOUwqNdTA | 5 | 玩具ASMR内容为主，厨房词不代表受众 |
+| 399 | Mickey Toys | https://cn.noxinfluencer.com/youtube/channel/UCk2G5Sj-HXS0Mn2Hjc3VScg | 5 | 玩具ASMR为主，不适合真厨房产品 |
+| 406 | Flavor Town ASMR Official | https://cn.noxinfluencer.com/youtube/channel/UCORtLlCjdgYvCzJFc_iZ39A | 10 | ASMR形式强，做厨房产品推广不合适 |
+| 408 | Ah Zha | https://cn.noxinfluencer.com/youtube/channel/UCuFAi1zIoeSuzfEpCIBHxyw | 8 | 吃播/ASMR占主导，不适合厨房产品推广 |
+| 410 | Benjarri | https://cn.noxinfluencer.com/youtube/channel/UCNO7C6ZbzbVZDeytMK4Ogag | 0 | 时尚娱乐向，与厨房产品无关 |
+| 411 | Cardboard Atlas | https://cn.noxinfluencer.com/youtube/channel/UC4rosqtb7mmXdInr8ERs9Zw | 0 | 无有效标签，无法判断厨房相关性 |
+| 412 | Moral Story cartoon | https://cn.noxinfluencer.com/youtube/channel/UClFUkSMfJuZwiibh-l4nIZA | -15 | 猫宠内容为主，与厨房受众不符 |
+| 419 | Fun days at Steak 'n' Eggs Farm | https://cn.noxinfluencer.com/youtube/channel/UCkSIqQdoOvgV8x4uYv6lrKw | -5 | 宠物/动物向，厨房推广不合适 |
+| 421 | Subi Toys | https://cn.noxinfluencer.com/youtube/channel/UCOD7VqIfkMccyZHWyW6_NJQ | 8 | 玩具ASMR/开箱为主，厨房产品不匹配 |
+| 422 | Mini Toys ASMR | https://cn.noxinfluencer.com/youtube/channel/UC-KkCrdlgBH6Cg5vTma9qQA | 8 | 玩具ASMR为主，厨房产品推广不合适 |
+| 426 | Xtreme Lifestylz | https://cn.noxinfluencer.com/youtube/channel/UClcrzJzMdD3brtgLCfpMYXA | 0 | 户外房车内容，和厨房产品推广关联很弱 |
+| 427 | CookingtimeТМ | https://cn.noxinfluencer.com/youtube/channel/UC9c_hER3JKA9zsltQL-j8ww | 5 | 有 kitchen 命中，但 ASMR 格式不适合厨房产品推广 |
+| 431 | Cute Unbox | https://cn.noxinfluencer.com/youtube/channel/UCF4eH0RYvlOwDulnlyFxqXw | 5 | ASMR+开箱玩具向，厨房产品推广匹配差 |
+| 435 | Mini Toys ASMR | https://cn.noxinfluencer.com/youtube/channel/UCiP4jhKujsvCe3jLK6DogVA | 5 | 玩具ASMR频道，厨房产品受众不匹配 |
+| 436 | 5Buc Products | https://cn.noxinfluencer.com/youtube/channel/UCfeUurrma4vNBSso9SVSwMQ | 0 | 科技泛频道，缺少厨房相关信号 |
+| 437 | KANKA® OFICIAL | https://cn.noxinfluencer.com/youtube/channel/UCYVgcL9Dc-aioD_iOB-ZiUw | 0 | 无可用标签，难判断且相关信号缺失 |
+| 440 | Simply Emily Home | https://cn.noxinfluencer.com/youtube/channel/UCLM9n8nOiTKKEEavElG_A9Q | 0 | 无标签且无厨房相关内容 |
+| 448 | Maya Organized Home | https://cn.noxinfluencer.com/youtube/channel/UCHV0viK6ozRlkx2QIMebIDQ | 0 | 无标签且缺少厨房相关信号 |
+| 449 | ASMR Unboxing | https://cn.noxinfluencer.com/youtube/channel/UCkWxr9ir-6dCVhEhGKA9LZA | 5 | ASMR 开箱玩具向，不适合厨房产品 |
+| 451 | Dreamy Cake | https://cn.noxinfluencer.com/youtube/channel/UCvHMiVvg4WXkUwd2OPvANbA | 10 | 迷你烘焙内容，非真实厨房产品推广场景 |
+| 453 | It's fact work | https://cn.noxinfluencer.com/youtube/channel/UC7vt6DKnfsh2pQuy7oE_aFg | -10 | 娱乐混合号，和厨房产品推广相关性很低 |
+| 456 | TP Unbox | https://cn.noxinfluencer.com/youtube/channel/UC5W6D2pyJ0sKrKYOl00pbhQ | 5 | 玩具ASMR频道，厨房仅是玩具主题 |
+| 457 | Deals | https://cn.noxinfluencer.com/youtube/channel/UCv-KTiFWWUG-j4Koixof3vA | 0 | 缺少频道标签与内容证据 |
+| 458 | Scary Talking Head | https://cn.noxinfluencer.com/youtube/channel/UC77VVJ7eGcAmcOu4a8vsAiA | -15 | 恐怖游戏向，和厨房产品推广不相关 |
+| 459 | Tingg Toys | https://cn.noxinfluencer.com/youtube/channel/UCK_jnukICnVhe_eMGUfqdRQ | 5 | 玩具开箱为主，厨房只是玩具场景 |
+| 460 | Magical  Toys | https://cn.noxinfluencer.com/youtube/channel/UCtxK1xBM7oRWSMylTZn6N5A | 5 | 玩具ASMR为主，厨房词仅是背景元素 |
+| 466 | CuteGoodies45 | https://cn.noxinfluencer.com/youtube/channel/UCMx0RVsfAZzS-6-86jHHvgw | 5 | 宠物家居号，厨房词不代表真实厨房受众 |
+| 468 | Tiny ASMR | https://cn.noxinfluencer.com/youtube/channel/UCqxJTO4MlWebx8ZcX6K-dyA | 5 | ASMR/玩具向，不是厨房产品推广频道 |
+| 471 | Home & Co. | https://cn.noxinfluencer.com/youtube/channel/UCehwGc0kC_Xisy5dl9XI6Qg | 0 | 无可用标签证据 |
+| 473 | BuildNplay toys | https://cn.noxinfluencer.com/youtube/channel/UC_NCS3EHlukCdduhzxHuiVQ | 5 | 玩具开箱为主，厨房只是玩具场景 |
+| 474 | That Roblox Girl | https://cn.noxinfluencer.com/youtube/channel/UCQtYIzpspM9yY1EgHkvmVpA | 5 | 迷你世界/手工向，非真实厨房受众 |
+| 476 | Tahira Parveen | https://cn.noxinfluencer.com/youtube/channel/UCw2_lSs2h3Oe1MP7l_0cHdA | 0 | 无标签无内容证据，相关性不足 |
+| 477 | Next Level Homes | https://cn.noxinfluencer.com/youtube/channel/UCTLosBw9tmZuD_oDipgPm0w | 0 | 家居名义但无厨房或产品证据 |
+| 479 | Gogo Monkey Life | https://cn.noxinfluencer.com/youtube/channel/UCfZ-pbu6Ls-0IQ6nr6Uvxag | 5 | 动物内容为主，厨房词面不适合推广 |
+| 481 | Lana Unboxing | https://cn.noxinfluencer.com/youtube/channel/UC8-FKQ9UEf5ePejObjeHhFQ | 5 | 玩具开箱加ASMR，格式与厨房推广不匹配 |
+| 483 | Lifestyle by Dana | https://cn.noxinfluencer.com/youtube/channel/UCySQIGmlfZmSWlUbndeEy1Q | 5 | ASMR满足感内容为主，厨房词面不足 |
+| 491 | Nova Unmasked | https://cn.noxinfluencer.com/youtube/channel/UC1KICxGqdn7AJSbVhJeBOaA | 10 | 娱乐向为主，厨房词面不能支撑推广 |
+| 493 | Ly Hoang Linh – A Journey Back to Nature | https://cn.noxinfluencer.com/youtube/channel/UCkKXnxbUT1E9HRobEVT6YzA | 0 | 自然建房向，厨房相关证据不足 |
+| 494 | Subeo Toys | https://cn.noxinfluencer.com/youtube/channel/UCg1uneb-G9cL_CCMleGcYrA | 5 | 玩具ASMR为主，厨房词面不能构成人群 |
+| 496 | Aluminium And Glass | https://cn.noxinfluencer.com/youtube/channel/UCyk1rNK0Ju2Kdl1w602E_MA | 0 | 无相关标签和内容证据 |
+| 498 | Derek & Hayley x Dayley Life | https://cn.noxinfluencer.com/youtube/channel/UCna4JNT1Oxt8Jr3CnEEwBlA | 10 | 娱乐情侣频道，厨房词面只是附带 |

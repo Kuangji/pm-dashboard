@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+xtb,youtube,marathon,overall,500,18,3.6%
+xtb,youtube,marathon,head,500,18,3.6%
+xtb,youtube,marathon,mid,0,0,0.0%
+xtb,youtube,marathon,tail,0,0,0.0%

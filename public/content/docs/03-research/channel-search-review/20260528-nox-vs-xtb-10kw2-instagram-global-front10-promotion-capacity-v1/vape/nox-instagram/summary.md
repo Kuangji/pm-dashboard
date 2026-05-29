@@ -1,0 +1,127 @@
+# Channel Search Batch Review
+
+- provider: nox
+- platform: instagram
+- keyword: vape
+- total: 500
+- badcase率: 20.8%
+- labels: fit 266, adjacent 130, badcase 104, failed 0
+- score distribution: <0 5, 0-9 102, 10-19 36, 20+ 357
+- 平均 shard 执行时间: 153.0s（20 个 shard）
+- 平均单频道执行时间: 6.1s
+
+## Buckets
+| bucket | total | badcase | badcase_rate |
+|---|---:|---:|---:|
+| overall | 500 | 104 | 20.8% |
+| head | 500 | 104 | 20.8% |
+| mid | 0 | 0 | 0.0% |
+| tail | 0 | 0 | 0.0% |
+
+## Badcases
+| rank | channel | url | score | reason |
+|---:|---|---|---:|---|
+| 8 | Meg Richardson ✨ | https://cn.noxinfluencer.com/instagram/channel/72000407571 | 0 | 无标签无内容，无法判断为vape相关 |
+| 16 | Addison Guerra | https://cn.noxinfluencer.com/instagram/channel/293793793 | 0 | 生活音乐向，与vape推广无关 |
+| 26 | Aron Covarrubias | https://cn.noxinfluencer.com/instagram/channel/42599593666 | 0 | 无相关标签或内容，无法支撑 vape 推广 |
+| 28 | Denis benitez | https://cn.noxinfluencer.com/instagram/channel/215613191 | 0 | 仅有聚会类标签，和 vape 无关 |
+| 31 | HONOREBEL | https://cn.noxinfluencer.com/instagram/channel/312660249 | 0 | 音乐艺人页，缺少 vape 相关性 |
+| 37 | Chris Higgins | https://cn.noxinfluencer.com/instagram/channel/1511553782 | 0 | 喜剧号，和 vape 推广不相关 |
+| 42 | Houk services llc | https://cn.noxinfluencer.com/instagram/channel/38892344608 | 0 | 无相关标签和内容，基本不相关 |
+| 44 | Puma Swede | https://cn.noxinfluencer.com/instagram/channel/476931889 | 0 | 时尚号无 vape 语境，基本不相关 |
+| 47 | Hamed | https://cn.noxinfluencer.com/instagram/channel/21378319271 | 0 | 无相关标签与内容，基本不相关 |
+| 51 | James | https://cn.noxinfluencer.com/instagram/channel/19192947 | 0 | 无相关标签或内容证据 |
+| 52 | Shua Mundy | https://cn.noxinfluencer.com/instagram/channel/65665765814 | 0 | 无相关标签或内容证据 |
+| 53 | 🦅 Black Rose 🦅 | https://cn.noxinfluencer.com/instagram/channel/49384066347 | 5 | 音乐审美号，vape为噪声词，推广格式不匹配 |
+| 56 | DEI VINC | https://cn.noxinfluencer.com/instagram/channel/7149496504 | 0 | 无相关标签或内容证据 |
+| 57 | memes & media ?_? | https://cn.noxinfluencer.com/instagram/channel/9283697336 | -15 | 纯娱乐表情号，和 vape 推广不匹配 |
+| 58 | Sia Lofi | https://cn.noxinfluencer.com/instagram/channel/2289640912 | 5 | 音乐审美号，vape为噪声词，推广格式不匹配 |
+| 59 | Nαjαh Renee | https://cn.noxinfluencer.com/instagram/channel/277379827 | 0 | 无相关标签或内容证据 |
+| 60 | Bonnie Mercado | https://cn.noxinfluencer.com/instagram/channel/49738131 | 0 | 食品内容，和 vape 推广无关 |
+| 61 | Fin In Usa | https://cn.noxinfluencer.com/instagram/channel/15554703878 | 0 | 无相关标签或内容证据 |
+| 62 | KOAN | https://cn.noxinfluencer.com/instagram/channel/10592126808 | 0 | 时尚珠宝号，与 vape 推广无关 |
+| 65 | Williams Wu | https://cn.noxinfluencer.com/instagram/channel/53042818448 | 0 | 无相关标签或内容证据 |
+| 67 | P.F.Memes | https://cn.noxinfluencer.com/instagram/channel/30051557149 | -15 | 纯娱乐表情号，和 vape 推广不匹配 |
+| 71 | Lazarus Vintage | https://cn.noxinfluencer.com/instagram/channel/1662409688 | 0 | 无相关标签或内容证据 |
+| 76 | Sean Phillips | https://cn.noxinfluencer.com/instagram/channel/15976288441 | 5 | 航空内容为主，vape 只是噪声标签，不适合投放 |
+| 78 | ELEV8ED | https://cn.noxinfluencer.com/instagram/channel/2033049873 | 0 | 无标签、无视频证据，无法判断为 vape 相关 |
+| 79 | Matthew Petitto | https://cn.noxinfluencer.com/instagram/channel/2106191690 | 0 | 美妆/健身/搞笑内容，与 vape 投放目标无关 |
+| 80 | 🍉🍉🍉🍉🍉🍉🍉🍉🍉 | https://cn.noxinfluencer.com/instagram/channel/382090489 | 0 | 无内容与标签，缺乏任何 vape 相关信号 |
+| 82 | Bruno | https://cn.noxinfluencer.com/instagram/channel/1493958002 | 0 | 无任何相关内容信号 |
+| 85 | fine $hitt. 💋 | https://cn.noxinfluencer.com/instagram/channel/1705331990 | 5 | 音乐审美号，vape 只是装饰性标签，格式不匹配 |
+| 87 | Taylor Flavors | https://cn.noxinfluencer.com/instagram/channel/3443988560 | 0 | 仅有名称无其他信号，不能判定为 vape 相关 |
+| 92 | Fran Lucas | https://cn.noxinfluencer.com/instagram/channel/6797426725 | 5 | 音乐/审美频道，不适合电子烟推广 |
+| 97 | Chris Ashley | https://cn.noxinfluencer.com/instagram/channel/41035808 | 0 | 无任何可用信号 |
+| 108 | Official Vladimeme Putin | https://cn.noxinfluencer.com/instagram/channel/5558160994 | 0 | 无有效标签，无法判断为vape推广相关 |
+| 119 | Alexis Owen | https://cn.noxinfluencer.com/instagram/channel/47629978345 | 0 | 无标签无内容依据，不适合判为相关 |
+| 121 | The Real Cost | https://cn.noxinfluencer.com/instagram/channel/964688697 | 0 | 明显偏反vape公共健康语境，不适合推广 |
+| 122 | 𝑉𝑎𝑙𝑜𝑟𝑎 𝑆𝑢𝑖𝑐𝑖𝑑𝑒 🦊 | https://cn.noxinfluencer.com/instagram/channel/176303134 | 0 | 无有效标签和内容信号，判定为不相关 |
+| 126 | PaperPlanes | https://cn.noxinfluencer.com/instagram/channel/4437965989 | 0 | 无 vape 相关标签和视频证据 |
+| 137 | BNC | https://cn.noxinfluencer.com/instagram/channel/4585351600 | 0 | 音乐娱乐页，无 vape 相关 |
+| 145 | Brian Sienkiewicz | https://cn.noxinfluencer.com/instagram/channel/51628805178 | 0 | 无相关标签，证据不足 |
+| 148 | truth | https://cn.noxinfluencer.com/instagram/channel/16106747 | 5 | 戒烟/反 vape 语境，明确不适配 |
+| 156 | American Greed | https://cn.noxinfluencer.com/instagram/channel/249607018 | 5 | 真相/犯罪类TV节目，不适合 vape 推广 |
+| 157 | Nio | https://cn.noxinfluencer.com/instagram/channel/47622011623 | 0 | 无有效标签与内容信号 |
+| 165 | KilroyGabriel | https://cn.noxinfluencer.com/instagram/channel/42359424419 | 10 | 艺术音乐主轴，vape 词不构成受众 |
+| 169 | PATRIOT OPS | https://cn.noxinfluencer.com/instagram/channel/6789416809 | 10 | 军机内容为主，vape 标签不构成相关受众 |
+| 173 | Michelle Marinaro | Business Coach | https://cn.noxinfluencer.com/instagram/channel/192864165 | 10 | 商业教练号，受众与 vape 产品不匹配 |
+| 174 | Dr. Jarrett Schanzer | https://cn.noxinfluencer.com/instagram/channel/283041799 | 10 | 医疗美容号，vape 推广场景不合适 |
+| 185 | Zach Ruffo | https://cn.noxinfluencer.com/instagram/channel/202444444 | 5 | 喜剧整活为主，商品推广匹配差 |
+| 192 | Couple Goals 💕 | https://cn.noxinfluencer.com/instagram/channel/45559568739 | 5 | 音乐审美向，vape 更像泛标签 |
+| 194 | BlackJust🧊 | https://cn.noxinfluencer.com/instagram/channel/52961700 | 0 | 无标签无内容依据 |
+| 195 | Inhale Health® | https://cn.noxinfluencer.com/instagram/channel/2061108431 | 5 | 戒烟/戒 vape 方向，和推广目标冲突 |
+| 235 | Matt Manning | https://cn.noxinfluencer.com/instagram/channel/391676605 | 5 | vape 只是边标签，主体是 knife business，不适合 |
+| 239 | Patty Madden | https://cn.noxinfluencer.com/instagram/channel/3565018001 | 5 | 艺术/动画号为主，vape 只是弱标签，不适合 |
+| 243 | Jones | https://cn.noxinfluencer.com/instagram/channel/57248571069 | 10 | recipe/food 账号里只有 vape，主题错位 |
+| 248 | Universal Wellness | https://cn.noxinfluencer.com/instagram/channel/49470714816 | 5 | 健康/ wellness 账号与 vape 促销冲突明显 |
+| 261 | No | https://cn.noxinfluencer.com/instagram/channel/56346054288 | 10 | NFT/猴子圈层，和vape推广场景不匹配 |
+| 265 | Chill Videos | https://cn.noxinfluencer.com/instagram/channel/30819713889 | 10 | 音乐审美型频道，vape只是泛标签 |
+| 266 | Michael DeLeon | https://cn.noxinfluencer.com/instagram/channel/540147321 | 5 | 反vape教育立场，属于逆向受众 |
+| 272 | Joseph | https://cn.noxinfluencer.com/instagram/channel/60817030019 | 10 | 词面混杂且偏viral，无清晰vape推广场景 |
+| 319 | Raiden Gorby | https://cn.noxinfluencer.com/instagram/channel/1980436729 | 5 | 玩偶/表演为主，vape标签疑似噪声 |
+| 320 | Now Or Never Out Now!!! | https://cn.noxinfluencer.com/instagram/channel/270235271 | 5 | 音乐艺人号，vape与主营内容不匹配 |
+| 322 | Andrew Nolfi | https://cn.noxinfluencer.com/instagram/channel/6697844366 | 5 | 航空摄影号，vape为弱噪声 |
+| 324 | Lover | https://cn.noxinfluencer.com/instagram/channel/356006478 | 5 | 舞蹈/流行内容为主，vape不构成受众 |
+| 334 | BILLY PERRY | DO BETTER Parenting | https://cn.noxinfluencer.com/instagram/channel/1391110931 | 0 | 无 vape 相关信号，偏亲子日常 |
+| 340 | Tyler Sherwin | https://cn.noxinfluencer.com/instagram/channel/3035944578 | 0 | 无 vape 相关信号，偏魔术娱乐 |
+| 356 | WYND | Detect Loud Noise & Smoking | https://cn.noxinfluencer.com/instagram/channel/3491461679 | 10 | 更像空气/烟雾检测号，不是 vape 推广号 |
+| 359 | Yousef Erakat | https://cn.noxinfluencer.com/instagram/channel/750746000 | 0 | 无 vape 相关证据，偏娱乐号 |
+| 360 | Big Pack | https://cn.noxinfluencer.com/instagram/channel/47473198 | 0 | 无 vape 相关证据，偏加密营销号 |
+| 361 | 420 WASTED | https://cn.noxinfluencer.com/instagram/channel/31021837823 | 0 | 无标签无内容证据，无法判断为相关推广号 |
+| 373 | Jeremiah Jones | https://cn.noxinfluencer.com/instagram/channel/40938516012 | 0 | 无 vape 相关证据，偏健身号 |
+| 379 | Annabel Lucinda | https://cn.noxinfluencer.com/instagram/channel/479822706 | 0 | 健身生活号，与 vape 无关 |
+| 382 | Jeremy London, MD | https://cn.noxinfluencer.com/instagram/channel/64645364013 | 0 | 医疗健康号，缺少 vape 推广相关性 |
+| 386 | Vince Iannone | https://cn.noxinfluencer.com/instagram/channel/21414153447 | 0 | 纯健身号，与 vape 推广无关 |
+| 389 | CHEF BONEZ | https://cn.noxinfluencer.com/instagram/channel/220064384 | 0 | 厨艺内容，和 vape 目标不匹配 |
+| 395 | The Kerry Gaynor Method® | https://cn.noxinfluencer.com/instagram/channel/294013660 | 5 | 戒烟受众与 vape 推广方向冲突 |
+| 402 | GCS | https://cn.noxinfluencer.com/instagram/channel/48775651196 | 0 | 袋包类标签，和vape无关 |
+| 411 | Dr. Pedi Mirdamadi | https://cn.noxinfluencer.com/instagram/channel/1450096242 | 0 | 医疗健康向，缺少vape推广相关性 |
+| 415 | Dr. Jess | https://cn.noxinfluencer.com/instagram/channel/721698812 | 0 | 医疗健康向，和vape推广不匹配 |
+| 417 | Mr. Salt n pepper | https://cn.noxinfluencer.com/instagram/channel/40677662611 | 0 | 缺少任何vape或相关标签 |
+| 419 | Magilian Senanayake | https://cn.noxinfluencer.com/instagram/channel/7868582423 | 0 | 美妆健康向，和vape无关 |
+| 427 | IHSAA | https://cn.noxinfluencer.com/instagram/channel/1347843544 | 5 | 学校体育账号，vape只是噪声标签，受众不匹配 |
+| 430 | Yaroslav Kopa | https://cn.noxinfluencer.com/instagram/channel/2042631027 | 8 | 摄影汽车账号里夹带vape，主内容不适合投放 |
+| 432 | Barclays Center | https://cn.noxinfluencer.com/instagram/channel/173682817 | -10 | 娱乐/演出场景为主，和vape推广场景明显不符 |
+| 441 | Marieli Cruz | https://cn.noxinfluencer.com/instagram/channel/14562200369 | 8 | 美甲时尚账号，vape仅是噪声标签，不适合 |
+| 443 | PVD Food Truck Events | https://cn.noxinfluencer.com/instagram/channel/5338530043 | 8 | 餐车活动账号，vape只是偶发噪声标签 |
+| 444 | jack | https://cn.noxinfluencer.com/instagram/channel/1988917135 | 8 | 航空账号与vape受众无关，属于明显错配 |
+| 450 | Aeris Raelyn | https://cn.noxinfluencer.com/instagram/channel/57310874647 | 0 | 健康母婴向账号，和vape推广没有直接关联 |
+| 454 | Soldiers For Recovery | https://cn.noxinfluencer.com/instagram/channel/16095967055 | -15 | 无vape相关且偏戒毒防治，和推广方向冲突 |
+| 457 | The FAA | https://cn.noxinfluencer.com/instagram/channel/1990488517 | 0 | 航空航旅号，和vape推广基本无关 |
+| 459 | McCall Mirabella | https://cn.noxinfluencer.com/instagram/channel/3616600607 | 1 | 仅见nicotine，且是纪录片/动物向，不适合推广 |
+| 462 | travel | lifestyle | mentor 🌎🧚🏽 | https://cn.noxinfluencer.com/instagram/channel/8248500319 | 0 | 健身旅行生活号，和vape推广无关 |
+| 467 | Vivian Yip | https://cn.noxinfluencer.com/instagram/channel/14385751 | 0 | 房产投资号，和vape推广无关 |
+| 468 | F-16 Viper Demonstration Team | https://cn.noxinfluencer.com/instagram/channel/2620024098 | 0 | 航空表演号，和vape推广无关 |
+| 476 | Christ's Family Podcast | https://cn.noxinfluencer.com/instagram/channel/28178275614 | 0 | 无相关标签和内容，无法判断为 vape 推广对象 |
+| 477 | Dudú Lagoon / Laguna Dudú | https://cn.noxinfluencer.com/instagram/channel/2260646726 | 0 | 旅游频道，与 vape 产品推广无关 |
+| 478 | Dr. Diana Joy Ostroff | ND | https://cn.noxinfluencer.com/instagram/channel/2066467150 | 0 | 健康养生向，缺少 vape 及消费品推广信号 |
+| 479 | Charles Folsom | https://cn.noxinfluencer.com/instagram/channel/3182485546 | 0 | 无标签无内容，相关性不足 |
+| 481 | Matt Shiozawa | https://cn.noxinfluencer.com/instagram/channel/1643443787 | 5 | 反烟草立场明显，虽有 vape 标签但不适合推广 |
+| 483 | Julius Bloznalis | https://cn.noxinfluencer.com/instagram/channel/1116437270 | 0 | 航空题材，与 vape 推广无关 |
+| 486 | MARY | https://cn.noxinfluencer.com/instagram/channel/1603168773 | 0 | 无有效标签，相关性不足 |
+| 487 | Daniel Nunez | https://cn.noxinfluencer.com/instagram/channel/6235302598 | 0 | 音乐文化号，缺少 vape 购买或使用场景 |
+| 488 | Kunal Sood, MD | https://cn.noxinfluencer.com/instagram/channel/5331733237 | 0 | 医疗健康向，但无 vape 推广信号 |
+| 489 | Dr. Chris PharmD | https://cn.noxinfluencer.com/instagram/channel/56363026063 | 0 | 医学/饮酒相关内容，不适合 vape 推广 |
+| 494 | Chantel Justene | https://cn.noxinfluencer.com/instagram/channel/263924553 | 0 | 美发美业账号，和 vape 无关 |
+| 495 | DEA-Drug Enforcement Admin. | https://cn.noxinfluencer.com/instagram/channel/14657078530 | -10 | 禁毒执法主题，与 vape 推广冲突 |
+| 498 | Benitez by Baylen Levine | https://cn.noxinfluencer.com/instagram/channel/11061214845 | 0 | 无相关标签和内容，相关性不足 |

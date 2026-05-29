@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+nox,instagram,Dreame,overall,500,311,62.2%
+nox,instagram,Dreame,head,500,311,62.2%
+nox,instagram,Dreame,mid,0,0,0.0%
+nox,instagram,Dreame,tail,0,0,0.0%

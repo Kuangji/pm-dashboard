@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+nox,instagram,resistance bands,overall,500,28,5.6%
+nox,instagram,resistance bands,head,500,28,5.6%
+nox,instagram,resistance bands,mid,0,0,0.0%
+nox,instagram,resistance bands,tail,0,0,0.0%

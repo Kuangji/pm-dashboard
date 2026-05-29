@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+nox,youtube,photography equipment,overall,500,236,47.2%
+nox,youtube,photography equipment,head,500,236,47.2%
+nox,youtube,photography equipment,mid,0,0,0.0%
+nox,youtube,photography equipment,tail,0,0,0.0%

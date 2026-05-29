@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+xtb,tiktok,agricultural products,overall,500,75,15.0%
+xtb,tiktok,agricultural products,head,500,75,15.0%
+xtb,tiktok,agricultural products,mid,0,0,0.0%
+xtb,tiktok,agricultural products,tail,0,0,0.0%

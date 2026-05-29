@@ -1,0 +1,16 @@
+{
+  "failures": [],
+  "recovered_failures": [
+    {
+      "provider": "xtb",
+      "keyword": "resistance bands",
+      "failed_at": "2026-05-28T14:45:18.084Z",
+      "message": "command_failed:channel_search_batch_review.js:1",
+      "stderr_preview": "[batch-review] Error: nox_fetch_failed:500:{\"errorNum\":500,\"message\":\"系统异常\",\"pageNum\":1,\"pageSize\":10,\"retDataList\":[],\"totalPage\":0,\"totalSize\":0} at fetchNoxJson (/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/.agents/skills/nox-channel-search-agent-batch-review/scripts/channel_search_batch_review.js:163:11) at process.processTicksAndRejections (node:internal/process/task_queues:104:5) at async collectNoxRecords (/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/.agents/skills/nox-channel-search-agent-batch-review/scripts/channel_search_batch_review.js:608:18) at async main (/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/.agents/skills/nox-channel-search-agent-batch-review/scripts/channel_search_batch_review.js:1246:21)",
+      "stdout_preview": "[2026-05-28T14:44:47.008Z] collect records start {\"provider\":\"xtb\",\"platform\":\"instagram\",\"keyword\":\"resistance bands\"}",
+      "recovered_at": "2026-05-29T00:54:05.489Z",
+      "recovered_run_dir": "tmp/channel-search-review/20260528-nox-vs-xtb-10kw2-instagram-global-front10-promotion-capacity-v1/resistance-bands/xtb-instagram"
+    }
+  ],
+  "note": "Historical provider failure recovered by rerun; kept for debugging provenance."
+}

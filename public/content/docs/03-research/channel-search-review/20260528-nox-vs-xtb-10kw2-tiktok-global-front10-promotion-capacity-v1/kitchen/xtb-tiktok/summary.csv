@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+xtb,tiktok,kitchen,overall,500,62,12.4%
+xtb,tiktok,kitchen,head,500,62,12.4%
+xtb,tiktok,kitchen,mid,0,0,0.0%
+xtb,tiktok,kitchen,tail,0,0,0.0%

@@ -1,0 +1,222 @@
+# Channel Search Batch Review
+
+- provider: nox
+- platform: youtube
+- keyword: yoga mat
+- total: 500
+- badcase率: 39.8%
+- labels: fit 98, adjacent 203, badcase 199, failed 0
+- score distribution: <0 55, 0-9 341, 10-19 91, 20+ 13
+- 平均 shard 执行时间: 191.1s（23 个 shard）
+- 平均单频道执行时间: 8.7s
+
+## Buckets
+| bucket | total | badcase | badcase_rate |
+|---|---:|---:|---:|
+| overall | 500 | 199 | 39.8% |
+| head | 500 | 199 | 39.8% |
+| mid | 0 | 0 | 0.0% |
+| tail | 0 | 0 | 0.0% |
+
+## Badcases
+| rank | channel | url | score | reason |
+|---:|---|---|---:|---|
+| 2 | Foxy's Domestic Side | https://cn.noxinfluencer.com/youtube/channel/UC-7e9wCYqsP5cqZOHTb749w | 0 | 仅DIY泛标签，和瑜伽垫关联弱 |
+| 4 | Purple Unicorns | https://cn.noxinfluencer.com/youtube/channel/UC--2-CR3wf_H9EHxJsTLR7Q | -15 | 宠物频道，和人用瑜伽垫目标不一致 |
+| 14 | Renown Health | https://cn.noxinfluencer.com/youtube/channel/UCaHcBHMtfsmoIgz9IMGPEsw | 0 | 医疗健康机构，不是瑜伽垫投放场景 |
+| 17 | Alicia Arol Lives On... | https://cn.noxinfluencer.com/youtube/channel/UCB4ZUDlQGHGQWGWm07kRFHw | 0 | 仅宠物/生活泛标签，和瑜伽垫不匹配 |
+| 19 | Opera Bound® | https://cn.noxinfluencer.com/youtube/channel/UCLkpRFIMcvIl0W9B4WI1cyw | 0 | 无标签无内容证据，无法判断为相关 |
+| 20 | IWMF - International Waldenstrom Foundation | https://cn.noxinfluencer.com/youtube/channel/UCHz_Lzky3SW-p2uEwCEQ0Bg | 0 | 癌症健康机构，不适合瑜伽垫推广 |
+| 22 | Yoloha Yoga | https://cn.noxinfluencer.com/youtube/channel/UCIdL3adzhWn6rACtR1qJ79g | 0 | 无可用标签与视频证据，相关性不足 |
+| 23 | Rachel Kavela Yoga | https://cn.noxinfluencer.com/youtube/channel/UC_Igqo9cIs7ItscR2Ujr79Q | 0 | 无可用标签与视频证据，相关性不足 |
+| 24 | Healthy Vegan Living | https://cn.noxinfluencer.com/youtube/channel/UCL9-ldFspTzzQeAhSpw6Sgg | 0 | 烹饪/素食频道，与瑜伽垫不相关 |
+| 26 | Relax Sound Space | https://cn.noxinfluencer.com/youtube/channel/UCdztw8FE1ZwoM18nZAvKwtA | -12 | 放松音景/ASMR型频道，与瑜伽垫推广场景不符 |
+| 31 | 🕵️‍♀️ KitKat’s Korner | https://cn.noxinfluencer.com/youtube/channel/UCMfwDVAkrXosNu-sThbiy-A | 0 | 缺少与瑜伽垫相关的内容证据 |
+| 38 | WILKYS | https://cn.noxinfluencer.com/youtube/channel/UC_jDgxkbtUQV3wYKpl0sTlQ | 0 | 缺少与瑜伽垫相关的内容证据 |
+| 42 | Rooted yoga & Flex Feet Flow | https://cn.noxinfluencer.com/youtube/channel/UC8TJR-9EaH3vF9kyuNohuHg | -15 | 汽车类标签占主导，与瑜伽垫受众明显冲突 |
+| 44 | The Best ABC | https://cn.noxinfluencer.com/youtube/channel/UC7hsME4e5EHUcng9mKgNpPQ | 0 | 科技频道，和瑜伽垫受众不匹配 |
+| 51 | Rob Raffety | https://cn.noxinfluencer.com/youtube/channel/UC8Qk1LdniND--45E1VBQXIA | 0 | 缺少瑜伽/健身相关信号，无法判断适配 |
+| 53 | Everyday Fitness Hacks | https://cn.noxinfluencer.com/youtube/channel/UC461Mhj9dQ36QoQES9YTlZg | 0 | 无足够标签/视频证据，难判断投放适配 |
+| 59 | ILONA SELKE | https://cn.noxinfluencer.com/youtube/channel/UCOjfO9IMMXsyj_qdpu11Ulw | 0 | 无相关标签，缺少投放依据 |
+| 61 | THANKS LEE | https://cn.noxinfluencer.com/youtube/channel/UCh5nQhKtidLii_jaWkj97Nw | 0 | 无相关信号，适配度不足 |
+| 62 | Lorena Espinoza Design | https://cn.noxinfluencer.com/youtube/channel/UC4NFfpnkW4TQo6zc_s3IDtQ | 0 | 设计频道，缺少瑜伽/健身相关 |
+| 66 | Home Workout Lab | https://cn.noxinfluencer.com/youtube/channel/UCBcHwcf2TjIn8qEWMmw-Itg | 0 | 仅有名称暗示，缺少可用证据 |
+| 70 | StrangeAI | https://cn.noxinfluencer.com/youtube/channel/UC0cFU2bYcYKDajv7QQDuGDw | 0 | 新闻/娱乐向，和产品推广不匹配 |
+| 71 | Health Info Tips | https://cn.noxinfluencer.com/youtube/channel/UCJklYyle9sP7bWX_ZXIZ4Ug | 0 | 仅有健康泛标签，证据不足 |
+| 73 | Zsrnb | https://cn.noxinfluencer.com/youtube/channel/UCS--KJF9azzl-EXiOCIo5lA | 0 | 混合泛标签，缺少瑜伽垫相关证据 |
+| 76 | Angelmay Bisaya-American | https://cn.noxinfluencer.com/youtube/channel/UC6M7PyDyQOxqUzZSzI7OjEg | 0 | 宠物美食账号，与瑜伽垫推广场景不匹配 |
+| 77 | More Info | https://cn.noxinfluencer.com/youtube/channel/UCl3MY1-NrULFkKId6JZ4e_g | 0 | 无标签无视频，缺少任何可用相关性证据 |
+| 83 | Trending Style List | https://cn.noxinfluencer.com/youtube/channel/UCG5MYuczIM2snqQO24hct-A | 0 | 无相关内容证据 |
+| 84 | Mad About Cooking At Home | https://cn.noxinfluencer.com/youtube/channel/UC6C1wgXvATY7B2uR53nQZhA | 0 | 烹饪号，与瑜伽垫无关 |
+| 85 | Odina H. Palmer | https://cn.noxinfluencer.com/youtube/channel/UCctX2HJpjBqaf5gN5cUvWOw | 0 | 无相关证据 |
+| 86 | Care New England | https://cn.noxinfluencer.com/youtube/channel/UCbtpg_JajxVSxVmywTtbzuQ | 2 | 医疗账号仅有泛健康，推广场景不合适 |
+| 87 | Rider of The Storm | https://cn.noxinfluencer.com/youtube/channel/UCM5lHW0UyvldbxZrDqyeQtA | 0 | 无相关证据 |
+| 88 | NEW YOGA CITY | https://cn.noxinfluencer.com/youtube/channel/UCFOU8G9mk4LoxsrAY7gtq3Q | -10 | 音乐娱乐号，和物理产品推广形式冲突 |
+| 89 | NUBIAN GODDESS ENTERPRISES | https://cn.noxinfluencer.com/youtube/channel/UCaflYQJfj0HoMm8gXPe5XFA | 0 | 无相关证据 |
+| 90 | OddlyPawfect | https://cn.noxinfluencer.com/youtube/channel/UCrBXSpSV7XL-Bgoc0q9u1Qg | 0 | 疑似宠物号，和人用瑜伽垫不匹配 |
+| 93 | Naomi The G | https://cn.noxinfluencer.com/youtube/channel/UCvr3ztKQ11vvfRx7LSrlfsg | 0 | 无相关证据 |
+| 98 | Caroling Geary | https://cn.noxinfluencer.com/youtube/channel/UCEfW6UynmaCoDF2e_1P27bQ | 0 | 无相关证据 |
+| 99 | Caldera Films | https://cn.noxinfluencer.com/youtube/channel/UCLeMXJ-91-z5HpE99wB5CSg | 0 | 影视频道，与瑜伽垫推广无关 |
+| 100 | DaneeyLiving | https://cn.noxinfluencer.com/youtube/channel/UCnQc0s4p9x1RWXGlswoaEWA | 0 | 生活方式号证据不足，相关性弱 |
+| 104 | EO Wonder Podcast | https://cn.noxinfluencer.com/youtube/channel/UCgcnB-RlFZkcJKNITKdZT3g | 0 | 播客向，缺少商品导购与瑜伽相关证据 |
+| 106 | JillyN | https://cn.noxinfluencer.com/youtube/channel/UC--HPaiKtsr5Ox2Bd7vJMKA | 0 | 时尚美妆向，和瑜伽垫匹配弱 |
+| 108 | Harper Lewis | https://cn.noxinfluencer.com/youtube/channel/UC-2q4fQzVSVeFdxtzZmZZRw | 0 | 无相关标签，缺少匹配证据 |
+| 109 | SuperNovaa36 Gaming | https://cn.noxinfluencer.com/youtube/channel/UC-6xasvB9-IpiC7a9Q_k2Cw | -15 | 游戏娱乐为主，受众明显不匹配 |
+| 110 | Spirited Snoopy | https://cn.noxinfluencer.com/youtube/channel/UC-7S1ZLuVu6G3ljt7Vdcw1g | -15 | 宠物狗内容为主，受众不适合 |
+| 112 | HITEC  LASER | https://cn.noxinfluencer.com/youtube/channel/UC-I5k0PkAZl0ryQ_2Cc3SsQ | 0 | 无可用相关信号 |
+| 115 | Nullix | https://cn.noxinfluencer.com/youtube/channel/UC-PaH1pxJ4UdT2KC4KMHYYA | 0 | 无标签无视频，相关性不足 |
+| 116 | Yellow Toon Tales | https://cn.noxinfluencer.com/youtube/channel/UC-Qz77jvpWQuVHI6m2R2rIA | 0 | 动画故事向，和瑜伽垫无关 |
+| 117 | Owl Speaks Less | https://cn.noxinfluencer.com/youtube/channel/UC-SzZZOH8FJhpDMKiKhrO-Q | -15 | 游戏娱乐为主，和瑜伽垫不符 |
+| 118 | Laurent LIEGEOIS | https://cn.noxinfluencer.com/youtube/channel/UC-W2faeZO7k0uHDrp_t0aXQ | -15 | 宠物/动物内容占主导，受众不匹配 |
+| 121 | Mashrafis Mom | https://cn.noxinfluencer.com/youtube/channel/UC-byXk0OmvPEd-BCKy9PZEA | -10 | 婴儿辅食号，成人瑜伽垫受众偏离 |
+| 132 | Know Ones Gaming | https://cn.noxinfluencer.com/youtube/channel/UC-zxDJyEmB9pUBX2VTrqw5Q | -15 | 纯游戏内容，与瑜伽垫受众不符 |
+| 133 | ジトゥ公式 | https://cn.noxinfluencer.com/youtube/channel/UC0-e99Ewe4EgkpW50UYD4vA | -15 | VR/游戏导向，和瑜伽垫推广场景不匹配 |
+| 137 | Whispers of a Warrior | https://cn.noxinfluencer.com/youtube/channel/UC0A86lqQsAmjdVByzwJ8FfQ | 0 | 无可见相关信号 |
+| 138 | Jocebo Qusehi | https://cn.noxinfluencer.com/youtube/channel/UC0B-bWqlRqy8gnVwdDhFTLw | 0 | 无可见相关信号 |
+| 140 | DIY Pinto | https://cn.noxinfluencer.com/youtube/channel/UC0GhF05mfZjmSRLGqwlB2zQ | -10 | ASMR/清洁向格式，产品推广适配差 |
+| 142 | SoundCover ~ Sound Outdoor Protection | https://cn.noxinfluencer.com/youtube/channel/UC0IaA5yqozwNb8v4P1pzRXw | 0 | 无可见相关信号 |
+| 144 | CYRINTHIA212 | https://cn.noxinfluencer.com/youtube/channel/UC0KdzhIX__STgVnwxYjQYCQ | 0 | 无可见相关信号 |
+| 150 | Willow Creek Family Homestead | https://cn.noxinfluencer.com/youtube/channel/UC0pDpfSY9Efh69gTu2Wdm-A | 2 | 家庭农场vlog，缺少瑜伽/健身/产品推广语境 |
+| 151 | INEVIFIT LLC | https://cn.noxinfluencer.com/youtube/channel/UC0pGVWevby_PO0apqnpOk4A | 0 | 无瑜伽/健身内容，且缺少可推广证据 |
+| 152 | baleafsports | https://cn.noxinfluencer.com/youtube/channel/UC0plmBZ4Tafx3An54QoG_Dg | 0 | 无相关内容标签，健身垫推广证据不足 |
+| 156 | Haley Mullin | https://cn.noxinfluencer.com/youtube/channel/UC0vSP_FSjyxvUtitBgDRTrQ | 0 | 缺少内容与标签，相关性不足 |
+| 157 | Shelby Wright | https://cn.noxinfluencer.com/youtube/channel/UC1-nJGwuCvDLbYlYfsWGb-g | 0 | 缺少内容与标签，相关性不足 |
+| 158 | Astra Om Jokes | https://cn.noxinfluencer.com/youtube/channel/UC12rEiiJHpxIoZSVyaiCysA | -15 | 搞笑娱乐号，和产品推广场景不匹配 |
+| 159 | cinema ai | https://cn.noxinfluencer.com/youtube/channel/UC17BEE4khvAA53WubVKSwAA | -15 | 影视短AI娱乐号，和瑜伽垫无关 |
+| 162 | FA Printing Machine Manufacturer Limited | https://cn.noxinfluencer.com/youtube/channel/UC1CD3f0PrH2iYN65ZqN-CwA | -15 | 工业印刷机厂家号，和瑜伽垫受众不符 |
+| 167 | Learning Perspective | https://cn.noxinfluencer.com/youtube/channel/UC1JTIpQ9zaR4HsPm3OWSz_w | 0 | 缺少内容与标签，相关性不足 |
+| 168 | ToonPoco | https://cn.noxinfluencer.com/youtube/channel/UC1T2VKGzawLM78-ab_r32cg | -15 | 动画搞笑号，目标受众不匹配 |
+| 169 | AIPaint_Studio | https://cn.noxinfluencer.com/youtube/channel/UC1Yej8smn-QV8jWv12KuoMA | -15 | 音乐娱乐号，产品推广适配度低 |
+| 171 | Green Hook Studio | https://cn.noxinfluencer.com/youtube/channel/UC1fuzSRCEkY-xEeVTHJJ8vQ | 0 | 缺少内容与标签，相关性不足 |
+| 173 | Amazon Market | https://cn.noxinfluencer.com/youtube/channel/UC1knP1gQ1_4s0eXnK78Lhpw | 0 | 缺少内容与标签，相关性不足 |
+| 177 | Magdalena | https://cn.noxinfluencer.com/youtube/channel/UC1w2jBltt4-4Ge6s7tCuodA | 0 | 无标签无内容证据，难判断与瑜伽垫相关 |
+| 178 | IDareUFit | https://cn.noxinfluencer.com/youtube/channel/UC1z9n9EMuzfA8AiaK4xcLAw | 0 | 时尚短视频为主，缺少健身/瑜伽产品语境 |
+| 185 | xo Auntie Jess | https://cn.noxinfluencer.com/youtube/channel/UC2MTxP0vj5RHpCgTR3IbJkQ | -15 | 宠物娱乐内容，和人用瑜伽垫受众冲突 |
+| 189 | Aiexpress Times TV | https://cn.noxinfluencer.com/youtube/channel/UC2XXAXV6wHp9dcazkNeYmtg | -3 | 偏资讯媒体内容，与产品推广场景不匹配 |
+| 191 | Abby Strauss | https://cn.noxinfluencer.com/youtube/channel/UC2b33OFBaa-1UXondLO2GUg | 0 | 无可用标签和内容证据，相关性不足 |
+| 194 | Scooter Quest | https://cn.noxinfluencer.com/youtube/channel/UC2fc3n3t6d2SO7tXqh4LRNA | -10 | 直播娱乐向内容，和产品推广场景不符 |
+| 195 | GAMING | https://cn.noxinfluencer.com/youtube/channel/UC2hz98hlT3mZ4OHlw8o--Ig | -10 | 游戏内容受众偏离，几乎无产品相关性 |
+| 200 | LivingJen | https://cn.noxinfluencer.com/youtube/channel/UC2w9Ft4w84TdMSmJcsvg5DA | 0 | 无明确主题证据，相关性不足 |
+| 204 | Janome | https://cn.noxinfluencer.com/youtube/channel/UC3A-Q-V2aueEBUIWdBoGDRg | -15 | 缝纫机品牌号，和瑜伽垫类目明显不匹配 |
+| 206 | Arrowhead Addict: A Kansas City Chiefs Podcast | https://cn.noxinfluencer.com/youtube/channel/UC3CdquRsu60VZcbGMfr1WgQ | -15 | 美式橄榄球播客，受众和瑜伽垫推广场景不匹配 |
+| 211 | Shocking Camera Footage | https://cn.noxinfluencer.com/youtube/channel/UC3JdYhrcu5XwQTfIRVBOjXA | -15 | 娱乐偷拍视频为主，属于明显推广格式错位 |
+| 222 | Tails of Triumph Cat Facts | https://cn.noxinfluencer.com/youtube/channel/UC3qGh4XM-aXDEZT7NBT5X2Q | -15 | 宠物猫内容，和人用瑜伽垫目标受众不符 |
+| 224 | Sumukh Torgalkar | https://cn.noxinfluencer.com/youtube/channel/UC3sFhoAWQoqx5HQt6tuLSTw | -15 | 娱乐短内容为主，和商品推广场景不匹配 |
+| 225 | A Recap Channel | https://cn.noxinfluencer.com/youtube/channel/UC3suphlV5B7Z0qTOK6PxlKA | -10 | 娱乐短内容为主，和商品推广场景不匹配 |
+| 226 | Top Picks | https://cn.noxinfluencer.com/youtube/channel/UC3x6VIV634ehOElSxkjk7fw | 0 | 无标签无内容，几乎无相关性 |
+| 228 | Zayra Mo | https://cn.noxinfluencer.com/youtube/channel/UC4-6eqbNAe_rLThZ2bGveTg | 0 | 星座娱乐向，和瑜伽垫推广无关 |
+| 230 | Beauty Chill | https://cn.noxinfluencer.com/youtube/channel/UC401iYSzGgm_yc9m1auIJPQ | 0 | 无标签，缺少相关受众 |
+| 231 | Pix | https://cn.noxinfluencer.com/youtube/channel/UC40bvGuwABY6947soOmz4uA | 0 | 无标签，无相关证据 |
+| 235 | RAMONI | https://cn.noxinfluencer.com/youtube/channel/UC4CVM_SGlMCl8qGxKFPBkrA | 0 | 发型/美容向，和瑜伽垫不匹配 |
+| 236 | Andrea Miklasz | https://cn.noxinfluencer.com/youtube/channel/UC4G0ke2A4MCaAWhlpqdtaYw | 0 | 美妆娱乐向，缺少健身场景 |
+| 240 | Nine Club Clips | https://cn.noxinfluencer.com/youtube/channel/UC4UDHmvKFlTTF8jf7vdwyig | 0 | 滑板娱乐向，和瑜伽垫场景不符 |
+| 241 | Janis John | https://cn.noxinfluencer.com/youtube/channel/UC4V3EBh1y2f87bh18t63MVw | 0 | 母婴娱乐向，和瑜伽垫推广不匹配 |
+| 243 | NotRubyRoblox | https://cn.noxinfluencer.com/youtube/channel/UC4Yz24_AHY6deq863K-dFTA | 0 | 游戏娱乐向，和瑜伽垫不匹配 |
+| 244 | CALPAK | https://cn.noxinfluencer.com/youtube/channel/UC4_01UUjrnPpNGan6Rw_GSQ | 0 | 旅行箱包向，和瑜伽垫关联弱 |
+| 247 | Dog Diaries | https://cn.noxinfluencer.com/youtube/channel/UC4h7YfEtddaKMOX4Q_uwDXQ | -15 | 狗狗宠物向，和人用瑜伽垫互斥 |
+| 249 | Keith Gerone | https://cn.noxinfluencer.com/youtube/channel/UC4nqhsteyrcxI49of6v-4aA | 0 | 无标签无内容，几乎无相关性 |
+| 253 | Ideal Massager | https://cn.noxinfluencer.com/youtube/channel/UC50Us4yoigHT77LcnyTzw2Q | 0 | 仅有产品名线索，和瑜伽垫受众不匹配 |
+| 257 | Extreme Sandbox | https://cn.noxinfluencer.com/youtube/channel/UC54V5jwmVK12fNGkPfT_P3w | 0 | 工程机械/施工内容，与瑜伽垫受众不相关 |
+| 260 | Katie Heart | https://cn.noxinfluencer.com/youtube/channel/UC5CHY9LtHsktSSR0nMV39Xg | 0 | 无标签无视频，证据不足 |
+| 261 | Free Audiobooks | https://cn.noxinfluencer.com/youtube/channel/UC5ERKMWTkNtADyYqKdl5WJw | 0 | 音频内容与实体用品推广不匹配 |
+| 262 | Bushcraft Girl | https://cn.noxinfluencer.com/youtube/channel/UC5KlmxK9tRR8gUmzvWM0T8Q | 0 | 荒野求生向，和瑜伽垫目标人群不一致 |
+| 268 | SunflowerScreenings | https://cn.noxinfluencer.com/youtube/channel/UC5aVK9iUhsfhaSHLVG-oYIg | -15 | 影视娱乐内容，和产品推广场景明显不匹配 |
+| 271 | Marizol O (MarizolYogiDancer) | https://cn.noxinfluencer.com/youtube/channel/UC5lLAYCWGZO-_VGOC9rlhmQ | -15 | 占卜娱乐舞蹈向频道，与瑜伽垫推广场景不匹配 |
+| 274 | Maggie Moline | https://cn.noxinfluencer.com/youtube/channel/UC5ow4B5pVQ7f8EuqGWzBTyA | 0 | 信息过少，无法判断相关性 |
+| 279 | Leadership Loading Podcast | https://cn.noxinfluencer.com/youtube/channel/UC65Oh1DK1AvV7gM7mrtk3BA | -6 | 领导力播客，和瑜伽垫无关 |
+| 280 | Pongsathon Shuputtapong | https://cn.noxinfluencer.com/youtube/channel/UC67BjwOLwKh46wkAkBVpmPA | 0 | 缺少内容与标签证据，难判断相关性 |
+| 282 | TrendLox | https://cn.noxinfluencer.com/youtube/channel/UC69SrNIHqdMVKd9J5IVvSyA | -8 | 宠物娱乐号，和瑜伽垫不匹配 |
+| 283 | The Book Of Jane | https://cn.noxinfluencer.com/youtube/channel/UC6FD4R2Da0jl1ovrnouqOVQ | 0 | 缺少内容与标签证据，难判断相关性 |
+| 284 | The smell of tales | https://cn.noxinfluencer.com/youtube/channel/UC6GJjNjI9F4E2Bn3R0FWlxw | 0 | 缺少内容与标签证据，难判断相关性 |
+| 288 | Living Testimony | https://cn.noxinfluencer.com/youtube/channel/UC6RllB9sEvA4IY-hdY5C1lg | -5 | 新闻评论播客，和瑜伽垫无关 |
+| 291 | Madeline Rebecca | https://cn.noxinfluencer.com/youtube/channel/UC6cMYzZuQ1BX0SchZRCqrTg | 0 | 缺少内容与标签证据，难判断相关性 |
+| 292 | CompanyCam | https://cn.noxinfluencer.com/youtube/channel/UC6elK8oDTaB4yqsqu1vFW3w | -7 | 施工软件号，和瑜伽垫无关 |
+| 303 | Petooze | https://cn.noxinfluencer.com/youtube/channel/UC77dkqjuqSKTTFTXFw1-hfg | -15 | 宠物搞笑频道，和人用瑜伽垫受众不匹配 |
+| 304 | Elara Foxx | https://cn.noxinfluencer.com/youtube/channel/UC79sKjrzUOjw_g93LdZHkOw | -15 | 娱乐搞笑频道，缺少健身/产品推广语境 |
+| 308 | GuestGram | https://cn.noxinfluencer.com/youtube/channel/UC7LkKzIRzYS07CjAa8Srxeg | 0 | 无标签无内容证据，相关性不足 |
+| 312 | SourcinBox | https://cn.noxinfluencer.com/youtube/channel/UC7OBA5XEE4OUY3P5Jlgvcpw | 0 | 偏选品/代发语境，不是面向瑜伽垫消费者的创作者 |
+| 313 | Maria De Noda | https://cn.noxinfluencer.com/youtube/channel/UC7PrHnantu-Ji1TffWbfrlw | 0 | 缺少可判断的内容与受众信号 |
+| 314 | FRIENDS & NEEDS | https://cn.noxinfluencer.com/youtube/channel/UC7Q1kZJEcZf4zCSLifjiKug | 0 | 缺少可判断的内容与受众信号 |
+| 315 | Ahmed karim.1 | https://cn.noxinfluencer.com/youtube/channel/UC7QNsv8jnihZrn054R5RdPw | 0 | 缺少可判断的内容与受众信号 |
+| 319 | YepeTube | https://cn.noxinfluencer.com/youtube/channel/UC7XhA4-4SHtMk5OBAXHo1bQ | 0 | 旅行住宿频道，和瑜伽垫推广关联很弱 |
+| 320 | Fashion Corner pro | https://cn.noxinfluencer.com/youtube/channel/UC7ZgCSLNMf5E1IQG05iUNOg | -5 | 内容杂糅且偏成人品类，不适合瑜伽垫推广 |
+| 321 | Wealth Optimistic | https://cn.noxinfluencer.com/youtube/channel/UC7ae7jfAzbD3M7Q5aKqxtgQ | 0 | 偏励志娱乐，不是瑜伽垫的目标创作者 |
+| 322 | Dreamy Jigsaws 🎧 | https://cn.noxinfluencer.com/youtube/channel/UC7f0vEcKBmzndaOwp9rF14g | 0 | 缺少可判断的内容与受众信号 |
+| 323 | Teen-Z Life | https://cn.noxinfluencer.com/youtube/channel/UC7fN25W2tL2AHqUYl8jkDuQ | -15 | 青少年娱乐频道，产品推广语境弱 |
+| 326 | Jina Yoga | https://cn.noxinfluencer.com/youtube/channel/UC7saBXOc6WgbvXhxNt7i6WQ | -10 | 娱乐/影视标签占主导，和瑜伽垫推广不匹配 |
+| 327 | Michelle's House of Miniatures | https://cn.noxinfluencer.com/youtube/channel/UC7yfdQRGuT9V94hgiLfgt9w | 0 | 缺少标签和视频证据，无法判断为相关受众 |
+| 328 | AltraKitty | https://cn.noxinfluencer.com/youtube/channel/UC8-YqCHANBKMzj5l1yPs4-g | 0 | 缺少标签和视频证据，无法判断为相关受众 |
+| 329 | Sav | https://cn.noxinfluencer.com/youtube/channel/UC82Onp_jvCc2mMeXDK2I1zw | -15 | 舞蹈音乐娱乐向，和瑜伽垫推广场景不符 |
+| 331 | Chizi Duru | https://cn.noxinfluencer.com/youtube/channel/UC88--r3FklrnWjfzRy7LUIg | -5 | 娱乐美妆向，缺少瑜伽/健身受众证据 |
+| 332 | Reinoso Designs | https://cn.noxinfluencer.com/youtube/channel/UC888I_uNUNpYTVRiREBZzzQ | 0 | 缺少标签和视频证据，无法判断为相关受众 |
+| 336 | WORTH with Darren Khristian | https://cn.noxinfluencer.com/youtube/channel/UC8G5TjwG3evaY6kvSDmUp2Q | -10 | 搞笑娱乐为主，产品推广相关性低 |
+| 338 | BiteTheTruth | https://cn.noxinfluencer.com/youtube/channel/UC8KUgrLzyc7_OiS6fqRcHcg | 0 | 缺少标签和视频证据，无法判断为相关受众 |
+| 339 | Deborah Savage | https://cn.noxinfluencer.com/youtube/channel/UC8MKjg2fy3Lc2Wk5w46_qHQ | 0 | 美妆时尚向，缺少健身/瑜伽证据 |
+| 344 | Nahre Sol | https://cn.noxinfluencer.com/youtube/channel/UC8R8FRt1KcPiR-rtAflXmeg | -15 | 音乐表演内容为主，和瑜伽垫受众不匹配 |
+| 347 | Natural Current | https://cn.noxinfluencer.com/youtube/channel/UC8a1go5ZpQRCUV98k4ZVWQg | 0 | 缺少标签和视频证据，无法判断为相关受众 |
+| 350 | VivaTerra | https://cn.noxinfluencer.com/youtube/channel/UC8uGLuEeFtthlulAgOkceIQ | 0 | 缺少标签和视频证据，无法判断为相关受众 |
+| 351 | Cyber Witch | https://cn.noxinfluencer.com/youtube/channel/UC8ul0FaVgQsZT2fdNQ5LkRQ | 0 | 玄学娱乐向，和瑜伽垫推广关联弱 |
+| 352 | Vicki's Corner | https://cn.noxinfluencer.com/youtube/channel/UC8urtn-HbLAwdSHEnzbIxCg | 0 | 信息不足，未见瑜伽相关证据 |
+| 354 | FLASHFORGE 3D PRINTER | https://cn.noxinfluencer.com/youtube/channel/UC8yH8hAizMOJfrluG2vLKQg | 0 | 3D打印垂直，和瑜伽垫品类不相关 |
+| 355 | Nantlis Fashion | https://cn.noxinfluencer.com/youtube/channel/UC8yaogROxIzKl5f_euR-z5g | 0 | 时尚向偏离瑜伽垫推广场景 |
+| 356 | BlueSmurfellaXD | https://cn.noxinfluencer.com/youtube/channel/UC91mJ-za0k5d4nfupQu4mvQ | 0 | 游戏内容为主，目标受众不匹配 |
+| 358 | ModelsFootPrint | https://cn.noxinfluencer.com/youtube/channel/UC96LvrOy8-SwPgky0x-140g | 0 | 舞蹈短视频为主，和瑜伽垫关联弱 |
+| 360 | Jasmynn_RDN | https://cn.noxinfluencer.com/youtube/channel/UC9EYhyEQWaKvd3vWeY0aevg | 0 | 信息不足，未见相关推广证据 |
+| 362 | Gonex | https://cn.noxinfluencer.com/youtube/channel/UC9PYi830VeRznr2PxxyGHpA | 0 | 品牌号无内容证据，相关性不足 |
+| 366 | It's A Bountiful Life | https://cn.noxinfluencer.com/youtube/channel/UC9VKrrV33g8H0rirpqTMH-Q | 0 | 生活方式泛频道，证据不足 |
+| 367 | Unusual ASMR | https://cn.noxinfluencer.com/youtube/channel/UC9YHkGzZvFFRKm0NZ9S8plg | -15 | ASMR放松音频格式，与实物推广不匹配 |
+| 368 | Punkinnonstop | https://cn.noxinfluencer.com/youtube/channel/UC9__lgUNari1t99VwP6VZlw | 0 | 游戏/电子消费垂直，和瑜伽垫无关 |
+| 369 | carynis1hotassgirl | https://cn.noxinfluencer.com/youtube/channel/UC9a4g5JyiTMP6J2gMqRzwGQ | 0 | 娱乐向泛内容，缺少健身场景 |
+| 370 | SuSu Channel | https://cn.noxinfluencer.com/youtube/channel/UC9asH07ozPFZEiqsDWC4DIw | -15 | 宠物受众，和人用瑜伽垫不匹配 |
+| 372 | Carella Ross | https://cn.noxinfluencer.com/youtube/channel/UC9itKyKVdJUiFHN4xGXI-4g | 0 | 音乐娱乐向，缺少产品推广场景 |
+| 373 | Tonet Sopucici | https://cn.noxinfluencer.com/youtube/channel/UC9oJUZ6SIBWhM8klgE-Wh9w | 0 | 信息不足，未见相关证据 |
+| 376 | Mohini Bhandarkar | https://cn.noxinfluencer.com/youtube/channel/UCA-QOBBb_jccKxCCyCitpCQ | 0 | 无标签，缺少瑜伽/健身/商品推广相关证据 |
+| 378 | Hyper TecX | https://cn.noxinfluencer.com/youtube/channel/UCA4cYHj2Kix5VyRs6_pr9hg | 0 | 无标签，缺少明确受众与产品场景 |
+| 381 | Your-Self | https://cn.noxinfluencer.com/youtube/channel/UCAC0ewzQyseW3pd0IQekbYQ | 0 | 无标签，几乎无推广匹配信号 |
+| 383 | Randy Harlequin | https://cn.noxinfluencer.com/youtube/channel/UCAMOp6cWWbyJx7dBPnAUKmA | 0 | 无标签，缺少可判断的内容方向 |
+| 389 | PlantFoodCulinaryArts | https://cn.noxinfluencer.com/youtube/channel/UCAbqc3LD-WzFhX-_MWxxAmQ | 0 | 无标签，缺少可用相关性信号 |
+| 394 | Madd Creative Life | https://cn.noxinfluencer.com/youtube/channel/UCAjlGHsLLdmbc_XrPhFR2dw | -7 | 虽有瑜伽，但ASMR格式与产品推广强冲突 |
+| 399 | Crochet With Julie | https://cn.noxinfluencer.com/youtube/channel/UCAvutx2mAslV_SawAtC9N7w | 0 | 手作教程频道，和瑜伽垫类目不匹配 |
+| 400 | Geek Dinks | https://cn.noxinfluencer.com/youtube/channel/UCAwe4qS1GY1ejkSVYsTjiJw | 0 | 无标签，无法判断适配度 |
+| 402 | Mimi and Saturn | https://cn.noxinfluencer.com/youtube/channel/UCB2OL4aPp3y_t0eVNCQRunA | -15 | 宠物娱乐频道，与人用瑜伽垫目标不符 |
+| 403 | Fly-Around- The-World | https://cn.noxinfluencer.com/youtube/channel/UCB2ld02IzIrtouWrFy0PCIA | 0 | 缺少主题和产品相关信号 |
+| 404 | Natasa Boucher | https://cn.noxinfluencer.com/youtube/channel/UCB3IyOlCBu2tSGmpH52cWIg | 0 | 缺少主题和产品相关信号 |
+| 405 | Tristan Schmoldt Travels | https://cn.noxinfluencer.com/youtube/channel/UCB5B0Li4qJzru_clv5u7Ndw | 0 | 旅行Vlog与瑜伽垫购买场景关联弱 |
+| 406 | Smart Home 101 | https://cn.noxinfluencer.com/youtube/channel/UCB74tpdumqNGXQkUe8o780A | 0 | 智能家居题材，和瑜伽垫目标品类不匹配 |
+| 408 | SwimOutletGear | https://cn.noxinfluencer.com/youtube/channel/UCBBJOKspoiEETdczTtxk-dA | 0 | 泳装/竞技游泳受众，和瑜伽垫场景偏离 |
+| 412 | Billy Tildsley | https://cn.noxinfluencer.com/youtube/channel/UCBOdGCHUARdURQmnW1Th9WA | 0 | 棒球娱乐内容，目标受众不匹配 |
+| 414 | Blu Soul Aloha☘️ | https://cn.noxinfluencer.com/youtube/channel/UCBSS082ACUKLehTyXtOtjQg | 0 | 园艺宠物混合频道，和瑜伽垫推广场景弱 |
+| 418 | Tabitha Brown | https://cn.noxinfluencer.com/youtube/channel/UCB_AXXiVoEIHbJrYQMsZK7g | 0 | 美食励志频道，缺少运动器材相关受众 |
+| 420 | nomadicstate | https://cn.noxinfluencer.com/youtube/channel/UCBiEMvgaK8JqaCMch4uifyg | 0 | 无标签无内容信号，无法判断相关性 |
+| 421 | Amrut Khajana Life Manisha | https://cn.noxinfluencer.com/youtube/channel/UCBiFPI6BzWnnM73WD0-dL6Q | 0 | 旅行短视频频道，与瑜伽垫目标受众不匹配 |
+| 425 | Pamela Isabel | https://cn.noxinfluencer.com/youtube/channel/UCCFFqx4MkFwitJ2xCvtVZPw | 0 | 无可用标签和视频信号，相关性不足 |
+| 427 | AVA LEE | https://cn.noxinfluencer.com/youtube/channel/UCCLCK8NeNXF8SHulVDXicMw | -5 | 美妆护肤向，和瑜伽垫消费场景不匹配 |
+| 429 | The Profit Goddess! | https://cn.noxinfluencer.com/youtube/channel/UCCPPRVvwZOLF-1EtsXxqXFw | 0 | 仅社会类标签，缺少可推广瑜伽垫的场景 |
+| 431 | Mega Pouch | https://cn.noxinfluencer.com/youtube/channel/UCCQPTYCQJmP40J1dzEnU22w | -10 | 母婴垂类，受众与成人瑜伽垫不一致 |
+| 433 | SEVEN SPAULDING | https://cn.noxinfluencer.com/youtube/channel/UCCREdcjbcKGUOBVFRBI1wxw | 0 | 宗教社会类，和瑜伽垫投放目标偏离 |
+| 436 | USATechBuzz | https://cn.noxinfluencer.com/youtube/channel/UCCZDNOsK_kDuQybYjBIXVew | -5 | 科技向频道，和瑜伽垫主题不匹配 |
+| 440 | Kristin Hartjes | https://cn.noxinfluencer.com/youtube/channel/UCCnOhdgNWcJFKLWPBEeI_JA | 0 | 健康教练业务向，不是商品推广型内容 |
+| 442 | Chloe HITEC Laser | https://cn.noxinfluencer.com/youtube/channel/UCCvoC9D3GrJXhtjXPSxlmvg | -10 | 工业激光设备频道，品类完全不相干 |
+| 443 | Windstar Cruises | https://cn.noxinfluencer.com/youtube/channel/UCCypXqgnU04NX64eVJ95KmQ | -5 | 邮轮旅游频道，和瑜伽垫受众偏离 |
+| 445 | MIRROR LAG | https://cn.noxinfluencer.com/youtube/channel/UCD3PFz0Hr67CslxtKg2E1JA | -15 | 宠物娱乐向，和人用瑜伽垫明显不符 |
+| 449 | Worlds List Cars | https://cn.noxinfluencer.com/youtube/channel/UCDA4P-i6AevZNWOd0zTJWSw | -5 | 汽车频道，和瑜伽垫消费场景不一致 |
+| 450 | Nacho Gunk | https://cn.noxinfluencer.com/youtube/channel/UCDFbTyXAiPr6tqrZRmxEc0g | 0 | 缺少标签与内容线索，无法判断为相关 |
+| 453 | Tintin Tania Essential | https://cn.noxinfluencer.com/youtube/channel/UCDJ5DqaiPEfiN5hTraWq_2A | 0 | 无可用标签或视频信号，相关性证据不足 |
+| 457 | GoWithShorts | https://cn.noxinfluencer.com/youtube/channel/UCDWlY3in0rwTOpOtBqul-DA | -10 | 娱乐短视频导向，属于明显的产品推广错配 |
+| 458 | Tommy T | https://cn.noxinfluencer.com/youtube/channel/UCDXJFuObFFLcAkbpKC63AYQ | 0 | 缺少任何健身、测评或购物信号 |
+| 462 | Ge K | https://cn.noxinfluencer.com/youtube/channel/UCDdbNBio3bBIME92p66NZHA | 0 | 无标签无视频，相关性证据不足 |
+| 465 | Caro Arevalo | https://cn.noxinfluencer.com/youtube/channel/UCDqEjeSGabg4Ie9U1-5UUfQ | 0 | 艺术内容与瑜伽垫购买场景不匹配 |
+| 468 | Travel Guider | https://cn.noxinfluencer.com/youtube/channel/UCDurjbwRlUGueAEE3_rB4vg | 0 | 旅行导向频道，与瑜伽垫受众关联弱 |
+| 473 | Piyush Talks | https://cn.noxinfluencer.com/youtube/channel/UCE8e5H5E_3Uh0PnmBcyY1HA | 0 | 内容定位不明，缺少相关线索 |
+| 475 | Zion Ranch | https://cn.noxinfluencer.com/youtube/channel/UCELFhDH5trQpY6QG3Y7sZmg | 0 | 车辆改装频道，与瑜伽垫推广场景不符 |
+| 477 | ZGALA | https://cn.noxinfluencer.com/youtube/channel/UCEUBN7UMOvwNJbbRUx9Prmw | 0 | 自我成长播客，缺少瑜伽垫推广场景 |
+| 478 | Venus like a planet | https://cn.noxinfluencer.com/youtube/channel/UCEUDBZ_cNLeBofqCCWxoxFA | 0 | 无标签无内容证据，相关性不足 |
+| 479 | PAOLA | https://cn.noxinfluencer.com/youtube/channel/UCEV1E3qLI2H6F6uOgZ4kwqg | 0 | 服装手作向，与瑜伽垫无关 |
+| 481 | Surrette Lilburn | https://cn.noxinfluencer.com/youtube/channel/UCEXLmh_p12G-vxnWEPM1jfw | 0 | 无标签无证据，难判断可推广性 |
+| 483 | Princess Ling Ling | https://cn.noxinfluencer.com/youtube/channel/UCEYL91uXEXku3e0MXH6ff8g | 0 | 无标签无内容，匹配证据为空 |
+| 484 | similarity word | https://cn.noxinfluencer.com/youtube/channel/UCEZhc-1vl401zWf2GbSXyhg | 0 | 无标签无内容，相关性不足 |
+| 486 | Jole jan | https://cn.noxinfluencer.com/youtube/channel/UCEdXSs-EVMtLeKN3VolRGDA | 0 | 无标签无内容，相关性不足 |
+| 487 | PiKasso Draw | https://cn.noxinfluencer.com/youtube/channel/UCEhTJEwyM29zT4s6tVN1tYw | 0 | 绘画教程号，与瑜伽垫无关 |
+| 488 | Sarah Ingle | https://cn.noxinfluencer.com/youtube/channel/UCEhh4Rhbx4eKoU4ApvGWCmw | 0 | 美妆发型号，商品场景不匹配 |
+| 495 | Jan Howell | https://cn.noxinfluencer.com/youtube/channel/UCExuijldD1-nBcN_I0sJYDA | 0 | 手作DIY号，与瑜伽垫无关 |
+| 499 | JOEBOWERY | https://cn.noxinfluencer.com/youtube/channel/UCFAi6fb0DtI9-YXPTm_H6Kg | 0 | 无标签无内容，相关性不足 |

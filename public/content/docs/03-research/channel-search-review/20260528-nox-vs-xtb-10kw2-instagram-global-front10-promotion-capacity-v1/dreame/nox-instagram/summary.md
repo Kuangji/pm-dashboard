@@ -1,0 +1,334 @@
+# Channel Search Batch Review
+
+- provider: nox
+- platform: instagram
+- keyword: Dreame
+- total: 500
+- badcase率: 62.2%
+- labels: fit 5, adjacent 184, badcase 311, failed 0
+- score distribution: <0 219, 0-9 269, 10-19 8, 20+ 4
+- 平均 shard 执行时间: 142.2s（20 个 shard）
+- 平均单频道执行时间: 5.7s
+
+## Buckets
+| bucket | total | badcase | badcase_rate |
+|---|---:|---:|---:|
+| overall | 500 | 311 | 62.2% |
+| head | 500 | 311 | 62.2% |
+| mid | 0 | 0 | 0.0% |
+| tail | 0 | 0 | 0.0% |
+
+## Badcases
+| rank | channel | url | score | reason |
+|---:|---|---|---:|---|
+| 2 | Josh Quiñonez | https://cn.noxinfluencer.com/instagram/channel/69994623145 | 0 | 无标签与内容信号，无法判断相关性 |
+| 4 | Kylie | https://cn.noxinfluencer.com/instagram/channel/12281817 | 0 | 仅有合作标记，无相关品类信号 |
+| 6 | Taylor Swift | https://cn.noxinfluencer.com/instagram/channel/11830955 | -10 | 娱乐音乐型频道，与家电推广目标不符 |
+| 7 | Selena Gomez | https://cn.noxinfluencer.com/instagram/channel/460563723 | -3 | 娱乐为主，虽有美妆健康但缺少产品推广语境 |
+| 8 | Instagram | https://cn.noxinfluencer.com/instagram/channel/25025320 | 0 | 无标签无内容信号 |
+| 9 | Kim Kardashian | https://cn.noxinfluencer.com/instagram/channel/18428658 | -5 | 明星娱乐号，缺少家居清洁类受众 |
+| 10 | Jane Knight | https://cn.noxinfluencer.com/instagram/channel/13768085013 | 0 | 无标签无内容信号 |
+| 11 | Dwayne Johnson | https://cn.noxinfluencer.com/instagram/channel/232192182 | -5 | 娱乐向明星号，不适合家电推广 |
+| 12 | Miley Cyrus | https://cn.noxinfluencer.com/instagram/channel/325734299 | -10 | 音乐娱乐频道，和家电推广错位明显 |
+| 13 | Sabrina Carpenter | https://cn.noxinfluencer.com/instagram/channel/8713286 | -5 | 明星音乐号，和 Dreame 目标不匹配 |
+| 14 | Nike | https://cn.noxinfluencer.com/instagram/channel/13460080 | 0 | 运动品牌内容为主，和 Dreame 类目不相关 |
+| 15 | Gigi Hadid | https://cn.noxinfluencer.com/instagram/channel/12995776 | -5 | 时尚娱乐型明星号，家电推广关联弱 |
+| 16 | Kate S. | https://cn.noxinfluencer.com/instagram/channel/60088258571 | 11 | 有 Dreame 与清洁标签，但 ASMR 形式错配严重 |
+| 17 | NASA | https://cn.noxinfluencer.com/instagram/channel/528817151 | 0 | 航天科普，与家电推广不相关 |
+| 18 | Vin Diesel | https://cn.noxinfluencer.com/instagram/channel/1287006597 | -5 | 娱乐电影号，和产品推广无关 |
+| 20 | ⋆𐙚₊˚⊹♡ camila | https://cn.noxinfluencer.com/instagram/channel/19596899 | -5 | 娱乐音乐号，产品推广相关性低 |
+| 21 | Khloé Kardashian | https://cn.noxinfluencer.com/instagram/channel/208560325 | -4 | 娱乐明星号，健康标签不足以支撑家电推广 |
+| 23 | Wardell Curry | https://cn.noxinfluencer.com/instagram/channel/324599988 | -5 | 体育娱乐号，与家电推广目标不符 |
+| 24 | madisonbeer | https://cn.noxinfluencer.com/instagram/channel/19649762 | -5 | 音乐娱乐型明星号，缺少相关品类证据 |
+| 25 | Chris Bumstead | https://cn.noxinfluencer.com/instagram/channel/186611121 | -5 | 健身娱乐号，不是家电类目标受众 |
+| 26 | Addison | https://cn.noxinfluencer.com/instagram/channel/304358009 | -5 | 服饰号，与Dreame家电/美妆产品推广无明显交集 |
+| 27 | Kris Jenner | https://cn.noxinfluencer.com/instagram/channel/144646783 | -10 | 娱乐时尚号，缺少家电/美妆产品推广信号 |
+| 29 | Hilary Duff | https://cn.noxinfluencer.com/instagram/channel/16363404 | -10 | 娱乐家庭号，非产品测评型内容 |
+| 31 | Simonetta Lein | https://cn.noxinfluencer.com/instagram/channel/400177670 | -10 | 娱乐+时尚号，和Dreame产品类目不匹配 |
+| 32 | Nike Football | https://cn.noxinfluencer.com/instagram/channel/23678829 | -15 | 体育运动号，与Dreame产品推广不符 |
+| 33 | Becky G | https://cn.noxinfluencer.com/instagram/channel/16754881 | -10 | 音乐娱乐号，缺少产品内容场景 |
+| 34 | Reese Witherspoon | https://cn.noxinfluencer.com/instagram/channel/367315644 | -10 | 影视娱乐号，非Dreame推广受众 |
+| 37 | Cheavon Woods | https://cn.noxinfluencer.com/instagram/channel/52917214938 | 0 | 无标签无内容证据，无法判断匹配 |
+| 38 | Ryan Reynolds | https://cn.noxinfluencer.com/instagram/channel/1942463581 | -10 | 娱乐家庭向，缺少产品推广场景 |
+| 39 | LEGO | https://cn.noxinfluencer.com/instagram/channel/196743444 | -15 | 玩具内容，与Dreame家电推广不符 |
+| 40 | Michelle Obama | https://cn.noxinfluencer.com/instagram/channel/4302013048 | -10 | 播客教育号，和产品促销场景不匹配 |
+| 41 | Alicia Keys | https://cn.noxinfluencer.com/instagram/channel/20979117 | -5 | 音乐娱乐为主，Dreame相关性弱 |
+| 43 | Mike Holston | https://cn.noxinfluencer.com/instagram/channel/248935266 | -15 | 动物内容，与人用产品推广明显冲突 |
+| 45 | WASTED | https://cn.noxinfluencer.com/instagram/channel/1415356583 | -5 | 娱乐号，相关证据不足 |
+| 46 | Disney | https://cn.noxinfluencer.com/instagram/channel/284634734 | -10 | 娱乐亲子向，非Dreame产品推广受众 |
+| 47 | laufey | https://cn.noxinfluencer.com/instagram/channel/25657647 | -5 | 音乐账号，缺少产品导购场景 |
+| 48 | Ciara | https://cn.noxinfluencer.com/instagram/channel/27914637 | -10 | 娱乐人物号，不适合家电品牌推广 |
+| 49 | Hannah Stocking | https://cn.noxinfluencer.com/instagram/channel/32406002 | -10 | 纯娱乐内容，产品相关性低 |
+| 50 | Nike Basketball | https://cn.noxinfluencer.com/instagram/channel/306787899 | -5 | 体育账号，和Dreame类产品不匹配 |
+| 54 | KATSEYE | https://cn.noxinfluencer.com/instagram/channel/60845440647 | -10 | 娱乐公司账号，非产品推广场景 |
+| 55 | Taylor Nation | https://cn.noxinfluencer.com/instagram/channel/916513252 | -10 | 演出/音乐粉丝号，缺少产品推广匹配 |
+| 56 | Fuerza Regida | https://cn.noxinfluencer.com/instagram/channel/1672632164 | -10 | 音乐艺人账号，产品推广相关性弱 |
+| 61 | Kamala Harris | https://cn.noxinfluencer.com/instagram/channel/212658006 | -12 | 政治议题账号，非消费品推广场景 |
+| 63 | Hugh Jackman | https://cn.noxinfluencer.com/instagram/channel/489110643 | -8 | 纯娱乐演员账号，缺少产品推广匹配 |
+| 67 | Kate Hudson | https://cn.noxinfluencer.com/instagram/channel/981577417 | -6 | 娱乐向名人号，产品推广相关性低 |
+| 68 | MTV | https://cn.noxinfluencer.com/instagram/channel/1907035 | -8 | 音乐娱乐媒体号，非产品导购场景 |
+| 71 | Blake Lively | https://cn.noxinfluencer.com/instagram/channel/1437529575 | -5 | 纯娱乐账号，缺少推广场景 |
+| 72 | Sofia Carson | https://cn.noxinfluencer.com/instagram/channel/184346091 | -6 | 影视音乐向账号，产品相关性弱 |
+| 73 | Dolly Parton | https://cn.noxinfluencer.com/instagram/channel/305655757 | -7 | 娱乐+玩具向，非目标产品场景 |
+| 75 | ･ﾟ: *✧ Chappell Roan ✧*:･ﾟ | https://cn.noxinfluencer.com/instagram/channel/4816027731 | -8 | 巡演音乐号，缺少产品推广相关性 |
+| 78 | John Legend | https://cn.noxinfluencer.com/instagram/channel/14871097 | -8 | 纯音乐娱乐号，与产品推广场景不匹配 |
+| 79 | Meek Mill | https://cn.noxinfluencer.com/instagram/channel/6720655 | -6 | 娱乐/说唱人设为主，缺少种草语境 |
+| 80 | NFL | https://cn.noxinfluencer.com/instagram/channel/205593849 | -12 | 体育赛事频道，和商品种草目标明显不匹配 |
+| 81 | Victoria Justice | https://cn.noxinfluencer.com/instagram/channel/8326823 | -8 | 娱乐影视向为主，缺少产品购买/测评语境 |
+| 87 | Inter Miami CF | https://cn.noxinfluencer.com/instagram/channel/6937659083 | -12 | 足球俱乐部账号，和该品牌推广场景不匹配 |
+| 88 | Tony Hawk | https://cn.noxinfluencer.com/instagram/channel/1132845 | -10 | 滑板运动号，缺少该产品的推广语境 |
+| 92 | Jonas Brothers | https://cn.noxinfluencer.com/instagram/channel/268022048 | -7 | 音乐巡演账号，偏娱乐粉丝向，不适合种草 |
+| 95 | Yousef Erakat | https://cn.noxinfluencer.com/instagram/channel/750746000 | -4 | 偏娱乐内容，缺少商品评测或购买导向 |
+| 104 | Spotify | https://cn.noxinfluencer.com/instagram/channel/224223453 | -3 | 纯音乐娱乐平台，与 Dreame 家电推广弱相关 |
+| 106 | H A L E Y   B A Y L E E | https://cn.noxinfluencer.com/instagram/channel/197441822 | -2 | 仅娱乐标签，缺少产品推广相关性 |
+| 110 | diplo | https://cn.noxinfluencer.com/instagram/channel/189802609 | -2 | 音乐娱乐为主，家电购买意图弱 |
+| 112 | DC | https://cn.noxinfluencer.com/instagram/channel/187083663 | -2 | 漫画娱乐为主，不是家电推广场景 |
+| 113 | HYPEWHIP | https://cn.noxinfluencer.com/instagram/channel/5633753935 | -1 | 汽车赛道过窄，与 Dreame 家电不匹配 |
+| 115 | Rick Ross | https://cn.noxinfluencer.com/instagram/channel/13460443 | -1 | 偏车与金融话题，家电受众不集中 |
+| 117 | The Dodo | https://cn.noxinfluencer.com/instagram/channel/649735629 | -15 | 宠物垂类，与人用 Dreame 家电明显冲突 |
+| 118 | Matt Rife | https://cn.noxinfluencer.com/instagram/channel/54284618 | -2 | 纯喜剧娱乐，缺少产品转化语境 |
+| 119 | Steve Aoki | https://cn.noxinfluencer.com/instagram/channel/22088943 | -2 | 音乐秀场型账号，不是家电推广场景 |
+| 122 | Ella Langley | https://cn.noxinfluencer.com/instagram/channel/274538432 | -2 | 以音乐为主，和 Dreame 购买意图不符 |
+| 124 | Noah Kahan | https://cn.noxinfluencer.com/instagram/channel/1038884036 | -2 | 旅游音乐为主，商品推广相关度弱 |
+| 126 | Brooklyn and Bailey | https://cn.noxinfluencer.com/instagram/channel/286628010 | 0 | 游戏娱乐向，和 Dreame 产品推广场景不匹配 |
+| 127 | Lemuel Plummer | https://cn.noxinfluencer.com/instagram/channel/31322826 | -10 | 真人秀娱乐向，缺少产品种草场景 |
+| 128 | Pixar | https://cn.noxinfluencer.com/instagram/channel/284634753 | -15 | 电影宣发账号，和产品推广几乎无关 |
+| 130 | Wonderful Places | https://cn.noxinfluencer.com/instagram/channel/195270438 | 0 | 旅行内容为主，与家电/美妆推广关联弱 |
+| 131 | JoJo Siwa | https://cn.noxinfluencer.com/instagram/channel/1135768101 | -10 | 娱乐音乐向，缺少产品评测或购买语境 |
+| 133 | President Joe Biden Archived | https://cn.noxinfluencer.com/instagram/channel/45248996870 | 0 | 政治存档账号，和品牌推广不相关 |
+| 134 | Lainey Wilson | https://cn.noxinfluencer.com/instagram/channel/196645551 | -10 | 音乐巡演向，缺少消费品推广场景 |
+| 138 | Tracee Ellis Ross | https://cn.noxinfluencer.com/instagram/channel/11211605 | 0 | 旅行时尚向，和 Dreame 产品关联弱 |
+| 139 | Kerry Washington | https://cn.noxinfluencer.com/instagram/channel/20240005 | -8 | 剧情娱乐向，不适合做产品推广 |
+| 142 | Ashton Irwin | https://cn.noxinfluencer.com/instagram/channel/32973926 | -8 | 巡演音乐内容，和产品推广不匹配 |
+| 145 | Keke™ | https://cn.noxinfluencer.com/instagram/channel/1141197 | 0 | 娱乐亲子混合，产品相关性不足 |
+| 147 | NBA Shooting Coach ( Chris Matthews ) | https://cn.noxinfluencer.com/instagram/channel/370409902 | 0 | 体育教学账号，和 Dreame 品类不直连 |
+| 148 | Vegas Dave 🏈⚾️🏀🏒 | https://cn.noxinfluencer.com/instagram/channel/187210863 | -15 | 博彩加密向，和品牌推广不匹配 |
+| 151 | Marlon Wayans | https://cn.noxinfluencer.com/instagram/channel/13653724 | -15 | 娱乐喜剧号，和产品推广场景明显不符 |
+| 152 | Netflix Film | https://cn.noxinfluencer.com/instagram/channel/7491051082 | -15 | 影视内容为主，缺少产品种草语境 |
+| 154 | ʜᴏᴏᴅᴠɪʟʟᴇ - ʜᴏᴍᴇ ᴏғ ᴛʜᴇ ʜᴏᴏᴅ | https://cn.noxinfluencer.com/instagram/channel/1457239300 | -15 | 故事娱乐号，和消费品推广不匹配 |
+| 156 | Atl..Da Crew RIP RICHIE | https://cn.noxinfluencer.com/instagram/channel/193758822 | -10 | 以娱乐喜剧为主，不适合做产品推广 |
+| 159 | Artistuniversity 🔴 | https://cn.noxinfluencer.com/instagram/channel/2098639831 | 0 | 纯艺术教学号，缺少产品推广信号 |
+| 161 | A24 | https://cn.noxinfluencer.com/instagram/channel/306191226 | -15 | 电影娱乐属性强，和产品推广不匹配 |
+| 164 | Rolling Stone | https://cn.noxinfluencer.com/instagram/channel/11833370 | -10 | 音乐娱乐号，与产品推广关联很弱 |
+| 166 | The New York Times | https://cn.noxinfluencer.com/instagram/channel/1624593034 | -5 | 新闻媒体号，产品推广相关性弱 |
+| 167 | Drunk People Doing Things | https://cn.noxinfluencer.com/instagram/channel/3240707830 | 0 | 偏泛娱乐内容，缺少明确种草语境 |
+| 168 | Roblox | https://cn.noxinfluencer.com/instagram/channel/408067804 | -10 | 游戏娱乐平台，和消费品推广不匹配 |
+| 169 | Vice President Kamala Harris Archived | https://cn.noxinfluencer.com/instagram/channel/45610096595 | -5 | 政治归档号，不适合做产品推广 |
+| 171 | Green Day | https://cn.noxinfluencer.com/instagram/channel/391198290 | -10 | 音乐娱乐属性强，不适合产品推广 |
+| 172 | Adrian & RJ | https://cn.noxinfluencer.com/instagram/channel/51711421519 | -15 | ASMR/梗内容为主，属强格式不匹配 |
+| 173 | DAVID GUETTA | https://cn.noxinfluencer.com/instagram/channel/195734327 | -10 | 音乐号为主，和产品推广关联弱 |
+| 174 | Lizzo | https://cn.noxinfluencer.com/instagram/channel/331424778 | -5 | 偏娱乐巡演号，产品种草能力弱 |
+| 175 | Jay Brewer | https://cn.noxinfluencer.com/instagram/channel/197628296 | -15 | 动物爬宠号，与人类产品推广不匹配 |
+| 178 | The Christiana Family | https://cn.noxinfluencer.com/instagram/channel/12039411 | -5 | 服饰娱乐向，和Dreame产品语境弱 |
+| 179 | Paris Hilton | https://cn.noxinfluencer.com/instagram/channel/33647687 | -5 | 娱乐明星号，缺少产品推广语境 |
+| 181 | Andrew Schulz | https://cn.noxinfluencer.com/instagram/channel/39836060 | -10 | 喜剧娱乐向，与产品推广不符 |
+| 182 | Red Hot Chili Peppers | https://cn.noxinfluencer.com/instagram/channel/302699335 | -10 | 音乐娱乐号，缺少商品推广场景 |
+| 183 | Mayor Zohran Kwame Mamdani | https://cn.noxinfluencer.com/instagram/channel/294471017 | -3 | 政治社区号，和Dreame推广相关性弱 |
+| 184 | Brazzers | https://cn.noxinfluencer.com/instagram/channel/255687167 | -15 | 成人娱乐号，与产品推广不符 |
+| 186 | The Game | https://cn.noxinfluencer.com/instagram/channel/13751697 | -8 | 音乐娱乐向，不适合Dreame产品推广 |
+| 187 | Brandon Lake | https://cn.noxinfluencer.com/instagram/channel/3698148 | -8 | 音乐内容为主，缺少商品种草语境 |
+| 188 | The Jennifer Hudson Show | https://cn.noxinfluencer.com/instagram/channel/49895910006 | -10 | 访谈娱乐节目号，不是产品推广场景 |
+| 191 | Alexandra Madison | https://cn.noxinfluencer.com/instagram/channel/6347101041 | -10 | 情侣搞笑内容，与产品推广不符 |
+| 192 | couples! 💫 | https://cn.noxinfluencer.com/instagram/channel/1249545352 | -10 | 短视频情侣娱乐号，不适合Dreame投放 |
+| 195 | Entertainment Tonight | https://cn.noxinfluencer.com/instagram/channel/221900711 | -10 | 娱乐资讯号，缺少产品种草语境 |
+| 198 | People Magazine | https://cn.noxinfluencer.com/instagram/channel/28759374 | -10 | 娱乐资讯媒体号，和产品推广不匹配 |
+| 199 | FINNEAS | https://cn.noxinfluencer.com/instagram/channel/8194099 | -8 | 音乐内容为主，缺少商品推广场景 |
+| 201 | Jason Momoa | https://cn.noxinfluencer.com/instagram/channel/918028867 | -5 | 娱乐型内容为主，与Dreame家电推广不匹配 |
+| 202 | Facebook | https://cn.noxinfluencer.com/instagram/channel/1807199 | 0 | 缺少家电/消费品相关信号，推广相关性弱 |
+| 203 | Antonia “Toya” Johnson- Rushing | https://cn.noxinfluencer.com/instagram/channel/14491343 | -5 | 娱乐和派对向内容占主导，不适合家电推广 |
+| 204 | Terry Crews | https://cn.noxinfluencer.com/instagram/channel/196598493 | -5 | 娱乐秀场账号，和Dreame目标品类不相关 |
+| 206 | livies hq | https://cn.noxinfluencer.com/instagram/channel/45076440449 | 0 | 偶像粉圈内容为主，缺少产品推广场景 |
+| 208 | BET | https://cn.noxinfluencer.com/instagram/channel/51707702 | -5 | 音乐娱乐账号，缺少Dreame相关受众 |
+| 209 | One Piece (ワンピース) | https://cn.noxinfluencer.com/instagram/channel/25593762583 | -5 | 二次元娱乐内容，与家电推广目的不一致 |
+| 210 | National Park Service | https://cn.noxinfluencer.com/instagram/channel/1684126013 | 0 | 自然旅游向账号，家电种草相关性不足 |
+| 211 | 𝐌𝐞𝐫𝐜𝐞𝐝𝐞𝐬-𝐁𝐞𝐧𝐳 𝐔𝐒𝐀 | https://cn.noxinfluencer.com/instagram/channel/228314829 | 0 | 汽车品牌账号，与Dreame家居产品不匹配 |
+| 212 | Big Fish 🦈 | https://cn.noxinfluencer.com/instagram/channel/265000400 | -5 | 派对娱乐型内容，不适合家电产品推广 |
+| 213 | K. Michelle | https://cn.noxinfluencer.com/instagram/channel/55260131 | -5 | 音乐娱乐账号，与家电种草场景不符 |
+| 214 | Dr. Cheyenne Bryant | https://cn.noxinfluencer.com/instagram/channel/27233401 | 0 | 偏健康情感内容，和Dreame产品线关联弱 |
+| 216 | Abigail Spenser Hu | https://cn.noxinfluencer.com/instagram/channel/7918075363 | -5 | 娱乐属性较强，和家电推广不在同一场景 |
+| 217 | Cole Walliser | https://cn.noxinfluencer.com/instagram/channel/2971045 | 0 | 名人幕后娱乐账号，产品相关性不足 |
+| 218 | Tiny Chef | https://cn.noxinfluencer.com/instagram/channel/7238520830 | 0 | 儿童娱乐IP，不是家电种草的有效场景 |
+| 219 | Jimmy O Yang 歐陽萬成 | https://cn.noxinfluencer.com/instagram/channel/146197908 | -5 | 厨房娱乐内容为主，非真实产品评测场景 |
+| 222 | Inas X | https://cn.noxinfluencer.com/instagram/channel/13812705 | -5 | 音乐娱乐账号，和Dreame类产品不匹配 |
+| 223 | Jesse | https://cn.noxinfluencer.com/instagram/channel/1414040721 | 0 | 体育内容为主，缺少家电推广相关性 |
+| 224 | Lupita Nyong'o | https://cn.noxinfluencer.com/instagram/channel/629566976 | 0 | 娱乐明星粉丝向内容，带货相关性弱 |
+| 226 | Matt Mathews | https://cn.noxinfluencer.com/instagram/channel/9792812 | 0 | 摄影/喜剧为主，与Dreame产品推广无关 |
+| 227 | Devon Rodriguez | https://cn.noxinfluencer.com/instagram/channel/503285615 | 0 | 艺术绘画垂类，缺少产品推广场景 |
+| 228 | Malala Yousafzai | https://cn.noxinfluencer.com/instagram/channel/8034139838 | 0 | 教育故事型内容，和Dreame产品不匹配 |
+| 229 | Alex Eubank | https://cn.noxinfluencer.com/instagram/channel/2107737265 | 0 | 健身垂类，与Dreame品牌产品关联弱 |
+| 230 | Lea Michele | https://cn.noxinfluencer.com/instagram/channel/201150526 | 0 | 娱乐/音乐为主，缺少导购或测评属性 |
+| 231 | Jacob Arabo | https://cn.noxinfluencer.com/instagram/channel/224401958 | 0 | 奢侈珠宝/设计向，不适合Dreame投放 |
+| 232 | Mat Armstrong | https://cn.noxinfluencer.com/instagram/channel/263103049 | 0 | 汽车改装垂类，和Dreame产品不相关 |
+| 233 | Teddy Swims | https://cn.noxinfluencer.com/instagram/channel/29685245 | 0 | 音乐娱乐号，缺少商品种草场景 |
+| 234 | AF Media | https://cn.noxinfluencer.com/instagram/channel/7798157451 | -10 | 宠物垂类，与人用Dreame产品不符 |
+| 235 | Nicole Scherzinger | https://cn.noxinfluencer.com/instagram/channel/22762155 | 0 | 娱乐主导，缺少清晰的产品推广信号 |
+| 237 | Witney Carson McAllister | https://cn.noxinfluencer.com/instagram/channel/6922532 | 0 | 家庭育儿向，与Dreame产品关联不足 |
+| 238 | Vikas Khanna | https://cn.noxinfluencer.com/instagram/channel/1770521394 | 0 | 美食内容为主，缺少家电推广场景 |
+| 241 | Kacey Musgraves | https://cn.noxinfluencer.com/instagram/channel/5385922 | 0 | 音乐娱乐垂类，相关产品信号不足 |
+| 242 | Cheryl Porter Vocal Coach | https://cn.noxinfluencer.com/instagram/channel/2249417169 | 0 | 音乐教学号，和Dreame无直接关联 |
+| 245 | Walt Disney World | https://cn.noxinfluencer.com/instagram/channel/2336468 | 0 | 娱乐主题，和Dreame产品无关 |
+| 246 | Logic | https://cn.noxinfluencer.com/instagram/channel/10532976 | 0 | 音乐旅行向，缺少产品推广场景 |
+| 247 | Tatiana Pesotskaya | Chicago Travel | https://cn.noxinfluencer.com/instagram/channel/9521138519 | 0 | 旅行/城市内容，和Dreame无关 |
+| 248 | Dustin Poirier | https://cn.noxinfluencer.com/instagram/channel/25812109 | 0 | 体育人物号，缺少相关品类证据 |
+| 250 | Aɴɢᴇʟɪɴᴀ | https://cn.noxinfluencer.com/instagram/channel/425758367 | 0 | 汽车/运动内容，和Dreame产品无关 |
+| 252 | Variety | https://cn.noxinfluencer.com/instagram/channel/480806400 | -12 | 纯娱乐媒体号，和 Dreame 推广目标不匹配 |
+| 253 | rachel zegler | https://cn.noxinfluencer.com/instagram/channel/522702268 | -8 | 影视娱乐向，产品推广场景弱 |
+| 254 | Rebecca Yarros | https://cn.noxinfluencer.com/instagram/channel/1742375233 | -1 | 书籍内容为主，和品牌推广关联弱 |
+| 255 | Cynthia Erivo | https://cn.noxinfluencer.com/instagram/channel/44080340 | -4 | 娱乐歌手向，缺少稳定产品场景 |
+| 257 | keshi | https://cn.noxinfluencer.com/instagram/channel/13135414 | -8 | 音乐娱乐号，不适合产品推广 |
+| 259 | Vic Mensa | https://cn.noxinfluencer.com/instagram/channel/233356753 | -10 | 音乐娱乐为主，和品牌推广弱相关 |
+| 260 | VANITY FAIR | https://cn.noxinfluencer.com/instagram/channel/11206038 | -11 | 娱乐访谈媒体，非产品型创作者 |
+| 264 | GRAMMYS | https://cn.noxinfluencer.com/instagram/channel/1352742 | -10 | 音乐奖项媒体，不适合消费品推广 |
+| 265 | Anthony Gargiula | https://cn.noxinfluencer.com/instagram/channel/18611248 | -10 | 唱歌内容为主，缺少商品转化场景 |
+| 266 | Pamela Anderson | https://cn.noxinfluencer.com/instagram/channel/182805585 | -8 | 故事娱乐向，产品相关性弱 |
+| 267 | Evangeline Lilly | https://cn.noxinfluencer.com/instagram/channel/308950261 | -2 | 艺术故事向，缺少消费品场景 |
+| 270 | Disney+ | https://cn.noxinfluencer.com/instagram/channel/7522677467 | -12 | 流媒体娱乐平台，非创作者推广位 |
+| 271 | Anastasia Karanikolaou | https://cn.noxinfluencer.com/instagram/channel/11212260 | -3 | 标签过少，无法支撑 Dreame 相关性 |
+| 274 | Walt Disney Animation Studios | https://cn.noxinfluencer.com/instagram/channel/1443968141 | -12 | 动画影视机构号，非产品推广型频道 |
+| 275 | PIERCE THE VEIL | https://cn.noxinfluencer.com/instagram/channel/23859401 | -8 | 乐队巡演内容，不适合 Dreame |
+| 276 | Arash Hashemi | https://cn.noxinfluencer.com/instagram/channel/5975184503 | 0 | 食品内容，与Dreame家电/美妆品类无关 |
+| 278 | Nattie Neidhart | https://cn.noxinfluencer.com/instagram/channel/55834819 | 0 | 摔跤运动向，和Dreame推广场景不匹配 |
+| 279 | Tony Robbins | https://cn.noxinfluencer.com/instagram/channel/1501916106 | 0 | 商业播客，缺少消费品种草语境 |
+| 280 | Nike Running | https://cn.noxinfluencer.com/instagram/channel/286654768 | 0 | 跑步运动账号，和Dreame产品不相关 |
+| 282 | Natalya Syanova | https://cn.noxinfluencer.com/instagram/channel/4542754799 | 0 | 烘焙料理频道，与Dreame无明显关联 |
+| 284 | Matthew & Paul | https://cn.noxinfluencer.com/instagram/channel/6835615123 | 0 | 宠物娱乐向，非Dreame主要受众 |
+| 286 | Elyse Myers | https://cn.noxinfluencer.com/instagram/channel/11272646 | 0 | 咖啡闲聊娱乐向，缺少家电种草信号 |
+| 288 | Alex Hormozi | https://cn.noxinfluencer.com/instagram/channel/7547682342 | 0 | 商业账号，和Dreame消费品推广场景弱 |
+| 289 | Simu Liu | https://cn.noxinfluencer.com/instagram/channel/203149979 | 0 | 娱乐影视向，产品推广相关性很弱 |
+| 290 | Lexie Alford | https://cn.noxinfluencer.com/instagram/channel/246831927 | 0 | 旅行内容为主，缺少家电/美妆语境 |
+| 293 | EarthPix 🌎 Travel | https://cn.noxinfluencer.com/instagram/channel/303273692 | 0 | 旅行娱乐向，缺少家电/美妆产品语境 |
+| 294 | Cole Bennett | https://cn.noxinfluencer.com/instagram/channel/146276825 | 0 | 音乐娱乐向，和Dreame目标受众不符 |
+| 300 | Judge Frank Caprio | https://cn.noxinfluencer.com/instagram/channel/6037130647 | 0 | 美食家庭内容，与Dreame不构成直接关联 |
+| 301 | United Nations | https://cn.noxinfluencer.com/instagram/channel/8629875 | -15 | 国际组织议题频道，和产品推广场景明显不符 |
+| 302 | Muhammad Ali | https://cn.noxinfluencer.com/instagram/channel/762105942 | -15 | 拳击体育人物，缺少产品推广受众和场景 |
+| 312 | Avenged Sevenfold | https://cn.noxinfluencer.com/instagram/channel/183780862 | -15 | 乐队娱乐号，和产品推广场景不匹配 |
+| 313 | Ford Motor Company | https://cn.noxinfluencer.com/instagram/channel/215007312 | -10 | 汽车品牌号，品类与Dreame不相干 |
+| 314 | Jennifer Hudson | https://cn.noxinfluencer.com/instagram/channel/178398601 | -10 | 娱乐明星号，缺少产品推广相关信号 |
+| 315 | billboard | https://cn.noxinfluencer.com/instagram/channel/1022625 | -10 | 音乐娱乐媒体，非产品导向 |
+| 319 | The Academy | https://cn.noxinfluencer.com/instagram/channel/3724687 | -10 | 影视娱乐号，和消费品推广场景不匹配 |
+| 320 | Montana Tucker | https://cn.noxinfluencer.com/instagram/channel/19851561 | -10 | 舞蹈挑战号，娱乐属性强 |
+| 321 | John Summit | https://cn.noxinfluencer.com/instagram/channel/1461282957 | -10 | DJ音乐娱乐号，缺少产品推广场景 |
+| 323 | LAIKA Studios | https://cn.noxinfluencer.com/instagram/channel/4085681678 | -10 | 影视制作公司号，非产品推广场景 |
+| 324 | John Dela Cruz | https://cn.noxinfluencer.com/instagram/channel/50213975210 | -4 | 护理学习号，受众垂直但与Dreame品类不符 |
+| 326 | Alex Ferreira | https://cn.noxinfluencer.com/instagram/channel/312032197 | -15 | 汽车垂类，与Dreame家电/美护推广方向不符 |
+| 327 | Haddy Abdelhady | https://cn.noxinfluencer.com/instagram/channel/636986031 | -4 | 健身垂类，缺少家电/美护种草语境 |
+| 328 | Artists Without Autotune | https://cn.noxinfluencer.com/instagram/channel/65416658751 | -15 | 纯音乐娱乐号，和产品推广场景不匹配 |
+| 330 | Casper Opala | Personal Finance | https://cn.noxinfluencer.com/instagram/channel/35407363852 | -5 | 财经号，缺少家电/美护内容语境 |
+| 333 | Noah Cyrus | https://cn.noxinfluencer.com/instagram/channel/13582101 | -15 | 音乐娱乐号，产品推广相关性很低 |
+| 335 | Ally Brooke (Bracey) | https://cn.noxinfluencer.com/instagram/channel/230586028 | -15 | 娱乐+音乐号，和产品推广不匹配 |
+| 336 | PGA TOUR | https://cn.noxinfluencer.com/instagram/channel/46141067 | -5 | 体育旅行向，和Dreame产品场景较弱 |
+| 337 | Alexander Stewart | https://cn.noxinfluencer.com/instagram/channel/1577270491 | -15 | 音乐人账号，缺少产品推广语境 |
+| 338 | Lewis Howes | https://cn.noxinfluencer.com/instagram/channel/917830 | -2 | 泛生活访谈号，产品相关性偏弱 |
+| 340 | Dave Ramsey | https://cn.noxinfluencer.com/instagram/channel/234554977 | -5 | 财经名人号，缺少家电/美护种草语境 |
+| 341 | The Reptile Zoo | https://cn.noxinfluencer.com/instagram/channel/186665470 | -15 | 动物主题账号，和人用产品推广互斥 |
+| 342 | tabs | https://cn.noxinfluencer.com/instagram/channel/195085394 | -1 | 标签过少，无法判断有效推广匹配 |
+| 343 | Impact | https://cn.noxinfluencer.com/instagram/channel/8284650749 | -10 | 娱乐媒体号，产品推广目的不清晰 |
+| 347 | Savanah Moss | https://cn.noxinfluencer.com/instagram/channel/279324789 | -6 | 短视频娱乐流量号，相关性很低 |
+| 349 | Atsuko Okatsuka | https://cn.noxinfluencer.com/instagram/channel/998770951 | -15 | 喜剧娱乐号，和产品推广场景不匹配 |
+| 350 | Krissy Cela | https://cn.noxinfluencer.com/instagram/channel/26630796 | -4 | 健身社区号，缺少家电/美护种草语境 |
+| 351 | Mike O'Hearn | https://cn.noxinfluencer.com/instagram/channel/177412759 | 0 | 健身人设，缺少 Dreame 家电或购物导向内容 |
+| 352 | Sarah Jakes Roberts | https://cn.noxinfluencer.com/instagram/channel/8204763 | 0 | 宗教励志向，与清洁家电推广场景不匹配 |
+| 353 | Taneth Gimenez | https://cn.noxinfluencer.com/instagram/channel/3272932514 | 0 | 健身时尚向，不具备家电推广相关场景 |
+| 356 | Nicholas Hunter | https://cn.noxinfluencer.com/instagram/channel/1454398713 | 0 | 标签过少且无 Dreame 相关或消费内容 |
+| 357 | Phil Heath | https://cn.noxinfluencer.com/instagram/channel/20227401 | 0 | 健身冠军人设，和家电推广关联弱 |
+| 359 | Bruce Springsteen | https://cn.noxinfluencer.com/instagram/channel/517058514 | -5 | 音乐娱乐向，和家电推广场景偏离明显 |
+| 360 | Sanrio | https://cn.noxinfluencer.com/instagram/channel/11341472 | 0 | 品牌/娱乐向，缺少清洁家电相关证据 |
+| 361 | Analis Cruz | https://cn.noxinfluencer.com/instagram/channel/6973008910 | 0 | 健身训练向，与家电推广关联弱 |
+| 364 | jeezy | https://cn.noxinfluencer.com/instagram/channel/15855077 | -5 | 纯娱乐音乐向，不适合清洁家电推广 |
+| 365 | MARINA | https://cn.noxinfluencer.com/instagram/channel/191172365 | -5 | 娱乐旅行音乐向，与家电推广偏离明显 |
+| 366 | Shonda Rhimes | https://cn.noxinfluencer.com/instagram/channel/32992420 | -5 | 剧情/娱乐向，不适合家电推广 |
+| 368 | Lord Rare Rock | https://cn.noxinfluencer.com/instagram/channel/22755047002 | -5 | 乐队/音乐向，与家电推广相关性低 |
+| 371 | Tyler Perry | https://cn.noxinfluencer.com/instagram/channel/183858775 | -5 | 娱乐影视向，不适合家电推广 |
+| 373 | Lin-Manuel Miranda | https://cn.noxinfluencer.com/instagram/channel/53801813374 | -5 | 影视娱乐向，与家电推广关联弱 |
+| 374 | HIDDEN® | https://cn.noxinfluencer.com/instagram/channel/5843402747 | 0 | 标签过少，无法判断且无相关证据 |
+| 376 | NPR | https://cn.noxinfluencer.com/instagram/channel/1258618 | 0 | 新闻播客型频道，和Dreame家电投放语境不匹配 |
+| 377 | Lindsey Stirling | https://cn.noxinfluencer.com/instagram/channel/186622962 | -15 | 音乐演出频道，明显不是产品推广场景 |
+| 378 | Diego Tinoco | https://cn.noxinfluencer.com/instagram/channel/16383459 | -10 | 剧情娱乐向，缺少家电/个护推广语境 |
+| 379 | Stradman | https://cn.noxinfluencer.com/instagram/channel/626555887 | 0 | 汽车垂类，与Dreame家电/个护相关性很弱 |
+| 380 | FAT JOE | https://cn.noxinfluencer.com/instagram/channel/24375454 | -5 | 娱乐型频道，产品投放相关性低 |
+| 381 | Lindy Lowry | https://cn.noxinfluencer.com/instagram/channel/2233712020 | -5 | 搞笑情侣内容，不是Dreame的合适投放场景 |
+| 382 | Pinterest | https://cn.noxinfluencer.com/instagram/channel/1550177019 | 0 | 泛灵感频道，缺少明确产品推广语境 |
+| 386 | Talia Scott | https://cn.noxinfluencer.com/instagram/channel/31033416 | -10 | 短视频娱乐向，不适合Dreame产品投放 |
+| 388 | Crumbl | https://cn.noxinfluencer.com/instagram/channel/273020258 | 0 | 食品甜点号，缺少家电/个护推广场景 |
+| 389 | Harley-Davidson | https://cn.noxinfluencer.com/instagram/channel/198464423 | 0 | 摩托车垂类，和Dreame产品线不相符 |
+| 391 | MONALEO 🪷 | https://cn.noxinfluencer.com/instagram/channel/325354831 | -10 | 音乐娱乐号，和产品推广目标不一致 |
+| 392 | Pattie Gonia | https://cn.noxinfluencer.com/instagram/channel/8480591217 | 0 | 身份表达和户外内容为主，产品相关性弱 |
+| 396 | David Suh | Posing Coach & Portrait Photographer | https://cn.noxinfluencer.com/instagram/channel/322948753 | 0 | 摄影时尚向，和Dreame品类关联不足 |
+| 397 | Hotvocals | https://cn.noxinfluencer.com/instagram/channel/2246785698 | -10 | 音乐演出频道，明显不是产品推广场景 |
+| 398 | Jodie Langel | https://cn.noxinfluencer.com/instagram/channel/271816499 | -10 | 舞台音乐内容，与Dreame投放不匹配 |
+| 399 | RUSS | https://cn.noxinfluencer.com/instagram/channel/145098896 | -10 | 音乐娱乐号，缺少产品推广语境 |
+| 400 | Bustle | https://cn.noxinfluencer.com/instagram/channel/399069694 | 0 | 娱乐媒体号，产品相关性不足 |
+| 401 | Hamilton | https://cn.noxinfluencer.com/instagram/channel/1572677292 | -15 | 娱乐音乐向，和家电推广目标不符 |
+| 402 | Daniel Mac | https://cn.noxinfluencer.com/instagram/channel/296619499 | -8 | 汽车垂类，和 Dreame 目标品类不匹配 |
+| 403 | Vacations | https://cn.noxinfluencer.com/instagram/channel/1396139505 | -10 | 旅行内容，非家电/消费品推广场景 |
+| 406 | BELLA | https://cn.noxinfluencer.com/instagram/channel/9721868 | -8 | 娱乐生活向，产品推广相关性弱 |
+| 407 | Sienna Mae Gomez | https://cn.noxinfluencer.com/instagram/channel/3016429291 | -4 | 证据过弱，难支撑 Dreame 推广 |
+| 408 | Patrick Bet-David | https://cn.noxinfluencer.com/instagram/channel/206062989 | -5 | 商业财经受众，不是消费品推广主场 |
+| 409 | Paul Rosolie | https://cn.noxinfluencer.com/instagram/channel/1240251809 | -12 | 野生动物纪录向，受众与产品推广错位 |
+| 410 | Laverne Cox | https://cn.noxinfluencer.com/instagram/channel/402120646 | -8 | 娱乐话题号，和消费品推广不匹配 |
+| 411 | Jay Cutler | https://cn.noxinfluencer.com/instagram/channel/501552322 | -4 | 健身健康向，但与 Dreame 目标品类弱相关 |
+| 413 | SAVAGE X FENTY BY RIHANNA | https://cn.noxinfluencer.com/instagram/channel/6345292199 | -6 | 时尚品牌账号，和 Dreame 无直接关联 |
+| 414 | Toei Animation | https://cn.noxinfluencer.com/instagram/channel/2321191491 | -12 | 动漫娱乐向，明显不适合品牌种草 |
+| 416 | Shemar Moore | https://cn.noxinfluencer.com/instagram/channel/210582946 | -10 | 影视娱乐向，目标受众偏离 |
+| 417 | Dhar Mann | https://cn.noxinfluencer.com/instagram/channel/273186946 | -10 | 剧情故事号，推广场景不合适 |
+| 419 | Jelly Roll | https://cn.noxinfluencer.com/instagram/channel/22489430 | -10 | 音乐娱乐向，和家电推广不匹配 |
+| 421 | John Stamos | https://cn.noxinfluencer.com/instagram/channel/29885646 | -8 | 娱乐明星号，和产品推广关联弱 |
+| 422 | Katya Zamolodchikova | https://cn.noxinfluencer.com/instagram/channel/235897290 | -8 | 舞台娱乐号，和消费品推广不匹配 |
+| 424 | 𝗠𝗿. 𝗛𝗶𝗴𝗵 𝗟𝗲𝘃𝗲𝗹 | https://cn.noxinfluencer.com/instagram/channel/65341153430 | -2 | 标签缺失，缺少可判断的相关性信号 |
+| 426 | Las Vegas | https://cn.noxinfluencer.com/instagram/channel/10485588 | -10 | 旅游导览频道，和家电推广场景无关 |
+| 427 | Tiff Leitz | https://cn.noxinfluencer.com/instagram/channel/308799015 | -10 | 娱乐梗图频道，缺少家电/家居推广场景 |
+| 428 | Willis | https://cn.noxinfluencer.com/instagram/channel/2869679148 | -10 | 电影娱乐向，和家电推广不匹配 |
+| 429 | The New Yorker | https://cn.noxinfluencer.com/instagram/channel/13787113 | -10 | 漫画故事频道，缺少家电推广承载力 |
+| 430 | Julianne Hough | https://cn.noxinfluencer.com/instagram/channel/22665638 | -10 | 舞台娱乐账号，缺少家电推广场景 |
+| 431 | ColourPop Cosmetics | https://cn.noxinfluencer.com/instagram/channel/792020704 | -8 | 美妆品类，和清洁家电目标不匹配 |
+| 432 | Melissa Gisoni | https://cn.noxinfluencer.com/instagram/channel/244475431 | -10 | 舞蹈娱乐向，缺少家电推广承载力 |
+| 433 | Glamour | https://cn.noxinfluencer.com/instagram/channel/10070230 | -8 | 时尚美妆媒体，家电推广相关性弱 |
+| 434 | CLAUDIA SULEWSKI | https://cn.noxinfluencer.com/instagram/channel/3879446 | -8 | 美妆时尚账号，不适合家电推广 |
+| 436 | HUGEL | https://cn.noxinfluencer.com/instagram/channel/687148831 | -4 | 音乐账号为主，科技标签不足以支撑推广 |
+| 437 | Letterboxd | https://cn.noxinfluencer.com/instagram/channel/423071734 | -10 | 影视内容为主，缺少家电推广场景 |
+| 438 | Beheshteh Sadeghi | https://cn.noxinfluencer.com/instagram/channel/4098461718 | -8 | 美发教程账号，与家电不在同一推广域 |
+| 440 | Jb Copeland | https://cn.noxinfluencer.com/instagram/channel/17823643 | -2 | 泛生活内容偏散，家电推广承载力弱 |
+| 442 | liv carbonero | https://cn.noxinfluencer.com/instagram/channel/38513504031 | -4 | 食品健身内容，和清洁家电目标不匹配 |
+| 444 | Topps | https://cn.noxinfluencer.com/instagram/channel/1005579026 | -10 | 体育卡牌账号，和家电推广无关 |
+| 445 | Tamar Braxton | https://cn.noxinfluencer.com/instagram/channel/29660176 | -8 | 娱乐人物账号，家电推广相关性弱 |
+| 446 | Katie Davis | https://cn.noxinfluencer.com/instagram/channel/57141556646 | -8 | 美甲美妆向，与家电品类不匹配 |
+| 447 | SG | https://cn.noxinfluencer.com/instagram/channel/1186880 | -10 | 游戏频道，和家电推广场景无关 |
+| 448 | Abbey Romeo | Life With Autism | https://cn.noxinfluencer.com/instagram/channel/50840874018 | -10 | 真人秀娱乐向，不适合家电推广 |
+| 449 | SKIMS | https://cn.noxinfluencer.com/instagram/channel/8688762057 | -8 | 时尚品牌账号，和家电品类不匹配 |
+| 450 | ꧁༺Eseniia Mikheeva ༻꧂  AGT•18•Dancer’s💃🏼 | https://cn.noxinfluencer.com/instagram/channel/7339710608 | -10 | 舞蹈娱乐内容，缺少家电推广场景 |
+| 451 | tori kelly | https://cn.noxinfluencer.com/instagram/channel/487937 | -15 | 音乐娱乐型频道，与产品推广目标明显不符 |
+| 452 | Cosmopolitan | https://cn.noxinfluencer.com/instagram/channel/42725516 | -15 | 情感娱乐向内容，不适合做产品投放 |
+| 454 | Elizabeth Gutierrez | https://cn.noxinfluencer.com/instagram/channel/858460744 | -15 | 娱乐型频道，缺少产品推广场景 |
+| 459 | domdolla💿.jpg | https://cn.noxinfluencer.com/instagram/channel/26095357 | -15 | 娱乐音乐型频道，和投放目标不一致 |
+| 461 | Jesse Tyler Ferguson | https://cn.noxinfluencer.com/instagram/channel/22044113 | -15 | 娱乐演出型频道，不适合产品推广 |
+| 462 | Disney Princess | https://cn.noxinfluencer.com/instagram/channel/2521934429 | -15 | 童话娱乐垂类，与人用产品推广不匹配 |
+| 463 | Angelica Nero | https://cn.noxinfluencer.com/instagram/channel/62129811676 | -15 | 音乐表演向，和产品推广场景不匹配 |
+| 466 | Lauren Paley | https://cn.noxinfluencer.com/instagram/channel/762731421 | -15 | 娱乐音乐内容为主，产品适配度低 |
+| 467 | TYRESE | https://cn.noxinfluencer.com/instagram/channel/50222149 | -15 | 音乐娱乐向账号，不适合产品投放 |
+| 468 | Gabriel Feitosa | https://cn.noxinfluencer.com/instagram/channel/5832473321 | -15 | 宠物垂类，和人用产品推广对象不一致 |
+| 470 | Adam Ellis | https://cn.noxinfluencer.com/instagram/channel/19967130 | -15 | 漫画故事型频道，产品推广相关性低 |
+| 471 | Lika O | https://cn.noxinfluencer.com/instagram/channel/180294696 | -10 | 娱乐音乐内容为主，和投放目标不匹配 |
+| 472 | Niecy “The Range” Nash | https://cn.noxinfluencer.com/instagram/channel/26630970 | -10 | 娱乐型账号，缺少明确消费品场景 |
+| 473 | Lena Dunham | https://cn.noxinfluencer.com/instagram/channel/13875723 | -15 | 影视娱乐型频道，产品推广适配度低 |
+| 476 | Obama Foundation | https://cn.noxinfluencer.com/instagram/channel/1682238760 | 0 | 教育公益内容，与Dreame产品推广关联弱 |
+| 477 | Meredith Mickelson | https://cn.noxinfluencer.com/instagram/channel/490819194 | 0 | 娱乐向个人账号，缺少产品推广场景 |
+| 478 | Matt Friend | https://cn.noxinfluencer.com/instagram/channel/4730620986 | 0 | 模仿喜剧内容，不适合Dreame推广 |
+| 479 | JADOKAR | https://cn.noxinfluencer.com/instagram/channel/58744332363 | 0 | 纯绘画艺术内容，产品转化相关性低 |
+| 480 | Derek Moneyberg | https://cn.noxinfluencer.com/instagram/channel/13319468651 | 0 | 商业励志账号，和Dreame受众不匹配 |
+| 481 | Eggnog and Igloo ❄️ | https://cn.noxinfluencer.com/instagram/channel/3244578294 | -15 | 宠物狗频道，人用Dreame推广明显不匹配 |
+| 482 | Alain giresse Takam | https://cn.noxinfluencer.com/instagram/channel/2062645351 | 0 | 内容信息过少，和产品推广关联不足 |
+| 483 | ▫Bailey Zimmerman▫ | https://cn.noxinfluencer.com/instagram/channel/1654615430 | 0 | 音乐娱乐号，不是产品推广场景 |
+| 484 | VANESA SECO 🦋 | https://cn.noxinfluencer.com/instagram/channel/189002375 | 0 | 舞蹈娱乐内容，缺少消费品推广匹配度 |
+| 486 | Betches Media | https://cn.noxinfluencer.com/instagram/channel/6131548 | 0 | 娱乐媒体号，和Dreame产品不相关 |
+| 488 | Justin Silva | https://cn.noxinfluencer.com/instagram/channel/54624894 | 0 | 海藻食品账号，与Dreame推广无关 |
+| 489 | VICK TIPNES | https://cn.noxinfluencer.com/instagram/channel/2563200132 | 0 | 商业励志内容，缺少产品购买场景 |
+| 490 | Scott Hoying | https://cn.noxinfluencer.com/instagram/channel/3325252 | 0 | 音乐娱乐向，不适合Dreame推广 |
+| 491 | Adrian Per | https://cn.noxinfluencer.com/instagram/channel/15968785 | 0 | 短片影视内容，产品转化信号不足 |
+| 492 | Wesley Hunt | https://cn.noxinfluencer.com/instagram/channel/12342872357 | 0 | 政治新闻号，与消费品推广不匹配 |
+| 493 | So Yummy | https://cn.noxinfluencer.com/instagram/channel/995282076 | 0 | 美食内容不等于家电推广能力 |
+| 494 | Doug the Pug | https://cn.noxinfluencer.com/instagram/channel/272308462 | -15 | 宠物狗频道，不适合人用Dreame推广 |
+| 495 | Ming-Na Wen | https://cn.noxinfluencer.com/instagram/channel/44604236 | 0 | 影视娱乐向，缺少产品推广场景 |
+| 496 | Memes | https://cn.noxinfluencer.com/instagram/channel/16358984 | 0 | 梗图娱乐频道，产品推广相关性弱 |
+| 497 | Alex The Terrible | https://cn.noxinfluencer.com/instagram/channel/1654861236 | 0 | 格斗娱乐内容，不适合Dreame推广 |
+| 498 | National Geographic Your Shot | https://cn.noxinfluencer.com/instagram/channel/1389225126 | 0 | 摄影旅行号，缺少Dreame产品购买场景 |
+| 500 | Janelle Monáe | https://cn.noxinfluencer.com/instagram/channel/350817045 | 0 | 影视音乐娱乐号，不是Dreame目标频道 |

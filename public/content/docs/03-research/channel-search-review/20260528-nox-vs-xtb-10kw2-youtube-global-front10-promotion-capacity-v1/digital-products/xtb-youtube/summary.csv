@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+xtb,youtube,digital products,overall,500,37,7.4%
+xtb,youtube,digital products,head,500,37,7.4%
+xtb,youtube,digital products,mid,0,0,0.0%
+xtb,youtube,digital products,tail,0,0,0.0%

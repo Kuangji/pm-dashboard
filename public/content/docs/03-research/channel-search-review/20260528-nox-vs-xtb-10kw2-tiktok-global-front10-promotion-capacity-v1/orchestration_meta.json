@@ -1,0 +1,38 @@
+{
+  "keywords": [
+    "yoga mat",
+    "resistance bands",
+    "marathon",
+    "digital products",
+    "vape",
+    "treadmill",
+    "agricultural products",
+    "photography equipment",
+    "Dreame",
+    "kitchen"
+  ],
+  "providers": [
+    "nox",
+    "xtb"
+  ],
+  "platform": "tiktok",
+  "country": "",
+  "pages": "1-10",
+  "pageSize": 50,
+  "outputDir": "tmp/channel-search-review/20260528-nox-vs-xtb-10kw2-tiktok-global-front10-promotion-capacity-v1",
+  "promptPath": "/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/.agents/skills/nox-channel-search-agent-batch-review/references/score_prompt.md",
+  "ruleVersion": "promotion-capacity-v1",
+  "recordsPerAgentTask": 25,
+  "maxParallelAgents": 2,
+  "agentModel": "gpt-5.4-mini",
+  "agentReasoningEffort": "high",
+  "retryAttempts": 2,
+  "taskRetryAttempts": 3,
+  "taskRetryDelayMs": 10000,
+  "timeoutMs": 600000,
+  "noxStorageState": ".auth/nox_storage_state_cn.json",
+  "noxProxyServer": "http://127.0.0.1:1080",
+  "runConcurrency": 1,
+  "forceRerun": false,
+  "created_at": "2026-05-28T13:59:26.361Z"
+}

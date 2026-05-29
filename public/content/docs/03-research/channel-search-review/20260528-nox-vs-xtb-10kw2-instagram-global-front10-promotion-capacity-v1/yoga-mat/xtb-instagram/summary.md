@@ -1,0 +1,80 @@
+# Channel Search Batch Review
+
+- provider: xtb
+- platform: instagram
+- keyword: yoga mat
+- total: 500
+- badcase率: 11.4%
+- labels: fit 222, adjacent 221, badcase 57, failed 0
+- score distribution: <0 5, 0-9 208, 10-19 96, 20+ 191
+- 平均 shard 执行时间: 201.7s（21 个 shard）
+- 平均单频道执行时间: 8.5s
+
+## Buckets
+| bucket | total | badcase | badcase_rate |
+|---|---:|---:|---:|
+| overall | 500 | 57 | 11.4% |
+| head | 500 | 57 | 11.4% |
+| mid | 0 | 0 | 0.0% |
+| tail | 0 | 0 | 0.0% |
+
+## Badcases
+| rank | channel | url | score | reason |
+|---:|---|---|---:|---|
+| 21 | Guide lights | مصور | يعقوب المهنا | https://cn--xtb.noxinfluencer.com/instagram/channel/44294331970 | 0 | 无有效标签，缺乏相关性 |
+| 31 | Up to You | Activewear | https://cn--xtb.noxinfluencer.com/instagram/channel/10810663323 | 0 | 无标签，缺少可判断的相关性 |
+| 33 | My Magic Carpet | https://cn--xtb.noxinfluencer.com/instagram/channel/43387781223 | 0 | 家居地毯号，和瑜伽垫场景不符 |
+| 44 | Nathalie van Kralingen | https://cn--xtb.noxinfluencer.com/instagram/channel/2272603733 | 0 | 生活方式号，缺少瑜伽相关 |
+| 46 | Carolina Peconick | Yoga | https://cn--xtb.noxinfluencer.com/instagram/channel/42815666 | 0 | 音乐标签，和瑜伽垫推广不匹配 |
+| 51 | Unycos | https://cn--xtb.noxinfluencer.com/instagram/channel/5999337048 | 0 | 美妆频道，与瑜伽垫推广无关 |
+| 57 | Shita Roshita | https://cn--xtb.noxinfluencer.com/instagram/channel/26209307148 | 0 | 无标签无内容证据，无法判断相关 |
+| 59 | naturyoga | https://cn--xtb.noxinfluencer.com/instagram/channel/48859223314 | 0 | 无标签无内容证据，相关性不足 |
+| 64 | Yoga Squares | https://cn--xtb.noxinfluencer.com/instagram/channel/8411118785 | 0 | 仅有模糊频道名，无有效标签支撑 |
+| 68 | GymAndYoga Story | https://cn--xtb.noxinfluencer.com/instagram/channel/7376101421 | 0 | 标签偏孩子/价格，和瑜伽垫不匹配 |
+| 71 | Paulina Champare | https://cn--xtb.noxinfluencer.com/instagram/channel/1777157848 | 0 | 无标签无内容证据，相关性不足 |
+| 74 | Dixitaaa <3 | https://cn--xtb.noxinfluencer.com/instagram/channel/68216599686 | 0 | 无任何瑜伽垫相关标签或内容信号 |
+| 79 | RR-OM | https://cn--xtb.noxinfluencer.com/instagram/channel/3032725343 | 0 | 无标签无内容证据，和瑜伽垫推广关联极弱 |
+| 88 | 송경이 | https://cn--xtb.noxinfluencer.com/instagram/channel/1309316427 | 0 | 内容偏日常穿搭，缺少瑜伽垫语境 |
+| 90 | Alina | Yoga Teacher | https://cn--xtb.noxinfluencer.com/instagram/channel/2720793930 | 5 | 只有泛瑜伽标签，推广证据过弱 |
+| 91 | 요기니_영경 | https://cn--xtb.noxinfluencer.com/instagram/channel/56758249594 | 0 | 几乎无可用标签，无法判断为相关 |
+| 93 | NUMMU YOGA | https://cn--xtb.noxinfluencer.com/instagram/channel/25330422089 | 5 | 仅有泛瑜伽标签，缺少垫类推广证据 |
+| 101 | Gaurishankar Nayak | https://cn--xtb.noxinfluencer.com/instagram/channel/56133526945 | 0 | 无标签无视频，几乎无推广相关性 |
+| 105 | Bee | https://cn--xtb.noxinfluencer.com/instagram/channel/372332584 | 0 | 无有效标签与内容，无法用于瑜伽垫推广 |
+| 110 | R. Firdhania Azzahra | https://cn--xtb.noxinfluencer.com/instagram/channel/1799214533 | 0 | 无内容证据，难判断为目标创作者 |
+| 114 | 𝗦vitlana | https://cn--xtb.noxinfluencer.com/instagram/channel/1779769655 | 0 | 美发美容向，与瑜伽垫不相关 |
+| 116 | Yana Patel | https://cn--xtb.noxinfluencer.com/instagram/channel/40003860970 | -10 | 舞蹈娱乐向，非瑜伽垫推广场景 |
+| 119 | CRAZE BOUTIQUE | https://cn--xtb.noxinfluencer.com/instagram/channel/52417311685 | 0 | 无有效标签与内容，无法用于推广 |
+| 120 | trending sportswear | https://cn--xtb.noxinfluencer.com/instagram/channel/1741614369 | 0 | 运动服饰泛流量，缺少瑜伽垫相关性 |
+| 125 | Deepak Kumar | https://cn--xtb.noxinfluencer.com/instagram/channel/50793513404 | 0 | 娱乐流量向，与产品推广不匹配 |
+| 140 | 𝗦𝗛𝗘𝗡𝗧𝗜 🇲🇦 | https://cn--xtb.noxinfluencer.com/instagram/channel/21758714967 | -12 | 声音/疗愈导向，属于实体瑜伽垫推广的格式错配 |
+| 144 | Doris Alicia | https://cn--xtb.noxinfluencer.com/instagram/channel/1050356891 | 0 | 无标签和视频证据，相关性不足 |
+| 151 | GAUTAM ROHATGI 🇮🇳/YOGA PRACTITIONER 🤸🏻‍♂️🧿 | https://cn--xtb.noxinfluencer.com/instagram/channel/5833625839 | 0 | 标签几乎全是泛流量内容，无瑜伽垫或购买信号 |
+| 162 | The Yoga Collective | https://cn--xtb.noxinfluencer.com/instagram/channel/63946785676 | 0 | 无标签无视频，无法证明适配瑜伽垫推广 |
+| 168 | caps | https://cn--xtb.noxinfluencer.com/instagram/channel/2249924865 | 0 | 无标签无内容证据 |
+| 174 | theresa🦋 | https://cn--xtb.noxinfluencer.com/instagram/channel/55747344995 | 0 | 无标签无视频，相关性不足 |
+| 181 | ℒ𝑒𝒶𝓃𝑒𝓈 (𝓁𝑒𝒶) | https://cn--xtb.noxinfluencer.com/instagram/channel/2040716633 | 0 | 时尚生活号，缺少瑜伽垫相关信号 |
+| 188 | Tya Suwardi | https://cn--xtb.noxinfluencer.com/instagram/channel/335764975 | 0 | 家庭亲子内容，和瑜伽垫受众不符 |
+| 195 | Sneha Hegde | https://cn--xtb.noxinfluencer.com/instagram/channel/1638391960 | 0 | 音乐内容，与瑜伽垫无关 |
+| 196 | ✨ Дубльдом ✨Дизайн интерьера ✨Йога | https://cn--xtb.noxinfluencer.com/instagram/channel/816767330 | 0 | 家居设计标签为主，缺少瑜伽垫受众 |
+| 199 | YAY! mats | https://cn--xtb.noxinfluencer.com/instagram/channel/1663631145 | 0 | 育儿玩耍垫类，非瑜伽垫受众 |
+| 210 | Pocket SynComedy | https://cn--xtb.noxinfluencer.com/instagram/channel/56492883689 | -5 | 娱乐向comedy账号，与瑜伽垫推广无关 |
+| 213 | İDMAN MALLARI🇦🇿055.838.89.91🇦🇿 | https://cn--xtb.noxinfluencer.com/instagram/channel/4915407821 | 0 | 缺少可用标签与内容，难判断为相关创作者 |
+| 215 | Eunice🧚 | https://cn--xtb.noxinfluencer.com/instagram/channel/34034703550 | 0 | 无标签无视频证据，无法判断 |
+| 217 | Pooja Bhavani | https://cn--xtb.noxinfluencer.com/instagram/channel/5501778005 | 0 | 主体偏歌曲/Reels，瑜伽标签不足 |
+| 219 | ULTIMATE MUSCLE GYM | https://cn--xtb.noxinfluencer.com/instagram/channel/46230302968 | 0 | 无标签与内容证据，相关性不足 |
+| 221 | Reena Verma | https://cn--xtb.noxinfluencer.com/instagram/channel/6391419376 | 0 | 主体偏泛生活/娱乐，缺少垫子受众证据 |
+| 223 | Adrian | https://cn--xtb.noxinfluencer.com/instagram/channel/49469134479 | 0 | 偏塔罗泛内容，缺少瑜伽垫受众信号 |
+| 224 | MYLLE | https://cn--xtb.noxinfluencer.com/instagram/channel/5656621352 | 0 | 泳池/时尚内容为主，与瑜伽垫无关 |
+| 259 | NIODNOGOZNAKOMOGOLICA | https://cn--xtb.noxinfluencer.com/instagram/channel/2293772309 | 1 | 时尚摄影为主，瑜伽仅弱标签，缺少产品推广语境。 |
+| 300 | Little Bot Baby | https://cn--xtb.noxinfluencer.com/instagram/channel/4735770434 | -8 | 婴童受众为主，和成人瑜伽垫推广不匹配 |
+| 303 | 韓國代購 𓅰𝑝𝑒𝑟𝑠𝑜𝑛𝑎𝑙 𝑠𝑡𝑦𝑙𝑖𝑠𝑡 𓅰 𝑡𝑠𝑡 | https://cn--xtb.noxinfluencer.com/instagram/channel/5909104868 | 0 | 代购穿搭号，主题与瑜伽垫推广明显偏离 |
+| 324 | Grhamoy Home | https://cn--xtb.noxinfluencer.com/instagram/channel/54086682361 | 0 | 家居装饰/地毯方向偏离，缺少瑜伽垫信号 |
+| 329 | CULTURE Hijab Co. | https://cn--xtb.noxinfluencer.com/instagram/channel/3626783786 | 0 | 主做头巾时尚，和瑜伽垫推广场景相关性很弱 |
+| 337 | India Intimate Fashion Week | https://cn--xtb.noxinfluencer.com/instagram/channel/3574365179 | -12 | 时装秀/内衣泳装为主，和瑜伽垫推广场景明显不符 |
+| 402 | 8th Chakra Studio | https://cn--xtb.noxinfluencer.com/instagram/channel/991134498 | 0 | 缺少瑜伽垫相关标签，偏灵修健康内容 |
+| 414 | Sydney Tarot Reader & Reiki | https://cn--xtb.noxinfluencer.com/instagram/channel/4730242842 | 0 | 偏塔罗灵性内容，与瑜伽垫推广不匹配 |
+| 420 | Rishiraj Kalra | E-commerce & D2C Mentor | https://cn--xtb.noxinfluencer.com/instagram/channel/17924491018 | 0 | 面向卖家和创业者，非瑜伽垫消费场景 |
+| 448 | Blue Muse Sound Healing | https://cn--xtb.noxinfluencer.com/instagram/channel/8468209769 | 6 | 声音疗愈/冥想型账号，和实体瑜伽垫推广冲突 |
+| 493 | SVOUND Sound Vibration Therapy | https://cn--xtb.noxinfluencer.com/instagram/channel/10474205864 | 5 | 音疗/颂钵为主，虽命中但售卖场景不匹配 |
+| 498 | Al Ain Running Team فريق العين المجتمعي للجري | https://cn--xtb.noxinfluencer.com/instagram/channel/45301847361 | 2 | 跑步训练号，和瑜伽垫使用场景不够贴合 |
+| 499 | The Bendy Brand | https://cn--xtb.noxinfluencer.com/instagram/channel/4535198386 | 0 | 主线偏舞蹈/泳装，不是瑜伽垫受众 |

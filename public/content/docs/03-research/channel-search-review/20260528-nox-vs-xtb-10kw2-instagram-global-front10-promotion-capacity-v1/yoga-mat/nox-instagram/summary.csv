@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+nox,instagram,yoga mat,overall,500,92,18.4%
+nox,instagram,yoga mat,head,500,92,18.4%
+nox,instagram,yoga mat,mid,0,0,0.0%
+nox,instagram,yoga mat,tail,0,0,0.0%

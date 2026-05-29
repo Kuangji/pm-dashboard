@@ -1,0 +1,337 @@
+# Channel Search Batch Review
+
+- provider: nox
+- platform: tiktok
+- keyword: agricultural products
+- total: 500
+- badcase率: 62.8%
+- labels: fit 79, adjacent 107, badcase 314, failed 0
+- score distribution: <0 18, 0-9 394, 10-19 19, 20+ 69
+- 平均 shard 执行时间: 109.4s（21 个 shard）
+- 平均单频道执行时间: 4.6s
+
+## Buckets
+| bucket | total | badcase | badcase_rate |
+|---|---:|---:|---:|
+| overall | 500 | 314 | 62.8% |
+| head | 500 | 314 | 62.8% |
+| mid | 0 | 0 | 0.0% |
+| tail | 0 | 0 | 0.0% |
+
+## Badcases
+| rank | channel | url | score | reason |
+|---:|---|---|---:|---|
+| 1 | Agriculture | https://cn.noxinfluencer.com/tiktok/channel/7294835391298421802 | 0 | 标签全是美妆健身，和农业产品无关 |
+| 2 | Power Service Products | https://cn.noxinfluencer.com/tiktok/channel/7083587878291571754 | 0 | 偏柴油车辆服务，不是农业产品受众 |
+| 4 | LANDIO | https://cn.noxinfluencer.com/tiktok/channel/6760889288941192198 | 0 | 房地产和狩猎向，缺少农业产品信号 |
+| 5 | Stop Italian Sounding 🇮🇹 🎯 | https://cn.noxinfluencer.com/tiktok/channel/6985562093907674117 | 0 | 意大利美食科普向，和农业产品不匹配 |
+| 9 | Notes on Iowa | https://cn.noxinfluencer.com/tiktok/channel/7312471453618127903 | 0 | 历史体育教育内容，缺少农业和产品信号 |
+| 14 | Ramato Dana Halaba | https://cn.noxinfluencer.com/tiktok/channel/7086195704398447622 | 0 | 无标签无内容信号，无法判断相关性 |
+| 18 | TCPEL Indonesia | Mesin Pelet | https://cn.noxinfluencer.com/tiktok/channel/7300737170476893192 | 0 | 无标签无内容信号，无法判断相关性 |
+| 20 | Ag News Daily | https://cn.noxinfluencer.com/tiktok/channel/7337818178971649066 | 0 | 无标签无内容信号，无法判断相关性 |
+| 21 | Work Process | https://cn.noxinfluencer.com/tiktok/channel/7513387756951110678 | 0 | 无标签无内容信号，无法判断相关性 |
+| 24 | Paul Schriner | https://cn.noxinfluencer.com/tiktok/channel/7149648347048838186 | 0 | 保健品促销向，不是农业产品场景 |
+| 25 | Counselor Yasser Al-Bahadli | https://cn.noxinfluencer.com/tiktok/channel/6899656132748526598 | 0 | 无标签无内容信号，无法判断相关性 |
+| 31 | Crownstone Equipment | https://cn.noxinfluencer.com/tiktok/channel/7050244859331920943 | -10 | 重型工程设备为主，与农产品推广不匹配 |
+| 32 | labor protection gloves | https://cn.noxinfluencer.com/tiktok/channel/7431945797905663022 | 0 | 仅有手套类名称，缺少农业相关证据 |
+| 36 | Bailey Slater | https://cn.noxinfluencer.com/tiktok/channel/7351471557875024942 | 0 | 信息不足，无法判断为农业相关频道 |
+| 37 | highpointlandcompany | https://cn.noxinfluencer.com/tiktok/channel/7210521483298587691 | 0 | 缺少农业或产品推广证据 |
+| 39 | superant_maxj | https://cn.noxinfluencer.com/tiktok/channel/7078525675698717697 | -15 | 娱乐玩具向，和农产品推广明显不符 |
+| 44 | Aly Moore | https://cn.noxinfluencer.com/tiktok/channel/6808776937545581573 | 0 | 无有效农业信号 |
+| 45 | The Rike Stories | https://cn.noxinfluencer.com/tiktok/channel/7511885740617385003 | 0 | 故事叙事向，和产品推广场景不一致 |
+| 46 | Michelle | https://cn.noxinfluencer.com/tiktok/channel/7044561201791370245 | 0 | 缺少任何农业或购物推广信号 |
+| 49 | Ertl | https://cn.noxinfluencer.com/tiktok/channel/6942954909432923142 | 10 | 农玩具为主，真实农产品推广不匹配 |
+| 50 | filterleadingfactory | https://cn.noxinfluencer.com/tiktok/channel/7438863034641450027 | 0 | 缺少可用的农业相关信号 |
+| 51 | CONGOBON | https://cn.noxinfluencer.com/tiktok/channel/6981259005424043013 | 0 | 政治/地域内容，和农产品推广无关 |
+| 52 | SaraH🎐 | https://cn.noxinfluencer.com/tiktok/channel/7235898904583619590 | 0 | 标签为空，缺少农产品相关证据 |
+| 53 | James Grace | https://cn.noxinfluencer.com/tiktok/channel/6926215061129085958 | 0 | 标签为空，缺少农产品相关证据 |
+| 54 | IFSQUARE IDUSTRIAL CO..ltd | https://cn.noxinfluencer.com/tiktok/channel/7420271425753400363 | 0 | 工业制造类，和农产品推广不匹配 |
+| 55 | Organic Rising | https://cn.noxinfluencer.com/tiktok/channel/7264702188386190378 | 0 | 仅有 organic 名称线索，证据不足 |
+| 57 | RuhterBoyz | https://cn.noxinfluencer.com/tiktok/channel/7321551052355634218 | 0 | 无相关标签或内容证据 |
+| 58 | LiHan | https://cn.noxinfluencer.com/tiktok/channel/7456387448760910894 | 0 | 无相关标签或内容证据 |
+| 60 | Sediq Sound Studio | https://cn.noxinfluencer.com/tiktok/channel/7141958260290651179 | 0 | 音频工作室类，和农产品无关 |
+| 61 | ddmeter.factory | https://cn.noxinfluencer.com/tiktok/channel/7433246646420767786 | 0 | 工厂型账号，缺少农产品相关信号 |
+| 64 | EduardoSanchez | https://cn.noxinfluencer.com/tiktok/channel/6754133465388172293 | 0 | 无相关标签或内容证据 |
+| 65 | wontide_forest | https://cn.noxinfluencer.com/tiktok/channel/7396150536117847086 | 0 | 森林/自然向，和农产品关联弱 |
+| 66 | LUR GcB | https://cn.noxinfluencer.com/tiktok/channel/7532989559091332110 | 0 | 无相关标签或内容证据 |
+| 67 | 🎖️ Shadow Gamer🎖️ | https://cn.noxinfluencer.com/tiktok/channel/7292650115235693614 | 0 | 宠物娱乐向，和农产品推广不匹配 |
+| 69 | Real Tuff | https://cn.noxinfluencer.com/tiktok/channel/7206357910698673198 | 0 | 无相关标签或内容证据 |
+| 70 | Plasticizer DOP  DOTP | https://cn.noxinfluencer.com/tiktok/channel/7529716219751334926 | 0 | 化工增塑剂方向，和农产品无关 |
+| 73 | TheSchoolTourChris | https://cn.noxinfluencer.com/tiktok/channel/7330738312993489962 | 0 | 校园旅游向，和农产品无关 |
+| 75 | 😎 | https://cn.noxinfluencer.com/tiktok/channel/7482850735606187051 | 0 | 信息不足，缺少农产品相关证据 |
+| 76 | The Rike Root Stories | https://cn.noxinfluencer.com/tiktok/channel/7574523089372201998 | 0 | 无农业相关标签或视频证据 |
+| 85 | StreetRecords | https://cn.noxinfluencer.com/tiktok/channel/7530962513094050830 | 0 | 无农业相关信息 |
+| 86 | wetdiddyfart | https://cn.noxinfluencer.com/tiktok/channel/7560844281959892023 | 0 | 无农业相关信息 |
+| 92 | Tiiga | https://cn.noxinfluencer.com/tiktok/channel/6905433039868298245 | 0 | 无农业相关信息 |
+| 94 | LANDY Industry | https://cn.noxinfluencer.com/tiktok/channel/7172766214955287594 | 0 | 无农业相关信息 |
+| 95 | AK Poku Law | https://cn.noxinfluencer.com/tiktok/channel/6877633701652513797 | -15 | 法律/移民标签与农业产品明显不相关 |
+| 98 | YUMi&verse | https://cn.noxinfluencer.com/tiktok/channel/7511976085984855086 | 0 | 无农业相关信息 |
+| 99 | Niza Lifestyle | https://cn.noxinfluencer.com/tiktok/channel/7449002070726804522 | 0 | 无农业相关信息 |
+| 102 | BLACK HISTORY 365 | https://cn.noxinfluencer.com/tiktok/channel/7466878177241482270 | 0 | 历史发明类内容，与农产品推广不相关 |
+| 103 | 𝓻𝓾𝓫𝔂𝔂𝔂💕 | https://cn.noxinfluencer.com/tiktok/channel/7520399698860770359 | 0 | 无标签无视频，缺少相关性证据 |
+| 104 | Kokora - Life Regenerated | https://cn.noxinfluencer.com/tiktok/channel/7319947016020460587 | 0 | 无标签无视频，缺少相关性证据 |
+| 107 | Daily Historian | https://cn.noxinfluencer.com/tiktok/channel/7269579654031033390 | -10 | 娱乐表情包标签明显，和农产品推广不匹配 |
+| 108 | T.H.C. | https://cn.noxinfluencer.com/tiktok/channel/7403419005485696046 | 0 | 无标签无视频，缺少相关性证据 |
+| 109 | Sophia-HYH | https://cn.noxinfluencer.com/tiktok/channel/7498644974763672577 | 0 | 无标签无视频，缺少相关性证据 |
+| 111 | HUAYANG BLCO-TECH | https://cn.noxinfluencer.com/tiktok/channel/7303733957918475310 | 0 | 无标签无视频，缺少相关性证据 |
+| 114 | Durable Construction Machinery | https://cn.noxinfluencer.com/tiktok/channel/7370989215385371690 | 0 | 无标签无视频，缺少相关性证据 |
+| 117 | Eloy zhao-GS Solar | https://cn.noxinfluencer.com/tiktok/channel/7215158125186548741 | 0 | 无标签无视频，缺少相关性证据 |
+| 126 | jbl.shredder | https://cn.noxinfluencer.com/tiktok/channel/7403267232682476586 | 0 | 无农业相关标签或内容信号 |
+| 127 | Glamour China | https://cn.noxinfluencer.com/tiktok/channel/6943083180313068546 | -5 | 娱乐向频道，与农产品推广不符 |
+| 129 | Native Monarchs | https://cn.noxinfluencer.com/tiktok/channel/7142957930021782571 | 0 | 以自然/动物为主，缺少农产品推广信号 |
+| 130 | LONGMAN FILTER | https://cn.noxinfluencer.com/tiktok/channel/7381103650896462890 | 0 | 无农业相关信号 |
+| 132 | US History Today 🇺🇸 | https://cn.noxinfluencer.com/tiktok/channel/7510030394603963434 | 0 | 历史资讯向，缺少农业产品受众 |
+| 133 | Wanplas | https://cn.noxinfluencer.com/tiktok/channel/7532376263841235989 | 0 | 无农业相关信号 |
+| 134 | Dji Horror | https://cn.noxinfluencer.com/tiktok/channel/7453754537147892782 | -10 | 恐怖娱乐向，和农产品推广强冲突 |
+| 137 | Alex Corey | Cultivated Change | https://cn.noxinfluencer.com/tiktok/channel/6903379458474165253 | 0 | 健康/商务向，缺少农业产品受众 |
+| 140 | c7jfcg581 | https://cn.noxinfluencer.com/tiktok/channel/7260962146229912619 | 0 | 无农业相关信号 |
+| 141 | Allen Elmore TheTravelingAgent | https://cn.noxinfluencer.com/tiktok/channel/6917466813618914309 | -5 | 地产销售向，和农产品推广不符 |
+| 142 | Tamale Julius | https://cn.noxinfluencer.com/tiktok/channel/6997376376265360390 | 0 | 无农业相关信号 |
+| 148 | CA-NV-Outdoor-Properties | https://cn.noxinfluencer.com/tiktok/channel/7582805438028383245 | 0 | 户外地产向，和农产品推广不符 |
+| 150 | lyberty_65 | https://cn.noxinfluencer.com/tiktok/channel/7464619949148914731 | 0 | 无农业相关信号 |
+| 154 | Bee Organi Shield | https://cn.noxinfluencer.com/tiktok/channel/7333611188637926443 | 0 | 信息过少，无法确认农业受众 |
+| 157 | Dachui Charcoal Machine | https://cn.noxinfluencer.com/tiktok/channel/7508587438777631790 | 0 | 炭机主题与农业产品不匹配 |
+| 158 | HEEJIA ppfittingpvcballvalve | https://cn.noxinfluencer.com/tiktok/channel/7177558922925179950 | 0 | 工业管件账号，与农业产品无关 |
+| 159 | Michael Moeller | Kentucky | https://cn.noxinfluencer.com/tiktok/channel/6749143618168390662 | 0 | 学习娱乐向，和农产品推广无关 |
+| 162 | J | https://cn.noxinfluencer.com/tiktok/channel/7218323131468334126 | 0 | 信息不足，无法判断相关性 |
+| 164 | United Country Real Estate | https://cn.noxinfluencer.com/tiktok/channel/7060446433975108614 | 0 | 地产与农产品推广相关性弱 |
+| 166 | Crystal Heath | https://cn.noxinfluencer.com/tiktok/channel/6785548810476536838 | 0 | 动物权益导向，与农产品推广偏离 |
+| 167 | povertysquatter🇬🇷🇨🇦 | https://cn.noxinfluencer.com/tiktok/channel/7160713530789987370 | 0 | 健身向账号，与农产品无关 |
+| 168 | Armchair Engineer | https://cn.noxinfluencer.com/tiktok/channel/6949281575604421637 | 0 | 工程内容与农产品受众不匹配 |
+| 171 | BNC Tech Iron Cast | https://cn.noxinfluencer.com/tiktok/channel/7436574137302565930 | 0 | 铸铁工业账号，与农业产品无关 |
+| 172 | luoyangzhengju | https://cn.noxinfluencer.com/tiktok/channel/7469337931757552686 | 0 | 工厂外贸向，农业相关性不足 |
+| 173 | Musa Moyzen | https://cn.noxinfluencer.com/tiktok/channel/7054298010348045318 | 0 | 剪辑工具账号，和农产品推广无关 |
+| 178 | Vellum Street | https://cn.noxinfluencer.com/tiktok/channel/6828966824953807878 | 0 | 无农业相关信号，无法判断与农产品推广相关 |
+| 179 | L'Union Suite | https://cn.noxinfluencer.com/tiktok/channel/6802806834551342085 | -5 | 文化娱乐向，和农业产品推广明显不匹配 |
+| 180 | Dekku | https://cn.noxinfluencer.com/tiktok/channel/7545211066671842359 | 0 | 无任何农业相关证据，匹配度很低 |
+| 181 | Unknownfacts | https://cn.noxinfluencer.com/tiktok/channel/7574849814324806670 | 0 | 无农业相关证据，匹配度很低 |
+| 182 | Bolong Group | https://cn.noxinfluencer.com/tiktok/channel/7338225707128079368 | 0 | 无农业相关证据，匹配度很低 |
+| 185 | Agera | https://cn.noxinfluencer.com/tiktok/channel/7430943941191468075 | 0 | 无农业相关证据，匹配度很低 |
+| 186 | Eco Friendly Everything | https://cn.noxinfluencer.com/tiktok/channel/7351476240049013802 | 0 | 无农业相关证据，匹配度很低 |
+| 187 | bn1w5d2 | https://cn.noxinfluencer.com/tiktok/channel/7181229974825452590 | 0 | 无农业相关证据，匹配度很低 |
+| 188 | Handsoffmymeat | https://cn.noxinfluencer.com/tiktok/channel/7206566859600086059 | 0 | 疑似肉类梗号，但没有农业产品推广证据 |
+| 189 | perforated plate | https://cn.noxinfluencer.com/tiktok/channel/7554288065440629767 | 0 | 无农业相关证据，且主题不明确 |
+| 192 | Matt Connelly | https://cn.noxinfluencer.com/tiktok/channel/6665993931786305542 | 0 | 无农业相关证据，匹配度很低 |
+| 195 | JJ Hampton | Texas Real Estate | https://cn.noxinfluencer.com/tiktok/channel/7297994121187574827 | 0 | 时尚/房产向，和农业产品推广关联弱 |
+| 196 | Jeff Krasno | https://cn.noxinfluencer.com/tiktok/channel/6907090251216061445 | 0 | 无农业相关证据，匹配度很低 |
+| 198 | Lions Transport / Carlos Leon | https://cn.noxinfluencer.com/tiktok/channel/6827964501255635973 | 0 | 无农业相关证据，匹配度很低 |
+| 202 | Youmiao -Tina | https://cn.noxinfluencer.com/tiktok/channel/7321592434742477870 | 0 | 无农业相关标签和内容，相关性弱 |
+| 203 | Junge Environment Technology | https://cn.noxinfluencer.com/tiktok/channel/7529795795060032543 | 0 | 无农业相关标签和内容，相关性弱 |
+| 204 | Riann Tippit Lacina | https://cn.noxinfluencer.com/tiktok/channel/6920067242647897094 | 0 | 无农业相关标签和内容，相关性弱 |
+| 205 | Memory Hole | https://cn.noxinfluencer.com/tiktok/channel/7517830995691078711 | 0 | 无农业相关标签和内容，相关性弱 |
+| 207 | Growingresilience.sd | https://cn.noxinfluencer.com/tiktok/channel/7056838789193679919 | 0 | 无农业相关标签和内容，相关性弱 |
+| 208 | Wilbur-Ellis Careers | https://cn.noxinfluencer.com/tiktok/channel/7210141627129922606 | 0 | 偏招聘账号，缺少农业产品推广证据 |
+| 210 | gallivantinggourmet | https://cn.noxinfluencer.com/tiktok/channel/7184898210241217579 | 0 | 偏美食内容，农业产品相关性弱 |
+| 213 | Intergenerational Rescue | https://cn.noxinfluencer.com/tiktok/channel/7085632956767552558 | 0 | 无农业相关标签和内容，相关性弱 |
+| 218 | Container Nut | https://cn.noxinfluencer.com/tiktok/channel/7287931541925053483 | 0 | 无农业相关标签和内容，相关性弱 |
+| 219 | leukodystrophylife | https://cn.noxinfluencer.com/tiktok/channel/7027242425367446534 | 0 | 无农业相关标签和内容，相关性弱 |
+| 222 | Nihewan China | https://cn.noxinfluencer.com/tiktok/channel/7270321999845803054 | 0 | 无农业相关标签和内容，相关性弱 |
+| 223 | Jake Thomas | https://cn.noxinfluencer.com/tiktok/channel/7081374993902240814 | 0 | 偏健康饮食，不是农业产品推广场景 |
+| 224 | shannonatsunbeltrentalsromega | https://cn.noxinfluencer.com/tiktok/channel/6638745868928319493 | 0 | 无农业相关标签和内容，相关性弱 |
+| 227 | Melissa ❌️  🗽 🇵🇷 | https://cn.noxinfluencer.com/tiktok/channel/6642871121447370757 | -15 | 服饰/艺术/娱乐向，与农产品推广明显不匹配 |
+| 229 | KinnanFAB | https://cn.noxinfluencer.com/tiktok/channel/6805675681369277446 | 0 | 缺少农业相关标签或内容证据，相关性弱 |
+| 230 | yangyang23390 | https://cn.noxinfluencer.com/tiktok/channel/7293786924982043694 | 0 | 无标签无内容证据，无法判断为农业相关 |
+| 232 | djjl830 | https://cn.noxinfluencer.com/tiktok/channel/7070406344410874923 | 0 | 没有农业主题信息，相关性不足 |
+| 233 | By-O-Reg + | https://cn.noxinfluencer.com/tiktok/channel/7267599285177713710 | 0 | 名称含义不清，缺少农业产品相关证据 |
+| 234 | Dameng electromechanical | https://cn.noxinfluencer.com/tiktok/channel/7483420682524214318 | 0 | 偏工业机械方向，未体现农业产品场景 |
+| 235 | BOSNAL | https://cn.noxinfluencer.com/tiktok/channel/7115248666998948907 | 0 | 无可用农业相关信号，相关性弱 |
+| 236 | Sheri Winter Parker | https://cn.noxinfluencer.com/tiktok/channel/6960263633591927813 | 0 | 个人号，缺少农业产品推广相关证据 |
+| 238 | AlamoRCDcan | https://cn.noxinfluencer.com/tiktok/channel/7098073893761451054 | 0 | 缺少农业产品或农场场景证据 |
+| 239 | Free From Harm | https://cn.noxinfluencer.com/tiktok/channel/7036509425533994030 | 0 | 更像理念/倡议账号，不像农业产品推广频道 |
+| 240 | Lina-plastic machinery factory | https://cn.noxinfluencer.com/tiktok/channel/7524122706763629581 | 0 | 工业塑机方向，和农业产品推广关联弱 |
+| 245 | HMS-Proiectare | https://cn.noxinfluencer.com/tiktok/channel/7367844253130753056 | 0 | 没有可用的农业主题信号 |
+| 249 | Mrs.Southwestern States | https://cn.noxinfluencer.com/tiktok/channel/7252132136957363243 | 0 | 偏泛生活化名称，农业相关性不明显 |
+| 251 | Monarch Botanika | https://cn.noxinfluencer.com/tiktok/channel/7142961098239542315 | 0 | 缺少农业相关标签或视频证据 |
+| 252 | madilynemmalee4 | https://cn.noxinfluencer.com/tiktok/channel/7574643140184736782 | 0 | 缺少农业相关标签或视频证据 |
+| 254 | alliancemediaproduction | https://cn.noxinfluencer.com/tiktok/channel/7375401602990375952 | 0 | 缺少农业相关标签或视频证据 |
+| 255 | Enduring Harvest | https://cn.noxinfluencer.com/tiktok/channel/7165908066742273067 | 0 | 缺少农业相关标签或视频证据 |
+| 256 | Steven the Engineer | https://cn.noxinfluencer.com/tiktok/channel/7212708458505749550 | 0 | 缺少农业相关标签或视频证据 |
+| 257 | wenwan-shop | https://cn.noxinfluencer.com/tiktok/channel/7632621975568237581 | 0 | 缺少农业相关标签或视频证据 |
+| 258 | AMOS Power | https://cn.noxinfluencer.com/tiktok/channel/7125403448339055658 | 0 | 缺少农业相关标签或视频证据 |
+| 259 | Emily Lee | https://cn.noxinfluencer.com/tiktok/channel/7070449708678366254 | 0 | 缺少农业相关标签或视频证据 |
+| 260 | adrienmary498 | https://cn.noxinfluencer.com/tiktok/channel/7574643153144792078 | 0 | 缺少农业相关标签或视频证据 |
+| 261 | Grace Li | https://cn.noxinfluencer.com/tiktok/channel/7436958103901422599 | 0 | 缺少农业相关标签或视频证据 |
+| 262 | ChapulFarms | https://cn.noxinfluencer.com/tiktok/channel/7050133682528060463 | 0 | 缺少农业相关标签或视频证据 |
+| 263 | The Repurposing Life | https://cn.noxinfluencer.com/tiktok/channel/6921829099104601094 | 0 | 缺少农业相关标签或视频证据 |
+| 265 | Applied Gray Matter | https://cn.noxinfluencer.com/tiktok/channel/7403835711856919598 | 0 | 缺少农业相关标签或视频证据 |
+| 266 | Hou Boyu | https://cn.noxinfluencer.com/tiktok/channel/7594390887138083895 | 0 | 缺少农业相关标签或视频证据 |
+| 267 | Drylet | https://cn.noxinfluencer.com/tiktok/channel/7509093505920681006 | 0 | 缺少农业相关标签或视频证据 |
+| 268 | Pump.Valve | https://cn.noxinfluencer.com/tiktok/channel/7376158234326811694 | 0 | 缺少农业相关标签或视频证据 |
+| 269 | Xiaochuan Yi479 | https://cn.noxinfluencer.com/tiktok/channel/7081899049717957678 | 0 | 缺少农业相关标签或视频证据 |
+| 270 | Jadygrowin | https://cn.noxinfluencer.com/tiktok/channel/7582865319674594359 | 0 | 缺少农业相关标签或视频证据 |
+| 271 | LIFETREE Cheng | https://cn.noxinfluencer.com/tiktok/channel/7483804977154835502 | 0 | 缺少农业相关标签或视频证据 |
+| 272 | TillersInternational | https://cn.noxinfluencer.com/tiktok/channel/7406402551891805227 | 0 | 缺少农业相关标签或视频证据 |
+| 273 | iot | https://cn.noxinfluencer.com/tiktok/channel/7376368587602625582 | 0 | 缺少农业相关标签或视频证据 |
+| 274 | Nuoman_tractor | https://cn.noxinfluencer.com/tiktok/channel/7339816433653711915 | 0 | 缺少农业相关标签或视频证据 |
+| 275 | ILumigrow LLC | https://cn.noxinfluencer.com/tiktok/channel/7401028830511088683 | 0 | 缺少农业相关标签或视频证据 |
+| 276 | Blue Atlas Project | https://cn.noxinfluencer.com/tiktok/channel/6984624835968812037 | 0 | 无农业/农产品相关信号，难支持推广 |
+| 277 | fionacao261 | https://cn.noxinfluencer.com/tiktok/channel/7424326050606613546 | 0 | 缺少农业主题与产品证据 |
+| 278 | Tonomi | https://cn.noxinfluencer.com/tiktok/channel/7304491456277742634 | 0 | 内容信号缺失，难判断为农业受众 |
+| 279 | Huaming Steven | https://cn.noxinfluencer.com/tiktok/channel/7359176987703903274 | 0 | 个人号且无农业内容线索 |
+| 280 | HuayangMachineryBella | https://cn.noxinfluencer.com/tiktok/channel/7485816671589565457 | 0 | 机械向账号，更像工业设备，不像农产品 |
+| 281 | hongdimachinery | https://cn.noxinfluencer.com/tiktok/channel/7506416601845875758 | 0 | 机械制造向，和农产品推广偏离 |
+| 282 | laiyin factory | https://cn.noxinfluencer.com/tiktok/channel/7511629178949698603 | 0 | 工厂号，农业产品受众不明确 |
+| 283 | CNC punched metal | https://cn.noxinfluencer.com/tiktok/channel/7590969948442133559 | 0 | 金属加工主题，和农产品场景不符 |
+| 285 | LD Productions | https://cn.noxinfluencer.com/tiktok/channel/7053127478311797765 | 0 | 制作类泛账号，缺少农业定位 |
+| 286 | wenwan-shop | https://cn.noxinfluencer.com/tiktok/channel/7632620706010268686 | 0 | 文玩电商，与农业产品无关 |
+| 287 | elitenutritionllc | https://cn.noxinfluencer.com/tiktok/channel/7372259953832477742 | 0 | 营养类更偏人类健康，不是农业产品 |
+| 288 | Dynamic Green Products | https://cn.noxinfluencer.com/tiktok/channel/7495107243437130782 | 0 | 绿色产品泛账号，农业关联不足 |
+| 289 | Hydraulics pump | https://cn.noxinfluencer.com/tiktok/channel/7357172320468157483 | 0 | 液压泵工业品，和农产品不匹配 |
+| 291 | Scherer Inc | https://cn.noxinfluencer.com/tiktok/channel/7390817933181109291 | 0 | 公司号但无农业主题证据 |
+| 293 | EcoGEM | https://cn.noxinfluencer.com/tiktok/channel/7285690899416794154 | 0 | 环保泛账号，缺少农业产品线索 |
+| 294 | JiangHeRiders | https://cn.noxinfluencer.com/tiktok/channel/7433320116639073322 | 0 | 骑行/户外向，和农业产品受众不符 |
+| 295 | echo_packing_machine | https://cn.noxinfluencer.com/tiktok/channel/7507434797451674670 | 0 | 包装机械向，偏工业设备，不像农产品 |
+| 297 | yj-machinery | https://cn.noxinfluencer.com/tiktok/channel/7416271978636084229 | 0 | 机械向账号，农业产品相关性弱 |
+| 299 | Jes282010🌊 | https://cn.noxinfluencer.com/tiktok/channel/106644916218245120 | -10 | 娱乐游戏标签占主导，与农业推广场景冲突 |
+| 300 | thecraftymomandeducator | https://cn.noxinfluencer.com/tiktok/channel/12022195 | 0 | 亲子教育向，和农业产品无直接关系 |
+| 301 | Johan US-Afrikaner | https://cn.noxinfluencer.com/tiktok/channel/131823582661210112 | 0 | 无农产品相关标签或内容证据 |
+| 302 | AR_Vox | https://cn.noxinfluencer.com/tiktok/channel/142603896945864704 | 0 | 无农产品相关标签或内容证据 |
+| 303 | Kaitlyn ✨ Photographer | https://cn.noxinfluencer.com/tiktok/channel/148258551835230209 | 0 | 摄影时尚号，和农产品推广无关 |
+| 304 | 1traderdrysdale | https://cn.noxinfluencer.com/tiktok/channel/153264116000935936 | 0 | 标签无农业含义，缺少相关证据 |
+| 305 | inxutv2dob | https://cn.noxinfluencer.com/tiktok/channel/156982229687152640 | 0 | 无农产品相关标签或内容证据 |
+| 307 | Cord Lee | https://cn.noxinfluencer.com/tiktok/channel/166413193827729408 | 0 | 无农产品相关标签或内容证据 |
+| 309 | Stella | https://cn.noxinfluencer.com/tiktok/channel/167578826649145344 | 0 | 无农产品相关标签或内容证据 |
+| 310 | 🌞Cat-er-ina🌞 | https://cn.noxinfluencer.com/tiktok/channel/169432281558867968 | 0 | 手工缝纫向，与农产品推广不匹配 |
+| 311 | Becca Hudson | https://cn.noxinfluencer.com/tiktok/channel/179176692756774912 | 0 | 无农产品相关标签或内容证据 |
+| 312 | katrina_in_washington | https://cn.noxinfluencer.com/tiktok/channel/183916814039408640 | 0 | 无农产品相关标签或内容证据 |
+| 313 | Brianna Tucker | https://cn.noxinfluencer.com/tiktok/channel/1841764 | 0 | 摄影时尚号，和农产品推广无关 |
+| 315 | peta2 | ur vegan bestie <3 | https://cn.noxinfluencer.com/tiktok/channel/211686256777596928 | 1 | 有食品弱相关，但动物权益受众不适合农产品推广 |
+| 316 | Tori 🐠 | https://cn.noxinfluencer.com/tiktok/channel/21475942 | 0 | 无农产品相关标签或内容证据 |
+| 317 | Leigh LaRue | https://cn.noxinfluencer.com/tiktok/channel/225407932631584768 | 0 | 无农产品相关标签或内容证据 |
+| 318 | CheriRivera | https://cn.noxinfluencer.com/tiktok/channel/235609595073769472 | 0 | 无农产品相关标签或内容证据 |
+| 319 | Adrienne Barker, MAS | https://cn.noxinfluencer.com/tiktok/channel/23961594 | 0 | 无农产品相关标签或内容证据 |
+| 320 | Snowqueenla | https://cn.noxinfluencer.com/tiktok/channel/24376481 | 0 | 时尚挑战号，与农产品推广不匹配 |
+| 322 | 🃏🔥 Nightwing_Ascending 🔥🃏 | https://cn.noxinfluencer.com/tiktok/channel/2497433 | 0 | 新闻政治号，和农产品推广不匹配 |
+| 323 | Melina ♡ | https://cn.noxinfluencer.com/tiktok/channel/27814742 | 0 | 无农产品相关标签或内容证据 |
+| 324 | Land Of The Lost 2.6 | https://cn.noxinfluencer.com/tiktok/channel/28092785 | 0 | 喜剧家庭号，农产品推广相关性弱 |
+| 325 | Louis Capet XXVI Records | https://cn.noxinfluencer.com/tiktok/channel/290220745895538688 | 0 | 无农产品相关标签或内容证据 |
+| 326 | totallycatherine | https://cn.noxinfluencer.com/tiktok/channel/317931990085754880 | 0 | 无农业相关标签或内容信号 |
+| 327 | Matzine Sánchez-Gutiérrez | https://cn.noxinfluencer.com/tiktok/channel/319404145533235200 | 0 | 无农业相关标签或内容信号 |
+| 329 | MS NOW | https://cn.noxinfluencer.com/tiktok/channel/54068006569377792 | -15 | 政治新闻号，与农产品推广场景明显不符 |
+| 331 | Landmark | https://cn.noxinfluencer.com/tiktok/channel/5463730 | 0 | 无农业相关信号 |
+| 337 | Elerine De’Carrie McMurry LLC | https://cn.noxinfluencer.com/tiktok/channel/6525303990496793615 | 0 | 无农业相关标签或内容信号 |
+| 338 | Dr. Simón Alvarez | https://cn.noxinfluencer.com/tiktok/channel/6532013237389492225 | 0 | 无农业相关标签或内容信号 |
+| 339 | Suglyboy | https://cn.noxinfluencer.com/tiktok/channel/6532018067306708994 | 0 | 无农业相关标签或内容信号 |
+| 340 | CAEP USA | https://cn.noxinfluencer.com/tiktok/channel/6532037033873899521 | 0 | 无农业相关标签或内容信号 |
+| 343 | House of Nails 💅🏽 | https://cn.noxinfluencer.com/tiktok/channel/6532065577031172097 | 0 | 无农业相关信号 |
+| 344 | Kristi_ redefiningself | https://cn.noxinfluencer.com/tiktok/channel/6532075039217434626 | 0 | 无农业相关信号 |
+| 345 | CommonX Podcast | https://cn.noxinfluencer.com/tiktok/channel/6532092897787936769 | 0 | 无农业相关信号 |
+| 346 | Alexandra Bučoková | https://cn.noxinfluencer.com/tiktok/channel/6532278698475782145 | 0 | 无农业相关信号 |
+| 347 | Ethan | https://cn.noxinfluencer.com/tiktok/channel/6532334791222624258 | 0 | 无农业相关信号 |
+| 348 | LOREN | https://cn.noxinfluencer.com/tiktok/channel/6532380918202810369 | -15 | 政治立场标签密集，和农产品推广无关 |
+| 351 | JB | https://cn.noxinfluencer.com/tiktok/channel/6533525835670885376 | 0 | 标签为空，缺少农产品相关信号 |
+| 353 | Jodi LoGerfo, DNP, APRN, FNP-C | https://cn.noxinfluencer.com/tiktok/channel/6536899911202378752 | 0 | 标签为空，缺少农产品相关信号 |
+| 354 | Shivangi Tarkar | https://cn.noxinfluencer.com/tiktok/channel/6537044678632543232 | 0 | 偏娱乐时尚，和农产品推广关联弱 |
+| 355 | Jasyra RN | https://cn.noxinfluencer.com/tiktok/channel/6541368252550348806 | 0 | 亲子娱乐向，和农产品主题不匹配 |
+| 358 | Rachel | Functional Nutrition | https://cn.noxinfluencer.com/tiktok/channel/6543627320489394178 | 0 | 健康教练号，缺少农产品相关场景 |
+| 359 | Sharon | https://cn.noxinfluencer.com/tiktok/channel/6545037802065002498 | 0 | 标签为空，缺少农产品相关信号 |
+| 360 | lost and pound | https://cn.noxinfluencer.com/tiktok/channel/6545596276791055360 | 0 | 标签为空，缺少农产品相关信号 |
+| 361 | Micro Planet | https://cn.noxinfluencer.com/tiktok/channel/6546181208152216591 | 0 | 科技科普号，与农产品推广无关 |
+| 362 | ♥️ColumbusOhioMama♥️ | https://cn.noxinfluencer.com/tiktok/channel/6546585627259835392 | 0 | 本地宝妈号，农产品相关度很弱 |
+| 365 | Julieb4health | https://cn.noxinfluencer.com/tiktok/channel/6562581053134077957 | 0 | 标签为空，缺少农产品相关信号 |
+| 366 | Kelsey Crane | https://cn.noxinfluencer.com/tiktok/channel/65656630054248448 | 0 | 标签为空，缺少农产品相关信号 |
+| 367 | kelby⚡ | https://cn.noxinfluencer.com/tiktok/channel/6567119184008855557 | 0 | 标签为空，缺少农产品相关信号 |
+| 368 | Jay | https://cn.noxinfluencer.com/tiktok/channel/6568903583852019718 | 0 | 标签为空，缺少农产品相关信号 |
+| 369 | laney | https://cn.noxinfluencer.com/tiktok/channel/6570520570777108486 | 0 | 标签为空，缺少农产品相关信号 |
+| 370 | jahanjamal7 | https://cn.noxinfluencer.com/tiktok/channel/6572565190469435397 | 0 | 标签为空，缺少农产品相关信号 |
+| 373 | borikauo | https://cn.noxinfluencer.com/tiktok/channel/6578840329025388550 | 0 | 标签为空，缺少农产品相关信号 |
+| 374 | avash_foryou | https://cn.noxinfluencer.com/tiktok/channel/6582319178094215173 | 0 | 标签为空，缺少农产品相关信号 |
+| 377 | muddy_meadowfarm | https://cn.noxinfluencer.com/tiktok/channel/6585943136744816646 | 0 | 无标签无内容证据，无法判断为农业相关 |
+| 378 | lifeofacherrywife | https://cn.noxinfluencer.com/tiktok/channel/6586072454253395974 | 0 | 时尚穿搭母婴日常，和农业产品推广无关 |
+| 379 | D'Adreanne Ridley | https://cn.noxinfluencer.com/tiktok/channel/6589421632845430789 | 0 | 缺少可用主题信息，暂无农业相关信号 |
+| 380 | guvrielckah.mendetzh | https://cn.noxinfluencer.com/tiktok/channel/6589597714278498310 | 0 | 缺少可用主题信息，暂无农业相关信号 |
+| 381 | Richard OT | https://cn.noxinfluencer.com/tiktok/channel/6590845123130015749 | 0 | 新闻政法本地类，和农业产品推广不匹配 |
+| 382 | mariah lynae 💗 | https://cn.noxinfluencer.com/tiktok/channel/6594079103296569350 | 0 | 发型美妆内容，非农业产品受众 |
+| 383 | TODAY Show | https://cn.noxinfluencer.com/tiktok/channel/6596287636682407941 | 0 | 娱乐新闻节目，农业产品推广相关性弱 |
+| 384 | Jakob Michaels | https://cn.noxinfluencer.com/tiktok/channel/6597029644099813381 | 0 | 缺少可用主题信息，暂无农业相关信号 |
+| 385 | TWD Channel 00 | https://cn.noxinfluencer.com/tiktok/channel/6597899006725308422 | 0 | 影视娱乐为主，不适合农业产品推广 |
+| 386 | Jake | https://cn.noxinfluencer.com/tiktok/channel/6598225961141288965 | 0 | 地域杂项标签，和农业产品无直接关联 |
+| 387 | it's meee Jessica | 📚 | https://cn.noxinfluencer.com/tiktok/channel/6600377013176926214 | 0 | 美妆护肤类，不匹配农业产品受众 |
+| 389 | Dani Klass | https://cn.noxinfluencer.com/tiktok/channel/6604089957321015301 | 0 | 科技人物向内容，农业产品相关性弱 |
+| 390 | t.j.ledger | https://cn.noxinfluencer.com/tiktok/channel/6604508056314281990 | 0 | 加密财经类，和农业产品不相关 |
+| 391 | julyssa 🐮 | https://cn.noxinfluencer.com/tiktok/channel/6605664555480055813 | 0 | 仅有昵称无主题证据，无法支持农业相关 |
+| 392 | JordanSchochMusic | https://cn.noxinfluencer.com/tiktok/channel/6609785772999655429 | 0 | 音乐类频道，农业产品推广相关性低 |
+| 393 | Jarrod Sterrett | https://cn.noxinfluencer.com/tiktok/channel/6610140624233447429 | 0 | 仅有昵称无主题证据，无法支持农业相关 |
+| 394 | Dr. Anthony Apa | https://cn.noxinfluencer.com/tiktok/channel/6611617258743660549 | 0 | 医疗建议类，不是农业产品受众 |
+| 395 | Reggie Mai | https://cn.noxinfluencer.com/tiktok/channel/6611869315884187654 | 0 | 仅有昵称无主题证据，无法支持农业相关 |
+| 396 | ItsmeSasha🇯🇲🌴💋 | https://cn.noxinfluencer.com/tiktok/channel/6611976964265066502 | 0 | 娱乐家庭向内容，农业产品相关性弱 |
+| 397 | Mr.Beast clips | https://cn.noxinfluencer.com/tiktok/channel/6612939357617913857 | 0 | 娱乐剪辑号，不适合农业产品推广 |
+| 398 | Yandel-Corona | https://cn.noxinfluencer.com/tiktok/channel/6615672969044361222 | 0 | 仅有模板类标签，无法支持农业相关 |
+| 399 | terrirock321 ❌💜 | https://cn.noxinfluencer.com/tiktok/channel/6616824862696669190 | 0 | 缺少主题证据，暂无农业相关信号 |
+| 400 | Sagi777arius ♐︎ | https://cn.noxinfluencer.com/tiktok/channel/6617607380250230789 | -11 | ASMR/吃播格式冲突明显，不适合农业产品推广 |
+| 401 | Newinghanatourism | https://cn.noxinfluencer.com/tiktok/channel/6618108866167193605 | 0 | 无农业相关标签或视频，适配度不足 |
+| 402 | Andrea Puccinelli | https://cn.noxinfluencer.com/tiktok/channel/6619407696847388677 | 0 | 无有效标签，缺少农业相关信号 |
+| 403 | ᒍOᒍOwithapurpose 💙🌞 | https://cn.noxinfluencer.com/tiktok/channel/6619447998924898310 | 0 | 直播社交向，与农业产品推广不匹配 |
+| 404 | The Atlantic | https://cn.noxinfluencer.com/tiktok/channel/6620018253237436422 | -5 | 书籍娱乐向，不适合农业产品推广 |
+| 405 | Clip Rotter | https://cn.noxinfluencer.com/tiktok/channel/6620222617986580485 | 0 | 无农业相关内容，难以用于推广 |
+| 406 | Mexillicious | https://cn.noxinfluencer.com/tiktok/channel/6620902491646279685 | 0 | 地域文化向，缺少农业相关内容 |
+| 407 | Meteorologist Brandi Slavich | https://cn.noxinfluencer.com/tiktok/channel/6621355622435438597 | 0 | 天气科普向，与农业产品推广关联弱 |
+| 408 | Talor_S._Hall | https://cn.noxinfluencer.com/tiktok/channel/6621733900455657477 | 0 | 泛娱乐生活向，缺少农业相关信号 |
+| 409 | JREsHortiess | https://cn.noxinfluencer.com/tiktok/channel/6622493347062022149 | 0 | 无标签，无法判断农业相关性 |
+| 410 | Alexia | https://cn.noxinfluencer.com/tiktok/channel/6625272390047891462 | 0 | 无标签，无法判断相关性 |
+| 411 | Ana Christy | https://cn.noxinfluencer.com/tiktok/channel/6625720182827122693 | 0 | 无标签，缺少农业相关信号 |
+| 412 | Rachel 💍 | https://cn.noxinfluencer.com/tiktok/channel/6626131532006965254 | -5 | 生活娱乐向，农业相关性不足 |
+| 413 | tomtheweatherwizard | https://cn.noxinfluencer.com/tiktok/channel/6626864025472352261 | 0 | 天气内容与农业产品推广关联弱 |
+| 415 | Josh Plays | https://cn.noxinfluencer.com/tiktok/channel/6627290246726680582 | 0 | 游戏向，与农业产品不相关 |
+| 416 | Tam 🏳️‍🌈 | https://cn.noxinfluencer.com/tiktok/channel/6629160749058490373 | 0 | 无农业相关信号 |
+| 419 | Annie|NeurospicyMamafinds | https://cn.noxinfluencer.com/tiktok/channel/6631347469379633158 | 0 | 亲子娱乐向，农业相关性不足 |
+| 420 | Emma Robles | https://cn.noxinfluencer.com/tiktok/channel/6632389963210932230 | 1 | 种子循环是健康话题，非农业产品推广 |
+| 421 | Beth Martinek | https://cn.noxinfluencer.com/tiktok/channel/6633267499819565061 | 0 | 无农业相关内容，适配度不足 |
+| 423 | SirRektzAlot | https://cn.noxinfluencer.com/tiktok/channel/6633986223797796870 | 0 | 无相关标签，难以用于农业推广 |
+| 424 | Vineygrovegoats | https://cn.noxinfluencer.com/tiktok/channel/6635369530901266437 | -5 | 农场内容强相关，但ASMR格式不适合推广 |
+| 425 | Ashlyn | https://cn.noxinfluencer.com/tiktok/channel/6637293098782736389 | 0 | 无农业相关信号 |
+| 426 | Zenful Living Goods | https://cn.noxinfluencer.com/tiktok/channel/6637893259094507526 | 0 | 宗教内容与农业产品推广关联很弱 |
+| 427 | Shawna Lea e 🖤🤍 | https://cn.noxinfluencer.com/tiktok/channel/6639831367586840581 | 0 | 美妆教程与农业产品受众不匹配 |
+| 428 | 💗ShannelNicholeHue💗 | https://cn.noxinfluencer.com/tiktok/channel/6640893920086179845 | 0 | 无标签与内容信息，难判断为农业相关 |
+| 430 | Morgan Ashleigh | https://cn.noxinfluencer.com/tiktok/channel/6641376247245881349 | 0 | 无标签与内容信息，难判断为农业相关 |
+| 431 | Real News, Not Bullshit | https://cn.noxinfluencer.com/tiktok/channel/6642852410514718726 | 0 | 新闻类频道与农业产品推广无关 |
+| 432 | Nereyda Lozoya Alvarez | https://cn.noxinfluencer.com/tiktok/channel/6644328126250450949 | 0 | 无标签与内容信息，难判断为农业相关 |
+| 433 | ⛏️🦂𝕭𝖎𝖑𝖑𝖞𝕿𝖍𝖊𝕶𝖎𝖉🦂⛏️ | https://cn.noxinfluencer.com/tiktok/channel/6644397508703731717 | 0 | 无标签与内容信息，难判断为农业相关 |
+| 435 | anayalove32 | https://cn.noxinfluencer.com/tiktok/channel/6645687956634353669 | 0 | 历史内容与农业产品推广不相关 |
+| 436 | Chef Dough 201 | https://cn.noxinfluencer.com/tiktok/channel/6647735427078209542 | 0 | 无农业相关信号，难以用于推广 |
+| 437 | SANDSCORPION | https://cn.noxinfluencer.com/tiktok/channel/6648221699626287109 | 0 | 无标签与内容信息，难判断为农业相关 |
+| 438 | Mostafa Alnjjar | https://cn.noxinfluencer.com/tiktok/channel/6648614193899913221 | 0 | 无标签与内容信息，难判断为农业相关 |
+| 439 | ireland | https://cn.noxinfluencer.com/tiktok/channel/6648673730258354182 | 0 | 只有love标签，与农业产品无关 |
+| 440 | fiarvest | https://cn.noxinfluencer.com/tiktok/channel/6649049469085057029 | 0 | 绿幕特效标签，与农业产品无关 |
+| 442 | thecryptomagician | https://cn.noxinfluencer.com/tiktok/channel/6650839923325960198 | 0 | 无标签与内容信息，难判断为农业相关 |
+| 444 | IL | https://cn.noxinfluencer.com/tiktok/channel/6652504761956499461 | 0 | 缝纫内容与农业产品不相关 |
+| 445 | BroBible | https://cn.noxinfluencer.com/tiktok/channel/6653199887092121606 | 0 | 体育娱乐内容，和农业产品推广无关 |
+| 446 | ArtistJodySteel | https://cn.noxinfluencer.com/tiktok/channel/6653602951217414149 | 0 | 美妆艺术内容与农业产品无关 |
+| 447 | Metal Relic | https://cn.noxinfluencer.com/tiktok/channel/6654036777144401926 | 0 | 无标签与内容信息，难判断为农业相关 |
+| 448 | Omar Herrera | https://cn.noxinfluencer.com/tiktok/channel/6654214508115918854 | 0 | 无标签与内容信息，难判断为农业相关 |
+| 449 | _overdad_ | https://cn.noxinfluencer.com/tiktok/channel/6654346758309052421 | 0 | 无标签与内容信息，难判断为农业相关 |
+| 450 | Stacey Davidson Realty | https://cn.noxinfluencer.com/tiktok/channel/6654888935129284609 | 0 | 无标签与内容信息，难判断为农业相关 |
+| 451 | Jake Liening | https://cn.noxinfluencer.com/tiktok/channel/6655191915501699077 | 0 | 无农业相关信号 |
+| 452 | San Luis Obispo County | https://cn.noxinfluencer.com/tiktok/channel/6657302369061978118 | 0 | 仅地名标签，缺农业主题 |
+| 453 | The.Toxicologist👨🏻‍🔬 | https://cn.noxinfluencer.com/tiktok/channel/6658904951715332101 | 0 | 偏健康/泛娱乐，农业关联弱 |
+| 456 | MA Hauling | https://cn.noxinfluencer.com/tiktok/channel/6660225762069479429 | 0 | 搬运/生活方式为主，缺农业主题 |
+| 459 | the Working Mongrel | https://cn.noxinfluencer.com/tiktok/channel/6662128163156951046 | -10 | 宠物犬内容，和农产品受众不符 |
+| 460 | Eb_inspired_you ♉️ | https://cn.noxinfluencer.com/tiktok/channel/6665758433805287426 | 0 | 舞蹈娱乐类，和农业推广无关 |
+| 461 | umntyrizzle | https://cn.noxinfluencer.com/tiktok/channel/6666159006018879494 | 0 | 无标签，无农业相关证据 |
+| 462 | Flying J | https://cn.noxinfluencer.com/tiktok/channel/6666543983349055493 | 0 | 无标签，缺农业相关信号 |
+| 464 | SIGNAL 20 | https://cn.noxinfluencer.com/tiktok/channel/6669473004403179526 | 0 | 新闻梗图类，非农产品受众 |
+| 465 | Alaina Wood | https://cn.noxinfluencer.com/tiktok/channel/6670521430520004613 | 0 | 气候环保话题，和农产品推广不直接 |
+| 466 | Lauren Swanson | https://cn.noxinfluencer.com/tiktok/channel/6671679492270866438 | 0 | 无标签，无法判断相关性 |
+| 468 | Blake Kennedy | https://cn.noxinfluencer.com/tiktok/channel/6673209892122330117 | 0 | 无标签，缺农业相关信号 |
+| 469 | Tabinda Athar | https://cn.noxinfluencer.com/tiktok/channel/6673410420643447814 | 0 | 无标签，缺农业相关信号 |
+| 471 | 👑❤️Queen Mother Michele👑❤️ | https://cn.noxinfluencer.com/tiktok/channel/6677620774821463046 | 0 | 食物娱乐混合，农业推广价值低 |
+| 473 | ~icedvlatte | https://cn.noxinfluencer.com/tiktok/channel/6679222931363922950 | 0 | 政治新闻类，非农产品受众 |
+| 474 | Ghost | https://cn.noxinfluencer.com/tiktok/channel/6680292855980934150 | -15 | 故事恐怖类，和产品推广场景冲突 |
+| 476 | Terence Reilly | https://cn.noxinfluencer.com/tiktok/channel/6681286145177191429 | 0 | 雪茄受众，和农产品推广无关 |
+| 477 | Sylvia's Unlimited Shop | https://cn.noxinfluencer.com/tiktok/channel/6682128473727435781 | 0 | 蜡烛制作，不是农业产品场景 |
+| 478 | Катя Єфремова | https://cn.noxinfluencer.com/tiktok/channel/6683767156200834053 | 0 | 无标签无视频，缺少相关证据 |
+| 480 | Lonestarmastiffs | https://cn.noxinfluencer.com/tiktok/channel/6684826720745210886 | 0 | 犬类受众，与农产品推广不匹配 |
+| 481 | explore.from.above | https://cn.noxinfluencer.com/tiktok/channel/6686050971288912902 | 0 | 无内容信号，无法判断相关性 |
+| 482 | Jesus is my redeemer | https://cn.noxinfluencer.com/tiktok/channel/6687299222200550405 | 0 | 宗教号，和农产品推广无关 |
+| 483 | MsJulie | https://cn.noxinfluencer.com/tiktok/channel/6687526232006149125 | 0 | 无标签无视频，相关性证据不足 |
+| 485 | pytacora | https://cn.noxinfluencer.com/tiktok/channel/6691622137931826182 | 0 | 趋势/地域号，缺少农业产品信号 |
+| 486 | YMN | https://cn.noxinfluencer.com/tiktok/channel/6693525227790664710 | 0 | 无标签无视频，相关性不足 |
+| 487 | Pure gold sugaring | https://cn.noxinfluencer.com/tiktok/channel/6694529603703145477 | 0 | 美容脱毛内容，不适合农产品推广 |
+| 488 | Dr. Tracy Fanara | https://cn.noxinfluencer.com/tiktok/channel/6694630453079852038 | 0 | 环境科普向，农产品推广关联弱 |
+| 490 | KKNeeBeMe | https://cn.noxinfluencer.com/tiktok/channel/6696133891452945413 | 0 | 无标签无视频，相关性不足 |
+| 491 | 🐇✨Elaine✨🐇 | https://cn.noxinfluencer.com/tiktok/channel/6696560959513248773 | 0 | 无标签无视频，相关性不足 |
+| 492 | Morgan 👰🏼‍♀️🤠🤍| 559| | https://cn.noxinfluencer.com/tiktok/channel/6697216208721560581 | 0 | 娱乐音乐向，非农产品推广场景 |
+| 494 | Craig | Mad Bioengineer, PhD. | https://cn.noxinfluencer.com/tiktok/channel/6698161769782821894 | 0 | STEM教育号，农产品关联不足 |
+| 496 | Majesstic Health | https://cn.noxinfluencer.com/tiktok/channel/6700287384380277765 | 0 | 健康号但无农产品信号 |
+| 498 | APUSH warriors | https://cn.noxinfluencer.com/tiktok/channel/6702572913897440262 | 0 | 历史教育号，和农产品无关 |
+| 499 | Emily Delgado | https://cn.noxinfluencer.com/tiktok/channel/6702917637754930181 | 0 | 乡村生活向，但缺少农业产品信号 |
