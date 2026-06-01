@@ -1,6 +1,0 @@
-keyword,provider,extra_pages,extended_tail_records,fit,adjacent,badcase,failed,badcase_rate,note
-coffee machine,xtb,"102-105,191-200",700,17,35,648,0,92.6%,extended_tail_not_compared
-lawn mower,xtb,"102-105,194-200",550,17,52,481,0,87.5%,extended_tail_not_compared
-swim vest,xtb,"3-10,96-105,191-200",1400,45,127,1228,0,87.7%,extended_tail_not_compared
-baby supplement,xtb,"4-10,96-105,191-200",1350,59,167,1124,0,83.3%,extended_tail_not_compared
-pet food,xtb,"101-105,191-200",750,36,91,623,0,83.1%,extended_tail_not_compared
