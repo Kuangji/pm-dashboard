@@ -8,6 +8,8 @@ import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import 'highlight.js/styles/github.css'
 import 'github-markdown-css/github-markdown-light.css'
+import { MermaidDiagram } from './MermaidDiagram'
+import { getCodeLanguage, isMermaidCodeBlock } from './mermaid-utils'
 
 interface MarkdownViewerProps {
   content: string
@@ -144,6 +146,28 @@ export function MarkdownViewer({ content }: MarkdownViewerProps) {
           margin-bottom: 0;
           word-break: normal;
         }
+        .markdown-body .mermaid-diagram {
+          background: #ffffff;
+          border: 1px solid #d0d7de;
+          border-radius: 8px;
+          margin: 0 0 16px;
+          overflow-x: auto;
+          padding: 16px;
+          text-align: center;
+        }
+        .markdown-body .mermaid-diagram svg {
+          height: auto;
+          max-width: 100%;
+        }
+        .markdown-body .mermaid-diagram-loading,
+        .markdown-body .mermaid-diagram-error {
+          color: #57606a;
+          font-size: 14px;
+          text-align: left;
+        }
+        .markdown-body .mermaid-diagram-error p {
+          margin: 0 0 12px;
+        }
       `}</style>
       <ReactMarkdown
         remarkPlugins={[
@@ -155,6 +179,25 @@ export function MarkdownViewer({ content }: MarkdownViewerProps) {
           rehypeHighlight,
           [rehypeAutolinkHeadings, { behavior: 'wrap' }],
         ]}
+        components={{
+          pre({ children }) {
+            return <>{children}</>
+          },
+          code({ className, children, ...props }) {
+            const code = String(children).replace(/\n$/, '')
+            const language = getCodeLanguage(className)
+
+            if (isMermaidCodeBlock(code, language)) {
+              return <MermaidDiagram chart={code} />
+            }
+
+            return (
+              <code className={className} {...props}>
+                {children}
+              </code>
+            )
+          },
+        }}
       >
         {content}
       </ReactMarkdown>
