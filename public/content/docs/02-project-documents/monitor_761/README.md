@@ -1,24 +1,26 @@
 # 内容监控二期（v7.6.1）需求工作区
 
-> 状态：`design_v1_done/prd_ready`  
-> 说明：`input_v1.md` 已由 pre-input 讨论、线上事实、代码事实和用户反馈池收口生成；`spec_v1.md` 已完成业务规格拆解；`design_v1.md` 已按 A+D 基准方案收口。  
-> 用途：继续推进 `prd`，同时保留 pre-input / spec / design 过程材料以便追溯。
+> 状态：`prd_v1_review`
+> 说明：`input_v1.md` 已由 pre-input 讨论、线上事实、代码事实和用户反馈池收口生成；`spec_v1.md` 已完成业务规格拆解；`design_v1.md` 已按统一工作台方案收口；`prd_v1.md` 已生成研发评审稿。
+> 用途：进入 PRD 评审与研发/设计/测试对齐，同时保留 pre-input / spec / design 过程材料以便追溯。
 
 ## 当前阶段
 
-761 已完成 input 收口、spec 拆解和 design v1 收口，核心取舍包括：
+761 已完成 input 收口、spec 拆解、design v1 收口，并已生成 PRD v1 研发评审稿。核心取舍包括：
 
-- 数据观察时间区间进入 Must，作为 dashboard、变化榜、项目列表速览的核心统计口径。
+- 数据观察时间区间进入 Must，作为 Dashboard、变化榜、关键指标趋势和贡献分析的统计口径；项目列表速览使用项目列表自身的日期范围。
 - 达人/频道贡献分析进入 Must，但限定为项目内、所选观察区间内的聚合。
-- 页面结构明确为三个主要实体页面：项目列表、单项目工作台、多项目工作台。
-- 原总监控列表降级为多项目工作台，作为单项目工作台的独立页面变体，并保留默认全部项目入口。
+- 页面结构收敛为两个主要实体页面：项目列表、内容监控工作台。
+- 内容监控工作台通过 `projects=<id>`、`projects=<id1>,<id2>`、`projects=all` 承载单项目、已选多项目、全部可见项目三种范围。
+- 原总监控列表降级为 `projects=all` 的工作台范围，保留老用户“看全部内容”的入口心智。
 - 评论、短链、预算只做状态解释和可信度解释，不做能力扩展。
-- Design 阶段以项目列表 + A 单项目工作台型 + D 多项目工作台型为基准；D 是 A 的多项目变体，B/C 归档。
+- 项目级字段以线上事实为准：项目有创建人、协作者；不引入项目负责人概念。任务级负责人/归属人如需进入 761，必须以后端字段确认为前提。
+- `效率指标观察`、`数据可信度`、`近期动向提醒` 暂不作为当前 Dashboard 独立模块落地，后续单独讨论承载方式。
 
 ## 文档导航
 
 ```
-01_Product_Specs/monitor_761/
+publish/documents/02-project-documents/monitor_761/
 ├── README.md               ← 本文档
 ├── evidence_brief.md       ← 已掌握事实与证据边界
 ├── current_state_facts_v0.md ← 综合 kol_brain + kol-next 的当前功能现状
@@ -26,12 +28,14 @@
 ├── pre_input_decisions_v0.md ← 2026-05-07 讨论后的 pre-input 决策记录
 ├── dashboard_metric_planning_v0.md ← dashboard 与项目列表速览指标规划
 ├── feedback_analysis_v0.md ← 用户反馈池逐条核验与 761 影响分析
+├── feedback_coverage_audit_v1.md ← 反馈池对 PRD v1 的覆盖情况审计
 ├── feedback_screenshots/  ← Excel 内反馈截图抽取结果
 ├── input_v1_draft.md       ← input 过程稿
 ├── input_v1.md             ← 正式 input，后续 spec 的上游
 ├── spec_v1.md              ← 业务规格，后续 design 的上游
 ├── design_options_v0.md    ← design 阶段布局方案对比与 Demo 索引
-├── design_v1.md            ← design 正式收口，A+D 基准方案
+├── design_v1.md            ← design 正式收口，统一工作台方案
+├── prd_v1.md               ← PRD 研发评审稿
 └── discussion_questions.md ← 后续与 PM 讨论的问题清单
 ```
 
@@ -42,12 +46,39 @@
 - `input_v1.md` 是当前 761 后续 `spec -> design -> prd` 的正式 input 上游。
 - `spec_v1.md` 是当前 761 后续 `design -> prd` 的业务规格上游。
 - `design_v1.md` 是当前 761 后续 `prd` 的正式设计上游。
+- `prd_v1.md` 是当前进入研发/设计/测试评审的交付稿。
 
 ## 当前使用方式
 
 1. 以 `input_v1.md` 作为 761 后续 spec/design/prd 的唯一 input 上游。
 2. 用 `feedback_analysis_v0.md` 追溯用户反馈分流，不直接以 Excel 原始状态作为排期依据。
-3. 用 `current_state_facts_v0.md` 和 M08 知识库输入追溯当前线上事实。
-4. 以 `spec_v1.md` 作为 design 阶段的业务规格上游。
-5. 用 `design_options_v0.md` 和 [Demo 首页](../../../demos/monitor_761_layout_demos/index.html) 对比布局方向。
-6. 以 `design_v1.md` 作为 PRD 阶段的设计上游。
+3. 用 `feedback_coverage_audit_v1.md` 判断累积用户反馈中哪些已被 PRD v1 覆盖、哪些明确进入 backlog、哪些需要单独确认。
+4. 用 `current_state_facts_v0.md` 和 M08 知识库输入追溯当前线上事实。
+5. 以 `spec_v1.md` 作为 design 阶段的业务规格上游。
+6. 用 `design_options_v0.md` 和 [Demo 首页](../../../demos/monitor_761_layout_demos/index.html) 对比布局方向。
+7. 以 `design_v1.md` 作为 PRD 阶段的设计上游。
+8. 以 `prd_v1.md` 进入研发/设计/测试评审；评审修改先回写 PRD，若影响业务规则或设计结构，再同步回 `spec_v1.md` / `design_v1.md`。
+
+## PRD 阅读顺序
+
+建议评审时不要从头逐字读，而按以下顺序扫：
+
+1. 先读 `prd_v1.md` 的 `1. Executive Summary` 和 `2.2 Scope`，确认本期边界。
+2. 再读 `2.3 User Stories & Acceptance Criteria`，逐条确认用户路径和验收口径。
+3. 涉及实现时读 `4. Technical Specifications`，尤其是路由、筛选分层、指标口径、后端/API 待确认点。
+4. 最后读 `5.3 QA Checklist` 和本文下方 `开发要点 Checklist`，用于研发/测试拆任务。
+
+## 开发要点 Checklist
+
+- [ ] 路由范围：`projects=<id>`、`projects=<id1>,<id2>`、`projects=all` 三种范围都能进入同一个工作台；`all` 不能与项目 ID 混用。
+- [ ] 字段口径：项目层只使用 `创建人 / 协作者`，不新增项目负责人；任务级负责人/归属人仅在后端确认字段存在后实现。
+- [ ] 筛选分层：一级筛选影响 Dashboard、原始数据、内容列表、详情抽屉；二级筛选只影响内容列表；数据观察周期只影响 Dashboard 分析和任务趋势。
+- [ ] 时间联动：`发布日期起点 publishStart` 存在时，禁止选择 `observeEnd < publishStart` 的数据观察周期。
+- [ ] Dashboard 范围：当前只实现观察区间概览、内容变化榜、关键指标趋势、达人/频道贡献；`效率指标观察 / 数据可信度 / 近期动向提醒` 暂不独立落地。
+- [ ] 原始数据：沿用线上可配置数据块，不展示独立 `自定义数据` 卡片，配置抽屉也不保留 `自定义数据` 项。
+- [ ] 内容列表：不新增默认 `处理状态 / 监控状态 / 增长状态` 总列；短链、预算、评论、新增分别由事实字段解释。
+- [ ] 表头配置：字段池必须覆盖线上真实字段；`内容` 列必选、置顶、不可隐藏；配置保存为账号级配置。
+- [ ] 详情抽屉：行点击、榜单单条点击、通知任务链接都打开同一套单内容监控详情抽屉；趋势图支持当前任务数据导出。
+- [ ] 项目归档：归档必须二次确认；归档不删除、不停止已存在任务；归档后禁用新增监控和自动追踪新增通知。
+- [ ] 通知：自动追踪新增按用户每小时汇总；单条链接进入对应项目并拉起任务抽屉；已归档项目不产生新增通知。
+- [ ] Backlog 边界：评论抓取能力提升、报告系统、自定义标签交并集、自动追踪规则管理中心不进入当前主线开发。

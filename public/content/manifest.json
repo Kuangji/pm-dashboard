@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-05-29T01:05:16.509Z",
+  "updatedAt": "2026-06-01T03:41:30.252Z",
   "navigation": {
     "docs": [
       {
@@ -325,6 +325,15 @@
               },
               {
                 "type": "file",
+                "name": "feedback_coverage_audit_v1.md",
+                "path": "02-project-documents/monitor_761/feedback_coverage_audit_v1.md",
+                "slug": "02-project-documents/monitor_761/feedback_coverage_audit_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
                 "name": "input_v1.md",
                 "path": "02-project-documents/monitor_761/input_v1.md",
                 "slug": "02-project-documents/monitor_761/input_v1.md",
@@ -337,6 +346,15 @@
                 "name": "input_v1_draft.md",
                 "path": "02-project-documents/monitor_761/input_v1_draft.md",
                 "slug": "02-project-documents/monitor_761/input_v1_draft.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "prd_v1.md",
+                "path": "02-project-documents/monitor_761/prd_v1.md",
+                "slug": "02-project-documents/monitor_761/prd_v1.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false

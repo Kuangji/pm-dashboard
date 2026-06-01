@@ -1,8 +1,8 @@
 # Design Options v0 · 内容监控 761 布局方案
 
-> 阶段：design 方案对比  
-> 上游：`input_v1.md`、`spec_v1.md`  
-> Demo：[Demo 首页](../../../demos/monitor_761_layout_demos/index.html)  
+> 阶段：design 方案对比
+> 上游：`input_v1.md`、`spec_v1.md`
+> Demo：`06_Prototypes/monitor_761_layout_demos/index.html`
 > 风格参考：`kol-next` 内容监控真实页面、组件和样式。
 > 结论更新：已确认以项目列表 + A 单项目工作台 + D 多项目工作台为基准继续推进；B/C 归档，不再作为主候选。
 
@@ -46,7 +46,7 @@
 
 ## 3. 方案 A · 单项目工作台型
 
-Demo：[单项目工作台 Demo](../../../demos/monitor_761_layout_demos/option-a-project-workbench.html)
+Demo：`06_Prototypes/monitor_761_layout_demos/option-a-project-workbench.html`
 
 ### 布局
 
@@ -79,7 +79,7 @@ Demo：[单项目工作台 Demo](../../../demos/monitor_761_layout_demos/option-
 
 ## 4. 方案 B · 列表运营型（已归档）
 
-Demo：[B 列表运营型 Demo](../../../demos/monitor_761_layout_demos/option-b-list-ops.html)
+Demo：`06_Prototypes/monitor_761_layout_demos/option-b-list-ops.html`
 
 ### 布局
 
@@ -107,7 +107,7 @@ Demo：[B 列表运营型 Demo](../../../demos/monitor_761_layout_demos/option-b
 
 ## 5. 方案 C · 看板分析型（已归档）
 
-Demo：[C 看板分析型 Demo](../../../demos/monitor_761_layout_demos/option-c-dashboard-board.html)
+Demo：`06_Prototypes/monitor_761_layout_demos/option-c-dashboard-board.html`
 
 ### 布局
 
@@ -136,7 +136,7 @@ Demo：[C 看板分析型 Demo](../../../demos/monitor_761_layout_demos/option-c
 
 ## 6. 方案 D · 多项目工作台型
 
-Demo：[跨项目工作台 Demo](../../../demos/monitor_761_layout_demos/option-d-ia-transition.html)
+Demo：`06_Prototypes/monitor_761_layout_demos/option-d-ia-transition.html`
 
 ### 布局
 

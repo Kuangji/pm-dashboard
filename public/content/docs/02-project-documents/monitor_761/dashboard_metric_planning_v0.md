@@ -1,7 +1,7 @@
 # Dashboard Metric Planning v0 · 内容监控 761
 
-> 状态：pre-input 子 topic，不是正式 design。  
-> 目的：回答“现有内容监控指标是否足以撑起独立看板区域”，并规划项目列表速览指标。  
+> 状态：pre-input 子 topic，不是正式 design。
+> 目的：回答“现有内容监控指标是否足以撑起独立看板区域”，并规划项目列表速览指标。
 > 证据来源：`current_state_facts_v0.md`、`kol_brain` M04/M08、`kol-next` brandAI/videoMonitor 代码、2026-05-07 品牌分析页只读实勘。
 
 ## 1. 参考对象：品牌分析看板
