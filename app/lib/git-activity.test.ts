@@ -26,6 +26,12 @@ const docs: NavItem[] = [
     path: '02-project-documents/search_experience_6310/intelligent_curation/spec_v1.md',
     slug: '02-project-documents/search_experience_6310/intelligent_curation/spec_v1.md',
   },
+  {
+    type: 'file',
+    name: 'README.md',
+    path: '02-project-documents/monitor_761/README.md',
+    slug: '02-project-documents/monitor_761/README.md',
+  },
 ]
 
 const demos: DemoItem[] = [
@@ -103,6 +109,20 @@ M\tapp/page.tsx`,
   assert.equal(activities[1].context, 'channel search review')
   assert.equal(activities[2].title, '智能选品')
   assert.equal(activities[2].changeType, 'modified')
+})
+
+test('treats deleted files inside an existing project as a project update', () => {
+  const activities = parseGitActivityLog(
+    `---66da8ef111111111111111111111111111111111111\t66da8ef\t2026-06-01T10:00:00+08:00\tchore: sync cleaned screenshots
+D\tpublic/content/docs/02-project-documents/monitor_761/feedback_screenshots/example.png
+D\tpublic/content/docs/02-project-documents/monitor_761/feedback_screenshots/example-2.jpeg`,
+    docs,
+    demos
+  )
+
+  assert.equal(activities.length, 1)
+  assert.equal(activities[0].title, 'monitor 761')
+  assert.equal(activities[0].changeType, 'modified')
 })
 
 test('summarizes activity counts by type and recent items', () => {

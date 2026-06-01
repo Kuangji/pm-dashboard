@@ -79,6 +79,10 @@ function findDemoById(demoId: string, demos: DemoItem[]) {
   return demos.find((demo) => demo.id === demoId || demo.path === `demos/${demoId}/index.html`)
 }
 
+function hasDocInProject(projectPath: string, docs: NavItem[]) {
+  return docs.some((doc) => doc.path.startsWith(`${projectPath}/`) || doc.slug?.startsWith(`${projectPath}/`))
+}
+
 function getDocProjectInfo(relativePath: string) {
   const parts = relativePath.split('/').filter(Boolean)
 
@@ -98,6 +102,19 @@ function getDocProjectInfo(relativePath: string) {
     title: humanizePathSegment(titleSegment),
     context: humanizePathSegment(contextSegment),
   }
+}
+
+function getTargetChangeType(
+  status: string,
+  target: ActivityTarget,
+  docs: NavItem[]
+): ActivityChangeType {
+  const changeType = getChangeType(status)
+
+  if (changeType !== 'deleted') return changeType
+  if (target.type === 'demo') return target.href ? 'modified' : 'deleted'
+
+  return hasDocInProject(target.path, docs) ? 'modified' : 'deleted'
 }
 
 export function mapChangedPathToActivityTarget(
@@ -187,7 +204,7 @@ export function parseGitActivityLog(
 
     const key = `${currentCommit.commit}:${target.type}:${target.path}`
     const previous = commitTargets.get(key)
-    const nextChangeType = getChangeType(status)
+    const nextChangeType = getTargetChangeType(status, target, docs)
 
     if (previous) {
       previous.changeType = mergeChangeType(previous.changeType, nextChangeType)
