@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-06-01T06:18:11.826Z",
+  "updatedAt": "2026-06-09T00:38:51.624Z",
   "navigation": {
     "docs": [
       {
@@ -11158,6 +11158,1932 @@
                     ]
                   }
                 ]
+              },
+              {
+                "type": "directory",
+                "name": "20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5",
+                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/README.md",
+                    "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/README.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "front5_aggregate_summary.json",
+                    "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/front5_aggregate_summary.json",
+                    "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/front5_aggregate_summary.json",
+                    "fileType": "json",
+                    "language": "json",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "mcp_capture_summary.json",
+                    "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/mcp_capture_summary.json",
+                    "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/mcp_capture_summary.json",
+                    "fileType": "json",
+                    "language": "json",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "directory",
+                    "name": "instagram",
+                    "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/README.md",
+                        "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "aggregate_summary.json",
+                        "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/aggregate_summary.json",
+                        "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/aggregate_summary.json",
+                        "fileType": "json",
+                        "language": "json",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "orchestration_meta.json",
+                        "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/orchestration_meta.json",
+                        "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/orchestration_meta.json",
+                        "fileType": "json",
+                        "language": "json",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-fine-grained-summary.md",
+                        "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/provider-fine-grained-summary.md",
+                        "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/provider-fine-grained-summary.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "beauty",
+                        "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/README.md",
+                            "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "provider-comparison.md",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/provider-comparison.md",
+                            "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/provider-comparison.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "directory",
+                            "name": "nox-instagram",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/nox-instagram",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "README.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/nox-instagram/README.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/nox-instagram/README.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "badcases.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/nox-instagram/badcases.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/nox-instagram/badcases.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.normalized.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/nox-instagram/records.normalized.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/nox-instagram/records.normalized.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.raw.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/nox-instagram/records.raw.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/nox-instagram/records.raw.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "run_meta.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/nox-instagram/run_meta.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/nox-instagram/run_meta.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "scores.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/nox-instagram/scores.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/nox-instagram/scores.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/nox-instagram/summary.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/nox-instagram/summary.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/nox-instagram/summary.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/nox-instagram/summary.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              }
+                            ]
+                          },
+                          {
+                            "type": "directory",
+                            "name": "xtb-instagram",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/xtb-instagram",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "README.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/xtb-instagram/README.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/xtb-instagram/README.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "badcases.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/xtb-instagram/badcases.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/xtb-instagram/badcases.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.normalized.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/xtb-instagram/records.normalized.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/xtb-instagram/records.normalized.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.raw.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/xtb-instagram/records.raw.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/xtb-instagram/records.raw.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "run_meta.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/xtb-instagram/run_meta.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/xtb-instagram/run_meta.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "scores.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/xtb-instagram/scores.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/xtb-instagram/scores.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/xtb-instagram/summary.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/xtb-instagram/summary.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/xtb-instagram/summary.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/xtb-instagram/summary.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "lifestyle",
+                        "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/README.md",
+                            "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "provider-comparison.md",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/provider-comparison.md",
+                            "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/provider-comparison.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "directory",
+                            "name": "nox-instagram",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/nox-instagram",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "README.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/nox-instagram/README.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/nox-instagram/README.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "badcases.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/nox-instagram/badcases.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/nox-instagram/badcases.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.normalized.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/nox-instagram/records.normalized.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/nox-instagram/records.normalized.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.raw.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/nox-instagram/records.raw.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/nox-instagram/records.raw.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "run_meta.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/nox-instagram/run_meta.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/nox-instagram/run_meta.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "scores.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/nox-instagram/scores.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/nox-instagram/scores.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/nox-instagram/summary.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/nox-instagram/summary.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/nox-instagram/summary.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/nox-instagram/summary.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              }
+                            ]
+                          },
+                          {
+                            "type": "directory",
+                            "name": "xtb-instagram",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/xtb-instagram",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "README.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/xtb-instagram/README.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/xtb-instagram/README.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "badcases.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/xtb-instagram/badcases.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/xtb-instagram/badcases.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.normalized.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/xtb-instagram/records.normalized.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/xtb-instagram/records.normalized.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.raw.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/xtb-instagram/records.raw.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/xtb-instagram/records.raw.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "run_meta.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/xtb-instagram/run_meta.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/xtb-instagram/run_meta.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "scores.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/xtb-instagram/scores.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/xtb-instagram/scores.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/xtb-instagram/summary.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/xtb-instagram/summary.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/xtb-instagram/summary.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/xtb-instagram/summary.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "tech",
+                        "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/README.md",
+                            "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "provider-comparison.md",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/provider-comparison.md",
+                            "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/provider-comparison.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "directory",
+                            "name": "nox-instagram",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/nox-instagram",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "README.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/nox-instagram/README.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/nox-instagram/README.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "badcases.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/nox-instagram/badcases.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/nox-instagram/badcases.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.normalized.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/nox-instagram/records.normalized.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/nox-instagram/records.normalized.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.raw.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/nox-instagram/records.raw.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/nox-instagram/records.raw.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "run_meta.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/nox-instagram/run_meta.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/nox-instagram/run_meta.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "scores.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/nox-instagram/scores.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/nox-instagram/scores.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/nox-instagram/summary.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/nox-instagram/summary.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/nox-instagram/summary.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/nox-instagram/summary.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              }
+                            ]
+                          },
+                          {
+                            "type": "directory",
+                            "name": "xtb-instagram",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/xtb-instagram",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "README.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/xtb-instagram/README.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/xtb-instagram/README.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "badcases.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/xtb-instagram/badcases.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/xtb-instagram/badcases.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.normalized.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/xtb-instagram/records.normalized.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/xtb-instagram/records.normalized.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.raw.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/xtb-instagram/records.raw.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/xtb-instagram/records.raw.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "run_meta.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/xtb-instagram/run_meta.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/xtb-instagram/run_meta.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "scores.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/xtb-instagram/scores.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/xtb-instagram/scores.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/xtb-instagram/summary.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/xtb-instagram/summary.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/xtb-instagram/summary.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/xtb-instagram/summary.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "tiktok",
+                    "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/README.md",
+                        "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "aggregate_summary.json",
+                        "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/aggregate_summary.json",
+                        "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/aggregate_summary.json",
+                        "fileType": "json",
+                        "language": "json",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "orchestration_meta.json",
+                        "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/orchestration_meta.json",
+                        "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/orchestration_meta.json",
+                        "fileType": "json",
+                        "language": "json",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-fine-grained-summary.md",
+                        "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/provider-fine-grained-summary.md",
+                        "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/provider-fine-grained-summary.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "beauty",
+                        "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/README.md",
+                            "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "provider-comparison.md",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/provider-comparison.md",
+                            "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/provider-comparison.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "directory",
+                            "name": "nox-tiktok",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/nox-tiktok",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "README.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/nox-tiktok/README.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/nox-tiktok/README.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "badcases.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/nox-tiktok/badcases.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/nox-tiktok/badcases.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.normalized.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/nox-tiktok/records.normalized.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/nox-tiktok/records.normalized.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.raw.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/nox-tiktok/records.raw.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/nox-tiktok/records.raw.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "run_meta.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/nox-tiktok/run_meta.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/nox-tiktok/run_meta.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "scores.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/nox-tiktok/scores.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/nox-tiktok/scores.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/nox-tiktok/summary.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/nox-tiktok/summary.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/nox-tiktok/summary.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/nox-tiktok/summary.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              }
+                            ]
+                          },
+                          {
+                            "type": "directory",
+                            "name": "xtb-tiktok",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/xtb-tiktok",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "README.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/xtb-tiktok/README.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/xtb-tiktok/README.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "badcases.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/xtb-tiktok/badcases.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/xtb-tiktok/badcases.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.normalized.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/xtb-tiktok/records.normalized.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/xtb-tiktok/records.normalized.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.raw.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/xtb-tiktok/records.raw.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/xtb-tiktok/records.raw.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "run_meta.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/xtb-tiktok/run_meta.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/xtb-tiktok/run_meta.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "scores.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/xtb-tiktok/scores.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/xtb-tiktok/scores.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/xtb-tiktok/summary.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/xtb-tiktok/summary.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/xtb-tiktok/summary.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/xtb-tiktok/summary.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "lifestyle",
+                        "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/README.md",
+                            "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "provider-comparison.md",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/provider-comparison.md",
+                            "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/provider-comparison.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "directory",
+                            "name": "nox-tiktok",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/nox-tiktok",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "README.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/nox-tiktok/README.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/nox-tiktok/README.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "badcases.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/nox-tiktok/badcases.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/nox-tiktok/badcases.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.normalized.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/nox-tiktok/records.normalized.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/nox-tiktok/records.normalized.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.raw.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/nox-tiktok/records.raw.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/nox-tiktok/records.raw.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "run_meta.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/nox-tiktok/run_meta.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/nox-tiktok/run_meta.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "scores.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/nox-tiktok/scores.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/nox-tiktok/scores.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/nox-tiktok/summary.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/nox-tiktok/summary.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/nox-tiktok/summary.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/nox-tiktok/summary.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              }
+                            ]
+                          },
+                          {
+                            "type": "directory",
+                            "name": "xtb-tiktok",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/xtb-tiktok",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "README.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/xtb-tiktok/README.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/xtb-tiktok/README.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "badcases.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/xtb-tiktok/badcases.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/xtb-tiktok/badcases.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.normalized.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/xtb-tiktok/records.normalized.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/xtb-tiktok/records.normalized.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.raw.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/xtb-tiktok/records.raw.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/xtb-tiktok/records.raw.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "run_meta.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/xtb-tiktok/run_meta.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/xtb-tiktok/run_meta.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "scores.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/xtb-tiktok/scores.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/xtb-tiktok/scores.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/xtb-tiktok/summary.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/xtb-tiktok/summary.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/xtb-tiktok/summary.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/xtb-tiktok/summary.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "tech",
+                        "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/README.md",
+                            "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "provider-comparison.md",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/provider-comparison.md",
+                            "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/provider-comparison.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "directory",
+                            "name": "nox-tiktok",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/nox-tiktok",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "README.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/nox-tiktok/README.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/nox-tiktok/README.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "badcases.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/nox-tiktok/badcases.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/nox-tiktok/badcases.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.normalized.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/nox-tiktok/records.normalized.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/nox-tiktok/records.normalized.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.raw.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/nox-tiktok/records.raw.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/nox-tiktok/records.raw.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "run_meta.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/nox-tiktok/run_meta.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/nox-tiktok/run_meta.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "scores.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/nox-tiktok/scores.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/nox-tiktok/scores.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/nox-tiktok/summary.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/nox-tiktok/summary.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/nox-tiktok/summary.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/nox-tiktok/summary.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              }
+                            ]
+                          },
+                          {
+                            "type": "directory",
+                            "name": "xtb-tiktok",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/xtb-tiktok",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "README.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/xtb-tiktok/README.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/xtb-tiktok/README.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "badcases.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/xtb-tiktok/badcases.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/xtb-tiktok/badcases.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.normalized.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/xtb-tiktok/records.normalized.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/xtb-tiktok/records.normalized.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.raw.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/xtb-tiktok/records.raw.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/xtb-tiktok/records.raw.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "run_meta.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/xtb-tiktok/run_meta.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/xtb-tiktok/run_meta.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "scores.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/xtb-tiktok/scores.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/xtb-tiktok/scores.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/xtb-tiktok/summary.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/xtb-tiktok/summary.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/xtb-tiktok/summary.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/xtb-tiktok/summary.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "youtube",
+                    "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/README.md",
+                        "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "aggregate_summary.json",
+                        "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/aggregate_summary.json",
+                        "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/aggregate_summary.json",
+                        "fileType": "json",
+                        "language": "json",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "orchestration_meta.json",
+                        "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/orchestration_meta.json",
+                        "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/orchestration_meta.json",
+                        "fileType": "json",
+                        "language": "json",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-fine-grained-summary.md",
+                        "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/provider-fine-grained-summary.md",
+                        "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/provider-fine-grained-summary.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "beauty",
+                        "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/README.md",
+                            "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "provider-comparison.md",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/provider-comparison.md",
+                            "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/provider-comparison.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "directory",
+                            "name": "nox-youtube",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/nox-youtube",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "README.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/nox-youtube/README.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/nox-youtube/README.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "badcases.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/nox-youtube/badcases.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/nox-youtube/badcases.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.normalized.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/nox-youtube/records.normalized.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/nox-youtube/records.normalized.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.raw.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/nox-youtube/records.raw.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/nox-youtube/records.raw.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "run_meta.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/nox-youtube/run_meta.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/nox-youtube/run_meta.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "scores.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/nox-youtube/scores.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/nox-youtube/scores.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/nox-youtube/summary.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/nox-youtube/summary.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/nox-youtube/summary.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/nox-youtube/summary.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              }
+                            ]
+                          },
+                          {
+                            "type": "directory",
+                            "name": "xtb-youtube",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/xtb-youtube",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "README.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/xtb-youtube/README.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/xtb-youtube/README.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "badcases.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/xtb-youtube/badcases.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/xtb-youtube/badcases.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.normalized.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/xtb-youtube/records.normalized.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/xtb-youtube/records.normalized.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.raw.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/xtb-youtube/records.raw.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/xtb-youtube/records.raw.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "run_meta.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/xtb-youtube/run_meta.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/xtb-youtube/run_meta.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "scores.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/xtb-youtube/scores.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/xtb-youtube/scores.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/xtb-youtube/summary.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/xtb-youtube/summary.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/xtb-youtube/summary.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/xtb-youtube/summary.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "lifestyle",
+                        "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/README.md",
+                            "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "provider-comparison.md",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/provider-comparison.md",
+                            "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/provider-comparison.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "directory",
+                            "name": "nox-youtube",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/nox-youtube",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "README.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/nox-youtube/README.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/nox-youtube/README.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "badcases.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/nox-youtube/badcases.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/nox-youtube/badcases.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.normalized.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/nox-youtube/records.normalized.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/nox-youtube/records.normalized.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.raw.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/nox-youtube/records.raw.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/nox-youtube/records.raw.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "run_meta.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/nox-youtube/run_meta.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/nox-youtube/run_meta.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "scores.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/nox-youtube/scores.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/nox-youtube/scores.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/nox-youtube/summary.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/nox-youtube/summary.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/nox-youtube/summary.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/nox-youtube/summary.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              }
+                            ]
+                          },
+                          {
+                            "type": "directory",
+                            "name": "xtb-youtube",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/xtb-youtube",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "README.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/xtb-youtube/README.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/xtb-youtube/README.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "badcases.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/xtb-youtube/badcases.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/xtb-youtube/badcases.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.normalized.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/xtb-youtube/records.normalized.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/xtb-youtube/records.normalized.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.raw.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/xtb-youtube/records.raw.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/xtb-youtube/records.raw.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "run_meta.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/xtb-youtube/run_meta.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/xtb-youtube/run_meta.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "scores.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/xtb-youtube/scores.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/xtb-youtube/scores.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/xtb-youtube/summary.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/xtb-youtube/summary.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/xtb-youtube/summary.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/xtb-youtube/summary.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "tech",
+                        "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/README.md",
+                            "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "provider-comparison.md",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/provider-comparison.md",
+                            "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/provider-comparison.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "directory",
+                            "name": "nox-youtube",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/nox-youtube",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "README.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/nox-youtube/README.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/nox-youtube/README.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "badcases.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/nox-youtube/badcases.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/nox-youtube/badcases.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.normalized.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/nox-youtube/records.normalized.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/nox-youtube/records.normalized.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.raw.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/nox-youtube/records.raw.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/nox-youtube/records.raw.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "run_meta.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/nox-youtube/run_meta.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/nox-youtube/run_meta.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "scores.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/nox-youtube/scores.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/nox-youtube/scores.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/nox-youtube/summary.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/nox-youtube/summary.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/nox-youtube/summary.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/nox-youtube/summary.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              }
+                            ]
+                          },
+                          {
+                            "type": "directory",
+                            "name": "xtb-youtube",
+                            "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/xtb-youtube",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "README.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/xtb-youtube/README.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/xtb-youtube/README.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "badcases.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/xtb-youtube/badcases.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/xtb-youtube/badcases.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.normalized.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/xtb-youtube/records.normalized.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/xtb-youtube/records.normalized.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "records.raw.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/xtb-youtube/records.raw.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/xtb-youtube/records.raw.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "run_meta.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/xtb-youtube/run_meta.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/xtb-youtube/run_meta.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "scores.json",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/xtb-youtube/scores.json",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/xtb-youtube/scores.json",
+                                "fileType": "json",
+                                "language": "json",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.csv",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/xtb-youtube/summary.csv",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/xtb-youtube/summary.csv",
+                                "fileType": "table",
+                                "language": "csv",
+                                "isText": true,
+                                "isImage": false
+                              },
+                              {
+                                "type": "file",
+                                "name": "summary.md",
+                                "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/xtb-youtube/summary.md",
+                                "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/xtb-youtube/summary.md",
+                                "fileType": "markdown",
+                                "isText": true,
+                                "isImage": false
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -12629,7 +14555,7 @@
       {
         "id": "search-experience-6310",
         "title": "搜索体验 v6.3.10 · 智能精选",
-        "description": "真实页面形态验证版：从标准搜索结果页创建输入快照，并在智能精选工作台中继续筛或重新筛。",
+        "description": "真实页面形态验证版：经典态搜索结果、同一搜索框自然语言入口、结果确认卡 / 确认抽屉。",
         "path": "demos/search-experience-6310/index.html",
         "thumbnail": "/demos/search-experience-6310/screenshot.png",
         "tags": [

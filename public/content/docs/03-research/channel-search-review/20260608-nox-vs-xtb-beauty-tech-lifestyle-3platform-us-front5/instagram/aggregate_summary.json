@@ -1,0 +1,286 @@
+{
+  "summaries": [
+    {
+      "provider": "nox",
+      "keyword": "beauty",
+      "total": 250,
+      "completed": 250,
+      "failed": 0,
+      "labels": {
+        "fit": 229,
+        "adjacent": 16,
+        "badcase": 5,
+        "failed": 0
+      },
+      "badcaseRate": 0.02,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 4,
+          "badcaseRate": 0.08
+        },
+        {
+          "page": 3,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 4,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 5,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/nox-instagram"
+    },
+    {
+      "provider": "xtb",
+      "keyword": "beauty",
+      "total": 250,
+      "completed": 250,
+      "failed": 0,
+      "labels": {
+        "fit": 223,
+        "adjacent": 19,
+        "badcase": 8,
+        "failed": 0
+      },
+      "badcaseRate": 0.032,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 2,
+          "badcaseRate": 0.04
+        },
+        {
+          "page": 3,
+          "total": 50,
+          "badcase": 3,
+          "badcaseRate": 0.06
+        },
+        {
+          "page": 4,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 5,
+          "total": 50,
+          "badcase": 2,
+          "badcaseRate": 0.04
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/xtb-instagram"
+    },
+    {
+      "provider": "nox",
+      "keyword": "tech",
+      "total": 250,
+      "completed": 250,
+      "failed": 0,
+      "labels": {
+        "fit": 117,
+        "adjacent": 78,
+        "badcase": 55,
+        "failed": 0
+      },
+      "badcaseRate": 0.22,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 2,
+          "badcaseRate": 0.04
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 8,
+          "badcaseRate": 0.16
+        },
+        {
+          "page": 3,
+          "total": 50,
+          "badcase": 11,
+          "badcaseRate": 0.22
+        },
+        {
+          "page": 4,
+          "total": 50,
+          "badcase": 16,
+          "badcaseRate": 0.32
+        },
+        {
+          "page": 5,
+          "total": 50,
+          "badcase": 18,
+          "badcaseRate": 0.36
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/nox-instagram"
+    },
+    {
+      "provider": "xtb",
+      "keyword": "tech",
+      "total": 250,
+      "completed": 250,
+      "failed": 0,
+      "labels": {
+        "fit": 136,
+        "adjacent": 44,
+        "badcase": 70,
+        "failed": 0
+      },
+      "badcaseRate": 0.28,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 6,
+          "badcaseRate": 0.12
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 15,
+          "badcaseRate": 0.3
+        },
+        {
+          "page": 3,
+          "total": 50,
+          "badcase": 13,
+          "badcaseRate": 0.26
+        },
+        {
+          "page": 4,
+          "total": 50,
+          "badcase": 20,
+          "badcaseRate": 0.4
+        },
+        {
+          "page": 5,
+          "total": 50,
+          "badcase": 16,
+          "badcaseRate": 0.32
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/xtb-instagram"
+    },
+    {
+      "provider": "nox",
+      "keyword": "lifestyle",
+      "total": 250,
+      "completed": 250,
+      "failed": 0,
+      "labels": {
+        "fit": 216,
+        "adjacent": 29,
+        "badcase": 5,
+        "failed": 0
+      },
+      "badcaseRate": 0.02,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 3,
+          "total": 50,
+          "badcase": 2,
+          "badcaseRate": 0.04
+        },
+        {
+          "page": 4,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 5,
+          "total": 50,
+          "badcase": 3,
+          "badcaseRate": 0.06
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/nox-instagram"
+    },
+    {
+      "provider": "xtb",
+      "keyword": "lifestyle",
+      "total": 250,
+      "completed": 250,
+      "failed": 0,
+      "labels": {
+        "fit": 144,
+        "adjacent": 52,
+        "badcase": 54,
+        "failed": 0
+      },
+      "badcaseRate": 0.216,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 7,
+          "badcaseRate": 0.14
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 12,
+          "badcaseRate": 0.24
+        },
+        {
+          "page": 3,
+          "total": 50,
+          "badcase": 14,
+          "badcaseRate": 0.28
+        },
+        {
+          "page": 4,
+          "total": 50,
+          "badcase": 11,
+          "badcaseRate": 0.22
+        },
+        {
+          "page": 5,
+          "total": 50,
+          "badcase": 10,
+          "badcaseRate": 0.2
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/xtb-instagram"
+    }
+  ]
+}

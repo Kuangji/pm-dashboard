@@ -116,11 +116,10 @@ const primaryFilterOptions = [
   ['视频标签', ['全部标签', '无标签', 'Launch', 'Review', 'Paid', 'Organic']],
   ['额外标签1', ['全部', '无标签', '产品线 A', '产品线 B', 'Campaign', 'Creator Tier']],
   ['额外标签2', ['全部', '无标签', 'Q2', 'Test', 'High Priority']],
-  ['负责人', ['全部', 'Kuangji', 'Yuki Chen', 'Sophia', 'Alex']],
   ['创建人', ['全部', 'Yuki Chen', 'Kuangji', 'Sophia', 'Alex']],
   ['监控时长', ['全部', '60 天', '120 天', '180 天', '240 天', '360 天']],
   ['观看量', ['全部观看量', '< 1 万', '1 万 - 10 万', '10 万 - 50 万', '50 万以上', '自定义']],
-  ['视频类型', ['全部类型', '长视频', '短视频', '图文 / 图片', '其他']],
+  ['视频类型', ['youtube长视频', 'youtube短视频', 'tt视频', 'tt图片', 'ins posts', 'ins reels', 'x图文', 'x视频']],
   ['来源 / 自动追踪规则', ['全部来源', '手动添加', '自动追踪全部', '自动追踪 · Rule A', '自动追踪 · Rule B', '自动追踪 · Rule C']],
   ['发布日期', ['全部日期', '最近 7 天', '最近 30 天', '本月', '自定义']]
 ]
@@ -141,11 +140,14 @@ const projectOverviewFilterOptions = [
 
 const projectCardFilterOptions = [
   ['卡片状态', ['运行中', '已归档', '全部状态']],
-  ['负责人', ['全部', 'Yuki Chen', 'Kuangji', 'Sophia', 'Alex']],
+  ['创建人', ['全部', 'Yuki Chen', 'Kuangji', 'Sophia', 'Alex']],
   ['平台', ['全部', 'YouTube', 'TikTok', 'Instagram', 'X']]
 ]
 
+const multiFilterMenus = new WeakMap()
+
 function filterSelect(label, options, className = '') {
+  if (label === '视频类型') return multiFilterSelect(label, options, className)
   return `
     <label class="filter-select ${className}">
       <span>${label}</span>
@@ -153,6 +155,23 @@ function filterSelect(label, options, className = '') {
         ${options.map(option => `<option>${option}</option>`).join('')}
       </select>
     </label>`
+}
+
+function multiFilterSelect(label, options, className = '') {
+  return `
+    <div class="filter-select filter-multi-select ${className}" data-multi-filter>
+      <span>${label}</span>
+      <button class="multi-filter-trigger" type="button" data-multi-toggle aria-label="${label}" aria-expanded="false">
+        <b data-multi-summary>全部类型</b>
+      </button>
+      <div class="multi-filter-menu" data-multi-menu hidden>
+        ${options.map(option => `
+          <label class="multi-filter-option">
+            <input type="checkbox" value="${option}" data-multi-option>
+            <span>${option}</span>
+          </label>`).join('')}
+      </div>
+    </div>`
 }
 
 function isWorkbench() {
@@ -667,7 +686,7 @@ function contentDetailDrawer() {
         <section class="monitor-config-panel">
           <div class="config-panel-title">监控配置</div>
           <div class="config-field"><span>所属项目</span><strong>May Creator Launch</strong><button>✎</button></div>
-          <div class="config-field"><span>负责人</span><strong>Kuangji</strong><button>✎</button></div>
+          <div class="config-field"><span>任务负责人</span><strong>待确认字段</strong><button>✎</button></div>
           <div class="config-field"><span>监控时长</span><strong>2026-04-15 ~ 2026-06-14</strong><button>✎</button></div>
           <div class="config-field"><span>合作视频/贴文链接</span><strong>youtube.com/watch?v=MmXLgSF7...</strong></div>
           <div class="config-field"><span>视频标签</span><em>+ 添加视频标签</em></div>
@@ -780,7 +799,7 @@ function configDrawers() {
     ['额外标签1', false],
     ['额外标签2', false],
     ['备注', false],
-    ['负责人', false],
+    ['任务负责人', false],
     ['创建人', false],
     ['监控时长', false],
     ['发布日期', false],
@@ -853,7 +872,7 @@ function contentListSection() {
         <span data-content-selected-count>已选 0 条内容</span>
         <button class="btn btn-light">移动到其他项目</button>
         <button class="btn btn-light">打标签</button>
-        <button class="btn btn-light">修改负责人</button>
+        <button class="btn btn-light">修改任务负责人</button>
         <button class="btn btn-light">修改监控时长</button>
         <button class="btn btn-light">导出</button>
         <button class="btn btn-danger">删除</button>
@@ -1109,6 +1128,36 @@ function updateSelectedScopeCache(selector, selected, activeMode) {
     : '<span class="selected-scope-empty">暂无已选项目，默认查看全部可见项目</span>'
 }
 
+function updateMultiFilterSummary(filter) {
+  const menu = getMultiFilterMenu(filter)
+  const checked = menu ? [...menu.querySelectorAll('[data-multi-option]:checked')].map(input => input.value) : []
+  const summary = filter.querySelector('[data-multi-summary]')
+  if (!summary) return
+  if (!checked.length) {
+    summary.textContent = '全部类型'
+  } else if (checked.length <= 2) {
+    summary.textContent = checked.join('、')
+  } else {
+    summary.textContent = `已选 ${checked.length} 项`
+  }
+}
+
+function getMultiFilterMenu(filter) {
+  return multiFilterMenus.get(filter) || filter.querySelector('[data-multi-menu]')
+}
+
+function positionMultiFilterMenu(filter) {
+  const toggle = filter.querySelector('[data-multi-toggle]')
+  const menu = getMultiFilterMenu(filter)
+  if (!toggle || !menu) return
+  const rect = filter.getBoundingClientRect()
+  const menuWidth = menu.offsetWidth || 220
+  const viewportWidth = document.documentElement.clientWidth || window.innerWidth
+  const left = Math.min(rect.left, viewportWidth - menuWidth - 12)
+  menu.style.left = `${Math.max(12, left)}px`
+  menu.style.top = `${rect.bottom + 8}px`
+}
+
 function setDrilldownView(type) {
   const view = drilldownViews[type] || drilldownViews.rank
   const drawer = document.querySelector('[data-config-drawer="drilldown-view"]')
@@ -1326,6 +1375,56 @@ function bindInteractions() {
     })
     document.querySelectorAll('[data-observation-control]').forEach(control => {
       control.classList.remove('expanded')
+    })
+    document.querySelectorAll('[data-multi-menu]').forEach(menu => {
+      menu.hidden = true
+    })
+    document.querySelectorAll('[data-multi-toggle]').forEach(button => {
+      button.setAttribute('aria-expanded', 'false')
+    })
+  })
+
+  document.querySelectorAll('[data-multi-filter]').forEach(filter => {
+    const toggle = filter.querySelector('[data-multi-toggle]')
+    const menu = getMultiFilterMenu(filter)
+    if (!toggle || !menu) return
+    if (menu.parentElement !== document.body) {
+      document.body.appendChild(menu)
+      multiFilterMenus.set(filter, menu)
+    }
+    toggle.addEventListener('click', event => {
+      event.stopPropagation()
+      const nextExpanded = menu.hidden
+      document.querySelectorAll('[data-multi-menu]').forEach(panel => {
+        panel.hidden = true
+      })
+      document.querySelectorAll('[data-multi-toggle]').forEach(button => {
+        button.setAttribute('aria-expanded', 'false')
+      })
+      menu.hidden = !nextExpanded
+      toggle.setAttribute('aria-expanded', String(nextExpanded))
+      if (nextExpanded) positionMultiFilterMenu(filter)
+    })
+    menu.addEventListener('click', event => {
+      event.stopPropagation()
+    })
+    menu.querySelectorAll('[data-multi-option]').forEach(input => {
+      input.addEventListener('change', () => updateMultiFilterSummary(filter))
+    })
+    updateMultiFilterSummary(filter)
+  })
+
+  window.addEventListener('scroll', () => {
+    document.querySelectorAll('[data-multi-filter]').forEach(filter => {
+      const menu = getMultiFilterMenu(filter)
+      if (menu && !menu.hidden) positionMultiFilterMenu(filter)
+    })
+  }, true)
+
+  window.addEventListener('resize', () => {
+    document.querySelectorAll('[data-multi-filter]').forEach(filter => {
+      const menu = getMultiFilterMenu(filter)
+      if (menu && !menu.hidden) positionMultiFilterMenu(filter)
     })
   })
 

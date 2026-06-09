@@ -1,0 +1,37 @@
+{
+  "keywords": [
+    "beauty",
+    "tech",
+    "lifestyle"
+  ],
+  "providers": [
+    "nox",
+    "xtb"
+  ],
+  "platform": "instagram",
+  "country": "us",
+  "pageSize": 50,
+  "outputDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram",
+  "mode": "agent",
+  "maxParallelAgents": 3,
+  "recordsPerAgentTask": 25,
+  "agentModel": "gpt-5.4-mini",
+  "agentReasoningEffort": "high",
+  "reviewLowConfidence": false,
+  "reviewConfidenceThreshold": 0.7,
+  "reviewAgentModel": "gpt-5.5",
+  "reviewAgentReasoningEffort": "high",
+  "reviewRecordsPerAgentTask": 1,
+  "reviewMaxParallelAgents": 2,
+  "retryAttempts": 1,
+  "taskRetryAttempts": 2,
+  "taskRetryDelayMs": 5000,
+  "timeoutMs": 600000,
+  "noxStorageState": "",
+  "config": "",
+  "forceRerun": false,
+  "dryRun": false,
+  "skipExisting": true,
+  "created_at": "2026-06-08T13:00:20.192Z",
+  "max_recall_basis": 10000
+}

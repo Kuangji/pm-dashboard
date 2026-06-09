@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+nox,instagram,beauty,overall,250,5,2.0%
+nox,instagram,beauty,head,250,5,2.0%
+nox,instagram,beauty,mid,0,0,0.0%
+nox,instagram,beauty,tail,0,0,0.0%

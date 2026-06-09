@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+nox,youtube,tech,overall,250,12,4.8%
+nox,youtube,tech,head,250,12,4.8%
+nox,youtube,tech,mid,0,0,0.0%
+nox,youtube,tech,tail,0,0,0.0%

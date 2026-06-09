@@ -432,6 +432,77 @@ body[data-option="b"] .page {
   box-shadow: 0 0 0 2px rgba(250, 99, 0, 0.18);
 }
 
+.filter-multi-select {
+  position: relative;
+  min-width: 150px;
+  overflow: visible;
+}
+
+.multi-filter-trigger {
+  min-width: 72px;
+  border: 0;
+  background: transparent;
+  color: var(--kol-title-strong);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+}
+
+.multi-filter-trigger::after {
+  content: "⌄";
+  color: var(--kol-desc);
+}
+
+.multi-filter-trigger b {
+  max-width: 128px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.multi-filter-trigger:focus-visible {
+  border-radius: 4px;
+  box-shadow: 0 0 0 2px rgba(250, 99, 0, 0.18);
+}
+
+.multi-filter-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 220px;
+  padding: 8px;
+  border: 1px solid var(--kol-border);
+  border-radius: 10px;
+  background: var(--kol-white);
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.14);
+}
+
+.multi-filter-option {
+  min-height: 32px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--kol-title);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.multi-filter-option:hover {
+  background: var(--kol-main-soft);
+}
+
+.multi-filter-option input {
+  accent-color: var(--kol-main);
+}
+
 .date-filter-select {
   min-width: 168px;
 }
