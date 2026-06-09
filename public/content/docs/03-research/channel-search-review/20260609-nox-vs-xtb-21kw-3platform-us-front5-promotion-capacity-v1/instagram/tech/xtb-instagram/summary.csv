@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+xtb,instagram,tech,overall,250,68,27.2%
+xtb,instagram,tech,head,250,68,27.2%
+xtb,instagram,tech,mid,0,0,0.0%
+xtb,instagram,tech,tail,0,0,0.0%

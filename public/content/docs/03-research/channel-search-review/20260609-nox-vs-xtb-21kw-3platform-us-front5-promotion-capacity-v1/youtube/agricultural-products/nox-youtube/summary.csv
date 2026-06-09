@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+nox,youtube,agricultural products,overall,250,116,46.4%
+nox,youtube,agricultural products,head,250,116,46.4%
+nox,youtube,agricultural products,mid,0,0,0.0%
+nox,youtube,agricultural products,tail,0,0,0.0%

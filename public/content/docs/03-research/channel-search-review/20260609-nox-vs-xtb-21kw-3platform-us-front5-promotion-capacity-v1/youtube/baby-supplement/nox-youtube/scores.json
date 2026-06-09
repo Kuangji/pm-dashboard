@@ -1,0 +1,4447 @@
+{
+  "provider": "nox",
+  "platform": "youtube",
+  "keyword": "baby supplement",
+  "rule_version": "prompt:b87da85cf79a",
+  "prompt_path": "/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/.agents/skills/nox-channel-search-agent-batch-review/references/score_prompt.md",
+  "prompt_sha256": "b87da85cf79a29abb827034a8dfa97295f6fa4495d191a48a7bef5f1d068b983",
+  "prompt_hash": "b87da85cf79a",
+  "raw_record_count": 148,
+  "record_count": 148,
+  "completed_count": 148,
+  "failed_count": 0,
+  "low_confidence_review": {
+    "enabled": false,
+    "confidence_threshold": 0.7,
+    "review_agent_model": "gpt-5.5",
+    "review_agent_reasoning_effort": "high",
+    "reviewed_count": 0,
+    "changed_label_count": 0
+  },
+  "runtime_metrics": {
+    "task_count": 6,
+    "total_task_duration_ms": 1113727,
+    "average_task_duration_ms": 185621,
+    "max_task_duration_ms": 263286,
+    "total_records_in_timed_tasks": 148,
+    "average_record_duration_ms": 7525
+  },
+  "results": [
+    {
+      "channel_id": "UCNNhgz29s5L0fC9a9MG7I9g",
+      "rank": 1,
+      "total_score": 3,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.56,
+      "score_parts": {
+        "theme_score": 3,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "pregnancy",
+          "baby",
+          "mom"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "母婴/备孕相关但偏泛，缺少婴儿营养或补充剂证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC38Vpy52VKuMlJew2SDryRQ",
+      "rank": 2,
+      "total_score": 4,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.57,
+      "score_parts": {
+        "theme_score": 4,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "频道名指向婴儿食品，和婴儿营养方向较接近",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC-dKqeHDCxjmzthZTwOgmVw",
+      "rank": 3,
+      "total_score": 3,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.52,
+      "score_parts": {
+        "theme_score": 3,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Health",
+          "motherhood",
+          "boy mom"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "健康+母职内容，和婴儿补充剂有一定人群重叠",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC-sVPFgfkNdJbhtqYwqiTwQ",
+      "rank": 4,
+      "total_score": -15,
+      "suggested_label": "badcase",
+      "label_confidence": 0.98,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "amazing monkey",
+          "newborn baby",
+          "Pets & Animals",
+          "baby cute"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "动物娱乐频道，内容对象不适合人类婴儿补充剂",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC1F4BfDR20gxghX5pV_VSrw",
+      "rank": 5,
+      "total_score": -3,
+      "suggested_label": "badcase",
+      "label_confidence": 0.72,
+      "score_parts": {
+        "theme_score": -3,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "lifestyle",
+          "pets",
+          "hobby"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物/生活方式混杂，和婴儿补充剂关联很弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC1tyEGZ0_v1Y1rZGK-Xlluw",
+      "rank": 6,
+      "total_score": 1,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.41,
+      "score_parts": {
+        "theme_score": 1,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Health",
+          "Medical",
+          "medicine"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "健康医疗向，但缺少婴儿或营养场景",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC20rN1FDG5XaMxvAD7Ed4LQ",
+      "rank": 7,
+      "total_score": -12,
+      "suggested_label": "badcase",
+      "label_confidence": 0.97,
+      "score_parts": {
+        "theme_score": -12,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "health",
+          "fitness"
+        ],
+        "mutually_exclusive_top5_tags": [
+          "bodybuilding"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "健身用药/增肌内容，和婴儿补充剂明显不匹配",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC2Wp2LM9bspvkzmDKjqTD-g",
+      "rank": 8,
+      "total_score": 10,
+      "suggested_label": "fit",
+      "label_confidence": 0.98,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "health",
+          "food",
+          "baby",
+          "startingsolids",
+          "homemadebabyfood"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "婴幼儿喂养与辅食内容，母婴营养高度相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC3IkgrFJaamYkaK6I1LawkA",
+      "rank": 9,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.22,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无有效标签和内容证据，相关性不足",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC3rBlW55bv0i3YkBQYt9VBA",
+      "rank": 10,
+      "total_score": -15,
+      "suggested_label": "badcase",
+      "label_confidence": 0.99,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "sheep",
+          "goats",
+          "goated"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "山羊/牧场动物频道，和人类婴儿补充剂互斥",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC42K0lZlOqVH7j5gKCSvKbQ",
+      "rank": 11,
+      "total_score": 3,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.54,
+      "score_parts": {
+        "theme_score": 3,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "lifestyle",
+          "family",
+          "motherhood"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "备孕/母职生活方式内容，可间接触达母婴人群",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC4BMJJj7bdNMao-gV11ra2g",
+      "rank": 12,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.18,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "缺少标签与内容证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC4uvx0gAZIEvEl00m8cCt2g",
+      "rank": 13,
+      "total_score": 10,
+      "suggested_label": "fit",
+      "label_confidence": 0.99,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "baby",
+          "newborn",
+          "postpartum",
+          "pregnancy",
+          "health",
+          "educational"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "新生儿/产后/护理教育向，母婴补充剂很匹配",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC4xHcgVBRspD07FTzV8pqYw",
+      "rank": 14,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.47,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "health",
+          "food",
+          "lifestyle"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "健康知识型频道，可承接营养类产品但缺少婴儿定向",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC57haygBTuywPaaW7PRkGHQ",
+      "rank": 15,
+      "total_score": 9,
+      "suggested_label": "fit",
+      "label_confidence": 0.95,
+      "score_parts": {
+        "theme_score": 9,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "baby",
+          "health",
+          "kids",
+          "food",
+          "pregnancy",
+          "newborn"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "母婴+辅食+新生儿内容，相关度高",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC58ev-SV3_UKW80HoQmvr-g",
+      "rank": 16,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.15,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "缺少标签与内容证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC58gXnWJhk6EyA8wcER2hng",
+      "rank": 17,
+      "total_score": 6,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.76,
+      "score_parts": {
+        "theme_score": 6,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "health",
+          "pregnancy",
+          "baby",
+          "birth",
+          "parenting"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "围产期健康与母婴方向，相关但偏医疗配套",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC5e-Bix8R40HnpfhSiuBfxw",
+      "rank": 18,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.33,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "health",
+          "fitness",
+          "lifestyle"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "健康健身泛内容，缺少婴儿或母婴场景",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC5fdyC4LxyyYv8Am6nDrkmg",
+      "rank": 19,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.51,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "health",
+          "omega3",
+          "nutrition"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "营养与omega3健康科普，适合补充剂但不够婴儿定向",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC5tyOZZDQk2z4kipPuaU9pw",
+      "rank": 20,
+      "total_score": 10,
+      "suggested_label": "fit",
+      "label_confidence": 0.99,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "health",
+          "parenting",
+          "baby",
+          "pregnancy",
+          "newmom",
+          "maternalhealth"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "母婴健康科普频道，和婴儿补充剂高度相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC5y5QDBVPWxsKhi82UWyPcQ",
+      "rank": 21,
+      "total_score": 8,
+      "suggested_label": "fit",
+      "label_confidence": 0.92,
+      "score_parts": {
+        "theme_score": 8,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "health",
+          "kids",
+          "parenting",
+          "baby",
+          "food"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "亲子与婴儿食品内容，适合母婴类推广",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC6Fpz2gun3XN9dQ5a3w1aOA",
+      "rank": 22,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.17,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "缺少标签与内容证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC6qnfAQh2HbCwclogKd7RiQ",
+      "rank": 23,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.16,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无有效标签，相关性不足",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC7Fe4Iyg8VZkcxfjNW4nQMw",
+      "rank": 24,
+      "total_score": 1,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.34,
+      "score_parts": {
+        "theme_score": 1,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Review",
+          "Consumer Electronic",
+          "Technology"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "有评测属性，但内容偏电子/旅游娱乐，和婴儿补充剂不匹配",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC8Gdcde0UUB4bfWUBJn3vdg",
+      "rank": 25,
+      "total_score": 4,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.7,
+      "score_parts": {
+        "theme_score": 4,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "nutrition",
+          "dietitian",
+          "health",
+          "food"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "营养师向健康频道，适合营养类产品但缺少婴儿定向",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0001",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC8Y5CC9p9F_V-x4jWaAP7ng",
+      "rank": 26,
+      "total_score": 3,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.59,
+      "score_parts": {
+        "theme_score": 3,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "health",
+          "diet",
+          "nutrition"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "健康/营养向，和婴儿补充剂有一定关联",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC9hI9Cw9aNSH4oj4K7NRqsA",
+      "rank": 27,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.18,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "生活泛内容，缺少婴幼儿营养场景",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC9xC5ClCMLOShjp1Ms0dbRw",
+      "rank": 28,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.22,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "健身向偏成人，与婴儿补充剂不匹配",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCA8h2t8ha36AwNHEl6f0U4w",
+      "rank": 29,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.12,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无标签与内容证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCAbqQkRAOYsGdPr4H7b61Ew",
+      "rank": 30,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.44,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "备孕品牌但无内容证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCAvcQ5ydl3225_ZvRiuIuKA",
+      "rank": 31,
+      "total_score": -15,
+      "suggested_label": "badcase",
+      "label_confidence": 0.99,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "monkey",
+          "babymonkey",
+          "baby monkey"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "猴子宝宝内容，动物受众不适合人类婴儿产品",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCB-5_hzbCUgqETPOgE6lnvg",
+      "rank": 32,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.12,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "旅游内容，缺少母婴或健康购买场景",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCBMhomdtMa9bqpg96ZFDGeA",
+      "rank": 33,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.12,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "仅有评测名义，缺少母婴相关证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCBPqMRolWUcF9EngVWz-wBQ",
+      "rank": 34,
+      "total_score": 5,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.75,
+      "score_parts": {
+        "theme_score": 5,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "health",
+          "pregnancy",
+          "toddlermonthbymonth",
+          "kids",
+          "pregnancyweekbyweek"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "育儿/孕期内容，和婴儿营养较接近",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCBTn5AFPSaJ0USZWqcH510A",
+      "rank": 35,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.2,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "生活时尚娱乐向，婴儿补充剂相关性弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCCNh_GoPO4g8-b_fkcPKQ-A",
+      "rank": 36,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.12,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无标签与内容证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCCdnN4v9Fia0pjUzYlUBsGg",
+      "rank": 37,
+      "total_score": 6,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.86,
+      "score_parts": {
+        "theme_score": 6,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "parents pack"
+        ],
+        "weak_related_top5_tags": [
+          "health"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "医院母婴科普，具备育儿健康场景",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCCrW05EM_mAoU6d8lTwYbOg",
+      "rank": 38,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.49,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "food",
+          "health"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "家庭购物/健康内容，可做泛消费触达",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCCuzBHSKtTNIpx9orXSJEaA",
+      "rank": 39,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.12,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无标签与内容证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCD2IozDv2l1WlKayggM21Zw",
+      "rank": 40,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.12,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无标签与内容证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCDYy4_p8HihquxutyXt_-vw",
+      "rank": 41,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.36,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Health",
+          "Life Style"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "泛商品账号，健康/生活标签可做弱触达",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCES42MllBd5QUqqWQCMoq8A",
+      "rank": 42,
+      "total_score": 3,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.68,
+      "score_parts": {
+        "theme_score": 3,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "baby",
+          "health",
+          "pregnancy"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "备孕/怀孕/育儿标签较近，但无补充剂证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCEWb6wVybLkzcHI51OpTpVw",
+      "rank": 43,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.12,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无标签与内容证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCEdmP6wgQNEeTx5i1ITTy2w",
+      "rank": 44,
+      "total_score": -15,
+      "suggested_label": "badcase",
+      "label_confidence": 0.98,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "reddit",
+          "aita",
+          "redditstories"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "Reddit故事娱乐，和母婴产品推广错位",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCEvXtup96sm0YQN7JZnczyw",
+      "rank": 45,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.53,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "unboxing"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "测评/开箱型账号，具备带货能力但题材不对口",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCFLtE0QlB0Gj-4tqxAMD-jQ",
+      "rank": 46,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.58,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "DIY",
+          "Tutorial"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "美妆生活号带 baby/health 标签，属于邻近受众",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCGf-WGUpkrURqJU1jb_mJ5g",
+      "rank": 47,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.24,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "农场/宠物/家庭内容，缺少婴儿营养场景",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCIqUoeacJrgsNtd7M9a0ipA",
+      "rank": 48,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.12,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无标签与内容证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCJGhrfCU3HZmH_tbrIc06ZA",
+      "rank": 49,
+      "total_score": -15,
+      "suggested_label": "badcase",
+      "label_confidence": 0.97,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "dog supplement"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "狗狗补充剂账号，宠物受众不适合人类婴儿产品",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCJKqhMvm3yIP5qVRqZ5baIQ",
+      "rank": 50,
+      "total_score": -15,
+      "suggested_label": "badcase",
+      "label_confidence": 0.99,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "monkeybaby",
+          "monkeybabycutest",
+          "monkey"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "猴子宝宝内容，动物向与人类婴儿补充剂冲突",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0002",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCJRelOFC3i5aJBobazfaonA",
+      "rank": 51,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.11,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "健康饮食频道，但无婴幼儿营养或喂养信号",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCKe7bRGeqm302VJzifAuYEQ",
+      "rank": 52,
+      "total_score": 1,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.37,
+      "score_parts": {
+        "theme_score": 1,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "mom"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "有妈妈受众，但与婴儿补充剂仅弱相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCKjf2xTgThQA1eCbpQNUISg",
+      "rank": 53,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.46,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "kids",
+          "baby"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "亲子日常受众存在，但婴儿补充剂相关性偏弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCL9tUloGC80saqTOxgrtJQA",
+      "rank": 54,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.08,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "生活vlog为主，无婴幼儿营养或喂养信号",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCLGu62anfPbFDkdQj0p-hQw",
+      "rank": 55,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.12,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "健康话题泛化，缺少婴儿营养/补充剂证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCLN6BZ5Jx1KYiEdvyztqqQw",
+      "rank": 56,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.11,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "医疗泛内容，未体现婴幼儿营养或喂养场景",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCM-Eofu543GAU3yptyzZnRg",
+      "rank": 57,
+      "total_score": 0,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.24,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "名称偏母婴护理，但缺少标签和视频证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCMArzKzo24Iru9Q38myfXEA",
+      "rank": 58,
+      "total_score": 15,
+      "suggested_label": "fit",
+      "label_confidence": 0.89,
+      "score_parts": {
+        "theme_score": 15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "babyfood",
+          "babyfoodrecipe"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "babyfood和recipe强相关，适合婴儿营养推广",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCMfx9MEte3jqqrRyS47e8Rg",
+      "rank": 59,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.05,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宗教和车辆内容，与婴儿补充剂无关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCNLzP6v93sQC0qiVlT6mySw",
+      "rank": 60,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.09,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "时尚生活频道，无婴幼儿营养相关信号",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCP6-NOE7qcqnHWJt4B0nOXA",
+      "rank": 61,
+      "total_score": 0,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.22,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "仅从名称看有婴儿受众，但缺少内容证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCP9G8YFpM51div5OEyPsjiQ",
+      "rank": 62,
+      "total_score": 0,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.27,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "母亲受众可间接触达，但缺少婴儿营养信号",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCPJRaQe2LVt1_StkIm6VTSw",
+      "rank": 63,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.15,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "美妆防晒评测为主，与婴儿补充剂类别偏离",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCPKEBByb9bj74i1TAFnKnpg",
+      "rank": 64,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.05,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无可用标签和视频，无法判断为婴儿补充剂相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCP_RIuQcHdSOmsF0-1qhzSA",
+      "rank": 65,
+      "total_score": 10,
+      "suggested_label": "fit",
+      "label_confidence": 0.95,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "babyformula",
+          "babyfeeding",
+          "bottlefeeding",
+          "babytips",
+          "formulafeeding"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "婴儿配方奶粉和喂养主题高度相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCPnsWTpxzwlJHe4Nna7oDKw",
+      "rank": 66,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.18,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "健康教练类泛内容，缺少婴儿营养证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCQYQ5tePIoJIINFVEC1mB7A",
+      "rank": 67,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.07,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "商业知识频道，与婴儿补充剂受众不匹配",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCQkUTB5YOD0PMAtTaWhUJ7g",
+      "rank": 68,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.08,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "生理周期话题，和婴儿补充剂不相干",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCQvUaxCDvAx1LBnOpXvkjWg",
+      "rank": 69,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.06,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "健身健美内容，与婴儿营养需求不匹配",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCRZyZl31WxCvfzFU_UKLB6Q",
+      "rank": 70,
+      "total_score": -5,
+      "suggested_label": "badcase",
+      "label_confidence": 0.99,
+      "score_parts": {
+        "theme_score": -5,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "pets"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物内容与人类婴儿补充剂互斥",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCS9Sa7RI5isc7geozwoXVSg",
+      "rank": 71,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.05,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无标签无视频，无法建立相关性",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCS9bOpe1nCLw_9lDuxGjT2A",
+      "rank": 72,
+      "total_score": 5,
+      "suggested_label": "fit",
+      "label_confidence": 0.79,
+      "score_parts": {
+        "theme_score": 5,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "婴儿哺乳和护理场景高度相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCSEOb1QVs387jZdbPS3e5bw",
+      "rank": 73,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.05,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "缺少任何婴儿或营养相关证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCSn5ltUx-8gY7SISRdaOvpA",
+      "rank": 74,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.14,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "健康优化类泛内容，与婴儿补充剂不够贴合",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCSvXNNqGK-cXl7T9h8Oy8rQ",
+      "rank": 75,
+      "total_score": 1,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.41,
+      "score_parts": {
+        "theme_score": 1,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "mom"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "妈妈受众存在，但婴儿营养证据较弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0003",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCTAXQ-M6AZapBWuvgzwbKVQ",
+      "rank": 76,
+      "total_score": 1,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.34,
+      "score_parts": {
+        "theme_score": 1,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "名称指向家长场景，但缺少标签/内容证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCTLkRFgwWGwS9UMfZw3F3Og",
+      "rank": 77,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.12,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "缺少任何母婴或健康相关信号",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCUZma_OeHONuOIZrorHLuxw",
+      "rank": 78,
+      "total_score": 3,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.39,
+      "score_parts": {
+        "theme_score": 3,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "health",
+          "fitness",
+          "lifestyle"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "健康健身向，可承接补剂推广但非婴幼儿定向",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCUcz4A71zGfNaU0MjgYk7Wg",
+      "rank": 79,
+      "total_score": 3,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.54,
+      "score_parts": {
+        "theme_score": 3,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "kids",
+          "lifestyle"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "亲子娱乐向，带儿童/家庭受众但产品意图弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCVEFkibWxoyS9T_Uc8iggiA",
+      "rank": 80,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.13,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无可用相关信号",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCVUgU7Uod4PBxuie2xMngOQ",
+      "rank": 81,
+      "total_score": 6,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.46,
+      "score_parts": {
+        "theme_score": 6,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "thyroidnutrition",
+          "thyroidhealth",
+          "prometabolicnutrition",
+          "thyroidsupport",
+          "anemia"
+        ],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "营养健康向，适合补剂但缺少婴幼儿定向",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCVynGz4VYCcrQAqmd21qN0w",
+      "rank": 82,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.2,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无母婴或补剂相关证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCW2yHQK9_nSrK_PhLszyUgw",
+      "rank": 83,
+      "total_score": 3,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.46,
+      "score_parts": {
+        "theme_score": 3,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "baby",
+          "kids",
+          "health"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "母婴家庭向，有baby/health受众",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCW3Cf4j8xf5_9NyTWiWVlGA",
+      "rank": 84,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.11,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "缺少相关标签和内容",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCWBfX_yL1Ewl38T1TkZ9i6g",
+      "rank": 85,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.11,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "缺少相关标签和内容",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCXitUIxYw_U-foxbSXSh04Q",
+      "rank": 86,
+      "total_score": 4,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.43,
+      "score_parts": {
+        "theme_score": 4,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "skincare",
+          "health",
+          "beauty",
+          "hairstyle",
+          "hair"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "健康美容向，具备产品推广能力但非母婴",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCXkqDhvEpQZuyeWKvg0Fd9A",
+      "rank": 87,
+      "total_score": 1,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.28,
+      "score_parts": {
+        "theme_score": 1,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "名称像儿童向，但缺少可核实证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCYA2E5BmmY540qoEKYB5Zkw",
+      "rank": 88,
+      "total_score": 10,
+      "suggested_label": "fit",
+      "label_confidence": 0.95,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "babycare",
+          "babyfeeding",
+          "babyproducts"
+        ],
+        "weak_related_top5_tags": [
+          "baby",
+          "parentingessentials",
+          "babyessentials",
+          "musthaves",
+          "life"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "母婴产品场景明确，babycare/babyfeeding很强",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCYDXiclqX89od8kBVIPaoCQ",
+      "rank": 89,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.13,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无相关母婴或健康信号",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCYRzkIWCAir8bcTfAkjjB0Q",
+      "rank": 90,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.55,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "baby",
+          "mom"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "母婴家庭向，受众匹配但产品意图弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCYXeLG5Ne98g5q3vcvUPjPw",
+      "rank": 91,
+      "total_score": -15,
+      "suggested_label": "badcase",
+      "label_confidence": 0.99,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "dog",
+          "puppy",
+          "pets",
+          "goldenretriever",
+          "doglife"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物狗频道，与人类婴儿补剂明显不符",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCYmnhfnlLPxHDCWkEa597sw",
+      "rank": 92,
+      "total_score": 3,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.33,
+      "score_parts": {
+        "theme_score": 3,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Health",
+          "Life Style"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "家庭健康向，存在一定母婴受众可能",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCZ-pWXR-IQ-pZ8cmmYSD8ZA",
+      "rank": 93,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.12,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "缺少相关标签和内容",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCZtoIw1G4k2RTpSKOru6qNA",
+      "rank": 94,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.22,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "未见母婴证据，名称偏CBD方向",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCZzRBM6te7fRqyn1w2JQ47Q",
+      "rank": 95,
+      "total_score": 3,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.62,
+      "score_parts": {
+        "theme_score": 3,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "名称直接指向妈妈护理，具备补剂承接潜力",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC_do9CLoEuRIcPA7j-9y5lg",
+      "rank": 96,
+      "total_score": 4,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.53,
+      "score_parts": {
+        "theme_score": 4,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "mom",
+          "life",
+          "education",
+          "homeschoolmom",
+          "homeschool"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "妈妈/怀孕/健康受众，适合母婴补剂",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UC_lBbPXABwZsbuC3RYneGzg",
+      "rank": 97,
+      "total_score": -15,
+      "suggested_label": "badcase",
+      "label_confidence": 0.98,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "pets",
+          "entertainment"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物娱乐向，与母婴补剂明显不符",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCaMZMo7UWp5CcxuOdZeGAqQ",
+      "rank": 98,
+      "total_score": -10,
+      "suggested_label": "badcase",
+      "label_confidence": 0.96,
+      "score_parts": {
+        "theme_score": -10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "baby"
+        ],
+        "mutually_exclusive_top5_tags": [
+          "dog",
+          "animals",
+          "pets"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物动物内容为主，与母婴补剂不符",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCcPZvuuWwSBJzZp47uDlseA",
+      "rank": 99,
+      "total_score": 4,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.51,
+      "score_parts": {
+        "theme_score": 4,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "momlife",
+          "mom",
+          "health",
+          "pregnancy",
+          "food"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "妈妈/怀孕/健康向，存在补剂承接空间",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCd2tUA2BqlVgFKF4Svsla0Q",
+      "rank": 100,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.19,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "家庭生活向，缺少母婴或健康证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0004",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCdKYK_Z1kv1pFoaA02tdZRw",
+      "rank": 101,
+      "total_score": 1,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.36,
+      "score_parts": {
+        "theme_score": 1,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "health"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "健康播客向，能承接泛健康产品，但缺少母婴场景",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCdQKL405tptzrCZRM28IncQ",
+      "rank": 102,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.12,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无相关证据，频道主题偏泛娱乐/空白",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCdn5AdL0h2-9dPODaHy5lyQ",
+      "rank": 103,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.41,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "health",
+          "lifestyle"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "有健康与亲子生活线索，但缺少婴儿补充剂内容",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCdnHqE0RuUWrUtamFK1cD8w",
+      "rank": 104,
+      "total_score": 0,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.27,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "有开箱属性，但主营转售/商业，不是母婴垂类",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCeBZEqmBiFWTb8aDO2K8Atg",
+      "rank": 105,
+      "total_score": 3,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.49,
+      "score_parts": {
+        "theme_score": 3,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "food",
+          "healthy",
+          "health"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "健康饮食向，适合营养类投放，但无婴儿证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCeKkGPEU4LvZuNwIkl0HWYA",
+      "rank": 106,
+      "total_score": -10,
+      "suggested_label": "badcase",
+      "label_confidence": 0.96,
+      "score_parts": {
+        "theme_score": -10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "pets",
+          "oldeenglishbulldogge"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物犬受众，和人类婴儿补充剂互斥",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCfLo_GDoQBI5opYhNJbSbug",
+      "rank": 107,
+      "total_score": 0,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.24,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "名称像测评号，但缺少具体品类证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCfz-lykI3WXViZpBLniY5qg",
+      "rank": 108,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.57,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "baby",
+          "cutebaby"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "有婴儿受众，但偏日常搞笑内容，缺少补充剂意图",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCgOFF3xUpB2_vTz6bSmqJOw",
+      "rank": 109,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.1,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无相关证据，难判断为母婴补充剂受众",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCikjESrQRwElQ57buZRkWjg",
+      "rank": 110,
+      "total_score": 1,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.3,
+      "score_parts": {
+        "theme_score": 1,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "lifestyle"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "有评测/营销能力，但与母婴营养主题弱相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCirYrXUY7X68nggBqj3gE4Q",
+      "rank": 111,
+      "total_score": 3,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.65,
+      "score_parts": {
+        "theme_score": 3,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "health",
+          "nutrition",
+          "food"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "营养专业度高，适合营养类产品，但非婴幼儿场景",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCisRdTSK_rtTpHNUD5_-aaQ",
+      "rank": 112,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.1,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无相关证据，无法支持婴儿补充剂投放",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCizrmmGuN9pOlk3qpbO3n1A",
+      "rank": 113,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.16,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "以泛娱乐播客为主，和母婴补充剂不匹配",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCjE3p0VHV7Xq_gTS6mUY5qA",
+      "rank": 114,
+      "total_score": 4,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.71,
+      "score_parts": {
+        "theme_score": 4,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "health",
+          "mom",
+          "food",
+          "lifestyle"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "有妈妈/孩子受众和健康内容，但未见补充剂证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCjzFqdGTGHFlEoipunW7RfA",
+      "rank": 115,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.1,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无相关证据，主题过于泛化",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCkG6LiqVfzo9RgTB14BCqNg",
+      "rank": 116,
+      "total_score": -25,
+      "suggested_label": "badcase",
+      "label_confidence": 0.98,
+      "score_parts": {
+        "theme_score": -25,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "horse",
+          "equestrian",
+          "horses",
+          "animals",
+          "pets"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "动物+ASMR格式双重错配，和婴儿补充剂不相符",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCkMzdWdXAAs7l8IkOobd6AA",
+      "rank": 117,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.52,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "health",
+          "lifestyle"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "健康教育型账号，可承接保健品，但非婴幼儿场景",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCkPu04FBfApq3mO5OFfy5fA",
+      "rank": 118,
+      "total_score": 0,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.28,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "母婴受众潜在相关，但无补充剂内容证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCktjsShZ8BEts83ZTJdXqqQ",
+      "rank": 119,
+      "total_score": -15,
+      "suggested_label": "badcase",
+      "label_confidence": 0.97,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "littlemonkeys",
+          "littlemonkeysvideo",
+          "littleanimals",
+          "animals",
+          "monkey"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "猴子/动物内容，和人类婴儿补充剂互斥",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCkzGFg1Qss1M_M9e7NCSAnA",
+      "rank": 120,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.1,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无相关证据，缺少母婴或营养受众",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCmNZ27C9wocxLxZKyjAl-Uw",
+      "rank": 121,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.2,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "地方新闻频道，缺少母婴/营养相关受众",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCmxEvxOAIV9uaxcgEPse4mg",
+      "rank": 122,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.1,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无相关证据，无法支持婴儿补充剂投放",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCnY3dhKVuHUr4yOqpNSpoOw",
+      "rank": 123,
+      "total_score": -15,
+      "suggested_label": "badcase",
+      "label_confidence": 0.98,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "pets",
+          "los angeles guinea pig rescue",
+          "guinea pigs",
+          "guinea pig care"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物救助/护理，和婴儿补充剂完全不同域",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCplsCirxuNxRcXBI229oAcA",
+      "rank": 124,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.1,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无相关证据，无法支持婴儿补充剂投放",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCqgip2zfXmk2zE7Yxc3_-gQ",
+      "rank": 125,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.1,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无相关证据，无法支持婴儿补充剂投放",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0005",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCqm8gGBVOvBe_RmfkMya53w",
+      "rank": 126,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.68,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "baby",
+          "health"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "母婴生活账号，只有婴儿/健康泛相关，缺少补剂意图",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCr6NkDQ3HdgpwQbEPVxkxGQ",
+      "rank": 127,
+      "total_score": -5,
+      "suggested_label": "badcase",
+      "label_confidence": 0.94,
+      "score_parts": {
+        "theme_score": -5,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "entertainment"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "娱乐向，缺少母婴补剂推广场景",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCr8PoVhTL830jkYCRLg3-8w",
+      "rank": 128,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.9,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无标签和视频证据，无法判断为婴儿补剂相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCrG2pgedTXbRZeWXBNLG9PA",
+      "rank": 129,
+      "total_score": 10,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.86,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "pregnancy",
+          "postpartum",
+          "pregnancynutrition"
+        ],
+        "weak_related_top5_tags": [
+          "health",
+          "food",
+          "morningsickness"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "孕产营养内容较强，但偏母体场景，和婴儿补剂不是直连",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCrnIYJW3bRrbLmCF6MJ1uvQ",
+      "rank": 130,
+      "total_score": -15,
+      "suggested_label": "badcase",
+      "label_confidence": 0.99,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "Entertainment",
+          "Horror",
+          "Movie",
+          "narration",
+          "scary"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "恐怖叙事频道，和婴儿营养推广明显不符",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCs77XgZh8p9s5nPdnmQ4RjA",
+      "rank": 131,
+      "total_score": -10,
+      "suggested_label": "badcase",
+      "label_confidence": 0.98,
+      "score_parts": {
+        "theme_score": -10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "roblox",
+          "live stream",
+          "stream",
+          "video game",
+          "action game"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "游戏直播向，婴儿补剂推广场景不匹配",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCt4BiwV_QWDBlFpo0O6B6nQ",
+      "rank": 132,
+      "total_score": 10,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.88,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "supplement review",
+          "product review",
+          "supplement reviews"
+        ],
+        "weak_related_top5_tags": [
+          "health",
+          "food",
+          "fitness"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "补剂评测能力强，但缺少婴儿补剂/母婴直连证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCt7hdgaiGOf1oGtAcdSdR8g",
+      "rank": 133,
+      "total_score": 5,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.76,
+      "score_parts": {
+        "theme_score": 5,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "kids",
+          "food",
+          "health",
+          "baby",
+          "babies"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "有婴儿/儿童泛相关，但缺少补剂购买或使用场景",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCtrnJOOPL_WAUe7-AUXH_2A",
+      "rank": 134,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.74,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无标签和视频证据，无法判断为婴儿补剂相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCttalINrZ-9gb0nIGg_CDZQ",
+      "rank": 135,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.97,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无标签和视频证据，无法判断为婴儿补剂相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCu-JkgjGXF0JVz6J7jPWzsg",
+      "rank": 136,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.97,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无标签和视频证据，无法判断为婴儿补剂相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCu_QrIxevX5jTW9lwNA7vTA",
+      "rank": 137,
+      "total_score": 10,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.9,
+      "score_parts": {
+        "theme_score": 10,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [
+          "breastfeeding",
+          "lactation",
+          "lactationconsultant",
+          "breastpumping",
+          "exclusivepumping"
+        ],
+        "weak_related_top5_tags": [
+          "baby",
+          "health",
+          "parenting"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "母婴喂养专业度高，但缺少补剂评测/购买导向",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCvMFOtVdw6HNNLr8DKP_-mQ",
+      "rank": 138,
+      "total_score": 2,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.52,
+      "score_parts": {
+        "theme_score": 2,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "教程型频道有使用说明能力，但婴儿补剂关联很弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCvboPPicN16ZJQ-mEf-CVuQ",
+      "rank": 139,
+      "total_score": -15,
+      "suggested_label": "badcase",
+      "label_confidence": 0.99,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "chameleon",
+          "panther chameleon",
+          "reptile",
+          "pet chameleon",
+          "chameleon pet"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物爬宠向，和人类婴儿补剂推广不相容",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCvnyeQEID1HBz-51R1IeIwQ",
+      "rank": 140,
+      "total_score": 3,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.64,
+      "score_parts": {
+        "theme_score": 3,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "Food",
+          "Health",
+          "Howto & Style"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "家庭生活号可承接科普，但补剂相关性仍偏弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCw8fMCg67d6BSFqJ3S-_INw",
+      "rank": 141,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.78,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无标签和视频证据，无法判断为婴儿补剂相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCwZFuvmoBLOLCz3lj-AoytQ",
+      "rank": 142,
+      "total_score": 5,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.74,
+      "score_parts": {
+        "theme_score": 5,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "health",
+          "food",
+          "fitness",
+          "lifestyle"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "健康品牌号有补剂能力，但偏成人日常，不是婴儿补剂直连",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCwuUD3gWDyc2pZvWcWJT9FA",
+      "rank": 143,
+      "total_score": -5,
+      "suggested_label": "badcase",
+      "label_confidence": 0.96,
+      "score_parts": {
+        "theme_score": -5,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [
+          "news"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "新闻/罪案向，和婴儿补剂推广关联弱",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCy5LLwkSev6OBd-6EnBf_Ow",
+      "rank": 144,
+      "total_score": 5,
+      "suggested_label": "adjacent",
+      "label_confidence": 0.82,
+      "score_parts": {
+        "theme_score": 5,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "health",
+          "medical",
+          "parenting",
+          "kids"
+        ],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "医生+育儿号有可信度，但缺少补剂直连证据",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCyKnczOBrSZ-bAKxal7NRTw",
+      "rank": 145,
+      "total_score": -15,
+      "suggested_label": "badcase",
+      "label_confidence": 0.99,
+      "score_parts": {
+        "theme_score": -15,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [
+          "baby",
+          "kids"
+        ],
+        "mutually_exclusive_top5_tags": [
+          "pets",
+          "dog",
+          "dogs"
+        ],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "宠物犬类内容为主，不适合做人类婴儿补剂推广",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCyYlxzIQwmzKdgNUElAiAbQ",
+      "rank": 146,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.95,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无标签和视频证据，无法判断为婴儿补剂相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCzOzzXXz5R3aytqUR5LkNZg",
+      "rank": 147,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.93,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "农业烹饪向，与婴儿补剂推广不相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    },
+    {
+      "channel_id": "UCztq-5fJaorCiBVAaSdFpyQ",
+      "rank": 148,
+      "total_score": 0,
+      "suggested_label": "badcase",
+      "label_confidence": 0.97,
+      "score_parts": {
+        "theme_score": 0,
+        "recall_count_score": 0,
+        "recency_penalty": 0
+      },
+      "semantic_flags": {
+        "direct_tag_hits": [],
+        "strong_related_tags": [],
+        "weak_related_top5_tags": [],
+        "mutually_exclusive_top5_tags": [],
+        "unmatched_recent_count": 0
+      },
+      "why_short": "无标签和视频证据，无法判断为婴儿补剂相关",
+      "score_status": "completed",
+      "model_version": "codex:gpt-5.4-mini",
+      "task_id": "task-0006",
+      "worker_attempt": 1,
+      "agent_model": "gpt-5.4-mini",
+      "agent_reasoning_effort": "high",
+      "rule_version": "prompt:b87da85cf79a"
+    }
+  ],
+  "task_reports": [
+    {
+      "task_id": "task-0001",
+      "record_count": 25,
+      "ok": true,
+      "code": 0,
+      "signal": null,
+      "stderr": "",
+      "duration_ms": 125708,
+      "input": "/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/tmp/channel-search-review/20260609-nox-vs-xtb-21kw-3platform-us-front5-promotion-capacity-v1/youtube/baby-supplement/nox-youtube/tasks/task-0001.input.json",
+      "output": "/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/tmp/channel-search-review/20260609-nox-vs-xtb-21kw-3platform-us-front5-promotion-capacity-v1/youtube/baby-supplement/nox-youtube/tasks/task-0001.output.json",
+      "stderr_preview": ""
+    },
+    {
+      "task_id": "task-0003",
+      "record_count": 25,
+      "ok": true,
+      "code": 0,
+      "signal": null,
+      "stderr": "",
+      "duration_ms": 132885,
+      "input": "/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/tmp/channel-search-review/20260609-nox-vs-xtb-21kw-3platform-us-front5-promotion-capacity-v1/youtube/baby-supplement/nox-youtube/tasks/task-0003.input.json",
+      "output": "/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/tmp/channel-search-review/20260609-nox-vs-xtb-21kw-3platform-us-front5-promotion-capacity-v1/youtube/baby-supplement/nox-youtube/tasks/task-0003.output.json",
+      "stderr_preview": ""
+    },
+    {
+      "task_id": "task-0002",
+      "record_count": 25,
+      "ok": true,
+      "code": 0,
+      "signal": null,
+      "stderr": "",
+      "duration_ms": 263286,
+      "input": "/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/tmp/channel-search-review/20260609-nox-vs-xtb-21kw-3platform-us-front5-promotion-capacity-v1/youtube/baby-supplement/nox-youtube/tasks/task-0002.input.json",
+      "output": "/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/tmp/channel-search-review/20260609-nox-vs-xtb-21kw-3platform-us-front5-promotion-capacity-v1/youtube/baby-supplement/nox-youtube/tasks/task-0002.output.json",
+      "stderr_preview": ""
+    },
+    {
+      "task_id": "task-0004",
+      "record_count": 25,
+      "ok": true,
+      "code": 0,
+      "signal": null,
+      "stderr": "",
+      "duration_ms": 204309,
+      "input": "/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/tmp/channel-search-review/20260609-nox-vs-xtb-21kw-3platform-us-front5-promotion-capacity-v1/youtube/baby-supplement/nox-youtube/tasks/task-0004.input.json",
+      "output": "/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/tmp/channel-search-review/20260609-nox-vs-xtb-21kw-3platform-us-front5-promotion-capacity-v1/youtube/baby-supplement/nox-youtube/tasks/task-0004.output.json",
+      "stderr_preview": ""
+    },
+    {
+      "task_id": "task-0005",
+      "record_count": 25,
+      "ok": true,
+      "code": 0,
+      "signal": null,
+      "stderr": "",
+      "duration_ms": 232752,
+      "input": "/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/tmp/channel-search-review/20260609-nox-vs-xtb-21kw-3platform-us-front5-promotion-capacity-v1/youtube/baby-supplement/nox-youtube/tasks/task-0005.input.json",
+      "output": "/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/tmp/channel-search-review/20260609-nox-vs-xtb-21kw-3platform-us-front5-promotion-capacity-v1/youtube/baby-supplement/nox-youtube/tasks/task-0005.output.json",
+      "stderr_preview": ""
+    },
+    {
+      "task_id": "task-0006",
+      "record_count": 23,
+      "ok": true,
+      "code": 0,
+      "signal": null,
+      "stderr": "",
+      "duration_ms": 154787,
+      "input": "/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/tmp/channel-search-review/20260609-nox-vs-xtb-21kw-3platform-us-front5-promotion-capacity-v1/youtube/baby-supplement/nox-youtube/tasks/task-0006.input.json",
+      "output": "/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/tmp/channel-search-review/20260609-nox-vs-xtb-21kw-3platform-us-front5-promotion-capacity-v1/youtube/baby-supplement/nox-youtube/tasks/task-0006.output.json",
+      "stderr_preview": ""
+    }
+  ],
+  "updated_at": "2026-06-09T17:13:32.697Z"
+}

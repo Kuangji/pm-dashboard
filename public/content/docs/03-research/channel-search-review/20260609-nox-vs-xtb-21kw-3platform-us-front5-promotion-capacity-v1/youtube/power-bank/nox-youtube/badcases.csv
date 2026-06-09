@@ -1,0 +1,50 @@
+rank,channel_id,channel_name,channel_url,score,suggested_label,why_short
+11,UC3f-DJSYl-UBjFKP6P2eFAQ,GOODaaa Official,https://cn.noxinfluencer.com/youtube/channel/UC3f-DJSYl-UBjFKP6P2eFAQ,0,badcase,标签缺失，无法判断有效带货场景
+23,UCUzwYBo6tmwsVKkVRtISzpw,The Ghetographer,https://cn.noxinfluencer.com/youtube/channel/UCUzwYBo6tmwsVKkVRtISzpw,0,badcase,标签几乎为空，缺少判断依据
+25,UCy_LbUw93GTUz5cW6X_CHHQ,Tools and Gadgets,https://cn.noxinfluencer.com/youtube/channel/UCy_LbUw93GTUz5cW6X_CHHQ,0,badcase,游戏向频道，和移动电源推广不匹配
+29,UCPicB6zsJutW3AVNmLA0EQg,Joseph Singer,https://cn.noxinfluencer.com/youtube/channel/UCPicB6zsJutW3AVNmLA0EQg,0,badcase,无标签无内容证据，相关性不足
+35,UC3LnsUei94ixnSLKvYfg_6g,Ivan Meneses,https://cn.noxinfluencer.com/youtube/channel/UC3LnsUei94ixnSLKvYfg_6g,0,badcase,无标签无证据，相关性不足
+46,UC-UBpWUk0yrEClbUNInPJdg,Shah Chisty,https://cn.noxinfluencer.com/youtube/channel/UC-UBpWUk0yrEClbUNInPJdg,0,badcase,无标签无证据，相关性不足
+51,UCVL10pAdEOvRtO8ZTD8ZuZA,NeoTechi,https://cn.noxinfluencer.com/youtube/channel/UCVL10pAdEOvRtO8ZTD8ZuZA,0,badcase,教育培训频道，与移动电源推广无关
+54,UCl5J-2noQ2dFuP6NkQrW7lw,Luis Enrique Lemus Acosta,https://cn.noxinfluencer.com/youtube/channel/UCl5J-2noQ2dFuP6NkQrW7lw,0,badcase,无标签无内容证据，相关性不足
+57,UCgscDYr0xJHlMoA8QwKS9qw,entertainment gadget,https://cn.noxinfluencer.com/youtube/channel/UCgscDYr0xJHlMoA8QwKS9qw,0,badcase,娱乐向，缺少产品推广语境
+60,UCyMLQBnT2IB3SPu0TX5VgXQ,Power king,https://cn.noxinfluencer.com/youtube/channel/UCyMLQBnT2IB3SPu0TX5VgXQ,-15,badcase,娱乐影视向，和移动电源推广场景冲突
+65,UCI5SD4b3Cf29wbkpxOMCtOg,JJCoolStuff,https://cn.noxinfluencer.com/youtube/channel/UCI5SD4b3Cf29wbkpxOMCtOg,0,badcase,无有效标签，无法判断适配度
+67,UCOUWQop6sgEXA-NtKZ5XMIw,Ah Tech,https://cn.noxinfluencer.com/youtube/channel/UCOUWQop6sgEXA-NtKZ5XMIw,0,badcase,无标签无内容证据，相关性不足
+71,UCb6Pfe7BEv_VhbyRnoQYbpg,Dan Reviews Stuff,https://cn.noxinfluencer.com/youtube/channel/UCb6Pfe7BEv_VhbyRnoQYbpg,0,badcase,缺少标签和视频证据，相关性不足
+74,UCUfmtLwOygFEb220eI_E_Qg,HOT DIGITAL,https://cn.noxinfluencer.com/youtube/channel/UCUfmtLwOygFEb220eI_E_Qg,0,badcase,无标签无内容证据，相关性不足
+76,UCuxohPmcHMQJgELyoj3rGZQ,BOXscape,https://cn.noxinfluencer.com/youtube/channel/UCuxohPmcHMQJgELyoj3rGZQ,0,badcase,无标签和视频证据
+77,UCy17T_iA1-pUlAhsovai76g,AE Insider,https://cn.noxinfluencer.com/youtube/channel/UCy17T_iA1-pUlAhsovai76g,0,badcase,无标签和视频证据
+82,UCfJ7JX9PtbHg5G_rt_gjs8A,Sumaho Friends,https://cn.noxinfluencer.com/youtube/channel/UCfJ7JX9PtbHg5G_rt_gjs8A,-5,badcase,动画娱乐向，与产品推广冲突
+83,UC--2-CR3wf_H9EHxJsTLR7Q,Purple Unicorns,https://cn.noxinfluencer.com/youtube/channel/UC--2-CR3wf_H9EHxJsTLR7Q,-15,badcase,宠物垂类，不适合人用移动电源
+86,UCNiA_4Fy-XWexfHNwtfJuqw,ToolStacked,https://cn.noxinfluencer.com/youtube/channel/UCNiA_4Fy-XWexfHNwtfJuqw,0,badcase,无标签和视频证据
+87,UCUclONNzMKiFkUtdjIC10tQ,eROCS,https://cn.noxinfluencer.com/youtube/channel/UCUclONNzMKiFkUtdjIC10tQ,0,badcase,无标签和视频证据
+103,UCKkbW1FdTbfbvwmcASzYDoQ,Objectively Curious,https://cn.noxinfluencer.com/youtube/channel/UCKkbW1FdTbfbvwmcASzYDoQ,0,badcase,无标签无内容信号，无法判断推广相关性
+106,UC6vZaalfq4ZEyXIC5yxuPAQ,The Life of Bob,https://cn.noxinfluencer.com/youtube/channel/UC6vZaalfq4ZEyXIC5yxuPAQ,0,badcase,无标签无内容信号，相关性不足
+115,UCHIje81epnZNcXTuXr7Q_Rg,Denise Blackburn,https://cn.noxinfluencer.com/youtube/channel/UCHIje81epnZNcXTuXr7Q_Rg,0,badcase,无标签无内容信号，相关性不足
+122,UCTYi_S2bu2WhQp0zCXTR3gQ,Licious,https://cn.noxinfluencer.com/youtube/channel/UCTYi_S2bu2WhQp0zCXTR3gQ,0,badcase,无标签无内容信号，相关性不足
+138,UCji1uLbgjNaRnUqqMd-YKZg,Mind Over Machine,https://cn.noxinfluencer.com/youtube/channel/UCji1uLbgjNaRnUqqMd-YKZg,0,badcase,无标签无内容证据，无法判断适配度
+141,UCAY682COgIchF5kkvjd-nwg,TopReviewPro,https://cn.noxinfluencer.com/youtube/channel/UCAY682COgIchF5kkvjd-nwg,0,badcase,无标签无内容信息，无法支撑投放判断
+143,UCpra2LkCtiSQ67ypU05lfbQ,Valentine Lewis,https://cn.noxinfluencer.com/youtube/channel/UCpra2LkCtiSQ67ypU05lfbQ,-3,badcase,美妆时尚为主，和充电宝推广场景不匹配
+146,UCBIREPb3tY-m0zNSgmCXHzQ,Will U Push The Button,https://cn.noxinfluencer.com/youtube/channel/UCBIREPb3tY-m0zNSgmCXHzQ,-12,badcase,纯娱乐问答号，和充电宝产品推广不相干
+150,UCEth8Mr49WNJNdtn7Dy3rqA,Darius Wallis - PrayersHelp,https://cn.noxinfluencer.com/youtube/channel/UCEth8Mr49WNJNdtn7Dy3rqA,-10,badcase,宗教内容为主，与充电宝推广目标明显不符
+161,UCzNHISPPUEg-FAw1xCZsWjg,Top News ET - ቶፕ ኒውስ ኢት,https://cn.noxinfluencer.com/youtube/channel/UCzNHISPPUEg-FAw1xCZsWjg,8,badcase,新闻娱乐向，标签蹭词且推广场景不稳
+165,UCRw9MTUBEh1R3oEf5IPiVAw,Mr. & Mrs. Tesla,https://cn.noxinfluencer.com/youtube/channel/UCRw9MTUBEh1R3oEf5IPiVAw,0,badcase,汽车频道，和移动电源推广关联弱
+172,UCdK5AQDeiTlRJzgg_D5YBrg,Evilcrossover,https://cn.noxinfluencer.com/youtube/channel/UCdK5AQDeiTlRJzgg_D5YBrg,0,badcase,纯游戏短视频，和产品推广不匹配
+182,UC3amg-v5_uNrRXtmovW49rA,Emo craft&draw,https://cn.noxinfluencer.com/youtube/channel/UC3amg-v5_uNrRXtmovW49rA,0,badcase,无相关数码或电源内容
+193,UCTycbFdC0LgkWgjG-oS0DYw,Mastering Mayhem,https://cn.noxinfluencer.com/youtube/channel/UCTycbFdC0LgkWgjG-oS0DYw,1,badcase,工具短视频为主，充电宝匹配度低
+200,UCK8L2t-brDEipg93Wba8WUw,Fixperiment king Lab,https://cn.noxinfluencer.com/youtube/channel/UCK8L2t-brDEipg93Wba8WUw,0,badcase,无数码或电源相关受众，匹配度低
+203,UCN50FugHe-GwnG-0mfXJa4Q,Dan the Fix it Man,https://cn.noxinfluencer.com/youtube/channel/UCN50FugHe-GwnG-0mfXJa4Q,0,badcase,汽车维修为主，与充电宝推广场景不匹配
+204,UC20o1OUWGrixnCEE1gQ9clg,PBKreviews,https://cn.noxinfluencer.com/youtube/channel/UC20o1OUWGrixnCEE1gQ9clg,-5,badcase,ASMR格式冲突明显，虽是科技评测但不适合充电宝推广
+214,UCZ0hznff92f_i1wpYyi7tPQ,MikeTheTech,https://cn.noxinfluencer.com/youtube/channel/UCZ0hznff92f_i1wpYyi7tPQ,1,badcase,游戏内容为主，科技标签过泛，关联弱
+216,UCVdV0CHCqiaZFfuvMfHrluw,Generator Source,https://cn.noxinfluencer.com/youtube/channel/UCVdV0CHCqiaZFfuvMfHrluw,0,badcase,工业发电机频道，和消费级充电宝不在同一场景
+217,UC5PFz_NAkk7UFIpG4NblR1A,The Savage Seller,https://cn.noxinfluencer.com/youtube/channel/UC5PFz_NAkk7UFIpG4NblR1A,0,badcase,无标签，缺少任何相关证据
+221,UCLDw7ummSJnILbMZn2Azf2g,ON THE RADAR,https://cn.noxinfluencer.com/youtube/channel/UCLDw7ummSJnILbMZn2Azf2g,0,badcase,海藻营养健康内容，与充电宝推广无关
+222,UCEHlQAWyRwVOunhw6FyHKdA,MonroeWorld,https://cn.noxinfluencer.com/youtube/channel/UCEHlQAWyRwVOunhw6FyHKdA,0,badcase,Steam Deck游戏频道，缺少充电宝推广证据
+227,UC4xU1pYKI2mXcGP8qdxLL6g,ABEiiiKU,https://cn.noxinfluencer.com/youtube/channel/UC4xU1pYKI2mXcGP8qdxLL6g,-2,badcase,数码开箱但ASMR错位明显
+228,UCQTNRbZISijxJVu64PiUKQg,Hidden Camera and Media Listening Devices,https://cn.noxinfluencer.com/youtube/channel/UCQTNRbZISijxJVu64PiUKQg,0,badcase,监控/监听设备垂类，和充电宝不匹配
+234,UCEZY6z28_vfthXoUZGEoeUg,Modi Adams,https://cn.noxinfluencer.com/youtube/channel/UCEZY6z28_vfthXoUZGEoeUg,-1,badcase,有评测但ASMR属性削弱转化场景
+235,UCzHkFC0tjzKKWtRRJv3j9LA,AB Rasool Saif,https://cn.noxinfluencer.com/youtube/channel/UCzHkFC0tjzKKWtRRJv3j9LA,0,badcase,涨粉/泛流量频道，与产品推广无关
+242,UCs50EmjtJyNLDcgTGSVNvcQ,Banks Power,https://cn.noxinfluencer.com/youtube/channel/UCs50EmjtJyNLDcgTGSVNvcQ,0,badcase,汽车性能垂类，和充电宝受众不重合
+245,UCQXZQ1a9sdOxWqyXACkYZvA,Think and Made,https://cn.noxinfluencer.com/youtube/channel/UCQXZQ1a9sdOxWqyXACkYZvA,0,badcase,DIY电机技巧，与充电宝关联弱
+249,UCGFik1WpXBhbJbYmTk3JiUw,ASM Knowledge,https://cn.noxinfluencer.com/youtube/channel/UCGFik1WpXBhbJbYmTk3JiUw,0,badcase,宗教知识频道，和产品推广无关

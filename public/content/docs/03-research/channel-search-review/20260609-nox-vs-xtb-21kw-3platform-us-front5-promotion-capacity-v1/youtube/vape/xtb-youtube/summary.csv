@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+xtb,youtube,vape,overall,250,91,36.4%
+xtb,youtube,vape,head,250,91,36.4%
+xtb,youtube,vape,mid,0,0,0.0%
+xtb,youtube,vape,tail,0,0,0.0%

@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+xtb,youtube,Dreame,overall,250,194,77.6%
+xtb,youtube,Dreame,head,250,194,77.6%
+xtb,youtube,Dreame,mid,0,0,0.0%
+xtb,youtube,Dreame,tail,0,0,0.0%

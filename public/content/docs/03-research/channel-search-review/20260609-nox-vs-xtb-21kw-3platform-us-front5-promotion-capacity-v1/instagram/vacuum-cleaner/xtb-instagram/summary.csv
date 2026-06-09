@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+xtb,instagram,vacuum cleaner,overall,250,74,29.6%
+xtb,instagram,vacuum cleaner,head,250,74,29.6%
+xtb,instagram,vacuum cleaner,mid,0,0,0.0%
+xtb,instagram,vacuum cleaner,tail,0,0,0.0%

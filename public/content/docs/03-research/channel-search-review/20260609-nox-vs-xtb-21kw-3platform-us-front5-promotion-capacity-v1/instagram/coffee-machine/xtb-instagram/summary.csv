@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+xtb,instagram,coffee machine,overall,250,100,40.0%
+xtb,instagram,coffee machine,head,250,100,40.0%
+xtb,instagram,coffee machine,mid,0,0,0.0%
+xtb,instagram,coffee machine,tail,0,0,0.0%

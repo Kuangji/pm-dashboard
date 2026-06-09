@@ -1,0 +1,4043 @@
+{
+  "generated_at": "2026-06-09T19:49:23.296Z",
+  "run_root": "tmp/channel-search-review/20260609-nox-vs-xtb-21kw-3platform-us-front5-promotion-capacity-v1",
+  "scope": {
+    "keywords": [
+      "coffee machine",
+      "lawn mower",
+      "tech",
+      "fashion",
+      "lifestyle",
+      "power bank",
+      "swim vest",
+      "vacuum cleaner",
+      "baby supplement",
+      "pet food",
+      "yoga mat",
+      "resistance bands",
+      "marathon",
+      "digital products",
+      "vape",
+      "treadmill",
+      "agricultural products",
+      "photography equipment",
+      "Dreame",
+      "kitchen",
+      "beauty"
+    ],
+    "platforms": [
+      "youtube",
+      "tiktok",
+      "instagram"
+    ],
+    "providers": [
+      "nox",
+      "xtb"
+    ],
+    "country": "US",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "page_size": 50,
+    "low_confidence_review": false
+  },
+  "verification": {
+    "score_files": 126,
+    "complete_runs": 126,
+    "provider_comparisons": 63,
+    "record_count": 30995,
+    "completed_records": 30995,
+    "failed_runs": 0
+  },
+  "by_provider": {
+    "nox": {
+      "total": 15476,
+      "labels": {
+        "fit": 6336,
+        "adjacent": 4667,
+        "badcase": 4473,
+        "failed": 0
+      },
+      "badcase_rate": 0.28902817265443265,
+      "good_rate": 0.7109718273455673,
+      "avg_record_ms": 6469.252263823775,
+      "avg_task_ms": 140885.18181818182,
+      "run_count": 63
+    },
+    "xtb": {
+      "total": 15519,
+      "labels": {
+        "fit": 4600,
+        "adjacent": 4583,
+        "badcase": 6336,
+        "failed": 0
+      },
+      "badcase_rate": 0.40827372897738257,
+      "good_rate": 0.5917262710226174,
+      "avg_record_ms": 6586.2182132786465,
+      "avg_task_ms": 145569.63172804532,
+      "run_count": 63
+    }
+  },
+  "by_platform_provider": {
+    "youtube": {
+      "nox": {
+        "total": 4976,
+        "labels": {
+          "fit": 1891,
+          "adjacent": 1672,
+          "badcase": 1413,
+          "failed": 0
+        },
+        "badcase_rate": 0.28396302250803857,
+        "good_rate": 0.7160369774919614,
+        "avg_record_ms": 6866.044919145538,
+        "avg_task_ms": 147605.63948497854,
+        "run_count": 21
+      },
+      "xtb": {
+        "total": 5019,
+        "labels": {
+          "fit": 1704,
+          "adjacent": 1636,
+          "badcase": 1679,
+          "failed": 0
+        },
+        "badcase_rate": 0.3345287905957362,
+        "good_rate": 0.6654712094042639,
+        "avg_record_ms": 6949.19442797866,
+        "avg_task_ms": 144141.44262295082,
+        "run_count": 21
+      }
+    },
+    "tiktok": {
+      "nox": {
+        "total": 5250,
+        "labels": {
+          "fit": 1952,
+          "adjacent": 1451,
+          "badcase": 1847,
+          "failed": 0
+        },
+        "badcase_rate": 0.3518095238095238,
+        "good_rate": 0.6481904761904762,
+        "avg_record_ms": 6407.459022627876,
+        "avg_task_ms": 153866.86757990866,
+        "run_count": 21
+      },
+      "xtb": {
+        "total": 5250,
+        "labels": {
+          "fit": 1083,
+          "adjacent": 1225,
+          "badcase": 2942,
+          "failed": 0
+        },
+        "badcase_rate": 0.5603809523809524,
+        "good_rate": 0.43961904761904763,
+        "avg_record_ms": 6173.077344931921,
+        "avg_task_ms": 132158.73279352227,
+        "run_count": 21
+      }
+    },
+    "instagram": {
+      "nox": {
+        "total": 5250,
+        "labels": {
+          "fit": 2493,
+          "adjacent": 1544,
+          "badcase": 1213,
+          "failed": 0
+        },
+        "badcase_rate": 0.23104761904761906,
+        "good_rate": 0.7689523809523809,
+        "avg_record_ms": 6155.738449934,
+        "avg_task_ms": 124121.47148288973,
+        "run_count": 21
+      },
+      "xtb": {
+        "total": 5250,
+        "labels": {
+          "fit": 1813,
+          "adjacent": 1722,
+          "badcase": 1715,
+          "failed": 0
+        },
+        "badcase_rate": 0.32666666666666666,
+        "good_rate": 0.6733333333333333,
+        "avg_record_ms": 6652.377354900095,
+        "avg_task_ms": 162597.4,
+        "run_count": 21
+      }
+    }
+  },
+  "page_comparison": [
+    {
+      "platform": "overall",
+      "page": 1,
+      "nox": {
+        "total": 3150,
+        "badcase": 784,
+        "fit": 1526,
+        "adjacent": 840,
+        "badcase_rate": 0.24888888888888888,
+        "good_rate": 0.7511111111111111
+      },
+      "xtb": {
+        "total": 3150,
+        "badcase": 1214,
+        "fit": 1067,
+        "adjacent": 869,
+        "badcase_rate": 0.3853968253968254,
+        "good_rate": 0.6146031746031746
+      },
+      "delta_xtb_minus_nox": 0.13650793650793652
+    },
+    {
+      "platform": "overall",
+      "page": 2,
+      "nox": {
+        "total": 3128,
+        "badcase": 892,
+        "fit": 1301,
+        "adjacent": 935,
+        "badcase_rate": 0.2851662404092072,
+        "good_rate": 0.7148337595907929
+      },
+      "xtb": {
+        "total": 3132,
+        "badcase": 1274,
+        "fit": 925,
+        "adjacent": 933,
+        "badcase_rate": 0.40676883780332057,
+        "good_rate": 0.5932311621966795
+      },
+      "delta_xtb_minus_nox": 0.12160259739411339
+    },
+    {
+      "platform": "overall",
+      "page": 3,
+      "nox": {
+        "total": 3098,
+        "badcase": 913,
+        "fit": 1216,
+        "adjacent": 969,
+        "badcase_rate": 0.2947062621045836,
+        "good_rate": 0.7052937378954164
+      },
+      "xtb": {
+        "total": 3100,
+        "badcase": 1296,
+        "fit": 903,
+        "adjacent": 901,
+        "badcase_rate": 0.4180645161290323,
+        "good_rate": 0.5819354838709677
+      },
+      "delta_xtb_minus_nox": 0.12335825402444867
+    },
+    {
+      "platform": "overall",
+      "page": 4,
+      "nox": {
+        "total": 3050,
+        "badcase": 931,
+        "fit": 1211,
+        "adjacent": 908,
+        "badcase_rate": 0.3052459016393443,
+        "good_rate": 0.6947540983606557
+      },
+      "xtb": {
+        "total": 3087,
+        "badcase": 1309,
+        "fit": 873,
+        "adjacent": 905,
+        "badcase_rate": 0.42403628117913833,
+        "good_rate": 0.5759637188208617
+      },
+      "delta_xtb_minus_nox": 0.11879037953979404
+    },
+    {
+      "platform": "overall",
+      "page": 5,
+      "nox": {
+        "total": 3050,
+        "badcase": 953,
+        "fit": 1082,
+        "adjacent": 1015,
+        "badcase_rate": 0.31245901639344265,
+        "good_rate": 0.6875409836065574
+      },
+      "xtb": {
+        "total": 3050,
+        "badcase": 1243,
+        "fit": 832,
+        "adjacent": 975,
+        "badcase_rate": 0.4075409836065574,
+        "good_rate": 0.5924590163934427
+      },
+      "delta_xtb_minus_nox": 0.09508196721311474
+    },
+    {
+      "platform": "youtube",
+      "page": 1,
+      "nox": {
+        "total": 1050,
+        "badcase": 250,
+        "fit": 496,
+        "adjacent": 304,
+        "badcase_rate": 0.23809523809523808,
+        "good_rate": 0.7619047619047619
+      },
+      "xtb": {
+        "total": 1050,
+        "badcase": 315,
+        "fit": 413,
+        "adjacent": 322,
+        "badcase_rate": 0.3,
+        "good_rate": 0.7
+      },
+      "delta_xtb_minus_nox": 0.06190476190476191
+    },
+    {
+      "platform": "youtube",
+      "page": 2,
+      "nox": {
+        "total": 1028,
+        "badcase": 317,
+        "fit": 372,
+        "adjacent": 339,
+        "badcase_rate": 0.30836575875486383,
+        "good_rate": 0.6916342412451362
+      },
+      "xtb": {
+        "total": 1032,
+        "badcase": 357,
+        "fit": 312,
+        "adjacent": 363,
+        "badcase_rate": 0.34593023255813954,
+        "good_rate": 0.6540697674418605
+      },
+      "delta_xtb_minus_nox": 0.03756447380327571
+    },
+    {
+      "platform": "youtube",
+      "page": 3,
+      "nox": {
+        "total": 998,
+        "badcase": 295,
+        "fit": 367,
+        "adjacent": 336,
+        "badcase_rate": 0.2955911823647295,
+        "good_rate": 0.7044088176352705
+      },
+      "xtb": {
+        "total": 1000,
+        "badcase": 351,
+        "fit": 348,
+        "adjacent": 301,
+        "badcase_rate": 0.351,
+        "good_rate": 0.649
+      },
+      "delta_xtb_minus_nox": 0.0554088176352705
+    },
+    {
+      "platform": "youtube",
+      "page": 4,
+      "nox": {
+        "total": 950,
+        "badcase": 264,
+        "fit": 315,
+        "adjacent": 371,
+        "badcase_rate": 0.27789473684210525,
+        "good_rate": 0.7221052631578947
+      },
+      "xtb": {
+        "total": 987,
+        "badcase": 353,
+        "fit": 318,
+        "adjacent": 316,
+        "badcase_rate": 0.3576494427558257,
+        "good_rate": 0.6423505572441742
+      },
+      "delta_xtb_minus_nox": 0.07975470591372047
+    },
+    {
+      "platform": "youtube",
+      "page": 5,
+      "nox": {
+        "total": 950,
+        "badcase": 287,
+        "fit": 341,
+        "adjacent": 322,
+        "badcase_rate": 0.3021052631578947,
+        "good_rate": 0.6978947368421052
+      },
+      "xtb": {
+        "total": 950,
+        "badcase": 303,
+        "fit": 313,
+        "adjacent": 334,
+        "badcase_rate": 0.31894736842105265,
+        "good_rate": 0.6810526315789474
+      },
+      "delta_xtb_minus_nox": 0.016842105263157936
+    },
+    {
+      "platform": "tiktok",
+      "page": 1,
+      "nox": {
+        "total": 1050,
+        "badcase": 332,
+        "fit": 457,
+        "adjacent": 261,
+        "badcase_rate": 0.3161904761904762,
+        "good_rate": 0.6838095238095238
+      },
+      "xtb": {
+        "total": 1050,
+        "badcase": 548,
+        "fit": 273,
+        "adjacent": 229,
+        "badcase_rate": 0.5219047619047619,
+        "good_rate": 0.4780952380952381
+      },
+      "delta_xtb_minus_nox": 0.20571428571428568
+    },
+    {
+      "platform": "tiktok",
+      "page": 2,
+      "nox": {
+        "total": 1050,
+        "badcase": 334,
+        "fit": 425,
+        "adjacent": 291,
+        "badcase_rate": 0.3180952380952381,
+        "good_rate": 0.6819047619047619
+      },
+      "xtb": {
+        "total": 1050,
+        "badcase": 587,
+        "fit": 228,
+        "adjacent": 235,
+        "badcase_rate": 0.559047619047619,
+        "good_rate": 0.44095238095238093
+      },
+      "delta_xtb_minus_nox": 0.24095238095238092
+    },
+    {
+      "platform": "tiktok",
+      "page": 3,
+      "nox": {
+        "total": 1050,
+        "badcase": 378,
+        "fit": 355,
+        "adjacent": 317,
+        "badcase_rate": 0.36,
+        "good_rate": 0.64
+      },
+      "xtb": {
+        "total": 1050,
+        "badcase": 595,
+        "fit": 187,
+        "adjacent": 268,
+        "badcase_rate": 0.5666666666666667,
+        "good_rate": 0.43333333333333335
+      },
+      "delta_xtb_minus_nox": 0.20666666666666667
+    },
+    {
+      "platform": "tiktok",
+      "page": 4,
+      "nox": {
+        "total": 1050,
+        "badcase": 397,
+        "fit": 387,
+        "adjacent": 266,
+        "badcase_rate": 0.3780952380952381,
+        "good_rate": 0.621904761904762
+      },
+      "xtb": {
+        "total": 1050,
+        "badcase": 608,
+        "fit": 216,
+        "adjacent": 226,
+        "badcase_rate": 0.579047619047619,
+        "good_rate": 0.42095238095238097
+      },
+      "delta_xtb_minus_nox": 0.20095238095238094
+    },
+    {
+      "platform": "tiktok",
+      "page": 5,
+      "nox": {
+        "total": 1050,
+        "badcase": 406,
+        "fit": 328,
+        "adjacent": 316,
+        "badcase_rate": 0.38666666666666666,
+        "good_rate": 0.6133333333333333
+      },
+      "xtb": {
+        "total": 1050,
+        "badcase": 604,
+        "fit": 179,
+        "adjacent": 267,
+        "badcase_rate": 0.5752380952380952,
+        "good_rate": 0.4247619047619048
+      },
+      "delta_xtb_minus_nox": 0.18857142857142856
+    },
+    {
+      "platform": "instagram",
+      "page": 1,
+      "nox": {
+        "total": 1050,
+        "badcase": 202,
+        "fit": 573,
+        "adjacent": 275,
+        "badcase_rate": 0.19238095238095237,
+        "good_rate": 0.8076190476190476
+      },
+      "xtb": {
+        "total": 1050,
+        "badcase": 351,
+        "fit": 381,
+        "adjacent": 318,
+        "badcase_rate": 0.3342857142857143,
+        "good_rate": 0.6657142857142857
+      },
+      "delta_xtb_minus_nox": 0.14190476190476192
+    },
+    {
+      "platform": "instagram",
+      "page": 2,
+      "nox": {
+        "total": 1050,
+        "badcase": 241,
+        "fit": 504,
+        "adjacent": 305,
+        "badcase_rate": 0.22952380952380952,
+        "good_rate": 0.7704761904761904
+      },
+      "xtb": {
+        "total": 1050,
+        "badcase": 330,
+        "fit": 385,
+        "adjacent": 335,
+        "badcase_rate": 0.3142857142857143,
+        "good_rate": 0.6857142857142857
+      },
+      "delta_xtb_minus_nox": 0.08476190476190476
+    },
+    {
+      "platform": "instagram",
+      "page": 3,
+      "nox": {
+        "total": 1050,
+        "badcase": 240,
+        "fit": 494,
+        "adjacent": 316,
+        "badcase_rate": 0.22857142857142856,
+        "good_rate": 0.7714285714285715
+      },
+      "xtb": {
+        "total": 1050,
+        "badcase": 350,
+        "fit": 368,
+        "adjacent": 332,
+        "badcase_rate": 0.3333333333333333,
+        "good_rate": 0.6666666666666666
+      },
+      "delta_xtb_minus_nox": 0.10476190476190475
+    },
+    {
+      "platform": "instagram",
+      "page": 4,
+      "nox": {
+        "total": 1050,
+        "badcase": 270,
+        "fit": 509,
+        "adjacent": 271,
+        "badcase_rate": 0.2571428571428571,
+        "good_rate": 0.7428571428571429
+      },
+      "xtb": {
+        "total": 1050,
+        "badcase": 348,
+        "fit": 339,
+        "adjacent": 363,
+        "badcase_rate": 0.3314285714285714,
+        "good_rate": 0.6685714285714286
+      },
+      "delta_xtb_minus_nox": 0.07428571428571429
+    },
+    {
+      "platform": "instagram",
+      "page": 5,
+      "nox": {
+        "total": 1050,
+        "badcase": 260,
+        "fit": 413,
+        "adjacent": 377,
+        "badcase_rate": 0.24761904761904763,
+        "good_rate": 0.7523809523809524
+      },
+      "xtb": {
+        "total": 1050,
+        "badcase": 336,
+        "fit": 340,
+        "adjacent": 374,
+        "badcase_rate": 0.32,
+        "good_rate": 0.68
+      },
+      "delta_xtb_minus_nox": 0.07238095238095238
+    }
+  ],
+  "keyword_comparisons": [
+    {
+      "platform": "youtube",
+      "keyword": "coffee machine",
+      "nox_badcase_rate": 0.32,
+      "xtb_badcase_rate": 0.42,
+      "avg_delta_xtb_minus_nox": 0.1,
+      "page1_delta_xtb_minus_nox": 0.08000000000000002,
+      "page_win_count": 1,
+      "xtb_slope": -0.003999999999999998,
+      "nox_slope": 0.0040000000000000036,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.3,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.38,
+          "delta_xtb_minus_nox": 0.08000000000000002
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.34,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.42,
+          "delta_xtb_minus_nox": 0.07999999999999996
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.32,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.42,
+          "delta_xtb_minus_nox": 0.09999999999999998
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.3,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.62,
+          "delta_xtb_minus_nox": 0.32
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.34,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.26,
+          "delta_xtb_minus_nox": -0.08000000000000002
+        }
+      ]
+    },
+    {
+      "platform": "youtube",
+      "keyword": "lawn mower",
+      "nox_badcase_rate": 0.204,
+      "xtb_badcase_rate": 0.288,
+      "avg_delta_xtb_minus_nox": 0.08400000000000002,
+      "page1_delta_xtb_minus_nox": -0.060000000000000026,
+      "page_win_count": 2,
+      "xtb_slope": -0.003999999999999998,
+      "nox_slope": -0.024000000000000004,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.28,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.22,
+          "delta_xtb_minus_nox": -0.060000000000000026
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.26,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.34,
+          "delta_xtb_minus_nox": 0.08000000000000002
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.1,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.28,
+          "delta_xtb_minus_nox": 0.18000000000000002
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.18,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.46,
+          "delta_xtb_minus_nox": 0.28
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.2,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.14,
+          "delta_xtb_minus_nox": -0.06
+        }
+      ]
+    },
+    {
+      "platform": "youtube",
+      "keyword": "tech",
+      "nox_badcase_rate": 0.044,
+      "xtb_badcase_rate": 0.16,
+      "avg_delta_xtb_minus_nox": 0.116,
+      "page1_delta_xtb_minus_nox": 0,
+      "page_win_count": 0,
+      "xtb_slope": 0.024,
+      "nox_slope": -0.0019999999999999996,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.06,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.06,
+          "delta_xtb_minus_nox": 0
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.06,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.18,
+          "delta_xtb_minus_nox": 0.12
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.18,
+          "delta_xtb_minus_nox": 0.18
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.04,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.22,
+          "delta_xtb_minus_nox": 0.18
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.06,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.16,
+          "delta_xtb_minus_nox": 0.1
+        }
+      ]
+    },
+    {
+      "platform": "youtube",
+      "keyword": "fashion",
+      "nox_badcase_rate": 0.036,
+      "xtb_badcase_rate": 0.124,
+      "avg_delta_xtb_minus_nox": 0.088,
+      "page1_delta_xtb_minus_nox": 0.06,
+      "page_win_count": 0,
+      "xtb_slope": 0.009999999999999998,
+      "nox_slope": 0.007999999999999998,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.06,
+          "delta_xtb_minus_nox": 0.06
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.06,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.14,
+          "delta_xtb_minus_nox": 0.08000000000000002
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.18,
+          "delta_xtb_minus_nox": 0.18
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.1,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.12,
+          "delta_xtb_minus_nox": 0.01999999999999999
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.02,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.12,
+          "delta_xtb_minus_nox": 0.09999999999999999
+        }
+      ]
+    },
+    {
+      "platform": "youtube",
+      "keyword": "lifestyle",
+      "nox_badcase_rate": 0.036,
+      "xtb_badcase_rate": 0.108,
+      "avg_delta_xtb_minus_nox": 0.072,
+      "page1_delta_xtb_minus_nox": 0.08,
+      "page_win_count": 0,
+      "xtb_slope": 0.014000000000000002,
+      "nox_slope": 0.019999999999999997,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.08,
+          "delta_xtb_minus_nox": 0.08
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.1,
+          "delta_xtb_minus_nox": 0.1
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.08,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.1,
+          "delta_xtb_minus_nox": 0.020000000000000004
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.12,
+          "delta_xtb_minus_nox": 0.12
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.1,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.14,
+          "delta_xtb_minus_nox": 0.04000000000000001
+        }
+      ]
+    },
+    {
+      "platform": "youtube",
+      "keyword": "power bank",
+      "nox_badcase_rate": 0.196,
+      "xtb_badcase_rate": 0.32,
+      "avg_delta_xtb_minus_nox": 0.12399999999999999,
+      "page1_delta_xtb_minus_nox": 0.26,
+      "page_win_count": 1,
+      "xtb_slope": -0.0020000000000000018,
+      "nox_slope": 0.016000000000000004,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.12,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.38,
+          "delta_xtb_minus_nox": 0.26
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.28,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.24,
+          "delta_xtb_minus_nox": -0.040000000000000036
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.18,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.3,
+          "delta_xtb_minus_nox": 0.12
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.12,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.38,
+          "delta_xtb_minus_nox": 0.26
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.28,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.3,
+          "delta_xtb_minus_nox": 0.019999999999999962
+        }
+      ]
+    },
+    {
+      "platform": "youtube",
+      "keyword": "swim vest",
+      "nox_badcase_rate": 0.5,
+      "xtb_badcase_rate": 0.43902439024390244,
+      "avg_delta_xtb_minus_nox": -0.060897435897435896,
+      "page1_delta_xtb_minus_nox": -0.06,
+      "page_win_count": 2,
+      "xtb_slope": -0.13174999999999998,
+      "nox_slope": -0.15,
+      "conclusion": "XTB改善",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.5,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.44,
+          "delta_xtb_minus_nox": -0.06
+        },
+        {
+          "page": 2,
+          "nox_total": 28,
+          "nox_badcase_rate": 0.5,
+          "xtb_total": 32,
+          "xtb_badcase_rate": 0.4375,
+          "delta_xtb_minus_nox": -0.0625
+        },
+        {
+          "page": 3,
+          "nox_total": 0,
+          "nox_badcase_rate": 0,
+          "xtb_total": 0,
+          "xtb_badcase_rate": 0,
+          "delta_xtb_minus_nox": 0
+        },
+        {
+          "page": 4,
+          "nox_total": 0,
+          "nox_badcase_rate": 0,
+          "xtb_total": 0,
+          "xtb_badcase_rate": 0,
+          "delta_xtb_minus_nox": 0
+        },
+        {
+          "page": 5,
+          "nox_total": 0,
+          "nox_badcase_rate": 0,
+          "xtb_total": 0,
+          "xtb_badcase_rate": 0,
+          "delta_xtb_minus_nox": 0
+        }
+      ]
+    },
+    {
+      "platform": "youtube",
+      "keyword": "vacuum cleaner",
+      "nox_badcase_rate": 0.296,
+      "xtb_badcase_rate": 0.336,
+      "avg_delta_xtb_minus_nox": 0.03999999999999999,
+      "page1_delta_xtb_minus_nox": 0.09999999999999998,
+      "page_win_count": 2,
+      "xtb_slope": -0.049999999999999996,
+      "nox_slope": -0.044000000000000004,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.34,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.44,
+          "delta_xtb_minus_nox": 0.09999999999999998
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.4,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.36,
+          "delta_xtb_minus_nox": -0.040000000000000036
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.28,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.42,
+          "delta_xtb_minus_nox": 0.13999999999999996
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.28,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.18,
+          "delta_xtb_minus_nox": -0.10000000000000003
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.18,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.28,
+          "delta_xtb_minus_nox": 0.10000000000000003
+        }
+      ]
+    },
+    {
+      "platform": "youtube",
+      "keyword": "baby supplement",
+      "nox_badcase_rate": 0.5608108108108109,
+      "xtb_badcase_rate": 0.49732620320855614,
+      "avg_delta_xtb_minus_nox": -0.09324324324324328,
+      "page1_delta_xtb_minus_nox": -0.020000000000000018,
+      "page_win_count": 3,
+      "xtb_slope": -0.08983783783783784,
+      "nox_slope": -0.164,
+      "conclusion": "XTB改善",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.54,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.52,
+          "delta_xtb_minus_nox": -0.020000000000000018
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.56,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.48,
+          "delta_xtb_minus_nox": -0.08000000000000007
+        },
+        {
+          "page": 3,
+          "nox_total": 48,
+          "nox_badcase_rate": 0.5833333333333334,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.4,
+          "delta_xtb_minus_nox": -0.18333333333333335
+        },
+        {
+          "page": 4,
+          "nox_total": 0,
+          "nox_badcase_rate": 0,
+          "xtb_total": 37,
+          "xtb_badcase_rate": 0.6216216216216216,
+          "delta_xtb_minus_nox": 0.6216216216216216
+        },
+        {
+          "page": 5,
+          "nox_total": 0,
+          "nox_badcase_rate": 0,
+          "xtb_total": 0,
+          "xtb_badcase_rate": 0,
+          "delta_xtb_minus_nox": 0
+        }
+      ]
+    },
+    {
+      "platform": "youtube",
+      "keyword": "pet food",
+      "nox_badcase_rate": 0.404,
+      "xtb_badcase_rate": 0.4,
+      "avg_delta_xtb_minus_nox": -0.003999999999999993,
+      "page1_delta_xtb_minus_nox": -0.019999999999999962,
+      "page_win_count": 3,
+      "xtb_slope": -0.003999999999999998,
+      "nox_slope": 0.028000000000000004,
+      "conclusion": "接近",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.42,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.4,
+          "delta_xtb_minus_nox": -0.019999999999999962
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.28,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.48,
+          "delta_xtb_minus_nox": 0.19999999999999996
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.42,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.28,
+          "delta_xtb_minus_nox": -0.13999999999999996
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.4,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.44,
+          "delta_xtb_minus_nox": 0.03999999999999998
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.5,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.4,
+          "delta_xtb_minus_nox": -0.09999999999999998
+        }
+      ]
+    },
+    {
+      "platform": "youtube",
+      "keyword": "yoga mat",
+      "nox_badcase_rate": 0.384,
+      "xtb_badcase_rate": 0.392,
+      "avg_delta_xtb_minus_nox": 0.007999999999999986,
+      "page1_delta_xtb_minus_nox": 0.09999999999999998,
+      "page_win_count": 2,
+      "xtb_slope": 0.019999999999999997,
+      "nox_slope": 0.036000000000000004,
+      "conclusion": "接近",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.26,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.36,
+          "delta_xtb_minus_nox": 0.09999999999999998
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.36,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.4,
+          "delta_xtb_minus_nox": 0.040000000000000036
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.46,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.36,
+          "delta_xtb_minus_nox": -0.10000000000000003
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.44,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.36,
+          "delta_xtb_minus_nox": -0.08000000000000002
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.4,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.48,
+          "delta_xtb_minus_nox": 0.07999999999999996
+        }
+      ]
+    },
+    {
+      "platform": "youtube",
+      "keyword": "resistance bands",
+      "nox_badcase_rate": 0.128,
+      "xtb_badcase_rate": 0.176,
+      "avg_delta_xtb_minus_nox": 0.048,
+      "page1_delta_xtb_minus_nox": -0.04000000000000001,
+      "page_win_count": 1,
+      "xtb_slope": 0.032,
+      "nox_slope": 0.016000000000000004,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.16,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.12,
+          "delta_xtb_minus_nox": -0.04000000000000001
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.06,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.1,
+          "delta_xtb_minus_nox": 0.04000000000000001
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.08,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.2,
+          "delta_xtb_minus_nox": 0.12000000000000001
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.14,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.26,
+          "delta_xtb_minus_nox": 0.12
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.2,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.2,
+          "delta_xtb_minus_nox": 0
+        }
+      ]
+    },
+    {
+      "platform": "youtube",
+      "keyword": "marathon",
+      "nox_badcase_rate": 0.424,
+      "xtb_badcase_rate": 0.316,
+      "avg_delta_xtb_minus_nox": -0.108,
+      "page1_delta_xtb_minus_nox": 0.06,
+      "page_win_count": 3,
+      "xtb_slope": 0.024,
+      "nox_slope": 0.11000000000000001,
+      "conclusion": "XTB改善",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.12,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.18,
+          "delta_xtb_minus_nox": 0.06
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.38,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.28,
+          "delta_xtb_minus_nox": -0.09999999999999998
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.46,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.46,
+          "delta_xtb_minus_nox": 0
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.6,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.44,
+          "delta_xtb_minus_nox": -0.15999999999999998
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.56,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.22,
+          "delta_xtb_minus_nox": -0.3400000000000001
+        }
+      ]
+    },
+    {
+      "platform": "youtube",
+      "keyword": "digital products",
+      "nox_badcase_rate": 0.256,
+      "xtb_badcase_rate": 0.36,
+      "avg_delta_xtb_minus_nox": 0.10399999999999998,
+      "page1_delta_xtb_minus_nox": 0.16,
+      "page_win_count": 2,
+      "xtb_slope": 0.057999999999999996,
+      "nox_slope": 0.018000000000000006,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.02,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.18,
+          "delta_xtb_minus_nox": 0.16
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.34,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.32,
+          "delta_xtb_minus_nox": -0.020000000000000018
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.5,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.46,
+          "delta_xtb_minus_nox": -0.03999999999999998
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.28,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.42,
+          "delta_xtb_minus_nox": 0.13999999999999996
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.14,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.42,
+          "delta_xtb_minus_nox": 0.27999999999999997
+        }
+      ]
+    },
+    {
+      "platform": "youtube",
+      "keyword": "vape",
+      "nox_badcase_rate": 0.268,
+      "xtb_badcase_rate": 0.364,
+      "avg_delta_xtb_minus_nox": 0.096,
+      "page1_delta_xtb_minus_nox": 0.14,
+      "page_win_count": 1,
+      "xtb_slope": -0.022,
+      "nox_slope": -0.017999999999999995,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.24,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.38,
+          "delta_xtb_minus_nox": 0.14
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.46,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.42,
+          "delta_xtb_minus_nox": -0.040000000000000036
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.16,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.44,
+          "delta_xtb_minus_nox": 0.28
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.2,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.2,
+          "delta_xtb_minus_nox": 0
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.28,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.38,
+          "delta_xtb_minus_nox": 0.09999999999999998
+        }
+      ]
+    },
+    {
+      "platform": "youtube",
+      "keyword": "treadmill",
+      "nox_badcase_rate": 0.216,
+      "xtb_badcase_rate": 0.384,
+      "avg_delta_xtb_minus_nox": 0.168,
+      "page1_delta_xtb_minus_nox": 0.14,
+      "page_win_count": 0,
+      "xtb_slope": 0.003999999999999998,
+      "nox_slope": 0.008000000000000002,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.18,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.32,
+          "delta_xtb_minus_nox": 0.14
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.28,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.5,
+          "delta_xtb_minus_nox": 0.21999999999999997
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.16,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.3,
+          "delta_xtb_minus_nox": 0.13999999999999999
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.2,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.42,
+          "delta_xtb_minus_nox": 0.21999999999999997
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.26,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.38,
+          "delta_xtb_minus_nox": 0.12
+        }
+      ]
+    },
+    {
+      "platform": "youtube",
+      "keyword": "agricultural products",
+      "nox_badcase_rate": 0.464,
+      "xtb_badcase_rate": 0.348,
+      "avg_delta_xtb_minus_nox": -0.116,
+      "page1_delta_xtb_minus_nox": -0.06,
+      "page_win_count": 5,
+      "xtb_slope": 0.02999999999999999,
+      "nox_slope": 0.059999999999999984,
+      "conclusion": "XTB改善",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.34,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.28,
+          "delta_xtb_minus_nox": -0.06
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.36,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.34,
+          "delta_xtb_minus_nox": -0.019999999999999962
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.56,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.34,
+          "delta_xtb_minus_nox": -0.22000000000000003
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.48,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.36,
+          "delta_xtb_minus_nox": -0.12
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.58,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.42,
+          "delta_xtb_minus_nox": -0.15999999999999998
+        }
+      ]
+    },
+    {
+      "platform": "youtube",
+      "keyword": "photography equipment",
+      "nox_badcase_rate": 0.464,
+      "xtb_badcase_rate": 0.428,
+      "avg_delta_xtb_minus_nox": -0.03599999999999998,
+      "page1_delta_xtb_minus_nox": 0.15999999999999998,
+      "page_win_count": 4,
+      "xtb_slope": 0.003999999999999992,
+      "nox_slope": 0.05199999999999999,
+      "conclusion": "XTB改善",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.28,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.44,
+          "delta_xtb_minus_nox": 0.15999999999999998
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.48,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.4,
+          "delta_xtb_minus_nox": -0.07999999999999996
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.58,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.46,
+          "delta_xtb_minus_nox": -0.11999999999999994
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.4,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.36,
+          "delta_xtb_minus_nox": -0.040000000000000036
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.58,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.48,
+          "delta_xtb_minus_nox": -0.09999999999999998
+        }
+      ]
+    },
+    {
+      "platform": "youtube",
+      "keyword": "Dreame",
+      "nox_badcase_rate": 0.708,
+      "xtb_badcase_rate": 0.776,
+      "avg_delta_xtb_minus_nox": 0.068,
+      "page1_delta_xtb_minus_nox": -0.14,
+      "page_win_count": 1,
+      "xtb_slope": 0.033999999999999975,
+      "nox_slope": -0.020000000000000018,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.68,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.54,
+          "delta_xtb_minus_nox": -0.14
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.78,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.92,
+          "delta_xtb_minus_nox": 0.14
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.76,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.9,
+          "delta_xtb_minus_nox": 0.14
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.7,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.7,
+          "delta_xtb_minus_nox": 0
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.62,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.82,
+          "delta_xtb_minus_nox": 0.19999999999999996
+        }
+      ]
+    },
+    {
+      "platform": "youtube",
+      "keyword": "kitchen",
+      "nox_badcase_rate": 0.284,
+      "xtb_badcase_rate": 0.34,
+      "avg_delta_xtb_minus_nox": 0.056,
+      "page1_delta_xtb_minus_nox": 0.21999999999999997,
+      "page_win_count": 2,
+      "xtb_slope": -0.013999999999999995,
+      "nox_slope": 0.074,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.14,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.36,
+          "delta_xtb_minus_nox": 0.21999999999999997
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.22,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.36,
+          "delta_xtb_minus_nox": 0.13999999999999999
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.24,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.34,
+          "delta_xtb_minus_nox": 0.10000000000000003
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.4,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.34,
+          "delta_xtb_minus_nox": -0.06
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.42,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.3,
+          "delta_xtb_minus_nox": -0.12
+        }
+      ]
+    },
+    {
+      "platform": "youtube",
+      "keyword": "beauty",
+      "nox_badcase_rate": 0.032,
+      "xtb_badcase_rate": 0.16,
+      "avg_delta_xtb_minus_nox": 0.128,
+      "page1_delta_xtb_minus_nox": 0.14,
+      "page_win_count": 1,
+      "xtb_slope": 0.012,
+      "nox_slope": -0.008000000000000002,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.02,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.16,
+          "delta_xtb_minus_nox": 0.14
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.1,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.08,
+          "delta_xtb_minus_nox": -0.020000000000000004
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.2,
+          "delta_xtb_minus_nox": 0.2
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.02,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.2,
+          "delta_xtb_minus_nox": 0.18000000000000002
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.02,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.16,
+          "delta_xtb_minus_nox": 0.14
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "coffee machine",
+      "nox_badcase_rate": 0.448,
+      "xtb_badcase_rate": 0.56,
+      "avg_delta_xtb_minus_nox": 0.11199999999999999,
+      "page1_delta_xtb_minus_nox": 0.25999999999999995,
+      "page_win_count": 1,
+      "xtb_slope": -0.0019999999999999905,
+      "nox_slope": 0.057999999999999996,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.34,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.6,
+          "delta_xtb_minus_nox": 0.25999999999999995
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.36,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.58,
+          "delta_xtb_minus_nox": 0.21999999999999997
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.44,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.5,
+          "delta_xtb_minus_nox": 0.06
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.58,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.48,
+          "delta_xtb_minus_nox": -0.09999999999999998
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.52,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.64,
+          "delta_xtb_minus_nox": 0.12
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "lawn mower",
+      "nox_badcase_rate": 0.308,
+      "xtb_badcase_rate": 0.568,
+      "avg_delta_xtb_minus_nox": 0.26,
+      "page1_delta_xtb_minus_nox": 0.09999999999999998,
+      "page_win_count": 0,
+      "xtb_slope": 0.05600000000000001,
+      "nox_slope": 0.06000000000000001,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.32,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.42,
+          "delta_xtb_minus_nox": 0.09999999999999998
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.16,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.6,
+          "delta_xtb_minus_nox": 0.43999999999999995
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.22,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.46,
+          "delta_xtb_minus_nox": 0.24000000000000002
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.28,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.72,
+          "delta_xtb_minus_nox": 0.43999999999999995
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.56,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.64,
+          "delta_xtb_minus_nox": 0.07999999999999996
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "tech",
+      "nox_badcase_rate": 0.052,
+      "xtb_badcase_rate": 0.42,
+      "avg_delta_xtb_minus_nox": 0.368,
+      "page1_delta_xtb_minus_nox": 0.28,
+      "page_win_count": 0,
+      "xtb_slope": 0.036,
+      "nox_slope": 0.02,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.28,
+          "delta_xtb_minus_nox": 0.28
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.06,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.48,
+          "delta_xtb_minus_nox": 0.42
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.04,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.44,
+          "delta_xtb_minus_nox": 0.4
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.06,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.4,
+          "delta_xtb_minus_nox": 0.34
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.1,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.5,
+          "delta_xtb_minus_nox": 0.4
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "fashion",
+      "nox_badcase_rate": 0.004,
+      "xtb_badcase_rate": 0.352,
+      "avg_delta_xtb_minus_nox": 0.348,
+      "page1_delta_xtb_minus_nox": 0.2,
+      "page_win_count": 0,
+      "xtb_slope": 0.044000000000000004,
+      "nox_slope": -0.004,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.02,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.22,
+          "delta_xtb_minus_nox": 0.2
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.38,
+          "delta_xtb_minus_nox": 0.38
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.3,
+          "delta_xtb_minus_nox": 0.3
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.46,
+          "delta_xtb_minus_nox": 0.46
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.4,
+          "delta_xtb_minus_nox": 0.4
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "lifestyle",
+      "nox_badcase_rate": 0.032,
+      "xtb_badcase_rate": 0.512,
+      "avg_delta_xtb_minus_nox": 0.48,
+      "page1_delta_xtb_minus_nox": 0.5,
+      "page_win_count": 0,
+      "xtb_slope": -0.01200000000000001,
+      "nox_slope": -0.0019999999999999996,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.02,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.52,
+          "delta_xtb_minus_nox": 0.5
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.06,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.52,
+          "delta_xtb_minus_nox": 0.46
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.02,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.5,
+          "delta_xtb_minus_nox": 0.48
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.04,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.6,
+          "delta_xtb_minus_nox": 0.5599999999999999
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.02,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.42,
+          "delta_xtb_minus_nox": 0.39999999999999997
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "power bank",
+      "nox_badcase_rate": 0.588,
+      "xtb_badcase_rate": 0.764,
+      "avg_delta_xtb_minus_nox": 0.17599999999999996,
+      "page1_delta_xtb_minus_nox": 0.15999999999999998,
+      "page_win_count": 0,
+      "xtb_slope": 0.06000000000000001,
+      "nox_slope": 0.061999999999999986,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.44,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.6,
+          "delta_xtb_minus_nox": 0.15999999999999998
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.52,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.74,
+          "delta_xtb_minus_nox": 0.21999999999999997
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.66,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.82,
+          "delta_xtb_minus_nox": 0.15999999999999992
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.62,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.78,
+          "delta_xtb_minus_nox": 0.16000000000000003
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.7,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.88,
+          "delta_xtb_minus_nox": 0.18000000000000005
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "swim vest",
+      "nox_badcase_rate": 0.612,
+      "xtb_badcase_rate": 0.524,
+      "avg_delta_xtb_minus_nox": -0.08800000000000001,
+      "page1_delta_xtb_minus_nox": 0.06,
+      "page_win_count": 3,
+      "xtb_slope": 0.039999999999999994,
+      "nox_slope": 0.02400000000000001,
+      "conclusion": "XTB改善",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.42,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.48,
+          "delta_xtb_minus_nox": 0.06
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.72,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.4,
+          "delta_xtb_minus_nox": -0.31999999999999995
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.64,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.56,
+          "delta_xtb_minus_nox": -0.07999999999999996
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.76,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.6,
+          "delta_xtb_minus_nox": -0.16000000000000003
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.52,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.58,
+          "delta_xtb_minus_nox": 0.05999999999999994
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "vacuum cleaner",
+      "nox_badcase_rate": 0.416,
+      "xtb_badcase_rate": 0.736,
+      "avg_delta_xtb_minus_nox": 0.32,
+      "page1_delta_xtb_minus_nox": 0.05999999999999994,
+      "page_win_count": 0,
+      "xtb_slope": -0.011999999999999988,
+      "nox_slope": -0.144,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.66,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.72,
+          "delta_xtb_minus_nox": 0.05999999999999994
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.62,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.72,
+          "delta_xtb_minus_nox": 0.09999999999999998
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.5,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.84,
+          "delta_xtb_minus_nox": 0.33999999999999997
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.1,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.76,
+          "delta_xtb_minus_nox": 0.66
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.2,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.64,
+          "delta_xtb_minus_nox": 0.44
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "baby supplement",
+      "nox_badcase_rate": 0.46,
+      "xtb_badcase_rate": 0.704,
+      "avg_delta_xtb_minus_nox": 0.244,
+      "page1_delta_xtb_minus_nox": 0.19999999999999996,
+      "page_win_count": 0,
+      "xtb_slope": -0.018000000000000006,
+      "nox_slope": 0.01999999999999999,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.54,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.74,
+          "delta_xtb_minus_nox": 0.19999999999999996
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.32,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.72,
+          "delta_xtb_minus_nox": 0.39999999999999997
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.44,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.74,
+          "delta_xtb_minus_nox": 0.3
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.4,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.62,
+          "delta_xtb_minus_nox": 0.21999999999999997
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.6,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.7,
+          "delta_xtb_minus_nox": 0.09999999999999998
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "pet food",
+      "nox_badcase_rate": 0.264,
+      "xtb_badcase_rate": 0.62,
+      "avg_delta_xtb_minus_nox": 0.356,
+      "page1_delta_xtb_minus_nox": -0.020000000000000018,
+      "page_win_count": 1,
+      "xtb_slope": 0.05600000000000001,
+      "nox_slope": -0.034,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.46,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.44,
+          "delta_xtb_minus_nox": -0.020000000000000018
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.14,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.66,
+          "delta_xtb_minus_nox": 0.52
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.22,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.58,
+          "delta_xtb_minus_nox": 0.36
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.28,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.74,
+          "delta_xtb_minus_nox": 0.45999999999999996
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.22,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.68,
+          "delta_xtb_minus_nox": 0.4600000000000001
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "yoga mat",
+      "nox_badcase_rate": 0.416,
+      "xtb_badcase_rate": 0.488,
+      "avg_delta_xtb_minus_nox": 0.07199999999999997,
+      "page1_delta_xtb_minus_nox": 0.32,
+      "page_win_count": 1,
+      "xtb_slope": -0.044000000000000004,
+      "nox_slope": 0.036,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.34,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.66,
+          "delta_xtb_minus_nox": 0.32
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.28,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.38,
+          "delta_xtb_minus_nox": 0.09999999999999998
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.52,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.58,
+          "delta_xtb_minus_nox": 0.05999999999999994
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.56,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.38,
+          "delta_xtb_minus_nox": -0.18000000000000005
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.38,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.44,
+          "delta_xtb_minus_nox": 0.06
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "resistance bands",
+      "nox_badcase_rate": 0.208,
+      "xtb_badcase_rate": 0.412,
+      "avg_delta_xtb_minus_nox": 0.204,
+      "page1_delta_xtb_minus_nox": 0.24000000000000005,
+      "page_win_count": 0,
+      "xtb_slope": -0.066,
+      "nox_slope": -0.036,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.42,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.66,
+          "delta_xtb_minus_nox": 0.24000000000000005
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.14,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.32,
+          "delta_xtb_minus_nox": 0.18
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.1,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.42,
+          "delta_xtb_minus_nox": 0.31999999999999995
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.14,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.34,
+          "delta_xtb_minus_nox": 0.2
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.24,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.32,
+          "delta_xtb_minus_nox": 0.08000000000000002
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "marathon",
+      "nox_badcase_rate": 0.268,
+      "xtb_badcase_rate": 0.532,
+      "avg_delta_xtb_minus_nox": 0.264,
+      "page1_delta_xtb_minus_nox": 0.39999999999999997,
+      "page_win_count": 0,
+      "xtb_slope": 0.01399999999999999,
+      "nox_slope": 0.09799999999999999,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.08,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.48,
+          "delta_xtb_minus_nox": 0.39999999999999997
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.14,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.56,
+          "delta_xtb_minus_nox": 0.42000000000000004
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.26,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.54,
+          "delta_xtb_minus_nox": 0.28
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.44,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.5,
+          "delta_xtb_minus_nox": 0.06
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.42,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.58,
+          "delta_xtb_minus_nox": 0.15999999999999998
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "digital products",
+      "nox_badcase_rate": 0.372,
+      "xtb_badcase_rate": 0.504,
+      "avg_delta_xtb_minus_nox": 0.13199999999999998,
+      "page1_delta_xtb_minus_nox": 0.24,
+      "page_win_count": 0,
+      "xtb_slope": 0.072,
+      "nox_slope": 0.11600000000000002,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.06,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.3,
+          "delta_xtb_minus_nox": 0.24
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.32,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.46,
+          "delta_xtb_minus_nox": 0.14
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.42,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.58,
+          "delta_xtb_minus_nox": 0.15999999999999998
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.52,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.58,
+          "delta_xtb_minus_nox": 0.05999999999999994
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.54,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.6,
+          "delta_xtb_minus_nox": 0.05999999999999994
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "vape",
+      "nox_badcase_rate": 0.688,
+      "xtb_badcase_rate": 0.82,
+      "avg_delta_xtb_minus_nox": 0.132,
+      "page1_delta_xtb_minus_nox": 0.21999999999999997,
+      "page_win_count": 1,
+      "xtb_slope": 0.026000000000000002,
+      "nox_slope": -0.010000000000000009,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.56,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.78,
+          "delta_xtb_minus_nox": 0.21999999999999997
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.76,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.82,
+          "delta_xtb_minus_nox": 0.05999999999999994
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.86,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.74,
+          "delta_xtb_minus_nox": -0.12
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.74,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.88,
+          "delta_xtb_minus_nox": 0.14
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.52,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.88,
+          "delta_xtb_minus_nox": 0.36
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "treadmill",
+      "nox_badcase_rate": 0.352,
+      "xtb_badcase_rate": 0.56,
+      "avg_delta_xtb_minus_nox": 0.208,
+      "page1_delta_xtb_minus_nox": 0.39999999999999997,
+      "page_win_count": 0,
+      "xtb_slope": 0.020000000000000018,
+      "nox_slope": 0.066,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.2,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.6,
+          "delta_xtb_minus_nox": 0.39999999999999997
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.3,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.52,
+          "delta_xtb_minus_nox": 0.22000000000000003
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.36,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.44,
+          "delta_xtb_minus_nox": 0.08000000000000002
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.44,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.56,
+          "delta_xtb_minus_nox": 0.12000000000000005
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.46,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.68,
+          "delta_xtb_minus_nox": 0.22000000000000003
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "agricultural products",
+      "nox_badcase_rate": 0.512,
+      "xtb_badcase_rate": 0.52,
+      "avg_delta_xtb_minus_nox": 0.007999999999999997,
+      "page1_delta_xtb_minus_nox": 0.12,
+      "page_win_count": 3,
+      "xtb_slope": 0.012000000000000005,
+      "nox_slope": 0.05200000000000001,
+      "conclusion": "接近",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.36,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.48,
+          "delta_xtb_minus_nox": 0.12
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.48,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.46,
+          "delta_xtb_minus_nox": -0.019999999999999962
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.56,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.62,
+          "delta_xtb_minus_nox": 0.05999999999999994
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.6,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.54,
+          "delta_xtb_minus_nox": -0.05999999999999994
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.56,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.5,
+          "delta_xtb_minus_nox": -0.06000000000000005
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "photography equipment",
+      "nox_badcase_rate": 0.584,
+      "xtb_badcase_rate": 0.564,
+      "avg_delta_xtb_minus_nox": -0.02,
+      "page1_delta_xtb_minus_nox": -0.019999999999999907,
+      "page_win_count": 2,
+      "xtb_slope": -0.046000000000000006,
+      "nox_slope": 0.014000000000000007,
+      "conclusion": "接近",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.58,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.56,
+          "delta_xtb_minus_nox": -0.019999999999999907
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.6,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.72,
+          "delta_xtb_minus_nox": 0.12
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.56,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.58,
+          "delta_xtb_minus_nox": 0.019999999999999907
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.46,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.54,
+          "delta_xtb_minus_nox": 0.08000000000000002
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.72,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.42,
+          "delta_xtb_minus_nox": -0.3
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "Dreame",
+      "nox_badcase_rate": 0.612,
+      "xtb_badcase_rate": 0.708,
+      "avg_delta_xtb_minus_nox": 0.09600000000000002,
+      "page1_delta_xtb_minus_nox": 0.06000000000000005,
+      "page_win_count": 0,
+      "xtb_slope": 0.01399999999999999,
+      "nox_slope": 0.038,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.58,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.64,
+          "delta_xtb_minus_nox": 0.06000000000000005
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.54,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.76,
+          "delta_xtb_minus_nox": 0.21999999999999997
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.58,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.68,
+          "delta_xtb_minus_nox": 0.10000000000000009
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.64,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.74,
+          "delta_xtb_minus_nox": 0.09999999999999998
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.72,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.72,
+          "delta_xtb_minus_nox": 0
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "kitchen",
+      "nox_badcase_rate": 0.168,
+      "xtb_badcase_rate": 0.5,
+      "avg_delta_xtb_minus_nox": 0.332,
+      "page1_delta_xtb_minus_nox": 0.26,
+      "page_win_count": 0,
+      "xtb_slope": 0.010000000000000004,
+      "nox_slope": -0.018,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.22,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.48,
+          "delta_xtb_minus_nox": 0.26
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.16,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.44,
+          "delta_xtb_minus_nox": 0.28
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.14,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.58,
+          "delta_xtb_minus_nox": 0.43999999999999995
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.22,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.5,
+          "delta_xtb_minus_nox": 0.28
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.1,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.5,
+          "delta_xtb_minus_nox": 0.4
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "beauty",
+      "nox_badcase_rate": 0.024,
+      "xtb_badcase_rate": 0.4,
+      "avg_delta_xtb_minus_nox": 0.376,
+      "page1_delta_xtb_minus_nox": 0.27999999999999997,
+      "page_win_count": 0,
+      "xtb_slope": 0.006,
+      "nox_slope": 0.006,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.02,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.3,
+          "delta_xtb_minus_nox": 0.27999999999999997
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.5,
+          "delta_xtb_minus_nox": 0.5
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.02,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.4,
+          "delta_xtb_minus_nox": 0.38
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.06,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.44,
+          "delta_xtb_minus_nox": 0.38
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.02,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.36,
+          "delta_xtb_minus_nox": 0.33999999999999997
+        }
+      ]
+    },
+    {
+      "platform": "instagram",
+      "keyword": "coffee machine",
+      "nox_badcase_rate": 0.344,
+      "xtb_badcase_rate": 0.4,
+      "avg_delta_xtb_minus_nox": 0.056000000000000015,
+      "page1_delta_xtb_minus_nox": -0.07999999999999996,
+      "page_win_count": 2,
+      "xtb_slope": 0.02799999999999999,
+      "nox_slope": -0.015999999999999997,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.42,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.34,
+          "delta_xtb_minus_nox": -0.07999999999999996
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.32,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.3,
+          "delta_xtb_minus_nox": -0.020000000000000018
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.36,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.52,
+          "delta_xtb_minus_nox": 0.16000000000000003
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.24,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.42,
+          "delta_xtb_minus_nox": 0.18
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.38,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.42,
+          "delta_xtb_minus_nox": 0.03999999999999998
+        }
+      ]
+    },
+    {
+      "platform": "instagram",
+      "keyword": "lawn mower",
+      "nox_badcase_rate": 0.232,
+      "xtb_badcase_rate": 0.184,
+      "avg_delta_xtb_minus_nox": -0.048,
+      "page1_delta_xtb_minus_nox": 0.06,
+      "page_win_count": 3,
+      "xtb_slope": -0.022,
+      "nox_slope": 0.034,
+      "conclusion": "XTB改善",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.12,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.18,
+          "delta_xtb_minus_nox": 0.06
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.24,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.3,
+          "delta_xtb_minus_nox": 0.06
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.24,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.12,
+          "delta_xtb_minus_nox": -0.12
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.3,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.2,
+          "delta_xtb_minus_nox": -0.09999999999999998
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.26,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.12,
+          "delta_xtb_minus_nox": -0.14
+        }
+      ]
+    },
+    {
+      "platform": "instagram",
+      "keyword": "tech",
+      "nox_badcase_rate": 0.216,
+      "xtb_badcase_rate": 0.272,
+      "avg_delta_xtb_minus_nox": 0.056,
+      "page1_delta_xtb_minus_nox": 0.26,
+      "page_win_count": 1,
+      "xtb_slope": -0.001999999999999999,
+      "nox_slope": 0.06799999999999999,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.04,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.3,
+          "delta_xtb_minus_nox": 0.26
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.2,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.28,
+          "delta_xtb_minus_nox": 0.08000000000000002
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.2,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.24,
+          "delta_xtb_minus_nox": 0.03999999999999998
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.32,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.22,
+          "delta_xtb_minus_nox": -0.1
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.32,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.32,
+          "delta_xtb_minus_nox": 0
+        }
+      ]
+    },
+    {
+      "platform": "instagram",
+      "keyword": "fashion",
+      "nox_badcase_rate": 0.008,
+      "xtb_badcase_rate": 0.272,
+      "avg_delta_xtb_minus_nox": 0.264,
+      "page1_delta_xtb_minus_nox": 0.24000000000000002,
+      "page_win_count": 0,
+      "xtb_slope": 0.006,
+      "nox_slope": -0.006,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.02,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.26,
+          "delta_xtb_minus_nox": 0.24000000000000002
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.02,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.26,
+          "delta_xtb_minus_nox": 0.24000000000000002
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.22,
+          "delta_xtb_minus_nox": 0.22
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.4,
+          "delta_xtb_minus_nox": 0.4
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.22,
+          "delta_xtb_minus_nox": 0.22
+        }
+      ]
+    },
+    {
+      "platform": "instagram",
+      "keyword": "lifestyle",
+      "nox_badcase_rate": 0.016,
+      "xtb_badcase_rate": 0.432,
+      "avg_delta_xtb_minus_nox": 0.416,
+      "page1_delta_xtb_minus_nox": 0.44,
+      "page_win_count": 0,
+      "xtb_slope": -0.001999999999999996,
+      "nox_slope": 0.01,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.44,
+          "delta_xtb_minus_nox": 0.44
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.36,
+          "delta_xtb_minus_nox": 0.36
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.02,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.52,
+          "delta_xtb_minus_nox": 0.5
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.02,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.46,
+          "delta_xtb_minus_nox": 0.44
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.04,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.38,
+          "delta_xtb_minus_nox": 0.34
+        }
+      ]
+    },
+    {
+      "platform": "instagram",
+      "keyword": "power bank",
+      "nox_badcase_rate": 0.516,
+      "xtb_badcase_rate": 0.608,
+      "avg_delta_xtb_minus_nox": 0.092,
+      "page1_delta_xtb_minus_nox": 0.38,
+      "page_win_count": 2,
+      "xtb_slope": -0.009999999999999986,
+      "nox_slope": 0.12000000000000002,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.22,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.6,
+          "delta_xtb_minus_nox": 0.38
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.42,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.62,
+          "delta_xtb_minus_nox": 0.2
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.56,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.66,
+          "delta_xtb_minus_nox": 0.09999999999999998
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.7,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.6,
+          "delta_xtb_minus_nox": -0.09999999999999998
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.68,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.56,
+          "delta_xtb_minus_nox": -0.12
+        }
+      ]
+    },
+    {
+      "platform": "instagram",
+      "keyword": "swim vest",
+      "nox_badcase_rate": 0.6,
+      "xtb_badcase_rate": 0.54,
+      "avg_delta_xtb_minus_nox": -0.060000000000000005,
+      "page1_delta_xtb_minus_nox": -0.14000000000000007,
+      "page_win_count": 4,
+      "xtb_slope": 0.05800000000000001,
+      "nox_slope": 0.022,
+      "conclusion": "XTB改善",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.56,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.42,
+          "delta_xtb_minus_nox": -0.14000000000000007
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.6,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.54,
+          "delta_xtb_minus_nox": -0.05999999999999994
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.54,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.46,
+          "delta_xtb_minus_nox": -0.08000000000000002
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.66,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.6,
+          "delta_xtb_minus_nox": -0.06000000000000005
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.64,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.68,
+          "delta_xtb_minus_nox": 0.040000000000000036
+        }
+      ]
+    },
+    {
+      "platform": "instagram",
+      "keyword": "vacuum cleaner",
+      "nox_badcase_rate": 0.288,
+      "xtb_badcase_rate": 0.296,
+      "avg_delta_xtb_minus_nox": 0.007999999999999986,
+      "page1_delta_xtb_minus_nox": 0.15999999999999998,
+      "page_win_count": 3,
+      "xtb_slope": 0.004000000000000006,
+      "nox_slope": -0.022000000000000002,
+      "conclusion": "接近",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.26,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.42,
+          "delta_xtb_minus_nox": 0.15999999999999998
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.34,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.16,
+          "delta_xtb_minus_nox": -0.18000000000000002
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.34,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.24,
+          "delta_xtb_minus_nox": -0.10000000000000003
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.36,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.28,
+          "delta_xtb_minus_nox": -0.07999999999999996
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.14,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.38,
+          "delta_xtb_minus_nox": 0.24
+        }
+      ]
+    },
+    {
+      "platform": "instagram",
+      "keyword": "baby supplement",
+      "nox_badcase_rate": 0.26,
+      "xtb_badcase_rate": 0.28,
+      "avg_delta_xtb_minus_nox": 0.019999999999999993,
+      "page1_delta_xtb_minus_nox": 0.19999999999999996,
+      "page_win_count": 2,
+      "xtb_slope": -0.03599999999999999,
+      "nox_slope": 0.013999999999999999,
+      "conclusion": "接近",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.28,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.48,
+          "delta_xtb_minus_nox": 0.19999999999999996
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.2,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.22,
+          "delta_xtb_minus_nox": 0.01999999999999999
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.26,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.16,
+          "delta_xtb_minus_nox": -0.1
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.22,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.26,
+          "delta_xtb_minus_nox": 0.04000000000000001
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.34,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.28,
+          "delta_xtb_minus_nox": -0.06
+        }
+      ]
+    },
+    {
+      "platform": "instagram",
+      "keyword": "pet food",
+      "nox_badcase_rate": 0.184,
+      "xtb_badcase_rate": 0.22,
+      "avg_delta_xtb_minus_nox": 0.036,
+      "page1_delta_xtb_minus_nox": 0.07999999999999999,
+      "page_win_count": 2,
+      "xtb_slope": 0,
+      "nox_slope": 0.046,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.1,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.18,
+          "delta_xtb_minus_nox": 0.07999999999999999
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.14,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.28,
+          "delta_xtb_minus_nox": 0.14
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.12,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.22,
+          "delta_xtb_minus_nox": 0.1
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.32,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.2,
+          "delta_xtb_minus_nox": -0.12
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.24,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.22,
+          "delta_xtb_minus_nox": -0.01999999999999999
+        }
+      ]
+    },
+    {
+      "platform": "instagram",
+      "keyword": "yoga mat",
+      "nox_badcase_rate": 0.148,
+      "xtb_badcase_rate": 0.22,
+      "avg_delta_xtb_minus_nox": 0.072,
+      "page1_delta_xtb_minus_nox": 0.28,
+      "page_win_count": 1,
+      "xtb_slope": -0.018,
+      "nox_slope": 0.041999999999999996,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.04,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.32,
+          "delta_xtb_minus_nox": 0.28
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.08,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.16,
+          "delta_xtb_minus_nox": 0.08
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.22,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.2,
+          "delta_xtb_minus_nox": -0.01999999999999999
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.22,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.22,
+          "delta_xtb_minus_nox": 0
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.18,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.2,
+          "delta_xtb_minus_nox": 0.020000000000000018
+        }
+      ]
+    },
+    {
+      "platform": "instagram",
+      "keyword": "resistance bands",
+      "nox_badcase_rate": 0.06,
+      "xtb_badcase_rate": 0.104,
+      "avg_delta_xtb_minus_nox": 0.044,
+      "page1_delta_xtb_minus_nox": 0.01999999999999999,
+      "page_win_count": 1,
+      "xtb_slope": -0.008,
+      "nox_slope": -0.008000000000000002,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.1,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.12,
+          "delta_xtb_minus_nox": 0.01999999999999999
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.08,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.08,
+          "delta_xtb_minus_nox": 0
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.14,
+          "delta_xtb_minus_nox": 0.14
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.04,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.12,
+          "delta_xtb_minus_nox": 0.07999999999999999
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.08,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.06,
+          "delta_xtb_minus_nox": -0.020000000000000004
+        }
+      ]
+    },
+    {
+      "platform": "instagram",
+      "keyword": "marathon",
+      "nox_badcase_rate": 0.1,
+      "xtb_badcase_rate": 0.28,
+      "avg_delta_xtb_minus_nox": 0.18,
+      "page1_delta_xtb_minus_nox": 0.28,
+      "page_win_count": 0,
+      "xtb_slope": -0.006000000000000005,
+      "nox_slope": 0.034,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.28,
+          "delta_xtb_minus_nox": 0.28
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.12,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.28,
+          "delta_xtb_minus_nox": 0.16000000000000003
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.08,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.32,
+          "delta_xtb_minus_nox": 0.24
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.14,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.26,
+          "delta_xtb_minus_nox": 0.12
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.16,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.26,
+          "delta_xtb_minus_nox": 0.1
+        }
+      ]
+    },
+    {
+      "platform": "instagram",
+      "keyword": "digital products",
+      "nox_badcase_rate": 0.188,
+      "xtb_badcase_rate": 0.42,
+      "avg_delta_xtb_minus_nox": 0.232,
+      "page1_delta_xtb_minus_nox": 0.1,
+      "page_win_count": 0,
+      "xtb_slope": 0.052000000000000005,
+      "nox_slope": -0.052000000000000005,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.22,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.32,
+          "delta_xtb_minus_nox": 0.1
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.26,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.3,
+          "delta_xtb_minus_nox": 0.03999999999999998
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.3,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.48,
+          "delta_xtb_minus_nox": 0.18
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.14,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.54,
+          "delta_xtb_minus_nox": 0.4
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.02,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.46,
+          "delta_xtb_minus_nox": 0.44
+        }
+      ]
+    },
+    {
+      "platform": "instagram",
+      "keyword": "vape",
+      "nox_badcase_rate": 0.228,
+      "xtb_badcase_rate": 0.244,
+      "avg_delta_xtb_minus_nox": 0.015999999999999993,
+      "page1_delta_xtb_minus_nox": 0.1,
+      "page_win_count": 2,
+      "xtb_slope": -0.098,
+      "nox_slope": -0.05600000000000001,
+      "conclusion": "接近",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.22,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.32,
+          "delta_xtb_minus_nox": 0.1
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.44,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.48,
+          "delta_xtb_minus_nox": 0.03999999999999998
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.26,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.3,
+          "delta_xtb_minus_nox": 0.03999999999999998
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.12,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.1,
+          "delta_xtb_minus_nox": -0.01999999999999999
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.1,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.02,
+          "delta_xtb_minus_nox": -0.08
+        }
+      ]
+    },
+    {
+      "platform": "instagram",
+      "keyword": "treadmill",
+      "nox_badcase_rate": 0.18,
+      "xtb_badcase_rate": 0.316,
+      "avg_delta_xtb_minus_nox": 0.136,
+      "page1_delta_xtb_minus_nox": 0.26,
+      "page_win_count": 0,
+      "xtb_slope": 0.006000000000000003,
+      "nox_slope": 0.027999999999999997,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.1,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.36,
+          "delta_xtb_minus_nox": 0.26
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.14,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.22,
+          "delta_xtb_minus_nox": 0.07999999999999999
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.22,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.32,
+          "delta_xtb_minus_nox": 0.1
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.26,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.36,
+          "delta_xtb_minus_nox": 0.09999999999999998
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.18,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.32,
+          "delta_xtb_minus_nox": 0.14
+        }
+      ]
+    },
+    {
+      "platform": "instagram",
+      "keyword": "agricultural products",
+      "nox_badcase_rate": 0.228,
+      "xtb_badcase_rate": 0.212,
+      "avg_delta_xtb_minus_nox": -0.016,
+      "page1_delta_xtb_minus_nox": -0.12,
+      "page_win_count": 2,
+      "xtb_slope": 0.01,
+      "nox_slope": -0.019999999999999997,
+      "conclusion": "接近",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.3,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.18,
+          "delta_xtb_minus_nox": -0.12
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.24,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.22,
+          "delta_xtb_minus_nox": -0.01999999999999999
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.16,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.2,
+          "delta_xtb_minus_nox": 0.04000000000000001
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.24,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.24,
+          "delta_xtb_minus_nox": 0
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.2,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.22,
+          "delta_xtb_minus_nox": 0.01999999999999999
+        }
+      ]
+    },
+    {
+      "platform": "instagram",
+      "keyword": "photography equipment",
+      "nox_badcase_rate": 0.304,
+      "xtb_badcase_rate": 0.424,
+      "avg_delta_xtb_minus_nox": 0.12,
+      "page1_delta_xtb_minus_nox": 0.08000000000000002,
+      "page_win_count": 0,
+      "xtb_slope": 0.024,
+      "nox_slope": 0.046,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.24,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.32,
+          "delta_xtb_minus_nox": 0.08000000000000002
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.24,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.48,
+          "delta_xtb_minus_nox": 0.24
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.28,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.4,
+          "delta_xtb_minus_nox": 0.12
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.34,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.48,
+          "delta_xtb_minus_nox": 0.13999999999999996
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.42,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.44,
+          "delta_xtb_minus_nox": 0.020000000000000018
+        }
+      ]
+    },
+    {
+      "platform": "instagram",
+      "keyword": "Dreame",
+      "nox_badcase_rate": 0.64,
+      "xtb_badcase_rate": 0.676,
+      "avg_delta_xtb_minus_nox": 0.03600000000000001,
+      "page1_delta_xtb_minus_nox": 0.040000000000000036,
+      "page_win_count": 1,
+      "xtb_slope": -0.011999999999999988,
+      "nox_slope": -0.007999999999999985,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.74,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.78,
+          "delta_xtb_minus_nox": 0.040000000000000036
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.6,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.58,
+          "delta_xtb_minus_nox": -0.020000000000000018
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.54,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.68,
+          "delta_xtb_minus_nox": 0.14
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.64,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.66,
+          "delta_xtb_minus_nox": 0.020000000000000018
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.68,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.68,
+          "delta_xtb_minus_nox": 0
+        }
+      ]
+    },
+    {
+      "platform": "instagram",
+      "keyword": "kitchen",
+      "nox_badcase_rate": 0.1,
+      "xtb_badcase_rate": 0.2,
+      "avg_delta_xtb_minus_nox": 0.1,
+      "page1_delta_xtb_minus_nox": 0.18,
+      "page_win_count": 1,
+      "xtb_slope": -0.003999999999999995,
+      "nox_slope": 0.02,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.06,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.24,
+          "delta_xtb_minus_nox": 0.18
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.08,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.18,
+          "delta_xtb_minus_nox": 0.09999999999999999
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.1,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.22,
+          "delta_xtb_minus_nox": 0.12
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.12,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.1,
+          "delta_xtb_minus_nox": -0.01999999999999999
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.14,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.26,
+          "delta_xtb_minus_nox": 0.12
+        }
+      ]
+    },
+    {
+      "platform": "instagram",
+      "keyword": "beauty",
+      "nox_badcase_rate": 0.012,
+      "xtb_badcase_rate": 0.26,
+      "avg_delta_xtb_minus_nox": 0.248,
+      "page1_delta_xtb_minus_nox": 0.16,
+      "page_win_count": 0,
+      "xtb_slope": 0.006,
+      "nox_slope": -0.006,
+      "conclusion": "XTB偏差更高",
+      "pages": [
+        {
+          "page": 1,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.16,
+          "delta_xtb_minus_nox": 0.16
+        },
+        {
+          "page": 2,
+          "nox_total": 50,
+          "nox_badcase_rate": 0.06,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.3,
+          "delta_xtb_minus_nox": 0.24
+        },
+        {
+          "page": 3,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.38,
+          "delta_xtb_minus_nox": 0.38
+        },
+        {
+          "page": 4,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.24,
+          "delta_xtb_minus_nox": 0.24
+        },
+        {
+          "page": 5,
+          "nox_total": 50,
+          "nox_badcase_rate": 0,
+          "xtb_total": 50,
+          "xtb_badcase_rate": 0.22,
+          "delta_xtb_minus_nox": 0.22
+        }
+      ]
+    }
+  ],
+  "low_recall_runs": [
+    {
+      "platform": "youtube",
+      "keyword": "swim vest",
+      "provider": "nox",
+      "sampled_records": 78,
+      "api_total_size": 78,
+      "total_pages": 2
+    },
+    {
+      "platform": "youtube",
+      "keyword": "swim vest",
+      "provider": "xtb",
+      "sampled_records": 82,
+      "api_total_size": 82,
+      "total_pages": 2
+    },
+    {
+      "platform": "youtube",
+      "keyword": "baby supplement",
+      "provider": "nox",
+      "sampled_records": 148,
+      "api_total_size": 148,
+      "total_pages": 3
+    },
+    {
+      "platform": "youtube",
+      "keyword": "baby supplement",
+      "provider": "xtb",
+      "sampled_records": 187,
+      "api_total_size": 187,
+      "total_pages": 4
+    }
+  ],
+  "caveats": [
+    "本轮使用 Playwright MCP existing browser context same-origin fetch 采集。",
+    "采集 raw 中的 .result-count 文本存在页面未逐关键词导航导致的陈旧风险；报告召回量采用 API total_size/retData。",
+    "未触发低置信度升级模型复核。"
+  ]
+}

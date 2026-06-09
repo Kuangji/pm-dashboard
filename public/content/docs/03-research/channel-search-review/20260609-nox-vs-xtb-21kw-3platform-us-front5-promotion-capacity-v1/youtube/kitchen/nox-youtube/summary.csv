@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+nox,youtube,kitchen,overall,250,71,28.4%
+nox,youtube,kitchen,head,250,71,28.4%
+nox,youtube,kitchen,mid,0,0,0.0%
+nox,youtube,kitchen,tail,0,0,0.0%

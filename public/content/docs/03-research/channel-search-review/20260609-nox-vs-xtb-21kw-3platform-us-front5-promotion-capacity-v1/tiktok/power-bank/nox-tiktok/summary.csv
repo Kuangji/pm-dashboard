@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+nox,tiktok,power bank,overall,250,147,58.8%
+nox,tiktok,power bank,head,250,147,58.8%
+nox,tiktok,power bank,mid,0,0,0.0%
+nox,tiktok,power bank,tail,0,0,0.0%

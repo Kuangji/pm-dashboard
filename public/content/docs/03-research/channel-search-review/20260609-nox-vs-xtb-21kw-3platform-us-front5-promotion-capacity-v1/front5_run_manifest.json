@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-06-09T19:49:23.302Z",
+  "run_root": "tmp/channel-search-review/20260609-nox-vs-xtb-21kw-3platform-us-front5-promotion-capacity-v1",
+  "absolute_run_root": "/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/tmp/channel-search-review/20260609-nox-vs-xtb-21kw-3platform-us-front5-promotion-capacity-v1",
+  "request": {
+    "created_at": "2026-06-09T14:53:18.138Z",
+    "keywords": [
+      "coffee machine",
+      "lawn mower",
+      "tech",
+      "fashion",
+      "lifestyle",
+      "power bank",
+      "swim vest",
+      "vacuum cleaner",
+      "baby supplement",
+      "pet food",
+      "yoga mat",
+      "resistance bands",
+      "marathon",
+      "digital products",
+      "vape",
+      "treadmill",
+      "agricultural products",
+      "photography equipment",
+      "Dreame",
+      "kitchen",
+      "beauty"
+    ],
+    "country": "US",
+    "platforms": [
+      "youtube",
+      "tiktok",
+      "instagram"
+    ],
+    "providers": [
+      "nox",
+      "xtb"
+    ],
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "page_size": 50,
+    "low_confidence_review": false,
+    "capture_method": "Playwright MCP existing browser context, same-origin fetch",
+    "expected_provider_runs": 126,
+    "expected_records": 31500
+  },
+  "verification": {
+    "score_files": 126,
+    "complete_runs": 126,
+    "provider_comparisons": 63,
+    "record_count": 30995,
+    "completed_records": 30995,
+    "failed_runs": 0
+  },
+  "prompt_hashes": [
+    "b87da85cf79a"
+  ],
+  "rule_versions": [
+    "prompt:b87da85cf79a"
+  ],
+  "low_confidence_review_enabled": false,
+  "artifacts": {
+    "readme": "README.md",
+    "sorting_effect_report": "xtb-vs-nox-sorting-effect-report.md",
+    "sorting_effect_data": "xtb-vs-nox-sorting-effect-data.json",
+    "fine_grained_summary": "provider-fine-grained-summary.md"
+  },
+  "caveats": [
+    "本轮使用 Playwright MCP existing browser context same-origin fetch 采集。",
+    "采集 raw 中的 .result-count 文本存在页面未逐关键词导航导致的陈旧风险；报告召回量采用 API total_size/retData。",
+    "未触发低置信度升级模型复核。"
+  ]
+}

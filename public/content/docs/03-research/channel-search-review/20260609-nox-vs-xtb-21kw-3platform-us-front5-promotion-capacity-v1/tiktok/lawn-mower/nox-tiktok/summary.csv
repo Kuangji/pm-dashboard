@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+nox,tiktok,lawn mower,overall,250,77,30.8%
+nox,tiktok,lawn mower,head,250,77,30.8%
+nox,tiktok,lawn mower,mid,0,0,0.0%
+nox,tiktok,lawn mower,tail,0,0,0.0%

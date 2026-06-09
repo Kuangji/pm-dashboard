@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+nox,instagram,power bank,overall,250,129,51.6%
+nox,instagram,power bank,head,250,129,51.6%
+nox,instagram,power bank,mid,0,0,0.0%
+nox,instagram,power bank,tail,0,0,0.0%

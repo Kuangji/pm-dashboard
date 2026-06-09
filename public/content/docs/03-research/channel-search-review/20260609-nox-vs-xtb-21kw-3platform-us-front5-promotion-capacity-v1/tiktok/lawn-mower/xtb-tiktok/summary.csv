@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+xtb,tiktok,lawn mower,overall,250,142,56.8%
+xtb,tiktok,lawn mower,head,250,142,56.8%
+xtb,tiktok,lawn mower,mid,0,0,0.0%
+xtb,tiktok,lawn mower,tail,0,0,0.0%

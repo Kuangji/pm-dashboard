@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+xtb,tiktok,fashion,overall,250,88,35.2%
+xtb,tiktok,fashion,head,250,88,35.2%
+xtb,tiktok,fashion,mid,0,0,0.0%
+xtb,tiktok,fashion,tail,0,0,0.0%

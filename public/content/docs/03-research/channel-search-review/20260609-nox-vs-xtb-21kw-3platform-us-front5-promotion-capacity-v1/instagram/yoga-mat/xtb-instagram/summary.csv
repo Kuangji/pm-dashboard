@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+xtb,instagram,yoga mat,overall,250,55,22.0%
+xtb,instagram,yoga mat,head,250,55,22.0%
+xtb,instagram,yoga mat,mid,0,0,0.0%
+xtb,instagram,yoga mat,tail,0,0,0.0%

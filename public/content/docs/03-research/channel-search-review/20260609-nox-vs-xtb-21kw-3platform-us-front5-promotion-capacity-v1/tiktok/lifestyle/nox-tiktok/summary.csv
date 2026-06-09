@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+nox,tiktok,lifestyle,overall,250,8,3.2%
+nox,tiktok,lifestyle,head,250,8,3.2%
+nox,tiktok,lifestyle,mid,0,0,0.0%
+nox,tiktok,lifestyle,tail,0,0,0.0%

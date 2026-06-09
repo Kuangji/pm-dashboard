@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+nox,youtube,Dreame,overall,250,177,70.8%
+nox,youtube,Dreame,head,250,177,70.8%
+nox,youtube,Dreame,mid,0,0,0.0%
+nox,youtube,Dreame,tail,0,0,0.0%

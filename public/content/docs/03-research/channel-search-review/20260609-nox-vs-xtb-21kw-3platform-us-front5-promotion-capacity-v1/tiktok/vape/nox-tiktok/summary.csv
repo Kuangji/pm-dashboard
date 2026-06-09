@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+nox,tiktok,vape,overall,250,172,68.8%
+nox,tiktok,vape,head,250,172,68.8%
+nox,tiktok,vape,mid,0,0,0.0%
+nox,tiktok,vape,tail,0,0,0.0%

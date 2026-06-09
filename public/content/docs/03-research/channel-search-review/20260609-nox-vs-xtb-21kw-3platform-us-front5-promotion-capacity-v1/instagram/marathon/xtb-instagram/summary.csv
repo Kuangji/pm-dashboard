@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+xtb,instagram,marathon,overall,250,70,28.0%
+xtb,instagram,marathon,head,250,70,28.0%
+xtb,instagram,marathon,mid,0,0,0.0%
+xtb,instagram,marathon,tail,0,0,0.0%

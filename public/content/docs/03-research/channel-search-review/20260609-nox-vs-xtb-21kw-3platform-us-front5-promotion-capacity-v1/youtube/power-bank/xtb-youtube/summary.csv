@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+xtb,youtube,power bank,overall,250,80,32.0%
+xtb,youtube,power bank,head,250,80,32.0%
+xtb,youtube,power bank,mid,0,0,0.0%
+xtb,youtube,power bank,tail,0,0,0.0%

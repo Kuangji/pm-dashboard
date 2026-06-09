@@ -1,0 +1,5 @@
+provider,platform,keyword,bucket,total,badcase,badcase_rate
+xtb,youtube,yoga mat,overall,250,98,39.2%
+xtb,youtube,yoga mat,head,250,98,39.2%
+xtb,youtube,yoga mat,mid,0,0,0.0%
+xtb,youtube,yoga mat,tail,0,0,0.0%
