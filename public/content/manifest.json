@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-06-09T00:38:51.624Z",
+  "updatedAt": "2026-06-09T00:59:28.994Z",
   "navigation": {
     "docs": [
       {
@@ -11185,11 +11185,49 @@
                   },
                   {
                     "type": "file",
+                    "name": "front5_run_manifest.json",
+                    "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/front5_run_manifest.json",
+                    "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/front5_run_manifest.json",
+                    "fileType": "json",
+                    "language": "json",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
                     "name": "mcp_capture_summary.json",
                     "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/mcp_capture_summary.json",
                     "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/mcp_capture_summary.json",
                     "fileType": "json",
                     "language": "json",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "provider-fine-grained-summary.md",
+                    "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/provider-fine-grained-summary.md",
+                    "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/provider-fine-grained-summary.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "xtb-vs-nox-sorting-effect-data.json",
+                    "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/xtb-vs-nox-sorting-effect-data.json",
+                    "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/xtb-vs-nox-sorting-effect-data.json",
+                    "fileType": "json",
+                    "language": "json",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "xtb-vs-nox-sorting-effect-report.md",
+                    "path": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/xtb-vs-nox-sorting-effect-report.md",
+                    "slug": "03-research/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/xtb-vs-nox-sorting-effect-report.md",
+                    "fileType": "markdown",
                     "isText": true,
                     "isImage": false
                   },

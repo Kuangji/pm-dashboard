@@ -1,0 +1,1802 @@
+{
+  "created_at": "2026-06-09T00:55:31.848Z",
+  "scope": {
+    "providers": [
+      "nox",
+      "xtb"
+    ],
+    "platforms": [
+      "youtube",
+      "tiktok",
+      "instagram"
+    ],
+    "keywords": [
+      "beauty",
+      "tech",
+      "lifestyle"
+    ],
+    "country": "US",
+    "pages": 5,
+    "pageSize": 50
+  },
+  "overall": {
+    "completed": 4500,
+    "failed": 0,
+    "platforms": 3,
+    "keywords": 3,
+    "providerRuns": 18,
+    "comparablePageCells": 45,
+    "xtbBetterPageCells": 6,
+    "improvedKeywordPlatformPairs": 1,
+    "keywordPlatformPairs": 9,
+    "averageRecordMs": 5705,
+    "noxBadcaseRate": 0.051555555555555556,
+    "xtbBadcaseRate": 0.17244444444444446,
+    "diff": 0.1208888888888889,
+    "headDiff": 0.10222222222222221,
+    "tailDiff": 0.12666666666666668
+  },
+  "platformSummary": [
+    {
+      "platform": "youtube",
+      "noxTotal": 750,
+      "xtbTotal": 750,
+      "noxBadcaseRate": 0.03333333333333333,
+      "xtbBadcaseRate": 0.06266666666666666,
+      "diff": 0.02933333333333333,
+      "xtbBetterComparablePages": 3,
+      "comparablePages": 15,
+      "headDiff": 0.023333333333333334,
+      "tailDiff": 0.03,
+      "improvedKeywords": 1,
+      "keywordCount": 3,
+      "conclusion": "XTB 弱于 nox",
+      "trend": "页间差异不明显"
+    },
+    {
+      "platform": "tiktok",
+      "noxTotal": 750,
+      "xtbTotal": 750,
+      "noxBadcaseRate": 0.034666666666666665,
+      "xtbBadcaseRate": 0.2786666666666667,
+      "diff": 0.244,
+      "xtbBetterComparablePages": 0,
+      "comparablePages": 15,
+      "headDiff": 0.18666666666666668,
+      "tailDiff": 0.27999999999999997,
+      "improvedKeywords": 0,
+      "keywordCount": 3,
+      "conclusion": "XTB 弱于 nox",
+      "trend": "越往后越偏离"
+    },
+    {
+      "platform": "instagram",
+      "noxTotal": 750,
+      "xtbTotal": 750,
+      "noxBadcaseRate": 0.08666666666666667,
+      "xtbBadcaseRate": 0.176,
+      "diff": 0.08933333333333332,
+      "xtbBetterComparablePages": 3,
+      "comparablePages": 15,
+      "headDiff": 0.09666666666666666,
+      "tailDiff": 0.07,
+      "improvedKeywords": 0,
+      "keywordCount": 3,
+      "conclusion": "XTB 弱于 nox",
+      "trend": "后段有所收敛"
+    }
+  ],
+  "comparisons": [
+    {
+      "platform": "youtube",
+      "keyword": "beauty",
+      "nox": {
+        "platform": "youtube",
+        "keyword": "beauty",
+        "provider": "nox",
+        "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/nox-youtube",
+        "total": 250,
+        "completed": 250,
+        "failed": 0,
+        "labels": {
+          "fit": 182,
+          "adjacent": 61,
+          "badcase": 7,
+          "failed": 0
+        },
+        "badcaseRate": 0.028,
+        "goodRate": 0.972,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "badcase": 1,
+            "badcaseRate": 0.02,
+            "goodRate": 0.98
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "badcase": 4,
+            "badcaseRate": 0.08,
+            "goodRate": 0.92
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "badcase": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "badcase": 1,
+            "badcaseRate": 0.02,
+            "goodRate": 0.98
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "badcase": 1,
+            "badcaseRate": 0.02,
+            "goodRate": 0.98
+          }
+        ],
+        "averageRecordMs": 5788,
+        "recallCount": null,
+        "ruleVersion": null,
+        "promptHash": null
+      },
+      "xtb": {
+        "platform": "youtube",
+        "keyword": "beauty",
+        "provider": "xtb",
+        "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/beauty/xtb-youtube",
+        "total": 250,
+        "completed": 250,
+        "failed": 0,
+        "labels": {
+          "fit": 191,
+          "adjacent": 36,
+          "badcase": 23,
+          "failed": 0
+        },
+        "badcaseRate": 0.092,
+        "goodRate": 0.908,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "badcase": 5,
+            "badcaseRate": 0.1,
+            "goodRate": 0.9
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "badcase": 3,
+            "badcaseRate": 0.06,
+            "goodRate": 0.94
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "badcase": 6,
+            "badcaseRate": 0.12,
+            "goodRate": 0.88
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "badcase": 5,
+            "badcaseRate": 0.1,
+            "goodRate": 0.9
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "badcase": 4,
+            "badcaseRate": 0.08,
+            "goodRate": 0.92
+          }
+        ],
+        "averageRecordMs": 5929,
+        "recallCount": null,
+        "ruleVersion": null,
+        "promptHash": null
+      },
+      "pageDiffs": [
+        0.08,
+        -0.020000000000000004,
+        0.12,
+        0.08,
+        0.06
+      ],
+      "xtbBetterPages": 1,
+      "overallDiff": 0.064,
+      "headDiff": 0.03,
+      "tailDiff": 0.07,
+      "conclusion": "XTB 弱于 nox",
+      "trend": "越往后越偏离"
+    },
+    {
+      "platform": "youtube",
+      "keyword": "tech",
+      "nox": {
+        "platform": "youtube",
+        "keyword": "tech",
+        "provider": "nox",
+        "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/nox-youtube",
+        "total": 250,
+        "completed": 250,
+        "failed": 0,
+        "labels": {
+          "fit": 130,
+          "adjacent": 108,
+          "badcase": 12,
+          "failed": 0
+        },
+        "badcaseRate": 0.048,
+        "goodRate": 0.952,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "badcase": 3,
+            "badcaseRate": 0.06,
+            "goodRate": 0.94
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "badcase": 2,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "badcase": 3,
+            "badcaseRate": 0.06,
+            "goodRate": 0.94
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "badcase": 2,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "badcase": 2,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          }
+        ],
+        "averageRecordMs": 7095,
+        "recallCount": null,
+        "ruleVersion": null,
+        "promptHash": null
+      },
+      "xtb": {
+        "platform": "youtube",
+        "keyword": "tech",
+        "provider": "xtb",
+        "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/tech/xtb-youtube",
+        "total": 250,
+        "completed": 250,
+        "failed": 0,
+        "labels": {
+          "fit": 184,
+          "adjacent": 47,
+          "badcase": 19,
+          "failed": 0
+        },
+        "badcaseRate": 0.076,
+        "goodRate": 0.924,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "badcase": 2,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "badcase": 5,
+            "badcaseRate": 0.1,
+            "goodRate": 0.9
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "badcase": 3,
+            "badcaseRate": 0.06,
+            "goodRate": 0.94
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "badcase": 3,
+            "badcaseRate": 0.06,
+            "goodRate": 0.94
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "badcase": 6,
+            "badcaseRate": 0.12,
+            "goodRate": 0.88
+          }
+        ],
+        "averageRecordMs": 6135,
+        "recallCount": null,
+        "ruleVersion": null,
+        "promptHash": null
+      },
+      "pageDiffs": [
+        -0.019999999999999997,
+        0.060000000000000005,
+        0,
+        0.019999999999999997,
+        0.07999999999999999
+      ],
+      "xtbBetterPages": 1,
+      "overallDiff": 0.027999999999999997,
+      "headDiff": 0.020000000000000004,
+      "tailDiff": 0.04999999999999999,
+      "conclusion": "XTB 弱于 nox",
+      "trend": "越往后越偏离"
+    },
+    {
+      "platform": "youtube",
+      "keyword": "lifestyle",
+      "nox": {
+        "platform": "youtube",
+        "keyword": "lifestyle",
+        "provider": "nox",
+        "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/nox-youtube",
+        "total": 250,
+        "completed": 250,
+        "failed": 0,
+        "labels": {
+          "fit": 204,
+          "adjacent": 40,
+          "badcase": 6,
+          "failed": 0
+        },
+        "badcaseRate": 0.024,
+        "goodRate": 0.976,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "badcase": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "badcase": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "badcase": 1,
+            "badcaseRate": 0.02,
+            "goodRate": 0.98
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "badcase": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "badcase": 5,
+            "badcaseRate": 0.1,
+            "goodRate": 0.9
+          }
+        ],
+        "averageRecordMs": 3522,
+        "recallCount": null,
+        "ruleVersion": null,
+        "promptHash": null
+      },
+      "xtb": {
+        "platform": "youtube",
+        "keyword": "lifestyle",
+        "provider": "xtb",
+        "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/youtube/lifestyle/xtb-youtube",
+        "total": 250,
+        "completed": 250,
+        "failed": 0,
+        "labels": {
+          "fit": 208,
+          "adjacent": 37,
+          "badcase": 5,
+          "failed": 0
+        },
+        "badcaseRate": 0.02,
+        "goodRate": 0.98,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "badcase": 2,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "badcase": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "badcase": 1,
+            "badcaseRate": 0.02,
+            "goodRate": 0.98
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "badcase": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "badcase": 2,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          }
+        ],
+        "averageRecordMs": 3422,
+        "recallCount": null,
+        "ruleVersion": null,
+        "promptHash": null
+      },
+      "pageDiffs": [
+        0.04,
+        0,
+        0,
+        0,
+        -0.060000000000000005
+      ],
+      "xtbBetterPages": 1,
+      "overallDiff": -0.004,
+      "headDiff": 0.02,
+      "tailDiff": -0.030000000000000002,
+      "conclusion": "基本持平",
+      "trend": "后段有所收敛"
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "beauty",
+      "nox": {
+        "platform": "tiktok",
+        "keyword": "beauty",
+        "provider": "nox",
+        "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/nox-tiktok",
+        "total": 250,
+        "completed": 250,
+        "failed": 0,
+        "labels": {
+          "fit": 210,
+          "adjacent": 32,
+          "badcase": 8,
+          "failed": 0
+        },
+        "badcaseRate": 0.032,
+        "goodRate": 0.968,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "badcase": 1,
+            "badcaseRate": 0.02,
+            "goodRate": 0.98
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "badcase": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "badcase": 3,
+            "badcaseRate": 0.06,
+            "goodRate": 0.94
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "badcase": 4,
+            "badcaseRate": 0.08,
+            "goodRate": 0.92
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "badcase": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          }
+        ],
+        "averageRecordMs": 8255,
+        "recallCount": null,
+        "ruleVersion": null,
+        "promptHash": null
+      },
+      "xtb": {
+        "platform": "tiktok",
+        "keyword": "beauty",
+        "provider": "xtb",
+        "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/beauty/xtb-tiktok",
+        "total": 250,
+        "completed": 250,
+        "failed": 0,
+        "labels": {
+          "fit": 186,
+          "adjacent": 38,
+          "badcase": 26,
+          "failed": 0
+        },
+        "badcaseRate": 0.104,
+        "goodRate": 0.896,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "badcase": 5,
+            "badcaseRate": 0.1,
+            "goodRate": 0.9
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "badcase": 4,
+            "badcaseRate": 0.08,
+            "goodRate": 0.92
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "badcase": 4,
+            "badcaseRate": 0.08,
+            "goodRate": 0.92
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "badcase": 6,
+            "badcaseRate": 0.12,
+            "goodRate": 0.88
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "badcase": 7,
+            "badcaseRate": 0.14,
+            "goodRate": 0.86
+          }
+        ],
+        "averageRecordMs": 5711,
+        "recallCount": null,
+        "ruleVersion": null,
+        "promptHash": null
+      },
+      "pageDiffs": [
+        0.08,
+        0.08,
+        0.020000000000000004,
+        0.039999999999999994,
+        0.14
+      ],
+      "xtbBetterPages": 0,
+      "overallDiff": 0.072,
+      "headDiff": 0.08,
+      "tailDiff": 0.09,
+      "conclusion": "XTB 弱于 nox",
+      "trend": "页间差异不明显"
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "tech",
+      "nox": {
+        "platform": "tiktok",
+        "keyword": "tech",
+        "provider": "nox",
+        "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/nox-tiktok",
+        "total": 250,
+        "completed": 250,
+        "failed": 0,
+        "labels": {
+          "fit": 158,
+          "adjacent": 78,
+          "badcase": 14,
+          "failed": 0
+        },
+        "badcaseRate": 0.056,
+        "goodRate": 0.944,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "badcase": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "badcase": 1,
+            "badcaseRate": 0.02,
+            "goodRate": 0.98
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "badcase": 5,
+            "badcaseRate": 0.1,
+            "goodRate": 0.9
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "badcase": 3,
+            "badcaseRate": 0.06,
+            "goodRate": 0.94
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "badcase": 5,
+            "badcaseRate": 0.1,
+            "goodRate": 0.9
+          }
+        ],
+        "averageRecordMs": 7087,
+        "recallCount": null,
+        "ruleVersion": null,
+        "promptHash": null
+      },
+      "xtb": {
+        "platform": "tiktok",
+        "keyword": "tech",
+        "provider": "xtb",
+        "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/tech/xtb-tiktok",
+        "total": 250,
+        "completed": 250,
+        "failed": 0,
+        "labels": {
+          "fit": 107,
+          "adjacent": 39,
+          "badcase": 104,
+          "failed": 0
+        },
+        "badcaseRate": 0.416,
+        "goodRate": 0.5840000000000001,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "badcase": 5,
+            "badcaseRate": 0.1,
+            "goodRate": 0.9
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "badcase": 22,
+            "badcaseRate": 0.44,
+            "goodRate": 0.56
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "badcase": 28,
+            "badcaseRate": 0.56,
+            "goodRate": 0.43999999999999995
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "badcase": 26,
+            "badcaseRate": 0.52,
+            "goodRate": 0.48
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "badcase": 23,
+            "badcaseRate": 0.46,
+            "goodRate": 0.54
+          }
+        ],
+        "averageRecordMs": 6517,
+        "recallCount": null,
+        "ruleVersion": null,
+        "promptHash": null
+      },
+      "pageDiffs": [
+        0.1,
+        0.42,
+        0.4600000000000001,
+        0.46,
+        0.36
+      ],
+      "xtbBetterPages": 0,
+      "overallDiff": 0.36,
+      "headDiff": 0.26,
+      "tailDiff": 0.41000000000000003,
+      "conclusion": "XTB 弱于 nox",
+      "trend": "越往后越偏离"
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "lifestyle",
+      "nox": {
+        "platform": "tiktok",
+        "keyword": "lifestyle",
+        "provider": "nox",
+        "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/nox-tiktok",
+        "total": 250,
+        "completed": 250,
+        "failed": 0,
+        "labels": {
+          "fit": 198,
+          "adjacent": 48,
+          "badcase": 4,
+          "failed": 0
+        },
+        "badcaseRate": 0.016,
+        "goodRate": 0.984,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "badcase": 2,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "badcase": 1,
+            "badcaseRate": 0.02,
+            "goodRate": 0.98
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "badcase": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "badcase": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "badcase": 1,
+            "badcaseRate": 0.02,
+            "goodRate": 0.98
+          }
+        ],
+        "averageRecordMs": 4305,
+        "recallCount": null,
+        "ruleVersion": null,
+        "promptHash": null
+      },
+      "xtb": {
+        "platform": "tiktok",
+        "keyword": "lifestyle",
+        "provider": "xtb",
+        "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/tiktok/lifestyle/xtb-tiktok",
+        "total": 250,
+        "completed": 250,
+        "failed": 0,
+        "labels": {
+          "fit": 128,
+          "adjacent": 43,
+          "badcase": 79,
+          "failed": 0
+        },
+        "badcaseRate": 0.316,
+        "goodRate": 0.6839999999999999,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "badcase": 8,
+            "badcaseRate": 0.16,
+            "goodRate": 0.84
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "badcase": 17,
+            "badcaseRate": 0.34,
+            "goodRate": 0.6599999999999999
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "badcase": 19,
+            "badcaseRate": 0.38,
+            "goodRate": 0.62
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "badcase": 20,
+            "badcaseRate": 0.4,
+            "goodRate": 0.6
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "badcase": 15,
+            "badcaseRate": 0.3,
+            "goodRate": 0.7
+          }
+        ],
+        "averageRecordMs": 5303,
+        "recallCount": null,
+        "ruleVersion": null,
+        "promptHash": null
+      },
+      "pageDiffs": [
+        0.12,
+        0.32,
+        0.38,
+        0.4,
+        0.27999999999999997
+      ],
+      "xtbBetterPages": 0,
+      "overallDiff": 0.3,
+      "headDiff": 0.22,
+      "tailDiff": 0.33999999999999997,
+      "conclusion": "XTB 弱于 nox",
+      "trend": "越往后越偏离"
+    },
+    {
+      "platform": "instagram",
+      "keyword": "beauty",
+      "nox": {
+        "platform": "instagram",
+        "keyword": "beauty",
+        "provider": "nox",
+        "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/nox-instagram",
+        "total": 250,
+        "completed": 250,
+        "failed": 0,
+        "labels": {
+          "fit": 229,
+          "adjacent": 16,
+          "badcase": 5,
+          "failed": 0
+        },
+        "badcaseRate": 0.02,
+        "goodRate": 0.98,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "badcase": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "badcase": 4,
+            "badcaseRate": 0.08,
+            "goodRate": 0.92
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "badcase": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "badcase": 1,
+            "badcaseRate": 0.02,
+            "goodRate": 0.98
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "badcase": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          }
+        ],
+        "averageRecordMs": 5586,
+        "recallCount": null,
+        "ruleVersion": null,
+        "promptHash": null
+      },
+      "xtb": {
+        "platform": "instagram",
+        "keyword": "beauty",
+        "provider": "xtb",
+        "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/beauty/xtb-instagram",
+        "total": 250,
+        "completed": 250,
+        "failed": 0,
+        "labels": {
+          "fit": 223,
+          "adjacent": 19,
+          "badcase": 8,
+          "failed": 0
+        },
+        "badcaseRate": 0.032,
+        "goodRate": 0.968,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "badcase": 1,
+            "badcaseRate": 0.02,
+            "goodRate": 0.98
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "badcase": 2,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "badcase": 3,
+            "badcaseRate": 0.06,
+            "goodRate": 0.94
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "badcase": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "badcase": 2,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          }
+        ],
+        "averageRecordMs": 5034,
+        "recallCount": null,
+        "ruleVersion": null,
+        "promptHash": null
+      },
+      "pageDiffs": [
+        0.02,
+        -0.04,
+        0.06,
+        -0.02,
+        0.04
+      ],
+      "xtbBetterPages": 2,
+      "overallDiff": 0.012,
+      "headDiff": -0.01,
+      "tailDiff": 0.01,
+      "conclusion": "基本持平",
+      "trend": "头部更有优势"
+    },
+    {
+      "platform": "instagram",
+      "keyword": "tech",
+      "nox": {
+        "platform": "instagram",
+        "keyword": "tech",
+        "provider": "nox",
+        "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/nox-instagram",
+        "total": 250,
+        "completed": 250,
+        "failed": 0,
+        "labels": {
+          "fit": 117,
+          "adjacent": 78,
+          "badcase": 55,
+          "failed": 0
+        },
+        "badcaseRate": 0.22,
+        "goodRate": 0.78,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "badcase": 2,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "badcase": 8,
+            "badcaseRate": 0.16,
+            "goodRate": 0.84
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "badcase": 11,
+            "badcaseRate": 0.22,
+            "goodRate": 0.78
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "badcase": 16,
+            "badcaseRate": 0.32,
+            "goodRate": 0.6799999999999999
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "badcase": 18,
+            "badcaseRate": 0.36,
+            "goodRate": 0.64
+          }
+        ],
+        "averageRecordMs": 6487,
+        "recallCount": null,
+        "ruleVersion": null,
+        "promptHash": null
+      },
+      "xtb": {
+        "platform": "instagram",
+        "keyword": "tech",
+        "provider": "xtb",
+        "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/tech/xtb-instagram",
+        "total": 250,
+        "completed": 250,
+        "failed": 0,
+        "labels": {
+          "fit": 136,
+          "adjacent": 44,
+          "badcase": 70,
+          "failed": 0
+        },
+        "badcaseRate": 0.28,
+        "goodRate": 0.72,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "badcase": 6,
+            "badcaseRate": 0.12,
+            "goodRate": 0.88
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "badcase": 15,
+            "badcaseRate": 0.3,
+            "goodRate": 0.7
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "badcase": 13,
+            "badcaseRate": 0.26,
+            "goodRate": 0.74
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "badcase": 20,
+            "badcaseRate": 0.4,
+            "goodRate": 0.6
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "badcase": 16,
+            "badcaseRate": 0.32,
+            "goodRate": 0.6799999999999999
+          }
+        ],
+        "averageRecordMs": 6886,
+        "recallCount": null,
+        "ruleVersion": null,
+        "promptHash": null
+      },
+      "pageDiffs": [
+        0.07999999999999999,
+        0.13999999999999999,
+        0.04000000000000001,
+        0.08000000000000002,
+        -0.03999999999999998
+      ],
+      "xtbBetterPages": 1,
+      "overallDiff": 0.060000000000000026,
+      "headDiff": 0.10999999999999999,
+      "tailDiff": 0.020000000000000018,
+      "conclusion": "XTB 弱于 nox",
+      "trend": "后段有所收敛"
+    },
+    {
+      "platform": "instagram",
+      "keyword": "lifestyle",
+      "nox": {
+        "platform": "instagram",
+        "keyword": "lifestyle",
+        "provider": "nox",
+        "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/nox-instagram",
+        "total": 250,
+        "completed": 250,
+        "failed": 0,
+        "labels": {
+          "fit": 216,
+          "adjacent": 29,
+          "badcase": 5,
+          "failed": 0
+        },
+        "badcaseRate": 0.02,
+        "goodRate": 0.98,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "badcase": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "badcase": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "badcase": 2,
+            "badcaseRate": 0.04,
+            "goodRate": 0.96
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "badcase": 0,
+            "badcaseRate": 0,
+            "goodRate": 1
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "badcase": 3,
+            "badcaseRate": 0.06,
+            "goodRate": 0.94
+          }
+        ],
+        "averageRecordMs": 4082,
+        "recallCount": null,
+        "ruleVersion": null,
+        "promptHash": null
+      },
+      "xtb": {
+        "platform": "instagram",
+        "keyword": "lifestyle",
+        "provider": "xtb",
+        "runDir": "tmp/channel-search-review/20260608-nox-vs-xtb-beauty-tech-lifestyle-3platform-us-front5/instagram/lifestyle/xtb-instagram",
+        "total": 250,
+        "completed": 250,
+        "failed": 0,
+        "labels": {
+          "fit": 144,
+          "adjacent": 52,
+          "badcase": 54,
+          "failed": 0
+        },
+        "badcaseRate": 0.216,
+        "goodRate": 0.784,
+        "pages": [
+          {
+            "page": 1,
+            "total": 50,
+            "badcase": 7,
+            "badcaseRate": 0.14,
+            "goodRate": 0.86
+          },
+          {
+            "page": 2,
+            "total": 50,
+            "badcase": 12,
+            "badcaseRate": 0.24,
+            "goodRate": 0.76
+          },
+          {
+            "page": 3,
+            "total": 50,
+            "badcase": 14,
+            "badcaseRate": 0.28,
+            "goodRate": 0.72
+          },
+          {
+            "page": 4,
+            "total": 50,
+            "badcase": 11,
+            "badcaseRate": 0.22,
+            "goodRate": 0.78
+          },
+          {
+            "page": 5,
+            "total": 50,
+            "badcase": 10,
+            "badcaseRate": 0.2,
+            "goodRate": 0.8
+          }
+        ],
+        "averageRecordMs": 5554,
+        "recallCount": null,
+        "ruleVersion": null,
+        "promptHash": null
+      },
+      "pageDiffs": [
+        0.14,
+        0.24,
+        0.24000000000000002,
+        0.22,
+        0.14
+      ],
+      "xtbBetterPages": 0,
+      "overallDiff": 0.196,
+      "headDiff": 0.19,
+      "tailDiff": 0.18,
+      "conclusion": "XTB 弱于 nox",
+      "trend": "页间差异不明显"
+    }
+  ],
+  "byPage": [
+    {
+      "platform": "youtube",
+      "keyword": "beauty",
+      "page": 1,
+      "noxBadcaseRate": 0.02,
+      "xtbBadcaseRate": 0.1,
+      "diff": 0.08,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "youtube",
+      "keyword": "beauty",
+      "page": 2,
+      "noxBadcaseRate": 0.08,
+      "xtbBadcaseRate": 0.06,
+      "diff": -0.020000000000000004,
+      "verdict": "XTB 优于 nox"
+    },
+    {
+      "platform": "youtube",
+      "keyword": "beauty",
+      "page": 3,
+      "noxBadcaseRate": 0,
+      "xtbBadcaseRate": 0.12,
+      "diff": 0.12,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "youtube",
+      "keyword": "beauty",
+      "page": 4,
+      "noxBadcaseRate": 0.02,
+      "xtbBadcaseRate": 0.1,
+      "diff": 0.08,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "youtube",
+      "keyword": "beauty",
+      "page": 5,
+      "noxBadcaseRate": 0.02,
+      "xtbBadcaseRate": 0.08,
+      "diff": 0.06,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "youtube",
+      "keyword": "tech",
+      "page": 1,
+      "noxBadcaseRate": 0.06,
+      "xtbBadcaseRate": 0.04,
+      "diff": -0.019999999999999997,
+      "verdict": "基本持平"
+    },
+    {
+      "platform": "youtube",
+      "keyword": "tech",
+      "page": 2,
+      "noxBadcaseRate": 0.04,
+      "xtbBadcaseRate": 0.1,
+      "diff": 0.060000000000000005,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "youtube",
+      "keyword": "tech",
+      "page": 3,
+      "noxBadcaseRate": 0.06,
+      "xtbBadcaseRate": 0.06,
+      "diff": 0,
+      "verdict": "基本持平"
+    },
+    {
+      "platform": "youtube",
+      "keyword": "tech",
+      "page": 4,
+      "noxBadcaseRate": 0.04,
+      "xtbBadcaseRate": 0.06,
+      "diff": 0.019999999999999997,
+      "verdict": "基本持平"
+    },
+    {
+      "platform": "youtube",
+      "keyword": "tech",
+      "page": 5,
+      "noxBadcaseRate": 0.04,
+      "xtbBadcaseRate": 0.12,
+      "diff": 0.07999999999999999,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "youtube",
+      "keyword": "lifestyle",
+      "page": 1,
+      "noxBadcaseRate": 0,
+      "xtbBadcaseRate": 0.04,
+      "diff": 0.04,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "youtube",
+      "keyword": "lifestyle",
+      "page": 2,
+      "noxBadcaseRate": 0,
+      "xtbBadcaseRate": 0,
+      "diff": 0,
+      "verdict": "基本持平"
+    },
+    {
+      "platform": "youtube",
+      "keyword": "lifestyle",
+      "page": 3,
+      "noxBadcaseRate": 0.02,
+      "xtbBadcaseRate": 0.02,
+      "diff": 0,
+      "verdict": "基本持平"
+    },
+    {
+      "platform": "youtube",
+      "keyword": "lifestyle",
+      "page": 4,
+      "noxBadcaseRate": 0,
+      "xtbBadcaseRate": 0,
+      "diff": 0,
+      "verdict": "基本持平"
+    },
+    {
+      "platform": "youtube",
+      "keyword": "lifestyle",
+      "page": 5,
+      "noxBadcaseRate": 0.1,
+      "xtbBadcaseRate": 0.04,
+      "diff": -0.060000000000000005,
+      "verdict": "XTB 优于 nox"
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "beauty",
+      "page": 1,
+      "noxBadcaseRate": 0.02,
+      "xtbBadcaseRate": 0.1,
+      "diff": 0.08,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "beauty",
+      "page": 2,
+      "noxBadcaseRate": 0,
+      "xtbBadcaseRate": 0.08,
+      "diff": 0.08,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "beauty",
+      "page": 3,
+      "noxBadcaseRate": 0.06,
+      "xtbBadcaseRate": 0.08,
+      "diff": 0.020000000000000004,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "beauty",
+      "page": 4,
+      "noxBadcaseRate": 0.08,
+      "xtbBadcaseRate": 0.12,
+      "diff": 0.039999999999999994,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "beauty",
+      "page": 5,
+      "noxBadcaseRate": 0,
+      "xtbBadcaseRate": 0.14,
+      "diff": 0.14,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "tech",
+      "page": 1,
+      "noxBadcaseRate": 0,
+      "xtbBadcaseRate": 0.1,
+      "diff": 0.1,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "tech",
+      "page": 2,
+      "noxBadcaseRate": 0.02,
+      "xtbBadcaseRate": 0.44,
+      "diff": 0.42,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "tech",
+      "page": 3,
+      "noxBadcaseRate": 0.1,
+      "xtbBadcaseRate": 0.56,
+      "diff": 0.4600000000000001,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "tech",
+      "page": 4,
+      "noxBadcaseRate": 0.06,
+      "xtbBadcaseRate": 0.52,
+      "diff": 0.46,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "tech",
+      "page": 5,
+      "noxBadcaseRate": 0.1,
+      "xtbBadcaseRate": 0.46,
+      "diff": 0.36,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "lifestyle",
+      "page": 1,
+      "noxBadcaseRate": 0.04,
+      "xtbBadcaseRate": 0.16,
+      "diff": 0.12,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "lifestyle",
+      "page": 2,
+      "noxBadcaseRate": 0.02,
+      "xtbBadcaseRate": 0.34,
+      "diff": 0.32,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "lifestyle",
+      "page": 3,
+      "noxBadcaseRate": 0,
+      "xtbBadcaseRate": 0.38,
+      "diff": 0.38,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "lifestyle",
+      "page": 4,
+      "noxBadcaseRate": 0,
+      "xtbBadcaseRate": 0.4,
+      "diff": 0.4,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "lifestyle",
+      "page": 5,
+      "noxBadcaseRate": 0.02,
+      "xtbBadcaseRate": 0.3,
+      "diff": 0.27999999999999997,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "instagram",
+      "keyword": "beauty",
+      "page": 1,
+      "noxBadcaseRate": 0,
+      "xtbBadcaseRate": 0.02,
+      "diff": 0.02,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "instagram",
+      "keyword": "beauty",
+      "page": 2,
+      "noxBadcaseRate": 0.08,
+      "xtbBadcaseRate": 0.04,
+      "diff": -0.04,
+      "verdict": "XTB 优于 nox"
+    },
+    {
+      "platform": "instagram",
+      "keyword": "beauty",
+      "page": 3,
+      "noxBadcaseRate": 0,
+      "xtbBadcaseRate": 0.06,
+      "diff": 0.06,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "instagram",
+      "keyword": "beauty",
+      "page": 4,
+      "noxBadcaseRate": 0.02,
+      "xtbBadcaseRate": 0,
+      "diff": -0.02,
+      "verdict": "XTB 优于 nox"
+    },
+    {
+      "platform": "instagram",
+      "keyword": "beauty",
+      "page": 5,
+      "noxBadcaseRate": 0,
+      "xtbBadcaseRate": 0.04,
+      "diff": 0.04,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "instagram",
+      "keyword": "tech",
+      "page": 1,
+      "noxBadcaseRate": 0.04,
+      "xtbBadcaseRate": 0.12,
+      "diff": 0.07999999999999999,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "instagram",
+      "keyword": "tech",
+      "page": 2,
+      "noxBadcaseRate": 0.16,
+      "xtbBadcaseRate": 0.3,
+      "diff": 0.13999999999999999,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "instagram",
+      "keyword": "tech",
+      "page": 3,
+      "noxBadcaseRate": 0.22,
+      "xtbBadcaseRate": 0.26,
+      "diff": 0.04000000000000001,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "instagram",
+      "keyword": "tech",
+      "page": 4,
+      "noxBadcaseRate": 0.32,
+      "xtbBadcaseRate": 0.4,
+      "diff": 0.08000000000000002,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "instagram",
+      "keyword": "tech",
+      "page": 5,
+      "noxBadcaseRate": 0.36,
+      "xtbBadcaseRate": 0.32,
+      "diff": -0.03999999999999998,
+      "verdict": "XTB 优于 nox"
+    },
+    {
+      "platform": "instagram",
+      "keyword": "lifestyle",
+      "page": 1,
+      "noxBadcaseRate": 0,
+      "xtbBadcaseRate": 0.14,
+      "diff": 0.14,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "instagram",
+      "keyword": "lifestyle",
+      "page": 2,
+      "noxBadcaseRate": 0,
+      "xtbBadcaseRate": 0.24,
+      "diff": 0.24,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "instagram",
+      "keyword": "lifestyle",
+      "page": 3,
+      "noxBadcaseRate": 0.04,
+      "xtbBadcaseRate": 0.28,
+      "diff": 0.24000000000000002,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "instagram",
+      "keyword": "lifestyle",
+      "page": 4,
+      "noxBadcaseRate": 0,
+      "xtbBadcaseRate": 0.22,
+      "diff": 0.22,
+      "verdict": "XTB 弱于 nox"
+    },
+    {
+      "platform": "instagram",
+      "keyword": "lifestyle",
+      "page": 5,
+      "noxBadcaseRate": 0.06,
+      "xtbBadcaseRate": 0.2,
+      "diff": 0.14,
+      "verdict": "XTB 弱于 nox"
+    }
+  ],
+  "pageSummary": [
+    {
+      "platform": "youtube",
+      "page": 1,
+      "avgDiff": 0.03333333333333333,
+      "xtbBetterKeywords": 1,
+      "comparableKeywords": 3
+    },
+    {
+      "platform": "youtube",
+      "page": 2,
+      "avgDiff": 0.013333333333333334,
+      "xtbBetterKeywords": 1,
+      "comparableKeywords": 3
+    },
+    {
+      "platform": "youtube",
+      "page": 3,
+      "avgDiff": 0.04,
+      "xtbBetterKeywords": 0,
+      "comparableKeywords": 3
+    },
+    {
+      "platform": "youtube",
+      "page": 4,
+      "avgDiff": 0.03333333333333333,
+      "xtbBetterKeywords": 0,
+      "comparableKeywords": 3
+    },
+    {
+      "platform": "youtube",
+      "page": 5,
+      "avgDiff": 0.02666666666666666,
+      "xtbBetterKeywords": 1,
+      "comparableKeywords": 3
+    },
+    {
+      "platform": "tiktok",
+      "page": 1,
+      "avgDiff": 0.09999999999999999,
+      "xtbBetterKeywords": 0,
+      "comparableKeywords": 3
+    },
+    {
+      "platform": "tiktok",
+      "page": 2,
+      "avgDiff": 0.2733333333333334,
+      "xtbBetterKeywords": 0,
+      "comparableKeywords": 3
+    },
+    {
+      "platform": "tiktok",
+      "page": 3,
+      "avgDiff": 0.2866666666666667,
+      "xtbBetterKeywords": 0,
+      "comparableKeywords": 3
+    },
+    {
+      "platform": "tiktok",
+      "page": 4,
+      "avgDiff": 0.3,
+      "xtbBetterKeywords": 0,
+      "comparableKeywords": 3
+    },
+    {
+      "platform": "tiktok",
+      "page": 5,
+      "avgDiff": 0.26,
+      "xtbBetterKeywords": 0,
+      "comparableKeywords": 3
+    },
+    {
+      "platform": "instagram",
+      "page": 1,
+      "avgDiff": 0.08,
+      "xtbBetterKeywords": 0,
+      "comparableKeywords": 3
+    },
+    {
+      "platform": "instagram",
+      "page": 2,
+      "avgDiff": 0.11333333333333333,
+      "xtbBetterKeywords": 1,
+      "comparableKeywords": 3
+    },
+    {
+      "platform": "instagram",
+      "page": 3,
+      "avgDiff": 0.11333333333333334,
+      "xtbBetterKeywords": 0,
+      "comparableKeywords": 3
+    },
+    {
+      "platform": "instagram",
+      "page": 4,
+      "avgDiff": 0.09333333333333334,
+      "xtbBetterKeywords": 1,
+      "comparableKeywords": 3
+    },
+    {
+      "platform": "instagram",
+      "page": 5,
+      "avgDiff": 0.04666666666666668,
+      "xtbBetterKeywords": 1,
+      "comparableKeywords": 3
+    }
+  ]
+}

@@ -30,8 +30,12 @@
 | instagram | tech | 22.0% | 28.0% | 6.0% | 6487ms | 6886ms |
 | instagram | lifestyle | 2.0% | 21.6% | 19.6% | 4082ms | 5554ms |
 
-## 入口文档
+## 文档导航
 
+- [xtb-vs-nox-sorting-effect-report.md](xtb-vs-nox-sorting-effect-report.md)：排序效果主报告，包含三平台聚合、页码聚合和平台 × 关键词同页对比。
+- [provider-fine-grained-summary.md](provider-fine-grained-summary.md)：从 README 拆出的三平台 provider × keyword 直接证据表和入口。
+- [xtb-vs-nox-sorting-effect-data.json](xtb-vs-nox-sorting-effect-data.json)：排序报告的结构化数据。
+- [front5_run_manifest.json](front5_run_manifest.json)：本轮 provider 任务完成清单。
 - [YouTube 报告](youtube/README.md)
 - [TikTok 报告](tiktok/README.md)
 - [Instagram 报告](instagram/README.md)
