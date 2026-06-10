@@ -5,6 +5,7 @@ import { Copy, Check } from 'lucide-react'
 import hljs from 'highlight.js/lib/core'
 import json from 'highlight.js/lib/languages/json'
 import 'highlight.js/styles/github.css'
+import { LineNumberedCodeBlock } from './LineNumberedCodeBlock'
 
 // Register JSON language
 hljs.registerLanguage('json', json)
@@ -66,18 +67,12 @@ export function JsonViewer({ content }: JsonViewerProps) {
       </div>
 
       {/* Content */}
-      <div className="bg-[#f6f8fa] overflow-auto">
-        <pre className="p-4 m-0 text-sm leading-relaxed">
-          <code
-            className="hljs language-json"
-            dangerouslySetInnerHTML={{ __html: highlighted }}
-            style={{
-              fontFamily: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace',
-              backgroundColor: 'transparent',
-            }}
-          />
-        </pre>
-      </div>
+      <LineNumberedCodeBlock
+        content={formattedContent}
+        highlightedHtml={highlighted}
+        languageClass="language-json"
+        paddingClassName="p-4"
+      />
     </div>
   )
 }

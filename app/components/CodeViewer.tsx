@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Copy, Check } from 'lucide-react'
 import hljs from 'highlight.js/lib/core'
 
@@ -16,6 +16,7 @@ import json from 'highlight.js/lib/languages/json'
 import sql from 'highlight.js/lib/languages/sql'
 
 import 'highlight.js/styles/github.css'
+import { LineNumberedCodeBlock } from './LineNumberedCodeBlock'
 
 // Register languages
 hljs.registerLanguage('javascript', javascript)
@@ -36,19 +37,9 @@ interface CodeViewerProps {
 
 export function CodeViewer({ content, language, fileName }: CodeViewerProps) {
   const [copied, setCopied] = useState(false)
-  const [highlighted, setHighlighted] = useState('')
-
-  useEffect(() => {
-    // Apply syntax highlighting
-    if (language && hljs.getLanguage(language)) {
-      const result = hljs.highlight(content, { language })
-      setHighlighted(result.value)
-    } else {
-      // Auto-detect or plain text
-      const result = hljs.highlightAuto(content)
-      setHighlighted(result.value)
-    }
-  }, [content, language])
+  const highlighted = language && hljs.getLanguage(language)
+    ? hljs.highlight(content, { language }).value
+    : hljs.highlightAuto(content).value
 
   const handleCopy = async () => {
     try {
@@ -94,18 +85,12 @@ export function CodeViewer({ content, language, fileName }: CodeViewerProps) {
       </div>
 
       {/* Content */}
-      <div className="bg-[#f6f8fa] overflow-auto max-h-[80vh]">
-        <pre className="p-3 md:p-4 m-0 text-sm leading-relaxed">
-          <code
-            className={`hljs ${language ? `language-${language}` : ''}`}
-            dangerouslySetInnerHTML={{ __html: highlighted }}
-            style={{
-              fontFamily: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace',
-              backgroundColor: 'transparent',
-            }}
-          />
-        </pre>
-      </div>
+      <LineNumberedCodeBlock
+        content={content}
+        highlightedHtml={highlighted}
+        languageClass={language ? `language-${language}` : ''}
+        maxHeightClassName="max-h-[80vh]"
+      />
     </div>
   )
 }
