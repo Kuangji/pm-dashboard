@@ -1,0 +1,542 @@
+{
+  "summaries": [
+    {
+      "provider": "nox",
+      "keyword": "baby supplement",
+      "total": 148,
+      "completed": 148,
+      "failed": 0,
+      "labels": {
+        "fit": 39,
+        "adjacent": 58,
+        "badcase": 51,
+        "failed": 0
+      },
+      "badcaseRate": 0.34459459459459457,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 17,
+          "badcaseRate": 0.34
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 11,
+          "badcaseRate": 0.22
+        },
+        {
+          "page": 3,
+          "total": 48,
+          "badcase": 23,
+          "badcaseRate": 0.4791666666666667
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/baby-supplement/nox-youtube"
+    },
+    {
+      "provider": "xtb",
+      "keyword": "baby supplement",
+      "total": 165,
+      "completed": 165,
+      "failed": 0,
+      "labels": {
+        "fit": 39,
+        "adjacent": 70,
+        "badcase": 56,
+        "failed": 0
+      },
+      "badcaseRate": 0.3393939393939394,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 15,
+          "badcaseRate": 0.3
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 14,
+          "badcaseRate": 0.28
+        },
+        {
+          "page": 3,
+          "total": 50,
+          "badcase": 21,
+          "badcaseRate": 0.42
+        },
+        {
+          "page": 4,
+          "total": 15,
+          "badcase": 6,
+          "badcaseRate": 0.4
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/baby-supplement/xtb-youtube"
+    },
+    {
+      "provider": "nox",
+      "keyword": "agricultural products",
+      "total": 500,
+      "completed": 500,
+      "failed": 0,
+      "labels": {
+        "fit": 186,
+        "adjacent": 180,
+        "badcase": 134,
+        "failed": 0
+      },
+      "badcaseRate": 0.268,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 10,
+          "badcaseRate": 0.2
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 5,
+          "badcaseRate": 0.1
+        },
+        {
+          "page": 3,
+          "total": 50,
+          "badcase": 14,
+          "badcaseRate": 0.28
+        },
+        {
+          "page": 4,
+          "total": 50,
+          "badcase": 14,
+          "badcaseRate": 0.28
+        },
+        {
+          "page": 5,
+          "total": 50,
+          "badcase": 17,
+          "badcaseRate": 0.34
+        },
+        {
+          "page": 6,
+          "total": 50,
+          "badcase": 9,
+          "badcaseRate": 0.18
+        },
+        {
+          "page": 7,
+          "total": 50,
+          "badcase": 14,
+          "badcaseRate": 0.28
+        },
+        {
+          "page": 8,
+          "total": 50,
+          "badcase": 16,
+          "badcaseRate": 0.32
+        },
+        {
+          "page": 9,
+          "total": 50,
+          "badcase": 16,
+          "badcaseRate": 0.32
+        },
+        {
+          "page": 10,
+          "total": 50,
+          "badcase": 19,
+          "badcaseRate": 0.38
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/agricultural-products/nox-youtube"
+    },
+    {
+      "provider": "xtb",
+      "keyword": "agricultural products",
+      "total": 500,
+      "completed": 500,
+      "failed": 0,
+      "labels": {
+        "fit": 190,
+        "adjacent": 184,
+        "badcase": 126,
+        "failed": 0
+      },
+      "badcaseRate": 0.252,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 7,
+          "badcaseRate": 0.14
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 10,
+          "badcaseRate": 0.2
+        },
+        {
+          "page": 3,
+          "total": 50,
+          "badcase": 9,
+          "badcaseRate": 0.18
+        },
+        {
+          "page": 4,
+          "total": 50,
+          "badcase": 9,
+          "badcaseRate": 0.18
+        },
+        {
+          "page": 5,
+          "total": 50,
+          "badcase": 11,
+          "badcaseRate": 0.22
+        },
+        {
+          "page": 6,
+          "total": 50,
+          "badcase": 16,
+          "badcaseRate": 0.32
+        },
+        {
+          "page": 7,
+          "total": 50,
+          "badcase": 16,
+          "badcaseRate": 0.32
+        },
+        {
+          "page": 8,
+          "total": 50,
+          "badcase": 14,
+          "badcaseRate": 0.28
+        },
+        {
+          "page": 9,
+          "total": 50,
+          "badcase": 18,
+          "badcaseRate": 0.36
+        },
+        {
+          "page": 10,
+          "total": 50,
+          "badcase": 16,
+          "badcaseRate": 0.32
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/agricultural-products/xtb-youtube"
+    },
+    {
+      "provider": "nox",
+      "keyword": "beauty",
+      "total": 500,
+      "completed": 500,
+      "failed": 0,
+      "labels": {
+        "fit": 355,
+        "adjacent": 121,
+        "badcase": 24,
+        "failed": 0
+      },
+      "badcaseRate": 0.048,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 5,
+          "badcaseRate": 0.1
+        },
+        {
+          "page": 3,
+          "total": 50,
+          "badcase": 3,
+          "badcaseRate": 0.06
+        },
+        {
+          "page": 4,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 5,
+          "total": 50,
+          "badcase": 4,
+          "badcaseRate": 0.08
+        },
+        {
+          "page": 6,
+          "total": 50,
+          "badcase": 3,
+          "badcaseRate": 0.06
+        },
+        {
+          "page": 7,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 8,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 9,
+          "total": 50,
+          "badcase": 3,
+          "badcaseRate": 0.06
+        },
+        {
+          "page": 10,
+          "total": 50,
+          "badcase": 3,
+          "badcaseRate": 0.06
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/beauty/nox-youtube"
+    },
+    {
+      "provider": "xtb",
+      "keyword": "beauty",
+      "total": 500,
+      "completed": 500,
+      "failed": 0,
+      "labels": {
+        "fit": 348,
+        "adjacent": 119,
+        "badcase": 33,
+        "failed": 0
+      },
+      "badcaseRate": 0.066,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 3,
+          "badcaseRate": 0.06
+        },
+        {
+          "page": 3,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 4,
+          "total": 50,
+          "badcase": 5,
+          "badcaseRate": 0.1
+        },
+        {
+          "page": 5,
+          "total": 50,
+          "badcase": 8,
+          "badcaseRate": 0.16
+        },
+        {
+          "page": 6,
+          "total": 50,
+          "badcase": 4,
+          "badcaseRate": 0.08
+        },
+        {
+          "page": 7,
+          "total": 50,
+          "badcase": 4,
+          "badcaseRate": 0.08
+        },
+        {
+          "page": 8,
+          "total": 50,
+          "badcase": 2,
+          "badcaseRate": 0.04
+        },
+        {
+          "page": 9,
+          "total": 50,
+          "badcase": 2,
+          "badcaseRate": 0.04
+        },
+        {
+          "page": 10,
+          "total": 50,
+          "badcase": 4,
+          "badcaseRate": 0.08
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/beauty/xtb-youtube"
+    },
+    {
+      "provider": "nox",
+      "keyword": "fashion",
+      "total": 500,
+      "completed": 500,
+      "failed": 0,
+      "labels": {
+        "fit": 347,
+        "adjacent": 130,
+        "badcase": 23,
+        "failed": 0
+      },
+      "badcaseRate": 0.046,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 3,
+          "badcaseRate": 0.06
+        },
+        {
+          "page": 3,
+          "total": 50,
+          "badcase": 2,
+          "badcaseRate": 0.04
+        },
+        {
+          "page": 4,
+          "total": 50,
+          "badcase": 3,
+          "badcaseRate": 0.06
+        },
+        {
+          "page": 5,
+          "total": 50,
+          "badcase": 2,
+          "badcaseRate": 0.04
+        },
+        {
+          "page": 6,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 7,
+          "total": 50,
+          "badcase": 2,
+          "badcaseRate": 0.04
+        },
+        {
+          "page": 8,
+          "total": 50,
+          "badcase": 3,
+          "badcaseRate": 0.06
+        },
+        {
+          "page": 9,
+          "total": 50,
+          "badcase": 3,
+          "badcaseRate": 0.06
+        },
+        {
+          "page": 10,
+          "total": 50,
+          "badcase": 4,
+          "badcaseRate": 0.08
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/fashion/nox-youtube"
+    },
+    {
+      "provider": "xtb",
+      "keyword": "fashion",
+      "total": 500,
+      "completed": 500,
+      "failed": 0,
+      "labels": {
+        "fit": 347,
+        "adjacent": 129,
+        "badcase": 24,
+        "failed": 0
+      },
+      "badcaseRate": 0.048,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 2,
+          "badcaseRate": 0.04
+        },
+        {
+          "page": 3,
+          "total": 50,
+          "badcase": 2,
+          "badcaseRate": 0.04
+        },
+        {
+          "page": 4,
+          "total": 50,
+          "badcase": 5,
+          "badcaseRate": 0.1
+        },
+        {
+          "page": 5,
+          "total": 50,
+          "badcase": 2,
+          "badcaseRate": 0.04
+        },
+        {
+          "page": 6,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 7,
+          "total": 50,
+          "badcase": 3,
+          "badcaseRate": 0.06
+        },
+        {
+          "page": 8,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 9,
+          "total": 50,
+          "badcase": 3,
+          "badcaseRate": 0.06
+        },
+        {
+          "page": 10,
+          "total": 50,
+          "badcase": 5,
+          "badcaseRate": 0.1
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/fashion/xtb-youtube"
+    }
+  ]
+}

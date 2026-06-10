@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-06-10T10:33:45.595Z",
+  "updatedAt": "2026-06-10T14:05:02.904Z",
   "navigation": {
     "docs": [
       {
@@ -25476,6 +25476,457 @@
                                 "isImage": false
                               }
                             ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1",
+                "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/README.md",
+                    "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/README.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "aggregate-summary.json",
+                    "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/aggregate-summary.json",
+                    "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/aggregate-summary.json",
+                    "fileType": "json",
+                    "language": "json",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "summary.page-trend.csv",
+                    "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/summary.page-trend.csv",
+                    "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/summary.page-trend.csv",
+                    "fileType": "table",
+                    "language": "csv",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "summary.provider-comparison.csv",
+                    "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/summary.provider-comparison.csv",
+                    "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/summary.provider-comparison.csv",
+                    "fileType": "table",
+                    "language": "csv",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "directory",
+                    "name": "instagram",
+                    "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/README.md",
+                        "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "aggregate_summary.json",
+                        "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/aggregate_summary.json",
+                        "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/aggregate_summary.json",
+                        "fileType": "json",
+                        "language": "json",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-fine-grained-summary.md",
+                        "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/provider-fine-grained-summary.md",
+                        "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/provider-fine-grained-summary.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "agricultural-products",
+                        "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/agricultural-products",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/agricultural-products/README.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/agricultural-products/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "provider-comparison.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/agricultural-products/provider-comparison.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/agricultural-products/provider-comparison.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "baby-supplement",
+                        "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/baby-supplement",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/baby-supplement/README.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/baby-supplement/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "provider-comparison.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/baby-supplement/provider-comparison.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/baby-supplement/provider-comparison.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "beauty",
+                        "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/beauty",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/beauty/README.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/beauty/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "provider-comparison.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/beauty/provider-comparison.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/beauty/provider-comparison.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "fashion",
+                        "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/fashion",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/fashion/README.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/fashion/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "provider-comparison.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/fashion/provider-comparison.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/fashion/provider-comparison.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "tiktok",
+                    "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/README.md",
+                        "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "aggregate_summary.json",
+                        "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/aggregate_summary.json",
+                        "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/aggregate_summary.json",
+                        "fileType": "json",
+                        "language": "json",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-fine-grained-summary.md",
+                        "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/provider-fine-grained-summary.md",
+                        "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/provider-fine-grained-summary.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "agricultural-products",
+                        "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/agricultural-products",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/agricultural-products/README.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/agricultural-products/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "provider-comparison.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/agricultural-products/provider-comparison.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/agricultural-products/provider-comparison.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "baby-supplement",
+                        "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/baby-supplement",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/baby-supplement/README.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/baby-supplement/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "provider-comparison.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/baby-supplement/provider-comparison.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/baby-supplement/provider-comparison.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "beauty",
+                        "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/beauty",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/beauty/README.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/beauty/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "provider-comparison.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/beauty/provider-comparison.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/beauty/provider-comparison.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "fashion",
+                        "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/fashion",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/fashion/README.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/fashion/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "provider-comparison.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/fashion/provider-comparison.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/tiktok/fashion/provider-comparison.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "youtube",
+                    "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/README.md",
+                        "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "aggregate_summary.json",
+                        "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/aggregate_summary.json",
+                        "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/aggregate_summary.json",
+                        "fileType": "json",
+                        "language": "json",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "provider-fine-grained-summary.md",
+                        "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/provider-fine-grained-summary.md",
+                        "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/provider-fine-grained-summary.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "directory",
+                        "name": "agricultural-products",
+                        "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/agricultural-products",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/agricultural-products/README.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/agricultural-products/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "provider-comparison.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/agricultural-products/provider-comparison.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/agricultural-products/provider-comparison.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "baby-supplement",
+                        "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/baby-supplement",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/baby-supplement/README.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/baby-supplement/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "provider-comparison.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/baby-supplement/provider-comparison.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/baby-supplement/provider-comparison.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "beauty",
+                        "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/beauty",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/beauty/README.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/beauty/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "provider-comparison.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/beauty/provider-comparison.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/beauty/provider-comparison.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "fashion",
+                        "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/fashion",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/fashion/README.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/fashion/README.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
+                          },
+                          {
+                            "type": "file",
+                            "name": "provider-comparison.md",
+                            "path": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/fashion/provider-comparison.md",
+                            "slug": "03-research/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/youtube/fashion/provider-comparison.md",
+                            "fileType": "markdown",
+                            "isText": true,
+                            "isImage": false
                           }
                         ]
                       }

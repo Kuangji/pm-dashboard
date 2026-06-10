@@ -1,0 +1,13 @@
+platform,keyword,nox_total,xtb_total,nox_recall,xtb_recall,nox_badcase_rate,xtb_badcase_rate,delta_pp,xtb_effect,nox_fit,nox_adjacent,nox_badcase,xtb_fit,xtb_adjacent,xtb_badcase,nox_avg_record_s,xtb_avg_record_s,nox_avg_shard_s,xtb_avg_shard_s
+youtube,baby supplement,148,165,148,165,34.5%,33.9%,-0.5pp,better,39,58,51,39,70,56,3.7,4.4,90.9,74.6
+youtube,agricultural products,500,500,871,883,26.8%,25.2%,-1.6pp,better,186,180,134,190,184,126,4.4,3.4,49.7,72.4
+youtube,beauty,500,500,445000,441900,4.8%,6.6%,+1.8pp,worse,355,121,24,348,119,33,2.9,3.0,61.2,69.2
+youtube,fashion,500,500,278300,274600,4.6%,4.8%,+0.2pp,worse,347,130,23,347,129,24,2.9,2.7,64.5,62.2
+tiktok,baby supplement,500,500,7876,7871,32.4%,29.8%,-2.6pp,better,107,231,162,98,253,149,4.7,4.0,53.7,80.9
+tiktok,agricultural products,500,500,4177,4148,26.4%,24.0%,-2.4pp,better,150,218,132,178,202,120,4.0,3.9,66.2,92.9
+tiktok,beauty,500,500,3750700,3719400,5.0%,7.0%,+2.0pp,worse,370,105,25,354,111,35,3.1,2.9,42.2,38.8
+tiktok,fashion,500,500,1526600,1498800,2.2%,1.2%,-1.0pp,better,381,108,11,391,103,6,2.5,2.6,46.1,44.9
+instagram,baby supplement,500,500,9425,9430,28.8%,22.4%,-6.4pp,better,97,259,144,119,269,112,3.8,3.9,45.9,70.1
+instagram,agricultural products,500,500,10900,10900,18.0%,14.2%,-3.8pp,better,218,192,90,226,203,71,3.3,3.2,63.5,68.1
+instagram,beauty,500,500,2022700,2017800,0.8%,1.4%,+0.6pp,worse,389,107,4,405,88,7,3.1,3.2,35.1,42.1
+instagram,fashion,500,500,907600,893900,0.4%,0.8%,+0.4pp,worse,367,131,2,378,118,4,4.3,3.1,42.9,46.7

@@ -1,0 +1,620 @@
+{
+  "summaries": [
+    {
+      "provider": "nox",
+      "keyword": "baby supplement",
+      "total": 500,
+      "completed": 500,
+      "failed": 0,
+      "labels": {
+        "fit": 97,
+        "adjacent": 259,
+        "badcase": 144,
+        "failed": 0
+      },
+      "badcaseRate": 0.288,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 18,
+          "badcaseRate": 0.36
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 17,
+          "badcaseRate": 0.34
+        },
+        {
+          "page": 3,
+          "total": 50,
+          "badcase": 11,
+          "badcaseRate": 0.22
+        },
+        {
+          "page": 4,
+          "total": 50,
+          "badcase": 14,
+          "badcaseRate": 0.28
+        },
+        {
+          "page": 5,
+          "total": 50,
+          "badcase": 18,
+          "badcaseRate": 0.36
+        },
+        {
+          "page": 6,
+          "total": 50,
+          "badcase": 7,
+          "badcaseRate": 0.14
+        },
+        {
+          "page": 7,
+          "total": 50,
+          "badcase": 14,
+          "badcaseRate": 0.28
+        },
+        {
+          "page": 8,
+          "total": 50,
+          "badcase": 12,
+          "badcaseRate": 0.24
+        },
+        {
+          "page": 9,
+          "total": 50,
+          "badcase": 15,
+          "badcaseRate": 0.3
+        },
+        {
+          "page": 10,
+          "total": 50,
+          "badcase": 18,
+          "badcaseRate": 0.36
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/baby-supplement/nox-instagram"
+    },
+    {
+      "provider": "xtb",
+      "keyword": "baby supplement",
+      "total": 500,
+      "completed": 500,
+      "failed": 0,
+      "labels": {
+        "fit": 119,
+        "adjacent": 269,
+        "badcase": 112,
+        "failed": 0
+      },
+      "badcaseRate": 0.224,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 12,
+          "badcaseRate": 0.24
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 11,
+          "badcaseRate": 0.22
+        },
+        {
+          "page": 3,
+          "total": 50,
+          "badcase": 11,
+          "badcaseRate": 0.22
+        },
+        {
+          "page": 4,
+          "total": 50,
+          "badcase": 13,
+          "badcaseRate": 0.26
+        },
+        {
+          "page": 5,
+          "total": 50,
+          "badcase": 9,
+          "badcaseRate": 0.18
+        },
+        {
+          "page": 6,
+          "total": 50,
+          "badcase": 12,
+          "badcaseRate": 0.24
+        },
+        {
+          "page": 7,
+          "total": 50,
+          "badcase": 13,
+          "badcaseRate": 0.26
+        },
+        {
+          "page": 8,
+          "total": 50,
+          "badcase": 11,
+          "badcaseRate": 0.22
+        },
+        {
+          "page": 9,
+          "total": 50,
+          "badcase": 10,
+          "badcaseRate": 0.2
+        },
+        {
+          "page": 10,
+          "total": 50,
+          "badcase": 10,
+          "badcaseRate": 0.2
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/baby-supplement/xtb-instagram"
+    },
+    {
+      "provider": "nox",
+      "keyword": "agricultural products",
+      "total": 500,
+      "completed": 500,
+      "failed": 0,
+      "labels": {
+        "fit": 218,
+        "adjacent": 192,
+        "badcase": 90,
+        "failed": 0
+      },
+      "badcaseRate": 0.18,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 14,
+          "badcaseRate": 0.28
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 11,
+          "badcaseRate": 0.22
+        },
+        {
+          "page": 3,
+          "total": 50,
+          "badcase": 6,
+          "badcaseRate": 0.12
+        },
+        {
+          "page": 4,
+          "total": 50,
+          "badcase": 10,
+          "badcaseRate": 0.2
+        },
+        {
+          "page": 5,
+          "total": 50,
+          "badcase": 3,
+          "badcaseRate": 0.06
+        },
+        {
+          "page": 6,
+          "total": 50,
+          "badcase": 5,
+          "badcaseRate": 0.1
+        },
+        {
+          "page": 7,
+          "total": 50,
+          "badcase": 7,
+          "badcaseRate": 0.14
+        },
+        {
+          "page": 8,
+          "total": 50,
+          "badcase": 9,
+          "badcaseRate": 0.18
+        },
+        {
+          "page": 9,
+          "total": 50,
+          "badcase": 13,
+          "badcaseRate": 0.26
+        },
+        {
+          "page": 10,
+          "total": 50,
+          "badcase": 12,
+          "badcaseRate": 0.24
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/agricultural-products/nox-instagram"
+    },
+    {
+      "provider": "xtb",
+      "keyword": "agricultural products",
+      "total": 500,
+      "completed": 500,
+      "failed": 0,
+      "labels": {
+        "fit": 226,
+        "adjacent": 203,
+        "badcase": 71,
+        "failed": 0
+      },
+      "badcaseRate": 0.142,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 6,
+          "badcaseRate": 0.12
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 6,
+          "badcaseRate": 0.12
+        },
+        {
+          "page": 3,
+          "total": 50,
+          "badcase": 6,
+          "badcaseRate": 0.12
+        },
+        {
+          "page": 4,
+          "total": 50,
+          "badcase": 7,
+          "badcaseRate": 0.14
+        },
+        {
+          "page": 5,
+          "total": 50,
+          "badcase": 8,
+          "badcaseRate": 0.16
+        },
+        {
+          "page": 6,
+          "total": 50,
+          "badcase": 5,
+          "badcaseRate": 0.1
+        },
+        {
+          "page": 7,
+          "total": 50,
+          "badcase": 7,
+          "badcaseRate": 0.14
+        },
+        {
+          "page": 8,
+          "total": 50,
+          "badcase": 7,
+          "badcaseRate": 0.14
+        },
+        {
+          "page": 9,
+          "total": 50,
+          "badcase": 6,
+          "badcaseRate": 0.12
+        },
+        {
+          "page": 10,
+          "total": 50,
+          "badcase": 13,
+          "badcaseRate": 0.26
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/agricultural-products/xtb-instagram"
+    },
+    {
+      "provider": "nox",
+      "keyword": "beauty",
+      "total": 500,
+      "completed": 500,
+      "failed": 0,
+      "labels": {
+        "fit": 389,
+        "adjacent": 107,
+        "badcase": 4,
+        "failed": 0
+      },
+      "badcaseRate": 0.008,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 3,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 4,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 5,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 6,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 7,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 8,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 9,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 10,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/beauty/nox-instagram"
+    },
+    {
+      "provider": "xtb",
+      "keyword": "beauty",
+      "total": 500,
+      "completed": 500,
+      "failed": 0,
+      "labels": {
+        "fit": 405,
+        "adjacent": 88,
+        "badcase": 7,
+        "failed": 0
+      },
+      "badcaseRate": 0.014,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 3,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 4,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 5,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 6,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 7,
+          "total": 50,
+          "badcase": 2,
+          "badcaseRate": 0.04
+        },
+        {
+          "page": 8,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 9,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 10,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/beauty/xtb-instagram"
+    },
+    {
+      "provider": "nox",
+      "keyword": "fashion",
+      "total": 500,
+      "completed": 500,
+      "failed": 0,
+      "labels": {
+        "fit": 367,
+        "adjacent": 131,
+        "badcase": 2,
+        "failed": 0
+      },
+      "badcaseRate": 0.004,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 3,
+          "total": 50,
+          "badcase": 2,
+          "badcaseRate": 0.04
+        },
+        {
+          "page": 4,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 5,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 6,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 7,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 8,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 9,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 10,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/fashion/nox-instagram"
+    },
+    {
+      "provider": "xtb",
+      "keyword": "fashion",
+      "total": 500,
+      "completed": 500,
+      "failed": 0,
+      "labels": {
+        "fit": 378,
+        "adjacent": 118,
+        "badcase": 4,
+        "failed": 0
+      },
+      "badcaseRate": 0.008,
+      "pages": [
+        {
+          "page": 1,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 2,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 3,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 4,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 5,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 6,
+          "total": 50,
+          "badcase": 1,
+          "badcaseRate": 0.02
+        },
+        {
+          "page": 7,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 8,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 9,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        },
+        {
+          "page": 10,
+          "total": 50,
+          "badcase": 0,
+          "badcaseRate": 0
+        }
+      ],
+      "runDir": "tmp/channel-search-review/20260610-nox-vs-xtb-4kw-allplatform-us-front10-content-tone-v1/instagram/fashion/xtb-instagram"
+    }
+  ]
+}

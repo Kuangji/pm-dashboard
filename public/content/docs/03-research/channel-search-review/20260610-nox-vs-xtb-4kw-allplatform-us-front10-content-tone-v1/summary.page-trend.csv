@@ -1,0 +1,121 @@
+platform,keyword,page,nox_total,xtb_total,nox_badcase,xtb_badcase,nox_badcase_rate,xtb_badcase_rate,delta_pp,xtb_effect
+youtube,baby supplement,1,50,50,17,15,34.0%,30.0%,-4.0pp,better
+youtube,baby supplement,2,50,50,11,14,22.0%,28.0%,+6.0pp,worse
+youtube,baby supplement,3,48,50,23,21,47.9%,42.0%,-5.9pp,better
+youtube,baby supplement,4,0,15,0,6,,40.0%,,na
+youtube,baby supplement,5,0,0,0,0,,,,na
+youtube,baby supplement,6,0,0,0,0,,,,na
+youtube,baby supplement,7,0,0,0,0,,,,na
+youtube,baby supplement,8,0,0,0,0,,,,na
+youtube,baby supplement,9,0,0,0,0,,,,na
+youtube,baby supplement,10,0,0,0,0,,,,na
+youtube,agricultural products,1,50,50,10,7,20.0%,14.0%,-6.0pp,better
+youtube,agricultural products,2,50,50,5,10,10.0%,20.0%,+10.0pp,worse
+youtube,agricultural products,3,50,50,14,9,28.0%,18.0%,-10.0pp,better
+youtube,agricultural products,4,50,50,14,9,28.0%,18.0%,-10.0pp,better
+youtube,agricultural products,5,50,50,17,11,34.0%,22.0%,-12.0pp,better
+youtube,agricultural products,6,50,50,9,16,18.0%,32.0%,+14.0pp,worse
+youtube,agricultural products,7,50,50,14,16,28.0%,32.0%,+4.0pp,worse
+youtube,agricultural products,8,50,50,16,14,32.0%,28.0%,-4.0pp,better
+youtube,agricultural products,9,50,50,16,18,32.0%,36.0%,+4.0pp,worse
+youtube,agricultural products,10,50,50,19,16,38.0%,32.0%,-6.0pp,better
+youtube,beauty,1,50,50,1,0,2.0%,0.0%,-2.0pp,better
+youtube,beauty,2,50,50,5,3,10.0%,6.0%,-4.0pp,better
+youtube,beauty,3,50,50,3,1,6.0%,2.0%,-4.0pp,better
+youtube,beauty,4,50,50,1,5,2.0%,10.0%,+8.0pp,worse
+youtube,beauty,5,50,50,4,8,8.0%,16.0%,+8.0pp,worse
+youtube,beauty,6,50,50,3,4,6.0%,8.0%,+2.0pp,worse
+youtube,beauty,7,50,50,1,4,2.0%,8.0%,+6.0pp,worse
+youtube,beauty,8,50,50,0,2,0.0%,4.0%,+4.0pp,worse
+youtube,beauty,9,50,50,3,2,6.0%,4.0%,-2.0pp,better
+youtube,beauty,10,50,50,3,4,6.0%,8.0%,+2.0pp,worse
+youtube,fashion,1,50,50,1,1,2.0%,2.0%,+0.0pp,flat
+youtube,fashion,2,50,50,3,2,6.0%,4.0%,-2.0pp,better
+youtube,fashion,3,50,50,2,2,4.0%,4.0%,+0.0pp,flat
+youtube,fashion,4,50,50,3,5,6.0%,10.0%,+4.0pp,worse
+youtube,fashion,5,50,50,2,2,4.0%,4.0%,+0.0pp,flat
+youtube,fashion,6,50,50,0,0,0.0%,0.0%,+0.0pp,flat
+youtube,fashion,7,50,50,2,3,4.0%,6.0%,+2.0pp,worse
+youtube,fashion,8,50,50,3,1,6.0%,2.0%,-4.0pp,better
+youtube,fashion,9,50,50,3,3,6.0%,6.0%,+0.0pp,flat
+youtube,fashion,10,50,50,4,5,8.0%,10.0%,+2.0pp,worse
+tiktok,baby supplement,1,50,50,21,8,42.0%,16.0%,-26.0pp,better
+tiktok,baby supplement,2,50,50,15,15,30.0%,30.0%,+0.0pp,flat
+tiktok,baby supplement,3,50,50,20,13,40.0%,26.0%,-14.0pp,better
+tiktok,baby supplement,4,50,50,12,17,24.0%,34.0%,+10.0pp,worse
+tiktok,baby supplement,5,50,50,11,20,22.0%,40.0%,+18.0pp,worse
+tiktok,baby supplement,6,50,50,13,16,26.0%,32.0%,+6.0pp,worse
+tiktok,baby supplement,7,50,50,19,13,38.0%,26.0%,-12.0pp,better
+tiktok,baby supplement,8,50,50,23,16,46.0%,32.0%,-14.0pp,better
+tiktok,baby supplement,9,50,50,18,17,36.0%,34.0%,-2.0pp,better
+tiktok,baby supplement,10,50,50,10,14,20.0%,28.0%,+8.0pp,worse
+tiktok,agricultural products,1,50,50,9,8,18.0%,16.0%,-2.0pp,better
+tiktok,agricultural products,2,50,50,10,13,20.0%,26.0%,+6.0pp,worse
+tiktok,agricultural products,3,50,50,7,5,14.0%,10.0%,-4.0pp,better
+tiktok,agricultural products,4,50,50,9,10,18.0%,20.0%,+2.0pp,worse
+tiktok,agricultural products,5,50,50,9,10,18.0%,20.0%,+2.0pp,worse
+tiktok,agricultural products,6,50,50,9,17,18.0%,34.0%,+16.0pp,worse
+tiktok,agricultural products,7,50,50,13,10,26.0%,20.0%,-6.0pp,better
+tiktok,agricultural products,8,50,50,18,13,36.0%,26.0%,-10.0pp,better
+tiktok,agricultural products,9,50,50,28,14,56.0%,28.0%,-28.0pp,better
+tiktok,agricultural products,10,50,50,20,20,40.0%,40.0%,+0.0pp,flat
+tiktok,beauty,1,50,50,1,7,2.0%,14.0%,+12.0pp,worse
+tiktok,beauty,2,50,50,1,3,2.0%,6.0%,+4.0pp,worse
+tiktok,beauty,3,50,50,4,0,8.0%,0.0%,-8.0pp,better
+tiktok,beauty,4,50,50,4,4,8.0%,8.0%,+0.0pp,flat
+tiktok,beauty,5,50,50,3,6,6.0%,12.0%,+6.0pp,worse
+tiktok,beauty,6,50,50,1,3,2.0%,6.0%,+4.0pp,worse
+tiktok,beauty,7,50,50,5,1,10.0%,2.0%,-8.0pp,better
+tiktok,beauty,8,50,50,0,6,0.0%,12.0%,+12.0pp,worse
+tiktok,beauty,9,50,50,4,0,8.0%,0.0%,-8.0pp,better
+tiktok,beauty,10,50,50,2,5,4.0%,10.0%,+6.0pp,worse
+tiktok,fashion,1,50,50,0,0,0.0%,0.0%,+0.0pp,flat
+tiktok,fashion,2,50,50,2,0,4.0%,0.0%,-4.0pp,better
+tiktok,fashion,3,50,50,1,0,2.0%,0.0%,-2.0pp,better
+tiktok,fashion,4,50,50,1,0,2.0%,0.0%,-2.0pp,better
+tiktok,fashion,5,50,50,3,0,6.0%,0.0%,-6.0pp,better
+tiktok,fashion,6,50,50,1,0,2.0%,0.0%,-2.0pp,better
+tiktok,fashion,7,50,50,0,1,0.0%,2.0%,+2.0pp,worse
+tiktok,fashion,8,50,50,0,4,0.0%,8.0%,+8.0pp,worse
+tiktok,fashion,9,50,50,0,1,0.0%,2.0%,+2.0pp,worse
+tiktok,fashion,10,50,50,3,0,6.0%,0.0%,-6.0pp,better
+instagram,baby supplement,1,50,50,18,12,36.0%,24.0%,-12.0pp,better
+instagram,baby supplement,2,50,50,17,11,34.0%,22.0%,-12.0pp,better
+instagram,baby supplement,3,50,50,11,11,22.0%,22.0%,+0.0pp,flat
+instagram,baby supplement,4,50,50,14,13,28.0%,26.0%,-2.0pp,better
+instagram,baby supplement,5,50,50,18,9,36.0%,18.0%,-18.0pp,better
+instagram,baby supplement,6,50,50,7,12,14.0%,24.0%,+10.0pp,worse
+instagram,baby supplement,7,50,50,14,13,28.0%,26.0%,-2.0pp,better
+instagram,baby supplement,8,50,50,12,11,24.0%,22.0%,-2.0pp,better
+instagram,baby supplement,9,50,50,15,10,30.0%,20.0%,-10.0pp,better
+instagram,baby supplement,10,50,50,18,10,36.0%,20.0%,-16.0pp,better
+instagram,agricultural products,1,50,50,14,6,28.0%,12.0%,-16.0pp,better
+instagram,agricultural products,2,50,50,11,6,22.0%,12.0%,-10.0pp,better
+instagram,agricultural products,3,50,50,6,6,12.0%,12.0%,+0.0pp,flat
+instagram,agricultural products,4,50,50,10,7,20.0%,14.0%,-6.0pp,better
+instagram,agricultural products,5,50,50,3,8,6.0%,16.0%,+10.0pp,worse
+instagram,agricultural products,6,50,50,5,5,10.0%,10.0%,+0.0pp,flat
+instagram,agricultural products,7,50,50,7,7,14.0%,14.0%,+0.0pp,flat
+instagram,agricultural products,8,50,50,9,7,18.0%,14.0%,-4.0pp,better
+instagram,agricultural products,9,50,50,13,6,26.0%,12.0%,-14.0pp,better
+instagram,agricultural products,10,50,50,12,13,24.0%,26.0%,+2.0pp,worse
+instagram,beauty,1,50,50,1,1,2.0%,2.0%,+0.0pp,flat
+instagram,beauty,2,50,50,1,1,2.0%,2.0%,+0.0pp,flat
+instagram,beauty,3,50,50,0,0,0.0%,0.0%,+0.0pp,flat
+instagram,beauty,4,50,50,1,0,2.0%,0.0%,-2.0pp,better
+instagram,beauty,5,50,50,0,0,0.0%,0.0%,+0.0pp,flat
+instagram,beauty,6,50,50,0,1,0.0%,2.0%,+2.0pp,worse
+instagram,beauty,7,50,50,0,2,0.0%,4.0%,+4.0pp,worse
+instagram,beauty,8,50,50,1,1,2.0%,2.0%,+0.0pp,flat
+instagram,beauty,9,50,50,0,1,0.0%,2.0%,+2.0pp,worse
+instagram,beauty,10,50,50,0,0,0.0%,0.0%,+0.0pp,flat
+instagram,fashion,1,50,50,0,0,0.0%,0.0%,+0.0pp,flat
+instagram,fashion,2,50,50,0,1,0.0%,2.0%,+2.0pp,worse
+instagram,fashion,3,50,50,2,1,4.0%,2.0%,-2.0pp,better
+instagram,fashion,4,50,50,0,1,0.0%,2.0%,+2.0pp,worse
+instagram,fashion,5,50,50,0,0,0.0%,0.0%,+0.0pp,flat
+instagram,fashion,6,50,50,0,1,0.0%,2.0%,+2.0pp,worse
+instagram,fashion,7,50,50,0,0,0.0%,0.0%,+0.0pp,flat
+instagram,fashion,8,50,50,0,0,0.0%,0.0%,+0.0pp,flat
+instagram,fashion,9,50,50,0,0,0.0%,0.0%,+0.0pp,flat
+instagram,fashion,10,50,50,0,0,0.0%,0.0%,+0.0pp,flat
