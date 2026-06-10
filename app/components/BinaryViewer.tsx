@@ -1,4 +1,5 @@
 import { Download, File } from 'lucide-react'
+import { getDocumentPublicUrl } from '@/app/lib/document-url'
 
 interface BinaryViewerProps {
   slug: string
@@ -16,8 +17,7 @@ function formatExtensionLabel(title: string, extension?: string) {
 }
 
 export function BinaryViewer({ slug, title, mimeType, extension }: BinaryViewerProps) {
-  const encodedSlug = slug.split('/').map(encodeURIComponent).join('/')
-  const downloadUrl = `/api/download/${encodedSlug}`
+  const downloadUrl = getDocumentPublicUrl(slug)
   const extensionLabel = formatExtensionLabel(title, extension)
 
   return (

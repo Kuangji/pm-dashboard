@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
 import { FileText, Code, ImageIcon, File, Download, ChevronDown, ChevronUp, Table2 } from 'lucide-react'
+import { getDocumentPublicUrl } from '@/app/lib/document-url'
 import {
   Collapsible,
   CollapsibleContent,
@@ -260,6 +261,7 @@ function TreeItem({ item, level, currentSlug, expanded, onToggle }: TreeItemProp
 
   if (item.type === 'file') {
     const encodedSlug = item.slug!.split('/').map(encodeURIComponent).join('/')
+    const downloadUrl = getDocumentPublicUrl(item.slug!)
     return (
       <div style={{ paddingLeft: `${level * 16}px` }} className="relative group">
         <Link href={`/docs/${encodedSlug}`} className={itemClasses}>
@@ -267,7 +269,7 @@ function TreeItem({ item, level, currentSlug, expanded, onToggle }: TreeItemProp
           <span className="truncate">{item.name}</span>
         </Link>
         <a
-          href={`/api/download/${encodedSlug}`}
+          href={downloadUrl}
           download
           onClick={e => e.stopPropagation()}
           className="absolute right-1 top-1/2 -translate-y-1/2 p-1 rounded opacity-0 group-hover:opacity-100 text-[#57606a] hover:text-[#0969da] hover:bg-[#eaeef2] transition-opacity"

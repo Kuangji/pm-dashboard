@@ -1,19 +1,9 @@
-import { promises as fs } from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { detectFileType, isTextFile, getMimeType, getLanguage, FileCategory } from './file-types'
+import manifestData from '@/public/content/manifest.json'
 
-// 使用相对路径，确保在构建时能找到正确的位置
-const CONTENT_DIR = path.resolve('./public/content')
-const MAX_INLINE_PREVIEW_BYTES = 2 * 1024 * 1024
-const NON_PREVIEW_DATA_FILE_PATTERNS = [
-  /(?:^|\/)records\.(?:raw|normalized)\.json$/i,
-  /(?:^|\/)run_meta\.json$/i,
-  /(?:^|\/)scores\.json$/i,
-  /(?:^|\/)badcases\.csv$/i,
-  /(?:^|\/)summary\.csv$/i,
-  /(?:^|\/)review-package\.jsonl(?:\.gz)?$/i,
-]
+export { shouldPreviewDocumentContent } from './document-preview'
 
 export interface NavItem {
   type: 'file' | 'directory'
@@ -65,6 +55,8 @@ export interface Document {
   isBinary: boolean
 }
 
+export type DocumentMetadata = Document
+
 interface ResolveDocumentTitleOptions {
   fileName: string
   rawContent: string
@@ -95,21 +87,8 @@ export function resolveDocumentTitle({
   return fileName
 }
 
-export function shouldPreviewDocumentContent(filePath: string, sizeBytes: number) {
-  const normalizedPath = filePath.replace(/\\/g, '/')
-  const fileName = path.basename(normalizedPath)
-  const fileTypeInfo = detectFileType(fileName)
-
-  if (fileTypeInfo.category === 'markdown') return true
-  if (NON_PREVIEW_DATA_FILE_PATTERNS.some((pattern) => pattern.test(normalizedPath))) return false
-
-  return sizeBytes <= MAX_INLINE_PREVIEW_BYTES
-}
-
 export async function readManifest(): Promise<Manifest> {
-  const filePath = path.join(CONTENT_DIR, 'manifest.json')
-  const content = await fs.readFile(filePath, 'utf-8')
-  return JSON.parse(content)
+  return manifestData as Manifest
 }
 
 /**
@@ -163,16 +142,6 @@ export function getFirstFile(items: NavItem[]): NavItem | undefined {
   return undefined
 }
 
-/**
- * 确保日期是字符串格式（gray-matter 可能返回 Date 对象）
- */
-function formatDate(date: unknown): string | undefined {
-  if (!date) return undefined
-  if (date instanceof Date) return date.toISOString().split('T')[0]
-  if (typeof date === 'string') return date
-  return String(date)
-}
-
 export async function readDocument(slug: string): Promise<Document> {
   const manifest = await readManifest()
 
@@ -183,59 +152,12 @@ export async function readDocument(slug: string): Promise<Document> {
     throw new Error(`Document not found: ${slug}`)
   }
 
-  // Read file
-  const filePath = path.join(CONTENT_DIR, 'docs', docItem.path)
-
   // Detect file type info
   const fileTypeInfo = detectFileType(docItem.name)
   const extension = path.extname(docItem.name).toLowerCase()
   const isText = isTextFile(docItem.name)
   const mimeType = getMimeType(docItem.name)
   const language = getLanguage(docItem.name)
-  const fileStat = await fs.stat(filePath)
-
-  // Handle text files
-  if (isText && shouldPreviewDocumentContent(docItem.path, fileStat.size)) {
-    const rawContent = await fs.readFile(filePath, 'utf-8')
-
-    // Parse frontmatter for markdown files
-    let frontmatter: DocumentFrontmatter = {}
-    let content = rawContent
-
-    if (fileTypeInfo.category === 'markdown') {
-      const parsed = matter(rawContent)
-      frontmatter = parsed.data
-      content = parsed.content.replace(/<!--\s*CONTENT-TREE-(?:START|END)\s*-->\n?/g, '')
-    } else if (fileTypeInfo.category === 'json') {
-      // For JSON files, try to parse and format
-      try {
-        const parsed = JSON.parse(rawContent)
-        content = JSON.stringify(parsed, null, 2)
-      } catch {
-        content = rawContent
-      }
-    } else {
-      // For other text files, use raw content as-is
-      content = rawContent
-    }
-
-    return {
-      slug,
-      title: docItem.name,
-      content,
-      rawContent,
-      frontmatter,
-      created: formatDate(frontmatter.created),
-      updated: formatDate(frontmatter.updated),
-      fileType: fileTypeInfo.category,
-      mimeType,
-      extension,
-      language,
-      isText: true,
-      isImage: false,
-      isBinary: false,
-    }
-  }
 
   // Handle image files
   if (fileTypeInfo.category === 'image') {
@@ -255,29 +177,24 @@ export async function readDocument(slug: string): Promise<Document> {
     }
   }
 
-  // Handle binary files
   return {
     slug,
     title: docItem.name,
     content: '',
     frontmatter: {},
-    fileType: 'binary',
+    fileType: fileTypeInfo.category,
     mimeType,
     extension,
-    isText: false,
+    language,
+    isText,
     isImage: false,
-    isBinary: true,
+    isBinary: !isText,
   }
 }
+
+export const readDocumentMetadata = readDocument
 
 export async function getAllDocuments(): Promise<NavItem[]> {
   const manifest = await readManifest()
   return flattenNavTree(manifest.navigation.docs)
-}
-
-/**
- * Get the public URL for a document (for images and other assets)
- */
-export function getDocumentPublicUrl(slug: string): string {
-  return `/content/docs/${slug}`
 }

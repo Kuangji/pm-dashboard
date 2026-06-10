@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
-import { readDocument, resolveDocumentTitle } from '@/app/lib/content'
+import { readDocumentMetadata } from '@/app/lib/content'
 import { DocumentViewer } from '@/app/components/DocumentViewer'
 import { notFound } from 'next/navigation'
 import { Calendar, Tag, FileCode, FileText, ImageIcon, File, Download, Table2 } from 'lucide-react'
+import { getDocumentPublicUrl } from '@/app/lib/document-url'
 
 export const dynamic = 'force-dynamic'
 
@@ -52,20 +53,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const slugPath = Array.isArray(slug) ? slug.map(decodeURIComponent).join('/') : decodeURIComponent(slug)
 
   try {
-    const doc = await readDocument(slugPath)
-    const metadataTitle = resolveDocumentTitle({
-      fileName: doc.title,
-      rawContent: doc.rawContent ?? '',
-      isMarkdown: doc.fileType === 'markdown',
-    })
-    const description =
-      typeof doc.frontmatter.description === 'string' && doc.frontmatter.description.trim()
-        ? doc.frontmatter.description.trim()
-        : DEFAULT_DESCRIPTION
+    const doc = await readDocumentMetadata(slugPath)
 
     return {
-      title: `${metadataTitle} | PM Dashboard`,
-      description,
+      title: `${doc.title} | PM Dashboard`,
+      description: DEFAULT_DESCRIPTION,
     }
   } catch {
     return {
@@ -79,11 +71,11 @@ export default async function DocPage({ params }: Props) {
   const { slug } = await params
   // 将数组拼接成完整路径，如 ['00-dashboard', 'pm-dashboard-architecture'] -> '00-dashboard/pm-dashboard-architecture.md'
   const slugPath = Array.isArray(slug) ? slug.map(decodeURIComponent).join('/') : decodeURIComponent(slug)
-  const encodedSlug = slug.map(encodeURIComponent).join('/')
+  const downloadUrl = getDocumentPublicUrl(slugPath)
 
   let doc
   try {
-    doc = await readDocument(slugPath)
+    doc = await readDocumentMetadata(slugPath)
   } catch {
     notFound()
   }
@@ -105,7 +97,7 @@ export default async function DocPage({ params }: Props) {
           </div>
           {/* Download button */}
           <a
-            href={`/api/download/${encodedSlug}`}
+            href={downloadUrl}
             download
             className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-[#57606a] hover:text-[#0969da] hover:bg-[#eaeef2] rounded-md transition-colors shrink-0"
             title="下载源文件"

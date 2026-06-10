@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { BinaryViewer } from './BinaryViewer'
 
-test('renders an unsupported-file placeholder card with a unified download link', () => {
+test('renders an unsupported-file placeholder card with a static download link', () => {
   const html = renderToStaticMarkup(
     <BinaryViewer
       slug="samples/prototype_v1.pen"
@@ -14,7 +14,7 @@ test('renders an unsupported-file placeholder card with a unified download link'
 
   assert.match(html, /无法预览/)
   assert.match(html, /下载文件/)
-  assert.match(html, /href="\/api\/download\/samples\/prototype_v1\.pen"/)
+  assert.match(html, /href="\/content\/docs\/samples\/prototype_v1\.pen"/)
   assert.match(html, /PEN/)
-  assert.doesNotMatch(html, /\/content\/docs\//)
+  assert.doesNotMatch(html, /\/api\/download\//)
 })

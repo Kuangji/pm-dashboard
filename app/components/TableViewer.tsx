@@ -10,6 +10,7 @@ import {
   type ColumnDef,
 } from '@tanstack/react-table'
 import { cn } from '@/lib/utils'
+import { getDocumentPublicUrl } from '@/app/lib/document-url'
 
 const MAX_PREVIEW_ROWS = 1000
 
@@ -33,10 +34,6 @@ type ParseState =
   | { status: 'loading' }
   | { status: 'error'; message: string }
   | { status: 'ready'; sheets: ParsedSheet[] }
-
-function encodeSlug(slug: string) {
-  return slug.split('/').map(encodeURIComponent).join('/')
-}
 
 function isDelimitedText(extension?: string) {
   return extension === '.csv' || extension === '.tsv'
@@ -104,7 +101,7 @@ function parseWorkbook(input: string | ArrayBuffer, extension?: string): ParsedS
 export function TableViewer({ slug, title, content, extension }: TableViewerProps) {
   const [state, setState] = useState<ParseState>({ status: 'loading' })
   const [activeSheetName, setActiveSheetName] = useState<string>('')
-  const downloadUrl = `/api/download/${encodeSlug(slug)}`
+  const downloadUrl = getDocumentPublicUrl(slug)
 
   useEffect(() => {
     let cancelled = false
