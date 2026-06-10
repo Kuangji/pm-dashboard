@@ -110,10 +110,64 @@ const ranks = [
   ['30 days honest review', '+0']
 ]
 
+const labelCounts = [
+  ['Launch', 42],
+  ['Review', 31],
+  ['Paid', 28],
+  ['Organic', 19],
+  ['Unboxing', 16],
+  ['Tutorial', 12],
+  ['Q2', 10],
+  ['Creator Tier', 8]
+]
+
+const tagContributionData = {
+  delta: [
+    { tag: 'Launch', content: 42, active: 31, views: 142600, engagement: 16840, likes: 13200, comments: 2140, shares: 1500, clicks: 1240 },
+    { tag: 'Review', content: 31, active: 22, views: 98600, engagement: 11210, likes: 8600, comments: 1840, shares: 770, clicks: 820 },
+    { tag: 'Paid', content: 28, active: 18, views: 76400, engagement: 8730, likes: 6900, comments: 1080, shares: 750, clicks: 630 },
+    { tag: 'Organic', content: 19, active: 14, views: 53100, engagement: 6220, likes: 4700, comments: 980, shares: 540, clicks: 390 },
+    { tag: 'Unboxing', content: 16, active: 12, views: 38600, engagement: 4210, likes: 3300, comments: 610, shares: 300, clicks: 260 },
+    { tag: 'Tutorial', content: 12, active: 9, views: 22800, engagement: 2640, likes: 2100, comments: 310, shares: 230, clicks: 140 },
+    { tag: 'Q2', content: 10, active: 7, views: 15100, engagement: 1820, likes: 1420, comments: 260, shares: 140, clicks: 90 },
+    { tag: 'Creator Tier', content: 8, active: 5, views: 9800, engagement: 1030, likes: 820, comments: 130, shares: 80, clicks: 52 }
+  ],
+  snapshot: [
+    { tag: 'Launch', content: 42, active: 42, views: 1254000, engagement: 146800, likes: 118200, comments: 18400, shares: 10200, clicks: 8400 },
+    { tag: 'Review', content: 31, active: 31, views: 982000, engagement: 103500, likes: 82000, comments: 14600, shares: 6900, clicks: 6100 },
+    { tag: 'Paid', content: 28, active: 28, views: 748000, engagement: 84200, likes: 66100, comments: 10700, shares: 7400, clicks: 5200 },
+    { tag: 'Organic', content: 19, active: 19, views: 486000, engagement: 52200, likes: 41100, comments: 7600, shares: 3500, clicks: 2600 },
+    { tag: 'Unboxing', content: 16, active: 16, views: 324000, engagement: 36700, likes: 28900, comments: 5200, shares: 2600, clicks: 1740 },
+    { tag: 'Tutorial', content: 12, active: 12, views: 221000, engagement: 24100, likes: 19000, comments: 3400, shares: 1700, clicks: 980 },
+    { tag: 'Q2', content: 10, active: 10, views: 143000, engagement: 15100, likes: 11900, comments: 2100, shares: 1100, clicks: 680 },
+    { tag: 'Creator Tier', content: 8, active: 8, views: 96000, engagement: 10200, likes: 7800, comments: 1600, shares: 800, clicks: 420 }
+  ]
+}
+
+const tagMetricLabels = {
+  views: '观看',
+  engagement: 'Engagement',
+  likes: '点赞',
+  comments: '评论',
+  shares: '分享',
+  clicks: '短链点击',
+  content: '内容数'
+}
+
+const tagModeLabels = {
+  delta: '观察期增量',
+  snapshot: '当前累计值'
+}
+
+const tagModeNotes = {
+  delta: '当前展示的是数据观察周期内的变化量：观看、互动和短链点击都按观察期增量统计；选择“内容数”时按观察期活跃内容排序。多标签内容会重复归属。',
+  snapshot: '当前展示的是最新累计值：不取观察期差值，用于查看现在各标签沉淀的总体数据；选择“内容数”时按标签内容总数排序。多标签内容会重复归属。'
+}
+
 const primaryFilterOptions = [
   ['监控状态', ['全部 (128)', '监控中', '已完成', '已删除', '其他状态']],
   ['地区', ['全部地区', '美国', '日本', '韩国', '中国台湾', '巴西', '英国', '其他']],
-  ['视频标签', ['全部标签', '无标签', 'Launch', 'Review', 'Paid', 'Organic']],
+  ['视频标签', ['全部标签', '无标签（17）', ...labelCounts.slice(0, 6).map(([label, count]) => `${label}（${count}）`)]],
   ['额外标签1', ['全部', '无标签', '产品线 A', '产品线 B', 'Campaign', 'Creator Tier']],
   ['额外标签2', ['全部', '无标签', 'Q2', 'Test', 'High Priority']],
   ['创建人', ['全部', 'Yuki Chen', 'Kuangji', 'Sophia', 'Alex']],
@@ -256,6 +310,7 @@ function workbenchHeader() {
             <span data-scope-content>${meta.content}</span>
             <span data-scope-platform>${meta.platform}</span>
             <span data-scope-issue>${meta.issue}</span>
+            <button class="btn btn-light scope-export-action" data-export-action="full">全量导出 XLSX</button>
             <button class="btn btn-light scope-archive-action" data-archive-project>${isArchivePreview ? '取消归档' : '归档项目'}</button>
             <button class="btn btn-primary scope-add-monitor" ${isArchivePreview ? 'disabled title="已归档项目不能新增监控"' : ''}>添加监控</button>
           </div>
@@ -596,6 +651,42 @@ function contributionPanel() {
   return `<section class="panel contribution-panel"><div class="section-head"><div><h2 class="section-title">达人 / 频道贡献</h2><span class="section-sub">可切换指标查看贡献来源；如需切片分析，使用平台 Tab、搜索或后续独立的创作者/频道筛选。</span></div></div><div class="rank-metric-tabs contribution-tabs"><span class="active">观看增量</span><span>Engagement</span><span>短链点击</span><span>内容数</span></div><div class="contribution-table"><div class="contribution-head"><span>达人 / 频道</span><span>贡献占比</span><span>观看</span><span>Engagement</span><span>短链点击</span><span>内容数</span></div>${rows.map(n => `<button class="contribution-row" data-open-drawer="channel-detail"><div class="progress-name">${n[0]}</div><div class="contribution-progress"><div class="progress-track"><div class="progress-fill" style="width:${n[1]}"></div></div><strong>${n[1]}</strong></div><span>${n[2]}</span><span>${n[3]}</span><span>${n[4]}</span><span>${n[5]}</span></button>`).join('')}</div></section>`
 }
 
+function formatMetricValue(value, metric = 'views') {
+  if (metric === 'content') return String(value)
+  if (value >= 1000000) return `${(value / 1000000).toFixed(2)}M`
+  if (value >= 1000) return `${(value / 1000).toFixed(value >= 10000 ? 1 : 0)}K`
+  return String(value)
+}
+
+function tagContributionPanel() {
+  return `<section class="panel tag-contribution-panel" data-tag-contribution>
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">标签贡献分析</h2>
+        <span class="section-sub">按当前筛选集合查看标签表现；可在观察期增量和当前累计值之间切换。</span>
+      </div>
+    </div>
+    <div class="tag-toolbar">
+      <div class="segmented-control" data-tag-mode>
+        <button class="active" data-mode="delta" type="button">观察期增量</button>
+        <button data-mode="snapshot" type="button">当前累计值</button>
+      </div>
+      <div class="rank-metric-tabs tag-metric-tabs" data-tag-metrics>
+        ${Object.entries(tagMetricLabels).map(([key, label], index) => `<button class="${index === 0 ? 'active' : ''}" data-metric="${key}" type="button">${label}</button>`).join('')}
+      </div>
+    </div>
+    <div class="tag-scope-note" data-tag-note>${tagModeNotes.delta}</div>
+    <div class="tag-analysis-layout">
+      <div class="tag-bars" data-tag-bars></div>
+      <div class="tag-donut-card">
+        <div class="donut-chart" data-tag-donut></div>
+        <div class="donut-legend" data-tag-legend></div>
+      </div>
+    </div>
+    <div class="tag-table" data-tag-table></div>
+  </section>`
+}
+
 function trendPanel(title = '关键指标趋势') {
   return `<section class="panel"><div class="section-head"><h2 class="section-title">${title}</h2><span class="section-sub">默认展示可观测增长；效率指标仅同口径时进入。</span></div><div class="trend-tabs"><span class="active">观看量</span><span>Engagement</span><span>短链点击</span><span class="disabled">CPV 口径不足</span></div><div class="chart"><div class="chart-line"></div><div class="chart-line alt"></div></div></section>`
 }
@@ -855,7 +946,7 @@ function contentListSection() {
           <h2>监控内容 <span class="count-badge">128</span></h2>
           <p>继承当前项目范围和筛选上下文，用于下钻具体内容。</p>
         </div>
-        <div class="header-actions"><div class="view-switch"><span>▦</span><span class="active">☰</span></div></div>
+        <div class="header-actions"><button class="btn btn-light btn-sm" data-export-action="current-view">导出当前视图 XLSX</button><div class="view-switch"><span>▦</span><span class="active">☰</span></div></div>
       </div>
       <div class="list-filter-panel">
         <div class="list-filter-head">
@@ -889,11 +980,12 @@ function dashboardSection(cross = false) {
           <h2>数据看板</h2>
           <p>诊断观察区间内的内容变化与近期动向；效率与可信度提醒稍后统一重构。</p>
         </div>
-        ${observationControl()}
+        <div class="dashboard-actions">${observationControl()}<button class="btn btn-light btn-sm" data-export-action="dashboard">导出看板 XLSX</button></div>
       </div>
       ${metricCards()}
       <div class="grid-2 mb-20">${rankList(cross ? '跨项目内容变化榜' : '内容变化榜')}${trendPanel(cross ? '跨项目关键指标趋势' : '关键指标趋势')}</div>
       ${contributionPanel()}
+      ${tagContributionPanel()}
     </section>`
 }
 
@@ -1203,6 +1295,319 @@ function applyListFilter(type) {
   section.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 
+function getTagState(panel) {
+  const mode = panel.querySelector('[data-tag-mode] .active')?.dataset.mode || 'delta'
+  const metric = panel.querySelector('[data-tag-metrics] .active')?.dataset.metric || 'views'
+  return { mode, metric }
+}
+
+function renderTagContribution(panel) {
+  const { mode, metric } = getTagState(panel)
+  const sortMetric = metric === 'content' && mode === 'delta' ? 'active' : metric
+  const data = [...tagContributionData[mode]].sort((a, b) => b[sortMetric] - a[sortMetric])
+  const top = data.slice(0, 7)
+  const other = data.slice(7)
+  const valueOf = item => item[sortMetric]
+  const otherValue = other.reduce((sum, item) => sum + valueOf(item), 0)
+  const makeOther = () => ({
+    tag: '其它',
+    content: other.reduce((sum, item) => sum + item.content, 0),
+    active: other.reduce((sum, item) => sum + item.active, 0),
+    views: other.reduce((sum, item) => sum + item.views, 0),
+    engagement: other.reduce((sum, item) => sum + item.engagement, 0),
+    likes: other.reduce((sum, item) => sum + item.likes, 0),
+    comments: other.reduce((sum, item) => sum + item.comments, 0),
+    shares: other.reduce((sum, item) => sum + item.shares, 0),
+    clicks: other.reduce((sum, item) => sum + item.clicks, 0)
+  })
+  const chartData = otherValue > 0 ? [...top, makeOther()] : top
+  const total = chartData.reduce((sum, item) => sum + valueOf(item), 0) || 1
+  const max = Math.max(...chartData.map(item => valueOf(item)), 1)
+  const colors = ['#fa6300', '#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#ef4444', '#14b8a6', '#94a3b8']
+  const bars = panel.querySelector('[data-tag-bars]')
+  const donut = panel.querySelector('[data-tag-donut]')
+  const legend = panel.querySelector('[data-tag-legend]')
+  const table = panel.querySelector('[data-tag-table]')
+  const note = panel.querySelector('[data-tag-note]')
+  const metricHead = mode === 'delta' ? {
+    views: '观看增量',
+    engagement: 'Engagement 增量',
+    likes: '点赞增量',
+    comments: '评论增量',
+    shares: '分享增量',
+    clicks: '短链点击增量',
+    content: '观察期活跃内容'
+  } : {
+    views: '当前观看',
+    engagement: '当前 Engagement',
+    likes: '当前点赞',
+    comments: '当前评论',
+    shares: '当前分享',
+    clicks: '当前短链点击',
+    content: '标签内容总数'
+  }
+  const tableColumns = mode === 'delta'
+    ? [
+        ['content', '标签内容数'],
+        ['active', '观察期活跃内容'],
+        ['views', metricHead.views],
+        ['engagement', metricHead.engagement],
+        ['likes', metricHead.likes],
+        ['comments', metricHead.comments],
+        ['shares', metricHead.shares],
+        ['clicks', metricHead.clicks]
+      ]
+    : [
+        ['content', '标签内容总数'],
+        ['views', metricHead.views],
+        ['engagement', metricHead.engagement],
+        ['likes', metricHead.likes],
+        ['comments', metricHead.comments],
+        ['shares', metricHead.shares],
+        ['clicks', metricHead.clicks]
+      ]
+  if (note) note.textContent = tagModeNotes[mode]
+  if (bars) {
+    bars.innerHTML = chartData.map((item, index) => {
+      const itemValue = valueOf(item)
+      const percent = Math.round((itemValue / total) * 100)
+      return `<div class="tag-bar-row">
+        <div><strong>${item.tag}</strong><span>${mode === 'delta' ? '观察期变化量' : '当前累计值'} · ${item.content} 条内容 · ${percent}%</span></div>
+        <div class="tag-bar-track"><i style="width:${Math.max(4, (itemValue / max) * 100)}%;background:${colors[index % colors.length]}"></i></div>
+        <b>${formatMetricValue(itemValue, sortMetric)}</b>
+      </div>`
+    }).join('')
+  }
+  if (donut) {
+    let cursor = 0
+    const stops = chartData.map((item, index) => {
+      const start = cursor
+      const end = cursor + (valueOf(item) / total) * 100
+      cursor = end
+      return `${colors[index % colors.length]} ${start}% ${end}%`
+    }).join(', ')
+    donut.style.background = `conic-gradient(${stops})`
+    donut.innerHTML = `<div><strong>${tagMetricLabels[metric]}</strong><span>${tagModeLabels[mode]}</span></div>`
+  }
+  if (legend) {
+    legend.innerHTML = chartData.slice(0, 5).map((item, index) => `<span><i style="background:${colors[index % colors.length]}"></i>${item.tag}</span>`).join('')
+  }
+  if (table) {
+    table.innerHTML = `<div class="tag-table-head"><span>标签</span>${tableColumns.map(([key, label]) => `<span class="${key === sortMetric ? 'sorted' : ''}">${label}${key === sortMetric ? ' ↓' : ''}</span>`).join('')}</div>
+      ${data.map(item => `<div class="tag-table-row">
+        <strong>${item.tag}</strong>${tableColumns.map(([key]) => `<span class="${key === sortMetric ? 'sorted' : ''}">${formatMetricValue(item[key], key)}</span>`).join('')}
+      </div>`).join('')}`
+  }
+}
+
+function initTagContribution() {
+  document.querySelectorAll('[data-tag-contribution]').forEach(panel => {
+    panel.querySelectorAll('[data-tag-mode] button, [data-tag-metrics] button').forEach(button => {
+      button.addEventListener('click', () => {
+        const group = button.closest('[data-tag-mode], [data-tag-metrics]')
+        group?.querySelectorAll('button').forEach(item => item.classList.toggle('active', item === button))
+        renderTagContribution(panel)
+      })
+    })
+    renderTagContribution(panel)
+  })
+}
+
+function cellRef(columnIndex, rowIndex) {
+  let column = ''
+  let current = columnIndex + 1
+  while (current > 0) {
+    const modulo = (current - 1) % 26
+    column = String.fromCharCode(65 + modulo) + column
+    current = Math.floor((current - modulo) / 26)
+  }
+  return `${column}${rowIndex + 1}`
+}
+
+function xmlEscape(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+}
+
+function sheetXml(rowsForSheet) {
+  const rowsXml = rowsForSheet.map((row, rowIndex) => {
+    const cells = row.map((value, columnIndex) => `<c r="${cellRef(columnIndex, rowIndex)}" t="inlineStr"><is><t>${xmlEscape(value)}</t></is></c>`).join('')
+    return `<row r="${rowIndex + 1}">${cells}</row>`
+  }).join('')
+  return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetData>${rowsXml}</sheetData></worksheet>`
+}
+
+function workbookXml(sheetNames) {
+  return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets>${sheetNames.map((name, index) => `<sheet name="${xmlEscape(name.slice(0, 31))}" sheetId="${index + 1}" r:id="rId${index + 1}"/>`).join('')}</sheets></workbook>`
+}
+
+function workbookRelsXml(sheetCount) {
+  return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">${Array.from({ length: sheetCount }, (_, index) => `<Relationship Id="rId${index + 1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet${index + 1}.xml"/>`).join('')}</Relationships>`
+}
+
+function contentTypesXml(sheetCount) {
+  return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/>${Array.from({ length: sheetCount }, (_, index) => `<Override PartName="/xl/worksheets/sheet${index + 1}.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>`).join('')}</Types>`
+}
+
+const crcTable = (() => {
+  const table = []
+  for (let n = 0; n < 256; n += 1) {
+    let c = n
+    for (let k = 0; k < 8; k += 1) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1
+    table[n] = c >>> 0
+  }
+  return table
+})()
+
+function crc32(bytes) {
+  let crc = 0xffffffff
+  bytes.forEach(byte => {
+    crc = crcTable[(crc ^ byte) & 0xff] ^ (crc >>> 8)
+  })
+  return (crc ^ 0xffffffff) >>> 0
+}
+
+function u16(value) {
+  return [value & 0xff, (value >>> 8) & 0xff]
+}
+
+function u32(value) {
+  return [value & 0xff, (value >>> 8) & 0xff, (value >>> 16) & 0xff, (value >>> 24) & 0xff]
+}
+
+function zipDateParts(date = new Date()) {
+  return {
+    time: ((date.getHours() & 0x1f) << 11) | ((date.getMinutes() & 0x3f) << 5) | Math.floor(date.getSeconds() / 2),
+    date: (((date.getFullYear() - 1980) & 0x7f) << 9) | (((date.getMonth() + 1) & 0x0f) << 5) | (date.getDate() & 0x1f)
+  }
+}
+
+function makeZip(files) {
+  const encoder = new TextEncoder()
+  const fileParts = []
+  const centralParts = []
+  let offset = 0
+  const { time, date } = zipDateParts()
+  files.forEach(file => {
+    const nameBytes = encoder.encode(file.name)
+    const contentBytes = encoder.encode(file.content)
+    const crc = crc32(contentBytes)
+    const localHeader = new Uint8Array([
+      ...u32(0x04034b50), ...u16(20), ...u16(0), ...u16(0), ...u16(time), ...u16(date),
+      ...u32(crc), ...u32(contentBytes.length), ...u32(contentBytes.length), ...u16(nameBytes.length), ...u16(0)
+    ])
+    fileParts.push(localHeader, nameBytes, contentBytes)
+    const centralHeader = new Uint8Array([
+      ...u32(0x02014b50), ...u16(20), ...u16(20), ...u16(0), ...u16(0), ...u16(time), ...u16(date),
+      ...u32(crc), ...u32(contentBytes.length), ...u32(contentBytes.length), ...u16(nameBytes.length), ...u16(0),
+      ...u16(0), ...u16(0), ...u16(0), ...u32(0), ...u32(offset)
+    ])
+    centralParts.push(centralHeader, nameBytes)
+    offset += localHeader.length + nameBytes.length + contentBytes.length
+  })
+  const centralSize = centralParts.reduce((sum, part) => sum + part.length, 0)
+  const end = new Uint8Array([
+    ...u32(0x06054b50), ...u16(0), ...u16(0), ...u16(files.length), ...u16(files.length),
+    ...u32(centralSize), ...u32(offset), ...u16(0)
+  ])
+  return new Blob([...fileParts, ...centralParts, end], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' })
+}
+
+function createXlsxBlob(sheets) {
+  const files = [
+    { name: '[Content_Types].xml', content: contentTypesXml(sheets.length) },
+    { name: '_rels/.rels', content: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>' },
+    { name: 'xl/workbook.xml', content: workbookXml(sheets.map(sheet => sheet.name)) },
+    { name: 'xl/_rels/workbook.xml.rels', content: workbookRelsXml(sheets.length) },
+    ...sheets.map((sheet, index) => ({ name: `xl/worksheets/sheet${index + 1}.xml`, content: sheetXml(sheet.rows) }))
+  ]
+  return makeZip(files)
+}
+
+function dashboardExportSheets() {
+  const tagRows = mode => tagContributionData[mode].map(item => [
+    item.tag, item.content, item.active, item.views, item.engagement, item.likes, item.comments, item.shares, item.clicks
+  ])
+  return [
+    { name: 'README', rows: [['导出范围', '当前筛选视图下的数据看板'], ['项目范围', scopeMeta().title], ['数据观察周期', '2026-05-03 -- 2026-05-11'], ['说明', '标签图表前端只展示 TOP 20 + 其它，导出包含全部标签明细。']] },
+    { name: 'dashboard_overview', rows: [['指标', '值', '口径'], ['观看增量', '428.6K', '观察区间内变化量'], ['Engagement 增量', '41.1K', '点赞 + 评论 + 分享'], ['互动率', '5.7%', '观察区间内互动 / 观看'], ['活跃内容', '42', '观察区间内有观看或互动变化']] },
+    { name: 'content_rank', rows: [['内容', '观看增量', '点赞', '评论', '分享', 'ER'], ['Summer Routine 2026', '+18.2K', '+2.1K', '+260', '+74', '4.8%'], ['Mini camera unboxing', '+9.7K', '+1.4K', '+88', '+41', '6.2%'], ['Soft glam brunch GRWM', '+1.1K', '+320', '--', '+9', '--']] },
+    { name: 'creator_contribution', rows: [['达人/频道', '贡献占比', '观看', 'Engagement', '短链点击', '内容数'], ['Lena Beauty Lab', '46%', '+196.4K', '18.2K', '1.1K', 8], ['Mika Studio', '24%', '+102.8K', '9.6K', 860, 6], ['Ava Daily', '13%', '+55.7K', '4.1K', 320, 5]] },
+    { name: 'tag_delta', rows: [['标签', '标签内容数', '观察期活跃内容', '观看增量', 'Engagement增量', '点赞增量', '评论增量', '分享增量', '短链点击增量'], ...tagRows('delta')] },
+    { name: 'tag_snapshot', rows: [['标签', '标签内容总数', '当前观看', '当前Engagement', '当前点赞', '当前评论', '当前分享', '当前短链点击'], ...tagContributionData.snapshot.map(item => [item.tag, item.content, item.views, item.engagement, item.likes, item.comments, item.shares, item.clicks])] }
+  ]
+}
+
+function taskRowsForExport() {
+  return rows.map(row => [
+    row.title, row.creator, row.project, row.platform, row.views, row.likes, row.comments, row.shares,
+    row.er, row.progress, row.shortClicks, row.shortlinkStatus, row.budget, row.budgetStatus, row.source, row.createdAt
+  ])
+}
+
+function rawMetricRows() {
+  return [
+    ['观看量', '428.6K', '线上已配置原始数据块'],
+    ['点赞数', '32.8K', '线上已配置原始数据块'],
+    ['评论数', '1.9K', '线上已配置原始数据块'],
+    ['分享数', '6.4K', '线上已配置原始数据块'],
+    ['Engagement 总量', '41.1K', '点赞 + 评论 + 分享'],
+    ['互动率', '5.7%', 'Engagement / 观看'],
+    ['Nox 短链点击数', '2.4K', '仅统计已绑定短链点击'],
+    ['预算消耗', '未填写', '用户手动填写'],
+    ['CPM', '--', '依赖预算'],
+    ['CPV', '--', '依赖预算'],
+    ['CTR', '--', '依赖短链点击与观看']
+  ]
+}
+
+function buildExportWorkbook(type) {
+  if (type === 'dashboard') return createXlsxBlob(dashboardExportSheets())
+  const scope = type === 'full' ? '未经筛选的全部监控任务表格数据 + 原始聚合数据' : '当前筛选视图下的监控任务表格数据 + 原始数据'
+  return createXlsxBlob([
+    { name: 'README', rows: [['导出范围', scope], ['项目范围', scopeMeta().title], ['导出格式', 'XLSX 多 sheet'], ['说明', type === 'full' ? '保留既有全页面导出口径，不受当前筛选影响。' : '继承当前一级筛选和列表内筛选；不包含数据看板图表。']] },
+    { name: type === 'full' ? 'monitor_tasks_all' : 'monitor_tasks_current', rows: [['内容', '创建人/频道', '所属项目', '平台', '观看量', '点赞数', '评论数', '分享数', '互动率', '进度', 'Nox短链点击', '短链状态', '预算消耗', '预算状态', '来源', '新增时间'], ...taskRowsForExport()] },
+    { name: type === 'full' ? 'raw_aggregate_all' : 'raw_aggregate_current', rows: [['指标', '值', '说明'], ...rawMetricRows()] }
+  ])
+}
+
+function showExportToast(label) {
+  let toast = document.querySelector('[data-export-toast]')
+  if (!toast) {
+    toast = document.createElement('div')
+    toast.className = 'export-toast'
+    toast.dataset.exportToast = ''
+    document.body.appendChild(toast)
+  }
+  toast.textContent = `${label} 已生成 XLSX 下载`
+  toast.hidden = false
+  window.clearTimeout(showExportToast.timer)
+  showExportToast.timer = window.setTimeout(() => {
+    toast.hidden = true
+  }, 2400)
+}
+
+function exportWorkbook(type) {
+  const labels = {
+    full: '全量导出',
+    dashboard: '数据看板导出',
+    'current-view': '当前视图导出'
+  }
+  const blob = buildExportWorkbook(type)
+  const url = URL.createObjectURL(blob)
+  const link = document.createElement('a')
+  link.href = url
+  link.download = `monitor-761-${type}-${new Date().toISOString().slice(0, 10)}.xlsx`
+  document.body.appendChild(link)
+  link.click()
+  link.remove()
+  setTimeout(() => URL.revokeObjectURL(url), 1000)
+  showExportToast(labels[type] || '导出')
+}
+
 function openDrawer(id) {
   const drawer = document.querySelector(`[data-config-drawer="${id}"]`)
   const mask = document.querySelector('[data-drawer-mask]')
@@ -1212,6 +1617,15 @@ function openDrawer(id) {
 }
 
 function bindInteractions() {
+  initTagContribution()
+
+  document.querySelectorAll('[data-export-action]').forEach(button => {
+    button.addEventListener('click', event => {
+      event.stopPropagation()
+      exportWorkbook(button.dataset.exportAction)
+    })
+  })
+
   document.querySelectorAll('[data-nav]').forEach(button => {
     button.addEventListener('click', event => {
       event.stopPropagation()

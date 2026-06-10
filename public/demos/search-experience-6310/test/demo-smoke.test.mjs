@@ -24,7 +24,7 @@ const requiredTexts = [
   "nav-curation",
   "nav-placeholder",
   "当前 Demo 只展开网红发现和智能精选链路",
-  "curation-task-reminder",
+  "search-task-entry",
   "curation-task-drawer",
   "toggle-curation-tasks",
   "close-task-drawer",
@@ -56,7 +56,7 @@ const requiredTexts = [
   "输出设置",
   "精选数量",
   "output-size",
-  "范围 1 - 200",
+  "不能超过本轮输入数量",
   "正在更新",
   "confirm-loading-card",
   "aria-busy",
@@ -83,9 +83,15 @@ const requiredTexts = [
   "保存至收藏夹",
   "进入邀约",
   "导出结果",
-  "基于当前需求新建任务",
+  "重新精选",
+  "继续精选",
+  "continue-curation-round",
+  "rerun-curation",
+  "curationRound",
+  "上一轮精选名单",
   "new-session-from-current",
   "创建新的精选任务",
+  "开始下一轮精选",
   "推荐理由",
   "风险提示",
   "移出精选",
@@ -96,7 +102,6 @@ const requiredTexts = [
   "export-shortlist",
   "推荐理由",
   "toggle-strategy-chip",
-  "simulate-search-change",
   "confirm-fill",
   "skip-fill",
   "stop-curation",
@@ -140,7 +145,7 @@ assert.match(stylesCss, /\.classic-results-panel/, "classic result list styles s
 assert.doesNotMatch(stylesCss, /--kol-main|--kol-bg/, "old demo visual variables should not return");
 assert.doesNotMatch(appJs, /当前候选总池|从 0 开始搜索|改 query 重搜|639 自然语言搜索|智能精选工作台|关键词模式沿用经典搜索框心智|自然语言仍属于标准搜索输入形态|继续调整召回条件|调整召回条件|预览召回结果 A/, "old main-path, explanatory UI copy, or fixed Agent workbench copy should not return");
 assert.doesNotMatch(appJs, /待讨论占位|后续 TODO|本次精选输入/, "Agent curation page should be a result-review entity page, not a placeholder");
-assert.doesNotMatch(appJs, /基底选择器|toggle-base|state\.round|round: 1|轮次结果/, "current result-review mainline should not expose legacy round/base-selector concepts");
+assert.doesNotMatch(appJs, /基底选择器|toggle-base|state\.round\b|round: 1|轮次结果|父任务|子任务|任务树|树状/, "current result-review mainline should not expose legacy base-selector or tree concepts");
 assert.doesNotMatch(appJs, /<div class="composer-text">/, "natural language composer should be editable in the demo");
 assert.doesNotMatch(appJs, /<span>已保存<\/span>|state\.accepted|accepted:/, "agent status panel should not treat save-to-folder as an in-session KPI");
 assert.doesNotMatch(appJs, /已保存本次需求|已保存当前候选频道|已按新条件保存候选频道/, "confirmation and curation copy should not use save wording before save-to-folder");
@@ -156,6 +161,8 @@ assert.doesNotMatch(appJs, /candidatePreviewFromConfirm|nav-confirm|href="#confi
 assert.match(appJs, /shouldShowCurationBridge = true/, "classic-result curation bridge should appear for both keyword and natural-language results");
 assert.match(appJs, /data-action="nl-run-search"/, "natural language search button should run search instead of opening the drawer");
 assert.doesNotMatch(appJs, /data-action="nl-open-confirm"|shouldShowReturnToConfirm|confirmLayout|set-confirm-layout|confirm-structure-panel|confirm-brief-hero|recallConditionsCard|rawResultSetPreview|conditionSummary|stage-recall-edit|stage-unified-edit|stage-output-20|stage-output-50/, "drawer should not retain old confirmation, preview, or segmented output flows");
+assert.doesNotMatch(appJs + stylesCss, /simulate-search-change|模拟调整筛选并搜索|condition-tools/, "search page should not expose demo-only filter simulation controls");
+assert.doesNotMatch(appJs + stylesCss, /curation-task-reminder|curation-task-summary|task-summary-action|个已完成，|个运行中，|个已停止/, "search page task entry should stay as a lightweight button");
 assert.doesNotMatch(appJs, /draftChangeBar|draftChanges|apply-draft-changes|discard-draft-changes|待应用修改|未应用修改|编辑缓冲区|应用修改并重新整合|丢弃修改/, "confirmation card edits should auto-apply after calculation");
 assert.doesNotMatch(appJs, /<a class="side-item is-child[^>]+nav-confirm/, "strategy drawer should not be a sidebar navigation page");
 assert.match(appJs, /type="number"[\s\S]*data-field="output-size"/, "output size should be a free numeric input with bounds");

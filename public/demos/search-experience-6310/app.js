@@ -147,14 +147,6 @@ const curationSessions = [
 
 const initialSearchConditions = [
   "平台：YouTube",
-  "地区：美国",
-  "关键词：toy unboxing / family toys",
-  "粉丝量：10万 - 100万",
-  "排除：纯动画儿歌",
-];
-
-const adjustedSearchConditions = [
-  "平台：YouTube",
   "地区：美国 + 加拿大",
   "关键词：toy review / parenting / STEM toys",
   "粉丝量：10万 - 500万",
@@ -167,7 +159,6 @@ const state = {
   drawerOpen: false,
   intent: "agent",
   mode: "continue",
-  searchRound: 1,
   searchMode: "natural",
   resultSet: creators,
   excluded: 0,
@@ -175,6 +166,10 @@ const state = {
   producedCount: 20,
   batchSize: 20,
   currentBatch: 1,
+  curationRound: 1,
+  roundInputType: "search",
+  roundInputCount: 286,
+  strategyEntry: "search",
   curationRunning: true,
   fillPromptOpen: false,
   fillLoading: false,
@@ -337,23 +332,10 @@ function creatorRow(item, mode = "search") {
 
 function curationTaskReminder() {
   const sessions = visibleCurationSessions();
-  const runningCount = sessions.filter((session) => session.status === "running").length;
-  const completedCount = sessions.filter((session) => session.status === "completed").length;
-  const stoppedCount = sessions.filter((session) => session.status === "stopped").length;
-  const summary = [
-    completedCount ? `${completedCount} 个已完成` : "",
-    runningCount ? `${runningCount} 个运行中` : "",
-    stoppedCount ? `${stoppedCount} 个已停止` : "",
-  ].filter(Boolean).join("，") || "暂无任务";
   return `
-    <section class="curation-task-reminder">
-      <button class="curation-task-summary" data-action="toggle-curation-tasks" aria-expanded="${state.curationTaskDrawerOpen}">
-        <span class="status-badge success">Agent 精选</span>
-        <strong>${sessions.length} 个精选任务</strong>
-        <span>${summary}</span>
-        <span class="task-summary-action">查看</span>
-      </button>
-    </section>
+    <button class="btn btn-session-list search-task-entry" data-action="toggle-curation-tasks" aria-expanded="${state.curationTaskDrawerOpen}">
+      精选任务 ${sessions.length}
+    </button>
   `;
 }
 
@@ -400,10 +382,10 @@ function curationTaskDrawer() {
       <div class="task-drawer-head">
         <div>
           <h2>精选任务</h2>
-          <p>运行中任务需停止后才能删除；改需求会创建新任务。</p>
+          <p>找回最近任务，或基于原搜索结果重新精选。</p>
         </div>
         <div class="task-drawer-head-actions">
-          <button class="btn btn-primary" data-action="new-session-from-current">${icon("spark")} 基于当前需求新建任务</button>
+          <button class="btn btn-primary" data-action="new-session-from-current">${icon("spark")} 重新精选</button>
           <button class="btn btn-icon" data-action="close-task-drawer">${icon("close")}</button>
         </div>
       </div>
@@ -419,10 +401,14 @@ function curationTaskDrawer() {
 function curationStatusPanel() {
   const runningText = state.curationRunning ? `第 ${state.currentBatch + 1} 批生成中` : "已停止生成";
   const progressPercent = Math.min(100, Math.round((state.producedCount / state.curationTarget) * 100));
+  const roundInputText = state.roundInputType === "result"
+    ? `上一轮精选名单 · ${state.roundInputCount} 个`
+    : `原搜索结果 · ${state.roundInputCount} 个`;
+  const canIterate = !state.curationRunning;
   const insufficientPanel = state.curationInsufficient ? `
     <div class="insufficient-result-alert">
       <strong>当前候选频道无法达到目标名单量</strong>
-      <span>已完成可用结果筛选，建议降低目标数量、调整外部搜索结果，或基于当前需求新建任务。</span>
+      <span>已完成可用结果筛选，建议降低目标数量、调整外部搜索结果，或重新精选。</span>
     </div>
   ` : "";
   return `
@@ -432,6 +418,14 @@ function curationStatusPanel() {
           <div class="status-badge ${state.curationRunning ? "warning" : "success"}">${state.curationRunning ? "运行中" : "已停止"}</div>
           <h2>母婴玩具测评频道精选</h2>
           <p>${state.strategyText}</p>
+          <div class="round-source-line">
+            <span>第 ${state.curationRound} 轮</span>
+            <span>${roundInputText}</span>
+          </div>
+        </div>
+        <div class="curation-iteration-actions">
+          <button class="btn" ${canIterate ? "" : "disabled"} data-action="rerun-curation">重新精选</button>
+          <button class="btn btn-soft-primary" ${canIterate ? "" : "disabled"} data-action="continue-curation-round">继续精选</button>
         </div>
       </div>
       <div class="curation-kpi-grid">
@@ -491,7 +485,7 @@ function targetCountControl() {
 }
 
 function targetLimit() {
-  return Math.floor(resultSetCount() * CURATION_TARGET_RATIO_LIMIT);
+  return Math.floor(Number.parseInt(resultSetCount(), 10) * CURATION_TARGET_RATIO_LIMIT);
 }
 
 function targetBlockingError(value) {
@@ -586,12 +580,10 @@ function curationResultsPanel() {
 }
 
 function searchResultsPage() {
-  const chips = state.searchRound > 1 ? adjustedSearchConditions : initialSearchConditions;
+  const chips = initialSearchConditions;
   const isNaturalLanguage = state.searchMode === "natural";
   const shouldShowCurationBridge = true;
-  const resultsCopy = state.searchRound > 1
-    ? "当前列表已按搜索条件更新，可继续查看或进入精选。"
-    : "搜索会根据条件生成候选频道列表；以下列表只作为结果形态占位。";
+  const resultsCopy = "搜索会根据条件生成候选频道列表；以下列表只作为结果形态占位。";
   const curationBridge = shouldShowCurationBridge
     ? `<button class="btn btn-primary curation-bridge" data-action="snapshot-confirm">${icon("spark")} 对当前结果做智能精选</button>`
     : "";
@@ -649,11 +641,6 @@ function searchResultsPage() {
         </div>
         <div class="condition-label">当前搜索条件</div>
         <div class="filter-row compact">${chips.map((item, index) => chip(item, index < 2)).join("")}</div>
-        <div class="condition-tools">
-          <button class="btn" data-action="simulate-search-change">模拟调整筛选并搜索</button>
-          <span>搜索页负责生成候选频道；智能精选只使用当前结果继续筛选。</span>
-        </div>
-        ${curationTaskReminder()}
       </section>
 
       <section class="classic-results-panel">
@@ -667,6 +654,7 @@ function searchResultsPage() {
             <button class="filter-select sort compact">默认排序 +按相关视频排序 <span>⌄</span></button>
             <button class="icon-tool">⇧</button>
             <button class="icon-tool">☻</button>
+            ${curationTaskReminder()}
             ${curationBridge}
           </div>
         </div>
@@ -686,7 +674,7 @@ function strategyInstructionCard() {
       <div class="confirm-section-head">
         <div>
           <h2>精选策略说明</h2>
-          <div class="requirement-meta">基于当前搜索结果</div>
+          <div class="requirement-meta">基于${drawerInputLabel()}</div>
         </div>
         <div class="requirement-actions">
           <span class="status-badge">第 ${state.requirementRevision} 版</span>
@@ -711,16 +699,33 @@ function strategyInstructionCard() {
   `;
 }
 
-function shouldUseAdjustedRecall() {
-  return state.searchRound > 1;
-}
-
-function currentRecallConditions() {
-  return shouldUseAdjustedRecall() ? adjustedSearchConditions : initialSearchConditions;
-}
-
 function resultSetCount() {
-  return shouldUseAdjustedRecall() ? "286" : "324";
+  return String(state.roundInputCount || 286);
+}
+
+function originalSearchResultCount() {
+  return 286;
+}
+
+function drawerInputCount() {
+  if (state.strategyEntry === "continue-round") return Math.max(1, state.producedCount);
+  return originalSearchResultCount();
+}
+
+function drawerInputLabel() {
+  if (state.strategyEntry === "continue-round") return `当前精选名单 · ${state.producedCount} 个`;
+  if (state.strategyEntry === "rerun") return `原搜索结果 · ${originalSearchResultCount()} 个`;
+  return `当前搜索结果 · ${originalSearchResultCount()} 个`;
+}
+
+function drawerPrimaryText() {
+  if (state.strategyEntry === "continue-round") return "开始下一轮精选";
+  if (state.strategyEntry === "rerun" || state.confirmFromCuration) return "创建新的精选任务";
+  return "开始 Agent 精选";
+}
+
+function outputSizeLimit() {
+  return Math.min(200, drawerInputCount());
 }
 
 function strategyData() {
@@ -754,6 +759,7 @@ function strategyPillGroups(variant = "") {
 }
 
 function outputConfigControls() {
+  const max = outputSizeLimit();
   return `
     <div class="output-row output-number-row">
       <label class="output-number-field">
@@ -761,14 +767,14 @@ function outputConfigControls() {
         <input
           type="number"
           min="1"
-          max="200"
+          max="${max}"
           step="1"
           value="${state.outputSize}"
           data-field="output-size"
           aria-label="精选数量"
         />
       </label>
-      <small>范围 1 - 200，不能超过当前候选频道量。</small>
+      <small>范围 1 - ${max}，不能超过本轮输入数量。</small>
     </div>
     <details class="secondary-editor compact">
       <summary>更多输出规则</summary>
@@ -847,14 +853,14 @@ function confirmDrawerBody() {
 
 function confirmDrawer() {
   if (!state.drawerOpen) return "";
-  const primaryText = state.confirmFromCuration ? "创建新的精选任务" : "开始 Agent 精选";
+  const primaryText = drawerPrimaryText();
   return `
     <div class="drawer-mask" data-action="close-drawer-mask"></div>
     <aside class="confirm-drawer" aria-label="精选策略">
       <div class="drawer-head">
         <div class="drawer-title-block">
           <h1>精选策略</h1>
-          <div class="drawer-subtitle">使用当前搜索结果继续筛选</div>
+          <div class="drawer-subtitle">${drawerInputLabel()}</div>
         </div>
         <div class="drawer-head-actions">
           <div class="drawer-agent-package">
@@ -903,17 +909,58 @@ function showToast(message) {
 function openConfirm() {
   state.drawerOpen = true;
   state.mode = "continue";
+  state.strategyEntry = "search";
+  state.confirmFromCuration = false;
   render();
 }
 
 function startCuration() {
+  const nextTarget = Math.max(1, Math.min(state.outputSize, outputSizeLimit()));
+  if (state.strategyEntry === "continue-round") {
+    const previousCount = state.producedCount;
+    state.drawerOpen = false;
+    state.page = "curation";
+    state.mode = "continue";
+    state.curationRound += 1;
+    state.roundInputType = "result";
+    state.roundInputCount = previousCount;
+    state.curationTarget = nextTarget;
+    state.producedCount = Math.min(Math.max(1, Math.ceil(nextTarget / 2)), nextTarget);
+    state.currentBatch = 0;
+    state.batchSize = Math.min(20, nextTarget);
+    state.curationRunning = true;
+    state.targetEditing = false;
+    state.fillPromptOpen = false;
+    state.fillLoading = false;
+    state.curationInsufficient = false;
+    state.confirmFromCuration = false;
+    state.strategyEntry = "search";
+    state.resultSet = refinedCreators;
+    showToast(`已开始第 ${state.curationRound} 轮继续精选`);
+    return;
+  }
+
   state.drawerOpen = false;
   state.page = "curation";
   state.confirmFromCuration = false;
   state.mode = "continue";
+  state.curationRound = 1;
+  state.roundInputType = "search";
+  state.roundInputCount = originalSearchResultCount();
+  state.curationTarget = nextTarget;
+  state.producedCount = Math.min(20, nextTarget);
+  state.currentBatch = 1;
+  state.batchSize = 20;
+  state.curationRunning = true;
+  state.targetEditing = false;
+  state.fillPromptOpen = false;
+  state.fillLoading = false;
+  state.curationInsufficient = false;
   state.resultSet = refinedCreators;
   state.snapshotLabel = "当前搜索结果快照";
-  showToast("已基于当前搜索结果开始智能精选");
+  const toast = state.strategyEntry === "rerun" ? "已创建新的精选任务" : "已基于当前搜索结果开始智能精选";
+  state.strategyEntry = "search";
+  showToast(toast);
 }
 
 function render() {
@@ -1003,7 +1050,6 @@ document.addEventListener("click", (event) => {
     return;
   }
   if (action === "nl-run-search") {
-    state.searchRound = 2;
     showToast("已按自然语言搜索内容展示结果");
     return;
   }
@@ -1016,11 +1062,6 @@ document.addEventListener("click", (event) => {
     state.drawerOpen = false;
     state.strategyEditing = false;
     render();
-    return;
-  }
-  if (action === "simulate-search-change") {
-    state.searchRound = 2;
-    showToast("已模拟外部搜索条件变化，当前结果集已更新");
     return;
   }
   if (action === "edit-strategy-text") {
@@ -1054,8 +1095,40 @@ document.addEventListener("click", (event) => {
   if (action === "new-session-from-current") {
     state.page = "curation";
     state.confirmFromCuration = true;
+    state.strategyEntry = "rerun";
     state.drawerOpen = true;
     state.curationTaskDrawerOpen = false;
+    state.outputSize = Math.min(20, outputSizeLimit());
+    state.strategyEditing = false;
+    render();
+    return;
+  }
+  if (action === "rerun-curation") {
+    if (state.curationRunning) {
+      showToast("当前仍在生成，请先等待完成或停止生成");
+      return;
+    }
+    state.confirmFromCuration = true;
+    state.strategyEntry = "rerun";
+    state.drawerOpen = true;
+    state.curationTaskDrawerOpen = false;
+    state.outputSize = Math.min(20, outputSizeLimit());
+    state.strategyEditing = false;
+    render();
+    return;
+  }
+  if (action === "continue-curation-round") {
+    if (state.curationRunning) {
+      showToast("当前仍在生成，请先等待完成或停止生成");
+      return;
+    }
+    state.confirmFromCuration = false;
+    state.strategyEntry = "continue-round";
+    state.drawerOpen = true;
+    state.curationTaskDrawerOpen = false;
+    state.outputSize = Math.max(1, Math.min(10, Math.max(1, state.producedCount - 1)));
+    state.strategyEditing = true;
+    state.strategyDraft = state.strategyText;
     render();
     return;
   }
@@ -1182,7 +1255,7 @@ document.addEventListener("input", (event) => {
   }
   if (field === "output-size") {
     const value = Number.parseInt(event.target.value, 10);
-    const max = Math.min(200, Number.parseInt(resultSetCount(), 10));
+    const max = outputSizeLimit();
     if (Number.isNaN(value)) return;
     state.outputSize = Math.max(1, Math.min(max, value));
     if (state.outputSize !== value) {
