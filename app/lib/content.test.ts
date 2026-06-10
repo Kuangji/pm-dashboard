@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { resolveDocumentTitle } from './content'
+import { shouldPreviewDocumentContent, resolveDocumentTitle } from './content'
 
 test('prefers frontmatter title for markdown documents', () => {
   const title = resolveDocumentTitle({
@@ -51,4 +51,14 @@ test('uses the file name for non-markdown files', () => {
   })
 
   assert.equal(title, 'prototype_v1.pen')
+})
+
+test('does not preview large generated data files', () => {
+  assert.equal(shouldPreviewDocumentContent('records.raw.json', 1024), false)
+  assert.equal(shouldPreviewDocumentContent('summary.csv', 1024), false)
+})
+
+test('still previews ordinary markdown and small text files', () => {
+  assert.equal(shouldPreviewDocumentContent('README.md', 10 * 1024 * 1024), true)
+  assert.equal(shouldPreviewDocumentContent('notes.json', 32 * 1024), true)
 })

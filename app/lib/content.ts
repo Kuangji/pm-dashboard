@@ -5,6 +5,15 @@ import { detectFileType, isTextFile, getMimeType, getLanguage, FileCategory } fr
 
 // 使用相对路径，确保在构建时能找到正确的位置
 const CONTENT_DIR = path.resolve('./public/content')
+const MAX_INLINE_PREVIEW_BYTES = 2 * 1024 * 1024
+const NON_PREVIEW_DATA_FILE_PATTERNS = [
+  /(?:^|\/)records\.(?:raw|normalized)\.json$/i,
+  /(?:^|\/)run_meta\.json$/i,
+  /(?:^|\/)scores\.json$/i,
+  /(?:^|\/)badcases\.csv$/i,
+  /(?:^|\/)summary\.csv$/i,
+  /(?:^|\/)review-package\.jsonl(?:\.gz)?$/i,
+]
 
 export interface NavItem {
   type: 'file' | 'directory'
@@ -37,12 +46,14 @@ export interface DemoItem {
   tags: string[]
 }
 
+type DocumentFrontmatter = Record<string, unknown>
+
 export interface Document {
   slug: string
   title: string
   content: string
   rawContent?: string
-  frontmatter: Record<string, any>
+  frontmatter: DocumentFrontmatter
   created?: string
   updated?: string
   fileType: FileCategory
@@ -82,6 +93,17 @@ export function resolveDocumentTitle({
   }
 
   return fileName
+}
+
+export function shouldPreviewDocumentContent(filePath: string, sizeBytes: number) {
+  const normalizedPath = filePath.replace(/\\/g, '/')
+  const fileName = path.basename(normalizedPath)
+  const fileTypeInfo = detectFileType(fileName)
+
+  if (fileTypeInfo.category === 'markdown') return true
+  if (NON_PREVIEW_DATA_FILE_PATTERNS.some((pattern) => pattern.test(normalizedPath))) return false
+
+  return sizeBytes <= MAX_INLINE_PREVIEW_BYTES
 }
 
 export async function readManifest(): Promise<Manifest> {
@@ -144,7 +166,7 @@ export function getFirstFile(items: NavItem[]): NavItem | undefined {
 /**
  * 确保日期是字符串格式（gray-matter 可能返回 Date 对象）
  */
-function formatDate(date: any): string | undefined {
+function formatDate(date: unknown): string | undefined {
   if (!date) return undefined
   if (date instanceof Date) return date.toISOString().split('T')[0]
   if (typeof date === 'string') return date
@@ -170,13 +192,14 @@ export async function readDocument(slug: string): Promise<Document> {
   const isText = isTextFile(docItem.name)
   const mimeType = getMimeType(docItem.name)
   const language = getLanguage(docItem.name)
+  const fileStat = await fs.stat(filePath)
 
   // Handle text files
-  if (isText) {
+  if (isText && shouldPreviewDocumentContent(docItem.path, fileStat.size)) {
     const rawContent = await fs.readFile(filePath, 'utf-8')
 
     // Parse frontmatter for markdown files
-    let frontmatter: Record<string, any> = {}
+    let frontmatter: DocumentFrontmatter = {}
     let content = rawContent
 
     if (fileTypeInfo.category === 'markdown') {

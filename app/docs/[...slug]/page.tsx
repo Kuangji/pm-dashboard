@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
-import { readDocument, readManifest, flattenNavTree, resolveDocumentTitle } from '@/app/lib/content'
+import { readDocument, resolveDocumentTitle } from '@/app/lib/content'
 import { DocumentViewer } from '@/app/components/DocumentViewer'
 import { notFound } from 'next/navigation'
 import { Calendar, Tag, FileCode, FileText, ImageIcon, File, Download, Table2 } from 'lucide-react'
+
+export const dynamic = 'force-dynamic'
 
 interface Props {
   params: Promise<{ slug: string[] }>
@@ -33,6 +35,16 @@ function getFileTypeLabel(fileType: string, language?: string) {
     binary: 'Binary',
   }
   return labels[fileType] || fileType
+}
+
+function formatTags(tags: unknown) {
+  if (Array.isArray(tags)) {
+    return tags.map(String).join(', ')
+  }
+
+  if (typeof tags === 'string') return tags
+
+  return ''
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -75,6 +87,7 @@ export default async function DocPage({ params }: Props) {
   } catch {
     notFound()
   }
+  const tags = formatTags(doc.frontmatter.tags)
 
   return (
     <>
@@ -114,12 +127,10 @@ export default async function DocPage({ params }: Props) {
               更新于 {doc.updated}
             </span>
           )}
-          {doc.frontmatter.tags && (
+          {tags && (
             <span className="flex items-center gap-1.5">
               <Tag className="w-4 h-4" />
-              {Array.isArray(doc.frontmatter.tags)
-                ? doc.frontmatter.tags.join(', ')
-                : doc.frontmatter.tags}
+              {tags}
             </span>
           )}
         </div>
@@ -128,30 +139,4 @@ export default async function DocPage({ params }: Props) {
       <DocumentViewer doc={doc} />
     </>
   )
-}
-
-export async function generateStaticParams() {
-  try {
-    const manifest = await readManifest()
-    const allDocs = flattenNavTree(manifest.navigation.docs)
-
-    if (allDocs.length === 0) {
-      console.warn('Warning: No documents found in manifest')
-      // 返回一个占位符，避免构建失败
-      return [{ slug: ['README.md'] }]
-    }
-
-    const params = allDocs
-      .filter((item) => item.type === 'file' && item.slug)
-      .map((item) => ({
-        slug: item.slug!.split('/')
-      }))
-
-    console.log(`generateStaticParams: Generated ${params.length} paths`)
-    return params
-  } catch (error) {
-    console.error('Error in generateStaticParams:', error)
-    // 构建时如果 manifest 不存在，返回默认路径避免失败
-    return [{ slug: ['README.md'] }]
-  }
 }
