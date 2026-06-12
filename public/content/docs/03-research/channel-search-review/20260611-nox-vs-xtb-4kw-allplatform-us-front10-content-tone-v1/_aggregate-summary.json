@@ -1,0 +1,208 @@
+{
+  "scope": {
+    "keywords": [
+      "baby supplement",
+      "agricultural products",
+      "beauty",
+      "fashion"
+    ],
+    "platforms": [
+      "youtube",
+      "tiktok",
+      "instagram"
+    ],
+    "providers": [
+      "nox",
+      "xtb"
+    ],
+    "country": "US",
+    "pages": "1-10",
+    "page_size": 50,
+    "rule_version": "content-tone-llm-v1",
+    "low_confidence_review": false,
+    "collection_method": "Playwright MCP existing browser context"
+  },
+  "overall": {
+    "nox_badcase_rate": 0.5997912491649967,
+    "xtb_badcase_rate": 0.5926349365397462,
+    "delta_xtb_minus_nox": -0.007156312625250516,
+    "pair_count": 12,
+    "xtb_better_count": 8,
+    "nox_better_count": 4
+  },
+  "byPlatform": [
+    {
+      "platform": "instagram",
+      "keywords": 4,
+      "nox_badcase_rate": 0.543,
+      "xtb_badcase_rate": 0.52,
+      "delta_xtb_minus_nox": -0.02300000000000002,
+      "xtb_better_count": 3,
+      "nox_better_count": 1
+    },
+    {
+      "platform": "tiktok",
+      "keywords": 4,
+      "nox_badcase_rate": 0.5695,
+      "xtb_badcase_rate": 0.5555,
+      "delta_xtb_minus_nox": -0.014000000000000012,
+      "xtb_better_count": 3,
+      "nox_better_count": 1
+    },
+    {
+      "platform": "youtube",
+      "keywords": 4,
+      "nox_badcase_rate": 0.68687374749499,
+      "xtb_badcase_rate": 0.7024048096192385,
+      "delta_xtb_minus_nox": 0.015531062124248485,
+      "xtb_better_count": 2,
+      "nox_better_count": 2
+    }
+  ],
+  "pairs": [
+    {
+      "platform": "instagram",
+      "keyword": "agricultural products",
+      "nox_badcase_rate": 0.804,
+      "xtb_badcase_rate": 0.756,
+      "delta_xtb_minus_nox": -0.04800000000000004,
+      "winner": "xtb",
+      "nox_completed": 500,
+      "xtb_completed": 500,
+      "nox_avg_record_ms": 3265,
+      "xtb_avg_record_ms": 2805
+    },
+    {
+      "platform": "instagram",
+      "keyword": "baby supplement",
+      "nox_badcase_rate": 0.686,
+      "xtb_badcase_rate": 0.644,
+      "delta_xtb_minus_nox": -0.04200000000000004,
+      "winner": "xtb",
+      "nox_completed": 500,
+      "xtb_completed": 500,
+      "nox_avg_record_ms": 3186,
+      "xtb_avg_record_ms": 2997
+    },
+    {
+      "platform": "instagram",
+      "keyword": "beauty",
+      "nox_badcase_rate": 0.398,
+      "xtb_badcase_rate": 0.382,
+      "delta_xtb_minus_nox": -0.016000000000000014,
+      "winner": "xtb",
+      "nox_completed": 500,
+      "xtb_completed": 500,
+      "nox_avg_record_ms": 3226,
+      "xtb_avg_record_ms": 3282
+    },
+    {
+      "platform": "instagram",
+      "keyword": "fashion",
+      "nox_badcase_rate": 0.284,
+      "xtb_badcase_rate": 0.298,
+      "delta_xtb_minus_nox": 0.014000000000000012,
+      "winner": "nox",
+      "nox_completed": 500,
+      "xtb_completed": 500,
+      "nox_avg_record_ms": 3261,
+      "xtb_avg_record_ms": 4201
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "agricultural products",
+      "nox_badcase_rate": 0.776,
+      "xtb_badcase_rate": 0.768,
+      "delta_xtb_minus_nox": -0.008000000000000007,
+      "winner": "xtb",
+      "nox_completed": 500,
+      "xtb_completed": 500,
+      "nox_avg_record_ms": 2810,
+      "xtb_avg_record_ms": 2994
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "baby supplement",
+      "nox_badcase_rate": 0.714,
+      "xtb_badcase_rate": 0.61,
+      "delta_xtb_minus_nox": -0.10399999999999998,
+      "winner": "xtb",
+      "nox_completed": 500,
+      "xtb_completed": 500,
+      "nox_avg_record_ms": 2822,
+      "xtb_avg_record_ms": 3374
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "beauty",
+      "nox_badcase_rate": 0.444,
+      "xtb_badcase_rate": 0.442,
+      "delta_xtb_minus_nox": -0.0020000000000000018,
+      "winner": "xtb",
+      "nox_completed": 500,
+      "xtb_completed": 500,
+      "nox_avg_record_ms": 2833,
+      "xtb_avg_record_ms": 3196
+    },
+    {
+      "platform": "tiktok",
+      "keyword": "fashion",
+      "nox_badcase_rate": 0.344,
+      "xtb_badcase_rate": 0.402,
+      "delta_xtb_minus_nox": 0.05800000000000005,
+      "winner": "nox",
+      "nox_completed": 500,
+      "xtb_completed": 500,
+      "nox_avg_record_ms": 2983,
+      "xtb_avg_record_ms": 2815
+    },
+    {
+      "platform": "youtube",
+      "keyword": "agricultural products",
+      "nox_badcase_rate": 0.7755511022044088,
+      "xtb_badcase_rate": 0.7615230460921844,
+      "delta_xtb_minus_nox": -0.014028056112224463,
+      "winner": "xtb",
+      "nox_completed": 499,
+      "xtb_completed": 499,
+      "nox_avg_record_ms": 3106,
+      "xtb_avg_record_ms": 2742
+    },
+    {
+      "platform": "youtube",
+      "keyword": "baby supplement",
+      "nox_badcase_rate": 0.6833667334669339,
+      "xtb_badcase_rate": 0.687374749498998,
+      "delta_xtb_minus_nox": 0.004008016032064132,
+      "winner": "nox",
+      "nox_completed": 499,
+      "xtb_completed": 499,
+      "nox_avg_record_ms": 3378,
+      "xtb_avg_record_ms": 2945
+    },
+    {
+      "platform": "youtube",
+      "keyword": "beauty",
+      "nox_badcase_rate": 0.6653306613226453,
+      "xtb_badcase_rate": 0.749498997995992,
+      "delta_xtb_minus_nox": 0.08416833667334667,
+      "winner": "nox",
+      "nox_completed": 499,
+      "xtb_completed": 499,
+      "nox_avg_record_ms": 2936,
+      "xtb_avg_record_ms": 2511
+    },
+    {
+      "platform": "youtube",
+      "keyword": "fashion",
+      "nox_badcase_rate": 0.6232464929859719,
+      "xtb_badcase_rate": 0.6112224448897795,
+      "delta_xtb_minus_nox": -0.012024048096192397,
+      "winner": "xtb",
+      "nox_completed": 499,
+      "xtb_completed": 499,
+      "nox_avg_record_ms": 2910,
+      "xtb_avg_record_ms": 2772
+    }
+  ]
+}

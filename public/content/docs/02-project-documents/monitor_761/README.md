@@ -16,11 +16,13 @@
 - 评论、短链、预算只做状态解释和可信度解释，不做能力扩展。
 - 项目级字段以线上事实为准：项目有创建人、协作者；不引入项目负责人概念。任务级负责人/归属人如需进入 761，必须以后端字段确认为前提。
 - `效率指标观察`、`数据可信度`、`近期动向提醒` 暂不作为当前 Dashboard 独立模块落地，后续单独讨论承载方式。
+- 标签贡献分析进入当前 Dashboard：支持 `观察期增量 / 当前累计值` 切换，指标可切换；页面图表可展示 TOP 20 + 其它，导出必须给出全部标签明细。
+- 导出统一为数据型 XLSX：保留全量导出，并新增数据看板导出、当前筛选视图下监控任务表格 + 原始数据导出；不做 PDF/图片等报告型导出。
 
 ## 文档导航
 
 ```
-publish/documents/02-project-documents/monitor_761/
+01_Product_Specs/monitor_761/
 ├── README.md               ← 本文档
 ├── evidence_brief.md       ← 已掌握事实与证据边界
 ├── current_state_facts_v0.md ← 综合 kol_brain + kol-next 的当前功能现状
@@ -55,7 +57,7 @@ publish/documents/02-project-documents/monitor_761/
 3. 用 `feedback_coverage_audit_v1.md` 判断累积用户反馈中哪些已被 PRD v1 覆盖、哪些明确进入 backlog、哪些需要单独确认。
 4. 用 `current_state_facts_v0.md` 和 M08 知识库输入追溯当前线上事实。
 5. 以 `spec_v1.md` 作为 design 阶段的业务规格上游。
-6. 用 `design_options_v0.md` 和 [Demo 首页](../../../demos/monitor_761_layout_demos/index.html) 对比布局方向。
+6. 用 `design_options_v0.md` 和 [Demo 目录](../../../demos/monitor_761_layout_demos/index.html) 对比布局方向。
 7. 以 `design_v1.md` 作为 PRD 阶段的设计上游。
 8. 以 `prd_v1.md` 进入研发/设计/测试评审；评审修改先回写 PRD，若影响业务规则或设计结构，再同步回 `spec_v1.md` / `design_v1.md`。
 
@@ -72,9 +74,12 @@ publish/documents/02-project-documents/monitor_761/
 
 - [ ] 路由范围：`projects=<id>`、`projects=<id1>,<id2>`、`projects=all` 三种范围都能进入同一个工作台；`all` 不能与项目 ID 混用。
 - [ ] 字段口径：项目层只使用 `创建人 / 协作者`，不新增项目负责人；任务级负责人/归属人仅在后端确认字段存在后实现。
+- [ ] 项目列表顶部概览：指标定义、计算公式、空态和变化值展示以 `spec_v1.md` 4.3 为准；后续改动必须同步回 `spec / design / prd`。
 - [ ] 筛选分层：一级筛选影响 Dashboard、原始数据、内容列表、详情抽屉；二级筛选只影响内容列表；数据观察周期只影响 Dashboard 分析和任务趋势。
 - [ ] 时间联动：`发布日期起点 publishStart` 存在时，禁止选择 `observeEnd < publishStart` 的数据观察周期。
-- [ ] Dashboard 范围：当前只实现观察区间概览、内容变化榜、关键指标趋势、达人/频道贡献；`效率指标观察 / 数据可信度 / 近期动向提醒` 暂不独立落地。
+- [ ] Dashboard 范围：当前实现观察区间概览、内容变化榜、关键指标趋势、达人/频道贡献、标签贡献分析；`效率指标观察 / 数据可信度 / 近期动向提醒` 暂不独立落地。
+- [ ] 标签贡献：一级筛选 `视频标签` 下拉展示未筛选全集数量；Dashboard 标签贡献跟随当前筛选和数据观察周期，并支持 `观察期增量 / 当前累计值` 与指标切换；指标 Tab 同时控制图表和全量表格排序。
+- [ ] 导出：实现全量导出、数据看板导出、当前视图导出三类 XLSX；XLSX 必须包含 README sheet，标签贡献导出不按页面 TOP 20 截断。
 - [ ] 原始数据：沿用线上可配置数据块，不展示独立 `自定义数据` 卡片，配置抽屉也不保留 `自定义数据` 项。
 - [ ] 内容列表：不新增默认 `处理状态 / 监控状态 / 增长状态` 总列；短链、预算、评论、新增分别由事实字段解释。
 - [ ] 表头配置：字段池必须覆盖线上真实字段；`内容` 列必选、置顶、不可隐藏；配置保存为账号级配置。
