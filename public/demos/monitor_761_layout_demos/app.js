@@ -35,6 +35,9 @@ const initialParams = new URLSearchParams(window.location.search)
 const notificationTaskId = initialParams.get('task')
 const isNotificationEntry = initialParams.get('from') === 'notification' && notificationTaskId
 const isArchivePreview = initialParams.get('projectStatus') === 'archived'
+const initialWorkbenchTab = initialParams.get('tab') === 'dashboard' ? 'dashboard' : 'overview'
+const initialListFilter = initialParams.get('listFilter') || ''
+const initialReminderRange = initialParams.get('reminderRange') || '7d'
 let pendingArchiveCard = null
 let pendingArchiveProjectName = '当前项目'
 
@@ -164,6 +167,13 @@ const tagModeNotes = {
   snapshot: '当前展示的是最新累计值：不取观察期差值，用于查看现在各标签沉淀的总体数据；选择“内容数”时按标签内容总数排序。多标签内容会重复归属。'
 }
 
+const reminderRangeLabels = {
+  '7d': '最近 7 天',
+  '30d': '最近 30 天',
+  month: '本月',
+  custom: '自定义'
+}
+
 const primaryFilterOptions = [
   ['监控状态', ['全部 (128)', '监控中', '已完成', '已删除', '其他状态']],
   ['地区', ['全部地区', '美国', '日本', '韩国', '中国台湾', '巴西', '英国', '其他']],
@@ -186,17 +196,32 @@ const secondaryFilterOptions = [
   ['近期新增', ['全部', '最近 1 小时', '今日新增', '最近 7 天', '自动追踪新增']]
 ]
 
-const projectOverviewFilterOptions = [
-  ['日期范围', ['最近 7 天', '最近 30 天', '本月', '自定义']],
-  ['项目范围', ['全部可见项目', '运行中项目', '已归档项目', '自定义项目范围']],
-  ['平台范围', ['全部平台', 'YouTube', 'TikTok', 'Instagram', 'X']]
+const projectListFilterOptions = [
+  ['项目状态', ['全部', '进行中', '已归档']],
+  ['项目创建人', ['全部', 'Yuki Chen', 'Kuangji', 'Sophia', 'Alex']]
 ]
 
-const projectCardFilterOptions = [
-  ['卡片状态', ['运行中', '已归档', '全部状态']],
-  ['创建人', ['全部', 'Yuki Chen', 'Kuangji', 'Sophia', 'Alex']],
-  ['平台', ['全部', 'YouTube', 'TikTok', 'Instagram', 'X']]
+const projectListData = [
+  { name: 'May Creator Launch', id: 'project-1', creator: 'Yuki Chen', collaborators: 4, createdAt: '2026-04-18', status: '进行中', views: 188400, viewsLabel: '188.4K', engagement: 10927, er: '5.8%', active: 46, activeDelta: '+3', issues: 7, autoCount: 13 },
+  { name: 'Beauty Review', id: 'project-2', creator: 'Yuki Chen', collaborators: 4, createdAt: '2026-04-18', status: '进行中', views: 96100, viewsLabel: '96.1K', engagement: 4036, er: '4.2%', active: 46, activeDelta: '+1', issues: 8, autoCount: 4 },
+  { name: 'TikTok Spring Test', id: 'project-3', creator: 'Sophia', collaborators: 3, createdAt: '2026-04-18', status: '进行中', views: 73600, viewsLabel: '73.6K', engagement: 4931, er: '6.7%', active: 42, activeDelta: '+2', issues: 6, autoCount: 9 },
+  { name: 'Camera Trial', id: 'project-4', creator: 'Alex', collaborators: 2, createdAt: '2026-04-22', status: '进行中', views: 29800, viewsLabel: '29.8K', engagement: 626, er: '2.1%', active: 18, activeDelta: '+0', issues: 1, autoCount: 0 },
+  { name: 'Holiday Seeding', id: 'project-5', creator: 'Kuangji', collaborators: 3, createdAt: '2026-04-02', status: '已归档', views: 12600, viewsLabel: '12.6K', engagement: 365, er: '2.9%', active: 11, activeDelta: '+0', issues: 3, autoCount: 1 }
 ]
+
+const listFilterLabels = {
+  views: '排序：观看量降序',
+  er: '排序：ER 降序',
+  'auto-track': '近期新增：自动追踪入库',
+  channel: '创作者/频道：Lena Beauty Lab',
+  attention: '数据问题：需关注内容',
+  'efficiency-ready': '指标状态：CTR/CPV/CPM 可计算',
+  'shortlink-gap': '短链状态：未绑定/无点击',
+  'budget-gap': '预算状态：未填写',
+  'custom-metric': '自定义指标：口径待确认',
+  'comment-gap': '评论状态：样本不足/未同步',
+  'baseline-gap': '数据状态：缺少基线点'
+}
 
 const multiFilterMenus = new WeakMap()
 
@@ -296,6 +321,7 @@ function shell(content) {
 
 function workbenchHeader() {
   const meta = scopeMeta()
+  const contextNotice = initialListFilter ? `<p class="project-context-note">已从项目列表进入，自动带入「${listFilterLabels[initialListFilter] || '列表筛选'}」；该条件只作用于监控内容列表。</p>` : ''
   return `
     <div class="project-header ${isArchivePreview ? 'archived-workbench' : ''}">
       <div class="workbench-title-block">
@@ -305,13 +331,14 @@ function workbenchHeader() {
             <h2><span data-scope-title>${meta.title}</span><span class="scope-edit-icon" data-open-drawer="scope-config" role="button" title="编辑项目范围" aria-label="编辑项目范围">✎</span>${isArchivePreview ? '<span class="chip gray lifecycle-chip">已归档</span>' : ''}</h2>
             <p data-scope-desc>${meta.desc}</p>
             ${isArchivePreview ? '<p class="archive-state-note">归档项目保留历史数据查看；添加监控和自动追踪新增已暂停，已存在任务继续更新到原监控结束时间。</p>' : ''}
+            ${contextNotice}
           </div>
           <div class="scope-summary">
             <span data-scope-content>${meta.content}</span>
             <span data-scope-platform>${meta.platform}</span>
             <span data-scope-issue>${meta.issue}</span>
             <button class="btn btn-light scope-export-action" data-export-action="full">全量导出 XLSX</button>
-            <button class="btn btn-light scope-archive-action" data-archive-project>${isArchivePreview ? '取消归档' : '归档项目'}</button>
+            <button class="btn btn-light scope-archive-action" data-archive-project>${isArchivePreview ? '撤销归档' : '归档项目'}</button>
             <button class="btn btn-primary scope-add-monitor" ${isArchivePreview ? 'disabled title="已归档项目不能新增监控"' : ''}>添加监控</button>
           </div>
         </div>
@@ -362,7 +389,7 @@ function scopeEditorDrawer() {
           <div class="selected-scope-tags" data-selected-scope-tags></div>
         </div>
         <div class="scope-filter-tools">
-          ${projectCardFilterOptions.map(([label, options]) => filterSelect(label, options)).join('')}
+          ${projectListFilterOptions.map(([label, options]) => filterSelect(label, options)).join('')}
           <div class="search">搜索项目名称</div>
         </div>
         <div class="scope-projects scope-projects-drawer">
@@ -414,6 +441,23 @@ function globalFilterSticky() {
 
 function workbenchAnchors() {
   return `<div class="section-anchor-nav"><a href="#dashboard-section" data-anchor-target="dashboard-section">数据看板</a><a href="#raw-data-section" data-anchor-target="raw-data-section">原始数据</a><a href="#content-list-section" data-anchor-target="content-list-section">监控内容</a></div>`
+}
+
+function workbenchTabs(cross = false) {
+  return `
+    <div class="workbench-tabs" data-workbench-tabs>
+      <div class="workbench-tab-nav" role="tablist" aria-label="内容监控工作台视图">
+        <button class="workbench-tab ${initialWorkbenchTab === 'overview' ? 'active' : ''}" type="button" role="tab" aria-selected="${initialWorkbenchTab === 'overview'}" data-workbench-tab="overview">监控概览</button>
+        <button class="workbench-tab ${initialWorkbenchTab === 'dashboard' ? 'active' : ''}" type="button" role="tab" aria-selected="${initialWorkbenchTab === 'dashboard'}" data-workbench-tab="dashboard">数据看板</button>
+      </div>
+      <div class="workbench-tab-panel" data-workbench-panel="overview" ${initialWorkbenchTab === 'overview' ? '' : 'hidden'}>
+        ${rawMetricPanel()}
+        ${contentListSection()}
+      </div>
+      <div class="workbench-tab-panel" data-workbench-panel="dashboard" ${initialWorkbenchTab === 'dashboard' ? '' : 'hidden'}>
+        ${dashboardSection(cross)}
+      </div>
+    </div>`
 }
 
 const overviewMetrics = [
@@ -558,10 +602,33 @@ const drilldownViews = {
   }
 }
 
-function metricCards(compact = false) {
+function formatCompactNumber(value) {
+  if (value >= 1000000) return `${(value / 1000000).toFixed(2)}M`
+  if (value >= 1000) return `${(value / 1000).toFixed(value >= 100000 ? 1 : 0)}K`
+  return String(value)
+}
+
+function projectOverviewMetrics(projects = projectListData) {
+  const totalViews = projects.reduce((sum, project) => sum + project.views, 0)
+  const totalEngagement = projects.reduce((sum, project) => sum + project.engagement, 0)
+  const activeCount = projects.reduce((sum, project) => sum + project.active, 0)
+  const issues = projects.reduce((sum, project) => sum + project.issues, 0)
+  const autoNew = projects.filter(project => project.status !== '已归档').reduce((sum, project) => sum + project.autoCount, 0)
+  const projectCount = projects.length
+  return [
+    ['项目数', String(projectCount), '当前筛选结果', ''],
+    ['观看量', formatCompactNumber(totalViews), '7天对比 +12.6%', ''],
+    ['互动量', formatCompactNumber(totalEngagement), '7天对比 +8.4%', ''],
+    ['活跃监控数', String(activeCount), '7天对比 +6', ''],
+    ['需关注内容', String(issues), '当前待处理', './option-d-ia-transition.html?projects=all&tab=overview&listFilter=attention'],
+    ['自动追踪新增', String(autoNew), '当前新增池', './option-d-ia-transition.html?projects=all&tab=overview&listFilter=auto-track']
+  ]
+}
+
+function metricCards(compact = false, projects = projectListData) {
   const overview = overviewMetrics.map(([label, value, note]) => [label, value, note])
   if (compact) {
-    return `<div class="compact-metrics">${overview.concat([['自动追踪新增', '13', '最近 7 天'], ['短链点击', '2.4K', '4 条未绑定']]).map(item => `<div class="compact-metric"><div class="metric-label">${item[0]}</div><div class="metric-value">${item[1]} <span class="metric-note">${item[2]}</span></div></div>`).join('')}</div>`
+    return `<div class="compact-metrics" data-project-overview-metrics>${projectOverviewMetrics(projects).map(([label, value, note, nav]) => `${nav ? `<button class="compact-metric actionable" type="button" data-nav="${nav}" aria-label="查看${label}">` : '<div class="compact-metric">'}${nav ? '<span class="metric-jump-icon" aria-hidden="true">↗</span>' : ''}<div class="metric-label">${label}</div><div class="metric-value">${value} <span class="metric-note">${note}</span></div>${nav ? '</button>' : '</div>'}`).join('')}</div>`
   }
   return `
     <section class="diagnostic-summary overview-summary">
@@ -621,7 +688,7 @@ function rawMetricPanel() {
       <div class="workbench-section-head raw-data-head">
         <div>
           <h2>原始数据</h2>
-          <p>延续线上可配置数据块，贴近监控内容列表的当前统计上下文。</p>
+          <p>延续线上可配置数据块，展示当前筛选集合的最新累计值或当前状态，贴近监控内容列表。</p>
         </div>
         <button class="btn btn-ghost" data-open-drawer="metric-config">配置数据块</button>
       </div>
@@ -990,20 +1057,21 @@ function dashboardSection(cross = false) {
 }
 
 function optionA() {
-  return shell(`${workbenchHeader()}<div class="page"><div class="monitor-container">${toolbar()}${workbenchAnchors()}${dashboardSection(false)}${rawMetricPanel()}${contentListSection()}</div></div>${configDrawers()}`)
+  return shell(`${workbenchHeader()}<div class="page"><div class="monitor-container">${toolbar()}${workbenchTabs(false)}</div></div>${configDrawers()}`)
 }
 
 function optionD() {
-  return shell(`${workbenchHeader()}<div class="page"><div class="monitor-container">${toolbar()}${workbenchAnchors()}${dashboardSection(true)}${rawMetricPanel()}${contentListSection()}</div></div>${configDrawers()}`)
+  return shell(`${workbenchHeader()}<div class="page"><div class="monitor-container">${toolbar()}${workbenchTabs(true)}</div></div>${configDrawers()}`)
 }
 
 function drawerPreview() {
   return `<aside class="drawer-preview"><h2 class="drawer-title">任务详情抽屉 · 状态解释</h2><p class="note">单条内容不升级为独立页，重点解释数据为什么为空或不可计算。</p><div class="drawer-section"><div class="state-list"><div class="state-row"><span>评论分析</span><strong>样本过少</strong></div><div class="state-row"><span>Nox 短链</span><strong>已绑定无点击</strong></div><div class="state-row"><span>预算消耗</span><strong>用户未填写</strong></div><div class="state-row"><span>自动追踪来源</span><strong>Rule A</strong></div></div></div><div class="drawer-section"><div class="section-head"><h2 class="section-title">单条趋势</h2></div><div class="chart" style="height:180px"><div class="chart-line"></div></div></div></aside>`
 }
 
-function projectRow(name, checked, views, er, issues, autoCount, status = '运行中') {
-  const archived = status === '已归档'
-  return `<div class="project-card-row ${checked ? 'selected' : ''} ${archived ? 'archived' : ''}" data-project-card data-project-status="${status}" data-selected="${checked ? 'true' : 'false'}"><div><h2 class="project-title"><button class="row-check" data-row-check>${checked ? '☑' : '☐'}</button> ${name}</h2><div class="project-meta"><span class="avatar"></span><span>Yuki Chen</span><span class="divider"></span><span>协作者 4</span><span class="divider"></span><span>2026-04-18</span>${archived ? '<span class="divider"></span><span>不再自动新增</span>' : ''}</div></div><div class="project-data"><div><strong>${views}</strong><div class="data-label">7天观看</div></div><div><strong>${er}</strong><div class="data-label">7天互动率</div></div><div><strong>${issues}</strong><div class="data-label">需关注</div></div><div><strong>${archived ? '暂停' : autoCount}</strong><div class="data-label">自动新增</div></div><div><strong>YT TT IG</strong><div class="data-label">平台</div></div></div><div class="project-actions"><span class="chip ${archived ? 'gray' : 'green'}">${status}</span>${archived ? '<span class="archive-action-hint">点击查看历史</span>' : '<button class="btn btn-light btn-sm" data-archive-project>归档</button>'}</div></div>`
+function projectRow(project, checked = false) {
+  const archived = project.status === '已归档'
+  const projectId = project.id
+  return `<div class="project-card-row ${checked ? 'selected' : ''} ${archived ? 'archived' : ''}" data-project-card data-project-id="${projectId}" data-project-status="${project.status}" data-project-creator="${project.creator}" data-selected="${checked ? 'true' : 'false'}"><div><h2 class="project-title"><button class="row-check" data-row-check>${checked ? '☑' : '☐'}</button> ${project.name}</h2><div class="project-meta"><span class="avatar"></span><span>创建人 ${project.creator}</span><span class="divider"></span><span>协作者 ${project.collaborators}</span><span class="divider"></span><span>创建于 ${project.createdAt}</span>${archived ? '<span class="divider"></span><span>不再自动新增</span>' : ''}</div></div><div class="project-data"><div><strong>${project.viewsLabel}</strong><div class="data-label">当前观看</div></div><div><strong>${project.er}</strong><div class="data-label">当前互动率</div></div><button class="project-metric-action" type="button" data-nav="./option-a-project-workbench.html?projects=${projectId}&tab=overview&listFilter=attention"><strong>${project.issues}</strong><div class="data-label">需关注</div></button><button class="project-metric-action" type="button" ${archived ? 'disabled' : `data-nav="./option-a-project-workbench.html?projects=${projectId}&tab=overview&listFilter=auto-track"`}><strong>${archived ? '暂停' : project.autoCount}</strong><div class="data-label">自动新增</div></button><div><strong>${project.active}</strong><div class="data-label">当前内容</div></div></div><div class="project-actions"><span class="chip ${archived ? 'gray' : 'green'}">${project.status}</span>${archived ? '<button class="btn btn-light btn-sm" data-restore-project>撤销归档</button><span class="archive-action-hint">卡片仍可查看历史</span>' : '<button class="btn btn-light btn-sm" data-archive-project>归档</button>'}</div></div>`
 }
 
 function pagination() {
@@ -1014,12 +1082,11 @@ function projectListPage() {
   return shell(`
     <div class="page">
       <div class="list-header"><div><h1>内容监控项目列表</h1><p>一级实体页面。用户从这里进入内容监控工作台，并由项目范围决定单项目、已选项目或全部项目视角。</p></div><div class="header-actions"><button class="btn btn-primary">创建项目</button></div></div>
-      <section class="overview-panel"><div class="section-head"><div><h2 class="section-title">项目近期概览</h2><p class="section-sub">此处按独立的概览口径统计，不受下方卡片列表筛选影响。</p></div><button class="btn btn-ghost" data-nav="./option-d-ia-transition.html" data-scope="all">查看全部项目内容</button></div><div class="overview-filters">${projectOverviewFilterOptions.map(([label, options]) => filterSelect(label, options)).join('')}</div>${metricCards(true)}</section>
+      <section class="overview-panel"><div class="section-head"><div><h2 class="section-title">项目总览</h2><p class="section-sub">聚合当前筛选后的项目列表；所有指标均为当前值，观看量、互动量和活跃监控数展示 7 天对比。</p></div><button class="btn btn-ghost" data-nav="./option-d-ia-transition.html?projects=all&tab=overview" data-scope="all">查看全部项目内容</button></div><div class="overview-filters" data-project-list-filters>${projectListFilterOptions.map(([label, options]) => filterSelect(label, options)).join('')}<div class="search" data-project-search>搜索项目名称</div></div>${metricCards(true)}</section>
       <section class="project-list-panel" data-project-list-panel>
-        <div class="section-head"><div><h2 class="section-title">项目列表</h2><p class="section-sub">下方筛选只决定卡片显示，不改变上方概览数据。</p></div><div class="header-actions"><button class="btn btn-light" data-toggle-batch>多选项目</button><button class="btn btn-light" data-cancel-batch hidden>取消多选</button></div></div>
-        <div class="project-list-tools">${projectCardFilterOptions.map(([label, options]) => filterSelect(label, options)).join('')}<div class="search">搜索项目名称</div></div>
+        <div class="section-head"><div><h2 class="section-title">项目列表</h2><p class="section-sub">项目总览与下方列表使用同一组筛选条件。</p></div><div class="header-actions"><button class="btn btn-light" data-toggle-batch>多选项目</button><button class="btn btn-light" data-cancel-batch hidden>取消多选</button></div></div>
         <div class="batch-action-bar" data-batch-bar hidden><span data-selected-count>已选 0 个项目</span><button class="btn btn-primary" data-selected-action data-nav="./option-d-ia-transition.html" data-scope="selected" disabled>查看已选项目内容</button></div>
-        <div class="project-list">${projectRow('May Creator Launch', false, '188.4K', '5.8%', 7, 13)}${projectRow('Beauty Review', false, '96.1K', '4.2%', 8, 4)}${projectRow('TikTok Spring Test', false, '73.6K', '6.7%', 6, 9)}${projectRow('Camera Trial', false, '29.8K', '2.1%', 1, 0)}${projectRow('Holiday Seeding', false, '12.6K', '2.9%', 3, 1, '已归档')}</div>
+        <div class="project-list" data-project-list>${projectListData.map(project => projectRow(project)).join('')}</div>
         ${pagination()}
       </section>
     </div>`)
@@ -1115,6 +1182,55 @@ function archiveProjectCard(card) {
   }
 }
 
+function restoreProjectCard(card) {
+  if (!card) return
+  card.classList.remove('archived')
+  card.dataset.projectStatus = '运行中'
+  const autoMetric = card.querySelector('.project-data > button:nth-child(4) strong')
+  if (autoMetric) autoMetric.textContent = '1'
+  const autoAction = card.querySelector('.project-data > button:nth-child(4)')
+  if (autoAction) {
+    autoAction.disabled = false
+    const projectId = card.dataset.projectId || 'project-1'
+    autoAction.dataset.nav = `./option-a-project-workbench.html?projects=${projectId}&tab=overview&listFilter=auto-track`
+  }
+  const actions = card.querySelector('.project-actions')
+  if (actions) {
+    actions.innerHTML = '<span class="chip green">运行中</span><button class="btn btn-light btn-sm" data-archive-project>归档</button>'
+  }
+  const archiveNote = [...card.querySelectorAll('.project-meta span')].find(item => item.textContent === '不再自动新增')
+  const divider = archiveNote?.previousElementSibling
+  archiveNote?.remove()
+  if (divider?.classList.contains('divider')) divider.remove()
+  bindProjectLifecycleActions(card)
+}
+
+function bindProjectLifecycleActions(root = document) {
+  root.querySelectorAll('[data-archive-project]').forEach(button => {
+    if (button.dataset.boundArchive === 'true') return
+    button.dataset.boundArchive = 'true'
+    button.addEventListener('click', event => {
+      event.stopPropagation()
+      if (isArchivePreview) {
+        setArchivedPreview(false)
+      } else {
+        pendingArchiveCard = button.closest('[data-project-card]')
+        const projectName = pendingArchiveCard?.querySelector('.project-title')?.textContent?.replace(/[☑☐]/g, '').trim() || '当前项目'
+        openArchiveConfirm(projectName)
+      }
+    })
+  })
+
+  root.querySelectorAll('[data-restore-project]').forEach(button => {
+    if (button.dataset.boundRestore === 'true') return
+    button.dataset.boundRestore = 'true'
+    button.addEventListener('click', event => {
+      event.stopPropagation()
+      restoreProjectCard(button.closest('[data-project-card]'))
+    })
+  })
+}
+
 function updateProjectCard(card, selected) {
   card.dataset.selected = selected ? 'true' : 'false'
   card.classList.toggle('selected', selected)
@@ -1153,6 +1269,83 @@ function setPage(page) {
   paginationEl.querySelectorAll('[data-page]').forEach(button => button.classList.toggle('active', Number(button.dataset.page) === targetPage))
   paginationEl.querySelector('[data-page-prev]').classList.toggle('disabled', targetPage === 1)
   paginationEl.querySelector('[data-page-next]').classList.toggle('disabled', targetPage === 13)
+}
+
+function selectedOptionByLabel(root, label) {
+  const field = [...root.querySelectorAll('.filter-select')].find(item => item.querySelector('span')?.textContent === label)
+  return field?.querySelector('select')?.value || '全部'
+}
+
+function currentProjectFilters() {
+  const root = document.querySelector('[data-project-list-filters]')
+  if (!root) return { status: '全部', creator: '全部' }
+  return {
+    status: selectedOptionByLabel(root, '项目状态'),
+    creator: selectedOptionByLabel(root, '项目创建人')
+  }
+}
+
+function projectMatchesFilters(project, filters) {
+  const statusOk = filters.status === '全部' || project.status === filters.status
+  const creatorOk = filters.creator === '全部' || project.creator === filters.creator
+  return statusOk && creatorOk
+}
+
+function filteredProjects() {
+  const filters = currentProjectFilters()
+  return projectListData.filter(project => projectMatchesFilters(project, filters))
+}
+
+function syncProjectOverview() {
+  const projects = filteredProjects()
+  const metricRoot = document.querySelector('[data-project-overview-metrics]')
+  const listRoot = document.querySelector('[data-project-list]')
+  if (metricRoot) metricRoot.outerHTML = metricCards(true, projects)
+  if (listRoot) {
+    listRoot.innerHTML = projects.length
+      ? projects.map(project => projectRow(project)).join('')
+      : '<div class="project-empty-state">当前筛选下暂无项目</div>'
+  }
+  const paginationEl = document.querySelector('[data-pagination]')
+  if (paginationEl) {
+    paginationEl.querySelector('.pagination-total').textContent = `共 ${projects.length} 条`
+  }
+  bindProjectCardInteractions(listRoot || document)
+  bindProjectLifecycleActions(listRoot || document)
+  bindNavigation(document.querySelector('[data-project-overview-metrics]') || document)
+}
+
+function bindNavigation(root = document) {
+  root.querySelectorAll('[data-nav]').forEach(button => {
+    if (button.dataset.boundNav === 'true') return
+    button.dataset.boundNav = 'true'
+    button.addEventListener('click', event => {
+      event.stopPropagation()
+      if (button.disabled) return
+      navigateTo(button.dataset.nav, button.dataset.scope)
+    })
+  })
+}
+
+function bindProjectCardInteractions(root = document) {
+  root.querySelectorAll('[data-project-card]').forEach(card => {
+    if (card.dataset.boundCard === 'true') return
+    card.dataset.boundCard = 'true'
+    card.addEventListener('click', event => {
+      if (event.target.closest('[data-row-check]')) {
+        updateProjectCard(card, card.dataset.selected !== 'true')
+        return
+      }
+      if (document.querySelector('[data-project-list-panel]')?.classList.contains('is-batch')) {
+        updateProjectCard(card, card.dataset.selected !== 'true')
+      } else if (!event.target.closest('button')) {
+        setStoredScope('single')
+        const archived = card.dataset.projectStatus === '已归档'
+        const projectId = card.dataset.projectId || 'project-1'
+        navigateTo(`./option-a-project-workbench.html?projects=${projectId}&tab=overview${archived ? '&projectStatus=archived' : ''}`)
+      }
+    })
+  })
 }
 
 function updateScopeSummary() {
@@ -1262,20 +1455,6 @@ function setDrilldownView(type) {
   })
 }
 
-const listFilterLabels = {
-  views: '排序：观看量降序',
-  er: '排序：ER 降序',
-  'auto-track': '近期新增：自动追踪入库',
-  channel: '创作者/频道：Lena Beauty Lab',
-  attention: '数据问题：需关注内容',
-  'efficiency-ready': '指标状态：CTR/CPV/CPM 可计算',
-  'shortlink-gap': '短链状态：未绑定/无点击',
-  'budget-gap': '预算状态：未填写',
-  'custom-metric': '自定义指标：口径待确认',
-  'comment-gap': '评论状态：样本不足/未同步',
-  'baseline-gap': '数据状态：缺少基线点'
-}
-
 function applyListFilter(type) {
   const section = document.getElementById('content-list-section')
   if (!section) return
@@ -1293,6 +1472,21 @@ function applyListFilter(type) {
     notice.hidden = false
   }
   section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
+
+function switchWorkbenchTab(tab) {
+  const next = tab === 'dashboard' ? 'dashboard' : 'overview'
+  document.querySelectorAll('[data-workbench-tab]').forEach(button => {
+    const active = button.dataset.workbenchTab === next
+    button.classList.toggle('active', active)
+    button.setAttribute('aria-selected', String(active))
+  })
+  document.querySelectorAll('[data-workbench-panel]').forEach(panel => {
+    panel.hidden = panel.dataset.workbenchPanel !== next
+  })
+  const params = new URLSearchParams(window.location.search)
+  params.set('tab', next)
+  history.replaceState(null, '', `${window.location.pathname}?${params.toString()}${window.location.hash}`)
 }
 
 function getTagState(panel) {
@@ -1626,13 +1820,7 @@ function bindInteractions() {
     })
   })
 
-  document.querySelectorAll('[data-nav]').forEach(button => {
-    button.addEventListener('click', event => {
-      event.stopPropagation()
-      if (button.disabled) return
-      navigateTo(button.dataset.nav, button.dataset.scope)
-    })
-  })
+  bindNavigation()
 
   document.querySelectorAll('[data-anchor-target]').forEach(link => {
     link.addEventListener('click', event => {
@@ -1644,34 +1832,17 @@ function bindInteractions() {
     })
   })
 
-  document.querySelectorAll('[data-project-card]').forEach(card => {
-    card.addEventListener('click', event => {
-      if (event.target.closest('[data-row-check]')) {
-        updateProjectCard(card, card.dataset.selected !== 'true')
-        return
-      }
-      if (document.querySelector('[data-project-list-panel]')?.classList.contains('is-batch')) {
-        updateProjectCard(card, card.dataset.selected !== 'true')
-      } else if (!event.target.closest('button')) {
-        setStoredScope('single')
-        const archived = card.dataset.projectStatus === '已归档'
-        navigateTo(`./option-a-project-workbench.html${archived ? '?projectStatus=archived' : ''}`)
-      }
-    })
+  document.querySelectorAll('[data-workbench-tab]').forEach(button => {
+    button.addEventListener('click', () => switchWorkbenchTab(button.dataset.workbenchTab))
   })
 
-  document.querySelectorAll('[data-archive-project]').forEach(button => {
-    button.addEventListener('click', event => {
-      event.stopPropagation()
-      if (isArchivePreview) {
-        setArchivedPreview(false)
-      } else {
-        pendingArchiveCard = button.closest('[data-project-card]')
-        const projectName = pendingArchiveCard?.querySelector('.project-title')?.textContent?.replace(/[☑☐]/g, '').trim() || '当前项目'
-        openArchiveConfirm(projectName)
-      }
-    })
+  bindProjectCardInteractions()
+
+  document.querySelectorAll('[data-project-list-filters] select').forEach(select => {
+    select.addEventListener('change', syncProjectOverview)
   })
+
+  bindProjectLifecycleActions()
 
   document.querySelector('[data-confirm-archive]')?.addEventListener('click', () => {
     const card = pendingArchiveCard
@@ -1909,6 +2080,12 @@ function bindInteractions() {
 }
 
 bindInteractions()
+if (option === 'list') {
+  syncProjectOverview()
+}
+if (initialListFilter) {
+  requestAnimationFrame(() => applyListFilter(initialListFilter))
+}
 if (isNotificationEntry) {
   openDrawer('content-detail')
 }

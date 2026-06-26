@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-06-26T01:56:18.257Z",
+  "updatedAt": "2026-06-26T03:24:41.176Z",
   "navigation": {
     "docs": [
       {
@@ -28581,13 +28581,14 @@
       },
       {
         "id": "monitor_761_layout_demos",
-        "title": "761布局方案",
-        "description": "内容监控761布局方案Demo，展示多种页面结构布局设计与排版样式。",
+        "title": "内容监控 761 / 7611 布局 Demo",
+        "description": "内容监控项目列表与统一工作台 Demo，包含 7611 项目总览口径调整。",
         "path": "demos/monitor_761_layout_demos/index.html",
         "thumbnail": "/demos/monitor_761_layout_demos/screenshot.png",
         "tags": [
-          "布局",
           "内容监控",
+          "761",
+          "7611",
           "Demo"
         ]
       },
