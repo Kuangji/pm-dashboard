@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-06-12T00:18:39.271Z",
+  "updatedAt": "2026-06-26T01:56:18.257Z",
   "navigation": {
     "docs": [
       {
@@ -253,6 +253,24 @@
             "children": [
               {
                 "type": "file",
+                "name": "7611_dev_checklist_v0.md",
+                "path": "02-project-documents/monitor_761/7611_dev_checklist_v0.md",
+                "slug": "02-project-documents/monitor_761/7611_dev_checklist_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "7611_supplement_v0.md",
+                "path": "02-project-documents/monitor_761/7611_supplement_v0.md",
+                "slug": "02-project-documents/monitor_761/7611_supplement_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
                 "name": "README.md",
                 "path": "02-project-documents/monitor_761/README.md",
                 "slug": "02-project-documents/monitor_761/README.md",
@@ -382,6 +400,15 @@
                 "name": "spec_v1.md",
                 "path": "02-project-documents/monitor_761/spec_v1.md",
                 "slug": "02-project-documents/monitor_761/spec_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "发版公告_面向用户.md",
+                "path": "02-project-documents/monitor_761/发版公告_面向用户.md",
+                "slug": "02-project-documents/monitor_761/发版公告_面向用户.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
