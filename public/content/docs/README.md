@@ -32,7 +32,8 @@
     ├── nox_ai_transform_quick_validation/  # Nox AI转型快速验证
     ├── noxinfluencer_全站功能地图/  # 全站功能地图
     ├── youtube_channel_nondefault_sort_threshold_audit/  # 频道排序阈值调研
-    └── youtube_to_notebooklm_teardown/  # 视频笔记产品拆解
+    ├── youtube_to_notebooklm_teardown/  # 视频笔记产品拆解
+    └── 2026-06-30-influencer-marketing-ai-agent-opportunities-2026/
 ```
 <!-- CONTENT-TREE-END -->
 

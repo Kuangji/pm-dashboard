@@ -376,16 +376,22 @@ function curationTaskItem(session) {
 function curationTaskDrawer() {
   if (!state.curationTaskDrawerOpen) return "";
   const sessions = visibleCurationSessions();
+  const sourceAction = state.page === "curation"
+    ? `<button class="btn btn-primary" data-action="view-candidate-source">查看候选来源</button>`
+    : "";
+  const drawerHint = state.page === "curation"
+    ? "找回最近任务，或返回候选来源再次提交策略。"
+    : "找回最近任务。";
   return `
     <div class="drawer-mask" data-action="close-task-drawer-mask"></div>
     <aside class="curation-task-drawer" aria-label="精选任务">
       <div class="task-drawer-head">
         <div>
           <h2>精选任务</h2>
-          <p>找回最近任务，或基于原搜索结果重新精选。</p>
+          <p>${drawerHint}</p>
         </div>
         <div class="task-drawer-head-actions">
-          <button class="btn btn-primary" data-action="new-session-from-current">${icon("spark")} 重新精选</button>
+          ${sourceAction}
           <button class="btn btn-icon" data-action="close-task-drawer">${icon("close")}</button>
         </div>
       </div>
@@ -408,7 +414,7 @@ function curationStatusPanel() {
   const insufficientPanel = state.curationInsufficient ? `
     <div class="insufficient-result-alert">
       <strong>当前候选频道无法达到目标名单量</strong>
-      <span>已完成可用结果筛选，建议降低目标数量、调整外部搜索结果，或重新精选。</span>
+      <span>已完成可用结果筛选，建议降低目标数量，或回到候选来源重新提交策略。</span>
     </div>
   ` : "";
   return `
@@ -424,7 +430,7 @@ function curationStatusPanel() {
           </div>
         </div>
         <div class="curation-iteration-actions">
-          <button class="btn" ${canIterate ? "" : "disabled"} data-action="rerun-curation">重新精选</button>
+          <button class="btn" data-action="view-candidate-source">查看候选来源</button>
           <button class="btn btn-soft-primary" ${canIterate ? "" : "disabled"} data-action="continue-curation-round">继续精选</button>
         </div>
       </div>
@@ -714,13 +720,11 @@ function drawerInputCount() {
 
 function drawerInputLabel() {
   if (state.strategyEntry === "continue-round") return `当前精选名单 · ${state.producedCount} 个`;
-  if (state.strategyEntry === "rerun") return `原搜索结果 · ${originalSearchResultCount()} 个`;
   return `当前搜索结果 · ${originalSearchResultCount()} 个`;
 }
 
 function drawerPrimaryText() {
   if (state.strategyEntry === "continue-round") return "开始下一轮精选";
-  if (state.strategyEntry === "rerun" || state.confirmFromCuration) return "创建新的精选任务";
   return "开始 Agent 精选";
 }
 
@@ -958,9 +962,21 @@ function startCuration() {
   state.curationInsufficient = false;
   state.resultSet = refinedCreators;
   state.snapshotLabel = "当前搜索结果快照";
-  const toast = state.strategyEntry === "rerun" ? "已创建新的精选任务" : "已基于当前搜索结果开始智能精选";
+  const toast = "已基于当前搜索结果开始智能精选";
   state.strategyEntry = "search";
   showToast(toast);
+}
+
+function viewCandidateSource() {
+  state.page = "search";
+  state.mode = "continue";
+  state.drawerOpen = false;
+  state.curationTaskDrawerOpen = false;
+  state.deleteConfirmSessionId = "";
+  state.confirmFromCuration = false;
+  state.strategyEntry = "search";
+  state.strategyEditing = false;
+  showToast("已回到候选来源，可再次提交精选策略");
 }
 
 function render() {
@@ -1092,29 +1108,8 @@ document.addEventListener("click", (event) => {
     startCuration();
     return;
   }
-  if (action === "new-session-from-current") {
-    state.page = "curation";
-    state.confirmFromCuration = true;
-    state.strategyEntry = "rerun";
-    state.drawerOpen = true;
-    state.curationTaskDrawerOpen = false;
-    state.outputSize = Math.min(20, outputSizeLimit());
-    state.strategyEditing = false;
-    render();
-    return;
-  }
-  if (action === "rerun-curation") {
-    if (state.curationRunning) {
-      showToast("当前仍在生成，请先等待完成或停止生成");
-      return;
-    }
-    state.confirmFromCuration = true;
-    state.strategyEntry = "rerun";
-    state.drawerOpen = true;
-    state.curationTaskDrawerOpen = false;
-    state.outputSize = Math.min(20, outputSizeLimit());
-    state.strategyEditing = false;
-    render();
+  if (action === "view-candidate-source") {
+    viewCandidateSource();
     return;
   }
   if (action === "continue-curation-round") {

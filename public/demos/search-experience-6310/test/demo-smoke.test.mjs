@@ -80,17 +80,15 @@ const requiredTexts = [
   "target-limit-note",
   "候选频道可能筛不满",
   "补齐 1 个",
+  "查看候选来源",
+  "view-candidate-source",
   "保存至收藏夹",
   "进入邀约",
   "导出结果",
-  "重新精选",
   "继续精选",
   "continue-curation-round",
-  "rerun-curation",
   "curationRound",
   "上一轮精选名单",
-  "new-session-from-current",
-  "创建新的精选任务",
   "开始下一轮精选",
   "推荐理由",
   "风险提示",
@@ -113,6 +111,16 @@ const requiredTexts = [
 
 for (const text of requiredTexts) {
   assert.match(appJs, new RegExp(text), `missing demo copy: ${text}`);
+}
+
+const removedTexts = [
+  "重新精选",
+  "rerun-curation",
+  "new-session-from-current",
+];
+
+for (const text of removedTexts) {
+  assert.doesNotMatch(appJs, new RegExp(text), `removed rerun entry should not remain: ${text}`);
 }
 
 const requiredDesignTokens = [
