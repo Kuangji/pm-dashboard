@@ -5,9 +5,9 @@
 - 用户：DTC/跨境品牌 marketer、代理商执行
 - 情境：新品、类目、地区、预算确定，但不知道该搜哪些关键词、标签、语言和竞品参考
 - 当前 workaround：手搜、看竞品、问同事、复制历史名单、买平台名单
-- 未满足诉求：从 campaign brief 自动得到可解释的搜索策略和候选池
-- 对应机会：Campaign Brief -> Creator Shortlist Agent
-- 成熟条件：LLM 语义解析、多语言扩词、Nox 已有搜索/标签/相似达人基础
+- 未满足诉求：从已有 campaign brief/plan 理解结果自动得到可解释的搜索策略和候选池
+- 对应机会：Smart Marketing Plan -> Creator Candidate Agent
+- 成熟条件：LLM 语义解析、多语言扩词、Nox 已有智能营销计划、搜索、6310 智能精选和待邀约池基础
 
 ## Insight 2：我最怕选错人，不是怕少一个筛选项
 

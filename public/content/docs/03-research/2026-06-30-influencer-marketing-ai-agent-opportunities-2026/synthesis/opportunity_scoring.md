@@ -4,7 +4,7 @@
 
 | Rank | 机会点 | 市场 | 痛点 | 契合 | 成熟 | 风险反向 | 加权分 | 建议 |
 |---:|---|---:|---:|---:|---:|---:|---:|---|
-| 1 | Campaign Brief -> Creator Shortlist Agent | 4 | 5 | 5 | 4 | 3 | 4.45 | P0 立刻验证 |
+| 1 | Smart Marketing Plan -> Creator Candidate Agent | 4 | 5 | 5 | 4 | 3 | 4.45 | P0 立刻验证 |
 | 2 | Creator Quality & Risk Copilot | 4 | 5 | 5 | 4 | 3 | 4.45 | P0 立刻验证 |
 | 3 | Commerce ROI Attribution Hub | 5 | 5 | 4 | 4 | 2 | 4.35 | P0 先做可接平台/弱归因 |
 | 4 | Content Monitoring -> Paid Amplification Recommender | 5 | 4 | 5 | 3 | 2 | 4.05 | P1 与监控/创意榜单合并验证 |
@@ -15,17 +15,18 @@
 
 ## P0 机会的 MVP 形态
 
-### 1. Campaign Brief -> Creator Shortlist Agent
+### 1. Smart Marketing Plan -> Creator Candidate Agent
 
-输入：品牌/商品/地区/预算/平台/合作目标/禁忌项/竞品参考。
+输入：已有 Campaign brief/plan 上下文，包括商品、目标地区、语言、平台、内容要求、预算、目标人数、AI 营销计划中的 campaign summary、达人分层画像、创意策略、预算分配和时间线。
 
 输出：
 - 搜索策略：关键词、标签、语言、平台、筛选条件、排除词。
-- creator shortlist：每个候选人的推荐理由、风险、价格/合作建议、适合内容形态。
-- 可编辑的“加入待邀约池/CRM/邮件项目”动作。
+- 自动搜索结果快照。
+- creator candidate shortlist：每个候选人的推荐理由、风险、价格/合作建议、适合内容形态。
+- 可编辑的“加入待邀约池/CRM/邮件项目”动作，且必须由用户确认。
 
 验证指标：
-- 用户从 brief 到首批可邀约名单的时间下降 50%+。
+- 用户从已生成营销计划到首批可邀约名单的时间下降 50%+。
 - 用户愿意保留/邀约的推荐比例高于普通搜索列表。
 - 推荐解释被用户认为可信，而非只看分数。
 

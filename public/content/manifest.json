@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-06-30T06:04:21.287Z",
+  "updatedAt": "2026-06-30T06:53:08.357Z",
   "navigation": {
     "docs": [
       {
@@ -28554,6 +28554,15 @@
                 "name": "README.md",
                 "path": "03-research/2026-06-30-influencer-marketing-ai-agent-opportunities-2026/README.md",
                 "slug": "03-research/2026-06-30-influencer-marketing-ai-agent-opportunities-2026/README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "nox_6311_evidence_brief.md",
+                "path": "03-research/2026-06-30-influencer-marketing-ai-agent-opportunities-2026/nox_6311_evidence_brief.md",
+                "slug": "03-research/2026-06-30-influencer-marketing-ai-agent-opportunities-2026/nox_6311_evidence_brief.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false

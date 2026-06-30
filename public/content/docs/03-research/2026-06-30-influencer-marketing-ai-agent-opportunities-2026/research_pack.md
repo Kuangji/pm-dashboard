@@ -123,25 +123,6 @@
 
 ---
 
-## competitors/matrix.csv
-
-```csv
-Company,Primary ICP,Positioning,AI/Agent Signal,Commerce/ROI Signal,Pricing Signal,Weakness / Opening for Nox
-CreatorIQ,Enterprise brands/agencies,AI-native creator marketing infrastructure across paid owned earned commerce community content,AI-native insights across discovery campaigns reporting benchmarking,Standardized metrics suite and commerce/governance positioning,Enterprise/custom,"Enterprise-heavy; opportunity for faster mid-market workflow and China-cross-border use cases"
-GRIN,DTC/ecommerce brands,Creator management platform for discovery gifting campaigns relationships and ROI,Automation around discovery/gifting/campaign management,Shopify/Magento integration and revenue attribution,Free to start / sales-led,"Strong ecommerce workflow; opportunity in cross-platform intelligence and more explainable search/risk"
-Upfluence,eCommerce/DTC brands,Influencer and affiliate marketing platform,Jaice AI for discovery outreach campaign management and ROI,Sales/ROI tracking payout and affiliate positioning,Custom pricing,"AI-agent claims broad; opportunity in safer human-approved agent and localized cross-border execution"
-Modash,SMB/mid-market B2C brands,Simple transparent discovery analysis monitoring tool,AI not core public differentiator; strongest on database/filtering,Shopify/Gmail/Outlook integrations and content capture,Starts around $199-$299/mo,"Great discovery UX; opportunity for deeper execution/CRM/payment/monitoring chain"
-Traackr,Enterprise brands,Influencer marketing management and benchmarking,AI less central in public positioning than CreatorIQ/Upfluence,Enterprise measurement/benchmarking,Often enterprise annual pricing,"Enterprise benchmark; opportunity for lighter operating system"
-Later Influence/Mavrck,Mid-market/enterprise social teams,Influencer campaign management tied to social media operations,Later EdgeAI/research positioning,Campaign/gifting/payment workflow,Sales-led,"Social scheduling adjacency; opportunity in creator commerce + Nox data depth"
-Shopify Collabs,Shopify merchants,Built-in creator affiliate and commission program,Limited agent positioning,Native links/codes/commission payout via Shopify Billing,Free/Shopify-native,"Platform rail not cross-platform intelligence; Nox can aggregate and guide"
-TikTok Shop Affiliate,TikTok Shop sellers,Native seller-creator affiliate marketplace,Platform algorithmic matching/analytics,GMV/conversion/commission/return metrics,Platform-native,"Powerful but platform-locked; Nox can compare creators and campaigns across platforms"
-Amazon Creator Connections,Amazon brand owners,Connects brands with Amazon Associates creators,Limited agent positioning,Amazon traffic/sales/commission link,Platform-native,"Amazon-locked; Nox can help preselect compare and report across off-Amazon channels"
-ShopMy,Commerce/creator affiliate brands,Curated commerce and performance-first creator marketing,AI shopping/curation signals,Creator-driven sales infrastructure and affiliate commerce,Platform/enterprise,"Strong commerce network; Nox should avoid creator-consumer marketplace and focus brand workflow"
-```
-
-
----
-
 ## users/insight_cards.md
 
 # 用户诉求 / JTBD Insight Cards
@@ -151,9 +132,9 @@ ShopMy,Commerce/creator affiliate brands,Curated commerce and performance-first 
 - 用户：DTC/跨境品牌 marketer、代理商执行
 - 情境：新品、类目、地区、预算确定，但不知道该搜哪些关键词、标签、语言和竞品参考
 - 当前 workaround：手搜、看竞品、问同事、复制历史名单、买平台名单
-- 未满足诉求：从 campaign brief 自动得到可解释的搜索策略和候选池
-- 对应机会：Campaign Brief -> Creator Shortlist Agent
-- 成熟条件：LLM 语义解析、多语言扩词、Nox 已有搜索/标签/相似达人基础
+- 未满足诉求：从已有 campaign brief/plan 理解结果自动得到可解释的搜索策略和候选池
+- 对应机会：Smart Marketing Plan -> Creator Candidate Agent
+- 成熟条件：LLM 语义解析、多语言扩词、Nox 已有智能营销计划、搜索、6310 智能精选和待邀约池基础
 
 ## Insight 2：我最怕选错人，不是怕少一个筛选项
 
@@ -202,13 +183,13 @@ ShopMy,Commerce/creator affiliate brands,Curated commerce and performance-first 
 
 帮助跨境品牌和代理商在网红营销中更快、更可信地完成：
 
-> 从 campaign brief 到可邀约名单，再到风险判断、执行监控和 ROI 复盘。
+> 从已有 campaign brief/plan 理解结果到可邀约名单，再到风险判断、执行监控和 ROI 复盘。
 
 ## Opportunities
 
 | ID | Opportunity | Segment | Evidence IDs | Confidence | Importance |
 | --- | --- | --- | --- | --- | --- |
-| O-001 | Campaign Brief -> Creator Shortlist Agent | DTC/跨境品牌、代理商执行 | E-004,E-009,E-010,E-017 | Medium-High | P0 |
+| O-001 | Smart Marketing Plan -> Creator Candidate Agent | DTC/跨境品牌、代理商执行 | E-004,E-009,E-010,E-017 | Medium-High | P0 |
 | O-002 | Creator Quality & Risk Copilot | 品牌、代理商、企业客户 | E-010,E-012,E-020 | Medium-High | P0 |
 | O-003 | Commerce ROI Attribution Hub | DTC、电商、增长团队 | E-002,E-003,E-013,E-014,E-015,E-016 | High | P0 |
 | O-004 | Content Monitoring -> Paid Amplification Recommender | 增长团队、内容团队 | E-002,E-003,E-016 | Medium | P1 |
@@ -219,7 +200,7 @@ ShopMy,Commerce/creator affiliate brands,Curated commerce and performance-first 
 
 | Opportunity ID | Solution | Assumptions | Experiment | Effort |
 | --- | --- | --- | --- | --- |
-| O-001 | Brief parser + multilingual keyword expansion + candidate shortlist with explanation | 用户愿意从 brief 开始，而非手动填筛选项 | 5 个历史 brief 离线对照 | Medium |
+| O-001 | Consume existing campaign brief/plan context, generate search strategy, auto-search, auto-curate candidate shortlist with explanation | 用户愿意让系统把已有营销计划转成搜索与精选动作，而非手动填筛选项 | 5 个历史智能营销计划离线对照 | Medium |
 | O-002 | Creator risk card with evidence snippets and review status | 风险证据比黑盒分数更可信 | 30-50 个 creator 人审对照 | Medium |
 | O-003 | ROI hub combining short links, codes, commissions, content monitoring | 至少一个 commerce 数据源可稳定接入 | Shopify/TikTok Shop 最小闭环 spike | High |
 | O-004 | Content performance summary + paid amplification recommendation | 用户会把 creator content 当可复用资产 | 选历史监控内容生成复投建议并人工评审 | Medium |
@@ -232,6 +213,71 @@ ShopMy,Commerce/creator affiliate brands,Curated commerce and performance-first 
 - AI shortlist 若不可解释，会被视作普通排序或黑盒榜单。
 - 外部动作自动化必须受审批、权限和审计日志约束。
 - 平台原生工具会吃掉一部分 workflow，Nox 需要证明跨平台和前置决策价值。
+
+
+---
+
+## synthesis/opportunity_scoring.md
+
+# 机会评分
+
+评分维度：市场/预算趋势 20%，用户痛点 25%，Nox 契合度 25%，近期成熟度 20%，竞争/风险反向 10%。5 分最高。
+
+| Rank | 机会点 | 市场 | 痛点 | 契合 | 成熟 | 风险反向 | 加权分 | 建议 |
+|---:|---|---:|---:|---:|---:|---:|---:|---|
+| 1 | Smart Marketing Plan -> Creator Candidate Agent | 4 | 5 | 5 | 4 | 3 | 4.45 | P0 立刻验证 |
+| 2 | Creator Quality & Risk Copilot | 4 | 5 | 5 | 4 | 3 | 4.45 | P0 立刻验证 |
+| 3 | Commerce ROI Attribution Hub | 5 | 5 | 4 | 4 | 2 | 4.35 | P0 先做可接平台/弱归因 |
+| 4 | Content Monitoring -> Paid Amplification Recommender | 5 | 4 | 5 | 3 | 2 | 4.05 | P1 与监控/创意榜单合并验证 |
+| 5 | Outreach / Negotiation / Contract Copilot | 4 | 4 | 4 | 4 | 2 | 3.80 | P1 只做 human-approved copilot |
+| 6 | Affiliate Program Ops Layer | 4 | 4 | 4 | 4 | 2 | 3.80 | P1 避免硬刚平台内建 |
+| 7 | AI Report Builder for Marketing Reviews | 3 | 3 | 4 | 5 | 3 | 3.55 | P2 作为监控/归因附属能力 |
+| 8 | Creator Portal / Brand School | 3 | 3 | 3 | 3 | 3 | 3.00 | P2 等 CRM/任务侧更成熟 |
+
+## P0 机会的 MVP 形态
+
+### 1. Smart Marketing Plan -> Creator Candidate Agent
+
+输入：已有 Campaign brief/plan 上下文，包括商品、目标地区、语言、平台、内容要求、预算、目标人数、AI 营销计划中的 campaign summary、达人分层画像、创意策略、预算分配和时间线。
+
+输出：
+- 搜索策略：关键词、标签、语言、平台、筛选条件、排除词。
+- 自动搜索结果快照。
+- creator candidate shortlist：每个候选人的推荐理由、风险、价格/合作建议、适合内容形态。
+- 可编辑的“加入待邀约池/CRM/邮件项目”动作，且必须由用户确认。
+
+验证指标：
+- 用户从已生成营销计划到首批可邀约名单的时间下降 50%+。
+- 用户愿意保留/邀约的推荐比例高于普通搜索列表。
+- 推荐解释被用户认为可信，而非只看分数。
+
+### 2. Creator Quality & Risk Copilot
+
+输入：候选 creator 主页、历史内容、受众/互动、争议记录、品牌安全规则、合作历史。
+
+输出：
+- 质量/风险摘要：受众匹配、互动异常、内容一致性、商业合作密度、争议风险。
+- 证据链：哪些数据/内容支持判断。
+- 决策建议：可邀约 / 需人工复核 / 不建议。
+
+验证指标：
+- 人工审核时间下降。
+- 误杀/漏判在可接受范围内。
+- 销售/客户成功能把风险解释给客户。
+
+### 3. Commerce ROI Attribution Hub
+
+输入：短链/UTM、Shopify Collabs、TikTok Shop、Amazon Creator Connections、Meta partnership ads、站内内容监控。
+
+输出：
+- creator/content/product 维度 ROI/GMV/commission/return rate。
+- 弱归因说明：直接转化、辅助影响、内容曝光、异常归因。
+- 下一步建议：加佣、复投、停投、复邀、扩展相似 creator。
+
+验证指标：
+- 用户能用它做预算复盘。
+- 至少接入 1-2 个高频平台形成闭环。
+- 报告可解释“为什么建议复投/停投”。
 
 
 ---
@@ -277,7 +323,7 @@ Shopify Collabs、TikTok Shop、Amazon Creator Connections、Meta partnership ad
 
 ## G4：AI 推荐质量缺少离线评测
 
-P0 机会依赖 shortlist/risk summary 的可信度。需要用历史 campaign brief、人工名单、真实 creator 样本做离线评测。
+P0 机会依赖 shortlist/risk summary 的可信度。需要用历史智能营销计划、人工名单、真实 creator 样本做离线评测。
 
 ## G5：区域与合规差异未展开
 
@@ -294,7 +340,7 @@ P0 机会依赖 shortlist/risk summary 的可信度。需要用历史 campaign b
 | --- | --- | --- | --- | --- |
 | A. Bigger creator database / more filters | 继续扩大达人库和筛选项 | 承接现有搜索心智，易销售 | 竞品拥挤，不能解决 brief、风险、ROI 的完整问题 | 不作为主方向，只作为底层能力 |
 | B. Fully autonomous influencer marketing agent | 自动找人、触达、谈判、付款、复盘 | AI 叙事强，Demo 容易吸引注意 | 品牌安全、合规、付款和承诺风险过高 | 暂缓，拆成 bounded copilot |
-| C. Campaign Brief -> Creator Shortlist Agent | 从营销目标生成搜索策略和候选名单 | 直接解决用户“不知道怎么搜/筛不动”的痛点 | 推荐必须可解释、可编辑 | P0 |
+| C. Smart Marketing Plan -> Creator Candidate Agent | 从已有 brief/plan 理解结果生成搜索策略、搜索结果快照和候选名单 | 直接解决用户“不知道怎么搜/筛不动”的痛点，并连接智能营销计划上下游 | 推荐必须可解释、可编辑，且不能自动写入待邀约池 | P0 |
 | D. Creator Quality & Risk Copilot | 解释 creator 是否靠谱、匹配、异常、争议 | 对应假粉、买互动、品牌安全和价格不确定性 | 数据不足时容易误判 | P0 |
 | E. Commerce ROI Attribution Hub | 聚合 links/codes/commission/GMV/content 表现 | 平台 commerce rails 成熟，预算复盘需求强 | 数据接入边界复杂 | P0 先做最小闭环 |
 | F. Outreach / Negotiation / Contract Copilot | 草拟邮件、brief、报价、合同检查和追踪提醒 | 运营工作量大，AI 可明显省时 | 自动外发/承诺风险高 | P1，human-approved |
@@ -314,7 +360,7 @@ P0 机会依赖 shortlist/risk summary 的可信度。需要用历史 campaign b
 ## Strongest Recommendation Under Attack
 
 最强建议是优先做：
-1. Campaign Brief -> Creator Shortlist Agent
+1. Smart Marketing Plan -> Creator Candidate Agent
 2. Creator Quality & Risk Copilot
 3. Commerce ROI Attribution Hub
 
@@ -341,7 +387,7 @@ P0 机会依赖 shortlist/risk summary 的可信度。需要用历史 campaign b
 ## What Would Change the Recommendation
 
 提高信心：
-- 现有 Nox 用户明确愿意为“brief 到 shortlist”节省时间付费。
+- 现有 Nox 用户明确愿意为“已有营销计划到 shortlist”节省时间付费。
 - 用户在真实任务中保留/邀约 AI shortlist 的比例显著高于普通搜索。
 - 至少一个 commerce 数据源能稳定接入并生成可复盘 ROI 报告。
 
@@ -359,7 +405,7 @@ P0 机会依赖 shortlist/risk summary 的可信度。需要用历史 campaign b
 
 | ID | Assumption | Experiment | Method | Success metric | Minimum sample | Duration | Decision rule |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| X-001 | 用户愿意让 AI 从 campaign brief 生成 shortlist | 用历史 campaign brief 离线生成 shortlist，与人工名单和普通搜索结果对比 | prototype / concierge | AI shortlist 保留率高于普通搜索 20%+，且用户认为推荐理由可信 | 5 briefs, 50-100 creators | 2 weeks | 达标则进入交互原型；不达标则先做搜索策略助手 |
+| X-001 | 用户愿意让 AI 消费已有 brief/plan 理解结果生成 shortlist | 用历史智能营销计划离线生成搜索策略和 shortlist，与人工名单和普通搜索结果对比 | prototype / concierge | AI shortlist 保留率高于普通搜索 20%+，且用户认为推荐理由可信 | 5 个历史智能营销计划, 50-100 creators | 2 weeks | 达标则进入 6311 交互原型；不达标则先做搜索策略助手 |
 | X-002 | 风险摘要能减少人工审核成本 | 对 30-50 个 creator 生成质量/风险摘要，与人工标签对比 | offline eval / expert review | 人工审核时间下降 30%+，高风险漏判率可接受 | 30-50 creators | 3 weeks | 漏判严重则暂不做自动评分，只做证据聚合 |
 | X-003 | Commerce ROI Hub 有可接入的最小闭环 | 接入短链/UTM + Shopify 或 TikTok Shop 的一个真实客户样本 | technical spike / pilot | 可按 creator/content/product 输出 GMV/commission/ROI 报告 | 1-2 customers | 4 weeks | 若只能拿到 vanity metrics，降级为监控报告附属能力 |
 | X-004 | Sales/CS 能讲清 P0 价值 | 用一页概念稿访谈 sales/CS 和 5 个客户/潜客 | concept test | 70%+ 受访者能复述价值并指出愿付费场景 | 8-10 interviews | 2 weeks | 如果被理解成普通搜索增强，重写定位 |
@@ -380,13 +426,13 @@ P0 机会依赖 shortlist/risk summary 的可信度。需要用历史 campaign b
 
 建议 P0 进入验证的三个机会：
 
-1. Campaign Brief -> Creator Shortlist Agent
+1. Smart Marketing Plan -> Creator Candidate Agent
 2. Creator Quality & Risk Copilot
 3. Commerce ROI Attribution Hub
 
 这三者共同形成一个更强的闭环：
 
-> brief/目标 -> 搜索策略 -> shortlist -> 风险解释 -> 邀约/CRM -> 内容监控 -> GMV/ROI 复盘 -> 下一轮推荐
+> 已有 brief/plan 理解结果 -> 搜索策略 -> 自动搜索/精选 -> shortlist -> 风险解释 -> 邀约/CRM -> 内容监控 -> GMV/ROI 复盘 -> 下一轮推荐
 
 ## Decision Context
 
@@ -399,7 +445,7 @@ P0 机会依赖 shortlist/risk summary 的可信度。需要用历史 campaign b
 
 - 市场预算成熟：IAB、eMarketer、Influencer Marketing Hub 等来源都指向 creator/influencer spend 继续增长，且从试验性渠道转向核心预算项。
 - 平台 rails 成熟：Shopify Collabs、TikTok Shop Affiliate、Amazon Creator Connections、Meta partnership ads 让 link/code/commission/commerce attribution 比过去更可做。
-- AI 能力成熟：LLM、多模态和 agent workflow 足以处理 brief 解析、候选解释、内容摘要、邮件草稿和报告生成。
+- AI 能力成熟：LLM、多模态和 agent workflow 足以处理 brief/plan 消费、搜索策略生成、候选解释、内容摘要、邮件草稿和报告生成。
 - 但风险也成熟：FTC disclosure、fake review rules、平台 API/授权限制和 agent governance 使“安全、可审计、人工批准”成为产品差异化。
 
 ## Options Considered
@@ -408,7 +454,7 @@ P0 机会依赖 shortlist/risk summary 的可信度。需要用历史 campaign b
 | --- | --- | --- | --- | --- | --- |
 | Bigger creator database / more filters | 做更大的库和更多筛选项 | 容易理解，承接现有搜索 | 竞品拥挤，差异化弱 | Medium | High |
 | Fully autonomous influencer marketing agent | 自动找人、触达、谈判、付款、复盘 | 叙事强，Demo 好看 | 高风险：错误触达、错误报价、付款/合规事故 | Weak to Medium | Medium |
-| Brief -> Shortlist Agent | 从 brief 自动生成搜索策略和 shortlist | 直接解决搜索策略和筛选成本 | 需要可解释推荐 | Medium to High | High |
+| Smart Marketing Plan -> Creator Candidate Agent | 从已有 brief/plan 理解结果自动生成搜索策略、搜索结果快照和候选名单 | 直接解决搜索策略翻译和筛选成本 | 需要可解释推荐，且不能自动写入待邀约池 | Medium to High | High |
 | Creator Quality & Risk Copilot | 判断假粉、内容匹配、争议和品牌安全 | 解决选错人/风险高的核心痛点 | 评分可信度要求高 | Medium to High | High |
 | Commerce ROI Attribution Hub | 汇总 links/codes/commission/GMV/content 表现 | 对应预算化和老板复盘 | 数据接入边界复杂 | Medium to High | Medium |
 | Outreach/contract copilot | 草拟邮件、brief、合同检查、提醒 | 节省运营时间 | spam/错误承诺/合规风险 | Medium | High |
@@ -437,14 +483,14 @@ P0 机会依赖 shortlist/risk summary 的可信度。需要用历史 campaign b
 
 | Assumption | Validation method | Owner | Deadline | Kill criteria |
 | --- | --- | --- | --- | --- |
-| 用户愿意让 AI 从 brief 生成 shortlist | 5 个历史 campaign brief 离线对照 | PM/AI | 2 周 | AI shortlist 保留率不高于普通搜索 |
+| 用户愿意让 AI 消费已有 brief/plan 理解结果生成 shortlist | 5 个历史智能营销计划离线对照 | PM/AI | 2 周 | AI shortlist 保留率不高于普通搜索 |
 | 风险摘要能减少人工审核时间且可被信任 | 30-50 个 creator 人审标签对照 | PM/数据 | 3 周 | 误判高或解释不可用 |
 | 至少一个 commerce 数据源可形成复盘闭环 | 选 Shopify/TikTok Shop 客户做数据接入预研 | PM/后端 | 4 周 | 数据不可接或只剩 vanity metrics |
 | 销售能讲清楚 P0 价值并形成付费理由 | Sales/CS 概念测试 | PM/业务 | 2 周 | 客户听完仍认为只是“搜索增强” |
 
 ## Next Experiments
 
-1. 选 5 个历史 campaign brief，离线生成 shortlist，与真实人工名单对比。
+1. 选 5 个历史智能营销计划，基于 Campaign 与 AI 营销计划上下文离线生成 shortlist，与真实人工名单对比。
 2. 选 30-50 个 creator，做人审风险标签，评估 AI 风险摘要准确性。
 3. 找一个 Shopify/TikTok Shop 用户，跑 links/codes/commission/内容监控的最小闭环。
 4. 对销售/CS 做概念测试：这三个 P0 机会是否能讲清楚、是否有付费理由。
@@ -456,29 +502,141 @@ P0 机会依赖 shortlist/risk summary 的可信度。需要用历史 campaign b
 - 10-round log: `10_round_research_log.md`
 - Opportunity scoring: `synthesis/opportunity_scoring.md`
 - Research gaps: `synthesis/research_gaps.md`
+- Nox 6311 evidence brief: `nox_6311_evidence_brief.md`
 
 
 ---
 
-## evidence/evidence_cards.jsonl
+## nox_6311_evidence_brief.md
 
-- `E-001` 2025 global influencer marketing market size is projected around $32.55B, with AI integration and automation highlighted as major trends. (industry_report, tier None, hypotheses: A-001, A-003)
-- `E-002` U.S. creator ad spend is projected to reach $37B in 2025, growing 26% YoY and around 4x faster than the overall media market. (industry_association_report, tier None, hypotheses: A-001)
-- `E-003` U.S. sponsored content spending is expected to surpass $10B in 2025, earlier than previously forecast. (market_forecast, tier None, hypotheses: A-001)
-- `E-004` CreatorIQ positions creator marketing as AI-native infrastructure spanning paid, owned, earned, commerce, community, and content. (competitor_product_page, tier None, hypotheses: A-002, A-003)
-- `E-005` CreatorIQ introduced standardized creator performance metrics to address the measurement gap. (competitor_press_release, tier None, hypotheses: A-002)
-- `E-006` Upfluence frames its product around ecommerce influencer and affiliate marketing with automated sales tracking, ROI, and creator payments. (competitor_product_page, tier None, hypotheses: A-002, A-004)
-- `E-007` Upfluence Jaice AI claims to automate creator discovery, outreach, campaign management, shipment, payment, and ROI measurement. (competitor_product_page, tier None, hypotheses: A-003)
-- `E-008` GRIN sells end-to-end creator management including discovery, gifting, campaign management, relationship management, and performance/ROI tracking. (competitor_product_page, tier None, hypotheses: A-002)
-- `E-009` Modash uses transparent pricing and bundles discovery, fake follower analysis, content capture, and Shopify/Gmail/Outlook integrations. (competitor_product_page, tier None, hypotheses: A-002)
-- `E-010` Reddit practitioners describe influencer marketing as labor-intensive, with hard problems in partner selection, fair pricing, deliverables, and ROI. (community_post, tier None, hypotheses: A-002)
-- `E-011` Small DTC brands are moving from gifting UGC creators to formal affiliate setups and want commission-per-sale learning. (community_post, tier None, hypotheses: A-004)
-- `E-012` Fake followers, bought engagement, and engagement pods remain a current concern in influencer selection. (community_post, tier None, hypotheses: A-002, A-005)
-- `E-013` Shopify Collabs supports recruiting creators, gifting/samples, affiliate links/codes, and automated commission payments through Shopify Billing. (platform_official_page, tier None, hypotheses: A-004)
-- `E-014` Shopify Help Center confirms Collabs commissions can be earned through affiliate links or discount codes tracked through Shopify Collabs. (platform_official_docs, tier None, hypotheses: A-004)
-- `E-015` Amazon Creator Connections lets brand owners partner with established Amazon Associates creators to drive traffic and sales. (platform_official_forum, tier None, hypotheses: A-004)
-- `E-016` Instagram creator marketplace and partnership ads make brand-creator collaboration and paid amplification more platform-native. (platform_official_page, tier None, hypotheses: A-004)
-- `E-017` McKinsey reports broader AI and agentic AI use, but scaled impact remains difficult for many organizations. (consulting_report, tier None, hypotheses: A-003)
-- `E-018` Salesforce reports marketers see a shift toward personalized two-way messaging, but only a minority are satisfied with data usage; agentic AI is positioned as a bridge. (vendor_research_report, tier None, hypotheses: A-003)
-- `E-019` Gartner predicts agentic AI will spread in enterprise apps but many agentic AI projects will be cancelled due to value, governance, and cost issues. (analyst_press_release, tier None, hypotheses: A-003, A-005)
-- `E-020` FTC requires clear disclosure of material connections by influencers and has strengthened rules against fake reviews/testimonials. (regulator_guidance, tier None, hypotheses: A-005)
+# Nox 6311 营销简报到候选名单证据简报
+
+> 更新时间：2026-06-30  
+> 结论用途：修正本次调研中“营销简报到达人候选名单智能体”的 Nox 内部落地口径。
+
+## 结论
+
+“营销简报到达人候选名单智能体”对 Nox 来说不是一个从 0 到 1 的新机会，而是已经有落地路径、且正在通过 `v6.3.11` 补齐连接层的能力。
+
+更准确的内部口径是：
+
+> **智能营销计划候选达人生成 Agent**：消费创建 Campaign 与 AI 营销计划生成阶段已经沉淀的 brief/plan 理解结果，自动生成搜索策略，执行搜索与智能精选，产出可解释、可编辑、可提交到待邀约池的候选达人名单。
+
+因此，`v6.3.11` 不应重新做“brief 获取和理解”，而应把已有 `campaignId` 上下文接入搜索/智能精选：
+
+```text
+创建 Campaign
+-> 生成 AI 营销计划
+-> 读取 brief/plan 上下文
+-> 自动生成搜索策略
+-> 自动搜索与智能精选
+-> 候选名单暂存
+-> 用户确认加入待邀约池
+-> 邮件邀约 / 谈判 / 合作 / 分析
+```
+
+## 关键边界
+
+| 问题 | 判断 |
+|---|---|
+| 是否属于 `v6.3.10`？ | 不是。`v6.3.10` 只覆盖独立频道搜索页的智能精选。 |
+| 是否属于 `v6.3.11`？ | 是。`v6.3.11` 负责把 6310 的搜索/智能精选心智适配进智能营销计划。 |
+| 是否从零解析 brief？ | 不应从零开始。创建 Campaign 与 AI 营销计划生成已经承担 brief 获取和理解。 |
+| 6311 的核心动作是什么？ | 消费已有 brief/plan 结果，自动生成搜索策略并执行搜索/精选。 |
+| 候选名单是否直接变成资产？ | 不是。搜索和精选仍是暂存态；用户点击加入待邀约池后才是持久化决策。 |
+| 终点在哪里？ | 候选达人暂存名单和“加入待邀约池”动作，不包含自动发送邀约。 |
+
+## 证据摘要
+
+### 1. 创建 Campaign 已经收集 brief 原料
+
+`components/campaign/create/index.vue` 的创建流程先走 `BaseForm`、再走 `DetailForm`，最后调用 `createComplete` 并跳转到 Campaign 管理页。
+
+`BaseForm` 收集任务名称、商品链接、品牌、商品名称、服务类型、价格、标签、商品描述、商品图片等产品 brief 原料。
+
+`DetailForm` 收集目标地区、目标语言、平台、内容形式要求、样品要求、目标合作人数、粉丝量级、平均播放量、预算和预计曝光等投放约束。
+
+### 2. AI 营销计划已经承担 brief/plan 理解
+
+`components/campaign/manage/ai/aiMissionDialog.vue` 通过 `/api/v2/ai-common` 发送：
+
+```json
+{
+  "aiCommonAction": "campaignPlan",
+  "campaignId": "<campaignId>",
+  "subSite": "<subDomain>"
+}
+```
+
+服务端白名单把 `campaignPlan` 映射到 `/ws/campaign2/ai/plan`。
+
+前端解析的结构化节点包括：
+
+- `campaign_summary`
+- `effects`
+- `tier_strategy`
+- `creative`
+- `allocation`
+- `timeline`
+
+这说明系统已经有一段基于 `campaignId` 的营销计划理解结果，而不是只有搜索页输入。
+
+### 3. 管理页结构证明搜索位于计划理解之后
+
+`pages/campaign/manage/_campaignId.vue` 中，管理页加载 `projectBasicInfo`、`inviteBasicInfo` 和 AI 谈判状态；页面主 tab 包含：
+
+- `SearchTab`
+- `InviteTab`
+- `InviteDetailTab`
+- `CooperationTab`
+- `AnalysisTab`
+
+`AiMissionDialog` 也挂在同一个 Campaign 管理页下。也就是说搜索不是链路起点，而是已创建 Campaign 之后的执行环节。
+
+### 4. 当前搜索已经消费 Campaign 上下文
+
+`commonSearch.vue` 与 `aiSearch.vue` 都会把项目目标同步进搜索筛选条件，例如：
+
+- `targetCountry -> country`
+- `targetLanguage -> language`
+- `estFollowersMin/Max -> followerGte/Lte`
+- `estAvgViewsPerKolMin/Max -> avgViewGte/Lte`
+
+这说明智能营销计划内的搜索已经不是独立搜索，而是 campaign context 下的搜索。
+
+### 5. 6310 和 6311 的边界已经明确
+
+`search_experience_6310/README.md` 与 `kol_brain` 的 M01 知识页都明确：
+
+- `v6.3.10` 只覆盖独立频道搜索页。
+- 智能营销计划内的频道搜索入口、候选池和上下游状态，进入 `v6.3.11` 单独适配。
+
+因此，6311 的合理落点是把 6310 的“结果快照 + 智能精选 + 临时 session”心智接入智能营销计划，而不是复刻一个独立搜索页。
+
+### 6. 待邀约池是持久化边界
+
+搜索/精选结果加入待邀约池时，会通过 `insertRecipienFromSource` 写入 `emailProjectId` 关联的收件人列表。待邀约列表获取时固定 `status: 11`，对应未发送收件人。
+
+这说明：
+
+- 搜索和精选是临时决策前状态。
+- 加入待邀约池才是用户确认后的持久化决策。
+- 6311 需要保留这个边界，不能把 AI 候选名单直接自动写入待邀约池。
+
+## 对本次调研结论的修正
+
+原调研中的机会名“营销简报到达人候选名单智能体”仍成立，但在 Nox 内部应改为“已启动能力的闭环化”，不是“全新机会”。
+
+建议在 Roadmap / PRD 中使用以下表述：
+
+> `v6.3.11` 的目标是将智能营销计划已有的 brief/plan 理解结果，连接到自动搜索与智能精选能力，生成可解释、可编辑、可提交的候选达人名单。它的价值不是重新理解 brief，而是把已经生成的营销计划转化为可执行的选人动作。
+
+## 产品含义
+
+| 产品问题 | 建议处理 |
+|---|---|
+| 是否保留“自动”？ | 保留，但限定为自动生成搜索策略、自动搜索、自动精选。 |
+| 是否自动加入待邀约池？ | 不自动。必须用户确认。 |
+| 是否要求用户再填一遍 brief？ | 不要求。默认读取 Campaign 与 AI 营销计划上下文，只允许用户微调策略。 |
+| 是否沿用 6310 结果页心智？ | 是，但要接入 Campaign 状态、候选暂存和待邀约池。 |
+| 是否作为 P0 机会继续验证？ | 是，但验证重点从“用户愿不愿从 brief 开始”改为“已有 plan 上下文自动搜索/精选是否比手动搜索更高效、更可信”。 |

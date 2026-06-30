@@ -216,7 +216,7 @@
 
 | 优先级 | 机会点 | 为什么现在成熟 | 用户真实诉求 | Nox 契合点 | 主要风险 |
 |---|---|---|---|---|---|
-| P0 | Campaign Brief -> Creator Shortlist Agent | LLM 语义理解、多语言扩词、Nox 已有搜索/标签/相似达人 | 不知道该搜什么、筛不动、怕找错人 | 搜索、AI 搜索、CRM、智能营销计划 | 推荐解释不足、数据偏差 |
+| P0 | Smart Marketing Plan -> Creator Candidate Agent | LLM 语义理解、多语言扩词、Nox 已有智能营销计划、搜索、6310 智能精选和待邀约池基础 | 不知道该搜什么、筛不动、怕找错人 | 智能营销计划、搜索、智能精选、CRM、待邀约池 | 推荐解释不足、数据偏差；不能自动写入待邀约池 |
 | P0 | Creator Quality & Risk Copilot | 买粉/engagement pods 仍普遍，品牌更重视安全与 ROI | 判断人是否靠谱、价格是否合理、是否有风险 | 争议网红、CRM、搜索详情、监控 | 评分不可解释会失信 |
 | P0 | Commerce ROI Attribution Hub | Shopify/TikTok/Amazon/Meta commerce rails 成熟 | 想知道谁带来 GMV、内容是否值得复投 | 短链、内容监控、商品中心、支付 | 平台数据接入与归因边界 |
 | P1 | Content Monitoring -> Paid Amplification Recommender | creator content 被当广告素材复用，paid amplification 预算上升 | 哪些内容值得二次投放、授权、复用 | 内容监控、创意榜单、品牌分析 | 广告数据缺口、因果归因弱 |
@@ -234,6 +234,6 @@
 **最终 insight**
 1. 网红营销平台的下一阶段不是“更大数据库”，而是“creator marketing operating system + commerce accountability”。
 2. 过去难做的 ROI/归因，因为 Shopify/TikTok/Amazon/Meta 的 affiliate/commerce rails 变得更可做，但第三方应做跨平台解释层，不应假装拥有平台级闭环。
-3. AI Agent 适合从 bounded workflows 切入：brief 解析、搜索策略、候选解释、邮件草稿、合规检查、监控摘要、复盘建议。
+3. AI Agent 适合从 bounded workflows 切入：brief/plan 消费、搜索策略、候选解释、邮件草稿、合规检查、监控摘要、复盘建议。
 4. Nox 的自然优势在“发现与情报 + 执行运营 + 监控治理”已经有链路，不必从零做 creator marketplace。
-5. 最值得优先验证的是：Campaign Brief -> Creator Shortlist Agent、Creator Quality & Risk Copilot、Commerce ROI Attribution Hub。
+5. 最值得优先验证的是：Smart Marketing Plan -> Creator Candidate Agent、Creator Quality & Risk Copilot、Commerce ROI Attribution Hub。

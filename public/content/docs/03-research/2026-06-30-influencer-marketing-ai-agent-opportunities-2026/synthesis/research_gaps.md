@@ -14,7 +14,7 @@ Shopify Collabs、TikTok Shop、Amazon Creator Connections、Meta partnership ad
 
 ## G4：AI 推荐质量缺少离线评测
 
-P0 机会依赖 shortlist/risk summary 的可信度。需要用历史 campaign brief、人工名单、真实 creator 样本做离线评测。
+P0 机会依赖 shortlist/risk summary 的可信度。需要用历史智能营销计划、人工名单、真实 creator 样本做离线评测。
 
 ## G5：区域与合规差异未展开
 

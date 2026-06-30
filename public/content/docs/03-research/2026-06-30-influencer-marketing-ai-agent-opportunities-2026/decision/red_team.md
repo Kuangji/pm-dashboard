@@ -3,7 +3,7 @@
 ## Strongest Recommendation Under Attack
 
 最强建议是优先做：
-1. Campaign Brief -> Creator Shortlist Agent
+1. Smart Marketing Plan -> Creator Candidate Agent
 2. Creator Quality & Risk Copilot
 3. Commerce ROI Attribution Hub
 
@@ -30,7 +30,7 @@
 ## What Would Change the Recommendation
 
 提高信心：
-- 现有 Nox 用户明确愿意为“brief 到 shortlist”节省时间付费。
+- 现有 Nox 用户明确愿意为“已有营销计划到 shortlist”节省时间付费。
 - 用户在真实任务中保留/邀约 AI shortlist 的比例显著高于普通搜索。
 - 至少一个 commerce 数据源能稳定接入并生成可复盘 ROI 报告。
 
