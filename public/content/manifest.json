@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-06-30T06:53:08.357Z",
+  "updatedAt": "2026-08-20T10:31:08.109Z",
   "navigation": {
     "docs": [
       {
@@ -1157,6 +1157,49 @@
                     "isImage": true
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "monitor_762",
+            "path": "02-project-documents/monitor_762",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "02-project-documents/monitor_762/README.md",
+                "slug": "02-project-documents/monitor_762/README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "_plan.md",
+                "path": "02-project-documents/monitor_762/_plan.md",
+                "slug": "02-project-documents/monitor_762/_plan.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "input_v0.md",
+                "path": "02-project-documents/monitor_762/input_v0.md",
+                "slug": "02-project-documents/monitor_762/input_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "monitor_common_context_v1.md",
+                "path": "02-project-documents/monitor_762/monitor_common_context_v1.md",
+                "slug": "02-project-documents/monitor_762/monitor_common_context_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
               }
             ]
           },
@@ -28748,6 +28791,218 @@
                     "name": "insight_cards.md",
                     "path": "03-research/2026-06-30-influencer-marketing-ai-agent-opportunities-2026/users/insight_cards.md",
                     "slug": "03-research/2026-06-30-influencer-marketing-ai-agent-opportunities-2026/users/insight_cards.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "2026-07-07-q3-video-risk-roi-opportunity-deep-dive",
+            "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive",
+            "children": [
+              {
+                "type": "file",
+                "name": "00_brief.md",
+                "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/00_brief.md",
+                "slug": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/00_brief.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "01_hypotheses.md",
+                "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/01_hypotheses.md",
+                "slug": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/01_hypotheses.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "02_source_plan.md",
+                "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/02_source_plan.md",
+                "slug": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/02_source_plan.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "10_round_research_log.md",
+                "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/10_round_research_log.md",
+                "slug": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/10_round_research_log.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "Q3视频风险ROI机会深化调研_中文分发版.md",
+                "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/Q3视频风险ROI机会深化调研_中文分发版.md",
+                "slug": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/Q3视频风险ROI机会深化调研_中文分发版.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/README.md",
+                "slug": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "directory",
+                "name": "competitors",
+                "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/competitors",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "matrix.csv",
+                    "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/competitors/matrix.csv",
+                    "slug": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/competitors/matrix.csv",
+                    "fileType": "table",
+                    "language": "csv",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "decision",
+                "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/decision",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "decision_memo.md",
+                    "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/decision/decision_memo.md",
+                    "slug": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/decision/decision_memo.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "experiment_plan.md",
+                    "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/decision/experiment_plan.md",
+                    "slug": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/decision/experiment_plan.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "options.md",
+                    "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/decision/options.md",
+                    "slug": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/decision/options.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "red_team.md",
+                    "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/decision/red_team.md",
+                    "slug": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/decision/red_team.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "evidence",
+                "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/evidence",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "evidence_cards.jsonl",
+                    "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/evidence/evidence_cards.jsonl",
+                    "slug": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/evidence/evidence_cards.jsonl",
+                    "fileType": "binary",
+                    "isText": false,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "logs",
+                "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/logs",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "agent_tasks.md",
+                    "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/logs/agent_tasks.md",
+                    "slug": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/logs/agent_tasks.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "trace.md",
+                    "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/logs/trace.md",
+                    "slug": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/logs/trace.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "synthesis",
+                "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/synthesis",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "contradictions.md",
+                    "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/synthesis/contradictions.md",
+                    "slug": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/synthesis/contradictions.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "opportunity_tree.md",
+                    "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/synthesis/opportunity_tree.md",
+                    "slug": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/synthesis/opportunity_tree.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "research_gaps.md",
+                    "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/synthesis/research_gaps.md",
+                    "slug": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/synthesis/research_gaps.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "users",
+                "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/users",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "insight_cards.md",
+                    "path": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/users/insight_cards.md",
+                    "slug": "03-research/2026-07-07-q3-video-risk-roi-opportunity-deep-dive/users/insight_cards.md",
                     "fileType": "markdown",
                     "isText": true,
                     "isImage": false

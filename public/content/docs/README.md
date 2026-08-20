@@ -18,6 +18,7 @@
 │   ├── channel_search_agent_upgrade/  # 频道搜索Agent升级
 │   ├── monitor_760/  # Monitor 监控功能
 │   ├── monitor_761/  # 监控平台文档
+│   ├── monitor_762/
 │   ├── other_social_search_741/  # 社交搜索项目文档
 │   ├── search_experience_6310/  # 搜索体验需求6310
 │   ├── search_experience_639/  # 搜索体验需求639
@@ -33,7 +34,8 @@
     ├── noxinfluencer_全站功能地图/  # 全站功能地图
     ├── youtube_channel_nondefault_sort_threshold_audit/  # 频道排序阈值调研
     ├── youtube_to_notebooklm_teardown/  # 视频笔记产品拆解
-    └── 2026-06-30-influencer-marketing-ai-agent-opportunities-2026/
+    ├── 2026-06-30-influencer-marketing-ai-agent-opportunities-2026/
+    └── 2026-07-07-q3-video-risk-roi-opportunity-deep-dive/
 ```
 <!-- CONTENT-TREE-END -->
 
@@ -46,4 +48,4 @@
 
 ---
 
-*最后更新: 2026-06-12*
+*最后更新: 2026-08-20*
