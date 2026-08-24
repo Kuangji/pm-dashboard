@@ -1,0 +1,621 @@
+{"kind":"deck","id":"pr/jn54v0","name":"Deck"}
+{"kind":"layout","layoutId":"2cad0aea-30a8-4c07-81fb-a704e2565008","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"a6bce391-75a0-479b-ad4d-c42b11c675d2","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/dz816m","slide":1,"title":"聚星 / 账号权限、协作与配额","textShapes":5}
+{"kind":"textbox","id":"sh/eh47q5sz","slide":1,"text":"聚星 / 账号权限、协作与配额","textPreview":"聚星 / 账号权限、协作与配额","textChars":15,"textLines":1,"bbox":[64,58,680,34]}
+{"kind":"textbox","id":"sh/1kv61kbq","slide":1,"text":"从线上现状到下一套组织模型","textPreview":"从线上现状到下一套组织模型","textChars":13,"textLines":1,"bbox":[64,170,930,110]}
+{"kind":"textbox","id":"sh/0jmpsfa5","slide":1,"text":"团队共同理解与决策材料\n旧 T1-T2-T3 Spec 基线 × 新扁平分组候选","textPreview":"团队共同理解与决策材料 | 旧 T1-T2-T3 Spec 基线 × 新扁平分组候选","textChars":40,"textLines":2,"bbox":[64,310,720,80]}
+{"kind":"shape","id":"sh/rutovqto","slide":1,"bbox":[920,126,250,370]}
+{"kind":"textbox","id":"sh/qtk7m5s3","slide":1,"text":"事实\n→\n规则\n→\n选择","textPreview":"事实 | → | 规则 | → | 选择","textChars":12,"textLines":5,"bbox":[952,178,190,260]}
+{"kind":"textbox","id":"sh/dgv6x0be","slide":1,"text":"2026.08.05","textPreview":"2026.08.05","textChars":10,"textLines":1,"bbox":[64,620,200,24]}
+{"kind":"notes","id":"nt/dz816m","slide":1,"text":"本简报用于团队同步与根模型讨论，不把新候选方案表述为已定稿。\nSources: input_v0.md; fact_check_v0.md; spec_v0.md; current online sub-account pages."}
+{"kind":"slide","id":"sl/adz79m","slide":2,"title":"01 / 共识","textShapes":15}
+{"kind":"textbox","id":"sh/218v654v","slide":2,"text":"01 / 共识","textPreview":"01 / 共识","textChars":7,"textLines":1,"bbox":[64,32,240,22]}
+{"kind":"textbox","id":"sh/p4juh03m","slide":2,"text":"今天要对齐的不是页面，而是权限的根模型","textPreview":"今天要对齐的不是页面，而是权限的根模型","textChars":19,"textLines":1,"bbox":[64,62,1120,56]}
+{"kind":"textbox","id":"sh/43qd8vm1","slide":2,"text":"先分清线上事实、已确认规则和仍待决定的结构性选择。","textPreview":"先分清线上事实、已确认规则和仍待决定的结构性选择。","textChars":25,"textLines":1,"bbox":[64,124,1080,34]}
+{"kind":"shape","id":"sh/r61cjals","slide":2,"bbox":[64,678,1152,1]}
+{"kind":"textbox","id":"sh/q5sva547","slide":2,"text":"聚星 / 账号权限、协作与配额","textPreview":"聚星 / 账号权限、协作与配额","textChars":15,"textLines":1,"bbox":[64,687,330,18]}
+{"kind":"textbox","id":"sh/d8julk3i","slide":2,"text":"核心结论","textPreview":"核心结论","textChars":4,"textLines":1,"bbox":[390,687,500,18]}
+{"kind":"textbox","id":"sh/c7adcfmx","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1140,682,76,24]}
+{"kind":"shape","id":"sh/7axc7ql8","slide":2,"bbox":[64,198,352,328]}
+{"kind":"shape","id":"sh/69obyl4n","slide":2,"bbox":[88,224,112,30]}
+{"kind":"textbox","id":"sh/4rihgza9","slide":2,"text":"线上事实","textPreview":"线上事实","textChars":4,"textLines":1,"bbox":[88,229,112,20]}
+{"kind":"textbox","id":"sh/psrip4bu","slide":2,"text":"当前有入口，但没有统一解释层","textPreview":"当前有入口，但没有统一解释层","textChars":14,"textLines":1,"bbox":[88,280,302,74]}
+{"kind":"textbox","id":"sh/250zeps3","slide":2,"text":"团队 / 权限 / 数据三页并列；角色、配额、CRM 和项目协作分散实现。","textPreview":"团队 / 权限 / 数据三页并列；角色、配额、CRM 和项目协作分散实现。","textChars":37,"textLines":1,"bbox":[88,390,300,90]}
+{"kind":"shape","id":"sh/3q90nuto","slide":2,"bbox":[464,198,352,328]}
+{"kind":"shape","id":"sh/cvihkza5","slide":2,"bbox":[488,224,92,30]}
+{"kind":"textbox","id":"sh/dwbit4bq","slide":2,"text":"已确认","textPreview":"已确认","textChars":3,"textLines":1,"bbox":[488,229,92,20]}
+{"kind":"textbox","id":"sh/qt0zi9sf","slide":2,"text":"对象协作与安全底线基本成形","textPreview":"对象协作与安全底线基本成形","textChars":13,"textLines":1,"bbox":[488,280,300,74]}
+{"kind":"textbox","id":"sh/ru90retk","slide":2,"text":"Owner / Editor / Viewer、对象级授权、硬限制优先、支付资金责任和移交任务等规则可继续复用。","textPreview":"Owner / Editor / Viewer、对象级授权、硬限制优先、支付资金责任和移交任务等规则可继续复用。","textChars":56,"textLines":1,"bbox":[488,390,300,100]}
+{"kind":"shape","id":"sh/szyh8fa1","slide":2,"bbox":[872,198,344,328]}
+{"kind":"shape","id":"sh/t07yhkbm","slide":2,"bbox":[896,224,92,30]}
+{"kind":"textbox","id":"sh/9wze5g3a","slide":2,"text":"待讨论","textPreview":"待讨论","textChars":3,"textLines":1,"bbox":[896,229,92,20]}
+{"kind":"textbox","id":"sh/8vqxcb2p","slide":2,"text":"账号与分组的根模型尚未定稿","textPreview":"账号与分组的根模型尚未定稿","textChars":13,"textLines":1,"bbox":[896,280,292,74]}
+{"kind":"textbox","id":"sh/nuhw36l4","slide":2,"text":"旧 T1-T2-T3 与新“所属分组 + 管理范围 + 0..N T2”并列，需要团队判断取舍。","textPreview":"旧 T1-T2-T3 与新“所属分组 + 管理范围 + 0..N T2”并列，需要团队判断取舍。","textChars":48,"textLines":1,"bbox":[896,390,292,100]}
+{"kind":"notes","id":"nt/adz79m","slide":2,"text":"讲解重点：不要从“要做哪些页面”开始，而要先确定身份、分组和业务范围如何计算。\nSources: input_v0.md sections 1, 7; fact_check_v0.md sections 3, 9."}
+{"kind":"slide","id":"sl/6bat7n","slide":3,"title":"02 / 需求范围","textShapes":23}
+{"kind":"textbox","id":"sh/q5k7ydkv","slide":3,"text":"02 / 需求范围","textPreview":"02 / 需求范围","textChars":9,"textLines":1,"bbox":[64,32,240,22]}
+{"kind":"textbox","id":"sh/d8bq9s3m","slide":3,"text":"42 条反馈最终收敛为权限主线，导出先退出本轮","textPreview":"42 条反馈最终收敛为权限主线，导出先退出本轮","textChars":23,"textLines":1,"bbox":[64,62,1120,56]}
+{"kind":"textbox","id":"sh/s72p0n21","slide":3,"text":"原始反馈仍保留，但本简报只把导出作为范围边界展示。","textPreview":"原始反馈仍保留，但本简报只把导出作为范围边界展示。","textChars":25,"textLines":1,"bbox":[64,124,1080,34]}
+{"kind":"shape","id":"sh/fad8b2ls","slide":3,"bbox":[64,678,1152,1]}
+{"kind":"textbox","id":"sh/e9472xk7","slide":3,"text":"聚星 / 账号权限、协作与配额","textPreview":"聚星 / 账号权限、协作与配额","textChars":15,"textLines":1,"bbox":[64,687,330,18]}
+{"kind":"textbox","id":"sh/1wvqdc3i","slide":3,"text":"线上事实 · 需求基线","textPreview":"线上事实 · 需求基线","textChars":11,"textLines":1,"bbox":[390,687,500,18]}
+{"kind":"textbox","id":"sh/0bmp472d","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1140,682,76,24]}
+{"kind":"textbox","id":"sh/nyd8f2lo","slide":3,"text":"42","textPreview":"42","textChars":2,"textLines":1,"bbox":[76,214,190,48]}
+{"kind":"textbox","id":"sh/2x476xk3","slide":3,"text":"反馈总条数","textPreview":"反馈总条数","textChars":5,"textLines":1,"bbox":[76,268,190,34]}
+{"kind":"textbox","id":"sh/ovulsnip","slide":3,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[296,214,220,48]}
+{"kind":"textbox","id":"sh/9gnm1sza","slide":3,"text":"主子账号和权限","textPreview":"主子账号和权限","textChars":7,"textLines":1,"bbox":[296,268,220,34]}
+{"kind":"textbox","id":"sh/mtc3qx0z","slide":3,"text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[556,214,180,48]}
+{"kind":"textbox","id":"sh/nul4z214","slide":3,"text":"数据配额","textPreview":"数据配额","textChars":4,"textLines":1,"bbox":[556,268,180,34]}
+{"kind":"textbox","id":"sh/wje5w7i1","slide":3,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[776,214,220,48]}
+{"kind":"textbox","id":"sh/xknm5czm","slide":3,"text":"数据导出 TODO","textPreview":"数据导出 TODO","textChars":9,"textLines":1,"bbox":[776,268,220,34]}
+{"kind":"shape","id":"sh/ahwnux0v","slide":3,"bbox":[76,322,1110,2]}
+{"kind":"textbox","id":"sh/bi5432hg","slide":3,"text":"主子账号和权限","textPreview":"主子账号和权限","textChars":7,"textLines":1,"bbox":[76,372,220,28]}
+{"kind":"shape","id":"sh/kny507ix","slide":3,"bbox":[322,374,612,28]}
+{"kind":"textbox","id":"sh/lo7m9czi","slide":3,"text":"18 条","textPreview":"18 条","textChars":4,"textLines":1,"bbox":[948,374,100,28]}
+{"kind":"textbox","id":"sh/t43mtcrm","slide":3,"text":"进入本轮 Input / Spec 主线","textPreview":"进入本轮 Input / Spec 主线","textChars":20,"textLines":1,"bbox":[812,374,320,28]}
+{"kind":"textbox","id":"sh/s3ulk7a1","slide":3,"text":"数据配额","textPreview":"数据配额","textChars":4,"textLines":1,"bbox":[76,444,220,28]}
+{"kind":"shape","id":"sh/72l4r29g","slide":3,"bbox":[322,446,272,28]}
+{"kind":"textbox","id":"sh/61s3ihsb","slide":3,"text":"8 条","textPreview":"8 条","textChars":3,"textLines":1,"bbox":[608,446,100,28]}
+{"kind":"textbox","id":"sh/183mxwry","slide":3,"text":"进入本轮 Input / Spec 主线","textPreview":"进入本轮 Input / Spec 主线","textChars":20,"textLines":1,"bbox":[812,446,320,28]}
+{"kind":"textbox","id":"sh/g7u5orad","slide":3,"text":"数据导出","textPreview":"数据导出","textChars":4,"textLines":1,"bbox":[76,516,220,28]}
+{"kind":"shape","id":"sh/f6l4vm9s","slide":3,"bbox":[322,518,544,28]}
+{"kind":"textbox","id":"sh/u5c3mhs7","slide":3,"text":"16 条","textPreview":"16 条","textChars":4,"textLines":1,"bbox":[880,518,100,28]}
+{"kind":"textbox","id":"sh/xcjmlsre","slide":3,"text":"保留原始证据，进入独立专项","textPreview":"保留原始证据，进入独立专项","textChars":13,"textLines":1,"bbox":[812,518,320,28]}
+{"kind":"notes","id":"nt/6bat7n","slide":3,"text":"反馈池共有 42 条数据，按原始具体模块统计为权限 18、配额 8、导出 16。\nSources: (【CSM】反馈池)权限账号反馈池.xlsx, sheet 权限账号反馈池, A1:X43; input_v0.md section 2.1."}
+{"kind":"slide","id":"sl/zu5wmw","slide":4,"title":"03 / 线上现状","textShapes":13}
+{"kind":"textbox","id":"sh/x832lk7q","slide":4,"text":"03 / 线上现状","textPreview":"03 / 线上现状","textChars":9,"textLines":1,"bbox":[64,32,240,22]}
+{"kind":"textbox","id":"sh/als3apoz","slide":4,"text":"线上已经有一套“团队和权限”入口，但三页各自承载不同语义","textPreview":"线上已经有一套“团队和权限”入口，但三页各自承载不同语义","textChars":28,"textLines":1,"bbox":[64,62,1120,56]}
+{"kind":"textbox","id":"sh/bmlkjupk","slide":4,"text":"当前页面是增量改造的起点，不是从零建设权限中台。","textPreview":"当前页面是增量改造的起点，不是从零建设权限中台。","textChars":24,"textLines":1,"bbox":[64,124,1080,34]}
+{"kind":"shape","id":"sh/ojal8f69","slide":4,"bbox":[64,678,1152,1]}
+{"kind":"textbox","id":"sh/pkj2hk7e","slide":4,"text":"聚星 / 账号权限、协作与配额","textPreview":"聚星 / 账号权限、协作与配额","textChars":15,"textLines":1,"bbox":[64,687,330,18]}
+{"kind":"textbox","id":"sh/2hs365o3","slide":4,"text":"线上事实 · A 级证据","textPreview":"线上事实 · A 级证据","textChars":12,"textLines":1,"bbox":[390,687,500,18]}
+{"kind":"textbox","id":"sh/ni1kfapo","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1140,682,76,24]}
+{"kind":"textbox","id":"sh/50zu1cze","slide":4,"text":"当前可见结构","textPreview":"当前可见结构","textChars":6,"textLines":1,"bbox":[704,200,300,30]}
+{"kind":"textbox","id":"sh/4fqt87i9","slide":4,"text":"- 团队管理：成员、分组、角色、席位和操作记录","textPreview":"- 团队管理：成员、分组、角色、席位和操作记录","textChars":23,"textLines":1,"bbox":[704,252,454,44]}
+{"kind":"textbox","id":"sh/jehcz2ho","slide":4,"text":"- 权限管理：配额页，当前使用 / 累计使用、按账号配置","textPreview":"- 权限管理：配额页，当前使用 / 累计使用、按账号配置","textChars":28,"textLines":1,"bbox":[704,300,454,44]}
+{"kind":"textbox","id":"sh/id8b6x03","slide":4,"text":"- 数据管理：CRM 四项写权限 + 邮件强制管理员协作","textPreview":"- 数据管理：CRM 四项写权限 + 邮件强制管理员协作","textChars":28,"textLines":1,"bbox":[704,348,454,44]}
+{"kind":"textbox","id":"sh/hczuxszi","slide":4,"text":"- 现有角色文案：管理员 / 组长 / 成员","textPreview":"- 现有角色文案：管理员 / 组长 / 成员","textChars":22,"textLines":1,"bbox":[704,396,454,44]}
+{"kind":"shape","id":"sh/wbqt4nix","slide":4,"bbox":[704,500,454,116]}
+{"kind":"textbox","id":"sh/vahcvihc","slide":4,"text":"重要边界","textPreview":"重要边界","textChars":4,"textLines":1,"bbox":[728,524,130,26]}
+{"kind":"textbox","id":"sh/u9ob2d0r","slide":4,"text":"前端页面能证明“展示和提交了什么”，不能单独证明服务端如何裁剪数据或鉴权。","textPreview":"前端页面能证明“展示和提交了什么”，不能单独证明服务端如何裁剪数据或鉴权。","textChars":37,"textLines":1,"bbox":[728,560,398,48]}
+{"kind":"image","id":"im/1svmho3u","slide":4,"name":"","alt":"线上团队管理页顶部截图","bbox":[64,190,560,145]}
+{"kind":"image","id":"im/0rm58j2p","slide":4,"name":"","alt":"线上数据管理页截图","bbox":[64,360,560,295]}
+{"kind":"notes","id":"nt/zu5wmw","slide":4,"text":"截图来自 2026-08-05 线上页面。团队管理页显示成员 46、已用 45、待邀请 0、剩余 5、总席位 50；简报中使用的截图已裁掉成员明细。\n数据管理页仍展示 CRM 四项写权限和邮件“强制添加管理员为协作人”。\nSources: https://cn.noxinfluencer.com/brand/sub-account; https://cn.noxinfluencer.com/brand/sub-account/data; fact_check_v0.md sections 4, 5."}
+{"kind":"slide","id":"sl/sndjav","slide":5,"title":"03 / 线上现状","textShapes":22}
+{"kind":"textbox","id":"sh/i94jmx83","slide":5,"text":"03 / 线上现状","textPreview":"03 / 线上现状","textChars":9,"textLines":1,"bbox":[64,32,240,22]}
+{"kind":"textbox","id":"sh/5cv2hcru","slide":5,"text":"线上能力分散在多个模块，现有基础足够做增量，但缺少统一计算顺序","textPreview":"线上能力分散在多个模块，现有基础足够做增量，但缺少统一计算顺序","textChars":31,"textLines":1,"bbox":[64,62,1120,56]}
+{"kind":"textbox","id":"sh/4bm1o7q9","slide":5,"text":"“权限管理”不是一个页面问题，而是多个对象和动作共享同一套解释层。","textPreview":"“权限管理”不是一个页面问题，而是多个对象和动作共享同一套解释层。","textChars":33,"textLines":1,"bbox":[64,124,1080,34]}
+{"kind":"shape","id":"sh/redkj290","slide":5,"bbox":[64,678,1152,1]}
+{"kind":"textbox","id":"sh/6d43qx8f","slide":5,"text":"聚星 / 账号权限、协作与配额","textPreview":"聚星 / 账号权限、协作与配额","textChars":15,"textLines":1,"bbox":[64,687,330,18]}
+{"kind":"textbox","id":"sh/tgf2lcrq","slide":5,"text":"线上事实 · 代码基线","textPreview":"线上事实 · 代码基线","textChars":11,"textLines":1,"bbox":[390,687,500,18]}
+{"kind":"textbox","id":"sh/sfmls7q5","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1140,682,76,24]}
+{"kind":"shape","id":"sh/7itk7i9g","slide":5,"bbox":[64,226,204,270]}
+{"kind":"shape","id":"sh/mhkjedsv","slide":5,"bbox":[64,226,204,10]}
+{"kind":"textbox","id":"sh/8z6dwjml","slide":5,"text":"账号 / 分组","textPreview":"账号 / 分组","textChars":7,"textLines":1,"bbox":[82,260,168,32]}
+{"kind":"textbox","id":"sh/t0fe5on6","slide":5,"text":"adminStatus=0/1/2\nteamId / group\n已有成员转组","textPreview":"adminStatus=0/1/2 | teamId / group | 已有成员转组","textChars":39,"textLines":3,"bbox":[82,318,168,122]}
+{"kind":"textbox","id":"sh/6x4vu94v","slide":5,"text":"复用 + 统一解释","textPreview":"复用 + 统一解释","textChars":9,"textLines":1,"bbox":[82,454,168,28]}
+{"kind":"shape","id":"sh/7ydw3e5g","slide":5,"bbox":[294,226,204,270]}
+{"kind":"shape","id":"sh/gn6d03mx","slide":5,"bbox":[294,226,204,10]}
+{"kind":"textbox","id":"sh/hofe9oni","slide":5,"text":"配额","textPreview":"配额","textChars":2,"textLines":1,"bbox":[312,260,168,32]}
+{"kind":"textbox","id":"sh/ulovyt4r","slide":5,"text":"当期 / 累计\n共享团队 / 账号上限\n已有 inherit 雏形","textPreview":"当期 / 累计 | 共享团队 / 账号上限 | 已有 inherit 雏形","textChars":33,"textLines":3,"bbox":[312,318,168,122]}
+{"kind":"textbox","id":"sh/vmxw7y5c","slide":5,"text":"接入统一模型","textPreview":"接入统一模型","textChars":6,"textLines":1,"bbox":[312,454,168,28]}
+{"kind":"shape","id":"sh/wr2dozmt","slide":5,"bbox":[524,226,204,270]}
+{"kind":"shape","id":"sh/xsvex4ny","slide":5,"bbox":[524,226,204,10]}
+{"kind":"textbox","id":"sh/dc325wbq","slide":5,"text":"CRM","textPreview":"CRM","textChars":3,"textLines":1,"bbox":[542,260,168,32]}
+{"kind":"textbox","id":"sh/sbulcru5","slide":5,"text":"ownerUser\n四项写权限\nviewAuthors 仅视图共享","textPreview":"ownerUser | 四项写权限 | viewAuthors 仅视图共享","textChars":33,"textLines":3,"bbox":[542,318,168,122]}
+{"kind":"textbox","id":"sh/ralk3mtk","slide":5,"text":"接入统一模型","textPreview":"接入统一模型","textChars":6,"textLines":1,"bbox":[542,454,168,28]}
+{"kind":"shape","id":"sh/q9s3ahcz","slide":5,"bbox":[754,226,204,270]}
+{"kind":"shape","id":"sh/1g329gbm","slide":5,"bbox":[754,226,204,10]}
+{"kind":"textbox","id":"sh/0fulgbuh","slide":5,"text":"对象协作","textPreview":"对象协作","textChars":4,"textLines":1,"bbox":[772,260,168,32]}
+{"kind":"textbox","id":"sh/felk76tw","slide":5,"text":"邮件 / 资源夹 / 监控\n已有 members / Editor 雏形\n项目级接口","textPreview":"邮件 / 资源夹 / 监控 | 已有 members / Editor 雏形 | 项目级接口","textChars":42,"textLines":3,"bbox":[772,318,168,122]}
+{"kind":"textbox","id":"sh/edc3e1cb","slide":5,"text":"接入统一模型","textPreview":"接入统一模型","textChars":6,"textLines":1,"bbox":[772,454,168,28]}
+{"kind":"shape","id":"sh/94n2dgby","slide":5,"bbox":[984,226,204,270]}
+{"kind":"shape","id":"sh/o3elkbud","slide":5,"bbox":[984,226,204,10]}
+{"kind":"textbox","id":"sh/6pozedsv","slide":5,"text":"支付 / 审计","textPreview":"支付 / 审计","textChars":7,"textLines":1,"bbox":[1002,260,168,32]}
+{"kind":"textbox","id":"sh/7qx07i9g","slide":5,"text":"支付单 / 草稿 / 钱包\n通知底座已有\n跨模块审计与移交缺口","textPreview":"支付单 / 草稿 / 钱包 | 通知底座已有 | 跨模块审计与移交缺口","textChars":31,"textLines":3,"bbox":[1002,318,168,122]}
+{"kind":"textbox","id":"sh/8rqhgna1","slide":5,"text":"身份字段待后端","textPreview":"身份字段待后端","textChars":7,"textLines":1,"bbox":[1002,454,168,28]}
+{"kind":"textbox","id":"sh/tszi9srm","slide":5,"text":"增量原则：保留现有模块的业务字段和流程；统一的是“谁能看、谁能做、谁承担额度”，不是重建所有模块。","textPreview":"增量原则：保留现有模块的业务字段和流程；统一的是“谁能看、谁能做、谁承担额度”，不是重建所有模块。","textChars":49,"textLines":1,"bbox":[64,548,1050,52]}
+{"kind":"notes","id":"nt/sndjav","slide":5,"text":"这里展示的是事实地图，不是目标架构。\nSources: fact_check_v0.md sections 4-7; kol-next current code paths listed in fact_check_v0.md."}
+{"kind":"slide","id":"sl/8yxnqi","slide":6,"title":"03 / 线上现状","textShapes":22}
+{"kind":"textbox","id":"sh/bih8bu18","slide":6,"text":"03 / 线上现状","textPreview":"03 / 线上现状","textChars":9,"textLines":1,"bbox":[64,32,240,22]}
+{"kind":"textbox","id":"sh/cjq94z2t","slide":6,"text":"当前真正的痛点是“同一个人，在不同模块被不同方式解释”","textPreview":"当前真正的痛点是“同一个人，在不同模块被不同方式解释”","textChars":27,"textLines":1,"bbox":[64,62,1120,56]}
+{"kind":"textbox","id":"sh/xkzqx4je","slide":6,"text":"页面有能力，规则却分散在 adminStatus、模块开关、对象字段和服务端真值中。","textPreview":"页面有能力，规则却分散在 adminStatus、模块开关、对象字段和服务端真值中。","textChars":42,"textLines":1,"bbox":[64,124,1080,34]}
+{"kind":"shape","id":"sh/yl8r69kz","slide":6,"bbox":[64,678,1152,1]}
+{"kind":"textbox","id":"sh/zmh8ze1k","slide":6,"text":"聚星 / 账号权限、协作与配额","textPreview":"聚星 / 账号权限、协作与配额","textChars":15,"textLines":1,"bbox":[64,687,330,18]}
+{"kind":"textbox","id":"sh/knq98j25","slide":6,"text":"线上事实 → 产品问题","textPreview":"线上事实 → 产品问题","textChars":11,"textLines":1,"bbox":[390,687,500,18]}
+{"kind":"textbox","id":"sh/lozq1ojq","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1140,682,76,24]}
+{"kind":"shape","id":"sh/mp8ratkv","slide":6,"bbox":[64,214,170,72]}
+{"kind":"textbox","id":"sh/7q183e1g","slide":6,"text":"线上现状","textPreview":"线上现状","textChars":4,"textLines":1,"bbox":[74,224,150,64]}
+{"kind":"shape","id":"sh/balc7ito","slide":6,"bbox":[234,214,490,72]}
+{"kind":"textbox","id":"sh/a9cbexs3","slide":6,"text":"代码 / 页面表现","textPreview":"代码 / 页面表现","textChars":9,"textLines":1,"bbox":[244,224,470,64]}
+{"kind":"shape","id":"sh/xc3u9sbe","slide":6,"bbox":[724,214,460,72]}
+{"kind":"textbox","id":"sh/cbutgnat","slide":6,"text":"团队实际感受","textPreview":"团队实际感受","textChars":6,"textLines":1,"bbox":[734,224,440,64]}
+{"kind":"shape","id":"sh/nmls3itc","slide":6,"bbox":[64,286,170,72]}
+{"kind":"textbox","id":"sh/2lcbadsr","slide":6,"text":"角色判断","textPreview":"角色判断","textChars":4,"textLines":1,"bbox":[74,295,150,64]}
+{"kind":"shape","id":"sh/p83a5sbi","slide":6,"bbox":[234,286,490,72]}
+{"kind":"textbox","id":"sh/onutcnax","slide":6,"text":"成员页 / 配额页使用 Boolean(adminStatus)；邮件只认 adminStatus=1","textPreview":"成员页 / 配额页使用 Boolean(adminStatus)；邮件只认 adminStatus=1","textChars":51,"textLines":1,"bbox":[244,295,470,64]}
+{"kind":"shape","id":"sh/7i5cfmtg","slide":6,"bbox":[724,286,460,72]}
+{"kind":"textbox","id":"sh/6hwbmhsb","slide":6,"text":"同一个组长是否算管理员，跨模块不一致","textPreview":"同一个组长是否算管理员，跨模块不一致","textChars":18,"textLines":1,"bbox":[734,295,440,64]}
+{"kind":"shape","id":"sh/id0felcj","slide":6,"bbox":[64,358,170,72]}
+{"kind":"textbox","id":"sh/3y9w76do","slide":6,"text":"邀请","textPreview":"邀请","textChars":2,"textLines":1,"bbox":[74,367,150,64]}
+{"kind":"shape","id":"sh/4zixgbu9","slide":6,"bbox":[234,358,490,72]}
+{"kind":"textbox","id":"sh/50re9gvu","slide":6,"text":"当前弹窗只提交 emails","textPreview":"当前弹窗只提交 emails","textChars":14,"textLines":1,"bbox":[244,367,470,64]}
+{"kind":"shape","id":"sh/q10filcf","slide":6,"bbox":[724,358,460,72]}
+{"kind":"textbox","id":"sh/r29wbqt0","slide":6,"text":"无法在引入成员时显式设置分组、模块和配额","textPreview":"无法在引入成员时显式设置分组、模块和配额","textChars":20,"textLines":1,"bbox":[734,367,440,64]}
+{"kind":"shape","id":"sh/s32xkvul","slide":6,"bbox":[64,430,170,72]}
+{"kind":"textbox","id":"sh/d4bed0b6","slide":6,"text":"协作","textPreview":"协作","textChars":2,"textLines":1,"bbox":[74,439,150,64]}
+{"kind":"shape","id":"sh/65gv61cb","slide":6,"bbox":[234,430,490,72]}
+{"kind":"textbox","id":"sh/76pwzmdw","slide":6,"text":"邮件、资源夹、监控、CRM、支付各有成员或范围字段","textPreview":"邮件、资源夹、监控、CRM、支付各有成员或范围字段","textChars":25,"textLines":1,"bbox":[244,439,470,64]}
+{"kind":"shape","id":"sh/9cfq1oja","slide":6,"bbox":[724,430,460,72]}
+{"kind":"textbox","id":"sh/ob6psjip","slide":6,"text":"无法统一解释 Owner、Editor、Viewer 和高风险动作","textPreview":"无法统一解释 Owner、Editor、Viewer 和高风险动作","textChars":33,"textLines":1,"bbox":[734,439,440,64]}
+{"kind":"shape","id":"sh/nax8ze1k","slide":6,"bbox":[64,502,170,72]}
+{"kind":"textbox","id":"sh/m9o7qt0z","slide":6,"text":"数据移交","textPreview":"数据移交","textChars":4,"textLines":1,"bbox":[74,511,150,64]}
+{"kind":"shape","id":"sh/x0zq58zm","slide":6,"bbox":[234,502,490,72]}
+{"kind":"textbox","id":"sh/wz69w3i1","slide":6,"text":"清退只解除成员关系，没有资产预检查和任务","textPreview":"清退只解除成员关系，没有资产预检查和任务","textChars":20,"textLines":1,"bbox":[244,511,470,64]}
+{"kind":"shape","id":"sh/bex83yhg","slide":6,"bbox":[724,502,460,72]}
+{"kind":"textbox","id":"sh/adorut0v","slide":6,"text":"Owner、ACL、资金责任可能留下孤儿或跨组残留","textPreview":"Owner、ACL、资金责任可能留下孤儿或跨组残留","textChars":25,"textLines":1,"bbox":[734,511,440,64]}
+{"kind":"shape","id":"sh/d4vqt4j2","slide":6,"bbox":[64,550,1120,70]}
+{"kind":"textbox","id":"sh/c3mpkzix","slide":6,"text":"这也是为什么旧 Spec 不能直接进入开发：根模型一变，鉴权、协作者候选、转组移交和 Dashboard 口径都会一起变。","textPreview":"这也是为什么旧 Spec 不能直接进入开发：根模型一变，鉴权、协作者候选、转组移交和 Dashboard 口径都会一起变。","textChars":61,"textLines":1,"bbox":[86,570,1070,32]}
+{"kind":"notes","id":"nt/8yxnqi","slide":6,"text":"Sources: fact_check_v0.md sections 4.1, 4.2, 6, 7; spec_v0.md sections 3, 4, 10, 11."}
+{"kind":"slide","id":"sl/ja4cx7","slide":7,"title":"04 / 已确认","textShapes":18}
+{"kind":"textbox","id":"sh/pcru5kva","slide":7,"text":"04 / 已确认","textPreview":"04 / 已确认","textChars":8,"textLines":1,"bbox":[64,32,240,22]}
+{"kind":"textbox","id":"sh/29gbu5wj","slide":7,"text":"有一批规则已经可以锁定，不应随根模型变化反复重讨论","textPreview":"有一批规则已经可以锁定，不应随根模型变化反复重讨论","textChars":25,"textLines":1,"bbox":[64,62,1120,56]}
+{"kind":"textbox","id":"sh/na9s3ad4","slide":7,"text":"这些规则是模块接入时的安全底线和对象语义。","textPreview":"这些规则是模块接入时的安全底线和对象语义。","textChars":21,"textLines":1,"bbox":[64,124,1080,34]}
+{"kind":"shape","id":"sh/cfit0zel","slide":7,"bbox":[64,678,1152,1]}
+{"kind":"textbox","id":"sh/xgru9kv6","slide":7,"text":"聚星 / 账号权限、协作与配额","textPreview":"聚星 / 账号权限、协作与配额","textChars":15,"textLines":1,"bbox":[64,687,330,18]}
+{"kind":"textbox","id":"sh/ad0bypwf","slide":7,"text":"已确认 · 适用于两套模型","textPreview":"已确认 · 适用于两套模型","textChars":13,"textLines":1,"bbox":[390,687,500,18]}
+{"kind":"textbox","id":"sh/be9c7ud0","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1140,682,76,24]}
+{"kind":"shape","id":"sh/k32t4zex","slide":7,"bbox":[64,206,532,104]}
+{"kind":"shape","id":"sh/l4bud4v2","slide":7,"bbox":[64,206,9,104]}
+{"kind":"textbox","id":"sh/p4julcfe","slide":7,"text":"对象身份","textPreview":"对象身份","textChars":4,"textLines":1,"bbox":[92,224,140,28]}
+{"kind":"textbox","id":"sh/43ats7et","slide":7,"text":"项目型对象统一使用 Owner / Editor / Viewer；Owner 与 created_by 分离。","textPreview":"项目型对象统一使用 Owner / Editor / Viewer；Owner 与 created_by 分离。","textChars":56,"textLines":1,"bbox":[240,222,330,68]}
+{"kind":"shape","id":"sh/32hcj2x8","slide":7,"bbox":[632,206,532,104]}
+{"kind":"shape","id":"sh/218bqxwn","slide":7,"bbox":[632,206,9,104]}
+{"kind":"textbox","id":"sh/d8jupcfa","slide":7,"text":"授权粒度","textPreview":"授权粒度","textChars":4,"textLines":1,"bbox":[660,224,140,28]}
+{"kind":"textbox","id":"sh/c7atw7ep","slide":7,"text":"显式协作绑定具体项目、CRM 记录或支付单，不建设模块级协作者名单。","textPreview":"显式协作绑定具体项目、CRM 记录或支付单，不建设模块级协作者名单。","textChars":34,"textLines":1,"bbox":[808,222,330,68]}
+{"kind":"shape","id":"sh/r61cn2x4","slide":7,"bbox":[64,338,532,104]}
+{"kind":"shape","id":"sh/q5sbuhwz","slide":7,"bbox":[64,338,9,104]}
+{"kind":"textbox","id":"sh/tczadsf6","slide":7,"text":"权限合并","textPreview":"权限合并","textChars":4,"textLines":1,"bbox":[92,356,140,28]}
+{"kind":"textbox","id":"sh/sb6tknyl","slide":7,"text":"多来源取最高有效权限；模块禁用、套餐无权益、账号停用等硬限制优先。","textPreview":"多来源取最高有效权限；模块禁用、套餐无权益、账号停用等硬限制优先。","textChars":33,"textLines":1,"bbox":[240,354,330,68]}
+{"kind":"shape","id":"sh/kfat0n6h","slide":7,"bbox":[632,338,532,104]}
+{"kind":"shape","id":"sh/lgjutsn2","slide":7,"bbox":[632,338,9,104]}
+{"kind":"textbox","id":"sh/ytsbydob","slide":7,"text":"协作边界","textPreview":"协作边界","textChars":4,"textLines":1,"bbox":[660,356,140,28]}
+{"kind":"textbox","id":"sh/je1cri5w","slide":7,"text":"普通成员不允许跨组协作或跨组转交；高风险动作独立判断。","textPreview":"普通成员不允许跨组协作或跨组转交；高风险动作独立判断。","textChars":27,"textLines":1,"bbox":[808,354,330,68]}
+{"kind":"shape","id":"sh/8jut4n6d","slide":7,"bbox":[64,470,532,104]}
+{"kind":"shape","id":"sh/tk3uxsny","slide":7,"bbox":[64,470,9,104]}
+{"kind":"textbox","id":"sh/6hcb2xon","slide":7,"text":"支付责任","textPreview":"支付责任","textChars":4,"textLines":1,"bbox":[92,488,140,28]}
+{"kind":"textbox","id":"sh/7ilcv25s","slide":7,"text":"支付资金责任归预约提交时的 Owner 快照；提交人、放行人只记 actor。","textPreview":"支付资金责任归预约提交时的 Owner 快照；提交人、放行人只记 actor。","textChars":39,"textLines":1,"bbox":[240,486,330,68]}
+{"kind":"shape","id":"sh/gnut876p","slide":7,"bbox":[632,470,532,104]}
+{"kind":"shape","id":"sh/honu1cna","slide":7,"bbox":[632,470,9,104]}
+{"kind":"textbox","id":"sh/ripw76pc","slide":7,"text":"数据移交","textPreview":"数据移交","textChars":4,"textLines":1,"bbox":[660,488,140,28]}
+{"kind":"textbox","id":"sh/qhgfy18r","slide":7,"text":"转组 / 离职必须进入标准移交流程，支持跟随本人或移交接收人。","textPreview":"转组 / 离职必须进入标准移交流程，支持跟随本人或移交接收人。","textChars":31,"textLines":1,"bbox":[808,486,330,68]}
+{"kind":"notes","id":"nt/ja4cx7","slide":7,"text":"这些是 Input 和前序讨论中已经明确的系统不变量或对象语义。\nSources: input_v0.md sections 7.2-7.10; spec_v0.md sections 2, 4, 10, 11."}
+{"kind":"slide","id":"sl/o3szle","slide":8,"title":"05 / 旧方案","textShapes":12}
+{"kind":"textbox","id":"sh/q9krupob","slide":8,"text":"05 / 旧方案","textPreview":"05 / 旧方案","textChars":8,"textLines":1,"bbox":[64,32,240,22]}
+{"kind":"textbox","id":"sh/dcbap4n2","slide":8,"text":"旧 Spec 的 T1-T2-T3 模型：角色同时承担组织身份和业务范围","textPreview":"旧 Spec 的 T1-T2-T3 模型：角色同时承担组织身份和业务范围","textChars":36,"textLines":1,"bbox":[64,62,1120,56]}
+{"kind":"textbox","id":"sh/cb29wz6h","slide":8,"text":"它对简单分组足够直观，但把 T1 放在组体系之外。","textPreview":"它对简单分组足够直观，但把 T1 放在组体系之外。","textChars":25,"textLines":1,"bbox":[64,124,1080,34]}
+{"kind":"shape","id":"sh/zedsru58","slide":8,"bbox":[64,678,1152,1]}
+{"kind":"textbox","id":"sh/ed4ry9on","slide":8,"text":"聚星 / 账号权限、协作与配额","textPreview":"聚星 / 账号权限、协作与配额","textChars":15,"textLines":1,"bbox":[64,687,330,18]}
+{"kind":"textbox","id":"sh/1gvat4ny","slide":8,"text":"旧方案基线 · spec_v0","textPreview":"旧方案基线 · spec_v0","textChars":15,"textLines":1,"bbox":[390,687,500,18]}
+{"kind":"textbox","id":"sh/0fm90z6d","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1140,682,76,24]}
+{"kind":"shape","id":"sh/vi98fapo","slide":8,"bbox":[406,194,468,104]}
+{"kind":"textbox","id":"sh/uh0rm5o3","slide":8,"text":"T1\n主账号 / 超级管理员\n全组织管理 + 隐式业务策略","textPreview":"T1 | 主账号 / 超级管理员 | 全组织管理 + 隐式业务策略","textChars":29,"textLines":3,"bbox":[418,206,444,84]}
+{"kind":"shape","id":"sh/4rqh8bit","slide":8,"bbox":[620,310,44,3]}
+{"kind":"shape","id":"sh/pszyhgje","slide":8,"bbox":[658,302,22,18]}
+{"kind":"shape","id":"sh/2poz610n","slide":8,"bbox":[86,386,316,134]}
+{"kind":"textbox","id":"sh/3qxgf618","slide":8,"text":"正式分组 A\n0..1 个 T2\n若无 T2，由 T1 直管","textPreview":"正式分组 A | 0..1 个 T2 | 若无 T2，由 T1 直管","textChars":30,"textLines":3,"bbox":[98,398,292,114]}
+{"kind":"shape","id":"sh/cvqhcvip","slide":8,"bbox":[482,386,316,134]}
+{"kind":"textbox","id":"sh/dwzil0ja","slide":8,"text":"正式分组 B\n0..1 个 T2\nT2 管本组 T3","textPreview":"正式分组 B | 0..1 个 T2 | T2 管本组 T3","textChars":26,"textLines":3,"bbox":[494,398,292,114]}
+{"kind":"shape","id":"sh/qt8zal0z","slide":8,"bbox":[878,386,316,134]}
+{"kind":"textbox","id":"sh/ruh0jq1k","slide":8,"text":"隐藏分组\nT3 未分组成员\n无 T2，T1 直管","textPreview":"隐藏分组 | T3 未分组成员 | 无 T2，T1 直管","textChars":24,"textLines":3,"bbox":[890,398,292,114]}
+{"kind":"shape","id":"sh/szmh0ril","slide":8,"bbox":[620,298,3,88]}
+{"kind":"shape","id":"sh/t0fy9wj6","slide":8,"bbox":[244,364,792,3]}
+{"kind":"shape","id":"sh/9g7exsbu","slide":8,"bbox":[244,364,3,24]}
+{"kind":"shape","id":"sh/8vex4nu9","slide":8,"bbox":[640,364,3,24]}
+{"kind":"shape","id":"sh/nu5wvit4","slide":8,"bbox":[1036,364,3,24]}
+{"kind":"textbox","id":"sh/mtwf2dcj","slide":8,"text":"旧方案的关键特征","textPreview":"旧方案的关键特征","textChars":8,"textLines":1,"bbox":[64,566,220,28]}
+{"kind":"textbox","id":"sh/hk7e1sb6","slide":8,"text":"T1 不归组；T2/T3 只有一个主分组；T1 可成为跨组协作者或数据接收人；T2 业务范围默认是本组。","textPreview":"T1 不归组；T2/T3 只有一个主分组；T1 可成为跨组协作者或数据接收人；T2 业务范围默认是本组。","textChars":52,"textLines":1,"bbox":[306,564,850,44]}
+{"kind":"notes","id":"nt/o3szle","slide":8,"text":"这是当前 spec_v0 的设计基线，不是线上已经完整实现的状态。\nSources: spec_v0.md sections 3.2-3.4, 4.1, 10.3, 11.6; input_v0.md sections 7.5-7.6."}
+{"kind":"slide","id":"sl/cedtt0","slide":9,"title":"05 / 场景","textShapes":13}
+{"kind":"textbox","id":"sh/u1wzm10f","slide":9,"text":"05 / 场景","textPreview":"05 / 场景","textChars":7,"textLines":1,"bbox":[64,32,240,22]}
+{"kind":"textbox","id":"sh/honyhwjq","slide":9,"text":"三个场景同时成立，才是根模型的验收标准","textPreview":"三个场景同时成立，才是根模型的验收标准","textChars":19,"textLines":1,"bbox":[64,62,1120,56]}
+{"kind":"textbox","id":"sh/gnehobi5","slide":9,"text":"不是为了支持复杂组织而复杂化，而是要覆盖 A、B 和小团队的共同底线。","textPreview":"不是为了支持复杂组织而复杂化，而是要覆盖 A、B 和小团队的共同底线。","textChars":35,"textLines":1,"bbox":[64,124,1080,34]}
+{"kind":"shape","id":"sh/3q5gj61w","slide":9,"bbox":[64,678,1152,1]}
+{"kind":"textbox","id":"sh/ipwzq10b","slide":9,"text":"聚星 / 账号权限、协作与配额","textPreview":"聚星 / 账号权限、协作与配额","textChars":15,"textLines":1,"bbox":[64,687,330,18]}
+{"kind":"textbox","id":"sh/ps7ylgj2","slide":9,"text":"需求场景 · 决策依据","textPreview":"需求场景 · 决策依据","textChars":11,"textLines":1,"bbox":[390,687,500,18]}
+{"kind":"textbox","id":"sh/4rehsbih","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1140,682,76,24]}
+{"kind":"shape","id":"sh/rupgnq1s","slide":9,"bbox":[64,218,346,278]}
+{"kind":"shape","id":"sh/qtgzul0n","slide":9,"bbox":[64,218,346,12]}
+{"kind":"textbox","id":"sh/4jmd836t","slide":9,"text":"A / 营销负责人","textPreview":"A / 营销负责人","textChars":9,"textLines":1,"bbox":[88,258,298,34]}
+{"kind":"textbox","id":"sh/5kve18ne","slide":9,"text":"管理营销一组、营销二组\n分配配额、看业绩汇总、管组级配置\n不能看到不负责的其他团队","textPreview":"管理营销一组、营销二组 | 分配配额、看业绩汇总、管组级配置 | 不能看到不负责的其他团队","textChars":41,"textLines":3,"bbox":[88,324,298,126]}
+{"kind":"shape","id":"sh/ixkv6ton","slide":9,"bbox":[446,218,346,278]}
+{"kind":"shape","id":"sh/jytwzy58","slide":9,"bbox":[446,218,346,12]}
+{"kind":"textbox","id":"sh/snmdc36p","slide":9,"text":"B / 公司老板","textPreview":"B / 公司老板","textChars":8,"textLines":1,"bbox":[470,258,298,34]}
+{"kind":"textbox","id":"sh/tove58na","slide":9,"text":"日常查看全组织业绩\n必要时参与各组业务\n不应因为所有者身份自动获得全部业务权限","textPreview":"日常查看全组织业绩 | 必要时参与各组业务 | 不应因为所有者身份自动获得全部业务权限","textChars":39,"textLines":3,"bbox":[470,324,298,126]}
+{"kind":"shape","id":"sh/6l4vatoz","slide":9,"bbox":[828,218,346,278]}
+{"kind":"shape","id":"sh/rmdw3y5k","slide":9,"bbox":[828,218,346,12]}
+{"kind":"textbox","id":"sh/gr6dgn61","slide":9,"text":"C / 小团队","textPreview":"C / 小团队","textChars":7,"textLines":1,"bbox":[852,258,298,34]}
+{"kind":"textbox","id":"sh/1sfe9snm","slide":9,"text":"5 个账号甚至不需要分组\n一个默认组即可\n不需要学习当前组或复杂组织树","textPreview":"5 个账号甚至不需要分组 | 一个默认组即可 | 不需要学习当前组或复杂组织树","textChars":35,"textLines":3,"bbox":[852,324,298,126]}
+{"kind":"shape","id":"sh/p8bet8fq","slide":9,"bbox":[64,548,1110,72]}
+{"kind":"textbox","id":"sh/o72d03y5","slide":9,"text":"验收问题：是否能让账号稳定地“属于一个组”，同时在不切换当前组的情况下管理多个组？","textPreview":"验收问题：是否能让账号稳定地“属于一个组”，同时在不切换当前组的情况下管理多个组？","textChars":41,"textLines":1,"bbox":[88,570,1064,30]}
+{"kind":"notes","id":"nt/cedtt0","slide":9,"text":"该页来自用户在多轮讨论中明确的业务场景。\nSources: current discussion 2026-07-24 to 2026-08-05; memory task group 2026-07-10 account/group model redesign."}
+{"kind":"slide","id":"sl/b849h8","slide":10,"title":"06 / 新候选","textShapes":17}
+{"kind":"textbox","id":"sh/lc7614b2","slide":10,"text":"06 / 新候选","textPreview":"06 / 新候选","textChars":8,"textLines":1,"bbox":[64,32,240,22]}
+{"kind":"textbox","id":"sh/y9gnq9cb","slide":10,"text":"新候选把“属于哪里”和“负责哪里”分成两个字段","textPreview":"新候选把“属于哪里”和“负责哪里”分成两个字段","textChars":23,"textLines":1,"bbox":[64,62,1120,56]}
+{"kind":"textbox","id":"sh/zapozetw","slide":10,"text":"扁平分组、没有嵌套、没有当前组切换；管理范围可以重叠。","textPreview":"扁平分组、没有嵌套、没有当前组切换；管理范围可以重叠。","textChars":27,"textLines":1,"bbox":[64,124,1080,34]}
+{"kind":"shape","id":"sh/cny5ozul","slide":10,"bbox":[64,678,1152,1]}
+{"kind":"textbox","id":"sh/d876x4b6","slide":10,"text":"聚星 / 账号权限、协作与配额","textPreview":"聚星 / 账号权限、协作与配额","textChars":15,"textLines":1,"bbox":[64,687,330,18]}
+{"kind":"textbox","id":"sh/qlwnmpcf","slide":10,"text":"待讨论候选","textPreview":"待讨论候选","textChars":5,"textLines":1,"bbox":[390,687,500,18]}
+{"kind":"textbox","id":"sh/bmpovut0","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1140,682,76,24]}
+{"kind":"shape","id":"sh/oje5kfu9","slide":10,"bbox":[72,206,112,30]}
+{"kind":"textbox","id":"sh/pkn6tkbu","slide":10,"text":"组织身份","textPreview":"组织身份","textChars":4,"textLines":1,"bbox":[72,211,112,20]}
+{"kind":"shape","id":"sh/dsv6psna","slide":10,"bbox":[72,256,360,74]}
+{"kind":"textbox","id":"sh/crmpgnmp","slide":10,"text":"所有者 / 管理员 / 普通成员","textPreview":"所有者 / 管理员 / 普通成员","textChars":16,"textLines":1,"bbox":[84,268,336,54]}
+{"kind":"shape","id":"sh/rqtoni54","slide":10,"bbox":[72,364,112,30]}
+{"kind":"textbox","id":"sh/q5kned4j","slide":10,"text":"业务身份","textPreview":"业务身份","textChars":4,"textLines":1,"bbox":[72,369,112,20]}
+{"kind":"shape","id":"sh/p4b6l8ne","slide":10,"bbox":[72,414,360,74]}
+{"kind":"textbox","id":"sh/4325c3mt","slide":10,"text":"T2 / T3","textPreview":"T2 / T3","textChars":7,"textLines":1,"bbox":[84,426,336,54]}
+{"kind":"shape","id":"sh/32toji58","slide":10,"bbox":[520,206,112,30]}
+{"kind":"textbox","id":"sh/i1knad4n","slide":10,"text":"稳定归属","textPreview":"稳定归属","textChars":4,"textLines":1,"bbox":[520,211,112,20]}
+{"kind":"shape","id":"sh/h0b6h8n2","slide":10,"bbox":[520,270,300,100]}
+{"kind":"textbox","id":"sh/gzi583mh","slide":10,"text":"所属分组\n每个账号恰好一个","textPreview":"所属分组 | 每个账号恰好一个","textChars":13,"textLines":2,"bbox":[532,282,276,80]}
+{"kind":"shape","id":"sh/8jmpo3ud","slide":10,"bbox":[820,320,60,3]}
+{"kind":"shape","id":"sh/9kv6x8vy","slide":10,"bbox":[874,312,22,18]}
+{"kind":"shape","id":"sh/mh47mtw7","slide":10,"bbox":[900,270,280,100]}
+{"kind":"textbox","id":"sh/7idovyds","slide":10,"text":"Owner 的对象归属\n项目 / 记录 / 支付单","textPreview":"Owner 的对象归属 | 项目 / 记录 / 支付单","textChars":25,"textLines":2,"bbox":[912,282,256,80]}
+{"kind":"shape","id":"sh/kfm5k3eh","slide":10,"bbox":[520,432,112,30]}
+{"kind":"textbox","id":"sh/lgv6tov2","slide":10,"text":"管理范围","textPreview":"管理范围","textChars":4,"textLines":1,"bbox":[520,437,112,20]}
+{"kind":"shape","id":"sh/yd4nitwb","slide":10,"bbox":[520,496,300,100]}
+{"kind":"textbox","id":"sh/zedorydw","slide":10,"text":"0..N 个扁平分组\n或“全部分组”","textPreview":"0..N 个扁平分组 | 或“全部分组”","textChars":18,"textLines":2,"bbox":[532,508,276,80]}
+{"kind":"shape","id":"sh/4b6pwnul","slide":10,"bbox":[820,546,60,3]}
+{"kind":"shape","id":"sh/5cz65sv6","slide":10,"bbox":[874,538,22,18]}
+{"kind":"shape","id":"sh/zil0bq1k","slide":10,"bbox":[900,496,280,100]}
+{"kind":"textbox","id":"sh/ehcjil0z","slide":10,"text":"Dashboard / 配额 / 组级设置\n范围内业务访问","textPreview":"Dashboard / 配额 / 组级设置 | 范围内业务访问","textChars":29,"textLines":2,"bbox":[912,508,256,80]}
+{"kind":"textbox","id":"sh/1k3idgjq","slide":10,"text":"候选规则：每组允许 0..N 名 T2 管理者；一个 T2 可以管理 1..N 个组；范围可重叠。","textPreview":"候选规则：每组允许 0..N 名 T2 管理者；一个 T2 可以管理 1..N 个组；范围可重叠。","textChars":49,"textLines":1,"bbox":[72,632,1110,28]}
+{"kind":"notes","id":"nt/b849h8","slide":10,"text":"新候选尚未确认。这里故意把“所属分组”和“管理范围”画成两个事实。\nSources: current discussion; memory task group 2; candidate model not yet promoted into input_v0.md."}
+{"kind":"slide","id":"sl/bl6p2t","slide":11,"title":"06 / 新候选","textShapes":37}
+{"kind":"textbox","id":"sh/8j6pwrmd","slide":11,"text":"06 / 新候选","textPreview":"06 / 新候选","textChars":8,"textLines":1,"bbox":[64,32,240,22]}
+{"kind":"textbox","id":"sh/nix83m5s","slide":11,"text":"在新候选中，A、B、C 都能被解释，但不需要当前组切换","textPreview":"在新候选中，A、B、C 都能被解释，但不需要当前组切换","textChars":27,"textLines":1,"bbox":[64,62,1120,56]}
+{"kind":"textbox","id":"sh/mho7uh47","slide":11,"text":"这张表是团队讨论时最重要的“代入题”。","textPreview":"这张表是团队讨论时最重要的“代入题”。","textChars":19,"textLines":1,"bbox":[64,124,1080,34]}
+{"kind":"shape","id":"sh/xozq9w3u","slide":11,"bbox":[64,678,1152,1]}
+{"kind":"textbox","id":"sh/wnqp0rm9","slide":11,"text":"聚星 / 账号权限、协作与配额","textPreview":"聚星 / 账号权限、协作与配额","textChars":15,"textLines":1,"bbox":[64,687,330,18]}
+{"kind":"textbox","id":"sh/vmh87mlo","slide":11,"text":"待讨论候选","textPreview":"待讨论候选","textChars":5,"textLines":1,"bbox":[390,687,500,18]}
+{"kind":"textbox","id":"sh/al87yh43","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1140,682,76,24]}
+{"kind":"shape","id":"sh/dsvqxsnq","slide":11,"bbox":[64,204,164,70]}
+{"kind":"textbox","id":"sh/crmpo7m5","slide":11,"text":"账号","textPreview":"账号","textChars":2,"textLines":1,"bbox":[74,214,144,62]}
+{"kind":"shape","id":"sh/q18b2l0r","slide":11,"bbox":[228,204,180,70]}
+{"kind":"textbox","id":"sh/b2hsv6hc","slide":11,"text":"组织身份","textPreview":"组织身份","textChars":4,"textLines":1,"bbox":[238,214,160,62]}
+{"kind":"shape","id":"sh/cnqt4bix","slide":11,"bbox":[408,204,100,70]}
+{"kind":"textbox","id":"sh/xozaxgzi","slide":11,"text":"业务等级","textPreview":"业务等级","textChars":4,"textLines":1,"bbox":[418,214,80,62]}
+{"kind":"shape","id":"sh/ypsb6lgn","slide":11,"bbox":[508,204,164,70]}
+{"kind":"textbox","id":"sh/zq1szqh8","slide":11,"text":"所属分组","textPreview":"所属分组","textChars":4,"textLines":1,"bbox":[518,214,144,62]}
+{"kind":"shape","id":"sh/krat8vyt","slide":11,"bbox":[672,204,220,70]}
+{"kind":"textbox","id":"sh/lsja10ze","slide":11,"text":"管理范围","textPreview":"管理范围","textChars":4,"textLines":1,"bbox":[682,214,200,62]}
+{"kind":"shape","id":"sh/mtsba5gz","slide":11,"bbox":[892,204,332,70]}
+{"kind":"textbox","id":"sh/7u1s3qhk","slide":11,"text":"默认效果","textPreview":"默认效果","textChars":4,"textLines":1,"bbox":[902,214,312,62]}
+{"kind":"shape","id":"sh/jylsraxs","slide":11,"bbox":[64,274,164,70]}
+{"kind":"textbox","id":"sh/ixcry5w7","slide":11,"text":"A 营销负责人","textPreview":"A 营销负责人","textChars":7,"textLines":1,"bbox":[74,283,144,62]}
+{"kind":"shape","id":"sh/5k3at0fi","slide":11,"bbox":[228,274,180,70]}
+{"kind":"textbox","id":"sh/4zu90fex","slide":11,"text":"管理员或普通成员","textPreview":"管理员或普通成员","textChars":8,"textLines":1,"bbox":[238,283,160,62]}
+{"kind":"shape","id":"sh/vu1snqxg","slide":11,"bbox":[408,274,100,70]}
+{"kind":"textbox","id":"sh/utsrulwv","slide":11,"text":"T2","textPreview":"T2","textChars":2,"textLines":1,"bbox":[418,283,80,62]}
+{"kind":"shape","id":"sh/hwjap0fm","slide":11,"bbox":[508,274,164,70]}
+{"kind":"textbox","id":"sh/wva9wve1","slide":11,"text":"营销管理组","textPreview":"营销管理组","textChars":5,"textLines":1,"bbox":[518,283,144,62]}
+{"kind":"shape","id":"sh/7q18jqxk","slide":11,"bbox":[672,274,220,70]}
+{"kind":"textbox","id":"sh/mpsrqlwz","slide":11,"text":"营销一组、营销二组","textPreview":"营销一组、营销二组","textChars":9,"textLines":1,"bbox":[682,283,200,62]}
+{"kind":"shape","id":"sh/cv6pkrux","slide":11,"bbox":[892,274,332,70]}
+{"kind":"textbox","id":"sh/dwf6tcv2","slide":11,"text":"看汇总 / 配额 / 组级配置","textPreview":"看汇总 / 配额 / 组级配置","textChars":15,"textLines":1,"bbox":[902,283,312,62]}
+{"kind":"shape","id":"sh/q9o7ihcr","slide":11,"bbox":[64,344,164,70]}
+{"kind":"textbox","id":"sh/baxormdc","slide":11,"text":"B 老板","textPreview":"B 老板","textChars":4,"textLines":1,"bbox":[74,353,144,62]}
+{"kind":"shape","id":"sh/0zqporut","slide":11,"bbox":[228,344,180,70]}
+{"kind":"textbox","id":"sh/l0z6xwve","slide":11,"text":"组织所有者","textPreview":"组织所有者","textChars":5,"textLines":1,"bbox":[238,353,160,62]}
+{"kind":"shape","id":"sh/yx87mhcn","slide":11,"bbox":[408,344,100,70]}
+{"kind":"textbox","id":"sh/zyhovmd8","slide":11,"text":"T2","textPreview":"T2","textChars":2,"textLines":1,"bbox":[418,353,80,62]}
+{"kind":"shape","id":"sh/g3m5c7up","slide":11,"bbox":[508,344,164,70]}
+{"kind":"textbox","id":"sh/14v6lsvu","slide":11,"text":"默认组","textPreview":"默认组","textChars":3,"textLines":1,"bbox":[518,353,144,62]}
+{"kind":"shape","id":"sh/907ylsve","slide":11,"bbox":[672,344,220,70]}
+{"kind":"textbox","id":"sh/8zyxs7ut","slide":11,"text":"全部分组","textPreview":"全部分组","textChars":4,"textLines":1,"bbox":[682,353,200,62]}
+{"kind":"shape","id":"sh/7ypgj2d8","slide":11,"bbox":[892,344,332,70]}
+{"kind":"textbox","id":"sh/mxgfqxcn","slide":11,"text":"全组织业务管理，但权限显式来源","textPreview":"全组织业务管理，但权限显式来源","textChars":15,"textLines":1,"bbox":[902,353,312,62]}
+{"kind":"shape","id":"sh/lw7yhsvi","slide":11,"bbox":[64,414,164,70]}
+{"kind":"textbox","id":"sh/kvyxonux","slide":11,"text":"C 组负责人","textPreview":"C 组负责人","textChars":6,"textLines":1,"bbox":[74,423,144,62]}
+{"kind":"shape","id":"sh/zupgfidc","slide":11,"bbox":[228,414,180,70]}
+{"kind":"textbox","id":"sh/ytwfmdcr","slide":11,"text":"普通成员","textPreview":"普通成员","textChars":4,"textLines":1,"bbox":[238,423,160,62]}
+{"kind":"shape","id":"sh/xsnyd8v6","slide":11,"bbox":[408,414,100,70]}
+{"kind":"textbox","id":"sh/crexk3ul","slide":11,"text":"T2","textPreview":"T2","textChars":2,"textLines":1,"bbox":[418,423,80,62]}
+{"kind":"shape","id":"sh/2xcvu9sj","slide":11,"bbox":[508,414,164,70]}
+{"kind":"textbox","id":"sh/nylwnet4","slide":11,"text":"营销一组","textPreview":"营销一组","textChars":4,"textLines":1,"bbox":[518,423,144,62]}
+{"kind":"shape","id":"sh/ozudwjap","slide":11,"bbox":[672,414,220,70]}
+{"kind":"textbox","id":"sh/p03epobu","slide":11,"text":"营销一组","textPreview":"营销一组","textChars":4,"textLines":1,"bbox":[682,423,200,62]}
+{"kind":"shape","id":"sh/e9svq9s7","slide":11,"bbox":[892,414,332,70]}
+{"kind":"textbox","id":"sh/fa1cjets","slide":11,"text":"本组日常管理","textPreview":"本组日常管理","textChars":6,"textLines":1,"bbox":[902,423,312,62]}
+{"kind":"shape","id":"sh/0budsjad","slide":11,"bbox":[64,484,164,70]}
+{"kind":"textbox","id":"sh/1c3ul4by","slide":11,"text":"D 执行成员","textPreview":"D 执行成员","textChars":6,"textLines":1,"bbox":[74,493,144,62]}
+{"kind":"shape","id":"sh/q5svmpsb","slide":11,"bbox":[228,484,180,70]}
+{"kind":"textbox","id":"sh/r61cfutw","slide":11,"text":"普通成员","textPreview":"普通成员","textChars":4,"textLines":1,"bbox":[238,493,160,62]}
+{"kind":"shape","id":"sh/vaxsnq9o","slide":11,"bbox":[408,484,100,70]}
+{"kind":"textbox","id":"sh/u9orul83","slide":11,"text":"T3","textPreview":"T3","textChars":2,"textLines":1,"bbox":[418,493,80,62]}
+{"kind":"shape","id":"sh/hczap0ru","slide":11,"bbox":[508,484,164,70]}
+{"kind":"textbox","id":"sh/gb6twvq9","slide":11,"text":"营销一组","textPreview":"营销一组","textChars":4,"textLines":1,"bbox":[518,493,144,62]}
+{"kind":"shape","id":"sh/3ehsra9k","slide":11,"bbox":[672,484,220,70]}
+{"kind":"textbox","id":"sh/id8by58z","slide":11,"text":"无","textPreview":"无","textChars":1,"textLines":1,"bbox":[682,493,200,62]}
+{"kind":"shape","id":"sh/5gzatkrq","slide":11,"bbox":[892,484,332,70]}
+{"kind":"textbox","id":"sh/4fqt0fq5","slide":11,"text":"自身和对象协作权限","textPreview":"自身和对象协作权限","textChars":9,"textLines":1,"bbox":[902,493,312,62]}
+{"kind":"shape","id":"sh/jidsf69g","slide":11,"bbox":[64,548,1110,72]}
+{"kind":"textbox","id":"sh/yh4rm1sv","slide":11,"text":"小团队：只创建一个默认组；B/A 的管理范围就是默认组，普通成员不感知额外概念。","textPreview":"小团队：只创建一个默认组；B/A 的管理范围就是默认组，普通成员不感知额外概念。","textChars":40,"textLines":1,"bbox":[88,570,1050,30]}
+{"kind":"notes","id":"nt/bl6p2t","slide":11,"text":"“T2/T3 由管理范围推导”是当前候选，尚未确认。另一种实现是保留独立 accountLevel，但管理权限仍由管理范围计算。\nSources: current discussion; spec_v0.md sections 3.2, 3.3, 9.7 as old baseline."}
+{"kind":"slide","id":"sl/acf2ls","slide":12,"title":"07 / 权限计算","textShapes":16}
+{"kind":"textbox","id":"sh/ps7ulwba","slide":12,"text":"07 / 权限计算","textPreview":"07 / 权限计算","textChars":9,"textLines":1,"bbox":[64,32,240,22]}
+{"kind":"textbox","id":"sh/2pwvahcj","slide":12,"text":"两套模型都应使用同一条权限计算链，差别只在“范围来源”","textPreview":"两套模型都应使用同一条权限计算链，差别只在“范围来源”","textChars":27,"textLines":1,"bbox":[64,62,1120,56]}
+{"kind":"textbox","id":"sh/3q5cjmt4","slide":12,"text":"这样可以保留已确认的对象协作和安全边界，控制改动面。","textPreview":"这样可以保留已确认的对象协作和安全边界，控制改动面。","textChars":26,"textLines":1,"bbox":[64,124,1080,34]}
+{"kind":"shape","id":"sh/cfydgba1","slide":12,"bbox":[64,678,1152,1]}
+{"kind":"textbox","id":"sh/dg7upwb6","slide":12,"text":"聚星 / 账号权限、协作与配额","textPreview":"聚星 / 账号权限、协作与配额","textChars":15,"textLines":1,"bbox":[64,687,330,18]}
+{"kind":"textbox","id":"sh/qtgve1sv","slide":12,"text":"已确认底座 + 待讨论范围","textPreview":"已确认底座 + 待讨论范围","textChars":13,"textLines":1,"bbox":[390,687,500,18]}
+{"kind":"textbox","id":"sh/bupcn6tg","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1140,682,76,24]}
+{"kind":"shape","id":"sh/0jydkbax","slide":12,"bbox":[72,192,220,60]}
+{"kind":"textbox","id":"sh/lkretgbi","slide":12,"text":"硬限制","textPreview":"硬限制","textChars":3,"textLines":1,"bbox":[84,210,196,28]}
+{"kind":"shape","id":"sh/l8zix436","slide":12,"bbox":[310,222,48,3]}
+{"kind":"shape","id":"sh/k7q1ojml","slide":12,"bbox":[352,214,22,18]}
+{"kind":"shape","id":"sh/z6h0vel0","slide":12,"bbox":[402,192,750,60]}
+{"kind":"textbox","id":"sh/y58jm94f","slide":12,"text":"模块未开通 / 套餐无权益 / 账号停用 / 组织关系失效","textPreview":"模块未开通 / 套餐无权益 / 账号停用 / 组织关系失效","textChars":29,"textLines":1,"bbox":[426,205,700,40]}
+{"kind":"shape","id":"sh/9wz21o32","slide":12,"bbox":[72,274,220,60]}
+{"kind":"textbox","id":"sh/8vq1sjmx","slide":12,"text":"账号准入","textPreview":"账号准入","textChars":4,"textLines":1,"bbox":[84,292,196,28]}
+{"kind":"shape","id":"sh/7uh0zelc","slide":12,"bbox":[310,304,48,3]}
+{"kind":"shape","id":"sh/mt8jq94r","slide":12,"bbox":[352,296,22,18]}
+{"kind":"shape","id":"sh/p0fipkny","slide":12,"bbox":[402,274,750,60]}
+{"kind":"textbox","id":"sh/oz61gzmd","slide":12,"text":"账号级模块可用性 + 账号配额状态","textPreview":"账号级模块可用性 + 账号配额状态","textChars":17,"textLines":1,"bbox":[426,287,700,40]}
+{"kind":"shape","id":"sh/gja1wzu9","slide":12,"bbox":[72,356,220,60]}
+{"kind":"textbox","id":"sh/1kji54vu","slide":12,"text":"管理范围","textPreview":"管理范围","textChars":4,"textLines":1,"bbox":[84,374,196,28]}
+{"kind":"shape","id":"sh/eh8jupc3","slide":12,"bbox":[310,386,48,3]}
+{"kind":"shape","id":"sh/fih03udo","slide":12,"bbox":[352,378,22,18]}
+{"kind":"shape","id":"sh/ona10zul","slide":12,"bbox":[402,356,750,60]}
+{"kind":"textbox","id":"sh/poj294vq","slide":12,"text":"旧：T1 全组织 / T2 本组\n新：管理范围命中的分组","textPreview":"旧：T1 全组织 / T2 本组 | 新：管理范围命中的分组","textChars":28,"textLines":2,"bbox":[426,369,700,40]}
+{"kind":"shape","id":"sh/2lsjy9cf","slide":12,"bbox":[72,438,220,60]}
+{"kind":"textbox","id":"sh/3m1k7ud0","slide":12,"text":"对象授权","textPreview":"对象授权","textChars":4,"textLines":1,"bbox":[84,456,196,28]}
+{"kind":"shape","id":"sh/cbu14juh","slide":12,"bbox":[310,468,48,3]}
+{"kind":"shape","id":"sh/dc32dob2","slide":12,"bbox":[352,460,22,18]}
+{"kind":"shape","id":"sh/7ipcj21g","slide":12,"bbox":[402,438,750,60]}
+{"kind":"textbox","id":"sh/mhgvqx0v","slide":12,"text":"Owner / Editor / Viewer + can_manage_collaborators / can_execute_payment","textPreview":"Owner / Editor / Viewer + can_manage_collaborators / can_execute_payment","textChars":72,"textLines":1,"bbox":[426,451,700,40]}
+{"kind":"shape","id":"sh/9k7elcjm","slide":12,"bbox":[72,520,220,60]}
+{"kind":"textbox","id":"sh/8jyds7i1","slide":12,"text":"动作判断","textPreview":"动作判断","textChars":4,"textLines":1,"bbox":[84,538,196,28]}
+{"kind":"shape","id":"sh/ze5cf214","slide":12,"bbox":[310,550,48,3]}
+{"kind":"shape","id":"sh/ytwvmx0z","slide":12,"bbox":[352,542,22,18]}
+{"kind":"shape","id":"sh/lg7uhcja","slide":12,"bbox":[402,520,750,60]}
+{"kind":"textbox","id":"sh/kfydo7ip","slide":12,"text":"查看、编辑、删除、转交、协作者管理、支付执行分别判断","textPreview":"查看、编辑、删除、转交、协作者管理、支付执行分别判断","textChars":26,"textLines":1,"bbox":[426,533,700,40]}
+{"kind":"notes","id":"nt/acf2ls","slide":12,"text":"旧新方案均可复用这一条鉴权顺序；主要变化是管理范围的来源，以及管理范围是否能覆盖组级业务访问。\nSources: spec_v0.md sections 2, 4, 11; input_v0.md sections 7.2-7.10."}
+{"kind":"slide","id":"sl/mafz0s","slide":13,"title":"07 / 权限计算","textShapes":15}
+{"kind":"textbox","id":"sh/3atcruhc","slide":13,"text":"07 / 权限计算","textPreview":"07 / 权限计算","textChars":9,"textLines":1,"bbox":[64,32,240,22]}
+{"kind":"textbox","id":"sh/ob2d0zix","slide":13,"text":"对象协作继续保持项目级，管理范围不等于把账号批量写进协作者列表","textPreview":"对象协作继续保持项目级，管理范围不等于把账号批量写进协作者列表","textChars":31,"textLines":1,"bbox":[64,62,1120,56]}
+{"kind":"textbox","id":"sh/pcbut4zi","slide":13,"text":"这是减少同步成本和避免权限“传染”的关键设计。","textPreview":"这是减少同步成本和避免权限“传染”的关键设计。","textChars":23,"textLines":1,"bbox":[64,124,1080,34]}
+{"kind":"shape","id":"sh/qx4v2903","slide":13,"bbox":[64,678,1152,1]}
+{"kind":"textbox","id":"sh/bydwvuh8","slide":13,"text":"聚星 / 账号权限、协作与配额","textPreview":"聚星 / 账号权限、协作与配额","textChars":15,"textLines":1,"bbox":[64,687,330,18]}
+{"kind":"textbox","id":"sh/czmd4zit","slide":13,"text":"已确认底座","textPreview":"已确认底座","textChars":5,"textLines":1,"bbox":[390,687,500,18]}
+{"kind":"textbox","id":"sh/d0vex4ze","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1140,682,76,24]}
+{"kind":"shape","id":"sh/y14v690z","slide":13,"bbox":[72,238,220,94]}
+{"kind":"textbox","id":"sh/z2dwzehk","slide":13,"text":"模块准入\n账号是否能进入","textPreview":"模块准入 | 账号是否能进入","textChars":12,"textLines":2,"bbox":[84,250,196,74]}
+{"kind":"shape","id":"sh/rmlgvup0","slide":13,"bbox":[298,284,60,3]}
+{"kind":"shape","id":"sh/qlczm98f","slide":13,"bbox":[352,276,22,18]}
+{"kind":"shape","id":"sh/do3yx47q","slide":13,"bbox":[392,238,220,94]}
+{"kind":"textbox","id":"sh/snuhozq5","slide":13,"text":"Owner 所属分组\n决定对象归属","textPreview":"Owner 所属分组 | 决定对象归属","textChars":17,"textLines":2,"bbox":[404,250,196,74]}
+{"kind":"shape","id":"sh/3i1gru9o","slide":13,"bbox":[618,284,60,3]}
+{"kind":"shape","id":"sh/ixszyp83","slide":13,"bbox":[672,276,22,18]}
+{"kind":"shape","id":"sh/5kjyt4ru","slide":13,"bbox":[712,238,220,94]}
+{"kind":"textbox","id":"sh/4jahkzq9","slide":13,"text":"管理范围 / 角色范围\n动态覆盖一批对象","textPreview":"管理范围 / 角色范围 | 动态覆盖一批对象","textChars":20,"textLines":2,"bbox":[724,250,196,74]}
+{"kind":"shape","id":"sh/ne5g3eps","slide":13,"bbox":[938,284,60,3]}
+{"kind":"shape","id":"sh/mtwzut8n","slide":13,"bbox":[992,276,22,18]}
+{"kind":"shape","id":"sh/y9gj2dsv","slide":13,"bbox":[1032,238,180,94]}
+{"kind":"textbox","id":"sh/japkvi90","slide":13,"text":"对象 ACL\n当前项目显式 Viewer / Editor","textPreview":"对象 ACL | 当前项目显式 Viewer / Editor","textChars":29,"textLines":2,"bbox":[1044,250,156,74]}
+{"kind":"shape","id":"sh/kbi14nal","slide":13,"bbox":[72,410,1140,2]}
+{"kind":"textbox","id":"sh/lcr2xsr6","slide":13,"text":"高风险动作永远单独判断","textPreview":"高风险动作永远单独判断","textChars":11,"textLines":1,"bbox":[72,448,320,32]}
+{"kind":"textbox","id":"sh/6d0j6xsr","slide":13,"text":"- 删除：不从普通 Editor 自动推导","textPreview":"- 删除：不从普通 Editor 自动推导","textChars":21,"textLines":1,"bbox":[430,440,720,38]}
+{"kind":"textbox","id":"sh/7e9kz29c","slide":13,"text":"- Owner 转交：遵守同组 / 移交任务规则","textPreview":"- Owner 转交：遵守同组 / 移交任务规则","textChars":24,"textLines":1,"bbox":[430,482,720,38]}
+{"kind":"textbox","id":"sh/8fi187ax","slide":13,"text":"- 协作者管理：Owner / T1 或显式附加能力","textPreview":"- 协作者管理：Owner / T1 或显式附加能力","textChars":26,"textLines":1,"bbox":[430,524,720,38]}
+{"kind":"textbox","id":"sh/tgr21cri","slide":13,"text":"- 支付执行：Owner / T1 或 can_execute_payment；资金责任仍归 Owner","textPreview":"- 支付执行：Owner / T1 或 can_execute_payment；资金责任仍归 Owner","textChars":52,"textLines":1,"bbox":[430,566,720,38]}
+{"kind":"notes","id":"nt/mafz0s","slide":13,"text":"“管理范围覆盖对象”是新候选需要进一步明确的地方：它可以获得模块范围 Viewer/Editor，但不应把具体账号批量写入 ACL。\nSources: input_v0.md sections 7.7-7.10; spec_v0.md sections 4, 11."}
+{"kind":"slide","id":"sl/a7bpmf","slide":14,"title":"08 / 配额与特殊对象","textShapes":13}
+{"kind":"textbox","id":"sh/toj6h8rq","slide":14,"text":"08 / 配额与特殊对象","textPreview":"08 / 配额与特殊对象","textChars":12,"textLines":1,"bbox":[64,32,240,22]}
+{"kind":"textbox","id":"sh/6ls76dsz","slide":14,"text":"配额、支付和移交可以先沿用既定边界，根模型只替换“谁有权操作”","textPreview":"配额、支付和移交可以先沿用既定边界，根模型只替换“谁有权操作”","textChars":31,"textLines":1,"bbox":[64,62,1120,56]}
+{"kind":"textbox","id":"sh/7m1ofitk","slide":14,"text":"这部分是新方案相对可控的原因。","textPreview":"这部分是新方案相对可控的原因。","textChars":15,"textLines":1,"bbox":[64,124,1080,34]}
+{"kind":"shape","id":"sh/grapcnah","slide":14,"bbox":[64,678,1152,1]}
+{"kind":"textbox","id":"sh/hs36lsrm","slide":14,"text":"聚星 / 账号权限、协作与配额","textPreview":"聚星 / 账号权限、协作与配额","textChars":15,"textLines":1,"bbox":[64,687,330,18]}
+{"kind":"textbox","id":"sh/ups7adsb","slide":14,"text":"已确认底座 + 后端待核验","textPreview":"已确认底座 + 后端待核验","textChars":13,"textLines":1,"bbox":[390,687,500,18]}
+{"kind":"textbox","id":"sh/fq1oji9w","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1140,682,76,24]}
+{"kind":"shape","id":"sh/4fupgnad","slide":14,"bbox":[64,216,346,296]}
+{"kind":"shape","id":"sh/pg3qpsry","slide":14,"bbox":[64,216,346,12]}
+{"kind":"textbox","id":"sh/pkjul8ja","slide":14,"text":"配额","textPreview":"配额","textChars":2,"textLines":1,"bbox":[88,258,298,34]}
+{"kind":"textbox","id":"sh/ojatc325","slide":14,"text":"组织 → 分组 → 账号\n允许下级上限之和超过父级\n实际消耗逐层拦截\n账号 inherit = 不设个人上限","textPreview":"组织 → 分组 → 账号 | 允许下级上限之和超过父级 | 实际消耗逐层拦截 | 账号 inherit = 不设个人上限","textChars":54,"textLines":4,"bbox":[88,326,298,144]}
+{"kind":"shape","id":"sh/3ihsjy1k","slide":14,"bbox":[446,216,346,296]}
+{"kind":"shape","id":"sh/2h8batkz","slide":14,"bbox":[446,216,346,12]}
+{"kind":"textbox","id":"sh/x8jup8jm","slide":14,"text":"跨境支付","textPreview":"跨境支付","textChars":4,"textLines":1,"bbox":[470,258,298,34]}
+{"kind":"textbox","id":"sh/cnatgn21","slide":14,"text":"本期所有账号不受个人支付额度限制\n资金模式 shared\n预约提交即形成资金承诺\nfundingUid 取 Owner 快照","textPreview":"本期所有账号不受个人支付额度限制 | 资金模式 shared | 预约提交即形成资金承诺 | fundingUid 取 Owner 快照","textChars":62,"textLines":4,"bbox":[470,326,298,144]}
+{"kind":"shape","id":"sh/bm1cni1g","slide":14,"bbox":[828,216,346,296]}
+{"kind":"shape","id":"sh/qlsbedkv","slide":14,"bbox":[828,216,346,12]}
+{"kind":"textbox","id":"sh/tszadoji","slide":14,"text":"转组 / 离职","textPreview":"转组 / 离职","textChars":7,"textLines":1,"bbox":[852,258,298,34]}
+{"kind":"textbox","id":"sh/sr6t4j2x","slide":14,"text":"必须进入标准移交任务\n选择跟随本人或移交接收人\n预检查、摘要页、通知、回滚","textPreview":"必须进入标准移交任务 | 选择跟随本人或移交接收人 | 预检查、摘要页、通知、回滚","textChars":37,"textLines":3,"bbox":[852,326,298,144]}
+{"kind":"shape","id":"sh/kvat0jat","slide":14,"bbox":[64,554,1110,64]}
+{"kind":"textbox","id":"sh/5wjutory","slide":14,"text":"后端仍需确认：真实扣额主体、支付可见范围、editFlag / Owner 真值、移交事务边界。","textPreview":"后端仍需确认：真实扣额主体、支付可见范围、editFlag / Owner 真值、移交事务边界。","textChars":48,"textLines":1,"bbox":[88,574,1058,28]}
+{"kind":"notes","id":"nt/a7bpmf","slide":14,"text":"Sources: input_v0.md sections 7.3, 7.8, 7.9; fact_check_v0.md sections 7-8; spec_v0.md sections 5, 10."}
+{"kind":"slide","id":"sl/gez4ra","slide":15,"title":"09 / 影响评估","textShapes":34}
+{"kind":"textbox","id":"sh/3qdgzmto","slide":15,"text":"09 / 影响评估","textPreview":"09 / 影响评估","textChars":9,"textLines":1,"bbox":[64,32,240,22]}
+{"kind":"textbox","id":"sh/4rmxsra9","slide":15,"text":"新候选不是全盘重做：对象底座保留，账号与范围章节需要重写","textPreview":"新候选不是全盘重做：对象底座保留，账号与范围章节需要重写","textChars":28,"textLines":1,"bbox":[64,62,1120,56]}
+{"kind":"textbox","id":"sh/psfy1wbu","slide":15,"text":"影响最大的不是页面数量，而是权限来源和迁移逻辑。","textPreview":"影响最大的不是页面数量，而是权限来源和迁移逻辑。","textChars":24,"textLines":1,"bbox":[64,124,1080,34]}
+{"kind":"shape","id":"sh/qtofu1sf","slide":15,"bbox":[64,678,1152,1]}
+{"kind":"textbox","id":"sh/ruxg3mt0","slide":15,"text":"聚星 / 账号权限、协作与配额","textPreview":"聚星 / 账号权限、协作与配额","textChars":15,"textLines":1,"bbox":[64,687,330,18]}
+{"kind":"textbox","id":"sh/cv6xwra5","slide":15,"text":"新旧方案对比","textPreview":"新旧方案对比","textChars":6,"textLines":1,"bbox":[390,687,500,18]}
+{"kind":"textbox","id":"sh/dwfy5wbq","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1140,682,76,24]}
+{"kind":"shape","id":"sh/6xkfixcv","slide":15,"bbox":[64,196,170,64]}
+{"kind":"textbox","id":"sh/7ytwr2tg","slide":15,"text":"Spec 区域","textPreview":"Spec 区域","textChars":7,"textLines":1,"bbox":[74,206,150,56]}
+{"kind":"shape","id":"sh/fuxsvado","slide":15,"bbox":[234,196,300,64]}
+{"kind":"textbox","id":"sh/etor25c3","slide":15,"text":"旧模型处理","textPreview":"旧模型处理","textChars":5,"textLines":1,"bbox":[244,206,280,56]}
+{"kind":"shape","id":"sh/1wfaxkvu","slide":15,"bbox":[534,196,360,64]}
+{"kind":"textbox","id":"sh/gv694fu9","slide":15,"text":"新候选处理","textPreview":"新候选处理","textChars":5,"textLines":1,"bbox":[544,206,340,56]}
+{"kind":"shape","id":"sh/rqd87qds","slide":15,"bbox":[894,196,280,64]}
+{"kind":"textbox","id":"sh/654ry5c7","slide":15,"text":"影响","textPreview":"影响","textChars":2,"textLines":1,"bbox":[904,206,260,56]}
+{"kind":"shape","id":"sh/tsvqt0vi","slide":15,"bbox":[64,260,170,64]}
+{"kind":"textbox","id":"sh/srm90vux","slide":15,"text":"核心实体","textPreview":"核心实体","textChars":4,"textLines":1,"bbox":[74,269,150,56]}
+{"kind":"shape","id":"sh/j2d83qdg","slide":15,"bbox":[234,260,300,64]}
+{"kind":"textbox","id":"sh/i1krulcv","slide":15,"text":"T1 无组；T2/T3 唯一组；group.leaderUid 单值","textPreview":"T1 无组；T2/T3 唯一组；group.leaderUid 单值","textChars":34,"textLines":1,"bbox":[244,269,280,56]}
+{"kind":"shape","id":"sh/mxkr6lg3","slide":15,"bbox":[534,260,360,64]}
+{"kind":"textbox","id":"sh/nytsfqx8","slide":15,"text":"所有账号唯一所属组；组与 T2 多对多","textPreview":"所有账号唯一所属组；组与 T2 多对多","textChars":19,"textLines":1,"bbox":[544,269,340,56]}
+{"kind":"shape","id":"sh/8z298vyt","slide":15,"bbox":[894,260,280,64]}
+{"kind":"textbox","id":"sh/90bah0fe","slide":15,"text":"重写","textPreview":"重写","textChars":2,"textLines":1,"bbox":[904,269,260,56]}
+{"kind":"shape","id":"sh/a1kbalgz","slide":15,"bbox":[64,324,170,64]}
+{"kind":"textbox","id":"sh/v2dsjqxk","slide":15,"text":"统一鉴权","textPreview":"统一鉴权","textChars":4,"textLines":1,"bbox":[74,333,150,56]}
+{"kind":"shape","id":"sh/w3mtcvy5","slide":15,"bbox":[234,324,300,64]}
+{"kind":"textbox","id":"sh/xoval0fq","slide":15,"text":"T1 隐式 / T2 本组 / ACL","textPreview":"T1 隐式 / T2 本组 / ACL","textChars":19,"textLines":1,"bbox":[244,333,280,56]}
+{"kind":"shape","id":"sh/ip4be5gv","slide":15,"bbox":[534,324,360,64]}
+{"kind":"textbox","id":"sh/jqdsnaxg","slide":15,"text":"管理范围命中组 / ACL","textPreview":"管理范围命中组 / ACL","textChars":13,"textLines":1,"bbox":[544,333,340,56]}
+{"kind":"shape","id":"sh/tkfud4zy","slide":15,"bbox":[894,324,280,64]}
+{"kind":"textbox","id":"sh/sj6d4zid","slide":15,"text":"重写来源","textPreview":"重写来源","textChars":4,"textLines":1,"bbox":[904,333,260,56]}
+{"kind":"shape","id":"sh/rixcbuhs","slide":15,"bbox":[64,388,170,64]}
+{"kind":"textbox","id":"sh/6xov2p07","slide":15,"text":"配额计算","textPreview":"配额计算","textChars":4,"textLines":1,"bbox":[74,397,150,56]}
+{"kind":"shape","id":"sh/1ozeh4zu","slide":15,"bbox":[234,388,300,64]}
+{"kind":"textbox","id":"sh/gnqd8ji9","slide":15,"text":"组织 → 组 → 账号","textPreview":"组织 → 组 → 账号","textChars":11,"textLines":1,"bbox":[244,397,280,56]}
+{"kind":"shape","id":"sh/fmhcfeho","slide":15,"bbox":[534,388,360,64]}
+{"kind":"textbox","id":"sh/el8v6903","slide":15,"text":"组织 → 组 → 账号","textPreview":"组织 → 组 → 账号","textChars":11,"textLines":1,"bbox":[544,397,340,56]}
+{"kind":"shape","id":"sh/pszelozq","slide":15,"bbox":[894,388,280,64]}
+{"kind":"textbox","id":"sh/orqdcjyl","slide":15,"text":"基本保留","textPreview":"基本保留","textChars":4,"textLines":1,"bbox":[904,397,260,56]}
+{"kind":"shape","id":"sh/0nuxknit","slide":15,"bbox":[64,452,170,64]}
+{"kind":"textbox","id":"sh/l83ydsjy","slide":15,"text":"对象 ACL","textPreview":"对象 ACL","textChars":6,"textLines":1,"bbox":[74,461,150,56]}
+{"kind":"shape","id":"sh/ylcfidkn","slide":15,"bbox":[234,452,300,64]}
+{"kind":"textbox","id":"sh/zmlgbi18","slide":15,"text":"Owner / Editor / Viewer","textPreview":"Owner / Editor / Viewer","textChars":23,"textLines":1,"bbox":[244,461,280,56]}
+{"kind":"shape","id":"sh/cjaxg32h","slide":15,"bbox":[534,452,360,64]}
+{"kind":"textbox","id":"sh/dk3y98j2","slide":15,"text":"Owner / Editor / Viewer","textPreview":"Owner / Editor / Viewer","textChars":23,"textLines":1,"bbox":[544,461,340,56]}
+{"kind":"shape","id":"sh/qhsfedkb","slide":15,"bbox":[894,452,280,64]}
+{"kind":"textbox","id":"sh/bi1g7i1w","slide":15,"text":"保留","textPreview":"保留","textChars":2,"textLines":1,"bbox":[904,461,260,56]}
+{"kind":"shape","id":"sh/wfehs7il","slide":15,"bbox":[64,516,170,64]}
+{"kind":"textbox","id":"sh/xgnylcj6","slide":15,"text":"成员移交","textPreview":"成员移交","textChars":4,"textLines":1,"bbox":[74,525,150,56]}
+{"kind":"shape","id":"sh/7ap0b6lo","slide":15,"bbox":[234,516,300,64]}
+{"kind":"textbox","id":"sh/69gji1k3","slide":15,"text":"T1 特殊接收人，普通成员同组","textPreview":"T1 特殊接收人，普通成员同组","textChars":15,"textLines":1,"bbox":[244,525,280,56]}
+{"kind":"shape","id":"sh/tcridg3e","slide":15,"bbox":[534,516,360,64]}
+{"kind":"textbox","id":"sh/sbi1kb2t","slide":15,"text":"所有账号有组；范围负责人不自动成为接收人","textPreview":"所有账号有组；范围负责人不自动成为接收人","textChars":20,"textLines":1,"bbox":[544,525,340,56]}
+{"kind":"shape","id":"sh/fy9kfqlk","slide":15,"bbox":[894,516,280,64]}
+{"kind":"textbox","id":"sh/ex0jmlkz","slide":15,"text":"需重新定边界","textPreview":"需重新定边界","textChars":6,"textLines":1,"bbox":[904,525,260,56]}
+{"kind":"shape","id":"sh/10r2hg3q","slide":15,"bbox":[64,580,170,64]}
+{"kind":"textbox","id":"sh/gzi1ob25","slide":15,"text":"CRM 迁移","textPreview":"CRM 迁移","textChars":6,"textLines":1,"bbox":[74,589,150,56]}
+{"kind":"shape","id":"sh/v2503mlg","slide":15,"bbox":[234,580,300,64]}
+{"kind":"textbox","id":"sh/ahwjah4v","slide":15,"text":"T1 + T2/同组范围策略","textPreview":"T1 + T2/同组范围策略","textChars":14,"textLines":1,"bbox":[244,589,280,56]}
+{"kind":"shape","id":"sh/y9ovyt8f","slide":15,"bbox":[534,580,360,64]}
+{"kind":"textbox","id":"sh/zaxc7y90","slide":15,"text":"改为新业务范围来源，四项语义仍等价","textPreview":"改为新业务范围来源，四项语义仍等价","textChars":17,"textLines":1,"bbox":[544,589,340,56]}
+{"kind":"shape","id":"sh/kb6d0jql","slide":15,"bbox":[894,580,280,64]}
+{"kind":"textbox","id":"sh/lcfu9or6","slide":15,"text":"需重写映射","textPreview":"需重写映射","textChars":5,"textLines":1,"bbox":[904,589,260,56]}
+{"kind":"notes","id":"nt/gez4ra","slide":15,"text":"影响评估基于当前 spec_v0，未进入实现估算。\nSources: spec_v0.md sections 3, 4, 5, 10, 11; current candidate model discussion."}
+{"kind":"slide","id":"sl/qkdi3l","slide":16,"title":"10 / 决策台账","textShapes":15}
+{"kind":"textbox","id":"sh/u90rqd4r","slide":16,"text":"10 / 决策台账","textPreview":"10 / 决策台账","textChars":9,"textLines":1,"bbox":[64,32,240,22]}
+{"kind":"textbox","id":"sh/hcbals3i","slide":16,"text":"已确认事项：先把不依赖根模型的底座做成稳定共识","textPreview":"已确认事项：先把不依赖根模型的底座做成稳定共识","textChars":23,"textLines":1,"bbox":[64,62,1120,56]}
+{"kind":"textbox","id":"sh/gb29snmx","slide":16,"text":"这些内容可以作为后续 Spec 重写时的保留区。","textPreview":"这些内容可以作为后续 Spec 重写时的保留区。","textChars":24,"textLines":1,"bbox":[64,124,1080,34]}
+{"kind":"shape","id":"sh/3etsn2l8","slide":16,"bbox":[64,678,1152,1]}
+{"kind":"textbox","id":"sh/2dkrux43","slide":16,"text":"聚星 / 账号权限、协作与配额","textPreview":"聚星 / 账号权限、协作与配额","textChars":15,"textLines":1,"bbox":[64,687,330,18]}
+{"kind":"textbox","id":"sh/p0baps3e","slide":16,"text":"已确认","textPreview":"已确认","textChars":3,"textLines":1,"bbox":[390,687,500,18]}
+{"kind":"textbox","id":"sh/4z29w7mt","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1140,682,76,24]}
+{"kind":"textbox","id":"sh/jip8by54","slide":16,"text":"- 本轮范围：主子账号和权限为主；配额做强关联项；数据导出进入 TODO。","textPreview":"- 本轮范围：主子账号和权限为主；配额做强关联项；数据导出进入 TODO。","textChars":37,"textLines":1,"bbox":[86,202,1060,44]}
+{"kind":"textbox","id":"sh/yhgrit4j","slide":16,"text":"- 所有模块逐账号配置可用性和配额，不用 T1/T2/T3 聚合全部功能权限。","textPreview":"- 所有模块逐账号配置可用性和配额，不用 T1/T2/T3 聚合全部功能权限。","textChars":39,"textLines":1,"bbox":[86,250,1060,44]}
+{"kind":"textbox","id":"sh/4nu5svyl","slide":16,"text":"- 项目 / 记录 / 支付单使用 Owner / Editor / Viewer；协作至少落到对象级。","textPreview":"- 项目 / 记录 / 支付单使用 Owner / Editor / Viewer；协作至少落到对象级。","textChars":52,"textLines":1,"bbox":[86,298,1060,44]}
+{"kind":"textbox","id":"sh/5on6l0z6","slide":16,"text":"- Owner、created_by、实际 actor、资金责任账号分开保存。","textPreview":"- Owner、created_by、实际 actor、资金责任账号分开保存。","textChars":39,"textLines":1,"bbox":[86,346,1060,44]}
+{"kind":"textbox","id":"sh/ilcnqlgv","slide":16,"text":"- T1 隐式协作、Viewer、Editor 附加能力不能互相传染；高风险动作独立判断。","textPreview":"- T1 隐式协作、Viewer、Editor 附加能力不能互相传染；高风险动作独立判断。","textChars":45,"textLines":1,"bbox":[86,394,1060,44]}
+{"kind":"textbox","id":"sh/jmlojqhg","slide":16,"text":"- CRM 线上四项写权限保持等价迁移，不直接清空或重置。","textPreview":"- CRM 线上四项写权限保持等价迁移，不直接清空或重置。","textChars":29,"textLines":1,"bbox":[86,442,1060,44]}
+{"kind":"textbox","id":"sh/sbe5wfyx","slide":16,"text":"- 跨境支付本期不做账号支付额度，保持 shared；支付单接入对象协作。","textPreview":"- 跨境支付本期不做账号支付额度，保持 shared；支付单接入对象协作。","textChars":37,"textLines":1,"bbox":[86,490,1060,44]}
+{"kind":"textbox","id":"sh/tcn6pkzi","slide":16,"text":"- 成员转组 / 离职数据移交是必需独立议题，支付模块先接口化假设。","textPreview":"- 成员转组 / 离职数据移交是必需独立议题，支付模块先接口化假设。","textChars":34,"textLines":1,"bbox":[86,538,1060,44]}
+{"kind":"shape","id":"sh/6pwnu5gr","slide":16,"bbox":[86,590,1050,42]}
+{"kind":"textbox","id":"sh/rq5onahc","slide":16,"text":"这些规则会被新旧两套根模型共同复用。","textPreview":"这些规则会被新旧两套根模型共同复用。","textChars":18,"textLines":1,"bbox":[110,601,1000,24]}
+{"kind":"notes","id":"nt/qkdi3l","slide":16,"text":"Sources: input_v0.md sections 1, 7.1-7.10; fact_check_v0.md section 9; current discussion."}
+{"kind":"slide","id":"sl/o1r7m4","slide":17,"title":"10 / 决策台账","textShapes":24}
+{"kind":"textbox","id":"sh/s7mpozu9","slide":17,"text":"10 / 决策台账","textPreview":"10 / 决策台账","textChars":9,"textLines":1,"bbox":[64,32,240,22]}
+{"kind":"textbox","id":"sh/r6t8futo","slide":17,"text":"未确定事项：根模型只有一个总决策，但会影响五个下游规则","textPreview":"未确定事项：根模型只有一个总决策，但会影响五个下游规则","textChars":27,"textLines":1,"bbox":[64,62,1120,56]}
+{"kind":"textbox","id":"sh/q5k7m9c3","slide":17,"text":"团队讨论可以先集中处理这些问题，不必同时讨论全部模块动作矩阵。","textPreview":"团队讨论可以先集中处理这些问题，不必同时讨论全部模块动作矩阵。","textChars":31,"textLines":1,"bbox":[64,124,1080,34]}
+{"kind":"shape","id":"sh/1wvqlobq","slide":17,"bbox":[64,678,1152,1]}
+{"kind":"textbox","id":"sh/0vm9sja5","slide":17,"text":"聚星 / 账号权限、协作与配额","textPreview":"聚星 / 账号权限、协作与配额","textChars":15,"textLines":1,"bbox":[64,687,330,18]}
+{"kind":"textbox","id":"sh/zud8jetk","slide":17,"text":"待讨论","textPreview":"待讨论","textChars":3,"textLines":1,"bbox":[390,687,500,18]}
+{"kind":"textbox","id":"sh/et47q9cf","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1140,682,76,24]}
+{"kind":"textbox","id":"sh/h0bq9kbm","slide":17,"text":"D1","textPreview":"D1","textChars":2,"textLines":1,"bbox":[74,207,54,28]}
+{"kind":"textbox","id":"sh/gzipgfu1","slide":17,"text":"是否采用扁平分组 + 账号唯一所属组？","textPreview":"是否采用扁平分组 + 账号唯一所属组？","textChars":19,"textLines":1,"bbox":[150,204,510,30]}
+{"kind":"textbox","id":"sh/mpknuxwb","slide":17,"text":"新候选的基础前提","textPreview":"新候选的基础前提","textChars":8,"textLines":1,"bbox":[690,204,470,30]}
+{"kind":"shape","id":"sh/nqto32dw","slide":17,"bbox":[150,248,1010,1]}
+{"kind":"textbox","id":"sh/8rm5w7eh","slide":17,"text":"D2","textPreview":"D2","textChars":2,"textLines":1,"bbox":[74,275,54,28]}
+{"kind":"textbox","id":"sh/9sv65cv2","slide":17,"text":"每组 T2 是 0..1 还是 0..N？","textPreview":"每组 T2 是 0..1 还是 0..N？","textChars":21,"textLines":1,"bbox":[150,272,510,30]}
+{"kind":"textbox","id":"sh/at4nyxwn","slide":17,"text":"0..N 能同时支持 A / B / C，但取消唯一组长","textPreview":"0..N 能同时支持 A / B / C，但取消唯一组长","textChars":28,"textLines":1,"bbox":[690,272,470,30]}
+{"kind":"shape","id":"sh/vudo72ds","slide":17,"bbox":[150,316,1010,1]}
+{"kind":"textbox","id":"sh/wvm507ed","slide":17,"text":"D3","textPreview":"D3","textChars":2,"textLines":1,"bbox":[74,343,54,28]}
+{"kind":"textbox","id":"sh/xwv69cvy","slide":17,"text":"T2/T3 是独立字段还是由管理范围推导？","textPreview":"T2/T3 是独立字段还是由管理范围推导？","textChars":21,"textLines":1,"bbox":[150,340,510,30]}
+{"kind":"textbox","id":"sh/ix4n2hwj","slide":17,"text":"推导更一致，独立字段迁移更稳","textPreview":"推导更一致，独立字段迁移更稳","textChars":14,"textLines":1,"bbox":[690,340,470,30]}
+{"kind":"shape","id":"sh/jydobmd4","slide":17,"bbox":[150,384,1010,1]}
+{"kind":"textbox","id":"sh/f2x4jmtc","slide":17,"text":"D4","textPreview":"D4","textChars":2,"textLines":1,"bbox":[74,411,54,28]}
+{"kind":"textbox","id":"sh/e1onqhsr","slide":17,"text":"管理范围固定授予哪些动作？","textPreview":"管理范围固定授予哪些动作？","textChars":13,"textLines":1,"bbox":[150,408,510,30]}
+{"kind":"textbox","id":"sh/1ofmlwb2","slide":17,"text":"查看汇总、配额、组级配置、业务读写","textPreview":"查看汇总、配额、组级配置、业务读写","textChars":17,"textLines":1,"bbox":[690,408,470,30]}
+{"kind":"shape","id":"sh/gn65srax","slide":17,"bbox":[150,452,1010,1]}
+{"kind":"textbox","id":"sh/7yx4f2t0","slide":17,"text":"D5","textPreview":"D5","textChars":2,"textLines":1,"bbox":[74,479,54,28]}
+{"kind":"textbox","id":"sh/6x4nmhsf","slide":17,"text":"负责范围账号能否参与跨组对象操作？","textPreview":"负责范围账号能否参与跨组对象操作？","textChars":17,"textLines":1,"bbox":[150,476,510,30]}
+{"kind":"textbox","id":"sh/t0fmhcb6","slide":17,"text":"要区分范围管理权与显式跨组协作","textPreview":"要区分范围管理权与显式跨组协作","textChars":15,"textLines":1,"bbox":[690,476,470,30]}
+{"kind":"shape","id":"sh/sz65o7al","slide":17,"bbox":[150,520,1010,1]}
+{"kind":"textbox","id":"sh/jud4b2t4","slide":17,"text":"D6","textPreview":"D6","textChars":2,"textLines":1,"bbox":[74,547,54,28]}
+{"kind":"textbox","id":"sh/it43ixsj","slide":17,"text":"组织所有者/管理员如何获得业务权限？","textPreview":"组织所有者/管理员如何获得业务权限？","textChars":18,"textLines":1,"bbox":[150,544,510,30]}
+{"kind":"textbox","id":"sh/8z21s3qh","slide":17,"text":"显式范围，还是仅角色身份 + 账号配置","textPreview":"显式范围，还是仅角色身份 + 账号配置","textChars":19,"textLines":1,"bbox":[690,544,470,30]}
+{"kind":"shape","id":"sh/90b2l8r2","slide":17,"bbox":[150,588,1010,1]}
+{"kind":"notes","id":"nt/o1r7m4","slide":17,"text":"D1-D6 是本轮新根模型的开放决策，不应在简报中标成已确认。\nSources: current discussion; spec_v0.md sections 3, 4, 9, 10, 11."}
+{"kind":"slide","id":"sl/ju99gb","slide":18,"title":"11 / 范围与节奏","textShapes":15}
+{"kind":"textbox","id":"sh/kvux83yx","slide":18,"text":"11 / 范围与节奏","textPreview":"11 / 范围与节奏","textChars":10,"textLines":1,"bbox":[64,32,240,22]}
+{"kind":"textbox","id":"sh/ju1gfihc","slide":18,"text":"交付范围分四层：P0 先做主线，未确认模型不进入实施","textPreview":"交付范围分四层：P0 先做主线，未确认模型不进入实施","textChars":26,"textLines":1,"bbox":[64,62,1120,56]}
+{"kind":"textbox","id":"sh/itsf6dgr","slide":18,"text":"优先级已基本明确，根模型确认是进入 Spec 重写的前置条件。","textPreview":"优先级已基本明确，根模型确认是进入 Spec 重写的前置条件。","textChars":31,"textLines":1,"bbox":[64,124,1080,34]}
+{"kind":"shape","id":"sh/xsjyd8z6","slide":18,"bbox":[64,678,1152,1]}
+{"kind":"textbox","id":"sh/w7ax43il","slide":18,"text":"聚星 / 账号权限、协作与配额","textPreview":"聚星 / 账号权限、协作与配额","textChars":15,"textLines":1,"bbox":[64,687,330,18]}
+{"kind":"textbox","id":"sh/v61wbyhg","slide":18,"text":"优先级台账","textPreview":"优先级台账","textChars":5,"textLines":1,"bbox":[390,687,500,18]}
+{"kind":"textbox","id":"sh/a5sf2t0v","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1140,682,76,24]}
+{"kind":"shape","id":"sh/honypszq","slide":18,"bbox":[64,206,252,320]}
+{"kind":"shape","id":"sh/gnexgny5","slide":18,"bbox":[64,206,252,12]}
+{"kind":"textbox","id":"sh/ihcf21w7","slide":18,"text":"P0","textPreview":"P0","textChars":2,"textLines":1,"bbox":[86,246,208,34]}
+{"kind":"textbox","id":"sh/jilwv6xs","slide":18,"text":"角色 / 账号 / 分组根模型\n账号级模块准入与配额\n对象级协作\nCRM 等价迁移\n跨境支付 ACL 与准入\n成员转组 / 离职移交","textPreview":"角色 / 账号 / 分组根模型 | 账号级模块准入与配额 | 对象级协作 | CRM 等价迁移 | 跨境支付 ACL 与准入 | 成员转组 / 离职移交","textChars":66,"textLines":6,"bbox":[86,312,208,164]}
+{"kind":"shape","id":"sh/4jux4bed","slide":18,"bbox":[346,206,252,320]}
+{"kind":"shape","id":"sh/5k3yxwfy","slide":18,"bbox":[346,206,252,12]}
+{"kind":"textbox","id":"sh/utsfyhgb","slide":18,"text":"P1","textPreview":"P1","textChars":2,"textLines":1,"bbox":[368,246,208,34]}
+{"kind":"textbox","id":"sh/vu1wrmxw","slide":18,"text":"成员与协作人搜索\n配额周期 / 可见性细化\n内容监控标签定义限制\n批量增加额度\n相关页面入口优化","textPreview":"成员与协作人搜索 | 配额周期 / 可见性细化 | 内容监控标签定义限制 | 批量增加额度 | 相关页面入口优化","textChars":48,"textLines":5,"bbox":[368,312,208,164]}
+{"kind":"shape","id":"sh/wfax0ry1","slide":18,"bbox":[628,206,252,320]}
+{"kind":"shape","id":"sh/hg3etwfm","slide":18,"bbox":[628,206,252,12]}
+{"kind":"textbox","id":"sh/epwfalwf","slide":18,"text":"Backlog","textPreview":"Backlog","textChars":7,"textLines":1,"bbox":[650,246,208,34]}
+{"kind":"textbox","id":"sh/fq5g3qx0","slide":18,"text":"旧任务列表默认协作\n消息中心单会话 ACL\n更复杂的数据迁移选择\n非主线业务对象接入","textPreview":"旧任务列表默认协作 | 消息中心单会话 ACL | 更复杂的数据迁移选择 | 非主线业务对象接入","textChars":42,"textLines":4,"bbox":[650,312,208,164]}
+{"kind":"shape","id":"sh/buxcvidc","slide":18,"bbox":[910,206,252,320]}
+{"kind":"shape","id":"sh/atobmdwr","slide":18,"bbox":[910,206,252,12]}
+{"kind":"textbox","id":"sh/xwfux8vi","slide":18,"text":"TODO","textPreview":"TODO","textChars":4,"textLines":1,"bbox":[932,246,208,34]}
+{"kind":"textbox","id":"sh/cv6tonex","slide":18,"text":"数据导出专项 16 条\n支付个人额度 / 充值余额分配\n逐组差异化策略\n自定义角色体系\n跨组织账号治理","textPreview":"数据导出专项 16 条 | 支付个人额度 / 充值余额分配 | 逐组差异化策略 | 自定义角色体系 | 跨组织账号治理","textChars":51,"textLines":5,"bbox":[932,312,208,164]}
+{"kind":"shape","id":"sh/zyhczido","slide":18,"bbox":[64,568,1110,52]}
+{"kind":"textbox","id":"sh/yx8vqdw3","slide":18,"text":"本期不是建设通用权限中台；任何候选模型都必须先通过现有聚星场景和后端事实核验。","textPreview":"本期不是建设通用权限中台；任何候选模型都必须先通过现有聚星场景和后端事实核验。","textChars":39,"textLines":1,"bbox":[88,583,1050,24]}
+{"kind":"notes","id":"nt/ju99gb","slide":18,"text":"P0/P1/Backlog/TODO 基于 input_v0.md 现有优先级和后续讨论补充。\nSources: input_v0.md sections 2, 7.1, 7.10, 8; fact_check_v0.md section 8."}
+{"kind":"slide","id":"sl/8lirbb","slide":19,"title":"12 / 下一步","textShapes":16}
+{"kind":"textbox","id":"sh/j6p4vmhk","slide":19,"text":"12 / 下一步","textPreview":"12 / 下一步","textChars":8,"textLines":1,"bbox":[64,32,240,22]}
+{"kind":"textbox","id":"sh/kry54ri5","slide":19,"text":"团队今天需要带走三件事，而不是一次定完所有动作矩阵","textPreview":"团队今天需要带走三件事，而不是一次定完所有动作矩阵","textChars":25,"textLines":1,"bbox":[64,62,1120,56]}
+{"kind":"textbox","id":"sh/ls76xwzq","slide":19,"text":"先定根模型，再把影响范围落入 Input；Spec 进入实现设计阶段后再拆动作矩阵。","textPreview":"先定根模型，再把影响范围落入 Input；Spec 进入实现设计阶段后再拆动作矩阵。","textChars":42,"textLines":1,"bbox":[64,124,1080,34]}
+{"kind":"shape","id":"sh/6t0n610v","slide":19,"bbox":[64,678,1152,1]}
+{"kind":"textbox","id":"sh/7u9ozmhg","slide":19,"text":"聚星 / 账号权限、协作与配额","textPreview":"聚星 / 账号权限、协作与配额","textChars":15,"textLines":1,"bbox":[64,687,330,18]}
+{"kind":"textbox","id":"sh/svi58ri1","slide":19,"text":"会议收束","textPreview":"会议收束","textChars":4,"textLines":1,"bbox":[390,687,500,18]}
+{"kind":"textbox","id":"sh/twr61wzm","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1140,682,76,24]}
+{"kind":"textbox","id":"sh/ux0na107","slide":19,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[64,212,80,68]}
+{"kind":"textbox","id":"sh/fy9o36hs","slide":19,"text":"确认旧模型是否继续作为基线","textPreview":"确认旧模型是否继续作为基线","textChars":13,"textLines":1,"bbox":[64,308,330,56]}
+{"kind":"textbox","id":"sh/76pcr2xo","slide":19,"text":"T1 是否仍是未分组的业务高权限主体？每组是否坚持 0..1 T2？","textPreview":"T1 是否仍是未分组的业务高权限主体？每组是否坚持 0..1 T2？","textChars":34,"textLines":1,"bbox":[64,394,330,112]}
+{"kind":"shape","id":"sh/mlgvixg3","slide":19,"bbox":[64,548,300,4]}
+{"kind":"textbox","id":"sh/987utcfe","slide":19,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[446,212,80,68]}
+{"kind":"textbox","id":"sh/87ydk7yt","slide":19,"text":"讨论新扁平模型是否成立","textPreview":"讨论新扁平模型是否成立","textChars":11,"textLines":1,"bbox":[446,308,330,56]}
+{"kind":"textbox","id":"sh/zi5cnihc","slide":19,"text":"所属分组、管理范围、0..N T2 和 T2/T3 语义是否能覆盖 A/B/C？","textPreview":"所属分组、管理范围、0..N T2 和 T2/T3 语义是否能覆盖 A/B/C？","textChars":40,"textLines":1,"bbox":[446,394,330,112]}
+{"kind":"shape","id":"sh/yhwvexgr","slide":19,"bbox":[446,548,300,4]}
+{"kind":"textbox","id":"sh/lknupszi","slide":19,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[828,212,80,68]}
+{"kind":"textbox","id":"sh/kjedgnyx","slide":19,"text":"锁定进入 Input 的版本","textPreview":"锁定进入 Input 的版本","textChars":14,"textLines":1,"bbox":[828,308,330,56]}
+{"kind":"textbox","id":"sh/je9wzmxg","slide":19,"text":"本轮只保留最小能力包；模块动作矩阵、后端真值和 UI 进入后续 Spec。","textPreview":"本轮只保留最小能力包；模块动作矩阵、后端真值和 UI 进入后续 Spec。","textChars":37,"textLines":1,"bbox":[828,394,330,112]}
+{"kind":"shape","id":"sh/id0vqhgb","slide":19,"bbox":[828,548,300,4]}
+{"kind":"textbox","id":"sh/e9kfyl0j","slide":19,"text":"建议会议结论格式：保留 / 修改 / 否决 + 影响章节 + 需要谁补事实。","textPreview":"建议会议结论格式：保留 / 修改 / 否决 + 影响章节 + 需要谁补事实。","textChars":38,"textLines":1,"bbox":[64,608,1060,28]}
+{"kind":"notes","id":"nt/8lirbb","slide":19,"text":"结束时不要把新方案写成已确认；输出应是根模型决策、待补事实和受影响的 Input/Spec 章节。\nSources: current discussion; input_v0.md; fact_check_v0.md; spec_v0.md."}
+{"kind":"slide","id":"sl/67tszz","slide":20,"title":"A / 附录","textShapes":14}
+{"kind":"textbox","id":"sh/kfypcjeh","slide":20,"text":"A / 附录","textPreview":"A / 附录","textChars":6,"textLines":1,"bbox":[64,32,240,22]}
+{"kind":"textbox","id":"sh/jep8jyxw","slide":20,"text":"附录：事实来源和后续核验入口","textPreview":"附录：事实来源和后续核验入口","textChars":14,"textLines":1,"bbox":[64,62,1120,56]}
+{"kind":"textbox","id":"sh/ydg7atwb","slide":20,"text":"简报中的线上事实、代码事实和行业参照都保留可追溯路径。","textPreview":"简报中的线上事实、代码事实和行业参照都保留可追溯路径。","textChars":27,"textLines":1,"bbox":[64,124,1080,34]}
+{"kind":"shape","id":"sh/xc7qhofq","slide":20,"bbox":[64,678,1152,1]}
+{"kind":"textbox","id":"sh/wbep8jel","slide":20,"text":"聚星 / 账号权限、协作与配额","textPreview":"聚星 / 账号权限、协作与配额","textChars":15,"textLines":1,"bbox":[64,687,330,18]}
+{"kind":"textbox","id":"sh/ba58fex0","slide":20,"text":"来源索引","textPreview":"来源索引","textChars":4,"textLines":1,"bbox":[390,687,500,18]}
+{"kind":"textbox","id":"sh/apw769wf","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1140,682,76,24]}
+{"kind":"textbox","id":"sh/9onqd4fu","slide":20,"text":"项目材料","textPreview":"项目材料","textChars":4,"textLines":1,"bbox":[72,194,220,28]}
+{"kind":"textbox","id":"sh/onep4ze9","slide":20,"text":"01_Product_Specs/account_permission_collaboration/\n- (【CSM】反馈池)权限账号反馈池.xlsx\n- input_v0.md\n- fact_check_v0.md\n- spec_v0.md\n- crm_write_permissions_online.png","textPreview":"01_Product_Specs/account_permission_collaboration/ | - (【CSM】反馈池)权限账号反馈池.xlsx | - input_v0.md | - fact_check_v0.md | - spec_v0.md | - crm...","textChars":156,"textLines":6,"bbox":[72,238,500,174]}
+{"kind":"textbox","id":"sh/y5sr6143","slide":20,"text":"线上与代码","textPreview":"线上与代码","textChars":5,"textLines":1,"bbox":[660,194,220,28]}
+{"kind":"textbox","id":"sh/j618z6lo","slide":20,"text":"线上：/brand/sub-account\n线上：/brand/sub-account/quota\n线上：/brand/sub-account/data\n代码：kol-next/pages/brand/sub-account\n代码：kol-next/assets/script/constant/subAccount.js\n代码：kol-next/api/setting/subAccount.js","textPreview":"线上：/brand/sub-account | 线上：/brand/sub-account/quota | 线上：/brand/sub-account/data | 代码：kol-next/pages/brand/sub-account | 代码：kol-next/asse...","textChars":199,"textLines":6,"bbox":[660,238,500,174]}
+{"kind":"textbox","id":"sh/k7a98bm9","slide":20,"text":"行业参照","textPreview":"行业参照","textChars":4,"textLines":1,"bbox":[72,470,220,28]}
+{"kind":"textbox","id":"sh/lsja1g3e","slide":20,"text":"HubSpot Main / Extra / nested teams\nSalesforce role hierarchy and record sharing\nAsana project team ownership\nGoogle Workspace scoped admin roles\nGitHub organization / team / repository roles","textPreview":"HubSpot Main / Extra / nested teams | Salesforce role hierarchy and record sharing | Asana project team ownership | Google Workspace scop...","textChars":191,"textLines":5,"bbox":[72,514,500,118]}
+{"kind":"textbox","id":"sh/a18r2h4r","slide":20,"text":"后端待核验问题包","textPreview":"后端待核验问题包","textChars":8,"textLines":1,"bbox":[660,470,260,28]}
+{"kind":"textbox","id":"sh/b2h8vm5c","slide":20,"text":"CRM 16 组合真值\n共享对象扣额主体\n支付可见范围 / editFlag / Owner\n清退副作用\n跨模块审计能力","textPreview":"CRM 16 组合真值 | 共享对象扣额主体 | 支付可见范围 / editFlag / Owner | 清退副作用 | 跨模块审计能力","textChars":60,"textLines":5,"bbox":[660,514,500,118]}
+{"kind":"notes","id":"nt/67tszz","slide":20,"text":"完整来源和链接在配套 Markdown 讲稿与事实索引中。\nSources: fact_check_v0.md section 8; official references: https://knowledge.hubspot.com/user-management/create-and-manage-teams, https://trailhead.salesforce.com/en/content/learn/modules/data_security/data_security_roles, https://help.asana.com/s/article/create-projects-in-asana, https://support.google.com/a/answer/9807615, https://docs.github.com/en/organizations/organizing-members-into-teams/about-teams."}

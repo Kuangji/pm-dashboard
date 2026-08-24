@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-08-20T10:31:08.109Z",
+  "updatedAt": "2026-08-24T07:44:41.029Z",
   "navigation": {
     "docs": [
       {
@@ -33,6 +33,139 @@
         "name": "02-project-documents",
         "path": "02-project-documents",
         "children": [
+          {
+            "type": "directory",
+            "name": "account_permission_collaboration",
+            "path": "02-project-documents/account_permission_collaboration",
+            "children": [
+              {
+                "type": "file",
+                "name": "(【CSM】反馈池)权限账号反馈池.xlsx",
+                "path": "02-project-documents/account_permission_collaboration/(【CSM】反馈池)权限账号反馈池.xlsx",
+                "slug": "02-project-documents/account_permission_collaboration/(【CSM】反馈池)权限账号反馈池.xlsx",
+                "fileType": "table",
+                "isText": false,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "02-project-documents/account_permission_collaboration/README.md",
+                "slug": "02-project-documents/account_permission_collaboration/README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "crm_write_permissions_online.png",
+                "path": "02-project-documents/account_permission_collaboration/crm_write_permissions_online.png",
+                "slug": "02-project-documents/account_permission_collaboration/crm_write_permissions_online.png",
+                "fileType": "image",
+                "isText": false,
+                "isImage": true
+              },
+              {
+                "type": "file",
+                "name": "fact_check_v0.md",
+                "path": "02-project-documents/account_permission_collaboration/fact_check_v0.md",
+                "slug": "02-project-documents/account_permission_collaboration/fact_check_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "input_v0.md",
+                "path": "02-project-documents/account_permission_collaboration/input_v0.md",
+                "slug": "02-project-documents/account_permission_collaboration/input_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "pm_confirmation_code_evidence_2026-08-18.md",
+                "path": "02-project-documents/account_permission_collaboration/pm_confirmation_code_evidence_2026-08-18.md",
+                "slug": "02-project-documents/account_permission_collaboration/pm_confirmation_code_evidence_2026-08-18.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "scope_quota_product_rules.md",
+                "path": "02-project-documents/account_permission_collaboration/scope_quota_product_rules.md",
+                "slug": "02-project-documents/account_permission_collaboration/scope_quota_product_rules.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "spec_v0.md",
+                "path": "02-project-documents/account_permission_collaboration/spec_v0.md",
+                "slug": "02-project-documents/account_permission_collaboration/spec_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "账号和权限功能设计梳理.md",
+                "path": "02-project-documents/account_permission_collaboration/账号和权限功能设计梳理.md",
+                "slug": "02-project-documents/account_permission_collaboration/账号和权限功能设计梳理.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "账号权限协作配额_Pre-Spec覆盖度.xmind",
+                "path": "02-project-documents/account_permission_collaboration/账号权限协作配额_Pre-Spec覆盖度.xmind",
+                "slug": "02-project-documents/account_permission_collaboration/账号权限协作配额_Pre-Spec覆盖度.xmind",
+                "fileType": "binary",
+                "isText": false,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "账号权限协作配额_Pre-Spec覆盖度思维导图源.md",
+                "path": "02-project-documents/account_permission_collaboration/账号权限协作配额_Pre-Spec覆盖度思维导图源.md",
+                "slug": "02-project-documents/account_permission_collaboration/账号权限协作配额_Pre-Spec覆盖度思维导图源.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "账号权限协作配额_团队视觉简报_v0.md",
+                "path": "02-project-documents/account_permission_collaboration/账号权限协作配额_团队视觉简报_v0.md",
+                "slug": "02-project-documents/account_permission_collaboration/账号权限协作配额_团队视觉简报_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "账号权限协作配额_团队视觉简报_v0.pptx",
+                "path": "02-project-documents/account_permission_collaboration/账号权限协作配额_团队视觉简报_v0.pptx",
+                "slug": "02-project-documents/account_permission_collaboration/账号权限协作配额_团队视觉简报_v0.pptx",
+                "fileType": "binary",
+                "isText": false,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "账号权限协作配额_团队视觉简报_v0.pptx.inspect.ndjson",
+                "path": "02-project-documents/account_permission_collaboration/账号权限协作配额_团队视觉简报_v0.pptx.inspect.ndjson",
+                "slug": "02-project-documents/account_permission_collaboration/账号权限协作配额_团队视觉简报_v0.pptx.inspect.ndjson",
+                "fileType": "binary",
+                "isText": false,
+                "isImage": false
+              }
+            ]
+          },
           {
             "type": "directory",
             "name": "channel_search_agent_upgrade",
