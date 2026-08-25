@@ -4,8 +4,19 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
-import { FileText, Code, ImageIcon, File, Download, ChevronDown, ChevronUp, Table2 } from 'lucide-react'
+import {
+  FileText,
+  Code,
+  ImageIcon,
+  File,
+  Download,
+  ChevronDown,
+  ChevronUp,
+  PanelLeftClose,
+  Table2,
+} from 'lucide-react'
 import { getDocumentPublicUrl } from '@/app/lib/document-url'
+import { useDocsSidebarControls } from './DocsSidebarControls'
 import {
   Collapsible,
   CollapsibleContent,
@@ -112,6 +123,7 @@ function FileTypeIcon({ item }: { item: NavItem }) {
 
 export function DocsSidebarClient({ manifest }: DocsSidebarClientProps) {
   const pathname = usePathname()
+  const docsSidebarControls = useDocsSidebarControls()
   const currentSlug = (pathname?.replace(/^\/docs\//, '').replace(/\/$/, '') || '').split('/').map(decodeURIComponent).join('/')
 
   const initialExpanded = new Set<string>()
@@ -166,6 +178,18 @@ export function DocsSidebarClient({ manifest }: DocsSidebarClientProps) {
 
       {/* Footer */}
       <div className="p-4 border-t border-[#d0d7de] bg-white shrink-0">
+        {docsSidebarControls && (
+          <button
+            type="button"
+            aria-label="缩入文档目录"
+            title="缩入文档目录"
+            onClick={docsSidebarControls.collapse}
+            className="mb-3 flex w-full items-center gap-2 rounded-md px-2 py-2 text-xs text-[#57606a] transition-colors hover:bg-[#eaeef2] hover:text-[#24292f] focus:outline-none focus:ring-2 focus:ring-[#0969da]"
+          >
+            <PanelLeftClose className="h-4 w-4" />
+            <span>缩入目录</span>
+          </button>
+        )}
         <p className="text-xs text-[#57606a]">v{manifest.version}</p>
       </div>
     </aside>
