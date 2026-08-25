@@ -147,7 +147,7 @@ export function ResizableAppShell({ children }: ResizableAppShellProps) {
         programmaticResizeRef.current = false
       })
     }
-  }, [mainNavMode, mainPanelRef])
+  }, [isDesktop, mainNavMode, mainPanelRef])
 
   useEffect(() => {
     return () => clearLeaveTimer()

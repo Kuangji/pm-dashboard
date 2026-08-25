@@ -65,7 +65,7 @@ export function ResizableDocsLayout({ sidebar, children }: ResizableDocsLayoutPr
         programmaticResizeRef.current = false
       })
     }
-  }, [docsPanelRef, docsSidebarMode])
+  }, [docsPanelRef, docsSidebarMode, isDesktop])
 
   return (
     <>
