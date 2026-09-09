@@ -16,6 +16,7 @@
 ├── 01-getting-started/  # 快速开始
 ├── 02-project-documents/  # 项目文档
 │   ├── account_permission_collaboration/
+│   ├── brand_reputation_radar_752/
 │   ├── channel_search_agent_upgrade/  # 频道搜索Agent升级
 │   ├── monitor_760/  # Monitor 监控功能
 │   ├── monitor_761/  # 监控平台文档

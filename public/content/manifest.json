@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-08-24T07:44:41.029Z",
+  "updatedAt": "2026-09-09T03:35:57.108Z",
   "navigation": {
     "docs": [
       {
@@ -163,6 +163,83 @@
                 "fileType": "binary",
                 "isText": false,
                 "isImage": false
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "brand_reputation_radar_752",
+            "path": "02-project-documents/brand_reputation_radar_752",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "02-project-documents/brand_reputation_radar_752/README.md",
+                "slug": "02-project-documents/brand_reputation_radar_752/README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "design_v1.md",
+                "path": "02-project-documents/brand_reputation_radar_752/design_v1.md",
+                "slug": "02-project-documents/brand_reputation_radar_752/design_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "input_v1.md",
+                "path": "02-project-documents/brand_reputation_radar_752/input_v1.md",
+                "slug": "02-project-documents/brand_reputation_radar_752/input_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "product_overview_v1.md",
+                "path": "02-project-documents/brand_reputation_radar_752/product_overview_v1.md",
+                "slug": "02-project-documents/brand_reputation_radar_752/product_overview_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "spec_v1.md",
+                "path": "02-project-documents/brand_reputation_radar_752/spec_v1.md",
+                "slug": "02-project-documents/brand_reputation_radar_752/spec_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "directory",
+                "name": "reviews",
+                "path": "02-project-documents/brand_reputation_radar_752/reviews",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "design_v1_review.md",
+                    "path": "02-project-documents/brand_reputation_radar_752/reviews/design_v1_review.md",
+                    "slug": "02-project-documents/brand_reputation_radar_752/reviews/design_v1_review.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "spec_v1_review.md",
+                    "path": "02-project-documents/brand_reputation_radar_752/reviews/spec_v1_review.md",
+                    "slug": "02-project-documents/brand_reputation_radar_752/reviews/spec_v1_review.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
               }
             ]
           },
