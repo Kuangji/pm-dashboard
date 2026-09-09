@@ -1,15 +1,16 @@
 import path from 'path'
-import matter from 'gray-matter'
 import { detectFileType, isTextFile, getMimeType, getLanguage, FileCategory } from './file-types'
 import manifestData from '@/public/content/manifest.json'
 
 export { shouldPreviewDocumentContent } from './document-preview'
+export { resolveDocumentTitle } from './document-title'
 
 export interface NavItem {
   type: 'file' | 'directory'
   name: string
   path: string
   slug?: string
+  title?: string
   order?: number
   fileType?: string
   language?: string
@@ -57,36 +58,6 @@ export interface Document {
 
 export type DocumentMetadata = Document
 
-interface ResolveDocumentTitleOptions {
-  fileName: string
-  rawContent: string
-  isMarkdown: boolean
-}
-
-export function resolveDocumentTitle({
-  fileName,
-  rawContent,
-  isMarkdown,
-}: ResolveDocumentTitleOptions): string {
-  if (!isMarkdown) {
-    return fileName
-  }
-
-  const parsed = matter(rawContent)
-  const frontmatterTitle = parsed.data.title
-
-  if (typeof frontmatterTitle === 'string' && frontmatterTitle.trim()) {
-    return frontmatterTitle.trim()
-  }
-
-  const headingMatch = parsed.content.match(/^#\s+(.+)$/m)
-  if (headingMatch?.[1]?.trim()) {
-    return headingMatch[1].trim()
-  }
-
-  return fileName
-}
-
 export async function readManifest(): Promise<Manifest> {
   return manifestData as Manifest
 }
@@ -108,6 +79,17 @@ export function findDocInTree(slug: string, items: NavItem[]): NavItem | undefin
     }
   }
   return undefined
+}
+
+export async function getDocumentHtmlTitle(slug: string): Promise<string> {
+  const manifest = await readManifest()
+  const docItem = findDocInTree(slug, manifest.navigation.docs)
+
+  if (!docItem || docItem.type !== 'file') {
+    throw new Error(`Document not found: ${slug}`)
+  }
+
+  return docItem.title ?? docItem.name
 }
 
 /**

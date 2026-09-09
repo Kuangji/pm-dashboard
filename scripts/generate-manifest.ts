@@ -11,9 +11,11 @@ import {
   isTextFile,
   isImageFile
 } from '../app/lib/file-types'
+import { resolveDocumentTitle } from '../app/lib/document-title'
 import { invokeAiJson } from './lib/ai-cli'
 import { hasMissingDemoConfigFiles } from './lib/demo-configs'
 import { ensureDemoScreenshot, hasMissingDemoScreenshots } from './lib/demo-screenshots'
+import { getNewestMtime } from './lib/file-mtime'
 import { shouldIncludeManifestFile } from './lib/manifest-files'
 
 const DASHBOARD_ROOT = process.cwd()
@@ -23,6 +25,8 @@ const MANIFEST_PATH = path.join(DASHBOARD_ROOT, 'public/content/manifest.json')
 const MANIFEST_GENERATOR_INPUTS = [
   path.join(DASHBOARD_ROOT, 'scripts/generate-manifest.ts'),
   path.join(DASHBOARD_ROOT, 'app/lib/file-types.ts'),
+  path.join(DASHBOARD_ROOT, 'app/lib/document-title.ts'),
+  path.join(DASHBOARD_ROOT, 'scripts/lib/file-mtime.ts'),
 ]
 
 interface NavItem {
@@ -30,6 +34,7 @@ interface NavItem {
   name: string
   path: string
   slug?: string
+  title?: string
   order?: number
   fileType?: string
   language?: string
@@ -81,12 +86,21 @@ async function scanDirectory(dirPath: string, relativePath: string = ''): Promis
     const fileTypeInfo = detectFileType(file.name)
 
     let itemOrder = order
+    let documentTitle: string | undefined
     if (isTextFile(file.name)) {
       try {
         const content = await fs.readFile(filePath, 'utf-8')
         const { data } = matter(content)
         if (data.order !== undefined) {
           itemOrder = data.order
+        }
+        const resolvedTitle = resolveDocumentTitle({
+          fileName: file.name,
+          rawContent: content,
+          isMarkdown: fileTypeInfo.category === 'markdown',
+        })
+        if (resolvedTitle !== file.name) {
+          documentTitle = resolvedTitle
         }
       } catch {
         // 忽略
@@ -103,6 +117,7 @@ async function scanDirectory(dirPath: string, relativePath: string = ''): Promis
       name: file.name,
       path: relPath,
       slug: relPath,
+      ...(documentTitle !== undefined ? { title: documentTitle } : {}),
       order: itemOrder,
       fileType: fileTypeInfo.category,
       language: fileTypeInfo.language,
@@ -139,6 +154,7 @@ function cleanItems(items: NavItem[]): NavItem[] {
       name: item.name,
       path: item.path,
       ...(item.slug !== undefined ? { slug: item.slug } : {}),
+      ...(item.title !== undefined ? { title: item.title } : {}),
       ...(item.fileType !== undefined ? { fileType: item.fileType } : {}),
       ...(item.language !== undefined ? { language: item.language } : {}),
       ...(item.isText !== undefined ? { isText: item.isText } : {}),
@@ -252,22 +268,6 @@ async function scanDemos(): Promise<DemoItem[]> {
   } catch {
     return []
   }
-}
-
-async function getNewestMtime(dirs: string[]): Promise<number> {
-  let newest = 0
-  async function walk(dir: string) {
-    try {
-      const entries = await fs.readdir(dir, { withFileTypes: true })
-      for (const entry of entries) {
-        const full = path.join(dir, entry.name)
-        if (entry.isDirectory()) { await walk(full) }
-        else { const { mtimeMs } = await fs.stat(full); if (mtimeMs > newest) newest = mtimeMs }
-      }
-    } catch { return }
-  }
-  for (const dir of dirs) await walk(dir)
-  return newest
 }
 
 async function generateManifest() {

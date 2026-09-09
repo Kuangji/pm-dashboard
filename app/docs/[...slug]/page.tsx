@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { readDocumentMetadata } from '@/app/lib/content'
+import { getDocumentHtmlTitle, readDocumentMetadata } from '@/app/lib/content'
 import { DocumentViewer } from '@/app/components/DocumentViewer'
 import { notFound } from 'next/navigation'
 import { Calendar, Tag, FileCode, FileText, ImageIcon, File, Download, Table2 } from 'lucide-react'
@@ -53,10 +53,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const slugPath = Array.isArray(slug) ? slug.map(decodeURIComponent).join('/') : decodeURIComponent(slug)
 
   try {
-    const doc = await readDocumentMetadata(slugPath)
+    const title = await getDocumentHtmlTitle(slugPath)
 
     return {
-      title: `${doc.title} | PM Dashboard`,
+      title: `${title} | PM Dashboard`,
       description: DEFAULT_DESCRIPTION,
     }
   } catch {
