@@ -50,7 +50,7 @@
 | `components/brandReputationRadar/realtime.vue:456`、`:480` | 评论主题/语言小趋势采用published_at，与核心sampled_at不同 |
 | `components/brandReputationRadar/section/filterDrawer.vue:183`、`:220`、`:244` | 统一字段、日期快捷、草稿隔离与apply/clear |
 | `components/brandReputationRadar/section/contentTableSection.vue:100`、`:127`、`:145`、`:228`、`:275` | views排序、示例小趋势、采样情感、分页、标题过滤组合 |
-| `components/brandReputationRadar/section/commentTableSection.vue:129`、`:158`、`:182`、`:215` | 默认点赞排序、即时正文搜索、外部集合重置、表内主题证据范围 |
+| `components/brandReputationRadar/section/commentTableSection.vue` | 默认发布时间排序、即时正文搜索、外部集合重置、表内主题证据范围；评论点赞字段已移除 |
 | `components/brandReputationRadar/section/emotionSection.vue:230`、`:238`、`:271` | 主题候选重复风险、无正负趋势处理、按域主题抽屉 |
 | `components/brandReputationRadar/section/themeDrawer.vue:2`、`:24` | 单抽屉、证据数/内部滚动，无内部分页或真实外链 |
 | `components/brandReputationRadar/section/creatorImpactSection.vue:123`、`:143`、`:181` | 主18/次8条形、主n=contentCount/次n=commentedContentCount、−100～100尺度 |
