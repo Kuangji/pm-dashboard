@@ -21,6 +21,7 @@
 │   ├── monitor_760/  # Monitor 监控功能
 │   ├── monitor_761/  # 监控平台文档
 │   ├── monitor_762/
+│   ├── monitor_763/
 │   ├── other_social_search_741/  # 社交搜索项目文档
 │   ├── search_experience_6310/  # 搜索体验需求6310
 │   ├── search_experience_639/  # 搜索体验需求639
@@ -50,4 +51,4 @@
 
 ---
 
-*最后更新: 2026-08-24*
+*最后更新: 2026-10-13*

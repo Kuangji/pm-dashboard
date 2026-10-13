@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-10-10T07:45:23.942Z",
+  "updatedAt": "2026-10-13T03:37:54.907Z",
   "navigation": {
     "docs": [
       {
@@ -1471,6 +1471,125 @@
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "monitor_763",
+            "path": "02-project-documents/monitor_763",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "02-project-documents/monitor_763/README.md",
+                "slug": "02-project-documents/monitor_763/README.md",
+                "title": "v7.6.3 Demo 验收文档 | README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "_plan_v1.md",
+                "path": "02-project-documents/monitor_763/_plan_v1.md",
+                "slug": "02-project-documents/monitor_763/_plan_v1.md",
+                "title": "v7.6.3 内容监控自动追踪 QoL 计划 v1 | _plan_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "design_v1.md",
+                "path": "02-project-documents/monitor_763/design_v1.md",
+                "slug": "02-project-documents/monitor_763/design_v1.md",
+                "title": "Design v1：内容监控自动追踪 QoL（v7.6.3） | design_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "input_v1.md",
+                "path": "02-project-documents/monitor_763/input_v1.md",
+                "slug": "02-project-documents/monitor_763/input_v1.md",
+                "title": "Input v1：内容监控自动追踪 QoL（v7.6.3） | input_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "monitor_common_context_v1.md",
+                "path": "02-project-documents/monitor_763/monitor_common_context_v1.md",
+                "slug": "02-project-documents/monitor_763/monitor_common_context_v1.md",
+                "title": "v7.6.3 共同上下文 v1：内容监控自动追踪 QoL | monitor_common_context_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "spec_v1.md",
+                "path": "02-project-documents/monitor_763/spec_v1.md",
+                "slug": "02-project-documents/monitor_763/spec_v1.md",
+                "title": "Spec v1：内容监控自动追踪 QoL（v7.6.3） | spec_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "directory",
+                "name": "assets",
+                "path": "02-project-documents/monitor_763/assets",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "monitor-763-drawer-1200-edit-final.png",
+                    "path": "02-project-documents/monitor_763/assets/monitor-763-drawer-1200-edit-final.png",
+                    "slug": "02-project-documents/monitor_763/assets/monitor-763-drawer-1200-edit-final.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "monitor-763-narrow-close-button.png",
+                    "path": "02-project-documents/monitor_763/assets/monitor-763-narrow-close-button.png",
+                    "slug": "02-project-documents/monitor_763/assets/monitor-763-narrow-close-button.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "reviews",
+                "path": "02-project-documents/monitor_763/reviews",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "design_v1_review.md",
+                    "path": "02-project-documents/monitor_763/reviews/design_v1_review.md",
+                    "slug": "02-project-documents/monitor_763/reviews/design_v1_review.md",
+                    "title": "v7.6.3 Design v1 Review | design_v1_review.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "spec_v1_review.md",
+                    "path": "02-project-documents/monitor_763/reviews/spec_v1_review.md",
+                    "slug": "02-project-documents/monitor_763/reviews/spec_v1_review.md",
+                    "title": "v7.6.3 Spec Review | spec_v1_review.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
               }
             ]
           },
