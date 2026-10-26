@@ -9,6 +9,8 @@
 - [入门介绍](/docs/intro/) - 新手上路
 - [NoxInfluencer 全站公共上下文](./noxinfluencer_site_common_context_v1.md) - 进入 Nox 站级认知前先读
 
+- [爆款视频识别交付包](./02-project-documents/viral_video_identification/README.md) - 需求清单、计算规则、榜单及其他模块改造 SPEC
+
 ## 文档结构
 
 <!-- CONTENT-TREE-START -->
@@ -26,6 +28,7 @@
 │   ├── search_experience_6310/  # 搜索体验需求6310
 │   ├── search_experience_639/  # 搜索体验需求639
 │   ├── search_experience_mvp_upgrade/  # 搜索体验MVP升级
+│   ├── viral_video_identification/
 │   ├── 支付单暂存和预约发送/  # 支付单暂存与预约发送
 │   └── 消消乐_0423/  # 消消乐产品文档
 └── 03-research/  # 研究报告
@@ -51,4 +54,4 @@
 
 ---
 
-*最后更新: 2026-10-13*
+*最后更新: 2026-10-22*

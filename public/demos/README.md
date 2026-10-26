@@ -1,5 +1,12 @@
 # Demo 构建规范
 
+## 账号权限功能审阅 Demo
+
+- 入口：[账号体系 · 功能审阅](./account-permission-review/index.html)
+- 唯一源码：`06_Prototypes/account_permission_review_demo/`
+- 后续每次迭代执行 `npm --prefix 06_Prototypes/account_permission_review_demo run publish:demo`，同时更新本发布副本并校验一致性。
+- 本 Demo 为 Input 讨论工具；规则、样本和待确认内容不构成真实产品实现。
+
 ## 目录结构
 
 ```

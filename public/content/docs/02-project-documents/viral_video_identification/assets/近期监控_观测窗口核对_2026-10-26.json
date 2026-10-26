@@ -1,0 +1,508 @@
+{
+  "snapshot_at": "2026-10-26T10:07:09.003527+08:00",
+  "database": "nox_kol_v2",
+  "scope": {
+    "task_created_start": "2026-09-26",
+    "task_created_end_exclusive": "2026-10-19",
+    "selection": "latest 100 undeleted tasks per platform in creation window; no status filter",
+    "daily_observations": [
+      "2026-10-05",
+      "2026-10-26 (exclusive)"
+    ],
+    "raw_observations": [
+      "2026-10-18",
+      "2026-10-26 (exclusive)"
+    ],
+    "not_population_estimate": true,
+    "no_threshold_calibration": true
+  },
+  "platforms": {
+    "youtube": {
+      "sample_tasks": 100,
+      "status_counts": {
+        "2": 100
+      },
+      "video_type_counts": {
+        "None": 95,
+        "1": 5
+      },
+      "flag_video_counts": {
+        "None": 100
+      },
+      "custom_views_nonnull": 0,
+      "task_selection_plan": [
+        {
+          "type": "index",
+          "key": "PRIMARY",
+          "rows": 1511
+        }
+      ],
+      "daily_rows": 798,
+      "tasks_with_daily": 100,
+      "tasks_with_7plus_daily_points": 100,
+      "tasks_with_all_last7_dates": 100,
+      "daily_latest_date": "2026-10-25",
+      "daily_null_views": 0,
+      "daily_zero_views": 9,
+      "daily_midnight_timestamp": 0,
+      "consecutive_calendar_day_pairs": 698,
+      "consecutive_pairs_with_views": 698,
+      "negative_daily_pairs": 0,
+      "zero_daily_pairs": 42,
+      "daily_pair_duration_hours": {
+        "min": 23.991,
+        "p10": 23.997,
+        "median": 24.01,
+        "p90": 24.192,
+        "max": 24.2
+      },
+      "daily_pair_duration_bins": {
+        "22-26h": 698
+      },
+      "raw_rows": 8204,
+      "raw_limit_hit": false,
+      "raw_tasks": 100,
+      "raw_interval_hours": {
+        "min": 1.582,
+        "p10": 1.929,
+        "median": 1.999,
+        "p90": 2.152,
+        "max": 6.442
+      },
+      "raw_rows_per_task": {
+        "min": 74,
+        "p10": 76,
+        "median": 83.0,
+        "p90": 87,
+        "max": 87
+      },
+      "raw_timestamp_midnight": 0,
+      "tasks_with_native_id_field": 100,
+      "distinct_native_id_fields": 100,
+      "duplicate_native_id_groups": 0,
+      "native_id_semantics": "utm_content is parsed videoId in current source; not independently platform-verified",
+      "known_nonvideo_tasks_excluded_from_window_replay": 0,
+      "excluded_for_missing_or_duplicate_identity": 0,
+      "window_identity_policy": "one canonical task per platform+utm_content; most raw rows then smallest task_id; no cross-task stitching",
+      "shape_not_confirmed_tasks": 95,
+      "window_replay": {
+        "24h": {
+          "candidate_endpoints": 700,
+          "nearest_endpoint_deviation_hours": {
+            "min": 0.0,
+            "p10": 0.003,
+            "median": 0.011,
+            "p90": 0.192,
+            "max": 1.98
+          },
+          "usable_by_tolerance_hours": {
+            "2": 700,
+            "4": 700,
+            "8": 700
+          },
+          "not_a_qualification_rate": true
+        },
+        "48h": {
+          "candidate_endpoints": 600,
+          "nearest_endpoint_deviation_hours": {
+            "min": 0.002,
+            "p10": 0.003,
+            "median": 0.019,
+            "p90": 0.204,
+            "max": 1.98
+          },
+          "usable_by_tolerance_hours": {
+            "2": 600,
+            "4": 600,
+            "8": 600
+          },
+          "not_a_qualification_rate": true
+        },
+        "72h": {
+          "candidate_endpoints": 500,
+          "nearest_endpoint_deviation_hours": {
+            "min": 0.005,
+            "p10": 0.006,
+            "median": 0.022,
+            "p90": 0.212,
+            "max": 1.984
+          },
+          "usable_by_tolerance_hours": {
+            "2": 500,
+            "4": 500,
+            "8": 500
+          },
+          "not_a_qualification_rate": true
+        }
+      },
+      "daily_raw_consistency": {
+        "daily_rows": 798,
+        "no_exact_raw_row": "0",
+        "views_mismatch": "0"
+      },
+      "sample_distinct_source_url_keys": 100,
+      "url_key_is_not_verified_native_id": true
+    },
+    "instagram": {
+      "sample_tasks": 100,
+      "status_counts": {
+        "2": 99,
+        "5": 1
+      },
+      "video_type_counts": {
+        "None": 100
+      },
+      "flag_video_counts": {
+        "1": 92,
+        "0": 8
+      },
+      "custom_views_nonnull": 0,
+      "task_selection_plan": [
+        {
+          "type": "index",
+          "key": "PRIMARY",
+          "rows": 1511
+        }
+      ],
+      "daily_rows": 771,
+      "tasks_with_daily": 99,
+      "tasks_with_7plus_daily_points": 98,
+      "tasks_with_all_last7_dates": 97,
+      "daily_latest_date": "2026-10-25",
+      "daily_null_views": 59,
+      "daily_zero_views": 0,
+      "daily_midnight_timestamp": 0,
+      "consecutive_calendar_day_pairs": 671,
+      "consecutive_pairs_with_views": 620,
+      "negative_daily_pairs": 0,
+      "zero_daily_pairs": 71,
+      "daily_pair_duration_hours": {
+        "min": 3.025,
+        "p10": 13.947,
+        "median": 23.21,
+        "p90": 34.051,
+        "max": 34.062
+      },
+      "daily_pair_duration_bins": {
+        "<20h": 212,
+        ">28h": 101,
+        "22-26h": 356,
+        "20-22h": 1,
+        "26-28h": 1
+      },
+      "raw_rows": 771,
+      "raw_limit_hit": false,
+      "raw_tasks": 99,
+      "raw_interval_hours": {
+        "min": 3.025,
+        "p10": 13.947,
+        "median": 23.21,
+        "p90": 34.051,
+        "max": 38.374
+      },
+      "raw_rows_per_task": {
+        "min": 4,
+        "p10": 7,
+        "median": 8,
+        "p90": 8,
+        "max": 8
+      },
+      "raw_timestamp_midnight": 0,
+      "tasks_with_native_id_field": 100,
+      "distinct_native_id_fields": 100,
+      "duplicate_native_id_groups": 0,
+      "native_id_semantics": "utm_content is parsed videoId in current source; not independently platform-verified",
+      "known_nonvideo_tasks_excluded_from_window_replay": 8,
+      "excluded_for_missing_or_duplicate_identity": 0,
+      "window_identity_policy": "one canonical task per platform+utm_content; most raw rows then smallest task_id; no cross-task stitching",
+      "shape_not_confirmed_tasks": 0,
+      "window_replay": {
+        "24h": {
+          "candidate_endpoints": 632,
+          "nearest_endpoint_deviation_hours": {
+            "min": 0.045,
+            "p10": 0.077,
+            "median": 1.373,
+            "p90": 12.409,
+            "max": 20.975
+          },
+          "usable_by_tolerance_hours": {
+            "2": 324,
+            "4": 329,
+            "8": 361
+          },
+          "not_a_qualification_rate": true
+        },
+        "48h": {
+          "candidate_endpoints": 541,
+          "nearest_endpoint_deviation_hours": {
+            "min": 0.147,
+            "p10": 0.349,
+            "median": 3.024,
+            "p90": 16.997,
+            "max": 31.031
+          },
+          "usable_by_tolerance_hours": {
+            "2": 263,
+            "4": 294,
+            "8": 300
+          },
+          "not_a_qualification_rate": true
+        },
+        "72h": {
+          "candidate_endpoints": 450,
+          "nearest_endpoint_deviation_hours": {
+            "min": 0.115,
+            "p10": 0.424,
+            "median": 0.505,
+            "p90": 8.259,
+            "max": 20.982
+          },
+          "usable_by_tolerance_hours": {
+            "2": 237,
+            "4": 240,
+            "8": 343
+          },
+          "not_a_qualification_rate": true
+        }
+      },
+      "daily_raw_consistency": {
+        "daily_rows": 771,
+        "no_exact_raw_row": "0",
+        "views_mismatch": "0"
+      },
+      "sample_distinct_source_url_keys": 100,
+      "url_key_is_not_verified_native_id": true
+    },
+    "tiktok": {
+      "sample_tasks": 100,
+      "status_counts": {
+        "2": 100
+      },
+      "video_type_counts": {
+        "1": 97,
+        "2": 3
+      },
+      "flag_video_counts": {
+        "1": 97,
+        "0": 3
+      },
+      "custom_views_nonnull": 0,
+      "task_selection_plan": [
+        {
+          "type": "index",
+          "key": "PRIMARY",
+          "rows": 1511
+        }
+      ],
+      "daily_rows": 800,
+      "tasks_with_daily": 100,
+      "tasks_with_7plus_daily_points": 100,
+      "tasks_with_all_last7_dates": 100,
+      "daily_latest_date": "2026-10-25",
+      "daily_null_views": 0,
+      "daily_zero_views": 0,
+      "daily_midnight_timestamp": 0,
+      "consecutive_calendar_day_pairs": 700,
+      "consecutive_pairs_with_views": 700,
+      "negative_daily_pairs": 0,
+      "zero_daily_pairs": 402,
+      "daily_pair_duration_hours": {
+        "min": 23.384,
+        "p10": 23.995,
+        "median": 24.002,
+        "p90": 24.011,
+        "max": 24.701
+      },
+      "daily_pair_duration_bins": {
+        "22-26h": 700
+      },
+      "raw_rows": 8799,
+      "raw_limit_hit": false,
+      "raw_tasks": 100,
+      "raw_interval_hours": {
+        "min": 1.0,
+        "p10": 1.997,
+        "median": 2.0,
+        "p90": 2.005,
+        "max": 3.004
+      },
+      "raw_rows_per_task": {
+        "min": 85,
+        "p10": 87,
+        "median": 88.0,
+        "p90": 88,
+        "max": 91
+      },
+      "raw_timestamp_midnight": 0,
+      "tasks_with_native_id_field": 100,
+      "distinct_native_id_fields": 100,
+      "duplicate_native_id_groups": 0,
+      "native_id_semantics": "utm_content is parsed videoId in current source; not independently platform-verified",
+      "known_nonvideo_tasks_excluded_from_window_replay": 3,
+      "excluded_for_missing_or_duplicate_identity": 0,
+      "window_identity_policy": "one canonical task per platform+utm_content; most raw rows then smallest task_id; no cross-task stitching",
+      "shape_not_confirmed_tasks": 0,
+      "window_replay": {
+        "24h": {
+          "candidate_endpoints": 679,
+          "nearest_endpoint_deviation_hours": {
+            "min": 0.0,
+            "p10": 0.001,
+            "median": 0.005,
+            "p90": 0.011,
+            "max": 0.701
+          },
+          "usable_by_tolerance_hours": {
+            "2": 679,
+            "4": 679,
+            "8": 679
+          },
+          "not_a_qualification_rate": true
+        },
+        "48h": {
+          "candidate_endpoints": 582,
+          "nearest_endpoint_deviation_hours": {
+            "min": 0.0,
+            "p10": 0.003,
+            "median": 0.01,
+            "p90": 0.018,
+            "max": 0.703
+          },
+          "usable_by_tolerance_hours": {
+            "2": 582,
+            "4": 582,
+            "8": 582
+          },
+          "not_a_qualification_rate": true
+        },
+        "72h": {
+          "candidate_endpoints": 485,
+          "nearest_endpoint_deviation_hours": {
+            "min": 0.003,
+            "p10": 0.004,
+            "median": 0.015,
+            "p90": 0.021,
+            "max": 0.706
+          },
+          "usable_by_tolerance_hours": {
+            "2": 485,
+            "4": 485,
+            "8": 485
+          },
+          "not_a_qualification_rate": true
+        }
+      },
+      "daily_raw_consistency": {
+        "daily_rows": 800,
+        "no_exact_raw_row": "0",
+        "views_mismatch": "0"
+      },
+      "sample_distinct_source_url_keys": 100,
+      "url_key_is_not_verified_native_id": true
+    }
+  },
+  "sql": [
+    "SELECT id,utm_content,platform_id,channel_id,video_url,video_origin_url,video_type,flag_video,status,data_source,custom_views,video_publish_time,create_time FROM video_monitor_task WHERE platform_id=%s AND flag_delete=0 AND create_time >= %s AND create_time < %s ORDER BY id DESC LIMIT 100",
+    "daily: SELECT task_id,monitor_date,monitor_time,video_total_views FROM video_monitor_changes_daily_mv WHERE task_id IN(sample) AND monitor_date >= start AND monitor_date < end ORDER BY task_id,monitor_date",
+    "raw: SELECT task_id,monitor_date,monitor_time,video_total_views FROM video_monitor_changes_part WHERE task_id IN(sample) AND monitor_time >= start_ms AND monitor_time < end_ms ORDER BY task_id,monitor_time LIMIT 150000"
+  ],
+  "readonly": {
+    "session_transaction_read_only": 1,
+    "global_read_only": 0
+  },
+  "task_indexes": [
+    {
+      "key": "PRIMARY",
+      "column": "id"
+    },
+    {
+      "key": "INDEX_MONITOR_TASK_CREATE_TIME",
+      "column": "create_time"
+    },
+    {
+      "key": "INDEX_MONITOR_TASK_PLATFORM_STATUS",
+      "column": "platform_id"
+    },
+    {
+      "key": "INDEX_MONITOR_TASK_PLATFORM_STATUS",
+      "column": "status"
+    },
+    {
+      "key": "video_monitor_task_monitor_duration_index",
+      "column": "monitor_duration"
+    },
+    {
+      "key": "IDX_RESPONSIBLE",
+      "column": "responsible_uid"
+    },
+    {
+      "key": "IDX_CAMPAIGN",
+      "column": "campaign_id"
+    },
+    {
+      "key": "IDX_NICK_NAME_CREATE_TIME",
+      "column": "nick_name"
+    },
+    {
+      "key": "IDX_NICK_NAME_CREATE_TIME",
+      "column": "create_time"
+    },
+    {
+      "key": "idx_vmt_project_channel_active_time",
+      "column": "project_id"
+    },
+    {
+      "key": "idx_vmt_project_channel_active_time",
+      "column": "channel_id"
+    }
+  ],
+  "daily_indexes": [
+    {
+      "key": "PRIMARY",
+      "column": "task_id"
+    },
+    {
+      "key": "PRIMARY",
+      "column": "monitor_date"
+    },
+    {
+      "key": "idx_monitor_date",
+      "column": "monitor_date"
+    }
+  ],
+  "method": {
+    "window_replay": "Each last-seven-calendar-day observed endpoint t1 is paired with the same task raw point closest to t1-W. Both points must exist within the bounded raw read. Report temporal deviation and nonnegative/nonmissing cumulative difference; no interpolation, no extrapolation, no forward fill. No threshold or label is evaluated.",
+    "windows_hours": [
+      24,
+      48,
+      72
+    ],
+    "diagnostic_tolerances_hours": [
+      2,
+      4,
+      8
+    ],
+    "identity": "Within each platform, one task per nonempty utm_content; choose most raw rows then smallest task id. Exclude flag_video=0. This is observation eligibility, not confirmed content-shape eligibility.",
+    "freshness_limit": "Endpoint replay uses historical daily endpoints. It does not test availability at one common current cutoff, ingestion latency, source metric as-of timestamp, pipeline provenance or service SLA.",
+    "sampling_limit": "Convenience sample of recently created tasks old enough to have history; not random, not representative of public videos, new videos, stopped tasks or all monitoring projects.",
+    "query_parameters": {
+      "platform_ids": [
+        1,
+        6,
+        10
+      ],
+      "task_created_ms_start": 1790352000000,
+      "task_created_ms_end_exclusive": 1792339200000,
+      "daily_start": "2026-10-05",
+      "daily_end_exclusive": "2026-10-26",
+      "raw_start": "2026-10-18",
+      "raw_end_exclusive": "2026-10-26"
+    },
+    "readonly": "SET SESSION TRANSACTION READ ONLY; verified session_transaction_read_only=1; rolled back on close"
+  },
+  "source_revisions": {
+    "KOLServer": "master@706dc8ea0e",
+    "kol_server_v2": "master@234e9dad"
+  }
+}

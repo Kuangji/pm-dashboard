@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-10-13T03:37:54.907Z",
+  "updatedAt": "2026-10-26T04:08:21.681Z",
   "navigation": {
     "docs": [
       {
@@ -1918,6 +1918,116 @@
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "viral_video_identification",
+            "path": "02-project-documents/viral_video_identification",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "02-project-documents/viral_video_identification/README.md",
+                "slug": "02-project-documents/viral_video_identification/README.md",
+                "title": "爆款视频识别 | README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "保留结论汇总.md",
+                "path": "02-project-documents/viral_video_identification/保留结论汇总.md",
+                "slug": "02-project-documents/viral_video_identification/保留结论汇总.md",
+                "title": "爆款视频识别：保留结论与交付限制 | 保留结论汇总.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "其余功能模块修改_SPEC.md",
+                "path": "02-project-documents/viral_video_identification/其余功能模块修改_SPEC.md",
+                "slug": "02-project-documents/viral_video_identification/其余功能模块修改_SPEC.md",
+                "title": "其余功能模块修改 SPEC | 其余功能模块修改_SPEC.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "榜单页_SPEC.md",
+                "path": "02-project-documents/viral_video_identification/榜单页_SPEC.md",
+                "slug": "02-project-documents/viral_video_identification/榜单页_SPEC.md",
+                "title": "新增爆款视频榜单 SPEC | 榜单页_SPEC.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "计算规则_SPEC.md",
+                "path": "02-project-documents/viral_video_identification/计算规则_SPEC.md",
+                "slug": "02-project-documents/viral_video_identification/计算规则_SPEC.md",
+                "title": "爆款视频识别：计算规则 SPEC | 计算规则_SPEC.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "directory",
+                "name": "assets",
+                "path": "02-project-documents/viral_video_identification/assets",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "识别依据_展开详情.png",
+                    "path": "02-project-documents/viral_video_identification/assets/识别依据_展开详情.png",
+                    "slug": "02-project-documents/viral_video_identification/assets/识别依据_展开详情.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "识别依据_数据不足.png",
+                    "path": "02-project-documents/viral_video_identification/assets/识别依据_数据不足.png",
+                    "slug": "02-project-documents/viral_video_identification/assets/识别依据_数据不足.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "识别依据_来源视角优先.png",
+                    "path": "02-project-documents/viral_video_identification/assets/识别依据_来源视角优先.png",
+                    "slug": "02-project-documents/viral_video_identification/assets/识别依据_来源视角优先.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "识别依据_概览.png",
+                    "path": "02-project-documents/viral_video_identification/assets/识别依据_概览.png",
+                    "slug": "02-project-documents/viral_video_identification/assets/识别依据_概览.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "近期监控_观测窗口核对_2026-10-26.json",
+                    "path": "02-project-documents/viral_video_identification/assets/近期监控_观测窗口核对_2026-10-26.json",
+                    "slug": "02-project-documents/viral_video_identification/assets/近期监控_观测窗口核对_2026-10-26.json",
+                    "fileType": "json",
+                    "language": "json",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
               }
             ]
           },
@@ -30476,6 +30586,19 @@
       }
     ],
     "demos": [
+      {
+        "id": "account-permission-review",
+        "title": "账号体系 · 功能审阅 Demo",
+        "description": "一期后统一版本的独立功能示意，支持身份与业务组切换、组织管理、项目协作、配额资金、移交和使用情况看板，附规则及待确认清单。",
+        "path": "demos/account-permission-review/index.html",
+        "thumbnail": "/demos/account-permission-review/preview.png",
+        "tags": [
+          "账号权限",
+          "业务分组",
+          "协作",
+          "Input审阅"
+        ]
+      },
       {
         "id": "button-component",
         "title": "Button 组件演示",

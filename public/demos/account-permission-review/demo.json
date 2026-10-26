@@ -1,0 +1,6 @@
+{
+  "title": "账号体系 · 功能审阅 Demo",
+  "description": "一期后统一版本的独立功能示意，支持身份与业务组切换、组织管理、项目协作、配额资金、移交和使用情况看板，附规则及待确认清单。",
+  "thumbnail": "/demos/account-permission-review/preview.png",
+  "tags": ["账号权限", "业务分组", "协作", "Input审阅"]
+}
