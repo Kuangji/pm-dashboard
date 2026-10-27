@@ -17,18 +17,18 @@
 ```
 ├── 01-getting-started/  # 快速开始
 ├── 02-project-documents/  # 项目文档
-│   ├── account_permission_collaboration/
-│   ├── brand_reputation_radar_752/
+│   ├── account_permission_collaboration/  # 账号权限协作
+│   ├── brand_reputation_radar_752/  # 品牌口碑雷达
 │   ├── channel_search_agent_upgrade/  # 频道搜索Agent升级
 │   ├── monitor_760/  # Monitor 监控功能
 │   ├── monitor_761/  # 监控平台文档
-│   ├── monitor_762/
-│   ├── monitor_763/
+│   ├── monitor_762/  # 监控模块方案
+│   ├── monitor_763/  # 监控模块迭代
 │   ├── other_social_search_741/  # 社交搜索项目文档
 │   ├── search_experience_6310/  # 搜索体验需求6310
 │   ├── search_experience_639/  # 搜索体验需求639
 │   ├── search_experience_mvp_upgrade/  # 搜索体验MVP升级
-│   ├── viral_video_identification/
+│   ├── viral_video_identification/  # 爆款视频识别
 │   ├── 支付单暂存和预约发送/  # 支付单暂存与预约发送
 │   └── 消消乐_0423/  # 消消乐产品文档
 └── 03-research/  # 研究报告
@@ -40,8 +40,8 @@
     ├── noxinfluencer_全站功能地图/  # 全站功能地图
     ├── youtube_channel_nondefault_sort_threshold_audit/  # 频道排序阈值调研
     ├── youtube_to_notebooklm_teardown/  # 视频笔记产品拆解
-    ├── 2026-06-30-influencer-marketing-ai-agent-opportunities-2026/
-    └── 2026-07-07-q3-video-risk-roi-opportunity-deep-dive/
+    ├── 2026-06-30-influencer-marketing-ai-agent-opportunities-2026/  # 网红营销AI机遇研究
+    └── 2026-07-07-q3-video-risk-roi-opportunity-deep-dive/  # Q3视频风险与ROI深挖
 ```
 <!-- CONTENT-TREE-END -->
 

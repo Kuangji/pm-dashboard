@@ -1,0 +1,1163 @@
+{
+  "captured_at": "2026-10-26T18:59:31.817699+08:00",
+  "method": "public HTTPS requests; parsed returned head without JavaScript; no browser login state or cookies",
+  "rows": [
+    {
+      "case": "yt_global_subs",
+      "requested_url": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-all-all-youtuber-sorted-by-subs-weekly",
+      "surface": "public HTTP HTML, no cookies, no JavaScript execution",
+      "status": 200,
+      "final_url": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-all-all-youtuber-sorted-by-subs-weekly",
+      "headers": {
+        "Date": "Mon, 26 Oct 2026 10:59:30 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "title": "Top 100 YouTube网红排行榜 - NoxInfluencer",
+      "h1": "Top 100 YouTube网红排行榜",
+      "meta": [
+        {
+          "key": "description",
+          "content": "每天更新最热门TOP 100 YouTube网红排行榜。点击查看最受欢迎的网红频道分析和数据以及YouTube收益。"
+        },
+        {
+          "key": "og:type",
+          "content": "website"
+        },
+        {
+          "key": "og:title",
+          "content": "Top 100 YouTube网红排行榜 - NoxInfluencer "
+        },
+        {
+          "key": "og:description",
+          "content": "每天更新最热门TOP 100 YouTube网红排行榜。点击查看最受欢迎的网红频道分析和数据以及YouTube收益。"
+        },
+        {
+          "key": "og:url",
+          "content": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-all-all-youtuber-sorted-by-subs-weekly"
+        },
+        {
+          "key": "og:image",
+          "content": "https://res-static.noxinfluencer.com/kol20/2026/10/public/img/logo-mini.482fd04ea9c7799ddcabdcab6df6ecfd.svg"
+        },
+        {
+          "key": "twitter:title",
+          "content": "Top 100 YouTube网红排行榜 - NoxInfluencer "
+        },
+        {
+          "key": "twitter:image",
+          "content": "https://res-static.noxinfluencer.com/kol20/2026/10/public/img/logo-mini.482fd04ea9c7799ddcabdcab6df6ecfd.svg"
+        }
+      ],
+      "links": [
+        {
+          "rel": "canonical",
+          "href": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-all-all-youtuber-sorted-by-subs-weekly"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://www.noxinfluencer.com/youtube-channel-rank/top-100-all-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "en"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-all-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "zh-Hans"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://es.noxinfluencer.com/youtube-channel-rank/top-100-all-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "es"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://vn.noxinfluencer.com/youtube-channel-rank/top-100-all-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "vi"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://th.noxinfluencer.com/youtube-channel-rank/top-100-all-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "th"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://pt.noxinfluencer.com/youtube-channel-rank/top-100-all-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "pt"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://id.noxinfluencer.com/youtube-channel-rank/top-100-all-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "id"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://kr.noxinfluencer.com/youtube-channel-rank/top-100-all-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "ko"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://jp.noxinfluencer.com/youtube-channel-rank/top-100-all-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "ja"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://tw.noxinfluencer.com/youtube-channel-rank/top-100-all-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "zh-Hant"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://www.noxinfluencer.com/youtube-channel-rank/top-100-all-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "x-default"
+        }
+      ],
+      "bytes_read": 200996
+    },
+    {
+      "case": "yt_us_subs",
+      "requested_url": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+      "surface": "public HTTP HTML, no cookies, no JavaScript execution",
+      "status": 200,
+      "final_url": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+      "headers": {
+        "Date": "Mon, 26 Oct 2026 10:59:30 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "title": "美国Top 100 YouTube网红排行榜 - NoxInfluencer",
+      "h1": "美国Top 100 YouTube网红排行榜",
+      "meta": [
+        {
+          "key": "description",
+          "content": "每天更新美国最热门TOP 100 YouTube网红排行榜。点击查看最受欢迎的网红频道分析和数据以及YouTube收益。"
+        },
+        {
+          "key": "og:type",
+          "content": "website"
+        },
+        {
+          "key": "og:title",
+          "content": "美国Top 100 YouTube网红排行榜 - NoxInfluencer "
+        },
+        {
+          "key": "og:description",
+          "content": "每天更新美国最热门TOP 100 YouTube网红排行榜。点击查看最受欢迎的网红频道分析和数据以及YouTube收益。"
+        },
+        {
+          "key": "og:url",
+          "content": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly"
+        },
+        {
+          "key": "og:image",
+          "content": "https://res-static.noxinfluencer.com/kol20/2026/10/public/img/logo-mini.482fd04ea9c7799ddcabdcab6df6ecfd.svg"
+        },
+        {
+          "key": "twitter:title",
+          "content": "美国Top 100 YouTube网红排行榜 - NoxInfluencer "
+        },
+        {
+          "key": "twitter:image",
+          "content": "https://res-static.noxinfluencer.com/kol20/2026/10/public/img/logo-mini.482fd04ea9c7799ddcabdcab6df6ecfd.svg"
+        }
+      ],
+      "links": [
+        {
+          "rel": "canonical",
+          "href": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://www.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "en"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "zh-Hans"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://es.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "es"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://vn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "vi"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://th.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "th"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://pt.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "pt"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://id.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "id"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://kr.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "ko"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://jp.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "ja"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://tw.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "zh-Hant"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://www.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "x-default"
+        }
+      ],
+      "bytes_read": 201661
+    },
+    {
+      "case": "yt_jp_subs",
+      "requested_url": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-jp-all-youtuber-sorted-by-subs-weekly",
+      "surface": "public HTTP HTML, no cookies, no JavaScript execution",
+      "status": 200,
+      "final_url": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-jp-all-youtuber-sorted-by-subs-weekly",
+      "headers": {
+        "Date": "Mon, 26 Oct 2026 10:59:30 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "title": "日本Top 100 YouTube网红排行榜 - NoxInfluencer",
+      "h1": "日本Top 100 YouTube网红排行榜",
+      "meta": [
+        {
+          "key": "description",
+          "content": "每天更新日本最热门TOP 100 YouTube网红排行榜。点击查看最受欢迎的网红频道分析和数据以及YouTube收益。"
+        },
+        {
+          "key": "og:type",
+          "content": "website"
+        },
+        {
+          "key": "og:title",
+          "content": "日本Top 100 YouTube网红排行榜 - NoxInfluencer "
+        },
+        {
+          "key": "og:description",
+          "content": "每天更新日本最热门TOP 100 YouTube网红排行榜。点击查看最受欢迎的网红频道分析和数据以及YouTube收益。"
+        },
+        {
+          "key": "og:url",
+          "content": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-jp-all-youtuber-sorted-by-subs-weekly"
+        },
+        {
+          "key": "og:image",
+          "content": "https://res-static.noxinfluencer.com/kol20/2026/10/public/img/logo-mini.482fd04ea9c7799ddcabdcab6df6ecfd.svg"
+        },
+        {
+          "key": "twitter:title",
+          "content": "日本Top 100 YouTube网红排行榜 - NoxInfluencer "
+        },
+        {
+          "key": "twitter:image",
+          "content": "https://res-static.noxinfluencer.com/kol20/2026/10/public/img/logo-mini.482fd04ea9c7799ddcabdcab6df6ecfd.svg"
+        }
+      ],
+      "links": [
+        {
+          "rel": "canonical",
+          "href": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-jp-all-youtuber-sorted-by-subs-weekly"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://www.noxinfluencer.com/youtube-channel-rank/top-100-jp-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "en"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-jp-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "zh-Hans"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://es.noxinfluencer.com/youtube-channel-rank/top-100-jp-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "es"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://vn.noxinfluencer.com/youtube-channel-rank/top-100-jp-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "vi"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://th.noxinfluencer.com/youtube-channel-rank/top-100-jp-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "th"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://pt.noxinfluencer.com/youtube-channel-rank/top-100-jp-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "pt"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://id.noxinfluencer.com/youtube-channel-rank/top-100-jp-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "id"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://kr.noxinfluencer.com/youtube-channel-rank/top-100-jp-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "ko"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://jp.noxinfluencer.com/youtube-channel-rank/top-100-jp-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "ja"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://tw.noxinfluencer.com/youtube-channel-rank/top-100-jp-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "zh-Hant"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://www.noxinfluencer.com/youtube-channel-rank/top-100-jp-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "x-default"
+        }
+      ],
+      "bytes_read": 200045
+    },
+    {
+      "case": "yt_us_growth",
+      "requested_url": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-growth-weekly",
+      "surface": "public HTTP HTML, no cookies, no JavaScript execution",
+      "status": 200,
+      "final_url": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-growth-weekly",
+      "headers": {
+        "Date": "Mon, 26 Oct 2026 10:59:30 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "title": "涨粉最快的美国Top 100 YouTube网红排行榜 - NoxInfluencer",
+      "h1": "涨粉最快的美国Top 100 YouTube网红排行榜",
+      "meta": [
+        {
+          "key": "description",
+          "content": "每天更新涨粉最快的美国最热门TOP 100 YouTube网红排行榜。点击查看最受欢迎的网红频道分析和数据以及YouTube收益。"
+        },
+        {
+          "key": "og:type",
+          "content": "website"
+        },
+        {
+          "key": "og:title",
+          "content": "涨粉最快的美国Top 100 YouTube网红排行榜 - NoxInfluencer "
+        },
+        {
+          "key": "og:description",
+          "content": "每天更新涨粉最快的美国最热门TOP 100 YouTube网红排行榜。点击查看最受欢迎的网红频道分析和数据以及YouTube收益。"
+        },
+        {
+          "key": "og:url",
+          "content": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-growth-weekly"
+        },
+        {
+          "key": "og:image",
+          "content": "https://res-static.noxinfluencer.com/kol20/2026/10/public/img/logo-mini.482fd04ea9c7799ddcabdcab6df6ecfd.svg"
+        },
+        {
+          "key": "twitter:title",
+          "content": "涨粉最快的美国Top 100 YouTube网红排行榜 - NoxInfluencer "
+        },
+        {
+          "key": "twitter:image",
+          "content": "https://res-static.noxinfluencer.com/kol20/2026/10/public/img/logo-mini.482fd04ea9c7799ddcabdcab6df6ecfd.svg"
+        }
+      ],
+      "links": [
+        {
+          "rel": "canonical",
+          "href": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-growth-weekly"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://www.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-growth-weekly",
+          "hreflang": "en"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-growth-weekly",
+          "hreflang": "zh-Hans"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://es.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-growth-weekly",
+          "hreflang": "es"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://vn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-growth-weekly",
+          "hreflang": "vi"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://th.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-growth-weekly",
+          "hreflang": "th"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://pt.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-growth-weekly",
+          "hreflang": "pt"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://id.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-growth-weekly",
+          "hreflang": "id"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://kr.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-growth-weekly",
+          "hreflang": "ko"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://jp.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-growth-weekly",
+          "hreflang": "ja"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://tw.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-growth-weekly",
+          "hreflang": "zh-Hant"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://www.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-growth-weekly",
+          "hreflang": "x-default"
+        }
+      ],
+      "bytes_read": 202476
+    },
+    {
+      "case": "tt_us_followers",
+      "requested_url": "https://cn.noxinfluencer.com/tiktok-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+      "surface": "public HTTP HTML, no cookies, no JavaScript execution",
+      "status": 200,
+      "final_url": "https://cn.noxinfluencer.com/tiktok-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+      "headers": {
+        "Date": "Mon, 26 Oct 2026 10:59:30 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "title": "美国 Top 100 TikTok网红排行榜 按粉丝数排序 - NoxInfluencer",
+      "h1": "美国 Top 100 TikTok网红排行榜",
+      "meta": [
+        {
+          "key": "description",
+          "content": "TikTok抖音网红排行榜，抖音国际版热门网红数据排名 "
+        },
+        {
+          "key": "og:type",
+          "content": "website"
+        },
+        {
+          "key": "og:title",
+          "content": "美国 Top 100 TikTok网红排行榜 按粉丝数排序 - NoxInfluencer"
+        },
+        {
+          "key": "og:description",
+          "content": "TikTok抖音网红排行榜，抖音国际版热门网红数据排名 "
+        },
+        {
+          "key": "og:url",
+          "content": "https://cn.noxinfluencer.com/tiktok-channel-rank/top-100-us-all-sorted-by-followers-weekly"
+        },
+        {
+          "key": "og:image",
+          "content": "https://res-static.noxinfluencer.com/kol20/2026/10/public/img/logo-mini.482fd04ea9c7799ddcabdcab6df6ecfd.svg"
+        },
+        {
+          "key": "twitter:title",
+          "content": "美国 Top 100 TikTok网红排行榜 按粉丝数排序 - NoxInfluencer"
+        },
+        {
+          "key": "twitter:image",
+          "content": "https://res-static.noxinfluencer.com/kol20/2026/10/public/img/logo-mini.482fd04ea9c7799ddcabdcab6df6ecfd.svg"
+        }
+      ],
+      "links": [
+        {
+          "rel": "canonical",
+          "href": "https://cn.noxinfluencer.com/tiktok-channel-rank/top-100-us-all-sorted-by-followers-weekly"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://www.noxinfluencer.com/tiktok-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "en"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://cn.noxinfluencer.com/tiktok-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "zh-Hans"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://es.noxinfluencer.com/tiktok-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "es"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://vn.noxinfluencer.com/tiktok-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "vi"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://th.noxinfluencer.com/tiktok-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "th"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://pt.noxinfluencer.com/tiktok-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "pt"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://id.noxinfluencer.com/tiktok-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "id"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://kr.noxinfluencer.com/tiktok-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "ko"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://jp.noxinfluencer.com/tiktok-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "ja"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://tw.noxinfluencer.com/tiktok-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "zh-Hant"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://www.noxinfluencer.com/tiktok-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "x-default"
+        }
+      ],
+      "bytes_read": 198333
+    },
+    {
+      "case": "ig_us_followers",
+      "requested_url": "https://cn.noxinfluencer.com/instagram-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+      "surface": "public HTTP HTML, no cookies, no JavaScript execution",
+      "status": 200,
+      "final_url": "https://cn.noxinfluencer.com/instagram-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+      "headers": {
+        "Date": "Mon, 26 Oct 2026 10:59:30 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "title": "Top 100 Instagram网红排行榜 按粉丝数排序 - NoxInfluencer",
+      "h1": "Top 100 Instagram 按粉丝数排序",
+      "meta": [
+        {
+          "key": "description",
+          "content": "每天更新最热门Top 100 按粉丝数排序 Instagram网红排行榜。点击查看最受欢迎的网红频道分析和数据以及Instagram收益"
+        },
+        {
+          "key": "og:type",
+          "content": "website"
+        },
+        {
+          "key": "og:title",
+          "content": "Top 100  Instagram网红排行榜 按粉丝数排序 - NoxInfluencer"
+        },
+        {
+          "key": "og:description",
+          "content": "每天更新最热门Top 100 按粉丝数排序 Instagram网红排行榜。点击查看最受欢迎的网红频道分析和数据以及Instagram收益"
+        },
+        {
+          "key": "og:url",
+          "content": "https://cn.noxinfluencer.com/instagram-channel-rank/top-100-us-all-sorted-by-followers-weekly"
+        },
+        {
+          "key": "og:image",
+          "content": "https://res-static.noxinfluencer.com/kol20/2026/10/public/img/logo-mini.482fd04ea9c7799ddcabdcab6df6ecfd.svg"
+        },
+        {
+          "key": "twitter:title",
+          "content": "Top 100  Instagram网红排行榜 按粉丝数排序 - NoxInfluencer"
+        },
+        {
+          "key": "twitter:image",
+          "content": "https://res-static.noxinfluencer.com/kol20/2026/10/public/img/logo-mini.482fd04ea9c7799ddcabdcab6df6ecfd.svg"
+        }
+      ],
+      "links": [
+        {
+          "rel": "canonical",
+          "href": "https://cn.noxinfluencer.com/instagram-channel-rank/top-100-us-all-sorted-by-followers-weekly"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://www.noxinfluencer.com/instagram-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "en"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://cn.noxinfluencer.com/instagram-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "zh-Hans"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://es.noxinfluencer.com/instagram-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "es"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://vn.noxinfluencer.com/instagram-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "vi"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://th.noxinfluencer.com/instagram-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "th"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://pt.noxinfluencer.com/instagram-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "pt"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://id.noxinfluencer.com/instagram-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "id"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://kr.noxinfluencer.com/instagram-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "ko"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://jp.noxinfluencer.com/instagram-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "ja"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://tw.noxinfluencer.com/instagram-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "zh-Hant"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://www.noxinfluencer.com/instagram-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+          "hreflang": "x-default"
+        }
+      ],
+      "bytes_read": 219841
+    },
+    {
+      "case": "yt_hot_global",
+      "requested_url": "https://cn.noxinfluencer.com/youtube-video-rank",
+      "surface": "public HTTP HTML, no cookies, no JavaScript execution",
+      "status": 200,
+      "final_url": "https://cn.noxinfluencer.com/youtube-video-rank",
+      "headers": {
+        "Date": "Mon, 26 Oct 2026 10:59:30 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "title": "每日最热门的YouTube视频 - NoxInfluencer",
+      "h1": "每日最热门的YouTube视频",
+      "meta": [
+        {
+          "key": "keywords",
+          "content": "NoxInfluencer,YouTube Influencer,最受欢迎的YouTube视频,热门YouTube视频,观看量最多的"
+        },
+        {
+          "key": "description",
+          "content": "YouTube视频视频排行榜为您提供每日最新鲜有趣热门YouTube网红视频，且提供YouTube网红视频观看！"
+        },
+        {
+          "key": "twitter:image",
+          "content": "https://res06.bignox.com/noxinfluencer/youtube/avatar/influencer_launcher_app.png"
+        },
+        {
+          "key": "twitter:title",
+          "content": " 每日最热门的YouTube视频 - NoxInfluencer "
+        },
+        {
+          "key": "og:type",
+          "content": "website"
+        },
+        {
+          "key": "og:image",
+          "content": "https://res06.bignox.com/noxinfluencer/youtube/avatar/influencer_launcher_app.png"
+        },
+        {
+          "key": "og:title",
+          "content": "每日最热门的YouTube视频 - NoxInfluencer"
+        },
+        {
+          "key": "og:description",
+          "content": "YouTube视频视频排行榜为您提供每日最新鲜有趣热门YouTube网红视频，且提供YouTube网红视频观看！"
+        },
+        {
+          "key": "og:url",
+          "content": "https://cn.noxinfluencer.com/youtube-video-rank?utm_source=facebook"
+        }
+      ],
+      "links": [
+        {
+          "rel": "canonical",
+          "href": "https://cn.noxinfluencer.com/youtube-video-rank"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://www.noxinfluencer.com/youtube-video-rank",
+          "hreflang": "en"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://cn.noxinfluencer.com/youtube-video-rank",
+          "hreflang": "zh-Hans"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://es.noxinfluencer.com/youtube-video-rank",
+          "hreflang": "es"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://vn.noxinfluencer.com/youtube-video-rank",
+          "hreflang": "vi"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://th.noxinfluencer.com/youtube-video-rank",
+          "hreflang": "th"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://pt.noxinfluencer.com/youtube-video-rank",
+          "hreflang": "pt"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://id.noxinfluencer.com/youtube-video-rank",
+          "hreflang": "id"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://kr.noxinfluencer.com/youtube-video-rank",
+          "hreflang": "ko"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://jp.noxinfluencer.com/youtube-video-rank",
+          "hreflang": "ja"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://tw.noxinfluencer.com/youtube-video-rank",
+          "hreflang": "zh-Hant"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://www.noxinfluencer.com/youtube-video-rank",
+          "hreflang": "x-default"
+        }
+      ],
+      "bytes_read": 86217
+    },
+    {
+      "case": "yt_hot_us_music",
+      "requested_url": "https://cn.noxinfluencer.com/youtube-video-rank/top-us-music-video-day",
+      "surface": "public HTTP HTML, no cookies, no JavaScript execution",
+      "status": 200,
+      "final_url": "https://cn.noxinfluencer.com/youtube-video-rank/top-us-music-video-day",
+      "headers": {
+        "Date": "Mon, 26 Oct 2026 10:59:30 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "title": "美国每日最热门的YouTube音乐类视频 - NoxInfluencer",
+      "h1": "美国每日最热门的YouTube音乐类视频",
+      "meta": [
+        {
+          "key": "keywords",
+          "content": "NoxInfluencer,YouTube Influencer,最受欢迎的YouTube视频,热门YouTube视频,观看量最多的"
+        },
+        {
+          "key": "description",
+          "content": "YouTube视频视频排行榜为您提供美国每日最新鲜有趣热门YouTube网红音乐类视频，且提供YouTube网红视频观看！"
+        },
+        {
+          "key": "twitter:image",
+          "content": "https://res06.bignox.com/noxinfluencer/youtube/avatar/influencer_launcher_app.png"
+        },
+        {
+          "key": "twitter:title",
+          "content": " 美国每日最热门的YouTube音乐类视频 - NoxInfluencer "
+        },
+        {
+          "key": "og:type",
+          "content": "website"
+        },
+        {
+          "key": "og:image",
+          "content": "https://res06.bignox.com/noxinfluencer/youtube/avatar/influencer_launcher_app.png"
+        },
+        {
+          "key": "og:title",
+          "content": "美国每日最热门的YouTube音乐类视频 - NoxInfluencer"
+        },
+        {
+          "key": "og:description",
+          "content": "YouTube视频视频排行榜为您提供美国每日最新鲜有趣热门YouTube网红音乐类视频，且提供YouTube网红视频观看！"
+        },
+        {
+          "key": "og:url",
+          "content": "https://cn.noxinfluencer.com/youtube-video-rank/top-us-music-video-day?utm_source=facebook"
+        }
+      ],
+      "links": [
+        {
+          "rel": "canonical",
+          "href": "https://cn.noxinfluencer.com/youtube-video-rank/top-us-music-video-day"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://www.noxinfluencer.com/youtube-video-rank/top-us-music-video-day",
+          "hreflang": "en"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://cn.noxinfluencer.com/youtube-video-rank/top-us-music-video-day",
+          "hreflang": "zh-Hans"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://es.noxinfluencer.com/youtube-video-rank/top-us-music-video-day",
+          "hreflang": "es"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://vn.noxinfluencer.com/youtube-video-rank/top-us-music-video-day",
+          "hreflang": "vi"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://th.noxinfluencer.com/youtube-video-rank/top-us-music-video-day",
+          "hreflang": "th"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://pt.noxinfluencer.com/youtube-video-rank/top-us-music-video-day",
+          "hreflang": "pt"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://id.noxinfluencer.com/youtube-video-rank/top-us-music-video-day",
+          "hreflang": "id"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://kr.noxinfluencer.com/youtube-video-rank/top-us-music-video-day",
+          "hreflang": "ko"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://jp.noxinfluencer.com/youtube-video-rank/top-us-music-video-day",
+          "hreflang": "ja"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://tw.noxinfluencer.com/youtube-video-rank/top-us-music-video-day",
+          "hreflang": "zh-Hant"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://www.noxinfluencer.com/youtube-video-rank/top-us-music-video-day",
+          "hreflang": "x-default"
+        }
+      ],
+      "bytes_read": 86508
+    },
+    {
+      "case": "yt_us_subs_en",
+      "requested_url": "https://www.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+      "surface": "public HTTP HTML, no cookies, no JavaScript execution",
+      "status": 200,
+      "final_url": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+      "headers": {
+        "Date": "Mon, 26 Oct 2026 10:59:31 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "title": "美国Top 100 YouTube网红排行榜 - NoxInfluencer",
+      "h1": "美国Top 100 YouTube网红排行榜",
+      "meta": [
+        {
+          "key": "description",
+          "content": "每天更新美国最热门TOP 100 YouTube网红排行榜。点击查看最受欢迎的网红频道分析和数据以及YouTube收益。"
+        },
+        {
+          "key": "og:type",
+          "content": "website"
+        },
+        {
+          "key": "og:title",
+          "content": "美国Top 100 YouTube网红排行榜 - NoxInfluencer "
+        },
+        {
+          "key": "og:description",
+          "content": "每天更新美国最热门TOP 100 YouTube网红排行榜。点击查看最受欢迎的网红频道分析和数据以及YouTube收益。"
+        },
+        {
+          "key": "og:url",
+          "content": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly"
+        },
+        {
+          "key": "og:image",
+          "content": "https://res-static.noxinfluencer.com/kol20/2026/10/public/img/logo-mini.482fd04ea9c7799ddcabdcab6df6ecfd.svg"
+        },
+        {
+          "key": "twitter:title",
+          "content": "美国Top 100 YouTube网红排行榜 - NoxInfluencer "
+        },
+        {
+          "key": "twitter:image",
+          "content": "https://res-static.noxinfluencer.com/kol20/2026/10/public/img/logo-mini.482fd04ea9c7799ddcabdcab6df6ecfd.svg"
+        }
+      ],
+      "links": [
+        {
+          "rel": "canonical",
+          "href": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://www.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "en"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "zh-Hans"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://es.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "es"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://vn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "vi"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://th.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "th"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://pt.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "pt"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://id.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "id"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://kr.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "ko"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://jp.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "ja"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://tw.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "zh-Hant"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://www.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "x-default"
+        }
+      ],
+      "bytes_read": 201660
+    }
+  ],
+  "browser_dom_checks": [
+    {
+      "surface": "Playwright MCP browser DOM, public page, no sign-in performed",
+      "url": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+      "title": "美国Top 100 YouTube网红排行榜 - NoxInfluencer",
+      "h1": "美国Top 100 YouTube网红排行榜",
+      "meta": [
+        {
+          "key": "description",
+          "content": "每天更新美国最热门TOP 100 YouTube网红排行榜。点击查看最受欢迎的网红频道分析和数据以及YouTube收益。"
+        },
+        {
+          "key": "og:type",
+          "content": "website"
+        },
+        {
+          "key": "og:title",
+          "content": "美国Top 100 YouTube网红排行榜 - NoxInfluencer "
+        },
+        {
+          "key": "og:description",
+          "content": "每天更新美国最热门TOP 100 YouTube网红排行榜。点击查看最受欢迎的网红频道分析和数据以及YouTube收益。"
+        },
+        {
+          "key": "og:url",
+          "content": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly"
+        },
+        {
+          "key": "og:image",
+          "content": "https://res-static.noxinfluencer.com/kol20/2026/10/public/img/logo-mini.482fd04ea9c7799ddcabdcab6df6ecfd.svg"
+        },
+        {
+          "key": "twitter:title",
+          "content": "美国Top 100 YouTube网红排行榜 - NoxInfluencer "
+        },
+        {
+          "key": "twitter:image",
+          "content": "https://res-static.noxinfluencer.com/kol20/2026/10/public/img/logo-mini.482fd04ea9c7799ddcabdcab6df6ecfd.svg"
+        }
+      ],
+      "links": [
+        {
+          "rel": "canonical",
+          "href": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": ""
+        },
+        {
+          "rel": "alternate",
+          "href": "https://www.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "en"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://cn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "zh-Hans"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://es.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "es"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://vn.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "vi"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://th.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "th"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://pt.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "pt"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://id.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "id"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://kr.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "ko"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://jp.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "ja"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://tw.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "zh-Hant"
+        },
+        {
+          "rel": "alternate",
+          "href": "https://www.noxinfluencer.com/youtube-channel-rank/top-100-us-all-youtuber-sorted-by-subs-weekly",
+          "hreflang": "x-default"
+        }
+      ]
+    },
+    {
+      "surface": "Playwright MCP browser DOM, public page, no sign-in performed",
+      "networkSettled": false,
+      "url": "https://cn.noxinfluencer.com/tiktok-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+      "title": "美国 Top 100 TikTok网红排行榜 按粉丝数排序 - NoxInfluencer",
+      "h1": "美国 Top 100 TikTok网红排行榜",
+      "meta": [
+        {
+          "key": "description",
+          "content": "TikTok抖音网红排行榜，抖音国际版热门网红数据排名 "
+        },
+        {
+          "key": "og:title",
+          "content": "美国 Top 100 TikTok网红排行榜 按粉丝数排序 - NoxInfluencer"
+        },
+        {
+          "key": "og:description",
+          "content": "TikTok抖音网红排行榜，抖音国际版热门网红数据排名 "
+        },
+        {
+          "key": "og:url",
+          "content": "https://cn.noxinfluencer.com/tiktok-channel-rank/top-100-us-all-sorted-by-followers-weekly"
+        },
+        {
+          "key": "twitter:title",
+          "content": "美国 Top 100 TikTok网红排行榜 按粉丝数排序 - NoxInfluencer"
+        }
+      ],
+      "canonical": [
+        "https://cn.noxinfluencer.com/tiktok-channel-rank/top-100-us-all-sorted-by-followers-weekly"
+      ]
+    },
+    {
+      "surface": "Playwright MCP browser DOM, public page, no sign-in performed",
+      "networkSettled": false,
+      "url": "https://cn.noxinfluencer.com/instagram-channel-rank/top-100-us-all-sorted-by-followers-weekly",
+      "title": "Top 100 Instagram网红排行榜 按粉丝数排序 - NoxInfluencer",
+      "h1": "Top 100 Instagram 按粉丝数排序",
+      "meta": [
+        {
+          "key": "description",
+          "content": "每天更新最热门Top 100 按粉丝数排序 Instagram网红排行榜。点击查看最受欢迎的网红频道分析和数据以及Instagram收益"
+        },
+        {
+          "key": "og:title",
+          "content": "Top 100  Instagram网红排行榜 按粉丝数排序 - NoxInfluencer"
+        },
+        {
+          "key": "og:description",
+          "content": "每天更新最热门Top 100 按粉丝数排序 Instagram网红排行榜。点击查看最受欢迎的网红频道分析和数据以及Instagram收益"
+        },
+        {
+          "key": "og:url",
+          "content": "https://cn.noxinfluencer.com/instagram-channel-rank/top-100-us-all-sorted-by-followers-weekly"
+        },
+        {
+          "key": "twitter:title",
+          "content": "Top 100  Instagram网红排行榜 按粉丝数排序 - NoxInfluencer"
+        }
+      ],
+      "canonical": [
+        "https://cn.noxinfluencer.com/instagram-channel-rank/top-100-us-all-sorted-by-followers-weekly"
+      ]
+    }
+  ]
+}
