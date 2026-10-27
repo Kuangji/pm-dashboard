@@ -3,11 +3,15 @@
   "branch": "codex/viral-video-demo",
   "baseCommit": "0c46b320fd356c32c45f53ce89c6a378b3cb01bd",
   "patch": "榜单Demo_评审补丁_2026-10-27.patch",
-  "sha256": "183bfe489d2a0101f263162ef7a0ec49f8b80eb1234b7bbaa6adcb4ff7f426d4",
+  "sha256": "2a9ae90ed69c9cceda8e69f9a0d8fdccd3fe58d69f98e589837966f6642ad07e",
   "files": [
     {
       "path": "components/viralVideoDemo/ViralEvidenceDrawer.vue",
       "sha256": "120cec3e6ffec139e4619fe758ed98b649b344fb5c4e68968689acb3c09379ad"
+    },
+    {
+      "path": "components/viralVideoDemo/ViralIntegrationNotice.vue",
+      "sha256": "7230d0537b621f2e69bbd11587ed6f2becb4dd7640585230a31179a2ba1bbcda"
     },
     {
       "path": "components/viralVideoDemo/ViralStatusTags.vue",
@@ -15,7 +19,7 @@
     },
     {
       "path": "components/viralVideoDemo/ViralTable.vue",
-      "sha256": "6535ee37889eda69009ede0c77af8a50634b354b6dc21877c9ea7a6b2a060861"
+      "sha256": "e2d0d36917f06504723cf11a709030819e632564bd030fbe6497ddedb33208b6"
     },
     {
       "path": "components/viralVideoDemo/data/adapter.js",
@@ -35,7 +39,7 @@
     },
     {
       "path": "components/viralVideoDemo/messages.js",
-      "sha256": "87699d4a8a5d59511593a34017f9d25d6846aa12e16d135f947ccd312a79a9f5"
+      "sha256": "01aa515e8dda41110909b933417e553d657991eada2b6cfcb2a45bb12230d978"
     },
     {
       "path": "components/viralVideoDemo/tableMessages.js",
@@ -43,27 +47,27 @@
     },
     {
       "path": "docs/知识库/全站页面索引.md",
-      "sha256": "04f2ad594c302ca47d60f23bf69c74d903aeb7bcb72849185755353cc98a9561"
+      "sha256": "7b4ff714276a4f3dc416c71abd29b84d49d7f9667a1ac940d73334b4445fbb0d"
     },
     {
       "path": "docs/知识库/功能模块/搜索与洞察/组件/viralVideoDemo/index.md",
-      "sha256": "13ddb9a179375015543418d3d14911262145ab639c71ac9545924f40565c95a3"
+      "sha256": "30957c0e490ce4730a141e97409920b5caa522b17cd5f18b0f8b96ea6b1ff16a"
     },
     {
       "path": "docs/知识库/功能模块/搜索与洞察/页面/viral-video-demo/index.md",
-      "sha256": "04384e3bcba0df06f5e79490adfa30dcaa6d2f1987d12af0ad748628143c9e29"
+      "sha256": "dd1e2f64bc7aa6c99cc2150ea9a96cdfd98c4d322b4867752e44b4ac942541a0"
     },
     {
       "path": "docs/知识库/功能模块/搜索与洞察/页面/youtube-video-rank.md",
-      "sha256": "2666e3dfc3864f11bda3e6588b13cb24e73675ff24fc8a8eafe83a3dae65d6ac"
+      "sha256": "3d7ae8b90945a97bca507562427a83b860db8d5e8af2ede53438a0478ca7c49d"
     },
     {
       "path": "pages/youtube-video-rank.vue",
-      "sha256": "66d041843aafe3440dfb01c2cac6d126c276d8c217e0f95723e0e8b7f34ad5a3"
+      "sha256": "c7405b0687abb5da50781a45b4948c471066d0b39fe0c71546b04169440bf0d7"
     },
     {
       "path": "scripts/viral-evidence-drawer.test.js",
-      "sha256": "a9f75e5bdca829e71f3855efba94a0b9b442cf1a7af66ddc9101ba889b985a4f"
+      "sha256": "7c0be308e6f67c16dff5a799a3c75982eaaeeeae73a4fe4ac0dfa7fde74b8fa9"
     },
     {
       "path": "scripts/viral-video-demo.test.js",
@@ -71,11 +75,11 @@
     },
     {
       "path": "scripts/viral-video-rank-workbench.browser.js",
-      "sha256": "9276ce1851c49e7058a5a4c09adfee9187e4fc12ac26e449e18affe386d584aa"
+      "sha256": "77601734d1ac6287c73448c1485fb1935d15a90ea907468375416791e3d8c88f"
     }
   ],
   "verification": "远端分支提交与本地HEAD一致，工作区干净；补丁由历史基线至已推送评审提交生成，临时目录check/apply及逐文件字节核对通过。直接检出reviewCommit无需应用补丁。未执行全新依赖安装或重新启动服务。",
-  "reviewCommit": "5f3b8e423ab0c877f24bc81aa35137dbefdbb288",
+  "reviewCommit": "f0ae8ca81f713ecced71107c716ef5f7c89eb896",
   "remoteRef": "origin/codex/viral-video-demo",
   "pushedAtDate": "2026-10-27"
 }

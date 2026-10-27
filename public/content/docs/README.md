@@ -9,7 +9,7 @@
 - [入门介绍](/docs/intro/) - 新手上路
 - [NoxInfluencer 全站公共上下文](./noxinfluencer_site_common_context_v1.md) - 进入 Nox 站级认知前先读
 
-- [爆款视频识别交付包](./02-project-documents/viral_video_identification/README.md) - 需求清单、计算规则、榜单及其他模块改造 SPEC
+- [爆款视频识别交付包](./02-project-documents/viral_video_identification/README.md) - 需求清单、计算规则、榜单及其他模块改造 SPEC、数据组交接说明
 
 ## 文档结构
 

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-10-27T06:25:04.248Z",
+  "updatedAt": "2026-10-27T08:07:05.116Z",
   "navigation": {
     "docs": [
       {
@@ -1958,6 +1958,16 @@
               },
               {
                 "type": "file",
+                "name": "数据组交接说明.md",
+                "path": "02-project-documents/viral_video_identification/数据组交接说明.md",
+                "slug": "02-project-documents/viral_video_identification/数据组交接说明.md",
+                "title": "爆款视频识别：数据组交接说明 | 数据组交接说明.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
                 "name": "榜单页_SPEC.md",
                 "path": "02-project-documents/viral_video_identification/榜单页_SPEC.md",
                 "slug": "02-project-documents/viral_video_identification/榜单页_SPEC.md",
@@ -2048,6 +2058,15 @@
                   },
                   {
                     "type": "file",
+                    "name": "榜单_操作菜单.png",
+                    "path": "02-project-documents/viral_video_identification/assets/榜单_操作菜单.png",
+                    "slug": "02-project-documents/viral_video_identification/assets/榜单_操作菜单.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
                     "name": "榜单_源站跳转示意.png",
                     "path": "02-project-documents/viral_video_identification/assets/榜单_源站跳转示意.png",
                     "slug": "02-project-documents/viral_video_identification/assets/榜单_源站跳转示意.png",
@@ -2078,6 +2097,15 @@
                     "name": "榜单_频道国家筛选.png",
                     "path": "02-project-documents/viral_video_identification/assets/榜单_频道国家筛选.png",
                     "slug": "02-project-documents/viral_video_identification/assets/榜单_频道国家筛选.png",
+                    "fileType": "image",
+                    "isText": false,
+                    "isImage": true
+                  },
+                  {
+                    "type": "file",
+                    "name": "榜单_高级筛选.png",
+                    "path": "02-project-documents/viral_video_identification/assets/榜单_高级筛选.png",
+                    "slug": "02-project-documents/viral_video_identification/assets/榜单_高级筛选.png",
                     "fileType": "image",
                     "isText": false,
                     "isImage": true

@@ -312,6 +312,31 @@ index 6448d0a07..615670c11 100644
  }
  .method-content dl {
    margin: 0;
+diff --git a/components/viralVideoDemo/ViralIntegrationNotice.vue b/components/viralVideoDemo/ViralIntegrationNotice.vue
+index 3bcb9a2f3..3726c5068 100644
+--- a/components/viralVideoDemo/ViralIntegrationNotice.vue
++++ b/components/viralVideoDemo/ViralIntegrationNotice.vue
+@@ -1,18 +1,13 @@
+ <template>
+   <div class="viral-integration-notice" role="status">
+-    <span
+-      ><strong>{{ $t('viralDemo.common.simulated') }}</strong> ·
+-      {{ batch.id }}</span
+-    >
++    <strong>{{ $t('viralDemo.common.simulated') }}</strong>
+   </div>
+ </template>
+ <script>
+ import messages from './messages'
+-import { BATCH } from './data/adapter'
+ export default {
+   name: 'ViralIntegrationNotice',
+-  i18n: { messages },
+-  data: () => ({ batch: BATCH })
++  i18n: { messages }
+ }
+ </script>
+ <style lang="scss" scoped>
 diff --git a/components/viralVideoDemo/ViralStatusTags.vue b/components/viralVideoDemo/ViralStatusTags.vue
 index b54571a51..6b133136e 100644
 --- a/components/viralVideoDemo/ViralStatusTags.vue
@@ -327,7 +352,7 @@ index b54571a51..6b133136e 100644
    已识别: 'viralDemo.status.evaluated',
    未达标: 'viralDemo.status.notQualified',
 diff --git a/components/viralVideoDemo/ViralTable.vue b/components/viralVideoDemo/ViralTable.vue
-index 5f44565a3..1c1219f30 100644
+index 5f44565a3..b7ffda58b 100644
 --- a/components/viralVideoDemo/ViralTable.vue
 +++ b/components/viralVideoDemo/ViralTable.vue
 @@ -24,7 +24,7 @@
@@ -427,17 +452,20 @@ index 5f44565a3..1c1219f30 100644
            <el-dropdown
              trigger="click"
              @command="handleAction($event, scope.row)"
-@@ -113,9 +125,6 @@
-               <el-dropdown-item command="keywords">{{
-                 $t('viralDemo.common.openSearch')
-               }}</el-dropdown-item>
+@@ -110,12 +122,6 @@
+               {{ $t('viralTable.more') }}
+             </button>
+             <el-dropdown-menu slot="dropdown">
+-              <el-dropdown-item command="keywords">{{
+-                $t('viralDemo.common.openSearch')
+-              }}</el-dropdown-item>
 -              <el-dropdown-item command="platform">{{
 -                $t('viralTable.openPlatform')
 -              }}</el-dropdown-item>
                <el-dropdown-item command="monitor">{{
                  $t('viralTable.addMonitor')
                }}</el-dropdown-item>
-@@ -149,8 +158,8 @@
+@@ -149,8 +155,8 @@
  import dayjs from 'dayjs'
  import utc from 'dayjs/plugin/utc'
  import { Loading } from 'element-ui'
@@ -447,7 +475,7 @@ index 5f44565a3..1c1219f30 100644
  import youtubeIcon from '@/assets/image/social/youtube.svg'
  import tiktokIcon from '@/assets/image/social/tiktok.svg'
  import instagramIcon from '@/assets/image/social/instagram.svg'
-@@ -159,7 +168,6 @@ dayjs.extend(utc)
+@@ -159,7 +165,6 @@ dayjs.extend(utc)
  
  export default {
    name: 'ViralTable',
@@ -455,7 +483,7 @@ index 5f44565a3..1c1219f30 100644
    directives: { loading: Loading.directive },
    i18n: { messages },
    props: {
-@@ -168,8 +176,14 @@ export default {
+@@ -168,8 +173,14 @@ export default {
      error: Boolean
    },
    methods: {
@@ -472,7 +500,7 @@ index 5f44565a3..1c1219f30 100644
      },
      formatNumber(value) {
        if (value === null || value === undefined || value === '') return '—'
-@@ -183,11 +197,7 @@ export default {
+@@ -183,11 +194,7 @@ export default {
        return ((record.creator && record.creator.name) || '?').slice(0, 1)
      },
      creatorLocation(record) {
@@ -485,7 +513,7 @@ index 5f44565a3..1c1219f30 100644
      },
      formatDate(value) {
        if (!value || !dayjs(value).isValid()) return '—'
-@@ -219,9 +229,6 @@ export default {
+@@ -219,9 +226,6 @@ export default {
          }[type] || type
        )
      },
@@ -495,7 +523,7 @@ index 5f44565a3..1c1219f30 100644
      handleAction(type, record) {
        this.$emit('action', { type, record })
      }
-@@ -239,6 +246,37 @@ export default {
+@@ -239,6 +243,37 @@ export default {
  .table-card :deep(.el-table) {
    color: $kol_title_black;
  }
@@ -533,7 +561,7 @@ index 5f44565a3..1c1219f30 100644
  .author-cell {
    padding: 0;
    border: 0;
-@@ -282,7 +320,6 @@ export default {
+@@ -282,7 +317,6 @@ export default {
    font-weight: 600;
  }
  .more-button {
@@ -2251,10 +2279,20 @@ index 798b5aeec..b37ecc44e 100644
      asOf: '데이터 기준: {time}',
      method: '비교 범위 및 데이터 안내',
 diff --git a/components/viralVideoDemo/messages.js b/components/viralVideoDemo/messages.js
-index 48457b2c2..38a296d02 100644
+index 48457b2c2..9882cd856 100644
 --- a/components/viralVideoDemo/messages.js
 +++ b/components/viralVideoDemo/messages.js
-@@ -29,11 +29,11 @@ const viralMessages = {
+@@ -13,9 +13,6 @@ const viralMessages = {
+         clear: '清空筛选',
+         remove: '移除',
+         search: '搜索',
+-        openSearch: 'AI推荐关键词',
+-        openSearchHint:
+-          '当前视频：{title}。计划复用现有 AI 推荐关键词能力，先准确提取主题与限定词，确认或修改后搜索同平台视频。是否本期交付由研发评估，条件不允许时隐藏入口。本 Demo 仅说明方案，不生成关键词、不执行搜索。',
+         openChannel: '查看作者频道',
+         openPlatform: '原平台查看',
+         addMonitor: '加入监控',
+@@ -29,11 +26,11 @@ const viralMessages = {
          batch: '结果批次',
          comparison: '比较范围',
          sampleSize: '样本量',
@@ -2269,7 +2307,7 @@ index 48457b2c2..38a296d02 100644
            SAMPLE_TOO_SMALL: '当前样本量不足',
            EVALUATION_PENDING: '当前批次仍待识别',
            CONTENT_TYPE_NOT_SUPPORTED: '当前内容形态不适用',
-@@ -69,15 +69,14 @@ const viralMessages = {
+@@ -69,15 +66,14 @@ const viralMessages = {
          sourceHint: '模拟作品没有真实详情；原平台查看将打开关键词搜索。',
          algorithmVersion: '算法版本',
          rankingVersion: '排序版本',
@@ -2287,7 +2325,7 @@ index 48457b2c2..38a296d02 100644
          notQualified: '未达标',
          insufficientData: '数据不足，暂不判定',
          pending: '待识别',
-@@ -85,57 +84,55 @@ const viralMessages = {
+@@ -85,57 +81,54 @@ const viralMessages = {
          invalidated: '结果已撤销',
          restricted: '无权查看完整数据',
          notApplicable: '不适用',
@@ -2335,7 +2373,7 @@ index 48457b2c2..38a296d02 100644
          organic: '自然内容',
          sponsored: '带货 / 推广内容',
 -        coverageStatus: '覆盖状态',
-         batch: '结果批次',
+-        batch: '结果批次',
          keyword: '关键词',
          keywordPlaceholder: '搜索视频标题或作者',
 -        coverageFull: '完整覆盖',
@@ -2361,7 +2399,7 @@ index 48457b2c2..38a296d02 100644
          snapshot: '当前指标快照',
          algorithm: '口径详情',
          dataLimit: '数据限制',
-@@ -150,6 +147,117 @@ const viralMessages = {
+@@ -150,6 +143,117 @@ const viralMessages = {
      }
    }
  }
@@ -2479,10 +2517,16 @@ index 48457b2c2..38a296d02 100644
  const rankOnlyHints = {
    zh: '本 Demo 仅演示榜单，不演示后续搜索、频道或监控流程。',
    en: 'This demo covers rankings only. Search, creator pages and monitoring are not demonstrated.',
-@@ -171,9 +279,62 @@ const keywordHints = {
-   jp: '対象動画：{title}。既存のAIキーワード提案機能を活用し、テーマと絞り込みに必要な語句を正確に抽出する計画です。語句を確認・編集してから同じプラットフォームの動画を検索します。今期の実装は開発側で判断し、対応できない場合は入口を非表示にします。このデモは説明のみで、キーワード生成や検索は実行しません。',
-   kr: '선택한 영상: {title}. 기존 AI 키워드 추천 기능을 활용해 주제와 구체적인 조건을 정확히 추출할 계획입니다. 사용자가 키워드를 확인하거나 수정한 뒤 같은 플랫폼의 영상을 검색합니다. 이번 버전 제공 여부는 개발팀이 검토하며, 제공이 어려우면 진입 항목을 숨깁니다. 이 데모는 계획만 설명하며 키워드를 생성하거나 검색하지 않습니다.'
+@@ -157,25 +261,62 @@ const rankOnlyHints = {
+   jp: 'このデモはランキングのみを対象とし、検索、チャンネル、モニタリングの後続操作は実演しません。',
+   kr: '이 데모는 순위만 보여주며 검색, 채널 및 모니터링 후속 과정은 시연하지 않습니다.'
  }
+-const keywordLabels = {
+-  zh: 'AI推荐关键词',
+-  en: 'AI keyword suggestions',
+-  tw: 'AI推薦關鍵字',
+-  jp: 'AIキーワード提案',
+-  kr: 'AI 키워드 추천'
 +const baselineScopes = {
 +  zh: viralMessages.zh.viralDemo.extra.baseline,
 +  en: 'Cumulative snapshots of this creator’s earlier videos in the same format',
@@ -2517,14 +2561,20 @@ index 48457b2c2..38a296d02 100644
 +  tw: '目前影片：{title}。正式版點擊標題或封面將在新分頁開啟 {platform} 原影片，保留目前榜單的篩選與瀏覽位置。本 Demo 使用模擬影片，僅展示跳轉示意，不開啟原網站。',
 +  jp: '対象動画：{title}。正式版ではタイトルやサムネイルをクリックすると、{platform} の元動画を新しいタブで開き、ランキングの条件と閲覧位置を保持します。このデモは模擬動画で遷移を説明するだけで、元サイトは開きません。',
 +  kr: '선택한 영상: {title}. 정식 제품에서는 제목이나 썸네일을 클릭하면 {platform} 원본 영상을 새 탭에서 열고 순위의 필터와 탐색 위치를 유지합니다. 이 데모는 모의 영상으로 이동 방식만 안내하며 원본 사이트를 열지 않습니다.'
-+}
+ }
+-const keywordHints = {
+-  zh: viralMessages.zh.viralDemo.common.openSearchHint,
+-  en: 'Selected video: {title}. The plan reuses AI keyword suggestions to extract the topic and its defining details. Users confirm or edit the keywords before searching videos on the same platform. Engineering will assess delivery for this release; the entry will be hidden if it cannot be delivered. This demo explains the plan only. It does not generate keywords or run a search.',
+-  tw: '目前影片：{title}。計畫沿用現有 AI 推薦關鍵字能力，先準確擷取主題與限定詞，確認或修改後搜尋同平台影片。是否於本期交付由研發評估，條件不允許時隱藏入口。本 Demo 僅說明方案，不產生關鍵字、不執行搜尋。',
+-  jp: '対象動画：{title}。既存のAIキーワード提案機能を活用し、テーマと絞り込みに必要な語句を正確に抽出する計画です。語句を確認・編集してから同じプラットフォームの動画を検索します。今期の実装は開発側で判断し、対応できない場合は入口を非表示にします。このデモは説明のみで、キーワード生成や検索は実行しません。',
+-  kr: '선택한 영상: {title}. 기존 AI 키워드 추천 기능을 활용해 주제와 구체적인 조건을 정확히 추출할 계획입니다. 사용자가 키워드를 확인하거나 수정한 뒤 같은 플랫폼의 영상을 검색합니다. 이번 버전 제공 여부는 개발팀이 검토하며, 제공이 어려우면 진입 항목을 숨깁니다. 이 데모는 계획만 설명하며 키워드를 생성하거나 검색하지 않습니다.'
 +const creatorHints = {
 +  zh: '正式版将进入聚星内的该作者频道详情。本 Demo 仅展示跳转示意，不执行跳转。',
 +  en: 'The full product opens this creator’s channel details in NoxInfluencer. This demo only illustrates navigation and stays on the ranking.',
 +  tw: '正式版將進入聚星內此作者的頻道詳情。本 Demo 僅展示跳轉示意，不執行跳轉。',
 +  jp: '正式版ではNoxInfluencer内の投稿者のチャンネル詳細を開きます。このデモは遷移の説明のみで、画面は移動しません。',
 +  kr: '정식 제품에서는 NoxInfluencer 내 제작자의 채널 상세 페이지로 이동합니다. 이 데모는 이동 방식만 안내하며 실제로 이동하지 않습니다.'
-+}
+ }
  for (const locale of ['zh', 'en', 'tw', 'jp', 'kr']) {
    if (locale !== 'zh')
      viralMessages[locale] = JSON.parse(JSON.stringify(viralMessages.zh))
@@ -2540,8 +2590,10 @@ index 48457b2c2..38a296d02 100644
 +  viralMessages[locale].viralDemo.rank.legacyCoverageRemoved =
 +    legacyCoverageHints[locale]
    viralMessages[locale].viralDemo.common.rankOnlyHint = rankOnlyHints[locale]
-   viralMessages[locale].viralDemo.common.openSearch = keywordLabels[locale]
-   viralMessages[locale].viralDemo.common.openSearchHint = keywordHints[locale]
+-  viralMessages[locale].viralDemo.common.openSearch = keywordLabels[locale]
+-  viralMessages[locale].viralDemo.common.openSearchHint = keywordHints[locale]
+ }
+ export default viralMessages
 diff --git a/components/viralVideoDemo/tableMessages.js b/components/viralVideoDemo/tableMessages.js
 index ac5473092..212672481 100644
 --- a/components/viralVideoDemo/tableMessages.js
@@ -2799,7 +2851,7 @@ index ac5473092..212672481 100644
  }
  export default Object.keys(table).reduce((messages, locale) => {
 diff --git "a/docs/\347\237\245\350\257\206\345\272\223/\345\205\250\347\253\231\351\241\265\351\235\242\347\264\242\345\274\225.md" "b/docs/\347\237\245\350\257\206\345\272\223/\345\205\250\347\253\231\351\241\265\351\235\242\347\264\242\345\274\225.md"
-index 552e93575..ca7b81c40 100644
+index 552e93575..472f8cbc4 100644
 --- "a/docs/\347\237\245\350\257\206\345\272\223/\345\205\250\347\253\231\351\241\265\351\235\242\347\264\242\345\274\225.md"
 +++ "b/docs/\347\237\245\350\257\206\345\272\223/\345\205\250\347\253\231\351\241\265\351\235\242\347\264\242\345\274\225.md"
 @@ -15,135 +15,136 @@
@@ -2935,141 +2987,141 @@ index 552e93575..ca7b81c40 100644
 -| `/youtube/video-analytics/:videoId`                    | `搜索与洞察` | `pages/youtube/video-analytics/_videoId.vue`                    | `docs/知识库/功能模块/搜索与洞察/页面/youtube/video-analytics/_videoId.md`                    |
 -| `/youtube-video-rank`、`/youtube-video-rank/top-*`     | `搜索与洞察` | `pages/youtube-video-rank.vue`                                  | `docs/知识库/功能模块/搜索与洞察/页面/youtube-video-rank.md`                                  |
 -| `/youtube-channel-rank/:url`                           | `搜索与洞察` | `pages/youtube-channel-rank/_url.vue`                           | `docs/知识库/功能模块/搜索与洞察/页面/youtube-channel-rank/_url.md`                           |
-+| 路由                                                   | 业务域模块   | 页面文件                                                        | 文档路径                                                                                                  |
-+| ------------------------------------------------------ | ------------ | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-+| `/`                                                    | `官网与增长` | `pages/index.vue`                                               | `docs/知识库/功能模块/官网与增长/页面/index.md`                                                           |
-+| `/sitemap.xml`、`/sitemaps/*`                          | `官网与增长` | `server/router/seo/index.js`                                    | `docs/知识库/功能模块/官网与增长/页面/sitemap.md`                                                         |
-+| `/health`                                              | `工程治理`   | `server/router/health.js`                                       | `docs/知识库/功能模块/工程治理/页面/health.md`                                                            |
-+| `/:plat/channel/:channelId`                            | `搜索与洞察` | `pages/_plat/channel/_channelId.vue`                            | `docs/知识库/功能模块/搜索与洞察/页面/_plat/channel/_channelId.md`                                        |
-+| `/403`                                                 | `账号与权限` | `pages/403/index.vue`                                           | `docs/知识库/功能模块/账号与权限/页面/403/index.md`                                                       |
-+| `/404`                                                 | `账号与权限` | `pages/404/index.vue`                                           | `docs/知识库/功能模块/账号与权限/页面/404/index.md`                                                       |
-+| `/about-us`                                            | `官网与增长` | `pages/about-us/index.vue`                                      | `docs/知识库/功能模块/官网与增长/页面/about-us/index.md`                                                  |
-+| `/activation`                                          | `账号与权限` | `pages/activation/index.vue`                                    | `docs/知识库/功能模块/账号与权限/页面/activation/index.md`                                                |
-+| `/affiliation/channel/:id`                             | `运营与项目` | `pages/affiliation/channel/_id.vue`                             | `docs/知识库/功能模块/运营与项目/页面/affiliation/channel/_id.md`                                         |
-+| `/affiliation/list/campaign`                           | `运营与项目` | `pages/affiliation/list/campaign.vue`                           | `docs/知识库/功能模块/运营与项目/页面/affiliation/list/campaign.md`                                       |
-+| `/affiliation/list/member`                             | `运营与项目` | `pages/affiliation/list/member.vue`                             | `docs/知识库/功能模块/运营与项目/页面/affiliation/list/member.md`                                         |
-+| `/ai-search`                                           | `官网与增长` | `pages/ai-search.vue`                                           | `docs/知识库/功能模块/官网与增长/页面/ai-search.md`                                                       |
-+| `/amazon-product/analysis`                             | `搜索与洞察` | `pages/amazon-product/analysis/index.vue`                       | `docs/知识库/功能模块/搜索与洞察/页面/amazon-product/analysis/index.md`                                   |
-+| `/amazon-product/analysis/:analysisId/all-analysis`    | `搜索与洞察` | `pages/amazon-product/analysis/_analysisId/all-analysis.vue`    | `docs/知识库/功能模块/搜索与洞察/页面/amazon-product/analysis/_analysisId/all-analysis.md`                |
-+| `/amazon-product/analysis/:analysisId/origin-comments` | `搜索与洞察` | `pages/amazon-product/analysis/_analysisId/origin-comments.vue` | `docs/知识库/功能模块/搜索与洞察/页面/amazon-product/analysis/_analysisId/origin-comments.md`             |
-+| `/amazon/product/:productId`                           | `搜索与洞察` | `pages/amazon/product/_productId.vue`                           | `docs/知识库/功能模块/搜索与洞察/页面/amazon/product/_productId.md`                                       |
-+| `/api-service`                                         | `官网与增长` | `pages/api-service/index.vue`                                   | `docs/知识库/功能模块/官网与增长/页面/api-service/index.md`                                               |
-+| `/brand-marketing`                                     | `官网与增长` | `pages/brand-marketing/index.vue`                               | `docs/知识库/功能模块/官网与增长/页面/brand-marketing/index.md`                                           |
-+| `/brand/brand-analysis`                                | `搜索与洞察` | `pages/brand/brand-analysis.vue`                                | `docs/知识库/功能模块/搜索与洞察/页面/brand/brand-analysis.md`                                            |
-+| `/brand/brand-list`                                    | `搜索与洞察` | `pages/brand/brand-list.vue`                                    | `docs/知识库/功能模块/搜索与洞察/页面/brand/brand-list.md`                                                |
-+| `/brand/brand-rank`                                    | `搜索与洞察` | `pages/brand/brand-rank.vue`                                    | `docs/知识库/功能模块/搜索与洞察/页面/brand/brand-rank.md`                                                |
-+| `/brand/mcn`                                           | `搜索与洞察` | `pages/brand/mcn/index.vue`                                     | `docs/知识库/功能模块/搜索与洞察/页面/brand/mcn/index.md`                                                 |
-+| `/brand/mcn/detail`                                    | `搜索与洞察` | `pages/brand/mcn/detail.vue`                                    | `docs/知识库/功能模块/搜索与洞察/页面/brand/mcn/detail.md`                                                |
-+| `/brand/recharge/record`                               | `支付与计费` | `pages/brand/recharge/record/index.vue`                         | `docs/知识库/功能模块/支付与计费/页面/brand/recharge/record.md`                                           |
-+| `/brand/security`                                      | `账号与权限` | `pages/brand/security/index.vue`                                | `docs/知识库/功能模块/账号与权限/页面/brand/security/index.md`                                            |
-+| `/brand/setting`                                       | `账号与权限` | `pages/brand/setting/index.vue`                                 | `docs/知识库/功能模块/账号与权限/页面/brand/setting/index.md`                                             |
-+| `/brand/sub-account`                                   | `账号与权限` | `pages/brand/sub-account/index.vue`                             | `docs/知识库/功能模块/账号与权限/页面/brand/sub-account/index.md`                                         |
-+| `/brand/sub-account/data`                              | `账号与权限` | `pages/brand/sub-account/data.vue`                              | `docs/知识库/功能模块/账号与权限/页面/brand/sub-account/data.md`                                          |
-+| `/brand/sub-account/quota`                             | `账号与权限` | `pages/brand/sub-account/quota.vue`                             | `docs/知识库/功能模块/账号与权限/页面/brand/sub-account/quota.md`                                         |
-+| `/campaign/create`                                     | `运营与项目` | `pages/campaign/create/index.vue`                               | `docs/知识库/功能模块/运营与项目/页面/campaign/create/index.md`                                           |
-+| `/campaign/detail`                                     | `运营与项目` | `pages/campaign/detail/index.vue`                               | `docs/知识库/功能模块/运营与项目/页面/campaign/detail/index.md`                                           |
-+| `/campaign/list`                                       | `运营与项目` | `pages/campaign/list/index.vue`                                 | `docs/知识库/功能模块/运营与项目/页面/campaign/list/index.md`                                             |
-+| `/campaign/manage/:campaignId`                         | `运营与项目` | `pages/campaign/manage/_campaignId.vue`                         | `docs/知识库/功能模块/运营与项目/页面/campaign/manage/_campaignId.md`                                     |
-+| `/captcha`                                             | `账号与权限` | `pages/captcha/index.vue`                                       | `docs/知识库/功能模块/账号与权限/页面/captcha/index.md`                                                   |
-+| `/tiktok/shop-manage`                                  | `店铺管理`   | `pages/tiktok/shop-manage/index.vue`                            | `docs/知识库/功能模块/店铺管理/页面/tiktok/shop-manage/index.md`                                          |
-+| `/ttshop/message-project`                              | `店铺管理`   | `pages/ttshop/message-project/index.vue`                        | `docs/知识库/功能模块/店铺管理/页面/ttshop/message-project.md`                                            |
-+| `/ttshop/message-project/create`                       | `店铺管理`   | `pages/ttshop/message-project/create.vue`                       | `docs/知识库/功能模块/店铺管理/页面/ttshop/message-project.md`                                            |
-+| `/ttshop/message-project/detail`                       | `店铺管理`   | `pages/ttshop/message-project/detail.vue`                       | `docs/知识库/功能模块/店铺管理/页面/ttshop/message-project/detail.md`                                     |
-+| `/contact`                                             | `官网与增长` | `pages/contact/index.vue`                                       | `docs/知识库/功能模块/官网与增长/页面/contact/index.md`                                                   |
-+| `/cooperation`                                         | `官网与增长` | `pages/cooperation/index.vue`                                   | `docs/知识库/功能模块/官网与增长/页面/cooperation/index.md`                                               |
-+| `/crm-detail/:id`                                      | `运营与项目` | `pages/crm-detail/_id.vue`                                      | `docs/知识库/功能模块/运营与项目/页面/crm-detail/_id.md`                                                  |
-+| `/crm-detail/list`                                     | `运营与项目` | `pages/crm-detail/list.vue`                                     | `docs/知识库/功能模块/运营与项目/页面/crm-detail/list.md`                                                 |
-+| `/customer-voice/:tab`                                 | `运营与项目` | `pages/customer-voice/_tab.vue`                                 | `docs/知识库/功能模块/运营与项目/页面/customer-voice/_tab.md`                                             |
-+| `/data-deletion`                                       | `官网与增长` | `pages/data-deletion.vue`                                       | `docs/知识库/功能模块/官网与增长/页面/data-deletion.md`                                                   |
-+| `/developer-api/dashboard`                             | `数据与工具` | `pages/developer-api/dashboard.vue`                             | `docs/知识库/功能模块/数据与工具/页面/developer-api/dashboard.md`                                         |
-+| `/dispute/:type`                                       | `支付与计费` | `pages/dispute/_type.vue`                                       | `docs/知识库/功能模块/支付与计费/页面/dispute/_type.md`                                                   |
-+| `/email/detail-edit`                                   | `消息与触达` | `pages/email/detail-edit.vue`                                   | `docs/知识库/功能模块/消息与触达/页面/email/detail-edit.md`                                               |
-+| `/email/project-list`                                  | `消息与触达` | `pages/email/project-list.vue`                                  | `docs/知识库/功能模块/消息与触达/页面/email/project-list.md`                                              |
-+| `/email/subscribe`                                     | `消息与触达` | `pages/email/subscribe.vue`                                     | `docs/知识库/功能模块/消息与触达/页面/email/subscribe.md`                                                 |
-+| `/email/template-detail`                               | `消息与触达` | `pages/email/template-detail.vue`                               | `docs/知识库/功能模块/消息与触达/页面/email/template-detail.md`                                           |
-+| `/gmail/deal-discovery`                                | `发现商单`   | `pages/gmail/deal-discovery.vue`                                | `docs/知识库/功能模块/发现商单/页面/gmail/deal-discovery.md`                                              |
-+| `/tiktok/deal-discovery`                               | `发现商单`   | `pages/tiktok/deal-discovery.vue`                               | `docs/知识库/功能模块/发现商单/页面/tiktok/deal-discovery.md`                                             |
-+| `/instagram/deal-discovery`                            | `发现商单`   | `pages/instagram/deal-discovery.vue`                            | `docs/知识库/功能模块/发现商单/页面/instagram/deal-discovery.md`                                          |
-+| `工程治理/依赖审计基线`                                | `工程治理`   | `package.json`、`scripts/env-check.js`                          | `docs/知识库/功能模块/工程治理/页面/dependency-audit-baseline.md`                                         |
-+| `/instagram-channel-rank/:url`                         | `搜索与洞察` | `pages/instagram-channel-rank/_url.vue`                         | `docs/知识库/功能模块/搜索与洞察/页面/instagram-channel-rank/_url.md`                                     |
-+| `/instagram/demo`                                      | `搜索与洞察` | `pages/instagram/demo.vue`                                      | `docs/知识库/功能模块/搜索与洞察/页面/instagram/demo.md`                                                  |
-+| `/logging`                                             | `数据与工具` | `pages/logging/index.vue`                                       | `docs/知识库/功能模块/数据与工具/页面/logging/index.md`                                                   |
-+| `/login`                                               | `账号与权限` | `pages/login/index.vue`                                         | `docs/知识库/功能模块/账号与权限/页面/login/index.md`                                                     |
-+| `/logistics-tracking`                                  | `数据与工具` | `pages/logistics-tracking/index.vue`                            | `docs/知识库/功能模块/数据与工具/页面/logistics-tracking/index.md`                                        |
-+| `/lookalike/search/:platform`                          | `搜索与洞察` | `pages/lookalike/search/_platform/index.vue`                    | `docs/知识库/功能模块/搜索与洞察/页面/lookalike/search/_platform/index.md`                                |
-+| `/lookalike/search/ai`                                 | `搜索与洞察` | `pages/lookalike/search/ai.vue`                                 | `docs/知识库/功能模块/搜索与洞察/页面/lookalike/search/ai.md`                                             |
-+| `/message-center`                                      | `消息与触达` | `pages/message-center/index.vue`                                | `docs/知识库/功能模块/消息与触达/页面/message-center/index.md`                                            |
-+| `/notifications`                                       | `消息与触达` | `pages/notifications/index.vue`                                 | `docs/知识库/功能模块/消息与触达/页面/notifications/index.md`                                             |
-+| `/oauth/authorize`                                     | `账号与权限` | `pages/oauth/authorize.vue`                                     | `docs/知识库/功能模块/账号与权限/页面/oauth/authorize.md`                                                 |
-+| `/oauth/device`                                        | `账号与权限` | `pages/oauth/device.vue`                                        | `docs/知识库/功能模块/账号与权限/页面/oauth/device.md`                                                    |
-+| `/payment/contract/:contractId`                        | `支付与计费` | `pages/payment/contract/_contractId.vue`                        | `docs/知识库/功能模块/支付与计费/页面/payment/contract/_contractId.md`                                    |
-+| `/payment/history`                                     | `支付与计费` | `pages/payment/history/index.vue`                               | `docs/知识库/功能模块/支付与计费/页面/payment/history/index.md`                                           |
-+| `/payment/list`                                        | `支付与计费` | `pages/payment/list/index.vue`                                  | `docs/知识库/功能模块/支付与计费/页面/payment/list/index.md`                                              |
-+| `/privacy`                                             | `官网与增长` | `pages/privacy/index.vue`                                       | `docs/知识库/功能模块/官网与增长/页面/privacy/index.md`                                                   |
-+| `/privacy/0.1`                                         | `官网与增长` | `pages/privacy/0.1.vue`                                         | `docs/知识库/功能模块/官网与增长/页面/privacy/0.1.md`                                                     |
-+| `/privacy/information-security-policy`                 | `官网与增长` | `pages/privacy/information-security-policy.vue`                 | `docs/知识库/功能模块/官网与增长/页面/privacy/information-security-policy.md`                             |
-+| `/privacy/nox-influencer-llc`                          | `官网与增长` | `pages/privacy/nox-influencer-llc.vue`                          | `docs/知识库/功能模块/官网与增长/页面/privacy/nox-influencer-llc.md`                                      |
-+| `/product-center`                                      | `官网与增长` | `pages/product-center/index.vue`                                | `docs/知识库/功能模块/官网与增长/页面/product-center/index.md`                                            |
-+| `/product/payment/member`                              | `支付与计费` | `pages/product/payment/member.vue`                              | `docs/知识库/功能模块/支付与计费/页面/product/payment/member.md`                                          |
-+| `/product/payment/rest-api`                            | `支付与计费` | `pages/product/payment/rest-api.vue`                            | `docs/知识库/功能模块/支付与计费/页面/product/payment/rest-api.md`                                        |
-+| `/product/payresult/success`                           | `支付与计费` | `pages/product/payresult/success.vue`                           | `docs/知识库/功能模块/支付与计费/页面/product/payresult/success.md`                                       |
-+| `/product/pricing`                                     | `支付与计费` | `pages/product/pricing/index.vue`                               | `docs/知识库/功能模块/支付与计费/页面/product/pricing/index.md`                                           |
-+| `/report`                                              | `运营与项目` | `pages/report/index.vue`                                        | `docs/知识库/功能模块/运营与项目/页面/report/index.md`                                                    |
-+| `/report/:id`                                          | `运营与项目` | `pages/report/_id.vue`                                          | `docs/知识库/功能模块/运营与项目/页面/report/_id.md`                                                      |
-+| `/reset-password`                                      | `账号与权限` | `pages/reset-password/index.vue`                                | `docs/知识库/功能模块/账号与权限/页面/reset-password/index.md`                                            |
-+| `/resource-folder/dislike-chat`                        | `数据与工具` | `pages/resource-folder/dislike-chat.vue`                        | `docs/知识库/功能模块/数据与工具/页面/resource-folder/dislike-chat.md`                                    |
-+| `/resource-folder/dislike-list`                        | `数据与工具` | `pages/resource-folder/dislike-list.vue`                        | `docs/知识库/功能模块/数据与工具/页面/resource-folder/dislike-list.md`                                    |
-+| `/resource-folder/group`                               | `数据与工具` | `pages/resource-folder/group.vue`                               | `docs/知识库/功能模块/数据与工具/页面/resource-folder/group.md`                                           |
-+| `/resource-folder/list`                                | `数据与工具` | `pages/resource-folder/list.vue`                                | `docs/知识库/功能模块/数据与工具/页面/resource-folder/list.md`                                            |
-+| `/resource-folder/search-list`                         | `数据与工具` | `pages/resource-folder/search-list.vue`                         | `docs/知识库/功能模块/数据与工具/页面/resource-folder/search-list.md`                                     |
-+| `/search/:platform/:searchType`                        | `搜索与洞察` | `pages/search/_platform/_searchType.vue`                        | `docs/知识库/功能模块/搜索与洞察/页面/search/_platform/_searchType.md`                                    |
-+| `/search/facebook/:searchType`                         | `搜索与洞察` | `pages/search/facebook/_searchType.vue`                         | `docs/知识库/功能模块/搜索与洞察/页面/search/facebook/_searchType.md`                                     |
-+| `/search/tiktok/live`                                  | `搜索与洞察` | `pages/search/tiktok/live.vue`                                  | `docs/知识库/功能模块/搜索与洞察/页面/search/tiktok/live.md`                                              |
-+| `/search/tiktok/product`                               | `搜索与洞察` | `pages/search/tiktok/product.vue`                               | `docs/知识库/功能模块/搜索与洞察/页面/search/tiktok/product.md`                                           |
-+| `/search/tiktok/shop`                                  | `搜索与洞察` | `pages/search/tiktok/shop.vue`                                  | `docs/知识库/功能模块/搜索与洞察/页面/search/tiktok/shop.md`                                              |
-+| `/search/x/:searchType`                                | `搜索与洞察` | `pages/search/x/_searchType.vue`                                | `docs/知识库/功能模块/搜索与洞察/页面/search/x/_searchType.md`                                            |
-+| `/service/audience-list`                               | `运营与项目` | `pages/service/audience-list.vue`                               | `docs/知识库/功能模块/运营与项目/页面/service/audience-list.md`                                           |
-+| `/service/automatic-monitor-list`                      | `运营与项目` | `pages/service/automatic-monitor-list.vue`                      | `docs/知识库/功能模块/运营与项目/页面/service/automatic-monitor-list.md`                                  |
-+| `/service/batch-upload-task-list`                      | `运营与项目` | `pages/service/batch-upload-task-list.vue`                      | `docs/知识库/功能模块/运营与项目/页面/service/batch-upload-task-list.md`                                  |
-+| `/service/brand-basic-data`                            | `运营与项目` | `pages/service/brand-basic-data.vue`                            | `docs/知识库/功能模块/运营与项目/页面/service/brand-basic-data.md`                                        |
-+| `/service/brand-full-report`                           | `运营与项目` | `pages/service/brand-full-report.vue`                           | `docs/知识库/功能模块/运营与项目/页面/service/brand-full-report.md`                                       |
-+| `/service/brand-list`                                  | `运营与项目` | `pages/service/brand-list.vue`                                  | `docs/知识库/功能模块/运营与项目/页面/service/brand-list.md`                                              |
-+| `/service/data-out`                                    | `运营与项目` | `pages/service/data-out.vue`                                    | `docs/知识库/功能模块/运营与项目/页面/service/data-out.md`                                                |
-+| `/service/email-list`                                  | `运营与项目` | `pages/service/email-list.vue`                                  | `docs/知识库/功能模块/运营与项目/页面/service/email-list.md`                                              |
-+| `/service/kol-detail-list`                             | `运营与项目` | `pages/service/kol-detail-list.vue`                             | `docs/知识库/功能模块/运营与项目/页面/service/kol-detail-list.md`                                         |
-+| `/service/monitor-list`                                | `运营与项目` | `pages/service/monitor-list.vue`                                | `docs/知识库/功能模块/运营与项目/页面/service/monitor-list.md`                                            |
-+| `/service/whatsapp-list`                               | `运营与项目` | `pages/service/whatsapp-list.vue`                               | `docs/知识库/功能模块/运营与项目/页面/service/whatsapp-list.md`                                           |
-+| `/short-link`                                          | `数据与工具` | `pages/short-link/index.vue`                                    | `docs/知识库/功能模块/数据与工具/页面/short-link/index.md`                                                |
-+| `/skills`                                              | `数据与工具` | `pages/skills/index.vue`                                        | `docs/知识库/功能模块/数据与工具/页面/skills/index.md`                                                    |
-+| `/skills/docs`、`/skills/docs/*`                       | `数据与工具` | `pages/skills/docs/index.vue`、`pages/skills/docs/_.vue`        | `docs/知识库/功能模块/数据与工具/页面/skills/docs.md`                                                     |
-+| `/skills/dashboard`                                    | `数据与工具` | `pages/skills/dashboard.vue`                                    | `docs/知识库/功能模块/数据与工具/页面/skills/dashboard.md`                                                |
-+| `/skills/usage-billing`                                | `数据与工具` | `pages/skills/usage-billing.vue`                                | `docs/知识库/功能模块/数据与工具/页面/skills/usage-billing.md`                                            |
-+| `/signup`                                              | `账号与权限` | `pages/signup/index.vue`                                        | `docs/知识库/功能模块/账号与权限/页面/signup/index.md`                                                    |
-+| `/sub-relation`                                        | `账号与权限` | `pages/sub-relation.vue`                                        | `docs/知识库/功能模块/账号与权限/页面/sub-relation.md`                                                    |
-+| `/terms`                                               | `官网与增长` | `pages/terms.vue`                                               | `docs/知识库/功能模块/官网与增长/页面/terms.md`                                                           |
-+| `/tiktok-channel-rank/:url`                            | `搜索与洞察` | `pages/tiktok-channel-rank/_url.vue`                            | `docs/知识库/功能模块/搜索与洞察/页面/tiktok-channel-rank/_url.md`                                        |
-+| `/tiktok/channel/shop-rank/:type`                      | `搜索与洞察` | `pages/tiktok/channel/shop-rank/_type.vue`                      | `docs/知识库/功能模块/搜索与洞察/页面/tiktok/channel/shop-rank/_type.md`                                  |
-+| `/tiktok/channel/shop-rank/red-note`                   | `搜索与洞察` | `pages/tiktok/channel/shop-rank/red-note.vue`                   | `docs/知识库/功能模块/搜索与洞察/页面/tiktok/channel/shop-rank/red-note.md`                               |
-+| `/tiktok/live/:liveId`                                 | `搜索与洞察` | `pages/tiktok/live/_liveId/index.vue`                           | `docs/知识库/功能模块/搜索与洞察/页面/tiktok/live/_liveId/index.md`                                       |
-+| `/tiktok/live/rank/:type`                              | `搜索与洞察` | `pages/tiktok/live/rank/_type.vue`                              | `docs/知识库/功能模块/搜索与洞察/页面/tiktok/live/rank/_type.md`                                          |
-+| `/tiktok/overview/rank/:type`                          | `搜索与洞察` | `pages/tiktok/overview/rank/_type.vue`                          | `docs/知识库/功能模块/搜索与洞察/页面/tiktok/overview/rank/_type.md`                                      |
-+| `/tiktok/product/:productId`                           | `搜索与洞察` | `pages/tiktok/product/_productId/index.vue`                     | `docs/知识库/功能模块/搜索与洞察/页面/tiktok/product/_productId/index.md`                                 |
-+| `/tiktok/product/rank/:type`                           | `搜索与洞察` | `pages/tiktok/product/rank/_type.vue`                           | `docs/知识库/功能模块/搜索与洞察/页面/tiktok/product/rank/_type.md`                                       |
-+| `/tiktok/shop/:shopId`                                 | `搜索与洞察` | `pages/tiktok/shop/_shopId/index.vue`                           | `docs/知识库/功能模块/搜索与洞察/页面/tiktok/shop/_shopId/index.md`                                       |
-+| `/tiktok/shop/rank/:type`                              | `搜索与洞察` | `pages/tiktok/shop/rank/_type.vue`                              | `docs/知识库/功能模块/搜索与洞察/页面/tiktok/shop/rank/_type.md`                                          |
-+| `/twitch-channel-rank/:url`                            | `搜索与洞察` | `pages/twitch-channel-rank/_url.vue`                            | `docs/知识库/功能模块/搜索与洞察/页面/twitch-channel-rank/_url.md`                                        |
-+| `/video-monitor/list`                                  | `数据与工具` | `pages/video-monitor/list.vue`                                  | `docs/知识库/功能模块/数据与工具/页面/video-monitor/list.md`                                              |
-+| `/video-monitor/monitor`                               | `数据与工具` | `pages/video-monitor/monitor.vue`                               | `docs/知识库/功能模块/数据与工具/页面/video-monitor/monitor.md`                                           |
-+| `/youtube/video-analytics`                             | `搜索与洞察` | `pages/youtube/video-analytics/index.vue`                       | `docs/知识库/功能模块/搜索与洞察/页面/youtube/video-analytics/index.md`                                   |
-+| `/youtube/video-analytics/:videoId`                    | `搜索与洞察` | `pages/youtube/video-analytics/_videoId.vue`                    | `docs/知识库/功能模块/搜索与洞察/页面/youtube/video-analytics/_videoId.md`                                |
-+| `/youtube-video-rank`、`/youtube-video-rank/top-*`     | `搜索与洞察` | `pages/youtube-video-rank.vue`                                  | `docs/知识库/功能模块/搜索与洞察/页面/youtube-video-rank.md`                                              |
-+| `/youtube-video-rank?viralDemo=1`（仅开发环境）        | `搜索与洞察` | `pages/youtube-video-rank.vue`                                  | [爆款榜单 Demo（类型内部保留、行内基准与源站示意）](./功能模块/搜索与洞察/页面/viral-video-demo/index.md) |
-+| `/youtube-channel-rank/:url`                           | `搜索与洞察` | `pages/youtube-channel-rank/_url.vue`                           | `docs/知识库/功能模块/搜索与洞察/页面/youtube-channel-rank/_url.md`                                       |
++| 路由                                                   | 业务域模块   | 页面文件                                                        | 文档路径                                                                                                                                                          |
++| ------------------------------------------------------ | ------------ | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
++| `/`                                                    | `官网与增长` | `pages/index.vue`                                               | `docs/知识库/功能模块/官网与增长/页面/index.md`                                                                                                                   |
++| `/sitemap.xml`、`/sitemaps/*`                          | `官网与增长` | `server/router/seo/index.js`                                    | `docs/知识库/功能模块/官网与增长/页面/sitemap.md`                                                                                                                 |
++| `/health`                                              | `工程治理`   | `server/router/health.js`                                       | `docs/知识库/功能模块/工程治理/页面/health.md`                                                                                                                    |
++| `/:plat/channel/:channelId`                            | `搜索与洞察` | `pages/_plat/channel/_channelId.vue`                            | `docs/知识库/功能模块/搜索与洞察/页面/_plat/channel/_channelId.md`                                                                                                |
++| `/403`                                                 | `账号与权限` | `pages/403/index.vue`                                           | `docs/知识库/功能模块/账号与权限/页面/403/index.md`                                                                                                               |
++| `/404`                                                 | `账号与权限` | `pages/404/index.vue`                                           | `docs/知识库/功能模块/账号与权限/页面/404/index.md`                                                                                                               |
++| `/about-us`                                            | `官网与增长` | `pages/about-us/index.vue`                                      | `docs/知识库/功能模块/官网与增长/页面/about-us/index.md`                                                                                                          |
++| `/activation`                                          | `账号与权限` | `pages/activation/index.vue`                                    | `docs/知识库/功能模块/账号与权限/页面/activation/index.md`                                                                                                        |
++| `/affiliation/channel/:id`                             | `运营与项目` | `pages/affiliation/channel/_id.vue`                             | `docs/知识库/功能模块/运营与项目/页面/affiliation/channel/_id.md`                                                                                                 |
++| `/affiliation/list/campaign`                           | `运营与项目` | `pages/affiliation/list/campaign.vue`                           | `docs/知识库/功能模块/运营与项目/页面/affiliation/list/campaign.md`                                                                                               |
++| `/affiliation/list/member`                             | `运营与项目` | `pages/affiliation/list/member.vue`                             | `docs/知识库/功能模块/运营与项目/页面/affiliation/list/member.md`                                                                                                 |
++| `/ai-search`                                           | `官网与增长` | `pages/ai-search.vue`                                           | `docs/知识库/功能模块/官网与增长/页面/ai-search.md`                                                                                                               |
++| `/amazon-product/analysis`                             | `搜索与洞察` | `pages/amazon-product/analysis/index.vue`                       | `docs/知识库/功能模块/搜索与洞察/页面/amazon-product/analysis/index.md`                                                                                           |
++| `/amazon-product/analysis/:analysisId/all-analysis`    | `搜索与洞察` | `pages/amazon-product/analysis/_analysisId/all-analysis.vue`    | `docs/知识库/功能模块/搜索与洞察/页面/amazon-product/analysis/_analysisId/all-analysis.md`                                                                        |
++| `/amazon-product/analysis/:analysisId/origin-comments` | `搜索与洞察` | `pages/amazon-product/analysis/_analysisId/origin-comments.vue` | `docs/知识库/功能模块/搜索与洞察/页面/amazon-product/analysis/_analysisId/origin-comments.md`                                                                     |
++| `/amazon/product/:productId`                           | `搜索与洞察` | `pages/amazon/product/_productId.vue`                           | `docs/知识库/功能模块/搜索与洞察/页面/amazon/product/_productId.md`                                                                                               |
++| `/api-service`                                         | `官网与增长` | `pages/api-service/index.vue`                                   | `docs/知识库/功能模块/官网与增长/页面/api-service/index.md`                                                                                                       |
++| `/brand-marketing`                                     | `官网与增长` | `pages/brand-marketing/index.vue`                               | `docs/知识库/功能模块/官网与增长/页面/brand-marketing/index.md`                                                                                                   |
++| `/brand/brand-analysis`                                | `搜索与洞察` | `pages/brand/brand-analysis.vue`                                | `docs/知识库/功能模块/搜索与洞察/页面/brand/brand-analysis.md`                                                                                                    |
++| `/brand/brand-list`                                    | `搜索与洞察` | `pages/brand/brand-list.vue`                                    | `docs/知识库/功能模块/搜索与洞察/页面/brand/brand-list.md`                                                                                                        |
++| `/brand/brand-rank`                                    | `搜索与洞察` | `pages/brand/brand-rank.vue`                                    | `docs/知识库/功能模块/搜索与洞察/页面/brand/brand-rank.md`                                                                                                        |
++| `/brand/mcn`                                           | `搜索与洞察` | `pages/brand/mcn/index.vue`                                     | `docs/知识库/功能模块/搜索与洞察/页面/brand/mcn/index.md`                                                                                                         |
++| `/brand/mcn/detail`                                    | `搜索与洞察` | `pages/brand/mcn/detail.vue`                                    | `docs/知识库/功能模块/搜索与洞察/页面/brand/mcn/detail.md`                                                                                                        |
++| `/brand/recharge/record`                               | `支付与计费` | `pages/brand/recharge/record/index.vue`                         | `docs/知识库/功能模块/支付与计费/页面/brand/recharge/record.md`                                                                                                   |
++| `/brand/security`                                      | `账号与权限` | `pages/brand/security/index.vue`                                | `docs/知识库/功能模块/账号与权限/页面/brand/security/index.md`                                                                                                    |
++| `/brand/setting`                                       | `账号与权限` | `pages/brand/setting/index.vue`                                 | `docs/知识库/功能模块/账号与权限/页面/brand/setting/index.md`                                                                                                     |
++| `/brand/sub-account`                                   | `账号与权限` | `pages/brand/sub-account/index.vue`                             | `docs/知识库/功能模块/账号与权限/页面/brand/sub-account/index.md`                                                                                                 |
++| `/brand/sub-account/data`                              | `账号与权限` | `pages/brand/sub-account/data.vue`                              | `docs/知识库/功能模块/账号与权限/页面/brand/sub-account/data.md`                                                                                                  |
++| `/brand/sub-account/quota`                             | `账号与权限` | `pages/brand/sub-account/quota.vue`                             | `docs/知识库/功能模块/账号与权限/页面/brand/sub-account/quota.md`                                                                                                 |
++| `/campaign/create`                                     | `运营与项目` | `pages/campaign/create/index.vue`                               | `docs/知识库/功能模块/运营与项目/页面/campaign/create/index.md`                                                                                                   |
++| `/campaign/detail`                                     | `运营与项目` | `pages/campaign/detail/index.vue`                               | `docs/知识库/功能模块/运营与项目/页面/campaign/detail/index.md`                                                                                                   |
++| `/campaign/list`                                       | `运营与项目` | `pages/campaign/list/index.vue`                                 | `docs/知识库/功能模块/运营与项目/页面/campaign/list/index.md`                                                                                                     |
++| `/campaign/manage/:campaignId`                         | `运营与项目` | `pages/campaign/manage/_campaignId.vue`                         | `docs/知识库/功能模块/运营与项目/页面/campaign/manage/_campaignId.md`                                                                                             |
++| `/captcha`                                             | `账号与权限` | `pages/captcha/index.vue`                                       | `docs/知识库/功能模块/账号与权限/页面/captcha/index.md`                                                                                                           |
++| `/tiktok/shop-manage`                                  | `店铺管理`   | `pages/tiktok/shop-manage/index.vue`                            | `docs/知识库/功能模块/店铺管理/页面/tiktok/shop-manage/index.md`                                                                                                  |
++| `/ttshop/message-project`                              | `店铺管理`   | `pages/ttshop/message-project/index.vue`                        | `docs/知识库/功能模块/店铺管理/页面/ttshop/message-project.md`                                                                                                    |
++| `/ttshop/message-project/create`                       | `店铺管理`   | `pages/ttshop/message-project/create.vue`                       | `docs/知识库/功能模块/店铺管理/页面/ttshop/message-project.md`                                                                                                    |
++| `/ttshop/message-project/detail`                       | `店铺管理`   | `pages/ttshop/message-project/detail.vue`                       | `docs/知识库/功能模块/店铺管理/页面/ttshop/message-project/detail.md`                                                                                             |
++| `/contact`                                             | `官网与增长` | `pages/contact/index.vue`                                       | `docs/知识库/功能模块/官网与增长/页面/contact/index.md`                                                                                                           |
++| `/cooperation`                                         | `官网与增长` | `pages/cooperation/index.vue`                                   | `docs/知识库/功能模块/官网与增长/页面/cooperation/index.md`                                                                                                       |
++| `/crm-detail/:id`                                      | `运营与项目` | `pages/crm-detail/_id.vue`                                      | `docs/知识库/功能模块/运营与项目/页面/crm-detail/_id.md`                                                                                                          |
++| `/crm-detail/list`                                     | `运营与项目` | `pages/crm-detail/list.vue`                                     | `docs/知识库/功能模块/运营与项目/页面/crm-detail/list.md`                                                                                                         |
++| `/customer-voice/:tab`                                 | `运营与项目` | `pages/customer-voice/_tab.vue`                                 | `docs/知识库/功能模块/运营与项目/页面/customer-voice/_tab.md`                                                                                                     |
++| `/data-deletion`                                       | `官网与增长` | `pages/data-deletion.vue`                                       | `docs/知识库/功能模块/官网与增长/页面/data-deletion.md`                                                                                                           |
++| `/developer-api/dashboard`                             | `数据与工具` | `pages/developer-api/dashboard.vue`                             | `docs/知识库/功能模块/数据与工具/页面/developer-api/dashboard.md`                                                                                                 |
++| `/dispute/:type`                                       | `支付与计费` | `pages/dispute/_type.vue`                                       | `docs/知识库/功能模块/支付与计费/页面/dispute/_type.md`                                                                                                           |
++| `/email/detail-edit`                                   | `消息与触达` | `pages/email/detail-edit.vue`                                   | `docs/知识库/功能模块/消息与触达/页面/email/detail-edit.md`                                                                                                       |
++| `/email/project-list`                                  | `消息与触达` | `pages/email/project-list.vue`                                  | `docs/知识库/功能模块/消息与触达/页面/email/project-list.md`                                                                                                      |
++| `/email/subscribe`                                     | `消息与触达` | `pages/email/subscribe.vue`                                     | `docs/知识库/功能模块/消息与触达/页面/email/subscribe.md`                                                                                                         |
++| `/email/template-detail`                               | `消息与触达` | `pages/email/template-detail.vue`                               | `docs/知识库/功能模块/消息与触达/页面/email/template-detail.md`                                                                                                   |
++| `/gmail/deal-discovery`                                | `发现商单`   | `pages/gmail/deal-discovery.vue`                                | `docs/知识库/功能模块/发现商单/页面/gmail/deal-discovery.md`                                                                                                      |
++| `/tiktok/deal-discovery`                               | `发现商单`   | `pages/tiktok/deal-discovery.vue`                               | `docs/知识库/功能模块/发现商单/页面/tiktok/deal-discovery.md`                                                                                                     |
++| `/instagram/deal-discovery`                            | `发现商单`   | `pages/instagram/deal-discovery.vue`                            | `docs/知识库/功能模块/发现商单/页面/instagram/deal-discovery.md`                                                                                                  |
++| `工程治理/依赖审计基线`                                | `工程治理`   | `package.json`、`scripts/env-check.js`                          | `docs/知识库/功能模块/工程治理/页面/dependency-audit-baseline.md`                                                                                                 |
++| `/instagram-channel-rank/:url`                         | `搜索与洞察` | `pages/instagram-channel-rank/_url.vue`                         | `docs/知识库/功能模块/搜索与洞察/页面/instagram-channel-rank/_url.md`                                                                                             |
++| `/instagram/demo`                                      | `搜索与洞察` | `pages/instagram/demo.vue`                                      | `docs/知识库/功能模块/搜索与洞察/页面/instagram/demo.md`                                                                                                          |
++| `/logging`                                             | `数据与工具` | `pages/logging/index.vue`                                       | `docs/知识库/功能模块/数据与工具/页面/logging/index.md`                                                                                                           |
++| `/login`                                               | `账号与权限` | `pages/login/index.vue`                                         | `docs/知识库/功能模块/账号与权限/页面/login/index.md`                                                                                                             |
++| `/logistics-tracking`                                  | `数据与工具` | `pages/logistics-tracking/index.vue`                            | `docs/知识库/功能模块/数据与工具/页面/logistics-tracking/index.md`                                                                                                |
++| `/lookalike/search/:platform`                          | `搜索与洞察` | `pages/lookalike/search/_platform/index.vue`                    | `docs/知识库/功能模块/搜索与洞察/页面/lookalike/search/_platform/index.md`                                                                                        |
++| `/lookalike/search/ai`                                 | `搜索与洞察` | `pages/lookalike/search/ai.vue`                                 | `docs/知识库/功能模块/搜索与洞察/页面/lookalike/search/ai.md`                                                                                                     |
++| `/message-center`                                      | `消息与触达` | `pages/message-center/index.vue`                                | `docs/知识库/功能模块/消息与触达/页面/message-center/index.md`                                                                                                    |
++| `/notifications`                                       | `消息与触达` | `pages/notifications/index.vue`                                 | `docs/知识库/功能模块/消息与触达/页面/notifications/index.md`                                                                                                     |
++| `/oauth/authorize`                                     | `账号与权限` | `pages/oauth/authorize.vue`                                     | `docs/知识库/功能模块/账号与权限/页面/oauth/authorize.md`                                                                                                         |
++| `/oauth/device`                                        | `账号与权限` | `pages/oauth/device.vue`                                        | `docs/知识库/功能模块/账号与权限/页面/oauth/device.md`                                                                                                            |
++| `/payment/contract/:contractId`                        | `支付与计费` | `pages/payment/contract/_contractId.vue`                        | `docs/知识库/功能模块/支付与计费/页面/payment/contract/_contractId.md`                                                                                            |
++| `/payment/history`                                     | `支付与计费` | `pages/payment/history/index.vue`                               | `docs/知识库/功能模块/支付与计费/页面/payment/history/index.md`                                                                                                   |
++| `/payment/list`                                        | `支付与计费` | `pages/payment/list/index.vue`                                  | `docs/知识库/功能模块/支付与计费/页面/payment/list/index.md`                                                                                                      |
++| `/privacy`                                             | `官网与增长` | `pages/privacy/index.vue`                                       | `docs/知识库/功能模块/官网与增长/页面/privacy/index.md`                                                                                                           |
++| `/privacy/0.1`                                         | `官网与增长` | `pages/privacy/0.1.vue`                                         | `docs/知识库/功能模块/官网与增长/页面/privacy/0.1.md`                                                                                                             |
++| `/privacy/information-security-policy`                 | `官网与增长` | `pages/privacy/information-security-policy.vue`                 | `docs/知识库/功能模块/官网与增长/页面/privacy/information-security-policy.md`                                                                                     |
++| `/privacy/nox-influencer-llc`                          | `官网与增长` | `pages/privacy/nox-influencer-llc.vue`                          | `docs/知识库/功能模块/官网与增长/页面/privacy/nox-influencer-llc.md`                                                                                              |
++| `/product-center`                                      | `官网与增长` | `pages/product-center/index.vue`                                | `docs/知识库/功能模块/官网与增长/页面/product-center/index.md`                                                                                                    |
++| `/product/payment/member`                              | `支付与计费` | `pages/product/payment/member.vue`                              | `docs/知识库/功能模块/支付与计费/页面/product/payment/member.md`                                                                                                  |
++| `/product/payment/rest-api`                            | `支付与计费` | `pages/product/payment/rest-api.vue`                            | `docs/知识库/功能模块/支付与计费/页面/product/payment/rest-api.md`                                                                                                |
++| `/product/payresult/success`                           | `支付与计费` | `pages/product/payresult/success.vue`                           | `docs/知识库/功能模块/支付与计费/页面/product/payresult/success.md`                                                                                               |
++| `/product/pricing`                                     | `支付与计费` | `pages/product/pricing/index.vue`                               | `docs/知识库/功能模块/支付与计费/页面/product/pricing/index.md`                                                                                                   |
++| `/report`                                              | `运营与项目` | `pages/report/index.vue`                                        | `docs/知识库/功能模块/运营与项目/页面/report/index.md`                                                                                                            |
++| `/report/:id`                                          | `运营与项目` | `pages/report/_id.vue`                                          | `docs/知识库/功能模块/运营与项目/页面/report/_id.md`                                                                                                              |
++| `/reset-password`                                      | `账号与权限` | `pages/reset-password/index.vue`                                | `docs/知识库/功能模块/账号与权限/页面/reset-password/index.md`                                                                                                    |
++| `/resource-folder/dislike-chat`                        | `数据与工具` | `pages/resource-folder/dislike-chat.vue`                        | `docs/知识库/功能模块/数据与工具/页面/resource-folder/dislike-chat.md`                                                                                            |
++| `/resource-folder/dislike-list`                        | `数据与工具` | `pages/resource-folder/dislike-list.vue`                        | `docs/知识库/功能模块/数据与工具/页面/resource-folder/dislike-list.md`                                                                                            |
++| `/resource-folder/group`                               | `数据与工具` | `pages/resource-folder/group.vue`                               | `docs/知识库/功能模块/数据与工具/页面/resource-folder/group.md`                                                                                                   |
++| `/resource-folder/list`                                | `数据与工具` | `pages/resource-folder/list.vue`                                | `docs/知识库/功能模块/数据与工具/页面/resource-folder/list.md`                                                                                                    |
++| `/resource-folder/search-list`                         | `数据与工具` | `pages/resource-folder/search-list.vue`                         | `docs/知识库/功能模块/数据与工具/页面/resource-folder/search-list.md`                                                                                             |
++| `/search/:platform/:searchType`                        | `搜索与洞察` | `pages/search/_platform/_searchType.vue`                        | `docs/知识库/功能模块/搜索与洞察/页面/search/_platform/_searchType.md`                                                                                            |
++| `/search/facebook/:searchType`                         | `搜索与洞察` | `pages/search/facebook/_searchType.vue`                         | `docs/知识库/功能模块/搜索与洞察/页面/search/facebook/_searchType.md`                                                                                             |
++| `/search/tiktok/live`                                  | `搜索与洞察` | `pages/search/tiktok/live.vue`                                  | `docs/知识库/功能模块/搜索与洞察/页面/search/tiktok/live.md`                                                                                                      |
++| `/search/tiktok/product`                               | `搜索与洞察` | `pages/search/tiktok/product.vue`                               | `docs/知识库/功能模块/搜索与洞察/页面/search/tiktok/product.md`                                                                                                   |
++| `/search/tiktok/shop`                                  | `搜索与洞察` | `pages/search/tiktok/shop.vue`                                  | `docs/知识库/功能模块/搜索与洞察/页面/search/tiktok/shop.md`                                                                                                      |
++| `/search/x/:searchType`                                | `搜索与洞察` | `pages/search/x/_searchType.vue`                                | `docs/知识库/功能模块/搜索与洞察/页面/search/x/_searchType.md`                                                                                                    |
++| `/service/audience-list`                               | `运营与项目` | `pages/service/audience-list.vue`                               | `docs/知识库/功能模块/运营与项目/页面/service/audience-list.md`                                                                                                   |
++| `/service/automatic-monitor-list`                      | `运营与项目` | `pages/service/automatic-monitor-list.vue`                      | `docs/知识库/功能模块/运营与项目/页面/service/automatic-monitor-list.md`                                                                                          |
++| `/service/batch-upload-task-list`                      | `运营与项目` | `pages/service/batch-upload-task-list.vue`                      | `docs/知识库/功能模块/运营与项目/页面/service/batch-upload-task-list.md`                                                                                          |
++| `/service/brand-basic-data`                            | `运营与项目` | `pages/service/brand-basic-data.vue`                            | `docs/知识库/功能模块/运营与项目/页面/service/brand-basic-data.md`                                                                                                |
++| `/service/brand-full-report`                           | `运营与项目` | `pages/service/brand-full-report.vue`                           | `docs/知识库/功能模块/运营与项目/页面/service/brand-full-report.md`                                                                                               |
++| `/service/brand-list`                                  | `运营与项目` | `pages/service/brand-list.vue`                                  | `docs/知识库/功能模块/运营与项目/页面/service/brand-list.md`                                                                                                      |
++| `/service/data-out`                                    | `运营与项目` | `pages/service/data-out.vue`                                    | `docs/知识库/功能模块/运营与项目/页面/service/data-out.md`                                                                                                        |
++| `/service/email-list`                                  | `运营与项目` | `pages/service/email-list.vue`                                  | `docs/知识库/功能模块/运营与项目/页面/service/email-list.md`                                                                                                      |
++| `/service/kol-detail-list`                             | `运营与项目` | `pages/service/kol-detail-list.vue`                             | `docs/知识库/功能模块/运营与项目/页面/service/kol-detail-list.md`                                                                                                 |
++| `/service/monitor-list`                                | `运营与项目` | `pages/service/monitor-list.vue`                                | `docs/知识库/功能模块/运营与项目/页面/service/monitor-list.md`                                                                                                    |
++| `/service/whatsapp-list`                               | `运营与项目` | `pages/service/whatsapp-list.vue`                               | `docs/知识库/功能模块/运营与项目/页面/service/whatsapp-list.md`                                                                                                   |
++| `/short-link`                                          | `数据与工具` | `pages/short-link/index.vue`                                    | `docs/知识库/功能模块/数据与工具/页面/short-link/index.md`                                                                                                        |
++| `/skills`                                              | `数据与工具` | `pages/skills/index.vue`                                        | `docs/知识库/功能模块/数据与工具/页面/skills/index.md`                                                                                                            |
++| `/skills/docs`、`/skills/docs/*`                       | `数据与工具` | `pages/skills/docs/index.vue`、`pages/skills/docs/_.vue`        | `docs/知识库/功能模块/数据与工具/页面/skills/docs.md`                                                                                                             |
++| `/skills/dashboard`                                    | `数据与工具` | `pages/skills/dashboard.vue`                                    | `docs/知识库/功能模块/数据与工具/页面/skills/dashboard.md`                                                                                                        |
++| `/skills/usage-billing`                                | `数据与工具` | `pages/skills/usage-billing.vue`                                | `docs/知识库/功能模块/数据与工具/页面/skills/usage-billing.md`                                                                                                    |
++| `/signup`                                              | `账号与权限` | `pages/signup/index.vue`                                        | `docs/知识库/功能模块/账号与权限/页面/signup/index.md`                                                                                                            |
++| `/sub-relation`                                        | `账号与权限` | `pages/sub-relation.vue`                                        | `docs/知识库/功能模块/账号与权限/页面/sub-relation.md`                                                                                                            |
++| `/terms`                                               | `官网与增长` | `pages/terms.vue`                                               | `docs/知识库/功能模块/官网与增长/页面/terms.md`                                                                                                                   |
++| `/tiktok-channel-rank/:url`                            | `搜索与洞察` | `pages/tiktok-channel-rank/_url.vue`                            | `docs/知识库/功能模块/搜索与洞察/页面/tiktok-channel-rank/_url.md`                                                                                                |
++| `/tiktok/channel/shop-rank/:type`                      | `搜索与洞察` | `pages/tiktok/channel/shop-rank/_type.vue`                      | `docs/知识库/功能模块/搜索与洞察/页面/tiktok/channel/shop-rank/_type.md`                                                                                          |
++| `/tiktok/channel/shop-rank/red-note`                   | `搜索与洞察` | `pages/tiktok/channel/shop-rank/red-note.vue`                   | `docs/知识库/功能模块/搜索与洞察/页面/tiktok/channel/shop-rank/red-note.md`                                                                                       |
++| `/tiktok/live/:liveId`                                 | `搜索与洞察` | `pages/tiktok/live/_liveId/index.vue`                           | `docs/知识库/功能模块/搜索与洞察/页面/tiktok/live/_liveId/index.md`                                                                                               |
++| `/tiktok/live/rank/:type`                              | `搜索与洞察` | `pages/tiktok/live/rank/_type.vue`                              | `docs/知识库/功能模块/搜索与洞察/页面/tiktok/live/rank/_type.md`                                                                                                  |
++| `/tiktok/overview/rank/:type`                          | `搜索与洞察` | `pages/tiktok/overview/rank/_type.vue`                          | `docs/知识库/功能模块/搜索与洞察/页面/tiktok/overview/rank/_type.md`                                                                                              |
++| `/tiktok/product/:productId`                           | `搜索与洞察` | `pages/tiktok/product/_productId/index.vue`                     | `docs/知识库/功能模块/搜索与洞察/页面/tiktok/product/_productId/index.md`                                                                                         |
++| `/tiktok/product/rank/:type`                           | `搜索与洞察` | `pages/tiktok/product/rank/_type.vue`                           | `docs/知识库/功能模块/搜索与洞察/页面/tiktok/product/rank/_type.md`                                                                                               |
++| `/tiktok/shop/:shopId`                                 | `搜索与洞察` | `pages/tiktok/shop/_shopId/index.vue`                           | `docs/知识库/功能模块/搜索与洞察/页面/tiktok/shop/_shopId/index.md`                                                                                               |
++| `/tiktok/shop/rank/:type`                              | `搜索与洞察` | `pages/tiktok/shop/rank/_type.vue`                              | `docs/知识库/功能模块/搜索与洞察/页面/tiktok/shop/rank/_type.md`                                                                                                  |
++| `/twitch-channel-rank/:url`                            | `搜索与洞察` | `pages/twitch-channel-rank/_url.vue`                            | `docs/知识库/功能模块/搜索与洞察/页面/twitch-channel-rank/_url.md`                                                                                                |
++| `/video-monitor/list`                                  | `数据与工具` | `pages/video-monitor/list.vue`                                  | `docs/知识库/功能模块/数据与工具/页面/video-monitor/list.md`                                                                                                      |
++| `/video-monitor/monitor`                               | `数据与工具` | `pages/video-monitor/monitor.vue`                               | `docs/知识库/功能模块/数据与工具/页面/video-monitor/monitor.md`                                                                                                   |
++| `/youtube/video-analytics`                             | `搜索与洞察` | `pages/youtube/video-analytics/index.vue`                       | `docs/知识库/功能模块/搜索与洞察/页面/youtube/video-analytics/index.md`                                                                                           |
++| `/youtube/video-analytics/:videoId`                    | `搜索与洞察` | `pages/youtube/video-analytics/_videoId.vue`                    | `docs/知识库/功能模块/搜索与洞察/页面/youtube/video-analytics/_videoId.md`                                                                                        |
++| `/youtube-video-rank`、`/youtube-video-rank/top-*`     | `搜索与洞察` | `pages/youtube-video-rank.vue`                                  | `docs/知识库/功能模块/搜索与洞察/页面/youtube-video-rank.md`                                                                                                      |
++| `/youtube-video-rank?viralDemo=1`（仅开发环境）        | `搜索与洞察` | `pages/youtube-video-rank.vue`                                  | [爆款榜单 Demo（类型内部保留、行内基准与源站示意）](./功能模块/搜索与洞察/页面/viral-video-demo/index.md)；批次仅内部，不提供筛选/编号展示；AI 推荐关键词本期移除 |
++| `/youtube-channel-rank/:url`                           | `搜索与洞察` | `pages/youtube-channel-rank/_url.vue`                           | `docs/知识库/功能模块/搜索与洞察/页面/youtube-channel-rank/_url.md`                                                                                               |
  
  ## 页面能力补充
  
 diff --git "a/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\347\273\204\344\273\266/viralVideoDemo/index.md" "b/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\347\273\204\344\273\266/viralVideoDemo/index.md"
-index 06675a37d..1e6baa15e 100644
+index 06675a37d..701959cf9 100644
 --- "a/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\347\273\204\344\273\266/viralVideoDemo/index.md"
 +++ "b/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\347\273\204\344\273\266/viralVideoDemo/index.md"
 @@ -4,18 +4,18 @@
@@ -3088,7 +3140,7 @@ index 06675a37d..1e6baa15e 100644
 -| `data/{types.d.ts,mock.js,adapter.js}`                   | 类型声明、确定性样例和本地读取/筛选/标签/模拟排序/覆盖适配                                                             |
 -| `messages.js`、`tableMessages.js`、`evidenceMessages.js` | Demo、表格及依据抽屉的局部语言文案                                                                                     |
 -| `assets/script/viralDemo/runtime.js`                     | 限定开发环境、榜单路由和显式 query 的演示开关                                                                          |
-+单视频“更多”菜单的“AI 推荐关键词”沿用现有 `action` 事件，以 `keywords` 命令展示该视频的五语只读说明：复用现有 AI 能力、原词与限定准确、用户确认/修改后同平台搜索，由研发评估本期交付，条件不允许则隐藏入口。Demo 不生成关键词、不发起搜索或 AI 请求。
++单视频“更多”菜单仅保留加入监控。AI 推荐关键词及其说明、命令分支和本地五语提示已移除，本期不生成推荐或承接相关搜索；原关键词筛选保持，既有频道搜索 AI 功能未改动。
 +
 +| 组件或模块                                               | 职责与主要输入输出                                                                                                                                                               |
 +| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3103,7 +3155,7 @@ index 06675a37d..1e6baa15e 100644
  
  `ViralDemoPage`、`ViralDemoShell`、`ViralInlineFilters`、`integration/`、`state.js` 与 `pageMessages.js` 不再保留。旧目录地址仅重定向到真实榜单 Demo 路由，不再承接组件展示。
  
-@@ -27,18 +27,46 @@
+@@ -27,18 +27,48 @@
  
  ## 数据流、Store 与接口边界
  
@@ -3140,6 +3192,8 @@ index 06675a37d..1e6baa15e 100644
 +
 +## 用户可见的榜单口径
 +
++`ViralIntegrationNotice`只显示模拟提示，不输出批次编号。榜单不提供批次筛选或摘要，内部 BATCH 和记录批次/版本继续约束结果一致性；用户侧保留更新时间和榜单截止时间。旧 batchId 查询参数移除，不改变其他有效条件。
++
 +页面标题下常驻同作者此前同形式视频、累计播放中位数及 10 倍以上的核心规则；既有“榜单说明”按钮默认收起，展开后分六段说明判定方式、参与条件、快照限制、发布时间范围、频道国家口径与 Demo 边界。`messages.js` 用既有 subtitle/explanation/explanationText 键提供五语说明，页面仅以`white-space: pre-line`保留分段；不增加区域或规则计算。生产参数需来自已启用的规则，当前 Demo 说明采用暂定 YouTube 长视频 7 天、Shorts/TikTok 视频/Instagram Reels 3 天，按采集时年龄判断，不承诺立即更新；历史数量仍待确认。展开状态、键盘操作和筛选不互相影响。
 +
 +## 播放量与历史基准
@@ -3157,7 +3211,7 @@ index 06675a37d..1e6baa15e 100644
  - 默认仅展示播放、点赞、评论三个主要指标。比较对象、样本、补充互动与时间按需展开，版本/批次二级折叠；不直接输出原始原因码。
  - 账号倍数只读样例已有的有效数值，不从指标反算。受限记录不渲染指标和内部详情。
  - 跨模块动作不执行真实或模拟的后续业务流程；不能因打开依据而消费配额、启动 AI 或写入后台。
-@@ -47,6 +75,6 @@
+@@ -47,6 +77,6 @@
  
  沿用[设计规范 README](/Users/yukuangji/Work/NoxInfluencer/pm-workspace/kol2.0-design-specification/README.md)、[语义 token](/Users/yukuangji/Work/NoxInfluencer/pm-workspace/kol2.0-design-specification/playbook/semantic-tokens.md)、[表格](/Users/yukuangji/Work/NoxInfluencer/pm-workspace/kol2.0-design-specification/playbook/components/table.md)、[标签](/Users/yukuangji/Work/NoxInfluencer/pm-workspace/kol2.0-design-specification/playbook/components/tag.md)、[筛选摘要](/Users/yukuangji/Work/NoxInfluencer/pm-workspace/kol2.0-design-specification/playbook/components/filter-summary.md)与[可访问性](/Users/yukuangji/Work/NoxInfluencer/pm-workspace/kol2.0-design-specification/playbook/accessibility.md)。不引入新组件库或自造视觉 token。
  
@@ -3167,7 +3221,7 @@ index 06675a37d..1e6baa15e 100644
 -范围隔离测试、43 条样例契约测试及抽屉五语呈现测试已通过，分别由 `scripts/viral-video-rank-scope.test.js`、`scripts/viral-video-demo.test.js`、`scripts/viral-evidence-drawer.test.js` 承接。Element UI 固定列可能生成隐藏 DOM 副本，测试应定位可见操作。普通页面、开发开关关闭、空状态、权限状态与失效结果必须分别回归。局部五语和 SSR 呈现测试不替代真实多语页面、Node 14 构建、移动端、性能、生产数据及权限验收。
 +范围隔离测试、43 条样例契约测试及抽屉五语呈现测试已通过，分别由 `scripts/viral-video-rank-scope.test.js`、`scripts/viral-video-demo.test.js`、`scripts/viral-evidence-drawer.test.js` 承接。Element UI 固定列可能生成隐藏 DOM 副本，测试应定位可见操作。普通页面、开发开关关闭、空状态、权限状态与失效结果必须分别回归。局部标签/抽屉五语和 SSR 呈现测试不替代真实多语页面、Node 14 构建、移动端、性能、生产数据及权限验收。
 diff --git "a/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\351\241\265\351\235\242/viral-video-demo/index.md" "b/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\351\241\265\351\235\242/viral-video-demo/index.md"
-index 929a45408..483d5ef07 100644
+index 929a45408..7e14a7ef0 100644
 --- "a/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\351\241\265\351\235\242/viral-video-demo/index.md"
 +++ "b/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\351\241\265\351\235\242/viral-video-demo/index.md"
 @@ -11,10 +11,18 @@
@@ -3175,7 +3229,7 @@ index 929a45408..483d5ef07 100644
  唯一功能入口是 [本地榜单 Demo](http://127.0.0.1:3323/youtube-video-rank?viralDemo=1)，须先启动本地开发服务。`/viral-video-demo` 与 `/viral-video-demo/rank` 只兼容旧地址，重定向到榜单，不再展示多模块目录。
  
 -Demo 仅保留三平台榜单、两个独立判定视角、范围筛选及摘要、结果数量与覆盖情况、单视频表格、状态标签和识别依据抽屉。作者信息作为视频行内身份呈现。“搜索更多同类视频”“查看作者频道”“加入监控”等跨模块入口保留展示，点击只提示本 Demo 的范围，不跳转到其它模块、不打开监控项目选择、不写入模拟存储。跨模块后续流程不在 Demo 范围。
-+Demo 仅保留三平台榜单、账号突破一个判断、范围筛选及摘要、结果数量与覆盖情况、单视频表格与行内播放对照。作者信息作为视频行内身份呈现。播放量单元格叠放本条数值、已有倍数和历史中位数，不新增列；基准行悬停/聚焦显示样本说明，不再挂载依据抽屉。内容标题/封面只显示源站新标签页跳转示意，不打开外部搜索页。单视频“AI 推荐关键词”展示可选能力方案说明；“查看作者频道”“加入监控”等跨模块入口保留展示，点击只提示本 Demo 的范围，不跳转到其它模块、不打开监控项目选择、不写入模拟存储。跨模块后续流程不在 Demo 范围。
++Demo 仅保留三平台榜单、账号突破一个判断、范围筛选及摘要、结果数量与覆盖情况、单视频表格与行内播放对照。作者信息作为视频行内身份呈现。播放量单元格叠放本条数值、已有倍数和历史中位数，不新增列；基准行悬停/聚焦显示样本说明，不再挂载依据抽屉。内容标题/封面只显示源站新标签页跳转示意，不打开外部搜索页。单视频 AI 推荐关键词本期不做，菜单和说明入口均移除；“查看作者频道”“加入监控”等跨模块入口保留展示，点击只提示本 Demo 的范围，不跳转到其它模块、不打开监控项目选择、不写入模拟存储。跨模块后续流程不在 Demo 范围。
  
  搜索、频道内容、内容监控、品牌资产的 Demo 路由、适配器及真实页面中的 Demo 接入均不保留；对应真实页面恢复 `uat` 基线。这些模块的产品需求仍以[《其余功能模块修改 SPEC》](/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/01_Product_Specs/viral_video_identification/其余功能模块修改_SPEC.md)交付，研发按原 UI 增量增加筛选、标记与依据入口，不再制作 Demo。
  
@@ -3207,11 +3261,11 @@ index 929a45408..483d5ef07 100644
  ## 查询与组件耦合
  
 -榜单页面为 `pages/youtube-video-rank.vue`。筛选条件通过 query 保存，包括 `platform/view/contentType/country/category/creatorSize/publishedRange/language/promotion/batchId/coverageStatus/keyword`；`evidenceVideoId` 表示当前打开的依据。当前 Demo 直接渲染筛选后的模拟合格集合，不复用生产榜单的滚动追加请求。
-+榜单页面为 `pages/youtube-video-rank.vue`。筛选条件通过 query 保存，包括 `platform/view/contentType/country/category/creatorSize/publishedRange/language/promotion/batchId/keyword`；旧 `evidenceVideoId` 参数会被移除，不再恢复抽屉。`view` 固定为 `account_breakout`，页面无单项判断切换；旧判断 URL 会归一并保留其他条件。覆盖状态不再作为榜单筛选：旧 `coverageStatus=any` 直接移除，非默认值移除时明确提示用户重新确认条件。当前 Demo 直接渲染筛选后的模拟合格集合，不复用生产榜单的滚动追加请求。
++榜单页面为 `pages/youtube-video-rank.vue`。筛选条件通过 query 保存，包括 `platform/view/contentType/country/category/creatorSize/publishedRange/language/promotion/keyword`；旧 `evidenceVideoId` 参数会被移除，不再恢复抽屉。`view` 固定为 `account_breakout`，页面无单项判断切换；旧判断 URL 会归一并保留其他条件。覆盖状态不再作为榜单筛选：旧 `coverageStatus=any` 直接移除，非默认值移除时明确提示用户重新确认条件。当前 Demo 直接渲染筛选后的模拟合格集合，不复用生产榜单的滚动追加请求。
  
  榜单只依赖 [viralVideoDemo 组件说明](../../组件/viralVideoDemo/index.md)所列组件和样例数据。多模块适配目录 `integration/`、旧独立展示页、跨模块模拟状态与项目/配额存储不再作为保留能力。
  
-@@ -48,7 +56,7 @@ Demo 仅保留三平台榜单、两个独立判定视角、范围筛选及摘要
+@@ -48,8 +56,10 @@ Demo 仅保留三平台榜单、两个独立判定视角、范围筛选及摘要
  
  - 真实参考路由：`/youtube-video-rank`；本地 Demo 路由：`/youtube-video-rank?viralDemo=1`。页面保留在真实路由内，不另造正式产品入口。
  - 代码定位：本分支 `pages/youtube-video-rank.vue` 与 `components/viralVideoDemo/`；清理不代表其它模块已接入统一结果。
@@ -3220,8 +3274,11 @@ index 929a45408..483d5ef07 100644
  - 已知限制：未登录 `no-footer` 页壳有 1424px 最小宽度，1280 视口仍存在文档横向溢出。此前新标签页恢复筛选曾超时，本轮定向用例已通过；这不代表其它未覆盖的浏览器路径或生产行为均已验收。
  - 移动端、完整国际化、真实数据健康/覆盖、生产权限配额、性能与刷新 SLA 均未验收。模拟作品的原平台地址是关键词搜索，不冒充真实视频链接。
  
+ 需求全貌见[交付 README](/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/01_Product_Specs/viral_video_identification/README.md)，正式行为以计算规则、榜单页及其它模块的三个 SPEC 为准。
++
++批次仅供内部一致性和追溯：不提供结果批次筛选，不在结果信息或模拟提示展示批次编号。旧 batchId 参数直接移除，其他条件保留，不因该旧参数展开高级筛选；保留更新时间与榜单截止时间。
 diff --git "a/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\351\241\265\351\235\242/youtube-video-rank.md" "b/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\351\241\265\351\235\242/youtube-video-rank.md"
-index 5fbe8a5c4..5a7bcad20 100644
+index 5fbe8a5c4..fb23fd6df 100644
 --- "a/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\351\241\265\351\235\242/youtube-video-rank.md"
 +++ "b/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\351\241\265\351\235\242/youtube-video-rank.md"
 @@ -118,5 +118,5 @@
@@ -3231,9 +3288,9 @@ index 5fbe8a5c4..5a7bcad20 100644
 -开发环境下 `/youtube-video-rank?viralDemo=1` 使用 `components/viralVideoDemo/` 的固定样例、榜单表格、标签及依据抽屉；独立分支为 `codex/viral-video-demo`。不带开关或生产环境仍走原榜单逻辑。
 -本 Demo 只保留榜单，搜索、作者频道和加入监控入口保留展示并提示“不演示后续流程”，不执行跨模块导航或写入。其它模块仅按交付 SPEC 开发，不再注入 Demo 数据。范围和限制见 [爆款榜单 Demo 说明](viral-video-demo/index.md)。
 +开发环境下 `/youtube-video-rank?viralDemo=1` 使用 `components/viralVideoDemo/` 的固定样例、榜单表格与行内对照；独立分支为 `codex/viral-video-demo`。不带开关或生产环境仍走原榜单逻辑。
-+本 Demo 只保留账号突破榜单，无判定类型切换；单视频 AI 推荐关键词入口展示可选方案说明；内容标题/封面只展示源站跳转示意，已移除查看依据及抽屉；作者频道和加入监控入口保留展示并提示“不演示后续流程”，不执行跨模块导航或写入。其它模块仅按交付 SPEC 开发，不再注入 Demo 数据。范围和限制见 [爆款榜单 Demo 说明](viral-video-demo/index.md)。
++本 Demo 只保留账号突破榜单，无判定类型切换；单视频 AI 推荐关键词及其说明入口本期移除；内容标题/封面只展示源站跳转示意，已移除查看依据及抽屉；作者频道和加入监控入口保留展示并提示“不演示后续流程”，不执行跨模块导航或写入。其它模块仅按交付 SPEC 开发，不再注入 Demo 数据。范围和限制见 [爆款榜单 Demo 说明](viral-video-demo/index.md)。
 diff --git a/pages/youtube-video-rank.vue b/pages/youtube-video-rank.vue
-index 786e96c7d..8e09c17f0 100644
+index 786e96c7d..a4eaa1070 100644
 --- a/pages/youtube-video-rank.vue
 +++ b/pages/youtube-video-rank.vue
 @@ -63,7 +63,7 @@
@@ -3294,7 +3351,7 @@ index 786e96c7d..8e09c17f0 100644
            </select>
          </div>
          <button
-@@ -274,28 +247,6 @@
+@@ -274,40 +247,6 @@
              </option>
            </select>
          </div>
@@ -3320,10 +3377,30 @@ index 786e96c7d..8e09c17f0 100644
 -            </option>
 -          </select>
 -        </div>
-         <div class="filter-group">
-           <label for="viral-rank-batch">{{ $t('viralDemo.rank.batch') }}</label>
-           <select
-@@ -364,7 +315,6 @@
+-        <div class="filter-group">
+-          <label for="viral-rank-batch">{{ $t('viralDemo.rank.batch') }}</label>
+-          <select
+-            id="viral-rank-batch"
+-            v-model="viralFilters.batchId"
+-            class="filter-select"
+-            @change="handleFilterChange"
+-          >
+-            <option value="any">{{ $t('viralDemo.common.all') }}</option>
+-            <option :value="viralBatch.id">{{ viralBatch.id }}</option>
+-          </select>
+-        </div>
+         <div class="filter-group filter-group-keyword">
+           <label for="viral-rank-keyword">{{
+             $t('viralDemo.rank.keyword')
+@@ -341,7 +280,6 @@
+               formatRankTime(viralBatch.evaluationAsOf)
+             }}</span
+           >
+-          <span>{{ $t('viralDemo.rank.batch') }}：{{ viralBatch.id }}</span>
+         </p>
+         <div class="viral-context-action-row">
+           <p>
+@@ -364,7 +302,6 @@
          v-if="viralDemo"
          class="viral-rank-table"
          :records="viralRankRecords"
@@ -3331,7 +3408,7 @@ index 786e96c7d..8e09c17f0 100644
          @action="handleRankTableAction"
        />
        <div v-if="!viralDemo && !videoList.length" class="no-found-wrap">
-@@ -555,11 +505,6 @@
+@@ -555,11 +492,6 @@
          </div>
        </div>
      </section>
@@ -3343,7 +3420,7 @@ index 786e96c7d..8e09c17f0 100644
    </main>
  </template>
  
-@@ -575,14 +520,12 @@ import { isViralDemoRoute } from '@/assets/script/viralDemo/runtime'
+@@ -575,14 +507,12 @@ import { isViralDemoRoute } from '@/assets/script/viralDemo/runtime'
  import {
    BATCH,
    getRecords,
@@ -3358,7 +3435,7 @@ index 786e96c7d..8e09c17f0 100644
  import ViralFilterSummary from '@/components/viralVideoDemo/ViralFilterSummary.vue'
  import viralMessages from '@/components/viralVideoDemo/messages'
  import defaultThumbnail from '@/assets/image/video-monitor/table-empty-youtube.png'
-@@ -608,7 +551,6 @@ export default {
+@@ -608,7 +538,6 @@ export default {
    components: {
      ViralIntegrationNotice,
      ViralTable,
@@ -3366,7 +3443,7 @@ index 786e96c7d..8e09c17f0 100644
      ViralFilterSummary,
      CreatorEntryBand
    },
-@@ -628,14 +570,13 @@ export default {
+@@ -628,14 +557,12 @@ export default {
        },
        viralFilters: {
          platform: 'youtube',
@@ -3378,12 +3455,12 @@ index 786e96c7d..8e09c17f0 100644
 +        publishedRange: '30d',
          language: 'any',
          promotion: 'any',
-         batchId: 'any',
+-        batchId: 'any',
 -        coverageStatus: 'any',
          keyword: ''
        },
        localFilters: {
-@@ -678,22 +619,6 @@ export default {
+@@ -678,22 +605,6 @@ export default {
          instagram: ['instagram_reel']
        }[this.viralFilters.platform]
      },
@@ -3406,7 +3483,7 @@ index 786e96c7d..8e09c17f0 100644
      viralSummary() {
        if (!this.viralDemo) return []
        const values = [
-@@ -701,21 +626,8 @@ export default {
+@@ -701,21 +612,8 @@ export default {
            key: 'platform',
            label: this.$t('viralDemo.common.platform'),
            value: this.platformName(this.viralFilters.platform)
@@ -3429,7 +3506,7 @@ index 786e96c7d..8e09c17f0 100644
        if (this.viralFilters.contentType !== 'any')
          values.push({
            key: 'contentType',
-@@ -727,7 +639,7 @@ export default {
+@@ -727,7 +625,7 @@ export default {
        if (this.localFilters.country !== 'all')
          values.push({
            key: 'country',
@@ -3438,13 +3515,14 @@ index 786e96c7d..8e09c17f0 100644
            value: this.localFilters.country.toUpperCase()
          })
        if (this.localFilters.category !== 'all')
-@@ -741,10 +653,11 @@ export default {
+@@ -740,35 +638,29 @@ export default {
+         ['creatorSize', 'creatorSize'],
          ['publishedRange', 'publishedRange'],
          ['language', 'language'],
-         ['promotion', 'promotion'],
+-        ['promotion', 'promotion'],
 -        ['batchId', 'batch'],
 -        ['coverageStatus', 'coverageStatus']
-+        ['batchId', 'batch']
++        ['promotion', 'promotion']
        ].forEach(([key, messageKey]) => {
 -        if (this.viralFilters[key] !== 'any')
 +        if (
@@ -3453,25 +3531,46 @@ index 786e96c7d..8e09c17f0 100644
            values.push({
              key,
              label: this.$t(`viralDemo.rank.${messageKey}`),
-@@ -757,15 +670,12 @@ export default {
-                         nano: 'creatorNano',
-                         emerging: 'creatorEmerging',
-                         established: 'creatorEstablished',
+-            value:
+-              key === 'batchId'
+-                ? this.viralFilters[key]
+-                : this.$t(
+-                    `viralDemo.rank.${
+-                      {
+-                        nano: 'creatorNano',
+-                        emerging: 'creatorEmerging',
+-                        established: 'creatorEstablished',
 -                        '7d': 'last7Days',
-                         '30d': 'last30Days',
-+                        '90d': 'last90Days',
-                         en: 'languageEnglish',
-                         ja: 'languageJapanese',
-                         organic: 'organic',
+-                        '30d': 'last30Days',
+-                        en: 'languageEnglish',
+-                        ja: 'languageJapanese',
+-                        organic: 'organic',
 -                        sponsored: 'sponsored',
 -                        full: 'coverageFull',
 -                        partial: 'coveragePartial',
 -                        none: 'coverageNone'
-+                        sponsored: 'sponsored'
-                       }[this.viralFilters[key]]
-                     }`
-                   )
-@@ -790,7 +700,7 @@ export default {
+-                      }[this.viralFilters[key]]
+-                    }`
+-                  )
++            value: this.$t(
++              `viralDemo.rank.${
++                {
++                  nano: 'creatorNano',
++                  emerging: 'creatorEmerging',
++                  established: 'creatorEstablished',
++                  '30d': 'last30Days',
++                  '90d': 'last90Days',
++                  en: 'languageEnglish',
++                  ja: 'languageJapanese',
++                  organic: 'organic',
++                  sponsored: 'sponsored'
++                }[this.viralFilters[key]]
++              }`
++            )
+           })
+       })
+       if (this.viralFilters.keyword)
+@@ -790,7 +682,7 @@ export default {
        return filterRecords(getRecords(), {
          platform: this.viralFilters.platform,
          contentType: this.viralFilters.contentType,
@@ -3480,15 +3579,16 @@ index 786e96c7d..8e09c17f0 100644
            this.localFilters.country === 'all'
              ? 'any'
              : this.localFilters.country.toUpperCase(),
-@@ -800,7 +710,6 @@ export default {
+@@ -799,8 +691,6 @@ export default {
+         publishedRange: this.viralFilters.publishedRange,
          language: this.viralFilters.language,
          promotion: this.viralFilters.promotion,
-         batchId: this.viralFilters.batchId,
+-        batchId: this.viralFilters.batchId,
 -        coverageStatus: this.viralFilters.coverageStatus,
          keyword: this.viralFilters.keyword
        })
      },
-@@ -892,13 +801,16 @@ export default {
+@@ -892,13 +782,16 @@ export default {
              'us',
              'jp',
              'kr',
@@ -3507,7 +3607,7 @@ index 786e96c7d..8e09c17f0 100644
                : this.$t(`areaCodeMap.${value.toUpperCase()}`)
          }))
        const list = this.areaFilterList.map(item => {
-@@ -958,7 +870,10 @@ export default {
+@@ -958,7 +851,10 @@ export default {
      '$route.query': {
        immediate: true,
        handler() {
@@ -3519,7 +3619,7 @@ index 786e96c7d..8e09c17f0 100644
        }
      },
      '$route.path': {
-@@ -995,10 +910,7 @@ export default {
+@@ -995,10 +891,7 @@ export default {
          platform: ['youtube', 'tiktok', 'instagram'].includes(query.platform)
            ? query.platform
            : 'youtube',
@@ -3531,7 +3631,7 @@ index 786e96c7d..8e09c17f0 100644
          contentType: [
            'youtube_video',
            'youtube_short',
-@@ -1012,9 +924,9 @@ export default {
+@@ -1012,42 +905,66 @@ export default {
          )
            ? query.creatorSize
            : 'any',
@@ -3543,10 +3643,10 @@ index 786e96c7d..8e09c17f0 100644
          language: ['en', 'ja'].includes(query.language)
            ? query.language
            : 'any',
-@@ -1022,32 +934,55 @@ export default {
+         promotion: ['organic', 'sponsored'].includes(query.promotion)
            ? query.promotion
            : 'any',
-         batchId: query.batchId === BATCH.id ? query.batchId : 'any',
+-        batchId: query.batchId === BATCH.id ? query.batchId : 'any',
 -        coverageStatus: ['full', 'partial', 'none'].includes(
 -          query.coverageStatus
 -        )
@@ -3569,7 +3669,7 @@ index 786e96c7d..8e09c17f0 100644
 -          this.viralFilters.publishedRange !== 'any' ||
            this.viralFilters.language !== 'any' ||
            this.viralFilters.promotion !== 'any' ||
-           this.viralFilters.batchId !== 'any' ||
+-          this.viralFilters.batchId !== 'any' ||
 -          this.viralFilters.coverageStatus !== 'any' ||
            this.viralFilters.keyword
        )
@@ -3581,7 +3681,8 @@ index 786e96c7d..8e09c17f0 100644
 +        ['30d', '90d'].includes(query.publishedRange) &&
 +        !Object.prototype.hasOwnProperty.call(query, 'coverageStatus') &&
 +        !Object.prototype.hasOwnProperty.call(query, 'evidenceVideoId') &&
-+        !Object.prototype.hasOwnProperty.call(query, 'market')
++        !Object.prototype.hasOwnProperty.call(query, 'market') &&
++        !Object.prototype.hasOwnProperty.call(query, 'batchId')
 +      )
 +        return
 +      const normalized = {
@@ -3592,6 +3693,8 @@ index 786e96c7d..8e09c17f0 100644
 +      delete normalized.coverageStatus
 +      delete normalized.evidenceVideoId
 +      delete normalized.market
++      // 批次仅保留在内部结果上下文；旧URL不再恢复为用户筛选。
++      delete normalized.batchId
 +      this.replaceViralQuery(normalized)
 +      if (query.coverageStatus && query.coverageStatus !== 'any')
 +        this.$message.info(this.$t('viralDemo.rank.legacyCoverageRemoved'))
@@ -3611,7 +3714,7 @@ index 786e96c7d..8e09c17f0 100644
      replaceViralQuery(query) {
        this.$router.replace({ path: this.$route.path, query }).catch(error => {
          if (error.name !== 'NavigationDuplicated') throw error
-@@ -1064,35 +999,21 @@ export default {
+@@ -1064,48 +981,34 @@ export default {
        this.viralFilters.contentType = 'any'
        this.handleFilterChange()
      },
@@ -3633,7 +3736,7 @@ index 786e96c7d..8e09c17f0 100644
 +        this.viralFilters.publishedRange = '30d'
        if (!key || key === 'language') this.viralFilters.language = 'any'
        if (!key || key === 'promotion') this.viralFilters.promotion = 'any'
-       if (!key || key === 'batchId') this.viralFilters.batchId = 'any'
+-      if (!key || key === 'batchId') this.viralFilters.batchId = 'any'
 -      if (!key || key === 'coverageStatus')
 -        this.viralFilters.coverageStatus = 'any'
        if (!key || key === 'keyword') this.viralFilters.keyword = ''
@@ -3646,30 +3749,30 @@ index 786e96c7d..8e09c17f0 100644
 -      })
 -    },
      handleRankTableAction({ type, record }) {
-       if (type === 'keywords') {
-         // Demo 只解释可选方案，不调用 AI 或跳转到搜索。
-@@ -1104,8 +1025,18 @@ export default {
-         return
-       }
-       if (type === 'platform') {
--        if (process.client && record.originalUrl)
--          window.open(record.originalUrl, '_blank')
-+        this.$confirm(
+-      if (type === 'keywords') {
+-        // Demo 只解释可选方案，不调用 AI 或跳转到搜索。
++      if (type === 'platform') {
+         this.$confirm(
+-          this.$t('viralDemo.common.openSearchHint', { title: record.title }),
+-          this.$t('viralDemo.common.openSearch'),
 +          this.$t('viralDemo.common.openSourceHint', {
 +            title: record.title,
 +            platform: this.platformName(record.platform)
 +          }),
 +          this.$t('viralDemo.common.openSource'),
-+          { showCancelButton: false, closeOnClickModal: false }
-+        ).catch(() => {})
-+        return
-+      }
+           { showCancelButton: false, closeOnClickModal: false }
+         ).catch(() => {})
+         return
+       }
+-      if (type === 'platform') {
+-        if (process.client && record.originalUrl)
+-          window.open(record.originalUrl, '_blank')
 +      if (type === 'creator') {
 +        this.$message.info(this.$t('viralDemo.common.openCreatorHint'))
          return
        }
        if (type === 'monitor') this.showViralScopeNotice()
-@@ -1127,11 +1058,6 @@ export default {
+@@ -1127,11 +1030,6 @@ export default {
        return `https://i.ytimg.com/vi/${video.id}/mqdefault.jpg`
      },
      videoAnalyticsPath(videoId) {
@@ -3681,15 +3784,16 @@ index 786e96c7d..8e09c17f0 100644
        return `/youtube/video-analytics/${videoId}`
      },
      channelPath(channelId) {
-@@ -1204,6 +1130,7 @@ export default {
+@@ -1204,6 +1102,8 @@ export default {
            viralDemo: '1'
          }
          delete query.evidenceVideoId
 +        delete query.market
++        delete query.batchId
          this.replaceViralQuery(query)
          return
        }
-@@ -1689,6 +1616,9 @@ export default {
+@@ -1689,6 +1589,9 @@ export default {
    .workbench-breadcrumb {
      margin: 0 0 8px;
    }
@@ -3699,7 +3803,7 @@ index 786e96c7d..8e09c17f0 100644
    .workbench-heading {
      display: flex;
      justify-content: space-between;
-@@ -1754,30 +1684,6 @@ export default {
+@@ -1754,30 +1657,6 @@ export default {
        }
      }
    }
@@ -3731,7 +3835,7 @@ index 786e96c7d..8e09c17f0 100644
      width: 100%;
      justify-content: flex-start;
 diff --git a/scripts/viral-evidence-drawer.test.js b/scripts/viral-evidence-drawer.test.js
-index ba0b005e9..b6275bd1e 100644
+index ba0b005e9..3cc1f1a7d 100644
 --- a/scripts/viral-evidence-drawer.test.js
 +++ b/scripts/viral-evidence-drawer.test.js
 @@ -75,11 +75,17 @@ const Drawer = load('components/viralVideoDemo/ViralEvidenceDrawer.vue').default
@@ -3851,7 +3955,7 @@ index ba0b005e9..b6275bd1e 100644
    for (const id of ['yt-007', 'yt-008']) {
      const historic = await render(getRecord(id))
      assert.strictEqual(historic.querySelectorAll('.verdict-row-hit').length, 0)
-@@ -205,12 +245,91 @@ const render = async (record, query = {}, locale = 'zh') => {
+@@ -205,12 +245,93 @@ const render = async (record, query = {}, locale = 'zh') => {
        record.videoId
      )
    }
@@ -3906,8 +4010,10 @@ index ba0b005e9..b6275bd1e 100644
 +        messages.zh.viralDemo.rank.legacyCoverageRemoved,
 +        locale
 +      )
-+    assert(
-+      localized.viralDemo.common.openSearchHint.includes('{title}'),
++    assert.strictEqual(localized.viralDemo.common.openSearch, undefined, locale)
++    assert.strictEqual(
++      localized.viralDemo.common.openSearchHint,
++      undefined,
 +      locale
 +    )
 +    const tag = await render(getRecord('yt-001'), {}, locale, StatusTags)
@@ -4599,10 +4705,52 @@ index 9f3d25c79..fa7084776 100644
  )
  process.stdout.write(
 diff --git a/scripts/viral-video-rank-workbench.browser.js b/scripts/viral-video-rank-workbench.browser.js
-index b2b7aad6e..c5477040b 100644
+index b2b7aad6e..ca64d175b 100644
 --- a/scripts/viral-video-rank-workbench.browser.js
 +++ b/scripts/viral-video-rank-workbench.browser.js
-@@ -48,7 +48,6 @@ const base = 'http://127.0.0.1:3323'
+@@ -32,15 +32,37 @@ const base = 'http://127.0.0.1:3323'
+       .first()
+       .waitFor()
+   try {
+-    await page.goto(`${base}/youtube-video-rank?viralDemo=1`, {
+-      waitUntil: 'domcontentloaded',
+-      timeout: 60000
+-    })
++    await page.goto(
++      `${base}/youtube-video-rank?viralDemo=1&batchId=viral-demo-2026-09-16-01`,
++      {
++        waitUntil: 'domcontentloaded',
++        timeout: 60000
++      }
++    )
+     await tableReady(page)
+     check(
+       'rank title',
+       (await page.locator('h1').innerText()) === '爆款视频榜单'
+     )
++    check(
++      'batch selector and identifiers are absent from ranking UI',
++      (await page.locator('#viral-rank-batch').count()) === 0 &&
++        !/结果批次|viral-demo-/.test(await page.locator('main').innerText())
++    )
++    check(
++      'legacy batch query is removed without opening advanced filters',
++      !new URL(page.url()).searchParams.has('batchId') &&
++        !(await page.locator('#rank-advanced-filters').isVisible())
++    )
++    check(
++      'update and cutoff times remain visible',
++      (await page.locator('.workbench-meta').innerText()).includes(
++        '更新时间'
++      ) &&
++        (await page.locator('.context-meta').innerText()).includes(
++          '榜单截止时间'
++        )
++    )
+     const headers = await page
+       .locator('.viral-rank-table .el-table__header-wrapper .cell')
+       .allTextContents()
+@@ -48,7 +70,6 @@ const base = 'http://127.0.0.1:3323'
        '名次',
        '视频',
        '作者',
@@ -4610,7 +4758,7 @@ index b2b7aad6e..c5477040b 100644
        '播放量',
        '点赞数',
        '评论数',
-@@ -58,6 +57,54 @@ const base = 'http://127.0.0.1:3323'
+@@ -58,6 +79,54 @@ const base = 'http://127.0.0.1:3323'
          `column ${text}`,
          headers.some(x => x.trim() === text)
        )
@@ -4665,7 +4813,7 @@ index b2b7aad6e..c5477040b 100644
      check(
        'directory entry removed',
        (await page
-@@ -69,9 +116,14 @@ const base = 'http://127.0.0.1:3323'
+@@ -69,9 +138,14 @@ const base = 'http://127.0.0.1:3323'
        !/HOT|作者发现/.test(await page.locator('main').innerText())
      )
      check(
@@ -4682,60 +4830,97 @@ index b2b7aad6e..c5477040b 100644
      )
      const initialUrl = page.url()
      check(
-@@ -103,8 +155,9 @@ const base = 'http://127.0.0.1:3323'
-       'keyword notice does not pretend to generate or search',
-       keywordCopy.includes('不生成关键词、不执行搜索')
+@@ -79,60 +153,80 @@ const base = 'http://127.0.0.1:3323'
+       (await page.locator('.viral-search-bridge').count()) === 0
      )
-+    // 截图等待允许交互取消动画；页面运行错误仍由pageerror单独记录断言。
-     await keywordNotice.evaluate(async element => {
--      await Promise.all(
-+      await Promise.allSettled(
-         element
-           .getAnimations({ subtree: true })
-           .map(animation => animation.finished)
-@@ -117,22 +170,56 @@ const base = 'http://127.0.0.1:3323'
-     check('keyword action stays on ranking', page.url() === initialUrl)
-     await page.locator('.author-cell').first().click()
-     check('creator action stays on ranking', page.url() === initialUrl)
-+    const beforePages = browser.contexts()[0].pages().length
-     await page.locator('.video-cell').first().click()
--    await page.getByRole('dialog', { name: '识别依据', exact: true }).waitFor()
-+    const sourceNotice = page.locator('.el-message-box__wrapper:visible')
-+    await sourceNotice.waitFor()
-+    const sourceCopy = await sourceNotice.innerText()
+     await page.locator('.el-table__fixed-right .more-button').first().click()
+-    await page
+-      .locator('.el-dropdown-menu:visible')
+-      .getByText('AI推荐关键词', { exact: true })
+-      .click()
+-    const keywordNotice = page.locator('.el-message-box__wrapper:visible')
+-    await keywordNotice.waitFor()
+-    const keywordCopy = await keywordNotice.innerText()
++    const actionMenu = page.locator('.el-dropdown-menu:visible')
++    await actionMenu.waitFor()
 +    check(
-+      'video link explains source and preserves context',
-+      sourceCopy.includes('夏日旅行攻略：三天路线') &&
-+        sourceCopy.includes('YouTube') &&
-+        sourceCopy.includes('新标签页') &&
-+        sourceCopy.includes('保留当前榜单')
++      'AI keyword recommendation is absent from ranking actions',
++      (await actionMenu.getByText('AI推荐关键词', { exact: true }).count()) ===
++        0
 +    )
      check(
--      'evidence remains usable',
--      await page.locator('.result-overview').isVisible()
-+      'video link only demonstrates navigation',
-+      page.url() === initialUrl &&
-+        browser.contexts()[0].pages().length === beforePages &&
-+        sourceCopy.includes('仅展示跳转示意')
-+    )
-+    check(
-+      'video link does not open evidence',
-+      (await page.locator('.viral-evidence-drawer').count()) === 0
-+    )
-+    await sourceNotice.evaluate(async element => {
+-      'keyword notice identifies the source video',
+-      keywordCopy.includes('夏日旅行攻略：三天路线')
++      'ranking menu retains monitoring without AI placeholders',
++      (await actionMenu.locator('.el-dropdown-menu__item').allTextContents())
++        .map(text => text.trim())
++        .join('|') === '加入监控'
+     )
++    await actionMenu.evaluate(async element => {
 +      await Promise.allSettled(
 +        element
 +          .getAnimations({ subtree: true })
 +          .map(animation => animation.finished)
 +      )
 +    })
++    await page.screenshot({ path: `${out}/actions-menu-1440.png` })
++    await page.locator('h1').click()
++    await page.locator('.author-cell').first().click()
++    check('creator action stays on ranking', page.url() === initialUrl)
++    const beforePages = browser.contexts()[0].pages().length
++    await page.locator('.video-cell').first().click()
++    const sourceNotice = page.locator('.el-message-box__wrapper:visible')
++    await sourceNotice.waitFor()
++    const sourceCopy = await sourceNotice.innerText()
+     check(
+-      'keyword notice explains reuse and confirmation',
+-      keywordCopy.includes('复用现有 AI 推荐关键词能力') &&
+-        keywordCopy.includes('确认或修改')
++      'video link explains source and preserves context',
++      sourceCopy.includes('夏日旅行攻略：三天路线') &&
++        sourceCopy.includes('YouTube') &&
++        sourceCopy.includes('新标签页') &&
++        sourceCopy.includes('保留当前榜单')
+     )
+     check(
+-      'keyword notice explains optional delivery and hiding',
+-      keywordCopy.includes('由研发评估') && keywordCopy.includes('隐藏入口')
++      'video link only demonstrates navigation',
++      page.url() === initialUrl &&
++        browser.contexts()[0].pages().length === beforePages &&
++        sourceCopy.includes('仅展示跳转示意')
+     )
+     check(
+-      'keyword notice does not pretend to generate or search',
+-      keywordCopy.includes('不生成关键词、不执行搜索')
++      'video link does not open evidence',
++      (await page.locator('.viral-evidence-drawer').count()) === 0
+     )
+-    await keywordNotice.evaluate(async element => {
+-      await Promise.all(
++    await sourceNotice.evaluate(async element => {
++      await Promise.allSettled(
+         element
+           .getAnimations({ subtree: true })
+           .map(animation => animation.finished)
+       )
+     })
+-    await page.screenshot({ path: `${out}/ai-keywords-note-1440.png` })
+-    await keywordNotice
 +    await page.waitForFunction(() => !document.querySelector('.el-message'))
 +    await page.screenshot({ path: `${out}/source-link-note-1440.png` })
 +    await sourceNotice
-+      .getByRole('button', { name: '确定', exact: true })
-+      .click()
+       .getByRole('button', { name: '确定', exact: true })
+       .click()
+-    check('keyword action stays on ranking', page.url() === initialUrl)
+-    await page.locator('.author-cell').first().click()
+-    check('creator action stays on ranking', page.url() === initialUrl)
+-    await page.locator('.video-cell').first().click()
+-    await page.getByRole('dialog', { name: '识别依据', exact: true }).waitFor()
 +    await page.locator('.el-table__fixed-right .more-button').first().click()
-+    check(
+     check(
+-      'evidence remains usable',
+-      await page.locator('.result-overview').isVisible()
 +      'duplicate source menu item removed',
 +      (await page
 +        .locator('.el-dropdown-menu:visible')
@@ -4758,7 +4943,7 @@ index b2b7aad6e..c5477040b 100644
      )
      check(
        'no monitoring session written',
-@@ -140,36 +227,27 @@ const base = 'http://127.0.0.1:3323'
+@@ -140,36 +234,27 @@ const base = 'http://127.0.0.1:3323'
          () => sessionStorage.getItem('viral-demo-monitor') === null
        )
      )
@@ -4803,7 +4988,7 @@ index b2b7aad6e..c5477040b 100644
      )
      await page.getByRole('button', { name: '高级筛选', exact: true }).click()
      await page
-@@ -211,6 +289,35 @@ const base = 'http://127.0.0.1:3323'
+@@ -211,6 +296,35 @@ const base = 'http://127.0.0.1:3323'
            .inputValue()) === 'en'
      )
      await restored.close()
