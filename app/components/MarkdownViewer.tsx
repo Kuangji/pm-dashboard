@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import remarkToc from 'remark-toc'
@@ -10,14 +11,46 @@ import 'highlight.js/styles/github.css'
 import 'github-markdown-css/github-markdown-light.css'
 import { MermaidDiagram } from './MermaidDiagram'
 import { getCodeLanguage, isMermaidCodeBlock } from './mermaid-utils'
+import { scrollToAnchor } from '@/app/lib/anchor-scroll'
 
 interface MarkdownViewerProps {
   content: string
 }
 
 export function MarkdownViewer({ content }: MarkdownViewerProps) {
+  useEffect(() => {
+    let frame = 0
+
+    const syncAnchor = () => {
+      window.cancelAnimationFrame(frame)
+      frame = window.requestAnimationFrame(() => {
+        scrollToAnchor(window.location.hash)
+      })
+    }
+
+    syncAnchor()
+    window.addEventListener('hashchange', syncAnchor)
+
+    return () => {
+      window.cancelAnimationFrame(frame)
+      window.removeEventListener('hashchange', syncAnchor)
+    }
+  }, [content])
+
+  function handleAnchorClick(event: React.MouseEvent<HTMLDivElement>) {
+    if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+
+    const target = event.target instanceof Element ? event.target.closest('a[href^="#"]') : null
+    const href = target?.getAttribute('href')
+    if (!href) return
+
+    window.requestAnimationFrame(() => {
+      scrollToAnchor(href)
+    })
+  }
+
   return (
-    <div className="markdown-body" style={{
+    <div className="markdown-body" onClick={handleAnchorClick} style={{
       backgroundColor: 'transparent',
       color: '#24292f',
       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif',
@@ -63,6 +96,9 @@ export function MarkdownViewer({ content }: MarkdownViewerProps) {
           font-weight: 600;
           color: #57606a;
           margin: 24px 0 16px;
+        }
+        .markdown-body :is(h1, h2, h3, h4, h5, h6) {
+          scroll-margin-top: 16px;
         }
         .markdown-body p {
           margin-bottom: 16px;
