@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-10-29T02:46:45.057Z",
+  "updatedAt": "2026-10-29T03:09:43.713Z",
   "navigation": {
     "docs": [
       {
@@ -55,6 +55,16 @@
                 "path": "02-project-documents/account_permission_collaboration/README.md",
                 "slug": "02-project-documents/account_permission_collaboration/README.md",
                 "title": "聚星账号权限、协作与配额管理 | README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "_sync_inbox.md",
+                "path": "02-project-documents/account_permission_collaboration/_sync_inbox.md",
+                "slug": "02-project-documents/account_permission_collaboration/_sync_inbox.md",
+                "title": "账号权限协作｜实现审计回流 | _sync_inbox.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
@@ -124,6 +134,16 @@
                 "path": "02-project-documents/account_permission_collaboration/spec_v0.md",
                 "slug": "02-project-documents/account_permission_collaboration/spec_v0.md",
                 "title": "账号权限、协作和配额管理 Spec v0 | spec_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "story_demo_equivalence_review_2026-10-29.md",
+                "path": "02-project-documents/account_permission_collaboration/story_demo_equivalence_review_2026-10-29.md",
+                "slug": "02-project-documents/account_permission_collaboration/story_demo_equivalence_review_2026-10-29.md",
+                "title": "Story 与功能审阅 Demo 等价性检查 | story_demo_equivalence_review_2026-10-29.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
