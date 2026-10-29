@@ -1,17 +1,17 @@
 {
   "source": "06_Prototypes/account_permission_review_demo",
   "input": "01_Product_Specs/account_permission_collaboration/phase2_input_v0.md",
-  "browserVerifiedAt": "2026-10-26T03:48:35.753Z",
+  "browserVerifiedAt": "2026-10-28T11:01:01.555Z",
   "files": {
     "index.html": "c7d90864af7eaedd4e1be57e54e6736fa3ce246bc8cb0a1d92c484517f3b8b71",
     "styles.css": "28fc2335e33acd84ff50d495d71ec4d989b3f787837fa83fb6617f412a2d1bfb",
     "icons.js": "32d501e1d85830bffc2e9cc9d5698b57bba4c1a239731b11a6d65b45813934a2",
-    "review-data.js": "2bb4b4cecc365756d64a3b992c57cfed208650b593c1ff00681e6f82f4ee0d91",
+    "review-data.js": "32051436cf4242f010700b224a0e83f1d7cee7fd341451a630ddd974e4487b1f",
     "engine.js": "dc02a2bad7df7f397dc8303da6a5297102ca745721a4b4cb7a4459bac3074b1f",
     "app.js": "2e050e85045e42299b4cf8bd6db93514c31f285a36e8f37b69acd11bcb461f9c",
     "publication.js": "296f7d23496b255ab753da4bc9d0734d4d0f363467d158b69d0f3a501f523f32",
     "demo.json": "05970fc8000a81c3cdc8481f966b46eb97e92ab75944739084d2d285ce625d39",
     "preview.png": "5f572709c2ca5070573b4eff133f5f806011ad64aca91c135c5bc0757db1fcf6",
-    "reference/phase2_input_v0.md": "e2505850071962dde4279236a7852f5103d345c8652357a9f61828025ea631c9"
+    "reference/phase2_input_v0.md": "aa152cbdc3c95e30b7ec21bf4299255fb0e9f5809fc4c2777d8905b8560197f5"
   }
 }

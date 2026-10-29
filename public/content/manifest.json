@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-10-27T08:07:05.116Z",
+  "updatedAt": "2026-10-29T02:46:45.057Z",
   "navigation": {
     "docs": [
       {
@@ -90,6 +90,16 @@
               },
               {
                 "type": "file",
+                "name": "phase2_input_v0.md",
+                "path": "02-project-documents/account_permission_collaboration/phase2_input_v0.md",
+                "slug": "02-project-documents/account_permission_collaboration/phase2_input_v0.md",
+                "title": "聚星账号体系改造｜一期后统一版本 Input v0 | phase2_input_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
                 "name": "pm_confirmation_code_evidence_2026-08-18.md",
                 "path": "02-project-documents/account_permission_collaboration/pm_confirmation_code_evidence_2026-08-18.md",
                 "slug": "02-project-documents/account_permission_collaboration/pm_confirmation_code_evidence_2026-08-18.md",
@@ -114,6 +124,16 @@
                 "path": "02-project-documents/account_permission_collaboration/spec_v0.md",
                 "slug": "02-project-documents/account_permission_collaboration/spec_v0.md",
                 "title": "账号权限、协作和配额管理 Spec v0 | spec_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "use_case_stories_v0.md",
+                "path": "02-project-documents/account_permission_collaboration/use_case_stories_v0.md",
+                "slug": "02-project-documents/account_permission_collaboration/use_case_stories_v0.md",
+                "title": "聚星账号权限｜业务故事审阅稿 v0 | use_case_stories_v0.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
