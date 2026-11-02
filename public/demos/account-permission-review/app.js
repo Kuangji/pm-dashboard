@@ -9,9 +9,21 @@
   const nav = [
     {label:'组织管理',items:[['dashboard','LayoutDashboard','使用情况'],['members','Users','成员与邀请'],['groups','Layers','业务分组'],['policies','Settings2','组织策略'],['quota','Gauge','配额与用量'],['funds','Wallet','支付资金'],['tasks','ArrowRightLeft','移交与迁移'],['history','History','通知与记录']]},
     {label:'业务模块',items:[['email','Mail','邮件项目'],['resource','Folder','收藏夹'],['monitor','Video','内容监控'],['crm','Contact','CRM'],['payment','CreditCard','跨境支付'],['message','MessagesSquare','消息中心'],['search','Search','创作者搜索']]},
-    {label:'功能审阅',items:[['review','ClipboardCheck','覆盖与待确认']]}
+    {label:'功能审阅',items:[['stories','ClipboardCheck','业务故事'],['review','ClipboardCheck','覆盖与待确认']]}
   ];
   const $ = q => document.querySelector(q);
+  const roleCopy = text => String(text).replace(/T2\s*[·（(]\s*组长[）)]?/g,'组长').replace(/T2/g,'组长');
+  function localizeRoleCopy(container) {
+    const walker=document.createTreeWalker(container,NodeFilter.SHOW_TEXT);
+    let node;
+    while((node=walker.nextNode())) {
+      if(node.parentElement?.matches('script,style'))continue;
+      if(node.nodeValue.includes('T2'))node.nodeValue=roleCopy(node.nodeValue);
+    }
+    container.querySelectorAll('[title],[aria-label],[placeholder]').forEach(el=>{
+      for(const attr of ['title','aria-label','placeholder'])if(el.hasAttribute(attr))el.setAttribute(attr,roleCopy(el.getAttribute(attr)));
+    });
+  }
   const esc = v => String(v == null ? '' : v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const icon = name => window.ReviewIcons[name] || '';
   const n = v => v === Infinity || v === null ? '不追加上限' : Number(v || 0).toLocaleString('en-US');
@@ -40,12 +52,12 @@
   const select = (key,content) => '<select name="'+key+'">'+content+'</select>';
   const toggle = (key,value,disabled,label) => '<label class="switch"><input type="checkbox" data-policy="'+key+'" '+(value?'checked ':'')+(disabled?'disabled ':'')+'aria-label="'+esc(label)+'"><span class="switch-track"></span><span>'+ (value?'已开启':'已关闭') +'</span></label>';
   let toastTimer;
-  function toast(message,ok) { clearTimeout(toastTimer); const t=$('#toast');t.className='toast '+(ok===false?'error':'');t.textContent=message;toastTimer=setTimeout(()=>{t.className='';t.textContent='';},5000); }
+  function toast(message,ok) { clearTimeout(toastTimer); const t=$('#toast');t.className='toast '+(ok===false?'error':'');t.textContent=roleCopy(message);toastTimer=setTimeout(()=>{t.className='';t.textContent='';},5000); }
   function perform(type,payload,close) {
     const r=E.act(s,ui.actor,type,payload);
     ui.lastResult={type,message:r.message,ok:r.ok};
     if(r.ok) { if(close) $('#dialog').close(); render(); toast(r.message); }
-    else { const error=$('#form-error'); if(error && $('#dialog').open)error.textContent=r.message; else toast(r.message,false); }
+    else { const error=$('#form-error'); if(error && $('#dialog').open)error.textContent=roleCopy(r.message); else toast(r.message,false); }
     return r;
   }
   function download(filename,content,mime) {
@@ -62,12 +74,13 @@
       '<div class="review-strip"><div class="left">'+icon('ClipboardCheck')+'<strong>功能审阅 Demo</strong><span>独立模拟 · 所有数值为示例 · 修改仅在本次页面内生效</span></div><div class="inline">'+button('审阅清单','review',null,'')+button(icon('RotateCcw')+' 重置','reset',null,'')+'</div></div>'+
       '<header class="product-header"><div class="brand"><span class="brand-mark">N</span>聚星<small>星野品牌 · 示例组织</small></div><div class="identity-controls"><div class="identity-field"><label for="actor-select">体验账号</label><select id="actor-select" aria-label="体验账号">'+options(s.users,ui.actor,u=>u.name+' · '+orgNames[u.orgRole]+(u.status!=='ACTIVE'?' · '+statusNames[u.status]:''))+'</select></div><div class="identity-field"><label for="group-select">业务组</label><select id="group-select" aria-label="当前业务组">'+(ui.group?options(s.groups.filter(g=>active(ui.actor,g.id)),ui.group):'<option>暂无有效业务组</option>')+'</select></div><span class="avatar orange">'+esc(a.name.slice(-2))+'</span></div></header>'+
       '<div class="layout"><aside class="sidebar">'+nav.map(sec=>'<div class="nav-section"><div class="nav-title">'+sec.label+'</div>'+sec.items.map(item=>'<button class="nav-item '+(ui.page===item[0]?'active':'')+'" data-page="'+item[0]+'" '+(ui.page===item[0]?'aria-current="page"':'')+'>'+icon(item[1])+'<span>'+item[2]+'</span></button>').join('')+'</div>').join('')+'<div class="nav-note">一期后统一版本<br>Input 功能审阅 · 2026.10<br><span class="status-line">非线上 UI / 非定稿设计</span></div></aside>'+
-      '<div class="workspace"><main class="main"><div class="breadcrumbs">'+icon(scope==='组织管理'?'Building2':'Layers')+scope+icon('ChevronRight')+title()+'</div><div class="page-header"><div><h1>'+title()+'</h1><p>'+pageSubtitle()+'</p></div><div class="page-actions">'+pageActions()+'</div></div>'+pageContent()+'</main>'+rulePanel(m)+'</div></div>';
+      '<div class="workspace"><main class="main"><div class="breadcrumbs">'+icon(scope==='组织管理'?'Building2':'Layers')+scope+icon('ChevronRight')+title()+'</div><div class="page-header"><div><h1>'+title()+'</h1><p>'+pageSubtitle()+'</p></div><div class="page-actions">'+pageActions()+'</div></div>'+relatedStories()+pageContent()+'</main>'+rulePanel(m)+'</div></div>';
+    localizeRoleCopy($('#app'));
     window.ReviewApp={getState:()=>s,getUI:()=>ui,navigate,render,act:(type,payload)=>perform(type,payload)};
   }
   function pageSubtitle() {
     const texts={dashboard:'按组织、业务组与成员，了解工作活动、业务结果及资源使用。',members:'组织身份决定管理能力，组内身份决定业务上下文。',groups:'一个账号可加入多个组，每组可有多名组长。',policies:'组织级策略统一生效；单个项目的协作在业务模块中设置。',quota:'按组织、组、组成员逐层校验，额度不授予对象访问权限。',funds:'组织钱包、部门分配与个人上限，共同约束每一笔支付。',tasks:'先失权，后移交；每一步保留状态和操作结果。',history:'模拟操作记录与完成通知，贯穿设置、协作和移交。',review:'逐项覆盖原 Input、补充遗留与本版待确认决策。',message:'创建来源筛选与会话协作边界。',search:'联系与合作范围的增量筛选。'};
-    return texts[ui.page] || '当前业务组：'+gname(ui.group)+' · 对象归组稳定，组织管理身份不默认授予业务权限。';
+    return ui.page==='stories'?'八段业务历程：从加入团队到协作、人员变化与组织生命周期。':texts[ui.page] || '当前业务组：'+gname(ui.group)+' · 对象归组稳定，组织管理身份不默认授予业务权限。';
   }
   function pageActions() {
     if(ui.page==='members')return button(icon('Plus')+' 邀请成员','invite',null,'primary',!admin(),'示意基线：Owner/Admin 邀请；T2 邀请待确认');
@@ -78,6 +91,7 @@
     return '';
   }
   function pageContent() {
+    if(ui.page==='stories')return storiesPage();
     if(actor().status!=='ACTIVE'&&!['tasks','history','review'].includes(ui.page))return notice('当前账号已失去有效组织身份','本选择器仅用于审阅失权状态；不能继续查看或操作组织业务。请切换其他有效账号。','warning');
     if(!ui.group&&(moduleNames[ui.page]||['message','search','quota'].includes(ui.page)))return notice('没有有效业务组身份','归档或退组后无法继续该组业务，可到移交与迁移查看处理状态。','warning');
     const pages={dashboard:dashboard,members:membersPage,groups:groupsPage,policies:policiesPage,quota:quotaPage,funds:fundsPage,tasks:tasksPage,history:historyPage,review:reviewPage,message:messagePage,search:searchPage};
@@ -93,6 +107,29 @@
       '<div class="rule-section"><h3>场景跳转</h3>'+[['invite','members','邀请与配置'],['collaboration','email','Owner、协作者与组长'],['payment','payment','协作填写与执行分离'],['removal','tasks','退组、失权与移交']].map(x=>'<button class="scenario-link" data-scenario="'+x[0]+'">'+x[2]+icon('ArrowRight')+'</button>').join('')+'</div>'+
       (ui.lastResult?'<div class="rule-section"><h3>最近一次操作</h3><p class="'+(ui.lastResult.ok?'':'danger-text')+'">'+esc(ui.lastResult.message)+'</p></div>':'')+
       '<div class="rule-source">规则来源：统一版本 Input '+esc(p.inputSection || '')+'<br><a href="'+esc(window.ReviewPublication.inputUrl)+'" target="_blank" rel="noopener">查看 Input 原文 '+icon('ArrowUpRight')+'</a></div></aside>';
+  }
+  function storyButton(story) {
+    return '<button class="btn text story-link" data-story="'+story.id+'">'+esc(story.id+' '+story.title)+icon('ArrowUpRight')+'</button>';
+  }
+  function relatedStories() {
+    if(ui.page==='stories')return '';
+    const related=(window.ReviewStories?.stories || []).filter(x=>x.pages.includes(ui.page));
+    if(!related.length)return '';
+    const hints=(window.ReviewStories.reviewHints || []).filter(x=>x.pages.includes(ui.page));
+    return '<details class="related-stories" '+(ui.storyId?'open':'')+'><summary>相关业务故事 · '+related.length+'</summary><div class="actions">'+related.map(storyButton).join('')+'</div><p class="muted">流程按故事说明审阅；局部按钮不验证持久化、真实任务、时钟或账务。'+(ui.storyId?' 当前阅读：'+esc(ui.storyId):'')+'</p></details>'+hints.map(x=>notice(esc(x.title),esc(x.note))).join('');
+  }
+  function storyMarkup(body) {
+    const lines=String(body || '').split('\n');let html='',rows=[];
+    const flush=()=>{if(rows.length){html+=table(rows[0],rows.slice(1).filter(r=>!r.every(c=>/^[- :]+$/.test(c))).map(r=>'<tr>'+r.map(c=>'<td>'+c+'</td>').join('')+'</tr>'));rows=[];}};
+    for(const line of lines){if(line.trim().startsWith('|')){rows.push(line.trim().slice(1,-1).split('|').map(x=>esc(x.trim())));continue;}flush();if(line.trim())html+='<p>'+esc(line.replace(/\*\*/g,'').replace(/\[([^\]]+)\]\([^)]+\)/g,'$1'))+'</p>';}
+    flush();return html;
+  }
+  function storiesPage() {
+    const data=window.ReviewStories,all=data.stories;
+    const selected=all.find(x=>x.id===ui.storyId);
+    const filtered=all.filter(x=>(!ui.storyChapter||String(x.chapter)===ui.storyChapter)&&(!ui.storyQuery||(x.id+' '+x.title+' '+x.body).toLowerCase().includes(ui.storyQuery.toLowerCase())));
+    const detail=selected?'<article class="story-detail" id="story-detail" tabindex="-1"><div class="section-heading"><h2>'+esc(selected.id+' '+selected.title)+'</h2>'+button(icon('X'),'closeStory',null,'icon',false,'收起故事')+'</div><div class="actions">'+selected.pages.map(p=>'<button class="btn" data-story-page="'+p+'">'+esc(nav.flatMap(n=>n.items).find(x=>x[0]===p)?.[2] || p)+icon('ArrowRight')+'</button>').join('')+'</div>'+notice('审阅示意边界',esc(selected.demoLimit || '按下列故事审阅流程、参与身份与规则；模块中的局部模拟不等于完整产品状态机。'))+'<div class="story-body">'+storyMarkup(selected.body || (selected.paragraphs || []).join('\n\n'))+'</div></article>':'';
+    return notice('按业务历程审阅','先看人物、过程、结果与待定分支，再进入对应功能区域；无需依赖数据持久化才能理解流程。')+detail+'<div class="filterbar"><input id="story-query" type="search" aria-label="搜索业务故事" placeholder="搜索故事、身份或业务" value="'+esc(ui.storyQuery || '')+'"><select id="story-chapter" aria-label="故事章节"><option value="">全部章节</option>'+data.chapters.map(c=>'<option value="'+c.id+'" '+(String(c.id)===ui.storyChapter?'selected':'')+'>'+esc(c.title)+'</option>').join('')+'</select><span class="muted">'+filtered.length+' / '+all.length+' 个故事</span></div>'+data.chapters.map(c=>{const items=filtered.filter(x=>String(x.chapter)===String(c.id));return items.length?section(esc(c.title),'<div class="story-list">'+items.map(x=>'<div class="story-row">'+storyButton(x)+'<small>'+esc(x.status)+'</small><div class="actions">'+x.pages.map(p=>'<button class="btn text" data-story-target="'+x.id+'|'+p+'">'+esc(nav.flatMap(n=>n.items).find(n=>n[0]===p)?.[2] || p)+icon('ArrowRight')+'</button>').join('')+'</div></div>').join('')+'</div>'):'';}).join('')+(filtered.length?'':empty('没有匹配的故事。'));
   }
   function probeResult(id) {
     const a=E.access(s,ui.actor,id);
@@ -192,14 +229,14 @@
     const done=Object.values(ui.reviews).filter(v=>v==='通过').length;
     const list=D.topics.filter(t=>ui.reviewFilter==='all'||ui.reviewFilter==='pending'&&t.status==='待确认'||ui.reviewFilter==='unread'&&!ui.reviews[t.id]);
     return notice('覆盖不等于定案','原 26 项议题与 10 项补充议题映射到具体页面。待确认部分提供问题和候选入口，不伪造已经闭环的实现。')+
-      '<div class="stats">'+stat('审阅议题',D.topics.length,'原 26 项 + 补充 10 项')+stat('待确认决策',D.decisions.length,'跨域问题不重复计为新功能')+stat('已标记通过',done,'仅本次会话的审阅意见')+stat('页面入口',Object.keys(D.pages).length,'组织管理 / 模块 / 评审')+'</div>'+
+      '<div class="stats">'+stat('审阅议题',D.topics.length,'原 26 项 + 补充 10 项')+stat('待确认决策',D.decisions.filter(d=>d.id!=='D15').length,'D15 主流程已确认')+stat('已标记通过',done,'仅本次会话的审阅意见')+stat('页面入口',Object.keys(D.pages).length,'组织管理 / 模块 / 评审')+'</div>'+
       '<div class="filterbar"><select id="review-filter" aria-label="覆盖项筛选"><option value="all">全部覆盖项</option><option value="pending" '+(ui.reviewFilter==='pending'?'selected':'')+'>只看规则待确认</option><option value="unread" '+(ui.reviewFilter==='unread'?'selected':'')+'>只看未审阅</option></select><span class="push muted">审阅意见不会修改 Input</span></div>'+
       '<div class="review-list">'+list.map(t=>'<article class="review-item"><div><span class="caption">议题 '+esc(t.id)+'</span> '+tag(t.status,t.status==='待确认'?'orange':t.status==='回归'?'blue':'green')+'<h2>'+esc(t.title)+'</h2><p>'+esc(t.note)+'</p><small>操作检查：'+t.actions.map(esc).join(' → ')+'</small><div class="actions">'+goto(t.page,'到页面试操作')+'</div></div><div class="review-note"><select aria-label="议题 '+t.id+' 审阅状态" data-review="'+t.id+'">'+['未审阅','通过','有疑问','需要调整'].map(v=>'<option '+((ui.reviews[t.id] || '未审阅')===v?'selected':'')+'>'+v+'</option>').join('')+'</select><textarea data-note="'+t.id+'" aria-label="议题 '+t.id+' 审阅意见" placeholder="记录问题或修改意见">'+esc(ui.notes[t.id] || '')+'</textarea></div></article>').join('')+'</div>'+
-      section('待确认决策',D.decisions.map(d=>'<div class="decision"><div>'+tag(d.id,'outline')+'<h3>'+esc(d.title)+'</h3><p>'+esc(d.proposal)+'</p></div>'+button('展开并记录','decision',d.id,'')+'</div>').join(''));
+      section('待确认决策',D.decisions.filter(d=>d.id!=='D15').map(d=>'<div class="decision"><div>'+tag(d.id,'outline')+'<h3>'+esc(d.title)+'</h3><p>'+esc(d.proposal)+'</p></div>'+button('展开并记录','decision',d.id,'')+'</div>').join(''))+section('已确认主流程',storyButton(window.ReviewStories.stories.find(x=>x.id==='S40'))+storyButton(window.ReviewStories.stories.find(x=>x.id==='S41')));
   }
   function modulePage() {
     const mod=ui.page;
-    const available=s.projects.filter(p=>p.module===mod&&p.groupId===ui.group&&p.status!=='DELETED'&&(E.access(s,ui.actor,p.id).read || mod==='crm'&&lead()&&!p.assigneeId));
+    const available=s.projects.filter(p=>p.module===mod&&p.groupId===ui.group&&p.status!=='DELETED'&&(E.access(s,ui.actor,p.id).read || mod==='crm'&&lead()));
     let p=available.find(x=>x.id===ui.project) || available[0];ui.project=p?.id || null;
     return '<div class="tabbar"><button data-tab="objects" class="'+(ui.tab==='objects'?'active':'')+'">'+(mod==='crm'?'合作记录':'项目与协作')+'</button><button data-tab="settings" class="'+(ui.tab==='settings'?'active':'')+'">模块内设置</button>'+(mod==='payment'?'<button data-tab="waiting" class="'+(ui.tab==='waiting'?'active':'')+'">待组长审核 '+s.projects.filter(x=>x.module==='payment'&&x.groupId===ui.group&&x.status==='WAITING_REVIEW').length+'</button>':'')+'</div>'+
       (ui.tab==='settings'?moduleSettings(mod):ui.tab==='waiting'?paymentWaiting():
@@ -207,7 +244,7 @@
   }
   function objectDetail(p) {
     const r=E.access(s,ui.actor,p.id);
-    if(!r.read&&p.module==='crm')return notice('此记录尚无 Assignee','当前 T2 仅可执行同组指派，不因此获得记录全部业务读写。')+button('指派对接人','assignCRM',p.id,'primary',!lead(p.groupId));
+    if(!r.read&&p.module==='crm')return notice('CRM 分工 · 不开放记录明细','当前对接人：'+name(p.assigneeId)+'。同组 T2 可指派或改派，不因此获得完整业务读写。')+button(p.assigneeId?'改派对接人':'指派对接人','assignCRM',p.id,'primary',!lead(p.groupId));
     const crm=p.module==='crm',payment=p.module==='payment';
     return '<div class="detail-top"><div><div class="caption">'+moduleNames[p.module]+' · '+gname(p.groupId)+'</div><h2>'+esc(p.name)+'</h2></div>'+tag(r.role==='Viewer'?'同组固定只读':r.role,r.write?'blue':'')+'</div>'+
       '<div class="meta"><span>'+(crm?'Assignee：'+name(p.assigneeId):'Owner：'+name(p.ownerId))+'</span><span>原始创建人：'+name(p.creatorId)+'</span></div>'+
@@ -233,7 +270,7 @@
   }
   function moduleSettings(mod) {
     if(mod==='payment')return section('当前组支付审核',notice('组级规则，不设组织默认值','此开关在 '+gname(ui.group)+' 内生效。仅模拟立即与定时预审核的状态；系统审核、定时超时、策略变更和真实执行链路仍待收口。','warning')+'<div class="setting-row"><div><h2>支付前需要组长审核放行</h2><p>任一组长放行；到达闸门时实际提交人是同组 T2 则豁免。</p></div>'+toggle('groupPayment',group(ui.group)?.requireT2PaymentRelease,!admin(),'当前组支付审核')+'</div>')+section('频道历史收款人',notice('全组织复用不等于读取来源订单','新建草稿时可按频道检索全组织历史收款人；覆盖、停用与删除治理待确认。')+button('检索并复用收款人','recipient',null,'',!ui.group)+button('讨论收款人治理','decision','D12',''));
-    if(mod==='monitor')return section('内容监控标签',notice('区分标签定义和打标签','策略只限制增删改标签定义；标签所属组固定，不随创建人退组漂移。')+labelsTable('monitor'))+goto('policies','设置组织级标签策略');
+    if(mod==='monitor')return section('内容监控标签',notice('组织共享定义与项目应用分开','创建来源组不随创建人退组漂移，但不是定义权限隔离边界；项目内应用仍需对象权限。')+labelsTable('monitor'))+goto('policies','设置组织级标签策略');
     if(mod==='crm')return section('CRM 记录权限映射',notice('不凭模块归类猜测旧权限','增量合入需要逐项验证现有读范围、四项写权限与新组关系；不以协作身份自动授予标签删除。','warning')+button('查看 CRM 待确认映射','decision','D09',''))+
       section('组织共享标签 · 独立删除动作',notice('不是项目协作权限','Owner 可删除。Admin 管理范围、T2 独立委派及创建者旧配置未收口；本示例只开放 Owner，其他身份不作默认裁决。','warning')+table(['标签','创建来源','影响范围','操作'],s.labels.filter(l=>l.module==='crm').map(l=>'<tr><td>'+esc(l.name)+'</td><td>'+name(l.creatorId)+' / '+gname(l.groupId)+'</td><td>'+l.affected+' 位创作者 · 模拟</td><td>'+button('删除共享定义','deleteCRMLabel',l.id,'danger',actor().orgRole!=='owner')+'</td></tr>')));
     if(mod==='resource')return notice('收藏夹原有可见性需单独映射','公开、部分可见与协作写权限不是同一概念；跨组公开是否保留须确认，不在本示例中自动放开。','warning')+button('记录收藏夹可见性意见','topic','16','');
@@ -244,9 +281,9 @@
     return notice('待审核筛选视图','同组组长可处理审核待办；这是独立授权动作，不能扩大成任意支付写权限。')+(waiting.length?table(['支付单','提交人','金额','方式','操作'],waiting.map(p=>'<tr><td>'+esc(p.name)+'</td><td>'+name(p.submitterId)+'</td><td>'+n(p.paymentAmount)+'</td><td>'+(p.scheduled?'预约前预审核':'立即执行')+'</td><td>'+button('审核放行','reviewPayment',p.id,'primary',!lead())+'</td></tr>')):empty('当前组没有待组长审核支付单。'));
   }
   function labelsTable(mod) {
-    const labels=s.labels.filter(l=>l.groupId===ui.group&&(!l.module||l.module===mod));
-    const can=active(ui.actor,ui.group)&&(mod!=='monitor'||!s.policies.monitorLabelsT2||admin()||lead());
-    return button('新增标签','addLabel',mod,'',!can)+table(['标签','创建人','固定归属组','操作'],labels.map(l=>'<tr><td>'+esc(l.name)+'</td><td>'+name(l.creatorId)+'</td><td>'+gname(l.groupId)+'</td><td>'+button('改名','renameLabel',l.id,'text',!can)+button('删除','deleteLabel',l.id,'text',!can)+'</td></tr>'));
+    const labels=s.labels.filter(l=>(mod==='monitor'||l.groupId===ui.group)&&(!l.module||l.module===mod));
+    const can=active(ui.actor,ui.group)&&(mod!=='monitor'||!s.policies.monitorLabelsT2||admin()||actor().memberships.some(m=>E.isLead(s,ui.actor,m.groupId)));
+    return button('新增标签','addLabel',mod,'',!can)+table(['标签','创建人','创建来源组','操作'],labels.map(l=>'<tr><td>'+esc(l.name)+'</td><td>'+name(l.creatorId)+'</td><td>'+gname(l.groupId)+'</td><td>'+button('改名','renameLabel',l.id,'text',!can)+button('删除','deleteLabel',l.id,'text',!can)+'</td></tr>'));
   }
   function messagePage() {
     const scope=ui.labelScopes?.[ui.actor] || 'all';
@@ -271,6 +308,7 @@
     submitDialog=onSubmit || null;
     d.innerHTML='<form id="dialog-form"><div class="dialog-head"><h2 id="dialog-title">'+title+'</h2><button type="button" class="btn icon" data-action="close" aria-label="关闭弹窗" title="关闭">'+icon('X')+'</button></div><div class="dialog-body">'+body+'<p id="form-error" class="form-error" role="alert"></p></div><div class="dialog-foot"><button type="button" class="btn" data-action="close">'+(onSubmit?'取消':'关闭')+'</button>'+(onSubmit?'<button class="btn primary" type="submit">'+(label || '确认保存')+'</button>':'')+'</div></form>';
     d.querySelectorAll('.form-field').forEach((f,i)=>{const control=f.querySelector('input,select,textarea'),l=f.querySelector('label');if(control&&l){control.id='dialog-field-'+i;l.htmlFor=control.id;}});
+    localizeRoleCopy(d);
     if(!d.open)d.showModal();
   }
   function confirmAction(title,body,type,payload,label) { dialog(title,body,()=>perform(type,payload,true),label || '确认执行'); }
@@ -301,6 +339,7 @@
   function actClick(action,id) {
     const [uid,gid,role]=(id || '').split('|');
     if(action==='close')return $('#dialog').close();
+    if(action==='closeStory'){ui.storyId=null;return render();}
     if(action==='review')return navigate('review');
     if(action==='objects'){ui.tab='objects';return render();}
     if(action==='reset')return dialog('重置全部模拟数据',notice('本次操作和审阅意见将清空','可先从功能审阅页导出意见；重置不会影响任何真实系统。','warning'),()=>{s=E.createState();Object.assign(ui,{actor:'u-owner',group:'g-growth',project:null,tab:'objects',reviews:{},notes:{},lastResult:null,probe:null,quotaGroup:null,dashboardUser:'all',dashboardGroup:'all',period:'2026-10',metric:'sent',usageHealth:'normal',reviewFilter:'all',showArchived:false,labelScopes:{},contactScope:'team'});$('#dialog').close();render();toast('模拟数据已重置');},'重置');
@@ -352,7 +391,7 @@
     if(action==='recipient')return dialog('按频道复用组织历史收款人',notice('仅展示匹配频道的示例','复用不开放来源支付单明细；历史收款信息治理仍待确认。')+field('频道',select('channel','<option value="mia">Mia Chen · YouTube</option><option value="alex">Alex Rivers · TikTok</option>'),true)+'<div id="recipient-result" class="audit-box"><strong>Mia Chen</strong><p>示例账号 6222 **** 0321 · 来源：品牌团队历史记录</p></div>',()=>{$('#dialog').close();toast('已选用该频道的示例收款人；没有读取来源支付单');},'选用此记录');
     if(action==='addLabel')return dialog('新增标签定义',notice(gname(ui.group)+' · '+(id==='monitor'?'内容监控':'消息中心'),'标签归属记录创建时组，不随创建人转组变化。')+field('标签名称',inp('name','','text','required maxlength="24"'),true),v=>perform('addLabel',{...v,module:id,groupId:ui.group},true),'创建标签');
     if(action==='renameLabel'){const l=s.labels.find(x=>x.id===id);return dialog('标签改名',field('标签名称',inp('name',l.name,'text','required maxlength="24"'),true),v=>perform('renameLabel',{labelId:id,...v},true));}
-    if(action==='deleteLabel')return confirmAction('删除标签定义',notice('影响当前组标签','本示例只删除虚构标签，不连接真实业务；标签应用的数据处理需模块矩阵明确。','warning'),'deleteLabel',{labelId:id},'确认删除');
+    if(action==='deleteLabel')return confirmAction('删除标签定义',notice('影响标签定义','本示例只删除虚构标签，不连接真实业务；监控定义为组织共享，项目内应用另按对象权限。','warning'),'deleteLabel',{labelId:id},'确认删除');
     if(action==='deleteCRMLabel'){const l=s.labels.find(x=>x.id===id);return confirmAction('删除 CRM 组织共享标签',notice('影响 '+l.affected+' 位创作者（示例）','删除共享定义不是从当前记录移除标签。所有被应用处都会受影响；此操作不由普通记录写权限推导。','warning'),'deleteCRMLabel',{labelId:id},'确认删除共享定义');}
     if(action==='contactCreator')return dialog('联系 '+esc(id),notice('获取联系信息需组织权益与额度','这里只说明筛选后的动作边界；不获取真实邮箱、不发送真实消息。')+goto('quota','查看资源配额'));
     if(action==='requestEntitlement')return dialog('申请开通必要权益',notice('显式请求，非静默开通','本地示意向组织管理员发出请求，实际购买、升级和配额发放仍使用现有业务流程。')+field('开通原因','<textarea name="reason" rows="3" required></textarea>',true),v=>{s.notifications.push({title:'开通权益申请 · '+actor().name,message:v.reason,uid:s.users.find(u=>u.orgRole==='owner').id});$('#dialog').close();render();toast('已生成模拟申请通知，未开通任何真实权益');},'发送模拟请求');
@@ -360,6 +399,9 @@
   }
   document.addEventListener('click',e=>{
     const el=e.target.closest('button');if(!el||el.disabled)return;
+    if(el.dataset.story){ui.storyId=el.dataset.story;navigate('stories');$('#story-detail')?.focus();return;}
+    if(el.dataset.storyTarget){const [storyId,page]=el.dataset.storyTarget.split('|');ui.storyId=storyId;return navigate(page);}
+    if(el.dataset.storyPage)return navigate(el.dataset.storyPage);
     if(el.dataset.page){if($('#dialog').open)$('#dialog').close();return navigate(el.dataset.page);}
     if(el.dataset.scenario){const key=el.dataset.scenario;ui.actor=key==='invite'||key==='removal'?'u-owner':'u-member';ui.group='g-growth';return navigate(key==='invite'?'members':key==='removal'?'tasks':key==='payment'?'payment':'email');}
     if(el.dataset.metric){ui.metric=el.dataset.metric;return render();}
@@ -373,6 +415,7 @@
   });
   document.addEventListener('change',e=>{
     const el=e.target;
+    if(el.id==='story-chapter'){ui.storyChapter=el.value;return render();}
     if(el.id==='actor-select'){ui.actor=el.value;ui.project=null;ui.probe=null;ui.dashboardGroup='all';ui.dashboardUser='all';ui.quotaGroup=null;return render();}
     if(el.id==='group-select'){ui.group=el.value;ui.project=null;ui.probe=null;ui.quotaGroup=null;return render();}
     if(el.id==='usage-group'){ui.dashboardGroup=el.value;ui.dashboardUser='all';return render();}
@@ -394,6 +437,7 @@
   });
   document.addEventListener('input',e=>{
     const el=e.target;
+    if(el.id==='story-query'){const pos=el.selectionStart;ui.storyQuery=el.value;render();$('#story-query').focus();$('#story-query').setSelectionRange(pos,pos);return;}
     if(el.hasAttribute('data-collab-search')){const picker=$('#dialog select[name=uid]');const opts=[...picker.options];opts.forEach(o=>{o.hidden=!o.textContent.toLowerCase().includes(el.value.toLowerCase());o.disabled=o.hidden;});picker.value=opts.find(o=>!o.hidden)?.value || '';return;}
     if(el.dataset.note){ui.notes[el.dataset.note]=el.value;return;}
     if(el.dataset.search){filterMembers();}

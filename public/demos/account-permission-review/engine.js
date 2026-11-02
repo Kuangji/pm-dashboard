@@ -68,6 +68,7 @@
   const active = (s, uid, gid) => user(s, uid)?.status === 'ACTIVE' && membership(s, uid, gid)?.status === 'ACTIVE' && group(s, gid)?.status === 'ACTIVE';
   const canManageOrganization = (s, uid) => user(s, uid)?.status === 'ACTIVE' && ['owner', 'admin'].includes(user(s, uid)?.orgRole);
   const isLead = (s, uid, gid) => active(s, uid, gid) && membership(s, uid, gid).role === 'T2';
+  const manageMonitorLabels = (s, uid) => user(s, uid)?.status === 'ACTIVE' && (!s.policies.monitorLabelsT2 || canManageOrganization(s, uid) || user(s, uid).memberships.some(m => isLead(s, uid, m.groupId)));
   const leadQuota = (s, uid, gid) => canManageOrganization(s, uid) || (s.policies.t2Quota && isLead(s, uid, gid));
   const number = value => Number.isFinite(Number(value)) && Number(value) >= 0;
   const id = prefix => prefix + '-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 7);
@@ -402,15 +403,15 @@
       case 'addLabel': {
         if (!g || !active(s, actorId, g.id) || !String(payload.name || '').trim()) return fail('需要有效组身份和标签名称');
         const module = payload.module || 'monitor';
-        if (module === 'monitor' && s.policies.monitorLabelsT2 && !canManageOrganization(s, actorId) && !isLead(s, actorId, g.id)) return fail('当前策略限制本组 T3 创建、改名或删除监控标签定义；其他组 T2 不产生豁免');
+        if (module === 'monitor' && !manageMonitorLabels(s, actorId)) return fail('当前策略限制 T3 管理组织共享监控标签定义');
         s.labels.push({ id: id('tag'), name: String(payload.name).trim(), groupId: g.id, creatorId: actorId, module }); message = '标签定义已创建；createdGroupId 不随创建人转组漂移'; break;
       }
       case 'renameLabel':
       case 'deleteLabel': {
         const label = s.labels.find(x => x.id === payload.labelId);
-        if (!label || !active(s, actorId, label.groupId) || (payload.groupId && payload.groupId !== label.groupId)) return fail('需要标签所在组的当前有效身份');
+        if (!label || (label.module !== 'monitor' && (!active(s, actorId, label.groupId) || (payload.groupId && payload.groupId !== label.groupId)))) return fail('需要标签所在组的当前有效身份');
         if (label.module === 'crm') return fail('CRM 标签使用独立高风险动作，不能走普通标签管理绕过');
-        if (label.module === 'monitor' && s.policies.monitorLabelsT2 && !canManageOrganization(s, actorId) && !isLead(s, actorId, label.groupId)) return fail('当前策略仅允许组织管理身份或本组 T2 管理监控标签定义');
+        if (label.module === 'monitor' && !manageMonitorLabels(s, actorId)) return fail('当前策略仅允许组织管理身份或有效 T2 管理组织共享监控标签定义');
         if (type === 'renameLabel') {
           const name = String(payload.name || '').trim();
           if (!name) return fail('请填写标签名称');

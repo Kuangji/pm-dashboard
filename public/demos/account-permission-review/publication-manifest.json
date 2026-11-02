@@ -1,17 +1,18 @@
 {
   "source": "06_Prototypes/account_permission_review_demo",
   "input": "01_Product_Specs/account_permission_collaboration/phase2_input_v0.md",
-  "browserVerifiedAt": "2026-10-28T11:01:01.555Z",
+  "browserVerifiedAt": "2026-11-02T07:57:38.458Z",
   "files": {
-    "index.html": "c7d90864af7eaedd4e1be57e54e6736fa3ce246bc8cb0a1d92c484517f3b8b71",
-    "styles.css": "28fc2335e33acd84ff50d495d71ec4d989b3f787837fa83fb6617f412a2d1bfb",
+    "index.html": "84f4499c7def6faea50013b05d2d7c5cb290a3846e21c2f485180c79f6b4a388",
+    "styles.css": "ca0ad1037de2e3a0bebd1f9fe50799ba778c87307325e32c5ffc9b30eefcb866",
     "icons.js": "32d501e1d85830bffc2e9cc9d5698b57bba4c1a239731b11a6d65b45813934a2",
-    "review-data.js": "32051436cf4242f010700b224a0e83f1d7cee7fd341451a630ddd974e4487b1f",
-    "engine.js": "dc02a2bad7df7f397dc8303da6a5297102ca745721a4b4cb7a4459bac3074b1f",
-    "app.js": "2e050e85045e42299b4cf8bd6db93514c31f285a36e8f37b69acd11bcb461f9c",
+    "review-data.js": "058b698d53dfc919a90e9870bb32ca6e6e6a5bc7b868e025e1e0bac08bef5562",
+    "story-data.js": "081c128abdf4a95e43a9479a26c41e0da1fae0fb8e2fe4f4a6d80b86e469234e",
+    "engine.js": "20f00ece9087ea7c3602d264ff8c13d6e11535333b96f4450b0c6223d4a92692",
+    "app.js": "afe81eac6098bdff47d7f69759393ac7be1f1a58c7d193046b4151b1f4fbcde2",
     "publication.js": "296f7d23496b255ab753da4bc9d0734d4d0f363467d158b69d0f3a501f523f32",
     "demo.json": "05970fc8000a81c3cdc8481f966b46eb97e92ab75944739084d2d285ce625d39",
-    "preview.png": "5f572709c2ca5070573b4eff133f5f806011ad64aca91c135c5bc0757db1fcf6",
+    "preview.png": "d9cc901701849e06d9144c564e2c9ab84984cb4401d701fb803a1b935b827aa5",
     "reference/phase2_input_v0.md": "aa152cbdc3c95e30b7ec21bf4299255fb0e9f5809fc4c2777d8905b8560197f5"
   }
 }

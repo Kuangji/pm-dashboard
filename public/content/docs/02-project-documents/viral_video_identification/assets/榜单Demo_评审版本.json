@@ -1,9 +1,9 @@
 {
-  "capturedAt": "2026-10-27",
+  "capturedAt": "2026-11-02",
   "branch": "codex/viral-video-demo",
   "baseCommit": "0c46b320fd356c32c45f53ce89c6a378b3cb01bd",
-  "patch": "榜单Demo_评审补丁_2026-10-27.patch",
-  "sha256": "2a9ae90ed69c9cceda8e69f9a0d8fdccd3fe58d69f98e589837966f6642ad07e",
+  "patch": "榜单Demo_评审补丁_2026-11-02.patch",
+  "sha256": "c006878e0cd09a7b3ca39175c5013f4ab5a828709556d4f618200be9cce339a6",
   "files": [
     {
       "path": "components/viralVideoDemo/ViralEvidenceDrawer.vue",
@@ -39,7 +39,7 @@
     },
     {
       "path": "components/viralVideoDemo/messages.js",
-      "sha256": "01aa515e8dda41110909b933417e553d657991eada2b6cfcb2a45bb12230d978"
+      "sha256": "1690533cc15b93f9a4e05b219e1500e8262177c718208131c56adc2151354737"
     },
     {
       "path": "components/viralVideoDemo/tableMessages.js",
@@ -47,39 +47,43 @@
     },
     {
       "path": "docs/知识库/全站页面索引.md",
-      "sha256": "7b4ff714276a4f3dc416c71abd29b84d49d7f9667a1ac940d73334b4445fbb0d"
+      "sha256": "506e97864b5b93885fe97eb6b655381592c1899df0ce187fedbfa22598429dbd"
     },
     {
       "path": "docs/知识库/功能模块/搜索与洞察/组件/viralVideoDemo/index.md",
-      "sha256": "30957c0e490ce4730a141e97409920b5caa522b17cd5f18b0f8b96ea6b1ff16a"
+      "sha256": "8500b11f97f97c7a9c465c58fc76cbf516fbc3f1174002f6305c663a2727432e"
     },
     {
       "path": "docs/知识库/功能模块/搜索与洞察/页面/viral-video-demo/index.md",
-      "sha256": "dd1e2f64bc7aa6c99cc2150ea9a96cdfd98c4d322b4867752e44b4ac942541a0"
+      "sha256": "68510e90c8eebc036a819a161e23a94407b49cf706e61920333ece1807269f8d"
     },
     {
       "path": "docs/知识库/功能模块/搜索与洞察/页面/youtube-video-rank.md",
-      "sha256": "3d7ae8b90945a97bca507562427a83b860db8d5e8af2ede53438a0478ca7c49d"
+      "sha256": "ad022369ae61c03203c008b51bd70638563ba52b04af7c295de4f118d838f40d"
     },
     {
       "path": "pages/youtube-video-rank.vue",
-      "sha256": "c7405b0687abb5da50781a45b4948c471066d0b39fe0c71546b04169440bf0d7"
+      "sha256": "796640b8c41a75b1d92f3441789cff176a9abe7c5e3effd87a0fbd7c93573410"
     },
     {
       "path": "scripts/viral-evidence-drawer.test.js",
-      "sha256": "7c0be308e6f67c16dff5a799a3c75982eaaeeeae73a4fe4ac0dfa7fde74b8fa9"
+      "sha256": "bc7a831e1c4abeaac411de41a8e701a4eeddec7e6cae36526c47d56b886a8eb7"
     },
     {
       "path": "scripts/viral-video-demo.test.js",
       "sha256": "2f1078c74508bd6512388a62ccb075d6127bdc9913ec50810498380a7cf5b14e"
     },
     {
+      "path": "scripts/viral-video-rank-query.test.js",
+      "sha256": "a2b0f974da28660cbc2d4bfd455161d99c058133ffc53b1dfb0d3b007b60ae39"
+    },
+    {
       "path": "scripts/viral-video-rank-workbench.browser.js",
-      "sha256": "77601734d1ac6287c73448c1485fb1935d15a90ea907468375416791e3d8c88f"
+      "sha256": "669ffe8de38c2582a0ed1cdbbbd17720ee809bd325d8ec2a88e7e5da7586a172"
     }
   ],
-  "verification": "远端分支提交与本地HEAD一致，工作区干净；补丁由历史基线至已推送评审提交生成，临时目录check/apply及逐文件字节核对通过。直接检出reviewCommit无需应用补丁。未执行全新依赖安装或重新启动服务。",
-  "reviewCommit": "f0ae8ca81f713ecced71107c716ef5f7c89eb896",
+  "verification": "远端分支与本地HEAD一致、工作区干净；补丁check/apply与逐文件字节核对通过。51项浏览器检查、43条契约、43×5语言渲染、query回归与范围隔离通过。本地3323已按既有Node25内存预览方式重启；未执行全新依赖安装或生产数据/权限验收。",
+  "reviewCommit": "3ac5004535c0a43b10ff1b7e8a129c6d6547134a",
   "remoteRef": "origin/codex/viral-video-demo",
-  "pushedAtDate": "2026-10-27"
+  "pushedAtDate": "2026-11-02"
 }

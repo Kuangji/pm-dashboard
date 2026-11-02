@@ -2279,7 +2279,7 @@ index 798b5aeec..b37ecc44e 100644
      asOf: '데이터 기준: {time}',
      method: '비교 범위 및 데이터 안내',
 diff --git a/components/viralVideoDemo/messages.js b/components/viralVideoDemo/messages.js
-index 48457b2c2..9882cd856 100644
+index 48457b2c2..5506eb3e4 100644
 --- a/components/viralVideoDemo/messages.js
 +++ b/components/viralVideoDemo/messages.js
 @@ -13,9 +13,6 @@ const viralMessages = {
@@ -2325,7 +2325,7 @@ index 48457b2c2..9882cd856 100644
          notQualified: '未达标',
          insufficientData: '数据不足，暂不判定',
          pending: '待识别',
-@@ -85,57 +81,54 @@ const viralMessages = {
+@@ -85,57 +81,37 @@ const viralMessages = {
          invalidated: '结果已撤销',
          restricted: '无权查看完整数据',
          notApplicable: '不适用',
@@ -2339,7 +2339,7 @@ index 48457b2c2..9882cd856 100644
          breadcrumb: '内容发现 / 爆款视频榜单',
 -        subtitle: '在指定市场和内容领域中，发现表现突出的合作线索',
 +        subtitle:
-+          '对比作者此前同一内容形式的视频，累计播放量达到历史中位数的 10 倍及以上。',
++          '近30天发布的视频中，累计播放量达到作者此前同形态作品历史中位数的 10 倍及以上。',
          explanation: '榜单说明',
 -        explanationText:
 -          '榜单按当前平台、筛选条件和评估批次展示有效识别结果；发布日期与评估批次分别表达。',
@@ -2347,7 +2347,7 @@ index 48457b2c2..9882cd856 100644
 +          '判定方式：与作者此前同一内容形式的视频相比，累计播放量达到历史中位数的 10 倍及以上。中位数表示历史样本播放量排序后的中间水平，不是平均值；比较不包含本条视频。',
 +          '参与条件：YouTube 长视频需发布满 7 天；Shorts、TikTok 视频和 Instagram Reels 需满 3 天，并有足够历史样本。时长按数据采集时点判断；未满时长为“待观察”，样本不足或关键数据缺失时暂不判定，均不入榜。达到时长不代表立即更新。',
 +          '数据说明：依据已采集的累计播放快照，不是发布后相同时长的增速比较；点赞、评论不参与判定。本榜仅展示当前有效结果，按判定快照累计播放量降序，同播放量优先发布时间较近的视频；倍数不决定名次。',
-+          '时间范围：候选视频须在榜单截止时间前90天内发布，默认看近30天；筛选按发布时间，清空回近30天。作者历史参考作品不受90天限制。',
++          '时间范围：本榜固定展示截止时间前近30天发布的视频，仅提供国家/地区和分类筛选。作者历史参考作品不受榜单30天范围限制；目标发布超过90天后停止自动计算并保留历史结果。',
 +          '地区口径：按作者频道的国家/地区归属筛选；全球榜包含未知地区账号，具体国家榜只展示归属匹配的账号作品。',
 +          '演示说明：10 倍与 7 天/3 天为当前暂定口径，后续可调；历史样本量仍待确认。数据为模拟样例，不代表全平台覆盖或及时更新。'
 +        ].join('\n'),
@@ -2356,33 +2356,31 @@ index 48457b2c2..9882cd856 100644
          coverageValue: '—',
 -        resultCount: '共 {count} 条已识别视频',
 -        viewLabel: '榜单视角',
-+        resultCount: '共 {count} 条入选视频',
-         creatorSize: '作者体量',
-         creatorNano: '小于 1 万粉丝',
-         creatorEmerging: '1 万至 10 万粉丝',
-         creatorEstablished: '10 万粉丝以上',
-         publishedRange: '发布时间',
+-        creatorSize: '作者体量',
+-        creatorNano: '小于 1 万粉丝',
+-        creatorEmerging: '1 万至 10 万粉丝',
+-        creatorEstablished: '10 万粉丝以上',
+-        publishedRange: '发布时间',
 -        last7Days: '最近 7 天',
 -        last30Days: '最近 30 天',
-+        last30Days: '近30天',
-+        last90Days: '近90天',
-         language: '语言',
-         languageEnglish: '英语',
-         languageJapanese: '日语',
-         promotion: '带货 / 推广',
-         organic: '自然内容',
-         sponsored: '带货 / 推广内容',
+-        language: '语言',
+-        languageEnglish: '英语',
+-        languageJapanese: '日语',
+-        promotion: '带货 / 推广',
+-        organic: '自然内容',
+-        sponsored: '带货 / 推广内容',
 -        coverageStatus: '覆盖状态',
 -        batch: '结果批次',
-         keyword: '关键词',
-         keywordPlaceholder: '搜索视频标题或作者',
+-        keyword: '关键词',
+-        keywordPlaceholder: '搜索视频标题或作者',
 -        coverageFull: '完整覆盖',
 -        coveragePartial: '部分覆盖',
 -        coverageNone: '暂未覆盖',
 -        categoryLabel: '榜单分类',
-         advancedFilters: '高级筛选',
-         collapseAdvancedFilters: '收起高级筛选',
+-        advancedFilters: '高级筛选',
+-        collapseAdvancedFilters: '收起高级筛选',
 -        view: '判定视角',
++        resultCount: '共 {count} 条入选视频',
          cutoff: '榜单截止时间',
          updated: '更新时间',
          rankingBasis: '排序依据',
@@ -2399,20 +2397,14 @@ index 48457b2c2..9882cd856 100644
          snapshot: '当前指标快照',
          algorithm: '口径详情',
          dataLimit: '数据限制',
-@@ -150,6 +143,117 @@ const viralMessages = {
+@@ -150,6 +126,84 @@ const viralMessages = {
      }
    }
  }
 +const rankExplanationCopy = {
 +  zh: {
-+    publishedRange: '发布时间',
-+    last30Days: '近30天',
-+    last90Days: '近90天',
-+    legacyPublishedRangeChanged:
-+      '发布时间筛选已调整为近30天，可切换近90天查看更大范围。',
 +    countryLabel: '频道国家/地区',
 +    countryAll: '全球',
-+    legacyMarketRemoved: '旧“市场”参数已移除，请重新选择频道国家/地区。',
 +    subtitle: viralMessages.zh.viralDemo.rank.subtitle,
 +    explanation: viralMessages.zh.viralDemo.rank.explanation,
 +    explanationText: viralMessages.zh.viralDemo.rank.explanationText,
@@ -2420,95 +2412,68 @@ index 48457b2c2..9882cd856 100644
 +  },
 +  en: {
 +    subtitle:
-+      'Cumulative views reach at least 10 times the historical median of this creator’s earlier videos in the same format.',
++      'Videos published in the last 30 days with cumulative views at least 10 times the historical median of this creator’s earlier videos in the same format.',
 +    explanation: 'About this ranking',
-+    publishedRange: 'Published',
-+    last30Days: 'Last 30 days',
-+    last90Days: 'Last 90 days',
-+    legacyPublishedRangeChanged:
-+      'The publication-date filter has been set to the last 30 days. Choose the last 90 days to see a wider range.',
 +    countryLabel: 'Channel country/region',
 +    countryAll: 'Global',
-+    legacyMarketRemoved:
-+      'The old market parameter was removed. Please select the channel country/region again.',
 +    rankKey:
 +      'Cumulative snapshot views, highest first; ties favor newer videos, then a fixed order',
 +    explanationText: [
 +      'Assessment: Cumulative views must reach at least 10 times the historical median of the creator’s earlier videos in the same format. The median is the middle value of the sorted historical views, not the average. This video is excluded from the baseline.',
 +      'Eligibility: YouTube long-form videos must be at least 7 days old; Shorts, TikTok videos and Instagram Reels must be at least 3 days old, with enough historical samples. Age is measured when data was collected. Younger videos are pending; missing samples or key data prevent assessment. These videos are not listed. Reaching the age threshold does not trigger an immediate update.',
 +      'Data: The comparison uses collected cumulative-view snapshots, not growth over matching periods after publication. Likes and comments do not affect qualification. Only currently valid results are listed, ordered by cumulative snapshot views, highest first; ties favor newer videos. The multiple does not determine ranking order.',
-+      'Time range: Candidates must have been published within the 90 days before the ranking cutoff. The view defaults to the last 30 days and filters by publication date. Clearing filters restores 30 days. The creator’s historical baseline videos are not limited to 90 days.',
++      'Time range: This ranking is fixed to videos published in the 30 days before the cutoff, with country/region and category filters only. Historical baseline videos are not limited to these 30 days. Automatic calculation stops after a target video is 90 days old; historical results are retained.',
 +      'Region: Filters use the country/region assigned to the creator’s channel. Global rankings include channels with unknown regions; country rankings include only matching channels.',
 +      'Demo: The 10-times threshold and 7-day/3-day age requirements are provisional and may change. Historical sample size is still to be confirmed. Simulated data does not establish platform-wide coverage or timely updates.'
 +    ].join('\n')
 +  },
 +  tw: {
 +    subtitle:
-+      '對比作者先前相同內容形式的影片，累計觀看次數達到歷史中位數的 10 倍及以上。',
++      '近30天發布的影片中，累計觀看次數達到作者先前同形式作品歷史中位數的 10 倍及以上。',
 +    explanation: '榜單說明',
-+    publishedRange: '發布時間',
-+    last30Days: '近30天',
-+    last90Days: '近90天',
-+    legacyPublishedRangeChanged:
-+      '發布時間篩選已調整為近30天，可切換近90天查看更大範圍。',
 +    countryLabel: '頻道國家/地區',
 +    countryAll: '全球',
-+    legacyMarketRemoved: '舊「市場」參數已移除，請重新選擇頻道國家/地區。',
 +    rankKey:
 +      '依判定快照累計觀看次數降冪排列，同觀看次數優先較新影片；仍相同時維持固定順序',
 +    explanationText: [
 +      '判定方式：與作者先前相同內容形式的影片相比，累計觀看次數達到歷史中位數的 10 倍及以上。中位數是歷史樣本觀看次數排序後的中間水準，並非平均值；比較不含本部影片。',
 +      '參與條件：YouTube 長影片需發布滿 7 天；Shorts、TikTok 影片與 Instagram Reels 需滿 3 天，且有足夠歷史樣本。時長以資料採集時點判斷；未滿時長為「待觀察」，樣本不足或關鍵資料缺失時暫不判定，皆不入榜。達到時長不代表立即更新。',
 +      '資料說明：依據已採集的累計觀看快照，並非發布後相同時長的增速比較；按讚與留言不參與判定。本榜僅顯示目前有效結果，依判定快照累計觀看次數降冪排列，同觀看次數優先較新發布的影片；倍數不決定名次。',
-+      '時間範圍：候選影片須於榜單截止時間前90天內發布，預設查看近30天；依發布時間篩選，清除後回到近30天。作者歷史參考作品不受90天限制。',
++      '時間範圍：本榜固定顯示截止時間前近30天發布的影片，只提供國家/地區與分類篩選。歷史參考作品不受榜單30天範圍限制；目標發布超過90天後停止自動計算並保留歷史結果。',
 +      '地區口徑：依作者頻道的國家/地區歸屬篩選；全球榜包含地區未知的帳號，特定國家榜僅顯示歸屬相符的帳號作品。',
 +      '示範說明：10 倍與 7 天/3 天為目前暫定口徑，後續可調；歷史樣本量仍待確認。資料為模擬樣本，不代表全平台涵蓋或即時更新。'
 +    ].join('\n')
 +  },
 +  jp: {
 +    subtitle:
-+      '同じ投稿者による同形式の過去動画の中央値と比べ、累計再生数が10倍以上の動画を掲載します。',
++      '過去30日以内に公開され、同じ投稿者による同形式の過去動画の中央値と比べて累計再生数が10倍以上の動画を掲載します。',
 +    explanation: 'ランキングについて',
-+    publishedRange: '公開日',
-+    last30Days: '過去30日',
-+    last90Days: '過去90日',
-+    legacyPublishedRangeChanged:
-+      '公開日の条件を過去30日に変更しました。過去90日を選ぶと対象範囲が広がります。',
 +    countryLabel: 'チャンネルの国・地域',
 +    countryAll: '全世界',
-+    legacyMarketRemoved:
-+      '旧「市場」パラメータは削除されました。チャンネルの国・地域を選び直してください。',
 +    rankKey:
 +      '判定時点の累計再生数が多い順。同数は公開日が新しい動画を優先し、それも同じ場合は固定順序',
 +    explanationText: [
 +      '判定方法：同じ投稿者による同形式の過去動画と比べ、累計再生数が中央値の10倍以上であることが条件です。中央値は過去の再生数を並べた際の中央の値で、平均値とは異なります。判定対象の動画自体は比較対象から除きます。',
 +      '対象条件：YouTubeの通常動画は公開から7日以上、Shorts・TikTok動画・Instagram Reelsは3日以上が経過し、過去サンプルが十分な動画を判定します。経過時間はデータ取得時点で判断します。時間が足りない動画は観察待ち、サンプルや主要データが不足する動画は判定保留となり、掲載しません。基準時間を満たしても即時更新は保証しません。',
 +      'データ：取得済みの累計再生数のスナップショットを比較します。公開後の同じ期間の伸び率比較ではありません。高評価・コメント数は判定に使いません。有効な結果のみを掲載し、判定時点の累計再生数が多い順に並べます。同数の場合は公開日が新しい動画を優先します。倍率は順位を決めるものではありません。',
-+      '期間：ランキングの基準日時から過去90日以内に公開された動画が候補です。初期表示は過去30日で、公開日で絞り込みます。条件をクリアすると過去30日に戻ります。投稿者の比較用の過去動画には90日の上限を適用しません。',
++      '期間：基準日時から過去30日以内に公開された動画のみを掲載し、国・地域とカテゴリで絞り込みます。比較用の過去動画にはこの30日の制限を適用しません。対象動画の公開から90日を超えると自動計算を終了し、過去の結果は保持します。',
 +      '地域：投稿者のチャンネルに設定された国・地域で絞り込みます。全世界ランキングには地域不明のチャンネルも含み、国別ランキングには一致するチャンネルの動画のみを掲載します。',
 +      'デモ：10倍と公開後7日/3日は暫定基準で、今後調整する場合があります。過去サンプル数は未確定です。模擬データのため、全プラットフォームの網羅性や更新の速さを示すものではありません。'
 +    ].join('\n')
 +  },
 +  kr: {
 +    subtitle:
-+      '동일 제작자가 먼저 게시한 같은 콘텐츠 형식 영상의 과거 중앙값 대비 누적 조회수가 10배 이상인 영상을 보여줍니다.',
++      '최근 30일 내 게시된 영상 중 동일 제작자의 같은 형식 과거 영상 중앙값 대비 누적 조회수가 10배 이상인 영상을 보여줍니다.',
 +    explanation: '순위 안내',
-+    publishedRange: '게시일',
-+    last30Days: '최근 30일',
-+    last90Days: '최근 90일',
-+    legacyPublishedRangeChanged:
-+      '게시일 필터가 최근 30일로 변경되었습니다. 최근 90일을 선택하면 더 넓은 범위를 볼 수 있습니다.',
 +    countryLabel: '채널 국가/지역',
 +    countryAll: '전 세계',
-+    legacyMarketRemoved:
-+      '기존 시장 매개변수가 제거되었습니다. 채널 국가/지역을 다시 선택해 주세요.',
 +    rankKey:
 +      '판정 스냅샷의 누적 조회수 내림차순, 동률이면 최근 게시 영상 우선, 이후 고정 순서',
 +    explanationText: [
 +      '판정 방식: 동일 제작자가 먼저 게시한 같은 콘텐츠 형식의 영상들과 비교해 누적 조회수가 과거 중앙값의 10배 이상이어야 합니다. 중앙값은 과거 조회수를 정렬했을 때 가운데 수준이며 평균이 아닙니다. 판정 대상 영상 자체는 비교에서 제외합니다.',
 +      '참여 조건: YouTube 일반 영상은 게시 후 7일 이상, Shorts·TikTok 영상·Instagram Reels는 3일 이상 경과하고 과거 표본이 충분해야 합니다. 경과 시간은 데이터 수집 시점 기준입니다. 시간이 부족하면 관찰 대기, 표본이나 주요 데이터가 부족하면 판정 보류이며 순위에 포함되지 않습니다. 기준 시간에 도달해도 즉시 갱신되지는 않습니다.',
 +      '데이터: 수집된 누적 조회수 스냅샷을 비교하며 게시 후 동일한 기간의 성장 속도를 비교하지 않습니다. 좋아요와 댓글은 판정에 사용하지 않습니다. 현재 유효한 결과만 판정 스냅샷의 누적 조회수 내림차순으로 표시하며, 조회수가 같으면 더 최근에 게시된 영상을 우선합니다. 배수는 순위를 결정하지 않습니다.',
-+      '기간: 순위 기준 시점 이전 90일 이내에 게시된 영상이 후보입니다. 기본값은 최근 30일이며 게시일로 필터링합니다. 필터를 초기화하면 30일로 돌아갑니다. 제작자의 과거 비교 영상에는 90일 제한을 적용하지 않습니다.',
++      '기간: 기준 시점 이전 30일 내 게시된 영상만 표시하며 국가/지역과 카테고리 필터만 제공합니다. 과거 비교 영상에는 이 30일 제한을 적용하지 않습니다. 대상 영상 게시 후 90일이 지나면 자동 계산을 종료하고 과거 결과는 보관합니다.',
 +      '지역 기준: 제작자 채널에 지정된 국가/지역으로 필터링합니다. 전 세계 순위에는 지역 미상 채널도 포함하며 국가별 순위에는 해당 지역의 채널 영상만 표시합니다.',
 +      '데모 안내: 10배와 게시 후 7일/3일은 잠정 기준이며 추후 조정할 수 있습니다. 과거 표본 수는 아직 미정입니다. 모의 데이터는 플랫폼 전체의 포함 범위나 신속한 갱신을 보장하지 않습니다.'
 +    ].join('\n')
@@ -2517,7 +2482,7 @@ index 48457b2c2..9882cd856 100644
  const rankOnlyHints = {
    zh: '本 Demo 仅演示榜单，不演示后续搜索、频道或监控流程。',
    en: 'This demo covers rankings only. Search, creator pages and monitoring are not demonstrated.',
-@@ -157,25 +261,62 @@ const rankOnlyHints = {
+@@ -157,25 +211,63 @@ const rankOnlyHints = {
    jp: 'このデモはランキングのみを対象とし、検索、チャンネル、モニタリングの後続操作は実演しません。',
    kr: '이 데모는 순위만 보여주며 검색, 채널 및 모니터링 후속 과정은 시연하지 않습니다.'
  }
@@ -2541,13 +2506,14 @@ index 48457b2c2..9882cd856 100644
 +  jp: '選出動画 {count} 件',
 +  kr: '선정된 동영상 {count}개'
 +}
-+const legacyCoverageHints = {
-+  zh: '榜单覆盖状态筛选已移除，请重新确认筛选条件。',
-+  en: 'The ranking coverage filter has been removed. Please review your filters.',
-+  tw: '榜單覆蓋狀態篩選已移除，請重新確認篩選條件。',
-+  jp: 'ランキングのカバレッジ状態フィルターは削除されました。絞り込み条件を再確認してください。',
-+  kr: '순위의 데이터 포함 상태 필터가 제거되었습니다. 필터 조건을 다시 확인해 주세요.'
++const legacyFilterHints = {
++  zh: '本榜固定展示近30天发布的视频，仅支持国家/地区和分类筛选；旧筛选条件已移除。',
++  en: 'This ranking is fixed to videos published in the last 30 days and supports country/region and category filters only. Previous filters were removed.',
++  tw: '本榜固定顯示近30天發布的影片，只支援國家/地區與分類篩選；舊篩選條件已移除。',
++  jp: '過去30日以内に公開された動画のみを対象に、国・地域とカテゴリで絞り込めます。旧条件は削除されました。',
++  kr: '최근 30일 내 게시된 영상만 표시하며 국가/지역과 카테고리 필터만 지원합니다. 이전 필터 조건은 제거되었습니다.'
 +}
++
 +const sourceLabels = {
 +  zh: '查看原视频',
 +  en: 'View original video',
@@ -2587,8 +2553,8 @@ index 48457b2c2..9882cd856 100644
 +  viralMessages[locale].viralDemo.common.openSourceHint = sourceHints[locale]
 +  viralMessages[locale].viralDemo.common.openCreatorHint = creatorHints[locale]
 +  viralMessages[locale].viralDemo.rank.resultCount = resultCounts[locale]
-+  viralMessages[locale].viralDemo.rank.legacyCoverageRemoved =
-+    legacyCoverageHints[locale]
++  viralMessages[locale].viralDemo.rank.legacyFiltersRemoved =
++    legacyFilterHints[locale]
    viralMessages[locale].viralDemo.common.rankOnlyHint = rankOnlyHints[locale]
 -  viralMessages[locale].viralDemo.common.openSearch = keywordLabels[locale]
 -  viralMessages[locale].viralDemo.common.openSearchHint = keywordHints[locale]
@@ -2851,7 +2817,7 @@ index ac5473092..212672481 100644
  }
  export default Object.keys(table).reduce((messages, locale) => {
 diff --git "a/docs/\347\237\245\350\257\206\345\272\223/\345\205\250\347\253\231\351\241\265\351\235\242\347\264\242\345\274\225.md" "b/docs/\347\237\245\350\257\206\345\272\223/\345\205\250\347\253\231\351\241\265\351\235\242\347\264\242\345\274\225.md"
-index 552e93575..472f8cbc4 100644
+index 552e93575..d8cc7dff4 100644
 --- "a/docs/\347\237\245\350\257\206\345\272\223/\345\205\250\347\253\231\351\241\265\351\235\242\347\264\242\345\274\225.md"
 +++ "b/docs/\347\237\245\350\257\206\345\272\223/\345\205\250\347\253\231\351\241\265\351\235\242\347\264\242\345\274\225.md"
 @@ -15,135 +15,136 @@
@@ -3120,8 +3086,14 @@ index 552e93575..472f8cbc4 100644
  
  ## 页面能力补充
  
+@@ -199,3 +200,5 @@
+ - 四平台标准频道与收藏夹相似搜索共用批量隐藏查询和请求守卫；X 固定路由继承标准页。平台快照、路由失效、过期补充数据与选择约束见对应页面及 searchV2/SearchResult 组件条目。
+ 
+ - 官网首页资源加载：`pages/index.vue` 复用 `components/landing/home/homeResourceMixin.js`，对应知识库为 `功能模块/官网与增长/组件/landing/home/homeResourceMixin.md`；覆盖媒体断点、字体及公共引擎加载边界。
++
++2026-11-02 爆款 Demo 收敛：仅平台切换、频道国家/地区与分类，固定近 30 天；旧高级及时间参数移除，不再隐形过滤。后台 90 天计算期限、旧 HOT 与既有频道搜索不变。
 diff --git "a/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\347\273\204\344\273\266/viralVideoDemo/index.md" "b/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\347\273\204\344\273\266/viralVideoDemo/index.md"
-index 06675a37d..701959cf9 100644
+index 06675a37d..a3015acb8 100644
 --- "a/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\347\273\204\344\273\266/viralVideoDemo/index.md"
 +++ "b/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\347\273\204\344\273\266/viralVideoDemo/index.md"
 @@ -4,18 +4,18 @@
@@ -3140,7 +3112,7 @@ index 06675a37d..701959cf9 100644
 -| `data/{types.d.ts,mock.js,adapter.js}`                   | 类型声明、确定性样例和本地读取/筛选/标签/模拟排序/覆盖适配                                                             |
 -| `messages.js`、`tableMessages.js`、`evidenceMessages.js` | Demo、表格及依据抽屉的局部语言文案                                                                                     |
 -| `assets/script/viralDemo/runtime.js`                     | 限定开发环境、榜单路由和显式 query 的演示开关                                                                          |
-+单视频“更多”菜单仅保留加入监控。AI 推荐关键词及其说明、命令分支和本地五语提示已移除，本期不生成推荐或承接相关搜索；原关键词筛选保持，既有频道搜索 AI 功能未改动。
++单视频“更多”菜单仅保留加入监控。AI 推荐关键词及其说明、命令分支和本地五语提示已移除，本期不生成推荐或承接相关搜索；榜单关键词筛选也已移除，既有频道搜索 AI 功能未改动。
 +
 +| 组件或模块                                               | 职责与主要输入输出                                                                                                                                                               |
 +| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3178,11 +3150,11 @@ index 06675a37d..701959cf9 100644
 -- 已入选来自有效判定。过期、撤销、数据不足或缺失不能转成正向命中；只有两个视角都有效且未达标，才合并为未达标结论。
 +## 榜单发布时间范围
 +
-+候选限批次截止时刻前 90 天发布，控件仅有近 30 天/近 90 天，初始化、缺省及清空均回近 30 天。页面始终显式向本地适配传 30d/90d；默认 30 天由常用控件显示，非默认 90 天才进入可移除摘要，不因选时间而打开高级区。旧 7d/any 等 URL 改成 30d 并提示，其他合法条件保留。
++2026-11-02 页面固定传入 30d，其他已移除筛选固定不限；通用 adapter 仍保留独立数据筛选能力，但不由榜单 URL 恢复。更早作品仅留作窗口外结果样例，不出现在当前榜单。后台 90 天期限和历史基线不随页面收敛改变。
 +
-+adapter 的时间比较锚定 record.evaluationAsOf（样例同属固定 BATCH），不用 Date.now。getRanking 独立限制 90 天候选，过窗、未来或无效发布时间不入榜；filterRecords 在请求 30d/90d 时进一步筛选。该逻辑仅模拟完整固定样例的服务端查询，真实接口须先筛选再计数/分页。公共识别状态和历史基准不受榜单时间窗裁剪，快照有效期也未因此设为 30/90 天。
++2026-11-02 页面固定传入 30d，其他已移除筛选固定不限；通用 adapter 仍保留独立数据筛选能力，但不由榜单 URL 恢复。更早作品仅留作窗口外结果样例，不出现在当前榜单。后台 90 天期限和历史基线不随页面收敛改变。
 +
-+43 条样例中，默认 30 天显示 YouTube 5、TikTok 3、Instagram 2 条，90 天显示 6/4/3 条。yt-022、tt-009、ig-008 发布于 2026-07-20，落在模拟批次截止时间 2026-09-16 之前 31—90 天，用于验证切换差异；固定排序键及其他判定不变。
++43 条样例仍有 13 条有效命中；固定近 30 天三平台榜共 10 条，另 3 条为窗口外保留结果，不提供 90 天切换。
 +
 +## 频道国家与内容市场
 +
@@ -3211,17 +3183,19 @@ index 06675a37d..701959cf9 100644
  - 默认仅展示播放、点赞、评论三个主要指标。比较对象、样本、补充互动与时间按需展开，版本/批次二级折叠；不直接输出原始原因码。
  - 账号倍数只读样例已有的有效数值，不从指标反算。受限记录不渲染指标和内部详情。
  - 跨模块动作不执行真实或模拟的后续业务流程；不能因打开依据而消费配额、启动 AI 或写入后台。
-@@ -47,6 +77,6 @@
+@@ -47,6 +77,8 @@
  
  沿用[设计规范 README](/Users/yukuangji/Work/NoxInfluencer/pm-workspace/kol2.0-design-specification/README.md)、[语义 token](/Users/yukuangji/Work/NoxInfluencer/pm-workspace/kol2.0-design-specification/playbook/semantic-tokens.md)、[表格](/Users/yukuangji/Work/NoxInfluencer/pm-workspace/kol2.0-design-specification/playbook/components/table.md)、[标签](/Users/yukuangji/Work/NoxInfluencer/pm-workspace/kol2.0-design-specification/playbook/components/tag.md)、[筛选摘要](/Users/yukuangji/Work/NoxInfluencer/pm-workspace/kol2.0-design-specification/playbook/components/filter-summary.md)与[可访问性](/Users/yukuangji/Work/NoxInfluencer/pm-workspace/kol2.0-design-specification/playbook/accessibility.md)。不引入新组件库或自造视觉 token。
  
 -本地参考入口是 `/youtube-video-rank?viralDemo=1`，代码为本分支 `pages/youtube-video-rank.vue` 与上述组件。已有证据来自内置浏览器和仓库 Playwright runner，对线上数据或权限不构成验收。清理后的定向浏览器 runner 记录 29 项通过，包含只读跨模块操作与新标签页关键词恢复；`pageerror` 和生产业务请求均为 0。新标签页恢复此前曾超时，本轮该用例已通过；1280 旧页壳的文档溢出仍存在，不能宣称完整浏览器或生产验收通过。
-+本地参考入口是 `/youtube-video-rank?viralDemo=1`，代码为本分支 `pages/youtube-video-rank.vue` 与上述组件。已有证据来自内置浏览器和仓库 Playwright runner，对线上数据或权限不构成验收。单判断定向浏览器 runner 记录 本轮定向检查通过，包含只读跨模块操作与新标签页关键词恢复；`pageerror` 和生产业务请求均为 0。新标签页恢复此前曾超时，本轮该用例已通过；1280 旧页壳的文档溢出仍存在，不能宣称完整浏览器或生产验收通过。
++本地参考入口是 `/youtube-video-rank?viralDemo=1`，代码为本分支 `pages/youtube-video-rank.vue` 与上述组件。已有证据来自内置浏览器和仓库 Playwright runner，对线上数据或权限不构成验收。单判断定向浏览器 runner 记录 本轮定向检查通过，包含只读跨模块操作与新标签页国家/分类恢复；`pageerror` 和生产业务请求均为 0。新标签页恢复此前曾超时，本轮该用例已通过；1280 旧页壳的文档溢出仍存在，不能宣称完整浏览器或生产验收通过。
++
++范围隔离测试、43 条样例契约测试及抽屉五语呈现测试已通过，分别由 `scripts/viral-video-rank-scope.test.js`、`scripts/viral-video-demo.test.js`、`scripts/viral-evidence-drawer.test.js` 承接。Element UI 固定列可能生成隐藏 DOM 副本，测试应定位可见操作。普通页面、开发开关关闭、空状态、权限状态与失效结果必须分别回归。局部标签/抽屉五语和 SSR 呈现测试不替代真实多语页面、Node 14 构建、移动端、性能、生产数据及权限验收。
  
 -范围隔离测试、43 条样例契约测试及抽屉五语呈现测试已通过，分别由 `scripts/viral-video-rank-scope.test.js`、`scripts/viral-video-demo.test.js`、`scripts/viral-evidence-drawer.test.js` 承接。Element UI 固定列可能生成隐藏 DOM 副本，测试应定位可见操作。普通页面、开发开关关闭、空状态、权限状态与失效结果必须分别回归。局部五语和 SSR 呈现测试不替代真实多语页面、Node 14 构建、移动端、性能、生产数据及权限验收。
-+范围隔离测试、43 条样例契约测试及抽屉五语呈现测试已通过，分别由 `scripts/viral-video-rank-scope.test.js`、`scripts/viral-video-demo.test.js`、`scripts/viral-evidence-drawer.test.js` 承接。Element UI 固定列可能生成隐藏 DOM 副本，测试应定位可见操作。普通页面、开发开关关闭、空状态、权限状态与失效结果必须分别回归。局部标签/抽屉五语和 SSR 呈现测试不替代真实多语页面、Node 14 构建、移动端、性能、生产数据及权限验收。
++2026-11-02 定向验收：51 项浏览器检查、43 条契约、43×5 语言渲染、榜单隔离和 query 回归通过。query 测试覆盖退休参数、固定 30d、合法分页恢复、筛选归页及归一幂等；源码 HEAD 红、新实现绿。结果位于 output/playwright/viral-video-rank-only，生产请求与运行错误均为 0；未登录 1280 页壳溢出为既有限制。
 diff --git "a/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\351\241\265\351\235\242/viral-video-demo/index.md" "b/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\351\241\265\351\235\242/viral-video-demo/index.md"
-index 929a45408..7e14a7ef0 100644
+index 929a45408..fe810e9f7 100644
 --- "a/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\351\241\265\351\235\242/viral-video-demo/index.md"
 +++ "b/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\351\241\265\351\235\242/viral-video-demo/index.md"
 @@ -11,10 +11,18 @@
@@ -3233,7 +3207,7 @@ index 929a45408..7e14a7ef0 100644
  
  搜索、频道内容、内容监控、品牌资产的 Demo 路由、适配器及真实页面中的 Demo 接入均不保留；对应真实页面恢复 `uat` 基线。这些模块的产品需求仍以[《其余功能模块修改 SPEC》](/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/01_Product_Specs/viral_video_identification/其余功能模块修改_SPEC.md)交付，研发按原 UI 增量增加筛选、标记与依据入口，不再制作 Demo。
  
-+发布时间只支持近 30/90 天，缺省及清空 30 天；候选最多 90 天，以固定批次截止时间回推，不按今天计算。默认时间不作为额外摘要占区，非默认 90 天可移除回 30 天。旧不限/近 7 天 URL 调整并提示，国家、关键词等条件保留；不会缩减作者历史基线或改变公共爆款标签。
++2026-11-02：榜单固定展示近 30 天发布视频，仅保留平台切换、频道国家/地区与分类；不提供时间、形态、作者体量、语言、推广、关键词或高级筛选。固定样例时间以批次截止时刻回推，不按今天计算；后台 90 天计算期限和同形态历史基线保持。
 +
 +地区筛选与摘要明确为“频道国家/地区”，只读取独立 creator.country；全球包含符合条件的未知国家作品，具体国家榜排除未知国家。旧 market URL 移除并提示，country 与其他合法条件保留，不把内容市场重解释为频道国家。
 +
@@ -3261,11 +3235,11 @@ index 929a45408..7e14a7ef0 100644
  ## 查询与组件耦合
  
 -榜单页面为 `pages/youtube-video-rank.vue`。筛选条件通过 query 保存，包括 `platform/view/contentType/country/category/creatorSize/publishedRange/language/promotion/batchId/coverageStatus/keyword`；`evidenceVideoId` 表示当前打开的依据。当前 Demo 直接渲染筛选后的模拟合格集合，不复用生产榜单的滚动追加请求。
-+榜单页面为 `pages/youtube-video-rank.vue`。筛选条件通过 query 保存，包括 `platform/view/contentType/country/category/creatorSize/publishedRange/language/promotion/keyword`；旧 `evidenceVideoId` 参数会被移除，不再恢复抽屉。`view` 固定为 `account_breakout`，页面无单项判断切换；旧判断 URL 会归一并保留其他条件。覆盖状态不再作为榜单筛选：旧 `coverageStatus=any` 直接移除，非默认值移除时明确提示用户重新确认条件。当前 Demo 直接渲染筛选后的模拟合格集合，不复用生产榜单的滚动追加请求。
++榜单页面为 `pages/youtube-video-rank.vue`。URL 白名单仅保留`viralDemo/view/platform/country/category`及合法`page`；`view`固定为`account_breakout`。退休的形态/体量/时间/语言/推广/关键词/覆盖/依据/市场/批次参数清除；非默认退休条件合并提示。内部固定 30d，其他退休条件不限，不能从旧 URL 恢复隐形筛选。国家、分类和平台恢复；改变筛选回第 1 页。
  
  榜单只依赖 [viralVideoDemo 组件说明](../../组件/viralVideoDemo/index.md)所列组件和样例数据。多模块适配目录 `integration/`、旧独立展示页、跨模块模拟状态与项目/配额存储不再作为保留能力。
  
-@@ -48,8 +56,10 @@ Demo 仅保留三平台榜单、两个独立判定视角、范围筛选及摘要
+@@ -48,8 +56,12 @@ Demo 仅保留三平台榜单、两个独立判定视角、范围筛选及摘要
  
  - 真实参考路由：`/youtube-video-rank`；本地 Demo 路由：`/youtube-video-rank?viralDemo=1`。页面保留在真实路由内，不另造正式产品入口。
  - 代码定位：本分支 `pages/youtube-video-rank.vue` 与 `components/viralVideoDemo/`；清理不代表其它模块已接入统一结果。
@@ -3276,12 +3250,14 @@ index 929a45408..7e14a7ef0 100644
  
  需求全貌见[交付 README](/Users/yukuangji/Work/NoxInfluencer/pm-workspace/drafts/01_Product_Specs/viral_video_identification/README.md)，正式行为以计算规则、榜单页及其它模块的三个 SPEC 为准。
 +
-+批次仅供内部一致性和追溯：不提供结果批次筛选，不在结果信息或模拟提示展示批次编号。旧 batchId 参数直接移除，其他条件保留，不因该旧参数展开高级筛选；保留更新时间与榜单截止时间。
++批次仅供内部一致性和追溯：不提供结果批次筛选，不在结果信息或模拟提示展示批次编号。旧 batchId 参数直接移除，合法平台、国家、分类及分页保留；保留更新时间与榜单截止时间。
++
++2026-11-02 定向验收：51 项浏览器检查、43 条契约、43×5 语言渲染、榜单隔离和 query 回归通过。query 测试覆盖退休参数、固定 30d、合法分页恢复、筛选归页及归一幂等；源码 HEAD 红、新实现绿。结果位于 output/playwright/viral-video-rank-only，生产请求与运行错误均为 0；未登录 1280 页壳溢出为既有限制。
 diff --git "a/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\351\241\265\351\235\242/youtube-video-rank.md" "b/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\351\241\265\351\235\242/youtube-video-rank.md"
-index 5fbe8a5c4..fb23fd6df 100644
+index 5fbe8a5c4..99755156d 100644
 --- "a/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\351\241\265\351\235\242/youtube-video-rank.md"
 +++ "b/docs/\347\237\245\350\257\206\345\272\223/\345\212\237\350\203\275\346\250\241\345\235\227/\346\220\234\347\264\242\344\270\216\346\264\236\345\257\237/\351\241\265\351\235\242/youtube-video-rank.md"
-@@ -118,5 +118,5 @@
+@@ -118,5 +118,7 @@
  
  ## 爆款榜单参考 Demo
  
@@ -3289,8 +3265,10 @@ index 5fbe8a5c4..fb23fd6df 100644
 -本 Demo 只保留榜单，搜索、作者频道和加入监控入口保留展示并提示“不演示后续流程”，不执行跨模块导航或写入。其它模块仅按交付 SPEC 开发，不再注入 Demo 数据。范围和限制见 [爆款榜单 Demo 说明](viral-video-demo/index.md)。
 +开发环境下 `/youtube-video-rank?viralDemo=1` 使用 `components/viralVideoDemo/` 的固定样例、榜单表格与行内对照；独立分支为 `codex/viral-video-demo`。不带开关或生产环境仍走原榜单逻辑。
 +本 Demo 只保留账号突破榜单，无判定类型切换；单视频 AI 推荐关键词及其说明入口本期移除；内容标题/封面只展示源站跳转示意，已移除查看依据及抽屉；作者频道和加入监控入口保留展示并提示“不演示后续流程”，不执行跨模块导航或写入。其它模块仅按交付 SPEC 开发，不再注入 Demo 数据。范围和限制见 [爆款榜单 Demo 说明](viral-video-demo/index.md)。
++
++2026-11-02 爆款 Demo 收敛：仅平台切换、频道国家/地区与分类，固定近 30 天；旧高级及时间参数移除，不再隐形过滤。后台 90 天计算期限、旧 HOT 与既有频道搜索不变。
 diff --git a/pages/youtube-video-rank.vue b/pages/youtube-video-rank.vue
-index 786e96c7d..a4eaa1070 100644
+index 786e96c7d..b122c4151 100644
 --- a/pages/youtube-video-rank.vue
 +++ b/pages/youtube-video-rank.vue
 @@ -63,7 +63,7 @@
@@ -3340,21 +3318,122 @@ index 786e96c7d..a4eaa1070 100644
            </label>
            <select
              id="area-filter-select"
-@@ -210,9 +184,8 @@
-             class="filter-select"
-             @change="handleFilterChange"
-           >
--            <option value="any">{{ $t('viralDemo.common.all') }}</option>
--            <option value="7d">{{ $t('viralDemo.rank.last7Days') }}</option>
-             <option value="30d">{{ $t('viralDemo.rank.last30Days') }}</option>
-+            <option value="90d">{{ $t('viralDemo.rank.last90Days') }}</option>
-           </select>
-         </div>
-         <button
-@@ -274,40 +247,6 @@
+@@ -162,164 +136,6 @@
              </option>
            </select>
          </div>
+-        <div class="filter-group">
+-          <label for="viral-rank-format">{{
+-            $t('viralDemo.common.contentType')
+-          }}</label
+-          ><select
+-            id="viral-rank-format"
+-            v-model="viralFilters.contentType"
+-            class="filter-select"
+-            @change="handleFilterChange"
+-          >
+-            <option value="any">{{ $t('viralDemo.common.all') }}</option>
+-            <option v-for="type in viralContentTypes" :key="type" :value="type">
+-              {{ $t(`viralDemo.extra.contentTypes.${type}`) }}
+-            </option>
+-          </select>
+-        </div>
+-        <div class="filter-group">
+-          <label for="viral-rank-creator-size">{{
+-            $t('viralDemo.rank.creatorSize')
+-          }}</label>
+-          <select
+-            id="viral-rank-creator-size"
+-            v-model="viralFilters.creatorSize"
+-            class="filter-select"
+-            @change="handleFilterChange"
+-          >
+-            <option value="any">{{ $t('viralDemo.common.all') }}</option>
+-            <option value="nano">
+-              {{ $t('viralDemo.rank.creatorNano') }}
+-            </option>
+-            <option value="emerging">
+-              {{ $t('viralDemo.rank.creatorEmerging') }}
+-            </option>
+-            <option value="established">
+-              {{ $t('viralDemo.rank.creatorEstablished') }}
+-            </option>
+-          </select>
+-        </div>
+-        <div class="filter-group">
+-          <label for="viral-rank-published-range">{{
+-            $t('viralDemo.rank.publishedRange')
+-          }}</label>
+-          <select
+-            id="viral-rank-published-range"
+-            v-model="viralFilters.publishedRange"
+-            class="filter-select"
+-            @change="handleFilterChange"
+-          >
+-            <option value="any">{{ $t('viralDemo.common.all') }}</option>
+-            <option value="7d">{{ $t('viralDemo.rank.last7Days') }}</option>
+-            <option value="30d">{{ $t('viralDemo.rank.last30Days') }}</option>
+-          </select>
+-        </div>
+-        <button
+-          type="button"
+-          class="advanced-filter-toggle"
+-          :aria-expanded="showAdvancedRankFilters"
+-          aria-controls="rank-advanced-filters"
+-          @click="showAdvancedRankFilters = !showAdvancedRankFilters"
+-        >
+-          {{
+-            $t(
+-              showAdvancedRankFilters
+-                ? 'viralDemo.rank.collapseAdvancedFilters'
+-                : 'viralDemo.rank.advancedFilters'
+-            )
+-          }}
+-        </button>
+-      </div>
+-      <div
+-        v-show="showAdvancedRankFilters"
+-        id="rank-advanced-filters"
+-        class="filter-section rank-advanced-filters"
+-      >
+-        <div class="filter-group">
+-          <label for="viral-rank-language">{{
+-            $t('viralDemo.rank.language')
+-          }}</label>
+-          <select
+-            id="viral-rank-language"
+-            v-model="viralFilters.language"
+-            class="filter-select"
+-            @change="handleFilterChange"
+-          >
+-            <option value="any">{{ $t('viralDemo.common.all') }}</option>
+-            <option value="en">
+-              {{ $t('viralDemo.rank.languageEnglish') }}
+-            </option>
+-            <option value="ja">
+-              {{ $t('viralDemo.rank.languageJapanese') }}
+-            </option>
+-          </select>
+-        </div>
+-        <div class="filter-group">
+-          <label for="viral-rank-promotion">{{
+-            $t('viralDemo.rank.promotion')
+-          }}</label>
+-          <select
+-            id="viral-rank-promotion"
+-            v-model="viralFilters.promotion"
+-            class="filter-select"
+-            @change="handleFilterChange"
+-          >
+-            <option value="any">{{ $t('viralDemo.common.all') }}</option>
+-            <option value="organic">
+-              {{ $t('viralDemo.rank.organic') }}
+-            </option>
+-            <option value="sponsored">
+-              {{ $t('viralDemo.rank.sponsored') }}
+-            </option>
+-          </select>
+-        </div>
 -        <div class="filter-group">
 -          <label for="viral-rank-coverage">{{
 -            $t('viralDemo.rank.coverageStatus')
@@ -3389,10 +3468,22 @@ index 786e96c7d..a4eaa1070 100644
 -            <option :value="viralBatch.id">{{ viralBatch.id }}</option>
 -          </select>
 -        </div>
-         <div class="filter-group filter-group-keyword">
-           <label for="viral-rank-keyword">{{
-             $t('viralDemo.rank.keyword')
-@@ -341,7 +280,6 @@
+-        <div class="filter-group filter-group-keyword">
+-          <label for="viral-rank-keyword">{{
+-            $t('viralDemo.rank.keyword')
+-          }}</label>
+-          <input
+-            id="viral-rank-keyword"
+-            v-model.trim="viralFilters.keyword"
+-            class="filter-input"
+-            :placeholder="$t('viralDemo.rank.keywordPlaceholder')"
+-            @change="handleFilterChange"
+-          />
+-        </div>
+       </div>
+       <ViralFilterSummary
+         :items="viralSummary"
+@@ -341,7 +157,6 @@
                formatRankTime(viralBatch.evaluationAsOf)
              }}</span
            >
@@ -3400,7 +3491,7 @@ index 786e96c7d..a4eaa1070 100644
          </p>
          <div class="viral-context-action-row">
            <p>
-@@ -364,7 +302,6 @@
+@@ -364,7 +179,6 @@
          v-if="viralDemo"
          class="viral-rank-table"
          :records="viralRankRecords"
@@ -3408,7 +3499,7 @@ index 786e96c7d..a4eaa1070 100644
          @action="handleRankTableAction"
        />
        <div v-if="!viralDemo && !videoList.length" class="no-found-wrap">
-@@ -555,11 +492,6 @@
+@@ -555,11 +369,6 @@
          </div>
        </div>
      </section>
@@ -3420,7 +3511,7 @@ index 786e96c7d..a4eaa1070 100644
    </main>
  </template>
  
-@@ -575,14 +507,12 @@ import { isViralDemoRoute } from '@/assets/script/viralDemo/runtime'
+@@ -575,14 +384,12 @@ import { isViralDemoRoute } from '@/assets/script/viralDemo/runtime'
  import {
    BATCH,
    getRecords,
@@ -3435,7 +3526,7 @@ index 786e96c7d..a4eaa1070 100644
  import ViralFilterSummary from '@/components/viralVideoDemo/ViralFilterSummary.vue'
  import viralMessages from '@/components/viralVideoDemo/messages'
  import defaultThumbnail from '@/assets/image/video-monitor/table-empty-youtube.png'
-@@ -608,7 +538,6 @@ export default {
+@@ -608,7 +415,6 @@ export default {
    components: {
      ViralIntegrationNotice,
      ViralTable,
@@ -3443,27 +3534,44 @@ index 786e96c7d..a4eaa1070 100644
      ViralFilterSummary,
      CreatorEntryBand
    },
-@@ -628,14 +557,12 @@ export default {
+@@ -628,23 +434,15 @@ export default {
        },
        viralFilters: {
          platform: 'youtube',
 -        view: 'broad_popular',
-+        view: 'account_breakout',
-         contentType: 'any',
-         creatorSize: 'any',
+-        contentType: 'any',
+-        creatorSize: 'any',
 -        publishedRange: 'any',
-+        publishedRange: '30d',
-         language: 'any',
-         promotion: 'any',
+-        language: 'any',
+-        promotion: 'any',
 -        batchId: 'any',
 -        coverageStatus: 'any',
-         keyword: ''
+-        keyword: ''
++        view: 'account_breakout',
++        publishedRange: '30d'
        },
        localFilters: {
-@@ -678,22 +605,6 @@ export default {
-         instagram: ['instagram_reel']
-       }[this.viralFilters.platform]
+         country: routeParams.country || 'all',
+         category: routeParams.category || 'all'
+       },
+       loadingMore: false,
+-      showRankExplanation: false,
+-      showAdvancedRankFilters: false
++      showRankExplanation: false
+     }
+   },
+   async fetch() {
+@@ -671,29 +469,6 @@ export default {
+     viralDemo() {
+       return isViralDemoRoute(this.$route)
      },
+-    viralContentTypes() {
+-      return {
+-        youtube: ['youtube_video', 'youtube_short'],
+-        tiktok: ['tiktok_video'],
+-        instagram: ['instagram_reel']
+-      }[this.viralFilters.platform]
+-    },
 -    viralEvidenceRecord() {
 -      return this.viralDemo
 -        ? getRecord(this.$route.query.evidenceVideoId)
@@ -3483,7 +3591,7 @@ index 786e96c7d..a4eaa1070 100644
      viralSummary() {
        if (!this.viralDemo) return []
        const values = [
-@@ -701,21 +612,8 @@ export default {
+@@ -701,33 +476,12 @@ export default {
            key: 'platform',
            label: this.$t('viralDemo.common.platform'),
            value: this.platformName(this.viralFilters.platform)
@@ -3502,11 +3610,15 @@ index 786e96c7d..a4eaa1070 100644
 -          ? this.viralFilters.platform !== 'youtube'
 -          : this.viralFilters.view !== 'broad_popular'
 -      )
+-      if (this.viralFilters.contentType !== 'any')
+-        values.push({
+-          key: 'contentType',
+-          label: this.$t('viralDemo.common.contentType'),
+-          value: this.$t(
+-            `viralDemo.extra.contentTypes.${this.viralFilters.contentType}`
+-          )
+-        })
 +      ].filter(() => this.viralFilters.platform !== 'youtube')
-       if (this.viralFilters.contentType !== 'any')
-         values.push({
-           key: 'contentType',
-@@ -727,7 +625,7 @@ export default {
        if (this.localFilters.country !== 'all')
          values.push({
            key: 'country',
@@ -3515,22 +3627,22 @@ index 786e96c7d..a4eaa1070 100644
            value: this.localFilters.country.toUpperCase()
          })
        if (this.localFilters.category !== 'all')
-@@ -740,35 +638,29 @@ export default {
-         ['creatorSize', 'creatorSize'],
-         ['publishedRange', 'publishedRange'],
-         ['language', 'language'],
+@@ -736,47 +490,6 @@ export default {
+           label: this.$t('viralDemo.common.category'),
+           value: this.localFilters.category
+         })
+-      ;[
+-        ['creatorSize', 'creatorSize'],
+-        ['publishedRange', 'publishedRange'],
+-        ['language', 'language'],
 -        ['promotion', 'promotion'],
 -        ['batchId', 'batch'],
 -        ['coverageStatus', 'coverageStatus']
-+        ['promotion', 'promotion']
-       ].forEach(([key, messageKey]) => {
+-      ].forEach(([key, messageKey]) => {
 -        if (this.viralFilters[key] !== 'any')
-+        if (
-+          this.viralFilters[key] !== (key === 'publishedRange' ? '30d' : 'any')
-+        )
-           values.push({
-             key,
-             label: this.$t(`viralDemo.rank.${messageKey}`),
+-          values.push({
+-            key,
+-            label: this.$t(`viralDemo.rank.${messageKey}`),
 -            value:
 -              key === 'batchId'
 -                ? this.viralFilters[key]
@@ -3552,43 +3664,45 @@ index 786e96c7d..a4eaa1070 100644
 -                      }[this.viralFilters[key]]
 -                    }`
 -                  )
-+            value: this.$t(
-+              `viralDemo.rank.${
-+                {
-+                  nano: 'creatorNano',
-+                  emerging: 'creatorEmerging',
-+                  established: 'creatorEstablished',
-+                  '30d': 'last30Days',
-+                  '90d': 'last90Days',
-+                  en: 'languageEnglish',
-+                  ja: 'languageJapanese',
-+                  organic: 'organic',
-+                  sponsored: 'sponsored'
-+                }[this.viralFilters[key]]
-+              }`
-+            )
-           })
-       })
-       if (this.viralFilters.keyword)
-@@ -790,7 +682,7 @@ export default {
+-          })
+-      })
+-      if (this.viralFilters.keyword)
+-        values.push({
+-          key: 'keyword',
+-          label: this.$t('viralDemo.rank.keyword'),
+-          value: this.viralFilters.keyword
+-        })
+       return values
+     },
+     ...mapState({
+@@ -789,19 +502,17 @@ export default {
+       if (!this.viralDemo) return []
        return filterRecords(getRecords(), {
          platform: this.viralFilters.platform,
-         contentType: this.viralFilters.contentType,
+-        contentType: this.viralFilters.contentType,
 -        market:
++        contentType: 'any',
 +        country:
            this.localFilters.country === 'all'
              ? 'any'
              : this.localFilters.country.toUpperCase(),
-@@ -799,8 +691,6 @@ export default {
-         publishedRange: this.viralFilters.publishedRange,
-         language: this.viralFilters.language,
-         promotion: this.viralFilters.promotion,
+         category: this.localFilters.category,
+-        creatorSize: this.viralFilters.creatorSize,
+-        publishedRange: this.viralFilters.publishedRange,
+-        language: this.viralFilters.language,
+-        promotion: this.viralFilters.promotion,
 -        batchId: this.viralFilters.batchId,
 -        coverageStatus: this.viralFilters.coverageStatus,
-         keyword: this.viralFilters.keyword
+-        keyword: this.viralFilters.keyword
++        creatorSize: 'any',
++        publishedRange: '30d',
++        language: 'any',
++        promotion: 'any',
++        keyword: ''
        })
      },
-@@ -892,13 +782,16 @@ export default {
+     videoList() {
+@@ -892,13 +603,16 @@ export default {
              'us',
              'jp',
              'kr',
@@ -3607,7 +3721,7 @@ index 786e96c7d..a4eaa1070 100644
                : this.$t(`areaCodeMap.${value.toUpperCase()}`)
          }))
        const list = this.areaFilterList.map(item => {
-@@ -958,7 +851,10 @@ export default {
+@@ -958,7 +672,10 @@ export default {
      '$route.query': {
        immediate: true,
        handler() {
@@ -3619,7 +3733,7 @@ index 786e96c7d..a4eaa1070 100644
        }
      },
      '$route.path': {
-@@ -995,10 +891,7 @@ export default {
+@@ -995,58 +712,61 @@ export default {
          platform: ['youtube', 'tiktok', 'instagram'].includes(query.platform)
            ? query.platform
            : 'youtube',
@@ -3627,119 +3741,135 @@ index 786e96c7d..a4eaa1070 100644
 -          query.view === 'account_breakout'
 -            ? 'account_breakout'
 -            : 'broad_popular',
-+        view: 'account_breakout',
-         contentType: [
-           'youtube_video',
-           'youtube_short',
-@@ -1012,42 +905,66 @@ export default {
-         )
-           ? query.creatorSize
-           : 'any',
--        publishedRange: ['7d', '30d'].includes(query.publishedRange)
-+        publishedRange: ['30d', '90d'].includes(query.publishedRange)
-           ? query.publishedRange
+-        contentType: [
+-          'youtube_video',
+-          'youtube_short',
+-          'tiktok_video',
+-          'instagram_reel'
+-        ].includes(query.contentType)
+-          ? query.contentType
 -          : 'any',
-+          : '30d',
-         language: ['en', 'ja'].includes(query.language)
-           ? query.language
-           : 'any',
-         promotion: ['organic', 'sponsored'].includes(query.promotion)
-           ? query.promotion
-           : 'any',
+-        creatorSize: ['nano', 'emerging', 'established'].includes(
+-          query.creatorSize
++        view: 'account_breakout',
++        publishedRange: '30d'
++      }
++      const country =
++        typeof query.country === 'string' ? query.country.toLowerCase() : 'all'
++      const category =
++        typeof query.category === 'string' ? query.category : 'all'
++      this.localFilters = {
++        country: this.normalizedAreaFilterList.some(
++          item => item.value === country
+         )
+-          ? query.creatorSize
+-          : 'any',
+-        publishedRange: ['7d', '30d'].includes(query.publishedRange)
+-          ? query.publishedRange
+-          : 'any',
+-        language: ['en', 'ja'].includes(query.language)
+-          ? query.language
+-          : 'any',
+-        promotion: ['organic', 'sponsored'].includes(query.promotion)
+-          ? query.promotion
+-          : 'any',
 -        batchId: query.batchId === BATCH.id ? query.batchId : 'any',
 -        coverageStatus: ['full', 'partial', 'none'].includes(
 -          query.coverageStatus
--        )
++          ? country
++          : 'all',
++        category: this.normalizedCategoryList.some(
++          item => item.value === category
+         )
 -          ? query.coverageStatus
 -          : 'any',
-         keyword: typeof query.keyword === 'string' ? query.keyword : ''
+-        keyword: typeof query.keyword === 'string' ? query.keyword : ''
++          ? category
++          : 'all'
        }
-       this.localFilters = {
+-      this.localFilters = {
 -        country:
 -          query.country ||
 -          (query.market && query.market !== 'any'
 -            ? query.market.toLowerCase()
 -            : 'all'),
-+        country: query.country || 'all',
-         category: query.category || 'all'
-       }
-       // 有高级参数时保持筛选区展开，避免刷新或回退后筛选条件藏在折叠区。
-       this.showAdvancedRankFilters = Boolean(
-         this.viralFilters.creatorSize !== 'any' ||
--          this.viralFilters.publishedRange !== 'any' ||
-           this.viralFilters.language !== 'any' ||
-           this.viralFilters.promotion !== 'any' ||
--          this.viralFilters.batchId !== 'any' ||
--          this.viralFilters.coverageStatus !== 'any' ||
-           this.viralFilters.keyword
-       )
-     },
+-        category: query.category || 'all'
++    },
 +    normalizeViralQuery() {
 +      const query = this.$route.query
-+      if (
-+        query.view === 'account_breakout' &&
-+        ['30d', '90d'].includes(query.publishedRange) &&
-+        !Object.prototype.hasOwnProperty.call(query, 'coverageStatus') &&
-+        !Object.prototype.hasOwnProperty.call(query, 'evidenceVideoId') &&
-+        !Object.prototype.hasOwnProperty.call(query, 'market') &&
-+        !Object.prototype.hasOwnProperty.call(query, 'batchId')
-+      )
-+        return
++      // 白名单恢复防止已删除的控件通过旧链接继续暗中限制榜单。
 +      const normalized = {
-+        ...query,
++        viralDemo: '1',
 +        view: 'account_breakout',
-+        publishedRange: this.viralFilters.publishedRange
-+      }
-+      delete normalized.coverageStatus
-+      delete normalized.evidenceVideoId
-+      delete normalized.market
-+      // 批次仅保留在内部结果上下文；旧URL不再恢复为用户筛选。
-+      delete normalized.batchId
++        platform: this.viralFilters.platform,
++        ...this.localFilters
+       }
+-      // 有高级参数时保持筛选区展开，避免刷新或回退后筛选条件藏在折叠区。
+-      this.showAdvancedRankFilters = Boolean(
+-        this.viralFilters.creatorSize !== 'any' ||
+-          this.viralFilters.publishedRange !== 'any' ||
+-          this.viralFilters.language !== 'any' ||
+-          this.viralFilters.promotion !== 'any' ||
+-          this.viralFilters.batchId !== 'any' ||
+-          this.viralFilters.coverageStatus !== 'any' ||
+-          this.viralFilters.keyword
++      if (typeof query.page === 'string' && /^[1-9]\d*$/.test(query.page))
++        normalized.page = query.page
++      if (
++        Object.keys(query).length === Object.keys(normalized).length &&
++        Object.keys(normalized).every(key => query[key] === normalized[key])
+       )
++        return
++      const retiredFilters = [
++        'contentType',
++        'creatorSize',
++        'language',
++        'promotion',
++        'keyword',
++        'market',
++        'coverageStatus'
++      ]
++      const hadRetiredFilter =
++        retiredFilters.some(
++          key =>
++            query[key] !== undefined &&
++            !['', 'any', 'all'].includes(String(query[key]).toLowerCase())
++        ) ||
++        (query.publishedRange !== undefined && query.publishedRange !== '30d')
 +      this.replaceViralQuery(normalized)
-+      if (query.coverageStatus && query.coverageStatus !== 'any')
-+        this.$message.info(this.$t('viralDemo.rank.legacyCoverageRemoved'))
-+      if (
-+        query.market &&
-+        !['any', 'all'].includes(String(query.market).toLowerCase())
-+      )
-+        this.$message.info(this.$t('viralDemo.rank.legacyMarketRemoved'))
-+      if (
-+        query.publishedRange !== undefined &&
-+        !['30d', '90d'].includes(query.publishedRange)
-+      )
-+        this.$message.info(
-+          this.$t('viralDemo.rank.legacyPublishedRangeChanged')
-+        )
-+    },
++      if (hadRetiredFilter)
++        this.$message.info(this.$t('viralDemo.rank.legacyFiltersRemoved'))
+     },
      replaceViralQuery(query) {
        this.$router.replace({ path: this.$route.path, query }).catch(error => {
-         if (error.name !== 'NavigationDuplicated') throw error
-@@ -1064,48 +981,34 @@ export default {
-       this.viralFilters.contentType = 'any'
-       this.handleFilterChange()
+@@ -1061,51 +781,28 @@ export default {
+       this.changeViralPlatform()
      },
+     changeViralPlatform() {
+-      this.viralFilters.contentType = 'any'
+-      this.handleFilterChange()
+-    },
 -    changeViralView(view) {
 -      if (!['broad_popular', 'account_breakout'].includes(view)) return
 -      this.viralFilters.view = view
--      this.handleFilterChange()
--    },
+       this.handleFilterChange()
+     },
      removeViralFilter(key) {
        if (!key || key === 'platform') this.viralFilters.platform = 'youtube'
 -      if (!key || key === 'view') this.viralFilters.view = 'broad_popular'
-       if (!key || key === 'contentType' || key === 'platform')
-         this.viralFilters.contentType = 'any'
+-      if (!key || key === 'contentType' || key === 'platform')
+-        this.viralFilters.contentType = 'any'
        if (!key || key === 'country') this.localFilters.country = 'all'
        if (!key || key === 'category') this.localFilters.category = 'all'
-       if (!key || key === 'creatorSize') this.viralFilters.creatorSize = 'any'
-       if (!key || key === 'publishedRange')
+-      if (!key || key === 'creatorSize') this.viralFilters.creatorSize = 'any'
+-      if (!key || key === 'publishedRange')
 -        this.viralFilters.publishedRange = 'any'
-+        this.viralFilters.publishedRange = '30d'
-       if (!key || key === 'language') this.viralFilters.language = 'any'
-       if (!key || key === 'promotion') this.viralFilters.promotion = 'any'
+-      if (!key || key === 'language') this.viralFilters.language = 'any'
+-      if (!key || key === 'promotion') this.viralFilters.promotion = 'any'
 -      if (!key || key === 'batchId') this.viralFilters.batchId = 'any'
 -      if (!key || key === 'coverageStatus')
 -        this.viralFilters.coverageStatus = 'any'
-       if (!key || key === 'keyword') this.viralFilters.keyword = ''
+-      if (!key || key === 'keyword') this.viralFilters.keyword = ''
        this.handleFilterChange()
      },
 -    openViralEvidence(record) {
@@ -3772,7 +3902,7 @@ index 786e96c7d..a4eaa1070 100644
          return
        }
        if (type === 'monitor') this.showViralScopeNotice()
-@@ -1127,11 +1030,6 @@ export default {
+@@ -1127,11 +824,6 @@ export default {
        return `https://i.ytimg.com/vi/${video.id}/mqdefault.jpg`
      },
      videoAnalyticsPath(videoId) {
@@ -3784,16 +3914,49 @@ index 786e96c7d..a4eaa1070 100644
        return `/youtube/video-analytics/${videoId}`
      },
      channelPath(channelId) {
-@@ -1204,6 +1102,8 @@ export default {
-           viralDemo: '1'
+@@ -1198,12 +890,12 @@ export default {
+     handleFilterChange() {
+       if (this.viralDemo) {
+         const query = {
+-          ...this.$route.query,
+-          ...this.viralFilters,
+-          ...this.localFilters,
+-          viralDemo: '1'
++          viralDemo: '1',
++          platform: this.viralFilters.platform,
++          view: 'account_breakout',
++          ...this.localFilters
          }
-         delete query.evidenceVideoId
-+        delete query.market
-+        delete query.batchId
+-        delete query.evidenceVideoId
++        if (this.$route.query.page !== undefined) query.page = '1'
          this.replaceViralQuery(query)
          return
        }
-@@ -1689,6 +1589,9 @@ export default {
+@@ -1321,23 +1013,6 @@ export default {
+     }
+   }
+ 
+-  .filter-input {
+-    width: 190px;
+-    height: 32px;
+-    padding: 0 8px;
+-    border: 1px solid $kol_grey_5;
+-    border-radius: 2px;
+-    background: $kol_white;
+-    color: $kol_grey_2;
+-    outline: none;
+-    transition: all 0.3s;
+-
+-    &:hover,
+-    &:focus {
+-      border-color: $kol_main;
+-    }
+-  }
+-
+   .page-body {
+     position: relative;
+     width: 1200px;
+@@ -1689,6 +1364,9 @@ export default {
    .workbench-breadcrumb {
      margin: 0 0 8px;
    }
@@ -3803,7 +3966,17 @@ index 786e96c7d..a4eaa1070 100644
    .workbench-heading {
      display: flex;
      justify-content: space-between;
-@@ -1754,30 +1657,6 @@ export default {
+@@ -1710,8 +1388,7 @@ export default {
+     align-items: flex-end;
+     gap: 8px;
+   }
+-  .explain-button,
+-  .advanced-filter-toggle {
++  .explain-button {
+     border: 0;
+     padding: 4px 0;
+     color: $kol_main;
+@@ -1754,30 +1431,6 @@ export default {
        }
      }
    }
@@ -3834,8 +4007,24 @@ index 786e96c7d..a4eaa1070 100644
    .filter-section {
      width: 100%;
      justify-content: flex-start;
+@@ -1797,15 +1450,6 @@ export default {
+     .filter-select {
+       width: 140px;
+     }
+-    .advanced-filter-toggle {
+-      align-self: flex-end;
+-      line-height: 24px;
+-    }
+-  }
+-  .rank-advanced-filters {
+-    margin-top: 16px;
+-    padding-top: 16px;
+-    border-top: 1px solid $kol_grey_6;
+   }
+   .viral-filter-summary {
+     margin-top: 16px;
 diff --git a/scripts/viral-evidence-drawer.test.js b/scripts/viral-evidence-drawer.test.js
-index ba0b005e9..3cc1f1a7d 100644
+index ba0b005e9..f67a36a2f 100644
 --- a/scripts/viral-evidence-drawer.test.js
 +++ b/scripts/viral-evidence-drawer.test.js
 @@ -75,11 +75,17 @@ const Drawer = load('components/viralVideoDemo/ViralEvidenceDrawer.vue').default
@@ -4003,11 +4192,11 @@ index ba0b005e9..3cc1f1a7d 100644
 +          messages.zh.viralTable[key]
 +        )
 +    }
-+    assert(localized.viralDemo.rank.legacyCoverageRemoved, locale)
++    assert(localized.viralDemo.rank.legacyFiltersRemoved, locale)
 +    if (locale !== 'zh')
 +      assert.notStrictEqual(
-+        localized.viralDemo.rank.legacyCoverageRemoved,
-+        messages.zh.viralDemo.rank.legacyCoverageRemoved,
++        localized.viralDemo.rank.legacyFiltersRemoved,
++        messages.zh.viralDemo.rank.legacyFiltersRemoved,
 +        locale
 +      )
 +    assert.strictEqual(localized.viralDemo.common.openSearch, undefined, locale)
@@ -4704,11 +4893,139 @@ index 9f3d25c79..fa7084776 100644
    null
  )
  process.stdout.write(
+diff --git a/scripts/viral-video-rank-query.test.js b/scripts/viral-video-rank-query.test.js
+new file mode 100644
+index 000000000..6d9b5dd65
+--- /dev/null
++++ b/scripts/viral-video-rank-query.test.js
+@@ -0,0 +1,122 @@
++/* eslint-disable no-console */
++const assert = require('assert')
++const fs = require('fs')
++const { execFileSync } = require('child_process')
++const babel = require('@babel/core')
++const compiler = require('vue-template-compiler')
++const t = babel.types
++const file = 'pages/youtube-video-rank.vue'
++const source = process.env.RANK_PAGE_REV
++  ? execFileSync('git', ['show', `${process.env.RANK_PAGE_REV}:${file}`], {
++      encoding: 'utf8'
++    })
++  : fs.readFileSync(file, 'utf8')
++const ast = babel.parseSync(compiler.parseComponent(source).script.content, {
++  configFile: false,
++  babelrc: false,
++  sourceType: 'module'
++})
++const component = ast.program.body.find(node =>
++  t.isExportDefaultDeclaration(node)
++).declaration
++const methods = component.properties.find(
++  node => node.key.name === 'methods'
++).value
++const code = babel.transformFromAstSync(
++  t.file(t.program([t.expressionStatement(methods)])),
++  null,
++  { configFile: false, babelrc: false }
++).code
++// 只执行真实组件方法；不挂载页面，不加载业务请求。
++// eslint-disable-next-line no-new-func
++const api = new Function(`return ${code.replace(/;$/, '')}`)()
++const restore = query => {
++  const vm = {
++    ...api,
++    $route: { query, path: '/youtube-video-rank' },
++    viralDemo: true,
++    normalizedAreaFilterList: [
++      { value: 'all' },
++      { value: 'us' },
++      { value: 'ca' }
++    ],
++    normalizedCategoryList: [{ value: 'all' }, { value: 'travel' }],
++    $t: key => key,
++    notices: [],
++    $message: { info: () => {} },
++    replaceViralQuery(next) {
++      this.next = next
++    },
++    $router: {}
++  }
++  vm.$message.info = message => vm.notices.push(message)
++  vm.restoreViralFilters()
++  vm.normalizeViralQuery()
++  return vm
++}
++const retired = {
++  contentType: 'youtube_short',
++  creatorSize: 'nano',
++  publishedRange: '90d',
++  language: 'ja',
++  promotion: 'sponsored',
++  keyword: 'no-match',
++  batchId: 'old',
++  coverageStatus: 'partial',
++  evidenceVideoId: 'yt-001',
++  market: 'ca'
++}
++const vm = restore({
++  viralDemo: '1',
++  platform: 'youtube',
++  view: 'broad_popular',
++  country: 'US',
++  category: 'travel',
++  page: '2',
++  ...retired
++})
++assert.strictEqual(
++  vm.viralFilters.publishedRange,
++  '30d',
++  'retired 90d must never restore'
++)
++assert.deepStrictEqual(vm.next, {
++  viralDemo: '1',
++  view: 'account_breakout',
++  platform: 'youtube',
++  country: 'us',
++  category: 'travel',
++  page: '2'
++})
++assert.strictEqual(
++  vm.notices.length,
++  1,
++  'retired nondefault constraints use one notice'
++)
++vm.handleFilterChange()
++assert.strictEqual(vm.next.page, '1')
++assert(!Object.keys(retired).some(key => Object.hasOwn(vm.next, key)))
++for (const page of ['0', '-1', '2.5', 'abc', ['2']])
++  assert(!Object.hasOwn(restore({ page }).next, 'page'))
++const defaults = restore({
++  publishedRange: '30d',
++  contentType: 'any',
++  language: 'any',
++  keyword: ''
++})
++assert.strictEqual(defaults.notices.length, 0)
++const canonical = restore({
++  viralDemo: '1',
++  view: 'account_breakout',
++  platform: 'youtube',
++  country: 'all',
++  category: 'all'
++})
++assert.strictEqual(
++  canonical.next,
++  undefined,
++  'canonical query does not redirect repeatedly'
++)
++console.log(
++  'PASS fixed-30d query: retired constraints removed, supported scope/page restored, single notice, page reset and idempotence'
++)
 diff --git a/scripts/viral-video-rank-workbench.browser.js b/scripts/viral-video-rank-workbench.browser.js
-index b2b7aad6e..ca64d175b 100644
+index b2b7aad6e..dc1c695d5 100644
 --- a/scripts/viral-video-rank-workbench.browser.js
 +++ b/scripts/viral-video-rank-workbench.browser.js
-@@ -32,15 +32,37 @@ const base = 'http://127.0.0.1:3323'
+@@ -32,15 +32,66 @@ const base = 'http://127.0.0.1:3323'
        .first()
        .waitFor()
    try {
@@ -4717,7 +5034,7 @@ index b2b7aad6e..ca64d175b 100644
 -      timeout: 60000
 -    })
 +    await page.goto(
-+      `${base}/youtube-video-rank?viralDemo=1&batchId=viral-demo-2026-09-16-01`,
++      `${base}/youtube-video-rank?viralDemo=1&batchId=viral-demo-2026-09-16-01&publishedRange=90d&contentType=youtube_short&creatorSize=nano&language=ja&promotion=sponsored&keyword=missing`,
 +      {
 +        waitUntil: 'domcontentloaded',
 +        timeout: 60000
@@ -4728,6 +5045,35 @@ index b2b7aad6e..ca64d175b 100644
        'rank title',
        (await page.locator('h1').innerText()) === '爆款视频榜单'
      )
++    check(
++      'only country and category filters remain',
++      (await page.locator('.rank-basic-filters select').count()) === 2 &&
++        (await page
++          .locator(
++            '#rank-advanced-filters, .advanced-filter-toggle, #viral-rank-format, #viral-rank-creator-size, #viral-rank-published-range, #viral-rank-language, #viral-rank-promotion, #viral-rank-keyword'
++          )
++          .count()) === 0
++    )
++    check(
++      'retired parameters cannot silently filter the ranking',
++      (await page.locator('.el-table__body-wrapper .video-cell').count()) ===
++        5 &&
++        [
++          'contentType',
++          'creatorSize',
++          'publishedRange',
++          'language',
++          'promotion',
++          'keyword',
++          'batchId'
++        ].every(key => !new URL(page.url()).searchParams.has(key))
++    )
++    await page.getByRole('button', { name: '榜单说明', exact: true }).click()
++    check(
++      'fixed 30 day scope is explained',
++      (await page.locator('#rank-explanation').innerText()).includes('近30天')
++    )
++    await page.getByRole('button', { name: '榜单说明', exact: true }).click()
 +    check(
 +      'batch selector and identifiers are absent from ranking UI',
 +      (await page.locator('#viral-rank-batch').count()) === 0 &&
@@ -4750,7 +5096,7 @@ index b2b7aad6e..ca64d175b 100644
      const headers = await page
        .locator('.viral-rank-table .el-table__header-wrapper .cell')
        .allTextContents()
-@@ -48,7 +70,6 @@ const base = 'http://127.0.0.1:3323'
+@@ -48,7 +99,6 @@ const base = 'http://127.0.0.1:3323'
        '名次',
        '视频',
        '作者',
@@ -4758,7 +5104,7 @@ index b2b7aad6e..ca64d175b 100644
        '播放量',
        '点赞数',
        '评论数',
-@@ -58,6 +79,54 @@ const base = 'http://127.0.0.1:3323'
+@@ -58,6 +108,54 @@ const base = 'http://127.0.0.1:3323'
          `column ${text}`,
          headers.some(x => x.trim() === text)
        )
@@ -4813,7 +5159,7 @@ index b2b7aad6e..ca64d175b 100644
      check(
        'directory entry removed',
        (await page
-@@ -69,9 +138,14 @@ const base = 'http://127.0.0.1:3323'
+@@ -69,9 +167,14 @@ const base = 'http://127.0.0.1:3323'
        !/HOT|作者发现/.test(await page.locator('main').innerText())
      )
      check(
@@ -4830,7 +5176,7 @@ index b2b7aad6e..ca64d175b 100644
      )
      const initialUrl = page.url()
      check(
-@@ -79,60 +153,80 @@ const base = 'http://127.0.0.1:3323'
+@@ -79,60 +182,80 @@ const base = 'http://127.0.0.1:3323'
        (await page.locator('.viral-search-bridge').count()) === 0
      )
      await page.locator('.el-table__fixed-right .more-button').first().click()
@@ -4843,19 +5189,22 @@ index b2b7aad6e..ca64d175b 100644
 -    const keywordCopy = await keywordNotice.innerText()
 +    const actionMenu = page.locator('.el-dropdown-menu:visible')
 +    await actionMenu.waitFor()
-+    check(
-+      'AI keyword recommendation is absent from ranking actions',
-+      (await actionMenu.getByText('AI推荐关键词', { exact: true }).count()) ===
-+        0
-+    )
      check(
 -      'keyword notice identifies the source video',
 -      keywordCopy.includes('夏日旅行攻略：三天路线')
++      'AI keyword recommendation is absent from ranking actions',
++      (await actionMenu.getByText('AI推荐关键词', { exact: true }).count()) ===
++        0
+     )
+     check(
+-      'keyword notice explains reuse and confirmation',
+-      keywordCopy.includes('复用现有 AI 推荐关键词能力') &&
+-        keywordCopy.includes('确认或修改')
 +      'ranking menu retains monitoring without AI placeholders',
 +      (await actionMenu.locator('.el-dropdown-menu__item').allTextContents())
 +        .map(text => text.trim())
 +        .join('|') === '加入监控'
-     )
++    )
 +    await actionMenu.evaluate(async element => {
 +      await Promise.allSettled(
 +        element
@@ -4872,10 +5221,7 @@ index b2b7aad6e..ca64d175b 100644
 +    const sourceNotice = page.locator('.el-message-box__wrapper:visible')
 +    await sourceNotice.waitFor()
 +    const sourceCopy = await sourceNotice.innerText()
-     check(
--      'keyword notice explains reuse and confirmation',
--      keywordCopy.includes('复用现有 AI 推荐关键词能力') &&
--        keywordCopy.includes('确认或修改')
++    check(
 +      'video link explains source and preserves context',
 +      sourceCopy.includes('夏日旅行攻略：三天路线') &&
 +        sourceCopy.includes('YouTube') &&
@@ -4943,7 +5289,7 @@ index b2b7aad6e..ca64d175b 100644
      )
      check(
        'no monitoring session written',
-@@ -140,36 +234,27 @@ const base = 'http://127.0.0.1:3323'
+@@ -140,92 +263,118 @@ const base = 'http://127.0.0.1:3323'
          () => sessionStorage.getItem('viral-demo-monitor') === null
        )
      )
@@ -4965,7 +5311,8 @@ index b2b7aad6e..ca64d175b 100644
 +      )
        check(
          `${platform} ranking rows`,
-         (await page.locator('.video-cell').count()) > 0
+-        (await page.locator('.video-cell').count()) > 0
++        (await page.locator('.el-table__body-wrapper .video-cell').count()) > 0
        )
      }
 -    await page.getByRole('tab', { name: '账号突破', exact: true }).click()
@@ -4986,41 +5333,155 @@ index b2b7aad6e..ca64d175b 100644
 +        .count()) === 0 &&
 +        (await page.locator('#viral-rank-coverage').count()) === 0
      )
-     await page.getByRole('button', { name: '高级筛选', exact: true }).click()
-     await page
-@@ -211,6 +296,35 @@ const base = 'http://127.0.0.1:3323'
-           .inputValue()) === 'en'
+-    await page.getByRole('button', { name: '高级筛选', exact: true }).click()
+-    await page
+-      .getByRole('combobox', { name: '语言', exact: true })
+-      .selectOption('en')
++    await page.locator('#area-filter-select').selectOption('us')
+     await page.waitForFunction(
+-      () => new URLSearchParams(location.search).get('language') === 'en'
++      () => new URLSearchParams(location.search).get('country') === 'us'
+     )
+-    await page
+-      .getByRole('textbox', { name: '关键词', exact: true })
+-      .fill('旅行')
+-    await page
+-      .getByRole('textbox', { name: '关键词', exact: true })
+-      .press('Tab')
++    await page.locator('#category-filter-select').selectOption('travel')
+     await page.waitForFunction(
+-      () => new URLSearchParams(location.search).get('keyword') === '旅行'
++      () => new URLSearchParams(location.search).get('category') === 'travel'
+     )
+     check(
+-      'filter summary shown',
+-      (await page.locator('.viral-filter-summary').innerText()).includes('旅行')
++      'country and category summary shown',
++      (await page.locator('.viral-filter-summary').innerText()).includes(
++        'travel'
++      )
+     )
++    await page.screenshot({
++      path: `${out}/country-category-1440.png`,
++      fullPage: true
++    })
+     const filteredUrl = page.url()
+     const restored = await browser.newPage({
+       viewport: { width: 1440, height: 1000 }
+     })
+-    restored.setDefaultTimeout(20000)
+     await restored.goto(filteredUrl, {
+       waitUntil: 'domcontentloaded',
+       timeout: 60000
+     })
+     await tableReady(restored)
+     check(
+-      'filter restored in new tab',
+-      (await restored
+-        .getByRole('textbox', { name: '关键词', exact: true })
+-        .inputValue()) === '旅行' &&
+-        (await restored
+-          .getByRole('combobox', { name: '语言', exact: true })
+-          .inputValue()) === 'en'
++      'country and category restore in new tab',
++      (await restored.locator('#area-filter-select').inputValue()) === 'us' &&
++        (await restored.locator('#category-filter-select').inputValue()) ===
++          'travel'
      )
      await restored.close()
+-    await page.getByRole('button', { name: '清空筛选', exact: true }).click()
 +    const legacy = new URL(filteredUrl)
-+    legacy.searchParams.set('view', 'broad_popular')
-+    legacy.searchParams.set('coverageStatus', 'partial')
-+    legacy.searchParams.set('evidenceVideoId', 'yt-001')
++    for (const [key, value] of Object.entries({
++      view: 'broad_popular',
++      coverageStatus: 'partial',
++      evidenceVideoId: 'yt-001',
++      contentType: 'youtube_short',
++      creatorSize: 'nano',
++      publishedRange: '90d',
++      language: 'ja',
++      promotion: 'sponsored',
++      keyword: 'no-match',
++      page: '2'
++    }))
++      legacy.searchParams.set(key, value)
 +    await page.goto(legacy.toString(), {
 +      waitUntil: 'domcontentloaded',
 +      timeout: 60000
 +    })
 +    await tableReady(page)
-+    await page.waitForFunction(() => {
-+      const query = new URLSearchParams(location.search)
-+      return (
-+        query.get('view') === 'account_breakout' && !query.has('coverageStatus')
-+      )
-+    })
+     await page.waitForFunction(
+-      () => !new URLSearchParams(location.search).get('keyword')
++      () => !new URLSearchParams(location.search).has('publishedRange')
+     )
+-    await page.getByRole('button', { name: '高级筛选', exact: true }).click()
+-    await page
+-      .getByRole('textbox', { name: '关键词', exact: true })
+-      .fill('no-matching-video')
+-    await page
+-      .getByRole('textbox', { name: '关键词', exact: true })
+-      .press('Tab')
 +    const normalized = new URL(page.url()).searchParams
 +    check(
-+      'legacy evidence URL keeps filters without a drawer',
-+      normalized.get('keyword') === '旅行' &&
-+        normalized.get('language') === 'en' &&
++      'legacy links retain supported filters and valid page',
++      normalized.get('country') === 'us' &&
++        normalized.get('category') === 'travel' &&
++        normalized.get('page') === '2' &&
++        normalized.get('view') === 'account_breakout' &&
 +        !normalized.has('evidenceVideoId') &&
++        !normalized.has('coverageStatus') &&
++        [
++          'contentType',
++          'creatorSize',
++          'publishedRange',
++          'language',
++          'promotion',
++          'keyword'
++        ].every(key => !normalized.has(key)) &&
++        (await page.locator('.el-table__body-wrapper .video-cell').count()) >
++          0 &&
 +        (await page.locator('.viral-evidence-drawer').count()) === 0
 +    )
 +    check(
-+      'retired coverage constraint is disclosed',
-+      (await page.locator('.el-message').allTextContents()).some(text =>
-+        text.includes('榜单覆盖状态筛选已移除')
++      'removed constraints are disclosed together',
++      (await page.locator('.el-message').allTextContents()).some(
++        text => text.includes('近30天') && text.includes('旧筛选条件已移除')
 +      )
 +    )
++    await page.locator('#area-filter-select').selectOption('ca')
+     await page.waitForFunction(
+-      () =>
+-        new URLSearchParams(location.search).get('keyword') ===
+-        'no-matching-video'
++      () => new URLSearchParams(location.search).get('country') === 'ca'
++    )
++    check(
++      'changing supported filters resets page',
++      new URL(page.url()).searchParams.get('page') === '1'
+     )
+     check(
+       'empty state',
+@@ -235,11 +384,23 @@ const base = 'http://127.0.0.1:3323'
+     )
      await page.getByRole('button', { name: '清空筛选', exact: true }).click()
      await page.waitForFunction(
-       () => !new URLSearchParams(location.search).get('keyword')
+-      () => !new URLSearchParams(location.search).get('keyword')
++      () => new URLSearchParams(location.search).get('country') === 'all'
++    )
++    check(
++      'clearing keeps fixed 30 day scope',
++      (await page.locator('.el-table__body-wrapper .video-cell').count()) ===
++        5 && !new URL(page.url()).searchParams.has('publishedRange')
+     )
+     check('no page runtime errors', errors.length === 0)
+     check('no production business requests', requests.length === 0)
++    await page.waitForFunction(() => !document.querySelector('.el-message'))
+     await page.screenshot({ path: `${out}/rank-only-1440.png`, fullPage: true })
++    await page.getByRole('button', { name: '榜单说明', exact: true }).click()
++    await page.screenshot({
++      path: `${out}/rank-explanation-1440.png`,
++      fullPage: true
++    })
++    await page.getByRole('button', { name: '榜单说明', exact: true }).click()
+     await page.setViewportSize({ width: 1280, height: 900 })
+     if (
+       await page.evaluate(

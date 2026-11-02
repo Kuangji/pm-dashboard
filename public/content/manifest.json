@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-10-29T03:09:43.713Z",
+  "updatedAt": "2026-11-02T08:08:36.154Z",
   "navigation": {
     "docs": [
       {
@@ -144,6 +144,16 @@
                 "path": "02-project-documents/account_permission_collaboration/story_demo_equivalence_review_2026-10-29.md",
                 "slug": "02-project-documents/account_permission_collaboration/story_demo_equivalence_review_2026-10-29.md",
                 "title": "Story 与功能审阅 Demo 等价性检查 | story_demo_equivalence_review_2026-10-29.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "story_demo_review_2026-11-02.md",
+                "path": "02-project-documents/account_permission_collaboration/story_demo_review_2026-11-02.md",
+                "slug": "02-project-documents/account_permission_collaboration/story_demo_review_2026-11-02.md",
+                "title": "Story 与 Demo｜功能审阅标准修订 | story_demo_review_2026-11-02.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
@@ -2071,9 +2081,9 @@
                   },
                   {
                     "type": "file",
-                    "name": "榜单Demo_评审补丁_2026-10-27.patch",
-                    "path": "02-project-documents/viral_video_identification/assets/榜单Demo_评审补丁_2026-10-27.patch",
-                    "slug": "02-project-documents/viral_video_identification/assets/榜单Demo_评审补丁_2026-10-27.patch",
+                    "name": "榜单Demo_评审补丁_2026-11-02.patch",
+                    "path": "02-project-documents/viral_video_identification/assets/榜单Demo_评审补丁_2026-11-02.patch",
+                    "slug": "02-project-documents/viral_video_identification/assets/榜单Demo_评审补丁_2026-11-02.patch",
                     "fileType": "binary",
                     "isText": false,
                     "isImage": false
@@ -2125,27 +2135,9 @@
                   },
                   {
                     "type": "file",
-                    "name": "榜单_近90天.png",
-                    "path": "02-project-documents/viral_video_identification/assets/榜单_近90天.png",
-                    "slug": "02-project-documents/viral_video_identification/assets/榜单_近90天.png",
-                    "fileType": "image",
-                    "isText": false,
-                    "isImage": true
-                  },
-                  {
-                    "type": "file",
                     "name": "榜单_频道国家筛选.png",
                     "path": "02-project-documents/viral_video_identification/assets/榜单_频道国家筛选.png",
                     "slug": "02-project-documents/viral_video_identification/assets/榜单_频道国家筛选.png",
-                    "fileType": "image",
-                    "isText": false,
-                    "isImage": true
-                  },
-                  {
-                    "type": "file",
-                    "name": "榜单_高级筛选.png",
-                    "path": "02-project-documents/viral_video_identification/assets/榜单_高级筛选.png",
-                    "slug": "02-project-documents/viral_video_identification/assets/榜单_高级筛选.png",
                     "fileType": "image",
                     "isText": false,
                     "isImage": true
