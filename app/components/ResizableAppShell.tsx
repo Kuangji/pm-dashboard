@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { Group, Panel, Separator, usePanelRef, type Layout } from 'react-resizable-panels'
 import { MobileNav } from './MobileNav'
 import { Sidebar } from './Sidebar'
@@ -32,93 +32,11 @@ export function ResizableAppShell({ children }: ResizableAppShellProps) {
   const mainNavModeRef = useRef(mainNavMode)
   const mainNavExpandedSizeRef = useRef(layout.defaultLayout['app-sidebar'] ?? 18)
   const programmaticResizeRef = useRef(false)
-  const interactionRef = useRef({ pointer: false, focus: false })
-  const leaveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
-  const [mainNavTransientExpanded, setMainNavTransientExpanded] = useState(false)
-
-  function releaseProgrammaticResize() {
-    if (typeof window === 'undefined') {
-      programmaticResizeRef.current = false
-      return
-    }
-
-    window.requestAnimationFrame(() => {
-      programmaticResizeRef.current = false
-    })
-  }
-
-  function resizeMainPanel(size: string) {
-    const panel = mainPanelRef.current
-    if (!panel) return
-
-    programmaticResizeRef.current = true
-    panel.resize(size)
-    releaseProgrammaticResize()
-  }
-
-  function clearLeaveTimer() {
-    if (leaveTimerRef.current) {
-      clearTimeout(leaveTimerRef.current)
-      leaveTimerRef.current = null
-    }
-  }
-
-  function collapseMainNavAfterInteraction() {
-    clearLeaveTimer()
-    leaveTimerRef.current = setTimeout(() => {
-      leaveTimerRef.current = null
-      if (
-        mainNavModeRef.current !== 'compact' ||
-        interactionRef.current.pointer ||
-        interactionRef.current.focus
-      ) {
-        return
-      }
-
-      setMainNavTransientExpanded(false)
-      resizeMainPanel('56px')
-    }, 120)
-  }
-
-  function expandMainNavForInteraction() {
-    clearLeaveTimer()
-    if (mainNavModeRef.current !== 'compact') return
-
-    setMainNavTransientExpanded(true)
-    resizeMainPanel(`${mainNavExpandedSizeRef.current}%`)
-  }
 
   function handleMainNavModeToggle() {
-    clearLeaveTimer()
-    interactionRef.current = { pointer: false, focus: false }
-    setMainNavTransientExpanded(false)
-
     const nextMode = mainNavModeRef.current === 'compact' ? 'expanded' : 'compact'
     mainNavModeRef.current = nextMode
     setMainNavMode(nextMode)
-  }
-
-  function handleMainNavPointerEnter() {
-    interactionRef.current.pointer = true
-    expandMainNavForInteraction()
-  }
-
-  function handleMainNavPointerLeave() {
-    interactionRef.current.pointer = false
-    collapseMainNavAfterInteraction()
-  }
-
-  function handleMainNavFocusCapture() {
-    interactionRef.current.focus = true
-    expandMainNavForInteraction()
-  }
-
-  function handleMainNavBlurCapture(event: React.FocusEvent<HTMLElement>) {
-    const relatedTarget = event.relatedTarget as Node | null
-    if (relatedTarget && event.currentTarget.contains(relatedTarget)) return
-
-    interactionRef.current.focus = false
-    collapseMainNavAfterInteraction()
   }
 
   function handleLayoutChanged(nextLayout: Layout) {
@@ -149,10 +67,6 @@ export function ResizableAppShell({ children }: ResizableAppShellProps) {
     }
   }, [isDesktop, mainNavMode, mainPanelRef])
 
-  useEffect(() => {
-    return () => clearLeaveTimer()
-  }, [])
-
   return (
     <div className="min-h-screen overflow-x-hidden">
       {!isDesktop ? (
@@ -179,12 +93,7 @@ export function ResizableAppShell({ children }: ResizableAppShellProps) {
             >
               <Sidebar
                 compact={mainNavMode === 'compact'}
-                temporarilyExpanded={mainNavTransientExpanded}
                 onToggleCompact={handleMainNavModeToggle}
-                onPointerEnter={handleMainNavPointerEnter}
-                onPointerLeave={handleMainNavPointerLeave}
-                onFocusCapture={handleMainNavFocusCapture}
-                onBlurCapture={handleMainNavBlurCapture}
               />
             </Panel>
             <Separator

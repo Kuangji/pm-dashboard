@@ -11,6 +11,7 @@ import {
   Settings,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { shouldShowMainNavLabels } from './main-nav'
 
 const navItems = [
   { href: '/', label: '仪表盘', icon: LayoutDashboard },
@@ -57,24 +58,14 @@ export function SidebarLinks({ compact = false }: SidebarLinksProps) {
 
 interface SidebarProps {
   compact: boolean
-  temporarilyExpanded: boolean
   onToggleCompact: () => void
-  onPointerEnter: () => void
-  onPointerLeave: () => void
-  onFocusCapture: () => void
-  onBlurCapture: (event: React.FocusEvent<HTMLElement>) => void
 }
 
 export function Sidebar({
   compact,
-  temporarilyExpanded,
   onToggleCompact,
-  onPointerEnter,
-  onPointerLeave,
-  onFocusCapture,
-  onBlurCapture,
 }: SidebarProps) {
-  const showLabels = !compact || temporarilyExpanded
+  const showLabels = shouldShowMainNavLabels(compact)
 
   return (
     <aside
@@ -82,10 +73,6 @@ export function Sidebar({
         'h-screen bg-zinc-50 border-r border-zinc-200 shrink-0 relative overflow-hidden',
         showLabels ? 'min-w-0' : 'w-full'
       )}
-      onPointerEnter={onPointerEnter}
-      onPointerLeave={onPointerLeave}
-      onFocusCapture={onFocusCapture}
-      onBlurCapture={onBlurCapture}
     >
       <div className={cn('border-b border-zinc-200', showLabels ? 'p-6' : 'flex justify-center p-3')}>
         {showLabels ? (
