@@ -44,6 +44,26 @@ Vercel 直接部署仓库中已提交的内容：
 
 无需额外的构建脚本，Vercel 原生支持 Next.js Runtime。
 
+### GitHub Actions 验证
+
+`.github/workflows/deploy.yml` 中的 `Validate dashboard` 只运行测试和生产构建，
+不克隆 drafts、不同步内容、不执行第二次部署，也不需要 Vercel secrets。
+生产发布由 Vercel 的 Git 集成负责；Actions 成功不等同于部署成功。
+
+### 部署未触发时
+
+1. 用 `git ls-remote origin refs/heads/main` 确认远端提交 SHA。
+2. 分别检查该 SHA 的 Actions run 和 `Vercel` commit status。
+   GitHub combined status 返回 `pending` 但 `total_count: 0` 时，表示没有状态记录，
+   不能据此判断 Vercel 正在部署。
+3. 若没有 Vercel 记录，在项目 Settings / Git 确认连接到 `Kuangji/pm-dashboard`，
+   生产分支为 `main`，并检查 GitHub Vercel App 的仓库授权及项目 Activity。
+4. 可在 Vercel Deployments 使用 Create Deployment，选择 `main` 的目标提交手动发布。
+   不要用旧部署的 Redeploy 代替新提交发布，也不要强推 main。
+
+历史 `Deploy to Vercel` workflow 引用了不存在的 `vercel/action-deploy@v1`，
+会在 Set up job 阶段失败。该流程已替换为验证流程，不再作为发布入口。
+
 ## 环境变量
 
 | 变量名 | 说明 | 默认值 |
