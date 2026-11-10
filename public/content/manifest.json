@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-11-02T08:08:36.154Z",
+  "updatedAt": "2026-11-10T10:59:33.589Z",
   "navigation": {
     "docs": [
       {
@@ -71,12 +71,52 @@
               },
               {
                 "type": "file",
+                "name": "collection_permission_quota_evidence_2026-11-09.md",
+                "path": "02-project-documents/account_permission_collaboration/collection_permission_quota_evidence_2026-11-09.md",
+                "slug": "02-project-documents/account_permission_collaboration/collection_permission_quota_evidence_2026-11-09.md",
+                "title": "收藏夹权限与配额｜现状证据及评审问题 | collection_permission_quota_evidence_2026-11-09.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "crm_label_code_evidence_2026-11-10.md",
+                "path": "02-project-documents/account_permission_collaboration/crm_label_code_evidence_2026-11-10.md",
+                "slug": "02-project-documents/account_permission_collaboration/crm_label_code_evidence_2026-11-10.md",
+                "title": "CRM 与标签权限｜代码事实及待讨论边界 | crm_label_code_evidence_2026-11-10.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
                 "name": "crm_write_permissions_online.png",
                 "path": "02-project-documents/account_permission_collaboration/crm_write_permissions_online.png",
                 "slug": "02-project-documents/account_permission_collaboration/crm_write_permissions_online.png",
                 "fileType": "image",
                 "isText": false,
                 "isImage": true
+              },
+              {
+                "type": "file",
+                "name": "email_message_permission_evidence_2026-11-10.md",
+                "path": "02-project-documents/account_permission_collaboration/email_message_permission_evidence_2026-11-10.md",
+                "slug": "02-project-documents/account_permission_collaboration/email_message_permission_evidence_2026-11-10.md",
+                "title": "邮件项目与消息对话｜权限、转交及组隔离核查 | email_message_permission_evidence_2026-11-10.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "email_quota_code_evidence_2026-11-09.md",
+                "path": "02-project-documents/account_permission_collaboration/email_quota_code_evidence_2026-11-09.md",
+                "slug": "02-project-documents/account_permission_collaboration/email_quota_code_evidence_2026-11-09.md",
+                "title": "邮件发送与邮箱解锁｜扣量主体代码核对 | email_quota_code_evidence_2026-11-09.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
               },
               {
                 "type": "file",
@@ -100,6 +140,26 @@
               },
               {
                 "type": "file",
+                "name": "monitor_permission_quota_evidence_2026-11-09.md",
+                "path": "02-project-documents/account_permission_collaboration/monitor_permission_quota_evidence_2026-11-09.md",
+                "slug": "02-project-documents/account_permission_collaboration/monitor_permission_quota_evidence_2026-11-09.md",
+                "title": "内容监控权限与配额｜现状证据及适配差异 | monitor_permission_quota_evidence_2026-11-09.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "payment_funding_backup.md",
+                "path": "02-project-documents/account_permission_collaboration/payment_funding_backup.md",
+                "slug": "02-project-documents/account_permission_collaboration/payment_funding_backup.md",
+                "title": "支付资金双模式备份（历史候选，不实施） | payment_funding_backup.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
                 "name": "phase2_input_v0.md",
                 "path": "02-project-documents/account_permission_collaboration/phase2_input_v0.md",
                 "slug": "02-project-documents/account_permission_collaboration/phase2_input_v0.md",
@@ -114,6 +174,16 @@
                 "path": "02-project-documents/account_permission_collaboration/pm_confirmation_code_evidence_2026-08-18.md",
                 "slug": "02-project-documents/account_permission_collaboration/pm_confirmation_code_evidence_2026-08-18.md",
                 "title": "PM 研发确认问题包：当前代码证据 | pm_confirmation_code_evidence_2026-08-18.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "quota_inventory_live_2026-11-03.md",
+                "path": "02-project-documents/account_permission_collaboration/quota_inventory_live_2026-11-03.md",
+                "slug": "02-project-documents/account_permission_collaboration/quota_inventory_live_2026-11-03.md",
+                "title": "线上配额项盘点 | quota_inventory_live_2026-11-03.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false

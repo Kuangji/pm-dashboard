@@ -1,18 +1,25 @@
 {
   "source": "06_Prototypes/account_permission_review_demo",
   "input": "01_Product_Specs/account_permission_collaboration/phase2_input_v0.md",
-  "browserVerifiedAt": "2026-11-02T07:57:38.458Z",
+  "browserVerifiedAt": "2026-11-10T10:51:18.187Z",
   "files": {
     "index.html": "84f4499c7def6faea50013b05d2d7c5cb290a3846e21c2f485180c79f6b4a388",
-    "styles.css": "ca0ad1037de2e3a0bebd1f9fe50799ba778c87307325e32c5ffc9b30eefcb866",
-    "icons.js": "32d501e1d85830bffc2e9cc9d5698b57bba4c1a239731b11a6d65b45813934a2",
-    "review-data.js": "058b698d53dfc919a90e9870bb32ca6e6e6a5bc7b868e025e1e0bac08bef5562",
-    "story-data.js": "081c128abdf4a95e43a9479a26c41e0da1fae0fb8e2fe4f4a6d80b86e469234e",
-    "engine.js": "20f00ece9087ea7c3602d264ff8c13d6e11535333b96f4450b0c6223d4a92692",
-    "app.js": "afe81eac6098bdff47d7f69759393ac7be1f1a58c7d193046b4151b1f4fbcde2",
-    "publication.js": "296f7d23496b255ab753da4bc9d0734d4d0f363467d158b69d0f3a501f523f32",
+    "styles.css": "8ac8974800a7d0c3ad7bcae2388d9f1f540970aad39506668e104915bed2f336",
+    "icons.js": "961dbdd2f6dbd73ab67cbfc4aa4980f55466a332b322a7a503e0c9b604df5ac9",
+    "review-data.js": "5c0b5e230dff94d04e20920081b213f5b956cd97785ad3e9c3b8e3255108ea4a",
+    "story-data.js": "4a9dfb15ec3da922659a58b1974c82a5a0333fa6c3abe8931fd28c579a17823e",
+    "engine.js": "4d9349d9107758a308282cc698b187d5f2fe834966cbda979f81fc5dc5878a9d",
+    "app.js": "d1b18baffacae6af114842f6568d0eabc115fa72834ad4d756c32ac7c1f0c5f5",
+    "publication.js": "2cc00c4f740af15c8eefd5f1a82dc8b1856134ba22251e1de159f0b411ed5e8d",
     "demo.json": "05970fc8000a81c3cdc8481f966b46eb97e92ab75944739084d2d285ce625d39",
-    "preview.png": "d9cc901701849e06d9144c564e2c9ab84984cb4401d701fb803a1b935b827aa5",
-    "reference/phase2_input_v0.md": "aa152cbdc3c95e30b7ec21bf4299255fb0e9f5809fc4c2777d8905b8560197f5"
+    "preview.png": "b3b6391b7ad228e1bf4f7f97941f55634916d29fcf94be9de272ddf413381bf6",
+    "reference/phase2_input_v0.md": "1b78745851d5556b18920a1ee68efe38e97eeeaaf20778bf7f1523a3ecf05a9c",
+    "reference/payment_funding_backup.md": "aff24b8ef4c8abd32566d28db6e37159d11c73d11652e1ca517cdbc6eacbcc6f",
+    "reference/email_quota_code_evidence_2026-11-09.md": "7d47db80b14080f15c6238af818b8c7fca34173a74abb40602b8e3181956ea1e",
+    "reference/email_message_permission_evidence_2026-11-10.md": "22e7d3a659253c8fc2c605f0dd83826a5a1891caecbad65b6dbef7e6b3f5db03",
+    "reference/collection_permission_quota_evidence_2026-11-09.md": "0348e5cfdb18df431ec3ec7e002b60608a402eae76402cd87ffdcddf787d70c5",
+    "reference/monitor_permission_quota_evidence_2026-11-09.md": "08f2ae73cc6d4f437719280bbfd60bb26e349101d5d1607268589136d0b88535",
+    "reference/crm_label_code_evidence_2026-11-10.md": "42f6c04864c48eb8456aab2fd2a5a6a36857276f83e4aadc86b7939dfa9e6ca5",
+    "reference/scope_quota_product_rules.md": "d64db5300823a8462c6bd0bec1c13c3c6b9907063ec7db544545b9035590bfa8"
   }
 }

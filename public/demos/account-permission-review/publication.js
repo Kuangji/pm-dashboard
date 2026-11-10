@@ -1,1 +1,1 @@
-window.ReviewPublication = { inputUrl: "./reference/phase2_input_v0.md" };
+window.ReviewPublication = { inputUrl: "./reference/phase2_input_v0.md", emailQuotaUrl: "./reference/email_quota_code_evidence_2026-11-09.md", collectionEvidenceUrl: "./reference/collection_permission_quota_evidence_2026-11-09.md", monitorEvidenceUrl: "./reference/monitor_permission_quota_evidence_2026-11-09.md" };
