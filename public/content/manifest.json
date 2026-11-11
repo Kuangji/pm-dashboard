@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-11-10T10:59:33.589Z",
+  "updatedAt": "2026-11-11T09:26:23.179Z",
   "navigation": {
     "docs": [
       {
@@ -100,6 +100,36 @@
               },
               {
                 "type": "file",
+                "name": "dashboard_actor_workload_rules_2026-11-11.md",
+                "path": "02-project-documents/account_permission_collaboration/dashboard_actor_workload_rules_2026-11-11.md",
+                "slug": "02-project-documents/account_permission_collaboration/dashboard_actor_workload_rules_2026-11-11.md",
+                "title": "Dashboard 实际动作与整体统计｜当前生效规则和静态可行性 | dashboard_actor_workload_rules_2026-11-11.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "dashboard_time_rules_2026-11-11.md",
+                "path": "02-project-documents/account_permission_collaboration/dashboard_time_rules_2026-11-11.md",
+                "slug": "02-project-documents/account_permission_collaboration/dashboard_time_rules_2026-11-11.md",
+                "title": "Dashboard 非邮件时间规则｜已确认口径与研发核验 | dashboard_time_rules_2026-11-11.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "email_dashboard_evidence_2026-11-11.md",
+                "path": "02-project-documents/account_permission_collaboration/email_dashboard_evidence_2026-11-11.md",
+                "slug": "02-project-documents/account_permission_collaboration/email_dashboard_evidence_2026-11-11.md",
+                "title": "团队邮件数据与 Dashboard 邮件指标｜现状证据及适配边界 | email_dashboard_evidence_2026-11-11.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
                 "name": "email_message_permission_evidence_2026-11-10.md",
                 "path": "02-project-documents/account_permission_collaboration/email_message_permission_evidence_2026-11-10.md",
                 "slug": "02-project-documents/account_permission_collaboration/email_message_permission_evidence_2026-11-10.md",
@@ -134,6 +164,16 @@
                 "path": "02-project-documents/account_permission_collaboration/input_v0.md",
                 "slug": "02-project-documents/account_permission_collaboration/input_v0.md",
                 "title": "账号权限、协作和配额管理 Input v0 | input_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "mail_dashboard_conversation_rules_2026-11-11.md",
+                "path": "02-project-documents/account_permission_collaboration/mail_dashboard_conversation_rules_2026-11-11.md",
+                "slug": "02-project-documents/account_permission_collaboration/mail_dashboard_conversation_rules_2026-11-11.md",
+                "title": "Dashboard 邮件趋势、漏斗与对话沟通｜已确认规则 | mail_dashboard_conversation_rules_2026-11-11.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
@@ -184,6 +224,16 @@
                 "path": "02-project-documents/account_permission_collaboration/quota_inventory_live_2026-11-03.md",
                 "slug": "02-project-documents/account_permission_collaboration/quota_inventory_live_2026-11-03.md",
                 "title": "线上配额项盘点 | quota_inventory_live_2026-11-03.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "quota_inventory_live_2026-11-11.md",
+                "path": "02-project-documents/account_permission_collaboration/quota_inventory_live_2026-11-11.md",
+                "slug": "02-project-documents/account_permission_collaboration/quota_inventory_live_2026-11-11.md",
+                "title": "线上配额项盘点 | quota_inventory_live_2026-11-11.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false

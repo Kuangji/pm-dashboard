@@ -1,6 +1,6 @@
 # CRM 与标签权限｜代码事实及待讨论边界
 
-> 核查日期：2026-11-10。用于补充 [当前统一 Input](./phase2_input_v0.md)、[功能梳理](./账号和权限功能设计梳理.md) 和 [业务故事 S20–S21](./use_case_stories_v0.md#S20) 的事实依据，不替代正式产品结论，不推进 Spec。
+> 核查日期：2026-11-10。用于补充 [当前统一 Input](./phase2_input_v0.md)、[功能梳理](../../../documents/02-project-documents/account_permission_collaboration/账号和权限功能设计梳理.md) 和 [业务故事 S20–S21](../../../documents/02-project-documents/account_permission_collaboration/use_case_stories_v0.md#S20) 的事实依据，不替代正式产品结论，不推进 Spec。
 > 本轮仅核查本地代码，未连接数据库、未读取建表索引、未进行线上接口或保存实测。**静态实现、已确认目标、待讨论方案和研发验收事项分层记录；不能把“代码里有”写成“线上已部署”，也不能把鉴权缺口当作合法业务规则。**
 > **同日最终产品覆盖**：记录结构 B、权限 A 已确认：同达人各组独立业务记录、共享基础资料；不新增记录协作者或组长隐式来源，原四项写、普通写可改派、空对接人管理员兼容分支继续生效，但不能跨记录组。原先讨论的全组读写、仅 Assignee/组长改派和新增记录 ACL 目标已被覆盖。下文 S 保留代码事实，P/R 已按最终规则更新；标签和看板仍待讨论。
 
@@ -11,7 +11,7 @@
 | 旧服务端 | `KOLServer master@706dc8ea0ed51f8a5752a9e2f497427f95432faa`，工作区干净 | 核心 CRM 记录、自定义视图、共享备注标签和内容监控标签的 Controller/Service/Mapper/实体静态代码 |
 | 新服务端 | `kol_server_v2 master@234e9dad738f088550c2d75ef96d457a9b315547`，工作区干净 | 检索到 CRM 条件过滤、导出记录等关联链路，未定位替代核心 CRM 记录 CRUD；不由目录名或 URL 的 v2 推断实际线上路由 |
 | 前端 | `kol-next codex/752-brand-reputation-radar@82f1e1014a6ab0ea692c8157c9057792adbcbda4` | 存在无关未提交修改；本轮只读核查 CRM、标签组件和 API，未见所引 CRM 文件未提交修改，不把此分支直接视为线上版本 |
-| 研发历史确认 | [2026-08-18 确认材料](./pm_confirmation_code_evidence_2026-08-18.md) | 保留其原始日期和分支；本稿重新定位当前代码，不能覆盖历史证据的环境边界 |
+| 研发历史确认 | [2026-08-18 确认材料](../../../documents/02-project-documents/account_permission_collaboration/pm_confirmation_code_evidence_2026-08-18.md) | 保留其原始日期和分支；本稿重新定位当前代码，不能覆盖历史证据的环境边界 |
 
 - **S：静态事实**，可由本轮指定代码与行号复核，不代表线上行为实测。
 - **P：已确认产品目标**，以当前 Input、梳理和用户确认记录为准，不因旧实现缺失而倒退为待定。
@@ -89,7 +89,7 @@
 
 ## 4. 同日最终已确认目标（P）
 
-以 [当前 Input](./phase2_input_v0.md)、[功能梳理 CRM 段](./账号和权限功能设计梳理.md) 和 [S20](./use_case_stories_v0.md#S20) 为准：
+以 [当前 Input](./phase2_input_v0.md)、[功能梳理 CRM 段](../../../documents/02-project-documents/account_permission_collaboration/账号和权限功能设计梳理.md) 和 [S20](../../../documents/02-project-documents/account_permission_collaboration/use_case_stories_v0.md#S20) 为准：
 
 1. 记录结构采用 B：同达人不同业务组可分别维护记录、对接人和合作状态，达人基础资料共享。每条业务记录固定业务组，对接人可空，不因其入组/切组或转交而移动记录，也不强造项目容器。
 2. 权限采用 A：尽量不改线上 CRM 已闭环规则，仅加记录组硬边界。有效同组成员可读；写沿对接人和原四项设置，保持现有配置默认值，不强制全开；任何来源不能越过记录组。组内成员不因此必然可写。

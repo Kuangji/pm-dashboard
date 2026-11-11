@@ -1,8 +1,8 @@
 (function () {
   'use strict';
-  const E = window.ReviewEngine, D = window.ReviewData;
+  const E = window.ReviewEngine, D = window.ReviewData, U = window.ReviewUsage, R = window.ReviewResources;
   let s = E.createState();
-  const ui = {page:'dashboard', actor:'u-owner', group:'g-growth', project:null, tab:'objects', conversationFilter:'chat', conversationId:null, dashboardGroup:'all', dashboardUser:'all', period:'2026-10', metric:'sent', reviewFilter:'all', reviews:{}, notes:{}, lastResult:null, showArchived:false};
+  const ui = {page:'dashboard', actor:'u-owner', group:'g-growth', project:null, tab:'objects', conversationFilter:'chat', conversationId:null, dashboardGroup:'all', dashboardUser:'all', startDate:'2026-10-01',endDate:'2026-10-31',usageProject:'all',usageExpanded:[],usageTrendGrain:'day',usageMailMore:false, metric:'sent', usageView:null, usagePanel:'business', usageDomain:'email', usageRank:'sent', resourcePeriod:'current', resourceBreakdown:'groups', reviewFilter:'all', reviews:{}, notes:{}, lastResult:null, showArchived:false};
   const moduleNames = {email:'邮件项目',resource:'收藏夹',monitor:'内容监控',crm:'CRM',payment:'跨境支付'};
   const collectionModes = [{id:'private',name:'私有'},{id:'group',name:'本组公开'},{id:'selected',name:'指定成员'}];
   const crmWriteOptions = [{id:1,name:'对接人和管理员可编辑'},{id:2,name:'对接人和同组组长可编辑'},{id:3,name:'对接人和同组成员可编辑'},{id:4,name:'所有人可编辑'}];
@@ -84,25 +84,27 @@
   function navigate(page) { ui.page=page;ui.project=null;ui.tab='objects';render();window.scrollTo(0,0); }
   function render() {
     if(!group(ui.group) || group(ui.group).status!=='ACTIVE' || !active(ui.actor,ui.group)) ui.group=actor().memberships.find(m=>m.status==='ACTIVE' && group(m.groupId)?.status==='ACTIVE')?.groupId || '';
+    if(ui.page==='dashboard')syncUsageContext();
     const scope=D.pages[ui.page]?.scope||'业务模块';
     const a=actor(),m=member(ui.actor);
     $('#app').innerHTML=
       '<div class="review-strip"><div class="left">'+icon('ClipboardCheck')+'<strong>功能审阅 Demo</strong><span>独立模拟 · 所有数值为示例 · 修改仅在本次页面内生效</span></div><div class="inline">'+button('审阅清单','review',null,'')+button(icon('RotateCcw')+' 重置','reset',null,'')+'</div></div>'+
-      '<header class="product-header"><div class="brand"><span class="brand-mark">N</span>聚星<small>星野品牌 · 示例组织</small></div><div class="identity-controls"><div class="identity-field"><label for="actor-select">体验账号</label><select id="actor-select" aria-label="体验账号">'+options(s.users,ui.actor,u=>u.name+' · '+orgNames[u.orgRole]+(u.status!=='ACTIVE'?' · '+statusNames[u.status]:''))+'</select></div><div class="identity-field"><label for="group-select">业务组</label><select id="group-select" aria-label="当前业务组">'+(ui.group?options(s.groups.filter(g=>active(ui.actor,g.id)),ui.group):'<option>暂无有效业务组</option>')+'</select></div><span class="avatar orange">'+esc(a.name.slice(-2))+'</span></div></header>'+
+      '<header class="product-header"><div class="brand"><span class="brand-mark">N</span>聚星<small>星野品牌 · 示例组织</small></div><div class="identity-controls"><div class="identity-field"><label for="actor-select">体验账号</label><select id="actor-select" aria-label="体验账号">'+options(s.users,ui.actor,u=>u.name+' · '+orgNames[u.orgRole]+(u.status!=='ACTIVE'?' · '+statusNames[u.status]:''))+'</select></div><div class="identity-field"><label for="group-select">业务组</label><select id="group-select" aria-label="当前业务组" '+(ui.page==='dashboard'?'disabled title="看板统计范围由页面内筛选决定，不使用业务当前组"':'')+'>'+(ui.group?options(s.groups.filter(g=>active(ui.actor,g.id)),ui.group):'<option>暂无有效业务组</option>')+'</select></div><span class="avatar orange">'+esc(a.name.slice(-2))+'</span></div></header>'+
       '<div class="layout"><aside class="sidebar">'+nav.filter(sec=>!sec.adminOnly||admin()).map(sec=>'<div class="nav-section"><div class="nav-title">'+sec.label+'</div>'+sec.items.map(item=>'<button class="nav-item '+(ui.page===item[0]?'active':'')+'" data-page="'+item[0]+'" '+(ui.page===item[0]?'aria-current="page"':'')+'>'+icon(item[1])+'<span>'+item[2]+'</span></button>').join('')+'</div>').join('')+'<div class="nav-note">一期后统一版本<br>Input 功能审阅 · 2026.11<br><span class="status-line">非线上 UI / 非定稿设计</span></div></aside>'+
       '<div class="workspace"><main class="main"><div class="breadcrumbs">'+icon(scope==='组织管理'?'Building2':'Layers')+scope+icon('ChevronRight')+title()+'</div><div class="page-header"><div><h1>'+title()+'</h1><p>'+pageSubtitle()+'</p></div><div class="page-actions">'+pageActions()+'</div></div>'+relatedStories()+pageContent()+'</main>'+rulePanel(m)+'</div></div>';
     localizeRoleCopy($('#app'));
     window.ReviewApp={getState:()=>s,getUI:()=>ui,navigate,render,act:(type,payload)=>perform(type,payload)};
   }
   function pageSubtitle() {
-    const texts={dashboard:'按组织、业务组与成员，了解工作活动、业务结果及资源使用。',members:'维护组织成员与组织身份；移出组织影响该成员的所有组。',groups:'维护组织内各组、成员关系及组总额度；管理目标组不切换业务当前组。',team:'当前业务组：'+gname(ui.group)+' · 本组成员、组内移除任务与配额入口。',policies:'组织级策略统一生效；单个项目的协作在业务模块中设置。',quota:'当前业务组：'+gname(ui.group)+' · 组长按委派配置组内个人额度，不在此修改组上限。',funds:'组织钱包与部门资金分配；个人支付上限在当前组的组员配额中设置。',tasks:'承接成员与组管理产生的移交任务；在这里查看进度、安排接收人与处理结果。',history:'模拟操作记录与完成通知，贯穿设置、协作和移交。',review:'逐项覆盖原 Input、补充遗留与本版待确认决策。',message:'当前组邮件会话、转交跟进与发送身份；标签来源筛选单独保留。',search:'联系与合作范围的增量筛选。'};
+    const texts={dashboard:'按管理范围查看业务结果，按核算口径查看资源使用。',members:'维护组织成员与组织身份；移出组织影响该成员的所有组。',groups:'维护组织内各组、成员关系及组总额度；管理目标组不切换业务当前组。',team:'当前业务组：'+gname(ui.group)+' · 本组成员、组内移除任务与配额入口。',policies:'组织级策略统一生效；单个项目的协作在业务模块中设置。',quota:'当前业务组：'+gname(ui.group)+' · 组长按委派配置组内个人额度，不在此修改组上限。',funds:'组织钱包与部门资金分配；个人支付上限在当前组的组员配额中设置。',tasks:'承接成员与组管理产生的移交任务；在这里查看进度、安排接收人与处理结果。',history:'模拟操作记录与完成通知，贯穿设置、协作和移交。',review:'逐项覆盖原 Input、补充遗留与本版待确认决策。',message:'当前组邮件会话、转交跟进与发送身份；标签来源筛选单独保留。',search:'联系与合作范围的增量筛选。'};
     return ui.page==='stories'?'八段业务历程：从加入团队到协作、人员变化与组织生命周期。':texts[ui.page] || '当前业务组：'+gname(ui.group)+' · 对象归组稳定，组织管理身份不默认授予业务权限。';
   }
   function pageActions() {
     if(nav.find(sec=>sec.adminOnly&&sec.items.some(x=>x[0]===ui.page))&&!admin())return '';
+    if(ui.page==='payment'&&!group(ui.group)?.paymentEnabled)return '';
     if(ui.page==='members')return button(icon('Plus')+' 邀请成员','invite',null,'primary',!admin(),'仅组织 Owner/Admin 可以邀请新成员');
     if(ui.page==='groups'&&!ui.managedGroup)return button(icon('Plus')+' 创建业务组','addGroup',null,'primary',!admin());
-    if(ui.page==='dashboard')return button(icon('Download')+' 导出当前视图','exportUsage',null,'',false,'按当前授权与筛选导出样例；开发时按需补充字段');
+    if(ui.page==='dashboard')return button(icon('RefreshCw')+' 刷新','refreshUsage',null,'',!usageCanExport(),'更新示意读取时间，不发送邮件或运行后台任务')+button(icon('Download')+(ui.usagePanel==='resources'?' 导出当前视图':' 导出当前模块'),'exportUsage',null,'',!usageCanExport(),'按当前筛选导出所选模块，不另建跨模块总览导出，不导出任务明细');
     if(ui.page==='review')return button(icon('Download')+' 导出审阅意见','exportReview',null,'primary');
     if(moduleNames[ui.page])return button(icon('Plus')+' '+(ui.page==='crm'?'添加达人记录':'新建'+(ui.page==='payment'?'草稿':ui.page==='resource'?'收藏夹':'项目')),'createProject',ui.page,'primary',!ui.group||ui.page==='payment'&&!group(ui.group)?.paymentEnabled);
     return '';
@@ -124,7 +126,7 @@
       '<div class="rule-identity"><strong>'+esc(actor().name)+' · '+orgNames[actor().orgRole]+'</strong><p>'+gname(ui.group)+' / '+(m?.role || '无组身份')+'</p><p>管理身份与业务身份分别计算。</p></div>'+
       '<div class="rule-section"><h3>当前操作的约束</h3><ul>'+rules.map(r=>'<li>'+esc(r)+'</li>').join('')+'</ul></div>'+
       (p.pending?.length?'<div class="rule-section rule-pending"><h3>仍需确认</h3>'+p.pending.map(r=>'<p>'+esc(r)+'</p>').join('')+goto('review','讨论这些规则')+'</div>':'')+
-      (moduleNames[ui.page]?'<div class="rule-section"><h3>权限探针 · 虚构样本</h3><select id="probe-project" aria-label="权限探针对象"><option value="">选择任意样本检查权限</option>'+options(s.projects.filter(p=>p.status!=='DELETED'),ui.probe)+'</select><div id="probe-result" class="access-result">'+(ui.probe?probeResult(ui.probe):'可以检查尚未出现在业务列表中的样本及拦截原因。')+'</div></div>':'')+
+      (moduleNames[ui.page]&&!(ui.page==='payment'&&!group(ui.group)?.paymentEnabled)?'<div class="rule-section"><h3>权限探针 · 虚构样本</h3><select id="probe-project" aria-label="权限探针对象"><option value="">选择任意样本检查权限</option>'+options(s.projects.filter(p=>p.status!=='DELETED'),ui.probe)+'</select><div id="probe-result" class="access-result">'+(ui.probe?probeResult(ui.probe):'可以检查尚未出现在业务列表中的样本及拦截原因。')+'</div></div>':'')+
       '<div class="rule-section"><h3>场景跳转</h3>'+[['invite','members','邀请与配置'],['collaboration','email','Owner、协作者与组长'],['payment','payment','协作填写与执行分离'],['removal','tasks','退组、失权与移交']].map(x=>'<button class="scenario-link" data-scenario="'+x[0]+'">'+x[2]+icon('ArrowRight')+'</button>').join('')+'</div>'+
       (ui.lastResult?'<div class="rule-section"><h3>最近一次操作</h3><p class="'+(ui.lastResult.ok?'':'danger-text')+'">'+esc(ui.lastResult.message)+'</p></div>':'')+
       '<div class="rule-source">规则来源：统一版本 Input '+esc(p.inputSection || '')+'<br><a href="'+esc(window.ReviewPublication.inputUrl)+'" target="_blank" rel="noopener">查看 Input 原文 '+icon('ArrowUpRight')+'</a></div></aside>';
@@ -142,7 +144,7 @@
   function storyMarkup(body) {
     const lines=String(body || '').split('\n');let html='',rows=[];
     const flush=()=>{if(rows.length){html+=table(rows[0],rows.slice(1).filter(r=>!r.every(c=>/^[- :]+$/.test(c))).map(r=>'<tr>'+r.map(c=>'<td>'+c+'</td>').join('')+'</tr>'));rows=[];}};
-    for(const line of lines){if(line.trim().startsWith('|')){rows.push(line.trim().slice(1,-1).split('|').map(x=>esc(x.trim())));continue;}flush();if(line.trim())html+='<p>'+esc(line.replace(/\*\*/g,'').replace(/\[([^\]]+)\]\([^)]+\)/g,'$1'))+'</p>';}
+    for(const line of lines){if(line.trim().startsWith('|')){rows.push(line.trim().slice(1,-1).split('|').map(x=>esc(x.trim())));continue;}flush();const heading=line.match(/^#### (.+)$/);if(heading){html+='<h3>'+esc(heading[1])+'</h3>';continue;}if(line.trim())html+='<p>'+esc(line.replace(/\*\*/g,'').replace(/\[([^\]]+)\]\([^)]+\)/g,'$1'))+'</p>';}
     flush();return html;
   }
   function storiesPage() {
@@ -156,39 +158,220 @@
     const a=E.access(s,ui.actor,id);
     return '<strong>'+esc(a.role==='Viewer'?'模块固定只读':a.role)+'</strong><br>查看 '+(a.read?'允许':'拒绝')+' · 写入 '+(a.write?'允许':'拒绝')+'<br>管理协作 '+(a.manage?'允许':'拒绝')+' · 资金执行 '+(a.execute?'允许':'拒绝')+'<br>'+esc(a.source.join(' + ') || a.reason);
   }
-  function usageRows() {
-    let rows=s.usage || [];
-    if(['empty','error','forbidden'].includes(ui.usageHealth))return [];
-    if(!admin())rows=rows.filter(r=>lead(r.groupId) || r.uid===ui.actor);
-    if(ui.dashboardGroup!=='all')rows=rows.filter(r=>r.groupId===ui.dashboardGroup);
-    if(ui.dashboardUser!=='all')rows=rows.filter(r=>r.uid===ui.dashboardUser);
-    if(ui.period==='2026-09')rows=rows.map(r=>({...r,sent:Math.floor(r.sent*.78),opened:Math.floor(r.opened*.73),replied:Math.floor(r.replied*.7),cooperate:Math.floor(r.cooperate*.8),samples:Math.floor(r.samples*.8),monitor:Math.max(0,r.monitor-1),clicks:Math.floor(r.clicks*.8)}));
-    return ui.period==='uncovered'?[]:rows;
+  const usageViews={organization:'组织维度',group:'组维度',personal:'个人维度'};
+  const usageDomains={
+    email:{name:'邮件数据',icon:'Mail',fields:[['invited','邀约红人数','人'],['sent','发送邮件数','封'],['delivered','邮件送达数','封'],['deliveryRate','邮件送达率','%'],['opened','邮件已读数','封'],['openRate','邮件已读率','%'],['replied','邮件回复数','封'],['replyRate','邮件回复率','%'],['connected','建联红人数','人'],['influencerMessages','红人消息数','条'],['followupMessages','跟进消息数','条']],rank:[['sent','发送邮件数'],['replied','邮件回复数'],['invited','邀约红人数']],note:'所选日期邮件数据：邀约、发送、送达、已读、回复按收件记录发送日期筛选，状态取截至更新时间的效果；三率均以发送邮件数为分母。建联及消息按消息发送日期独立筛选。账号归属沿任务账号，不代表实际操作人。'},
+    crm:{name:'CRM 合作',icon:'Contact',fields:[['crmTotal','期间新增 CRM 记录','条'],['crmOngoing','其中当前合作中','条'],['crmCompleted','其中当前已完成','条']],rank:[['crmTotal','期间新增记录'],['crmOngoing','其中当前合作中'],['crmCompleted','其中当前已完成']],note:'按业务记录创建日期筛选；其中合作状态实时取当前值，合作中不含洽谈中。已完成不是期间完成事件；改派不重设创建日期，当前对接归属不是历史个人业绩。'},
+    monitor:{name:'内容监控',icon:'Video',fields:[['monitorAdded','期间新建项目','个'],['monitorItemsAdded','期间新增监控条目','条'],['viewGrowth','期间观看增长','次'],['interactionGrowth','期间互动增长','次']],rank:[['monitorAdded','期间新建项目'],['monitorItemsAdded','期间新增条目'],['viewGrowth','期间观看增长'],['interactionGrowth','期间互动增长']],currentFields:[['monitoredContent','当前在监控内容','条'],['views','截至更新时间累计观看','次'],['interactions','截至更新时间累计互动','次']],note:'新建按项目创建日期，新增条目按加入监控日期（不是发布日期）；增长按日观察记录筛选，不只统计期间新增内容。当前在监控与累计值另列，不视为个人发布产出。'}
+  };
+  function usageOptions() { return {view:ui.usageView,groupId:ui.dashboardGroup,userId:ui.dashboardUser,startDate:ui.startDate,endDate:ui.endDate,projectId:ui.usageReportMode==='project'?ui.usageReportProject||'all':ui.usageReportMode==='workload'||ui.usageView==='personal'||ui.dashboardUser!=='all'?ui.usageProject:'all',reportMode:ui.usageReportMode||'summary',domain:ui.usageDomain,health:ui.usageHealth||'normal',resourcePeriod:ui.resourcePeriod,trendGrain:ui.usageTrendGrain}; }
+  function syncUsageContext() {
+    let c=U.context(s,ui.actor,usageOptions());
+    if(!c.ok)c=U.context(s,ui.actor,{});
+    if(c.ok){ui.usageView=c.view;ui.dashboardGroup=c.groupId;ui.dashboardUser=c.userId;}
+    return c;
   }
+  function usageCanExport() {
+    if(['error','forbidden'].includes(ui.usageHealth))return false;
+    if(ui.usagePanel==='resources'){const result=R.query(s,ui.actor,usageOptions());return result.ok&&result.coverage!=='uncovered';}
+    const data=U.query(s,ui.actor,usageOptions());return data.ok&&data.coverage!=='uncovered';
+  }
+  function usageScopeName(c) { return (c.groupId==='all'?(c.view==='organization'?'全组织':'我的全部组'):gname(c.groupId))+' / '+(c.view==='personal'?'本人':c.userId==='all'?'全部成员':name(c.userId)); }
   function dashboard() {
-    const rows=usageRows(), sum=key=>rows.reduce((v,r)=>v+(r[key] || 0),0),total=sum('sent');
-    const count=new Set(rows.filter(r=>r.sent>0).map(r=>r.uid)).size;
-    const accountCount=new Set(rows.map(r=>r.uid)).size;
-    const noDetails=ui.period==='uncovered'?'历史未覆盖，不能解释为用量为零':ui.dashboardUser!=='all'?name(ui.dashboardUser)+'在当前范围与窗口内暂无记录；不表示该账号已离开组织':'当前有效范围与窗口内暂无记录；不表示成员被移除';
-    const tabs=[['sent','邮件发送'],['replied','创作者回复'],['cooperate','合作完成'],['samples','寄样数量'],['monitor','新建监控']];
-    const visibleUsers=s.users.filter(u=>admin() || u.id===ui.actor || u.memberships.some(m=>lead(m.groupId)));
-    const health='<div class="review-state-control"><label for="usage-health">审阅数据状态</label><select id="usage-health">'+[['normal','正常'],['empty','有效范围内无记录'],['delayed','数据延迟'],['error','来源异常'],['forbidden','无统计权限']].map(x=>'<option value="'+x[0]+'" '+((ui.usageHealth||'normal')===x[0]?'selected':'')+'>'+x[1]+'</option>').join('')+'</select><span>仅切换模拟状态，不是业务设置</span></div>';
-    if(['error','forbidden'].includes(ui.usageHealth))return health+notice(ui.usageHealth==='error'?'数据来源异常':'当前账号无统计权限',ui.usageHealth==='error'?'不能把读取失败展示成用量 0；保留可重试状态，不绘制趋势。':'不返回业务汇总或明细，不能用空数组替代无权限。','warning');
-    return health+notice('模拟数据 · 指标口径待确认','本页用固定示例展示按组和账号查看的方式；业务统计月份与会员配额周期独立。','')+
-      (ui.usageHealth==='delayed'?notice('数据延迟 · 当前为上次有效快照','示例延迟 2 日，当前数值不是实时用量；精确更新 SLA 仍待确定。','warning'):'')+
-      '<div class="filterbar"><select id="usage-group" aria-label="看板组范围">'+goptions(ui.dashboardGroup,true)+'</select><select id="usage-user" aria-label="看板账号"><option value="all">全部可见账号</option>'+options(visibleUsers,ui.dashboardUser)+'</select><select id="usage-period" aria-label="统计月份"><option value="2026-10" '+(ui.period==='2026-10'?'selected':'')+'>2026年10月</option><option value="2026-09" '+(ui.period==='2026-09'?'selected':'')+'>2026年9月</option><option value="uncovered" '+(ui.period==='uncovered'?'selected':'')+'>历史未覆盖样例</option></select><span class="push muted" style="font-size:11px">示例截止 2026-10-26</span></div>'+
-      (ui.period==='uncovered'?notice('该时段没有可靠的组归属快照','保留组织历史，不用成员当前所在组回填历史业绩。','warning'):'')+
-      '<div class="stats">'+stat('邮件发送量',ui.period==='uncovered'?'—':n(total),'封',icon('Mail'))+stat('创作者回复',ui.period==='uncovered'?'—':n(sum('replied')),'示例回复率 '+(total?(sum('replied')/total*100).toFixed(1):'0.0')+'%',icon('MessagesSquare'))+stat('合作完成',ui.period==='uncovered'?'—':n(sum('cooperate')),'个 · 业务状态口径待确认',icon('CheckCheck'))+stat('有业务活动成员',ui.period==='uncovered'?'—':n(count),'人 · 示例事件定义',icon('Users'))+'</div>'+
-      section('业务活动趋势','<div class="chart-surface"><div class="tabbar">'+tabs.map(t=>'<button data-metric="'+t[0]+'" class="'+(ui.metric===t[0]?'active':'')+'">'+t[1]+'</button>').join('')+'</div><div class="chart-layout"><div>'+(ui.period==='uncovered'?empty('历史未覆盖，暂不绘制趋势'):drawChart(sum(ui.metric)))+'<div class="legend"><span><i class="dot" style="background:#fa6300"></i>当前筛选 · 示例分布</span><span><i class="dot" style="background:#377dff"></i>上月对应窗口 · 示例</span></div></div><div class="mini-metrics"><div class="mini-metric"><small>打开邮件</small><strong>'+(ui.period==='uncovered'?'—':n(sum('opened')))+'</strong><small>打开归因仍待确认</small></div><div class="mini-metric"><small>寄样数量</small><strong>'+(ui.period==='uncovered'?'—':n(sum('samples')))+'</strong><small>包裹 / 样品口径待确认</small></div><div class="mini-metric"><small>新建监控</small><strong>'+(ui.period==='uncovered'?'—':n(sum('monitor')))+'</strong><small>个 · 不等于上线内容</small></div></div></div></div>')+
-      '<div class="usage-details">'+section('成员工作明细 · 账号 × 业务组','<p class="form-hint">同一账号按事件所属组分行；只列当前筛选内有统计记录的账号，不是组织成员名单。</p>'+table(['成员','事件所属组','邮件发送','邮件打开','回复','合作完成','寄样','新建监控'],rows.length?rows.map(r=>'<tr class="usage-detail-row" data-uid="'+esc(r.uid)+'" data-group="'+esc(r.groupId)+'"><td>'+person(user(r.uid))+'</td><td>'+gname(r.groupId)+'</td>'+['sent','opened','replied','cooperate','samples','monitor'].map(k=>'<td class="num">'+n(r[k])+'</td>').join('')+'</tr>'):['<tr><td colspan="8" style="text-align:center;padding:35px">'+noDetails+'</td></tr>']))+
-      '<div class="table-footer usage-detail-summary"><span>组织汇总不因多组关系重复累计</span><span>'+(ui.period==='uncovered'?'历史未覆盖 · 不计算记录数':accountCount+' 个账号 · '+rows.length+' 条组记录')+'</span></div>'+(admin()?goto('members','查看完整组织成员名单'):'')+'</div>'+goto('quota','查看配额与实际剩余');
+    const c=syncUsageContext(),domain=usageDomains[ui.usageDomain],personal=c.view==='personal';
+    if(!c.ok)return notice('当前无可用统计范围',esc(c.reason),'warning');
+    const views='<div class="usage-view-switch" role="group" aria-label="统计视角">'+c.views.map(v=>'<button type="button" data-usage-view="'+v+'" aria-pressed="'+(c.view===v)+'" class="'+(c.view===v?'active':'')+'">'+icon(v==='organization'?'Building2':v==='group'?'Users':'User')+usageViews[v]+'</button>').join('')+'</div>';
+    const groupFilter='<label>统计组 <select id="usage-group" aria-label="看板组范围">'+(c.view!=='group'?'<option value="all">'+(personal?'我的全部组':'全组织')+'</option>':'')+options(c.groups,c.groupId)+'</select></label>';
+    const peopleFilter=personal?'':'<label>成员 <select id="usage-user" aria-label="看板账号"><option value="all">全部成员</option>'+options(c.users,c.userId)+'</select></label>';
+    const period='<div class="usage-date-range" role="group" aria-label="统计日期范围"><span>统计日期范围</span><div class="usage-date-inputs"><input type="date" id="usage-date-start" aria-label="开始日期" value="'+esc(ui.startDate)+'"><span>至</span><input type="date" id="usage-date-end" aria-label="结束日期" value="'+esc(ui.endDate)+'"></div></div>';
+    const context='<div id="usage-context" class="usage-context"><strong>'+usageViews[c.view]+' / '+usageScopeName(c)+'</strong><span>统计范围独立于顶部业务当前组</span></div>';
+    const panels='<div class="tabbar usage-panels" role="group" aria-label="使用情况视图">'+[['business','业务概览'],['resources','资源使用']].map(([id,label])=>'<button data-usage-panel="'+id+'" class="'+(ui.usagePanel===id?'active':'')+'" aria-pressed="'+(ui.usagePanel===id)+'">'+label+'</button>').join('')+'</div>';
+    const health='<div class="review-state-control usage-health"><label for="usage-health">审阅数据状态</label><select id="usage-health">'+[['normal','正常'],['empty','有效范围内无记录'],['delayed','数据延迟'],['error','来源异常'],['forbidden','无统计权限']].map(([id,label])=>'<option value="'+id+'" '+((ui.usageHealth||'normal')===id?'selected':'')+'>'+label+'</option>').join('')+'</select><span>固定虚构样本，不证明线上已有统计能力</span></div>';
+    const back=!personal&&c.userId!=='all'?'<div id="usage-person-summary" class="usage-person-summary">'+person(user(c.userId))+'<span>'+(ui.usagePanel==='resources'?'组内个人资源核算，不设跨组个人全局上限':'所选成员实际操作量，不分摊任务或项目整体结果')+'</span><button class="btn text" data-usage-back>'+icon('ArrowLeft')+'返回'+(c.view==='group'?'组汇总':'组织汇总')+'</button></div>':c.view==='organization'&&c.groupId!=='all'?'<div class="actions"><button class="btn text" data-usage-back>'+icon('ArrowLeft')+'返回全组织汇总</button></div>':'';
+    let content;
+    if(['error','forbidden'].includes(ui.usageHealth))content=notice(ui.usageHealth==='error'?'数据来源异常':'当前账号无统计权限','不把读取失败或无权限解释为零，不展示汇总、排行或导出数据。','warning');
+    else content=ui.usagePanel==='resources'?usageResources(c):usageBusiness(c,domain);
+    return '<div class="usage-dashboard">'+views+context+panels+'<div class="filterbar usage-filters">'+groupFilter+peopleFilter+period+'</div>'+back+(ui.usageHealth==='delayed'?notice('数据延迟 · 上次有效结果','保留最近一次示例读取结果；真实更新频率与延迟 SLA 留待数据验收。','warning'):'')+content+health+'</div>';
   }
-  function stat(label,value,sub,ic) { return '<div class="stat"><div class="label">'+label+(ic || '')+'</div><div class="value num">'+value+'</div><div class="sub">'+sub+'</div></div>'; }
-  function drawChart(total) {
-    const weights=[3,6,4,9,8,12,10,15,12,18,16,20],denominator=weights.reduce((a,b)=>a+b,0);
-    const raw=weights.map(w=>total*w/denominator),max=Math.max(1,Math.ceil(Math.max(...raw)/3)*3),values=raw.map(v=>v/max*135);
-    const coords=values.map((v,i)=>(42+i*42)+','+(175-v)).join(' '),previous=values.map((v,i)=>(42+i*42)+','+(175-v*.78)).join(' '),month=ui.period==='2026-09'?'09':'10';
-    return '<svg class="chart" viewBox="0 0 545 222" role="img" aria-label="当前筛选模拟趋势，合计 '+total+'"><g stroke="#e9edf3" stroke-dasharray="3 4">'+[40,85,130,175].map(y=>'<line x1="35" y1="'+y+'" x2="530" y2="'+y+'"/>').join('')+'</g>'+[max,Math.round(max*2/3),Math.round(max/3),0].map((v,i)=>'<text x="4" y="'+(44+i*45)+'">'+v+'</text>').join('')+'<polyline fill="none" stroke="#377dff" stroke-width="2" points="'+previous+'"/><polyline fill="none" stroke="#fa6300" stroke-width="2.5" points="'+coords+'"/>'+values.map((v,i)=>'<circle r="3" fill="#fff" stroke="#fa6300" stroke-width="1.5" cx="'+(42+i*42)+'" cy="'+(175-v)+'"/>').join('')+[1,5,10,15,20,26].map((d,i)=>'<text x="'+(35+i*94)+'" y="207">'+month+'/'+d+'</text>').join('')+'</svg>';
+  function usageBusiness(c,domain) {
+    const data=U.query(s,ui.actor,usageOptions()),unknown=data.coverage==='uncovered';
+    const overview=usageOverview();
+    if(!data.ok)return overview+notice(data.coverage==='error'?'统计范围不可用':'当前无统计权限',esc(data.reason),'warning');
+    const tabs=overview+'<div class="usage-domains" role="group" aria-label="业务领域">'+Object.entries(usageDomains).map(([id,d])=>'<button data-usage-domain="'+id+'" class="'+(ui.usageDomain===id?'active':'')+'" aria-pressed="'+(ui.usageDomain===id)+'">'+icon(d.icon)+d.name+'</button>').join('')+'</div>';
+    const reportControls=usageReportControls(c);
+    if(data.reportKind==='workload')return tabs+reportControls+usageWorkload(c,data,domain);
+    const projectFilter=reportControls;
+    const cards=usageMetricCards(data,domain,unknown);
+    const explain='<div class="usage-definition"><strong>'+domain.name+' · '+(ui.usageDomain==='email'?'所选日期邮件数据':'所选日期业务数据')+'</strong><p>'+domain.note+'</p>'+(ui.usageDomain!=='email'?'<p>虚构来源覆盖：2026-09-01 至 2026-11-11；不外推未覆盖日期。'+(ui.usageDomain==='monitor'?'日增长来源可用至 '+esc(data.availableUntil||'—')+'；本次实际观察截止 '+esc(data.growthCutoff||'—')+'。'+(data.growthPartial?'所选范围内超过数据截止日的部分尚未覆盖；只选未覆盖日时增长为 —。':''):'')+'</p><div class="actions">'+button('时间口径研发核对','timeQuestions',null,'')+'<a href="'+esc(window.ReviewPublication.timeRulesUrl||'#')+'" target="_blank" rel="noopener">已确认时间规则 '+icon('ArrowUpRight')+'</a></div>':'')+'<small data-usage-updated>更新时间：'+esc((ui.usageRefreshedAt||data.asOf).replace('T',' ').replace('+08:00',''))+' · 虚构样本</small></div>'+(data.coverage==='empty'?notice('当前范围内暂无记录','统计查询正常但当前日期内无记录；不表示成员已离开组织，不填入其他日期的数据。'):'');
+    if(unknown)return tabs+projectFilter+cards+(ui.usageDomain==='email'?usageConversationSummary(data):'')+notice('历史未覆盖',esc(data.reason)+'。不能解释为用量为零，不按当前成员身份或 Owner 回填历史。','warning');
+    const personal=c.view==='personal';
+    let visual='';
+    if(ui.usageDomain==='email')visual=usageEmailVisual(data);
+    else if(ui.usageDomain==='crm')visual=section('期间新增记录 · 当前状态分布','<div class="usage-state-bars">'+[['crmOngoing','其中当前合作中'],['crmCompleted','其中当前已完成']].map(([key,label])=>'<div><span>'+label+'</span><progress max="'+Math.max(1,data.totals.crmTotal)+'" value="'+(data.totals[key]||0)+'" aria-label="'+label+'"></progress><strong>'+n(data.totals[key])+'</strong></div>').join('')+'</div><p class="form-hint">只看所选日期创建的记录，状态取当前，不推导期间完成事件；未分配对接人的记录计入组汇总，不归给某位组员。</p>');
+    else visual=section('当前监控与累计结果','<div id="usage-monitor-current" class="stats usage-current-stats">'+domain.currentFields.map(([key,label,unit])=>'<div class="stat" data-usage-current-metric="'+key+'"><div class="label">'+label+'</div><div class="value num">'+usageValue(data.totals[key],key)+'</div><div class="sub">'+unit+' · 当前值，不随日期重置</div></div>').join('')+'</div><p class="form-hint">期间增长采用虚构日观察来源，完整覆盖从 2026-09-01 至 '+esc(data.availableUntil)+'；本次观察截止 '+esc(data.growthCutoff||'—')+'。累计结果包含更早历史，不能与所选日期增长相互替代。</p>');
+    const summary=ui.usageDomain==='email'?cards+explain:explain+cards;
+    let detail='';
+    if(c.view==='organization'&&c.groupId==='all'&&c.userId==='all')detail+=usageGroupResults(c,data,domain);
+    if(data.reportKind==='project')detail+=usageMemberResults(c,data,domain);
+    else detail+=notice('整体业务结果与人工工作量分开','上方是范围内整体业务结果，可能含自动执行及未归因来源；下方只统计独立 actor 事件，不能把成员人工量相加分摊为上方总量。')+(data.actorCoverage==='uncovered'?notice('成员操作来源未覆盖',esc(data.actorReason),'warning'):usageActorTable(c,data.actorRows||[],domain));
+    return tabs+projectFilter+summary+visual+detail;
+  }
+  function usageReportControls(c) {
+    if(c.view==='personal'||c.userId!=='all')return '';
+    const cap=U.reportCapabilities(s,ui.actor,usageOptions()),projects=cap.projects.filter(p=>p.module===ui.usageDomain&&p.groupId===c.groupId);
+    return '<div class="filterbar usage-report-controls"><label>统计类型 <select id="usage-report-mode"><option value="summary" '+(!ui.usageReportMode||ui.usageReportMode==='summary'?'selected':'')+'>整体业务汇总</option><option value="workload" '+(ui.usageReportMode==='workload'?'selected':'')+'>实际操作量汇总</option>'+(projects.length?'<option value="project" '+(ui.usageReportMode==='project'?'selected':'')+'>组长项目统计</option>':'')+'</select></label>'+(ui.usageReportMode==='project'?'<label>项目 <select id="usage-report-project">'+options(projects,ui.usageReportProject)+'</select></label>':'')+'<span>整体结果不等于成员人工量相加；项目整体仅目标组组长</span></div>';
+  }
+  function workloadFields(domain) {
+    return domain==='email'?[['sent','手动发送邮件数','封'],['delivered','其中送达','封'],['deliveryRate','送达率','%'],['opened','其中已读','封'],['openRate','已读率','%'],['replied','其中回复','封'],['replyRate','回复率','%']]:domain==='crm'?[['crmCreated','手工新增记录','条'],['crmUpdated','人工更新记录','次']]:[['monitorCreated','手工创建项目','个'],['monitorItemsAdded','手工加入条目','条']];
+  }
+  function usageWorkload(c,data,domain) {
+    const fields=workloadFields(ui.usageDomain),definition={...domain,fields};
+    const selector=ui.usageDomain==='crm'?'':'<div class="filterbar"><label>'+(c.userId==='all'&&c.view!=='personal'?'筛选范围内动作项目':'筛选本人动作项目')+' <select id="usage-project"><option value="all">全部范围内动作</option>'+options(data.projectOptions,ui.usageProject)+'</select></label></div>';
+    const cards=usageMetricCards(data,definition,data.coverage==='uncovered');
+    const note=notice(c.view==='personal'?'本人实际操作量':c.userId==='all'?'当前范围实际操作量':'所选成员实际操作量','独立操作事件按实际 actor、发生时组和时间统计；项目选择只筛当前操作事件，不分摊他人产出，不授予项目整体或正文权限。邮件仅手动发送及其截至更新时间效果；CRM 仅新增/人工更新，监控仅手建/加入，不算观看增长。');
+    const rules='<div class="actions">'+button('操作量研发核对','actorQuestions',null,'')+'<a href="'+esc(window.ReviewPublication.actorRulesUrl||'#')+'" target="_blank" rel="noopener">实际操作量规则 '+icon('ArrowUpRight')+'</a></div>';
+    if(data.coverage==='uncovered')return selector+note+cards+notice('操作历史未覆盖',esc(data.reason),'warning')+rules;
+    return selector+note+cards+(ui.usageDomain==='email'?usageEmailVisual(data):'')+section('自动执行 · 不计入人工工作量','<p id="usage-automatic">'+resourceNumber(data.automatic.count)+' 次与该账号配置关联的自动执行；系统执行不冒充本人当期手工动作。</p>')+usageActorTable(c,data.rows,domain)+rules;
+  }
+  function usageActorTable(c,rows,domain) {
+    const fields=workloadFields(ui.usageDomain);
+    const ranking=c.view==='group'&&c.userId==='all',sortFields=fields.filter(field=>field[2]!=='%'),sortKey=sortFields.some(field=>field[0]===ui.usageRank)?ui.usageRank:sortFields[0][0];
+    const sorted=ranking?[...rows].sort((a,b)=>(b[sortKey]||0)-(a[sortKey]||0)||a.uid.localeCompare(b.uid)):rows;
+    const tools=ranking?'<label class="usage-sort">单项动作排序 <select id="usage-rank-metric">'+sortFields.map(([key,label])=>'<option value="'+key+'" '+(key===sortKey?'selected':'')+'>'+label+'</option>').join('')+'</select></label>':'';
+    return '<div class="usage-details">'+tools+section(c.userId==='all'&&c.view!=='personal'?'成员实际操作量':'本人动作 · 按发生组',table(['实际操作者','发生组',...fields.map(field=>field[1]),''],sorted.map(row=>'<tr class="usage-detail-row '+(ranking?'usage-ranking-row':'')+'" data-uid="'+esc(row.uid)+'" data-group="'+esc(row.groupId)+'"><td>'+person(user(row.uid))+'</td><td>'+gname(row.groupId)+'</td>'+usageCells(row,fields)+'<td>'+(c.view!=='personal'&&c.userId==='all'?'<button class="btn text" data-usage-drill-user="'+esc(row.uid)+'">单人'+icon('ArrowRight')+'</button>':'')+'</td></tr>')))+'<div class="table-footer usage-detail-summary"><span>按实际 actor；0 仅表示已覆盖的无手工动作，不汇总为绩效分</span><span>'+new Set(rows.map(row=>row.uid)).size+' 个账号 · '+rows.length+' 条组记录</span></div></div>';
+  }
+  function usageOverview() {
+    const data=U.overview(s,ui.actor,usageOptions());
+    if(!data.ok)return '';
+    return '<section id="usage-overview" class="usage-overview" aria-label="跨模块业务总览"><div class="usage-overview-heading"><strong>业务总览</strong><small>'+(data.reportKind==='workload'?'实际操作者动作，不分摊项目整体':'全部获准统计项目 · 整体含自动及未归因来源')+'；总览不受下方项目筛选影响</small></div><div class="usage-overview-grid">'+data.panels.map(panel=>'<div class="usage-overview-panel" data-overview-section="'+panel.id+'"><div class="usage-overview-title"><h3>'+panel.name+'</h3><button class="btn text" data-overview-domain="'+panel.domain+'" data-overview-focus="'+panel.id+'" title="进入'+panel.name+'分析" aria-label="进入'+panel.name+'分析">'+icon('ArrowRight')+'</button></div><dl>'+panel.metrics.map(metric=>'<div title="'+esc(metric.reason||({empty:'当前范围暂无记录',uncovered:'历史或来源未覆盖',partial:'所选范围仅部分观察',delayed:'最近一次有效结果，更新延迟'})[metric.coverage]||'按当前统计范围计算')+'"><dt>'+esc(metric.label)+'</dt><dd><strong class="num" data-overview-metric="'+metric.key+'" data-coverage="'+metric.coverage+'">'+usageValue(metric.value,metric.key)+'</strong>'+(metric.unit==='%'?'':'<span>'+metric.unit+'</span>')+(metric.coverage==='partial'?'<small>部分观察</small>':metric.value===null?'<small>未覆盖</small>':metric.coverage==='delayed'?'<small>延迟</small>':'')+'</dd></div>').join('')+'</dl>'+(panel.metrics.some(metric=>metric.coverage==='partial')?'<small class="usage-overview-note">'+esc(panel.note)+'</small>':'')+'</div>').join('')+'</div></section>';
+  }
+  function actorEngineeringSection() { return '<div id="mail-actor-engineering-questions">'+section('研发待核对 · 实际操作量',notice('操作量与项目统计分离已确认','真实actor采集、手工/自动来源与历史覆盖仍须研发验证；不得用任务Owner、quota UID或最后编辑人补猜。','warning')+engineeringQuestionRows(D.mailActorEngineeringQuestions||[],true)+'<a href="'+esc(window.ReviewPublication.actorRulesUrl||'#')+'" target="_blank" rel="noopener">实际操作量规则</a>')+'</div>'; }
+  function usageMetricCards(data,domain,unknown) {
+    const render=fields=>fields.map(([key,label,unit])=>'<div class="stat" data-usage-metric="'+key+'"><div class="label">'+label+icon(domain.icon)+'</div><div class="value num">'+(unknown?'—':usageValue(data.totals[key],key))+'</div><div class="sub">'+(unit==='%'?'占发送邮件数':unit)+'</div></div>').join('');
+    if(ui.usageDomain!=='email')return '<div class="stats usage-stats">'+render(domain.fields)+'</div>';
+    const stages=[['sent'],['delivered','deliveryRate','送达率'],['opened','openRate','已读率'],['replied','replyRate','回复率']],keys=stages.flatMap(([count,rate])=>rate?[count,rate]:[count]),more=domain.fields.filter(([key])=>!keys.includes(key));
+    const core=stages.map(([key,rate,rateLabel])=>{
+      const [,label,unit]=domain.fields.find(field=>field[0]===key);
+      const ratio=rate?'<div class="usage-mail-rate" data-usage-metric="'+rate+'" title="'+rateLabel+'：占发送邮件数"><span>'+rateLabel+'</span><strong class="value num">'+(unknown?'—':usageValue(data.totals[rate],rate))+'</strong><small>占发送数</small></div>':'';
+      return '<div class="stat" data-mail-stage="'+key+'"><div data-usage-metric="'+key+'"><div class="label">'+label+icon(domain.icon)+'</div><div class="value num">'+(unknown?'—':usageValue(data.totals[key],key))+'</div><div class="sub">'+unit+'</div></div>'+ratio+'</div>';
+    }).join('');
+    return '<div class="stats usage-stats usage-mail-stats usage-mail-core">'+core+'</div>'+(data.reportKind==='workload'?'':'<details id="usage-mail-more" class="usage-mail-more" '+(ui.usageMailMore?'open':'')+'><summary>更多邮件指标 · 4</summary><div class="stats usage-stats usage-mail-extra-stats">'+render(more)+'</div></details>');
+  }
+  function usageValue(value,key) { return value===null||value===undefined?'—':key.endsWith('Rate')?(value*100).toFixed(1)+'%':n(value); }
+  const mailTrendFields=[['sent','发送'],['delivered','送达'],['opened','已读'],['replied','回复']];
+  function usageEmailVisual(data) {
+    const legend='<div class="usage-trend-legend" role="list">'+mailTrendFields.map(([key,label])=>'<span role="listitem" data-trend-legend="'+key+'"><i class="usage-series-'+key+'"></i>'+label+'</span>').join('')+'</div>';
+    const grains={day:'日',week:'周',month:'月'},series=data.trendSeries;
+    const trend='<div id="usage-mail-trend"><div class="usage-trend-toolbar">'+legend+'<label>趋势粒度 <select id="usage-trend-grain" aria-label="邮件趋势粒度">'+Object.entries(grains).map(([key,label])=>'<option value="'+key+'" '+(ui.usageTrendGrain===key?'selected':'')+'>'+label+'</option>').join('')+'</select></label></div><div class="usage-chart">'+drawUsageChart(series||[])+'</div><details class="usage-trend-audit"><summary>按'+grains[data.trendGrain]+'邮件数据</summary>'+table(['时间区间',...mailTrendFields.map(field=>field[1]+'邮件数')],series.map(row=>'<tr data-trend-date="'+row.startDate+'" data-trend-end="'+row.endDate+'"><td>'+row.startDate+(row.startDate===row.endDate?'':' 至 '+row.endDate)+'</td>'+mailTrendFields.map(([key])=>'<td class="num" data-trend-count="'+key+'">'+n(row[key])+'</td>').join('')+'</tr>'))+'</details><p class="form-hint">横轴按收件发送日期聚合；周从周一开始，首末区间裁在所选范围内，实际区间见图中提示及下表。趋势粒度不改变总体、三率、漏斗及独立对话数。已读／回复取截至更新时间的效果，不是期内全部已读／回复事件；已覆盖空日为 0，未覆盖不补零。</p></div>';
+    const max=Math.max(1,...data.funnel.stages.map(row=>row.value));
+    const funnel='<div id="usage-mail-funnel" data-strictly-nested="'+data.funnel.strictlyNested+'">'+data.funnel.stages.map((row,index)=>'<div class="usage-funnel-stage" data-mail-funnel-stage="'+row.key+'"><span>'+String(index+1).padStart(2,'0')+' · '+row.label+'</span><div class="usage-funnel-track"><div class="usage-series-'+row.key+'" style="width:'+(row.value/max*100)+'%"></div></div><strong class="num" data-funnel-count>'+n(row.value)+'</strong></div>').join('')+'<p class="form-hint">'+esc(data.funnel.note)+' 按发送日期选定收件记录的原始封数；不把对话数串成第五阶段，不计算回复到对话的转化率。</p></div>';
+    if(data.reportKind==='workload')return section('人工发送 · 当前效果趋势',trend)+section('手动发送的对应效果',funnel)+section('有效发出与实际跟进', '<div id="usage-conversations" class="stats usage-conversation-stats">'+stat('有效发出消息',resourceNumber(data.totals.messageSent),'条 · 不把收到消息计为本人动作')+stat('实际跟进对话',resourceNumber(data.totals.followupConversations),'精确会话去重 · 不把日去重数相加')+'</div>');
+    return section('邮件效果趋势',trend)+section('邮件效果漏斗',funnel)+usageConversationSummary(data)+notice('消息沟通沿既有统计口径','建联按收到消息的频道去重；红人消息按收到消息条数；跟进消息示意发出消息条数减发出所涉频道数。跟进公式与原提示文案的差异仍待研发核验，不改邮件模块流程。')+'<div class="actions">'+button('统计口径待核对','dashboardQuestions',null,'')+'<a href="'+esc(window.ReviewPublication.emailDashboardUrl||'#')+'" target="_blank" rel="noopener">邮件看板证据 '+icon('ArrowUpRight')+'</a></div>';
+  }
+  function usageConversationSummary(data) {
+    const conversations=data.conversations,fields=[['newConversations','新增沟通对话'],['activeConversations','期间活跃对话']];
+    const cards='<div class="stats usage-conversation-stats">'+fields.map(([key,label])=>'<div class="stat" data-conversation-metric="'+key+'"><div class="label">'+label+'</div><div class="value num">'+usageValue(conversations[key],key)+'</div><div class="sub">个精确会话 · 所选日期</div></div>').join('')+'</div>';
+    const audit=conversations.rows.length?'<details class="usage-conversation-audit"><summary>核对对话来源</summary>'+table(['精确会话','首次有效回复','所选期间新增','所选期间活跃'],conversations.rows.map(row=>'<tr data-conversation-id="'+esc(row.conversationId)+'"><td>'+esc(row.conversationId)+'<small>'+esc(row.taskId)+' / '+esc(row.platform)+'</small></td><td>'+esc(row.firstReply?row.firstReply.replace('T',' '):'历史未覆盖')+'</td><td>'+((row.isNew===null)?'—':row.isNew?'是':'否')+'</td><td>'+((row.isActive===null)?'—':row.isActive?'是':'否')+'</td></tr>'))+'</details>':'';
+    return '<div id="usage-conversations">'+section('对话沟通 · Dashboard 新增',cards+'<p class="form-hint">新增：完整历史中首次收到有效红人回复发生在所选期间；这条首次回复本身即构成活跃。活跃：已进入沟通的精确会话，期内在首次回复时点及之后有有效收／发消息，老会话可计，同会话只计一次；单向邀约不计。按精确 conversation ID，或项目＋任务＋达人＋平台识别，不按达人全局去重。邮件回复封数不等于对话数，两个日期窗口与粒度不同。</p>'+(conversations.reason?notice('对话历史覆盖说明',esc(conversations.reason),'warning'):'')+'<p class="form-hint">这两项是独立看板扩展，不加入原团队邮件数据抽屉 11 项、账号／任务 8 项；管理按任务账号归属，个人与管理单人另看实际 actor 动作，不把收到消息或项目整体当人工量。</p>'+audit+'<div class="actions">'+button('对话口径研发核对','conversationQuestions',null,'')+'<a href="'+esc(window.ReviewPublication.conversationRulesUrl||'#')+'" target="_blank" rel="noopener">已确认对话规则 '+icon('ArrowUpRight')+'</a></div>')+'</div>';
+  }
+  function usageCells(row,fields) { return fields.map(([key])=>'<td class="num" data-usage-value="'+key+'">'+usageValue(row[key],key)+'</td>').join(''); }
+  function usageGroupResults(c,data,domain) {
+    return section('分组汇总',table(['业务组',...domain.fields.map(x=>x[1]),''],c.groups.map(g=>{
+      const totals=ui.usageDomain==='email'?data.groupRows.find(r=>r.groupId===g.id):Object.fromEntries(domain.fields.map(([key])=>{const rows=data.rows.filter(r=>r.groupId===g.id);return [key,rows.some(r=>r[key]===null)?null:rows.reduce((v,r)=>v+(r[key]||0),0)];}));
+      return '<tr class="usage-group-row" data-group="'+esc(g.id)+'"><td>'+esc(g.name)+'</td>'+usageCells(totals,domain.fields)+'<td><button class="btn text" data-usage-drill-group="'+esc(g.id)+'">查看'+icon('ArrowRight')+'</button></td></tr>';
+    })));
+  }
+  function usageMemberResults(c,data,domain) {
+    const rows=data.rows;
+    const mail=ui.usageDomain==='email',fields=mail?usageEmailDetailFields():domain.fields;
+    const body=rows.length?table(['账号 / 业务归属','业务组',...fields.map(x=>x[1]),''],rows.map(r=>'<tr class="usage-detail-row" data-uid="'+esc(r.uid||'')+'" data-group="'+esc(r.groupId)+'"><td>'+(r.uid&&user(r.uid)?person(user(r.uid)):'未分配对接人')+'</td><td>'+gname(r.groupId)+'</td>'+usageCells(r,fields)+'<td><div class="usage-row-actions">'+(mail?usageExpandButton(r):'')+(r.uid&&c.view!=='personal'?'<button class="btn text" data-usage-drill-user="'+esc(r.uid)+'">单人'+icon('ArrowRight')+'</button>':'')+'</div></td></tr>'+(mail?usageTaskDetails(data,r,fields.length+3):''))):empty('当前范围内暂无记录；不表示该账号已离开组织。');
+    return '<div class="usage-details '+(mail?'usage-mail-table':'')+'">'+section(c.view==='personal'?'当前范围业务结果 · 按组':c.userId==='all'?'成员业务归属明细 · 账号 × 业务组':'单人业务归属明细',body)+'<div class="table-footer usage-detail-summary"><span>多组账号按组分行；不是实际操作人绩效</span><span>'+new Set(rows.map(r=>r.uid).filter(Boolean)).size+' 个账号 · '+rows.length+' 条组记录</span></div></div>';
+  }
+  function usageEmailDetailFields() { return ['invited','sent','delivered','opened','replied','deliveryRate','openRate','replyRate'].map(key=>usageDomains.email.fields.find(field=>field[0]===key)); }
+  function usageExpandButton(row) {
+    const key=row.uid+'|'+row.groupId,expanded=(ui.usageExpanded||[]).includes(key);
+    return '<button class="btn text usage-expand" data-usage-expand-user="'+esc(key)+'" aria-expanded="'+expanded+'" title="'+(expanded?'收起':'展开')+'任务统计">'+icon(expanded?'ChevronUp':'ChevronDown')+'任务</button>';
+  }
+  function usageTaskDetails(data,row,colspan) {
+    if(!(ui.usageExpanded||[]).includes(row.uid+'|'+row.groupId))return '';
+    const fields=usageEmailDetailFields();
+    const rows=data.taskRows.filter(task=>task.uid===row.uid&&task.groupId===row.groupId);
+    return '<tr class="usage-task-container"><td colspan="'+colspan+'"><div class="usage-task-detail"><strong>任务统计 · 所选日期</strong><p class="form-hint">仅展开任务统计，不授予项目内容访问；此明细不随汇总及账号 CSV 导出。</p>'+(rows.length?table(['任务','任务归属',...fields.map(x=>x[1])],rows.map(task=>'<tr class="usage-task-row" data-task-id="'+esc(task.taskId)+'" data-project-id="'+esc(task.projectId)+'"><td>'+esc(task.name)+'<small>'+esc(task.taskId)+'</small></td><td>'+name(task.taskUid)+'</td>'+usageCells(task,fields)+'</tr>')):empty('当前日期内没有任务统计。'))+'</div></td></tr>';
+  }
+  function usageRankingRows(c,data,domain) {
+    if(!domain.rank.some(([key])=>key===ui.usageRank))ui.usageRank=domain.rank[0][0];
+    const keys=[...new Set([...domain.fields,...domain.rank,...(domain.currentFields||[])].map(([key])=>key))];
+    return c.users.map(u=>({uid:u.id,groupId:c.groupId,...Object.fromEntries(keys.map(key=>{const rows=data.rows.filter(r=>r.uid===u.id);return [key,rows.some(r=>r[key]===null)?null:rows.reduce((v,r)=>v+(r[key]||0),0)];})),...(ui.usageDomain==='email'?Object.fromEntries(['deliveryRate','openRate','replyRate'].map(key=>[key,data.rows.find(r=>r.uid===u.id)?.[key]??0])):{})})).sort((a,b)=>(a[ui.usageRank]===null)-(b[ui.usageRank]===null)||b[ui.usageRank]-a[ui.usageRank]||a.uid.localeCompare(b.uid)).map((r,i)=>({...r,rank:i+1}));
+  }
+  function usageRankings(c,data,domain) {
+    const fields=domain.rank,rows=usageRankingRows(c,data,domain),rank=ui.usageRank;
+    const tools='<label class="usage-sort">排序 <select id="usage-rank-metric" aria-label="组员排行指标">'+fields.map(([key,label])=>'<option value="'+key+'" '+(rank===key?'selected':'')+'>'+label+'</option>').join('')+'</select></label>';
+    return section('组员排行',table(['排名','组员',...fields.map(x=>x[1]),''],rows.map((r,i)=>'<tr class="usage-ranking-row" data-uid="'+esc(r.uid)+'"><td class="num">'+(i+1)+'</td><td>'+person(user(r.uid))+'</td>'+usageCells(r,fields)+'<td><div class="usage-row-actions">'+(ui.usageDomain==='email'?usageExpandButton(r):'')+'<button class="btn text" data-usage-drill-user="'+esc(r.uid)+'">单人'+icon('ArrowRight')+'</button></div></td></tr>'+(ui.usageDomain==='email'?usageTaskDetails(data,r,fields.length+3):'')))+'<p class="form-hint">单项业务归属排序，不计算综合绩效分。邀约红人数按当前行去重，不把跨账号重复收件人相加为汇总人数；未分配 CRM 记录只计入组汇总。</p>',tools);
+  }
+  function usageProjectResults(data,domain) {
+    const projects=data.projects||[];
+    if(ui.usageDomain==='crm')return section('期间新增 · 我当前对接的记录',projects.length?table(['记录','业务组','当前状态'],projects.map(p=>'<tr><td>'+esc(p.name)+'</td><td>'+gname(p.groupId)+'</td><td>'+esc(p.cooperationStatus||'待跟进')+'</td></tr>')):empty('所选日期内没有由本人当前对接的新增 CRM 记录。'));
+    return section('我有权参与的项目',projects.length?table(['项目','业务组','权限来源',''],projects.map(p=>'<tr><td>'+esc(p.name)+'</td><td>'+gname(p.groupId)+'</td><td>'+(p.ownerId===ui.actor?'负责人':'有效协作')+'</td><td><button class="btn text" data-usage-open-project="'+esc(p.id)+'">进入项目'+icon('ArrowUpRight')+'</button></td></tr>')):empty('当前没有获准项目。获组织管理汇总权不自动获得项目详情权限。'));
+  }
+  function usageResources(c) {
+    const result=R.query(s,ui.actor,usageOptions());
+    if(!result.ok)return notice('无资源统计权限',esc(result.reason),'warning');
+    const current=result.resourcePeriod==='current',range=result.resourcePeriod==='range',allOrg=c.view==='organization'&&c.groupId==='all'&&c.userId==='all';
+    const modes='<div class="resource-period-switch" role="group" aria-label="资源统计周期">'+[['current','当期使用'],['cumulative','累计使用'],['range','期间发生量']].map(([id,label])=>'<button data-resource-period="'+id+'" class="'+(result.resourcePeriod===id?'active':'')+'" aria-pressed="'+(result.resourcePeriod===id)+'">'+label+'</button>').join('')+'</div>';
+    const cards='<div class="usage-resource-grid">'+result.summary.map(cell=>'<div class="usage-resource-card" data-resource-scope="'+cell.scopeId+'" title="'+esc(cell.coverageNote||'Scope '+cell.scopeId+' · 固定虚构样例')+'"><div class="label">'+esc(cell.name)+'</div><div class="resource-card-value"><strong class="value num">'+resourceNumber(cell.used)+'</strong>'+(current?'<span class="usage-cap">/ '+esc(resourceLimit(cell))+'</span>':'')+'</div>'+(current&&cell.remaining!==null&&cell.scopeId===21?'<small data-resource-remaining>实际可用 '+n(cell.remaining)+'</small>':'')+(range?resourceCurrentReference(cell):'')+(range?'<small class="resource-period-note">'+esc(cell.coverageNote||'期间来源待核')+'</small>':'')+'</div>').join('')+'</div>';
+    const breakdown=allOrg?'<div class="tabbar resource-breakdown" role="group" aria-label="资源明细范围">'+[['groups','分组汇总'],['members','成员用量']].map(([id,label])=>'<button data-resource-breakdown="'+id+'" class="'+(ui.resourceBreakdown===id?'active':'')+'" aria-pressed="'+(ui.resourceBreakdown===id)+'">'+label+'</button>').join('')+'</div>':'';
+    const rows=resourceMatrixRows(c,result),isGroups=allOrg&&ui.resourceBreakdown==='groups';
+    const tableHeading=isGroups?'分组资源汇总':c.view==='personal'?'我的组内用量':'成员用量明细';
+    return modes+'<div class="usage-resource-period"><strong>'+(current?'当期配额周期':range?'所选日期 · 期间发生量':'累计统计窗口')+'</strong><span>'+esc(result.periodLabel)+'</span></div>'+
+      (result.coverage==='uncovered'?notice('期间来源未覆盖',esc(result.reason)+'；不可导出整表。','warning'):'')+
+      '<p class="resource-readout">'+(current?'已用 / 配额上限':range?'期间有效发生量；当前用量、上限、剩余独立保留':'累计用量，不与当前限额相减')+' · '+(allOrg?'23 项总览 / 22 项成员列':'22 项资源')+'<br>示例更新时间：'+esc(result.asOf.replace('T',' ').replace('+08:00',''))+' · 全部数值虚构</p>'+(c.view==='personal'&&c.groupId==='all'&&result.matrixRows.length>1?'<p class="form-hint">个人不设跨组总上限；多组用量按原归属汇总，上限与实际可用须在下方逐组查看。</p>':'')+cards+
+      notice('沿线上资源清单展示，配置仍分层管理','展示项不等于可分配项。未核实的组/个人上限标为待核；“无限制”“不支持”“不追加上限”分别表达。邮件及解锁沿原核算，容量占用、日/月限额不当成统一次数。')+
+      breakdown+section(tableHeading,'<div id="usage-quota-table">'+resourceMatrix(rows,result.columns,current,isGroups,range)+'</div><p class="form-hint">固定账号/组列，横向查看全部资源项；未知数据为 —，不是已用 0。累计不展示当期上限或剩余；期间发生量不与当前上限相减，不借多组关系重复计算一笔组织用量。</p>')+
+      '<p class="form-hint">子账户数量仅属组织名额，不下分到组或个人；原三项配置样例保留在配置页。期间发生量按有效发生记录日期筛选，虚构来源覆盖 2026-09-01 至 2026-11-11；收藏夹、子账户、合作网红席位仍是当前占用，资格及日/月双限制保持当前值。24 时长调整、45/89 监控区间来源尚待核验，用 — 而非零。当前额度不因选择日期重置，支付金额继续独立管理。</p><div class="actions">'+button('时间口径研发核对','timeQuestions',null,'')+'</div>'+
+      (c.view==='organization'?goto('groups','前往组配额设置')+(admin()?goto('funds','查看组织资金'):''):c.view==='group'&&c.groupId===ui.group?goto('quota','前往组员配额设置'):'')+
+      '<a class="resource-source" href="'+esc(window.ReviewPublication.resourceInventoryUrl)+'" target="_blank" rel="noopener">线上资源清单与证据边界 '+icon('ArrowUpRight')+'</a>';
+  }
+  function resourceNumber(value) { return value===null||value===undefined?'—':n(value); }
+  function resourceLimit(cell) { return cell.limitState==='finite'?resourceNumber(cell.limit):({unlimited:'无限制',unsupported:'不支持',inherit:'不追加上限',pending:'限额待核'})[cell.limitState]||'—'; }
+  function resourceCurrentReference(cell) { return '<small class="resource-current-reference">当前已用 <span data-resource-current-used>'+resourceNumber(cell.currentUsed)+'</span> / <span data-resource-current-cap>'+esc(resourceLimit({limit:cell.currentLimit,limitState:cell.currentLimitState}))+'</span>'+(cell.currentRemaining!==null&&cell.currentRemaining!==undefined?'<br>当前剩余 <span data-resource-current-remaining>'+resourceNumber(cell.currentRemaining)+'</span>':'')+'</small>'; }
+  function resourceMatrixRows(c,result) { return c.view==='organization'&&c.groupId==='all'&&c.userId==='all'&&ui.resourceBreakdown==='groups'?result.groupRows:result.matrixRows; }
+  function resourceMatrix(rows,columns,current,grouped,range) {
+    if(!rows.length)return empty('当前范围内暂无资源记录；不表示账号已离开组织。');
+    return '<div class="table-wrap resource-matrix" role="region" aria-label="资源用量矩阵，可横向滚动" tabindex="0"><table><thead><tr><th class="resource-frozen" scope="col">'+(grouped?'业务组':'账号 / 业务组')+'</th>'+columns.map(col=>'<th data-resource-scope="'+col.scopeId+'" scope="col" title="Scope '+col.scopeId+'">'+esc(col.columnName)+'</th>').join('')+'</tr></thead><tbody>'+rows.map(row=>'<tr class="'+(grouped?'usage-resource-group-row':'usage-resource-row')+'" data-uid="'+esc(row.uid||'')+'" data-group="'+esc(row.groupId||'')+'" data-level="'+(grouped?'group':'member')+'"><td class="resource-frozen">'+(grouped?'<strong>'+gname(row.groupId)+'</strong>':person(user(row.uid))+'<small>'+gname(row.groupId)+'</small>')+'</td>'+row.cells.map(cell=>'<td data-resource-scope="'+cell.scopeId+'" title="'+esc(cell.coverageNote||'示例用量，真实核算和分配资格逐项核验')+'"><strong class="num" data-resource-used>'+resourceNumber(cell.used)+'</strong>'+(current?'<small data-resource-cap>/ '+esc(resourceLimit(cell))+'</small>':'')+(current&&cell.scopeId===21&&cell.remaining!==null?'<small class="resource-available" data-resource-remaining>实际可用 '+n(cell.remaining)+'</small>':'')+(range?resourceCurrentReference(cell):'')+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>';
+  }
+  function stat(label,value,sub,ic,id) { return '<div class="stat"'+(id?' id="'+esc(id)+'"':'')+'><div class="label">'+label+(ic || '')+'</div><div class="value num">'+value+'</div><div class="sub">'+sub+'</div></div>'; }
+  function drawUsageChart(series) {
+    if(!series.length)return empty('当前范围内暂无发送记录。');
+    const max=Math.max(1,...series.flatMap(row=>mailTrendFields.map(([key])=>row[key]))),first=Date.parse(series[0].date),last=Date.parse(series[series.length-1].date);
+    const x=row=>last===first?290:50+(Date.parse(row.date)-first)/(last-first)*500,y=value=>180-value/max*145;
+    const ticks=[...new Set([max,Math.round(max*2/3),Math.round(max/3),0])];
+    return '<svg class="chart" viewBox="0 0 590 225" role="img" aria-label="按收件发送日期统计的发送、送达、已读、回复四线趋势"><g stroke="var(--border-default)" stroke-dasharray="3 4">'+ticks.map(value=>'<line x1="50" y1="'+y(value)+'" x2="550" y2="'+y(value)+'"/>').join('')+'</g>'+ticks.map(value=>'<text x="3" y="'+(y(value)+4)+'">'+n(value)+'</text>').join('')+mailTrendFields.map(([key,label])=>'<g class="usage-series-'+key+'" data-trend-series="'+key+'"><polyline fill="none" stroke-width="2.5" points="'+series.map(row=>x(row)+','+y(row[key])).join(' ')+'"/>'+series.map(row=>'<circle r="2.5" cx="'+x(row)+'" cy="'+y(row[key])+'" data-trend-value="'+row[key]+'" data-trend-day="'+row.startDate+'" data-trend-end="'+row.endDate+'"><title>'+row.startDate+' 至 '+row.endDate+' '+label+'：'+n(row[key])+' 封</title></circle>').join('')+'</g>').join('')+series.filter((row,index)=>index===0||index===series.length-1||index%Math.max(1,Math.ceil(series.length/5))===0).map(row=>'<text x="'+x(row)+'" y="211" text-anchor="'+(row===series[0]?'start':row===series[series.length-1]?'end':'middle')+'">'+esc(row.label)+'</text>').join('')+'</svg>';
+  }
+  function exportUsage() {
+    if(!usageCanExport())return toast('当前无可导出的有效统计数据',false);
+    const c=syncUsageContext(),resources=ui.usagePanel==='resources',domain=usageDomains[ui.usageDomain];
+    if(resources)return exportResources(c);
+    const data=U.query(s,ui.actor,usageOptions());
+    return exportStatistics(c,data);
+  }
+  function exportStatistics(c,data) {
+    const domain=usageDomains[ui.usageDomain],work=workloadFields(ui.usageDomain),manual=data.reportKind==='workload',project=data.reportKind==='project';
+    const fields=[...new Map([...work,...(manual?[]:domain.fields),...(ui.usageDomain==='email'?[['messageSent','有效发出消息'],['followupConversations','实际跟进对话'],...(manual?[]:[['newConversations','新增沟通对话'],['activeConversations','期间活跃对话']])]:[])].map(field=>[field[0],field])).values()];
+    const headers=['视角','领域','统计口径','时间窗口','数据状态','业务组','账号','报表类型','项目范围','自动执行次数',...fields.map(field=>field[1]),'来源更新时间','示意读取时间','数据覆盖','覆盖说明','操作量覆盖','操作量覆盖说明','观察来源可用至','实际观察截止','部分观察说明'];
+    const rows=[{metrics:data.totals,type:manual?'实际操作量汇总':project?'组长项目结果':'整体业务汇总',groupId:c.groupId,uid:c.userId,manual},...(!project?(manual?data.rows:data.actorRows||[]).map(row=>({metrics:row,type:manual?'实际操作量分组':'成员实际操作量',groupId:row.groupId,uid:row.uid,manual:true})):[])];
+    if(manual)rows.push({metrics:{},type:'自动执行（不计人工）',groupId:c.groupId,uid:c.userId,automatic:data.automatic.count,manual:true});
+    if(!manual&&ui.usageDomain==='email')rows.push({metrics:{newConversations:data.conversations.newConversations,activeConversations:data.conversations.activeConversations},type:'整体对话汇总',groupId:c.groupId,uid:'all',coverage:data.conversations.coverage,reason:data.conversations.reason});
+    const meaning=manual?'独立实际actor操作事件；按发生时间；不把自动/收到消息/项目整体分给本人':project?'目标组有效组长的项目整体；不授予业务正文或写权限':'范围内整体结果可能含自动及未归因来源；成员人工量不是可分摊的整体总量';
+    const values=rows.map(row=>[usageViews[c.view],domain.name,row.automatic!==undefined?'自动执行关联事件；系统执行，不计入当期人工量':row.manual?'实际actor人工量；收到回复只作手动发送的对应效果，不是人工动作':row.type==='整体对话汇总'?'精确会话整体结果；按消息时间/全历史首次回复；不是成员人工动作':meaning,ui.startDate+' 至 '+ui.endDate,ui.usageHealth==='delayed'?'延迟结果':data.coverage==='empty'?'已覆盖无动作':'正常',row.groupId==='all'?c.view==='personal'?'本人当前获准组':'全组织':group(row.groupId)?.name,row.uid==='all'||!row.uid?c.view==='personal'?name(ui.actor):'全部成员':name(row.uid),row.type,usageOptions().projectId==='all'?(manual?'当前范围动作项目':'全部获准统计项目'):data.projectOptions?.find(p=>p.id===usageOptions().projectId)?.name||E.project(s,usageOptions().projectId)?.name,row.automatic??'',...fields.map(([key])=>row.metrics[key]===undefined?'':usageValue(row.metrics[key],key)),data.asOf,ui.usageRefreshedAt||data.asOf,row.coverage||data.coverage,row.reason||data.reason,data.actorCoverage||'',data.actorReason||'',data.availableUntil||'',data.growthCutoff||'',data.growthPartial?'部分观察：所选范围超出来源可用截止，不是完整期间增长':'']);
+    download('统计报表-'+data.reportKind+'-'+ui.usageDomain+'.csv','\ufeff'+[headers,...values].map(row=>row.map(value=>'"'+String(value??'').replace(/"/g,'""')+'"').join(',')).join('\r\n'),'text/csv;charset=utf-8');
+  }
+  function exportResources(c) {
+    const data=R.query(s,ui.actor,usageOptions()),current=data.resourcePeriod==='current',range=data.resourcePeriod==='range';
+    if(!data.ok)return toast('当前无可导出的有效资源数据',false);
+    const headings=['视角','领域','统计口径','时间窗口','数据状态','业务组','账号','配额项',current?'已用':range?'期间发生量':'累计用量',...(current?['配置上限','实际可用']:range?['当前已用','当前配置上限','当前实际可用','时间字段']:[]),'口径提示'];
+    const rows=resourceMatrixRows(c,data).flatMap(row=>row.cells.map(cell=>[usageViews[c.view],'资源使用',current?'当期使用 / 既有核算主体':range?'期间有效发生量 / 当前额度不重置':'累计使用 / 不减当期限额',data.periodLabel,ui.usageHealth==='delayed'?'延迟结果':'正常',group(row.groupId)?.name||'全组织',row.uid?user(row.uid)?.name:'—',R.catalog.find(item=>item.scopeId===cell.scopeId)?.columnName||cell.scopeId,resourceNumber(cell.used),...(current?[resourceLimit(cell),cell.scopeId===21?resourceNumber(cell.remaining):'—']:range?[resourceNumber(cell.currentUsed),resourceLimit({limit:cell.currentLimit,limitState:cell.currentLimitState}),resourceNumber(cell.currentRemaining),cell.timeBasis]:[]),cell.coverageNote||'未核实下分资格，不新增配置或扣量规则']));
+    const csv=[headings,...rows].map(row=>row.map(value=>'"'+String(value??'').replace(/"/g,'""')+'"').join(',')).join('\r\n');
+    download('资源使用-'+usageViews[c.view]+'-'+(current?'当期':range?'期间':'累计')+'-模拟数据.csv','\ufeff'+csv,'text/csv;charset=utf-8');
   }
   function membersPage() {
     const people=s.users.filter(u=>admin() || u.id===ui.actor || u.memberships.some(m=>lead(m.groupId)));
@@ -250,7 +433,7 @@
     const specs=[['adminRemoveMembers','Admin 可移除成员','仅组织 Owner 可配置，默认关闭。开启后 Admin 可移出组织或单组，并在组织清退中指定一个接收人整体接替；提交或接受邀请后系统自动移交。可撤销单组移除、结束无业务项关系，不授予日常业务明细、逐项目改派或个人调额权。',true],['adminArchiveGroups','Admin 可归档组','仅组织 Owner 可配置，默认关闭。开启后 Admin 可二次确认冻结归档非默认业务组；不提供彻底删除或自行解除归档。',true],['t2Collaborator','组长默认成为组内协作对象的协作者','组织级统一开关，默认关闭。开启后各组有效组长获得本组已接入对象的隐式读写；支付按单据和草稿生效。CRM 不设协作者，不受该开关影响。列表锁定展示，不生成显式协作记录，也不自动授予协作管理或支付执行能力。'],['t2Quota','允许组长管理本组成员配额','T2 可调整自己与其他本组成员的个人上限，但不能修改组上限。'],['monitorLabelsT2','仅组长可增删改内容监控标签定义','关闭时 T3 可维护标签；开启后仍允许组织 Owner/Admin 与任一有效组长。不限制已有标签的应用。'],['paymentSensitive','正式支付单同组只读可查看敏感信息','仅在正式单的同组固定只读范围内生效；草稿不因此向全组公开。'],['showTeamQuota','允许成员查看本组配额汇总','展示层级额度不等于开放其他账号的项目明细。此展示范围仍需评审。']];
     return notice('Admin 全组织管理，敏感动作单独授权','Admin 可邀请成员、创建和管理组，不配置按组管理范围。移除成员与归档组分别受 Owner 专属开关限制；组织管理不自动获得业务权限。')+
       specs.map(x=>'<div class="setting-row"><div><h2>'+x[1]+'</h2><p>'+x[2]+'</p></div>'+toggle(x[0],s.policies[x[0]],!admin()||x[3]&&actor().orgRole!=='owner',x[1])+'</div>').join('')+
-      section('不可配置的硬边界','<div class="chip-list">'+['无跨组协作','组织管理不自动授予业务写入','附加能力不传授','已有资金责任快照不改写'].map(x=>tag(x,'outline')).join('')+'</div>')+
+      section('不可配置的硬边界','<div class="chip-list">'+['无跨组协作','组织管理不自动授予业务写入','附加能力按模块判断','已有资金责任快照不改写'].map(x=>tag(x,'outline')).join('')+'</div>')+
       section('协作与查看边界',notice('不提供只读协作者','显式协作和组长隐式协作均为常规读写。不新增逐对象指定可查看人员的授权；正式支付单等模块固定查看规则另行保留。'))+
       section('本次已确认的边界',notice('邀请与组织治理集中管理','组长不能邀请新成员；Owner/Admin 邀请可选首组，默认选择始终保留的默认组。待接受邀请只能撤销重邀，项目转交不提供原负责人转协作者快捷项。'));
   }
@@ -274,17 +457,17 @@
   function fundsPage() {
     if(!admin())return notice('资金管理与业务执行分离','当前仅按组织管理身份展示组资金配置。个人仍可在有权支付单上执行业务。','warning')+goto('payment','进入跨境支付');
     const b=E.balances(s,ui.group,ui.actor);
-    const groupFree=s.groups.reduce((total,g)=>total+g.fundBalance,0);
+    const groupFree=s.groups.filter(g=>!E.usesSharedFunds(s,g.id)).reduce((total,g)=>total+g.fundBalance,0);
     const rows=s.groups.map(g=>{
-      const archived=g.status==='ARCHIVED';
-      return '<tr><td>'+gname(g.id)+'</td><td>'+tag(archived?'已归档':g.paymentEnabled?'已开通':'未开通',g.paymentEnabled?'green':'')+'</td><td class="num">'+n(g.fundBalance)+'</td><td class="num">'+n(g.fundPending)+'</td><td class="num">'+n(g.fundUsed)+'</td><td><div class="actions">'+(archived?'':g.paymentEnabled?button('分配','allocate',g.id,'text',b.unallocated<=0)+button('收回','returnFunds',g.id,'text',g.fundBalance<=0)+button('关闭支付','disablePayment',g.id,'text'):button('开通支付','enablePayment',g.id,'text'))+button('看账目','groupLedger',g.id,'text')+'</div></td></tr>';
+      const archived=g.status==='ARCHIVED',shared=E.usesSharedFunds(s,g.id),available=shared?E.balances(s,g.id,ui.actor).groupRemaining:g.fundBalance;
+      return '<tr data-fund-group="'+esc(g.id)+'"><td>'+gname(g.id)+'</td><td>'+tag(archived?'已归档':g.paymentEnabled?'已开通':'未开通',g.paymentEnabled?'green':'')+'</td><td data-payment-mode="'+(shared?'shared':'dedicated')+'">'+tag(shared?'共享组织余额':'组专用余额','outline')+'</td><td class="num">'+n(available)+'</td><td class="num">'+n(g.fundPending)+'</td><td class="num">'+n(g.fundUsed)+'</td><td><div class="actions">'+(archived?'':g.paymentEnabled?(shared?'':button('分配','allocate',g.id,'text',b.unallocated<=0)+button('收回','returnFunds',g.id,'text',g.fundBalance<=0))+button('关闭支付','disablePayment',g.id,'text'):button('开通支付','enablePayment',g.id,'text'))+button('看账目','groupLedger',g.id,'text')+'</div></td></tr>';
     });
-    return rechargeNotice(b.unallocated)+notice('每个组只使用本组余额','新组默认未开通支付。开通后从组织待分配余额划入资金；组织待分配余额不能直接付款。以下为模拟 CNY。')+
-      '<div class="stats">'+stat('组织账面余额',n(s.organization.walletBalance),'待分配 + 各组可用 + 已占用')+stat('组织待分配余额',n(b.unallocated),'可划入已开通的组')+stat('各组可用合计',n(groupFree),'各组独立使用')+stat('支付已占用',n(s.organization.walletPending),'仍按原资金承诺结算')+'</div>'+
-      section('组支付余额',table(['业务组','支付状态','可用余额','已占用','累计已付','操作'],rows))+
+    return rechargeNotice(b.unallocated)+notice('默认组共享，其余组资金独立','存量有支付权益的组织，默认组自动开通并共享组织未分配可用余额，不占用其他组专用资金；其余组仅使用获分配的专用余额。资金模式只读，不提供任意切换。以下为模拟 CNY。')+
+      '<div class="stats">'+stat('组织账面余额',n(s.organization.walletBalance),'未分配可用 + 专用组可用 + 已占用')+stat('组织未分配可用',n(b.unallocated),'可供已开通默认组共享，或分配至专用组',null,'fund-shared-available')+stat('专用组可用合计',n(groupFree),'不重复计入默认组共享额度',null,'fund-dedicated-total')+stat('支付已占用',n(s.organization.walletPending),'仍按原资金承诺结算')+'</div>'+
+      section('组支付资金',table(['业务组','支付状态','资金来源 · 只读','当前可用','已占用','累计已付','操作'],rows))+
       fundsLedger()+
       notice('注销资金阻塞 · 仅规则示意','钱包余额、冻结金额或未完成支付阻塞注销，须清理或转人工。本 Demo 不校验真实注销资格，不执行资金清理。')+
-      notice('模拟边界','仅模拟资金归属和账目，不处理真实充值、退款发起、币种、费用、重试或对账。','warning');
+      notice('模拟边界','仅模拟资金归属和账目，不处理真实充值、退款发起、重试或对账。币种与手续费沿现有账务，不新增配置；异常冲正由线下人工处理。','warning');
   }
   function rechargeNotice(unallocated) {
     const dismissed=ui.dismissedTopups?.[ui.actor]||[];
@@ -292,16 +475,16 @@
     const pending=s.fundEvents.filter(e=>e.type==='topup'&&!dismissed.includes(e.id)&&!handled.has(e.id));
     const latest=pending.at(-1);
     if(!latest)return '';
-    const ready=s.groups.some(g=>g.status==='ACTIVE'&&g.paymentEnabled);
-    return '<div class="notice" id="recharge-notice">'+icon('Info')+'<div><strong>有新充值到账</strong><p role="status">'+n(latest.amount)+' CNY 已进入组织待分配余额。'+(!ready?'暂无已开通支付的组。':unallocated<=0?'当前无待分配余额。':'')+(pending.length>1?' 另有 '+(pending.length-1)+' 笔到账提醒。':'')+'</p><div class="actions">'+button('分配到组','allocateFromRecharge',latest.id,'',!ready||unallocated<=0)+button('关闭提示','dismissRecharge',latest.id,'text')+'</div></div></div>';
+    const ready=s.groups.some(g=>g.status==='ACTIVE'&&g.paymentEnabled&&!E.usesSharedFunds(s,g.id));
+    return '<div class="notice" id="recharge-notice">'+icon('Info')+'<div><strong>有新充值到账</strong><p role="status">'+n(latest.amount)+' CNY 已进入组织未分配可用余额。'+(!ready?'暂无可分配的已开通专用组；默认组开通时可直接共享使用，无需划拨。':unallocated<=0?'当前无待分配余额。':'')+(pending.length>1?' 另有 '+(pending.length-1)+' 笔到账提醒。':'')+'</p><div class="actions">'+(ready?button('分配到专用组','allocateFromRecharge',latest.id,'',unallocated<=0):'')+button('关闭提示','dismissRecharge',latest.id,'text')+'</div></div></div>';
   }
   function fundsLedger() {
     const scope=ui.fundLedgerScope||'all';
     const types={allocate:'划入组',return:'收回组余额',close_return:'关闭回收',archive_return:'归档回收',topup:'充值到账',hold:'占用',payment:'支付结算',release:'释放占用',refund:'退款到账'};
     const delta=v=>v?(v>0?'+':'')+n(v):'—';
-    const rows=s.fundEvents.filter(e=>scope==='all'||(scope==='unallocated'?e.unallocatedDelta!==0:e.groupId===scope)).slice().reverse().map(e=>'<tr><td><strong>'+esc(types[e.type]||e.type)+'</strong><small>'+esc(e.id)+'</small>'+(e.relatedEventId?'<small>关联 '+esc(e.relatedEventId)+'</small>':'')+'</td><td>'+(e.groupId?gname(e.groupId):'—')+(e.projectId?'<small>'+esc(e.projectId)+'</small>':'')+'</td>'+[e.unallocatedDelta,e.groupDelta,e.pendingDelta,e.walletDelta].map(v=>'<td class="num">'+delta(v)+'</td>').join('')+'<td>'+esc(e.reason||'—')+'<small>'+name(e.actorId)+' · '+esc(e.at.slice(0,10))+'</small></td></tr>');
+    const rows=s.fundEvents.filter(e=>scope==='all'||(scope==='unallocated'?e.unallocatedDelta!==0:e.groupId===scope)).slice().reverse().map(e=>'<tr><td><strong>'+esc(types[e.type]||e.type)+'</strong><small>'+esc(e.id)+'</small>'+(e.relatedEventId?'<small>关联 '+esc(e.relatedEventId)+'</small>':'')+'</td><td>'+(e.groupId?gname(e.groupId):'—')+(e.fundingMode?'<small>'+esc(e.fundingMode==='shared'?'共享组织余额':'组专用余额')+'</small>':'')+(e.projectId?'<small>'+esc(e.projectId)+'</small>':'')+'</td>'+[e.unallocatedDelta,e.groupDelta,e.pendingDelta,e.walletDelta].map(v=>'<td class="num">'+delta(v)+'</td>').join('')+'<td>'+esc(e.reason||'—')+'<small>'+name(e.actorId)+' · '+esc(e.at.slice(0,10))+'</small></td></tr>');
     const hasPaid=s.projects.some(p=>p.module==='payment'&&p.status==='PAID'&&p.paymentAmount>(p.refundedAmount||0));
-    return '<div id="fund-ledger">'+section('资金账目','<div class="filterbar"><select id="fund-ledger-scope" aria-label="资金账目范围">'+options([{id:'all',name:'全组织账目'},{id:'unallocated',name:'组织待分配账目'},...s.groups.map(g=>({id:g.id,name:g.name+' · 组账目'}))],scope)+'</select></div>'+(rows.length?table(['记录','原资金组 / 支付单','组织待分配变动','组可用变动','占用变动','组织总额变动','摘要'],rows):empty('此范围暂无资金变动。')),'<div class="inline">'+button('模拟线下到账','rechargeFunds',null,'')+button('模拟退款到账','refundPayment',null,'',!hasPaid)+'</div>')+'</div>';
+    return '<div id="fund-ledger">'+section('资金账目','<div class="filterbar"><select id="fund-ledger-scope" aria-label="资金账目范围">'+options([{id:'all',name:'全组织账目'},{id:'unallocated',name:'组织未分配 / 共享账目'},...s.groups.map(g=>({id:g.id,name:g.name+' · 组账目'}))],scope)+'</select></div>'+(rows.length?table(['记录','原资金组 / 支付单','未分配 / 共享变动','专用组可用变动','占用变动','组织总额变动','摘要'],rows):empty('此范围暂无资金变动。')),'<div class="inline">'+button('模拟线下到账','rechargeFunds',null,'')+button('模拟退款到账','refundPayment',null,'',!hasPaid)+'</div>')+'</div>';
   }
   function tasksPage() {
     const handoffs=s.handoffs.filter(h=>admin()||h.uid===ui.actor);
@@ -334,19 +517,24 @@
       section('产品待确认',decisionRows(productPending))+
       section('留待 Spec/研发评审',decisionRows(specReview))+
       '<div id="mail-engineering-questions">'+section('研发待确认 · 邮件核算',notice('沿用现有逻辑已经确认，以下不是产品待决策','本地代码存在预检与落账/计数主体差异，尚未核实线上部署。审阅标记不会自动解决这些问题，也不授权 Demo 选择新的扣量规则。','warning')+engineeringQuestionRows(D.engineeringQuestions)+'<div class="actions">'+button('查看核算路径','mailQuotaRules',null,'')+'<a href="'+esc(window.ReviewPublication.emailQuotaUrl)+'" target="_blank" rel="noopener">查看代码证据 '+icon('ArrowUpRight')+'</a></div>')+'</div>'+
+      '<div id="dashboard-engineering-questions">'+section('研发待核对 · 邮件看板与统一日期',notice('统计结构已确认，以下不是产品待决策','实时聚合可行；日期字段、组范围、沟通归因及实际部署仍逐项核验。不新增历史快照系统，不因本地样例通过或审阅标记自动关闭这些问题。','warning')+engineeringQuestionRows(D.dashboardEngineeringQuestions||[],true)+'<div class="actions">'+goto('dashboard','返回使用情况')+'<a href="'+esc(window.ReviewPublication.emailDashboardUrl||'#')+'" target="_blank" rel="noopener">邮件看板证据 '+icon('ArrowUpRight')+'</a></div>')+'</div>'+
+      '<div id="dashboard-time-engineering-questions">'+section('研发待核对 · 非邮件时间落地',notice('非邮件时间规则已确认，以下仅核验工程落地','CRM 创建时间与实时状态、监控加入日期与日增长、资源有效发生记录分别聚合。待核项是数据来源、部署及历史覆盖，不是重新决定产品规则；不新增历史快照系统。','warning')+engineeringQuestionRows(D.dashboardTimeEngineeringQuestions||[],true)+'<div class="actions">'+goto('dashboard','返回使用情况')+'<a href="'+esc(window.ReviewPublication.timeRulesUrl||'#')+'" target="_blank" rel="noopener">已确认时间规则 '+icon('ArrowUpRight')+'</a></div>')+'</div>'+
+      '<div id="mail-conversation-engineering-questions">'+section('研发待核对 · 对话沟通',notice('对话新增口径已确认，以下仅核验工程落地','精确会话键、全历史首次有效回复、活跃消息时点及覆盖分别核验。两项为独立 Dashboard 扩展，不改原团队邮件抽屉十一项，也不将对话数作为邮件漏斗下一阶段。','warning')+engineeringQuestionRows(D.mailConversationEngineeringQuestions||[],true)+'<div class="actions">'+goto('dashboard','返回使用情况')+'<a href="'+esc(window.ReviewPublication.conversationRulesUrl||'#')+'" target="_blank" rel="noopener">已确认对话规则 '+icon('ArrowUpRight')+'</a></div>')+'</div>'+
+      actorEngineeringSection()+
       '<div id="collection-engineering-questions">'+section('研发待核对 · 收藏夹兼容',notice('产品规则已确认，三项实现疑点仍待核对','私有、本组公开、指定成员三种模式及 Owner 独占整夹治理已经确认；组长隐式协作沿用组织全局策略。以下记录前后端与新旧服务差异，意见仅保存在本次会话，不自动关闭研发待核事项。','warning')+engineeringQuestionRows(D.collectionEngineeringQuestions,true)+'<div class="actions">'+button('现网逻辑参考','collectionFacts',null,'')+goto('resource','返回收藏夹')+'<a href="'+esc(window.ReviewPublication.collectionEvidenceUrl)+'" target="_blank" rel="noopener">查看完整核对 '+icon('ArrowUpRight')+'</a></div>')+'</div>'+
       '<div id="monitor-engineering-questions">'+section('研发待核对 · 内容监控兼容',notice('保留现有规则已经确认，以下不是产品待决策','监控配额和各项设置权限保留，只增量组边界与全局组长隐式协作；不新增管理协作者委派。以下实现疑点不能因产品定案、议题通过或本地示例而自动关闭。','warning')+engineeringQuestionRows(D.monitorEngineeringQuestions,true)+'<div class="actions">'+button('查看监控流程与核算','monitorRules',null,'')+goto('monitor','返回内容监控')+'<a href="'+esc(window.ReviewPublication.monitorEvidenceUrl)+'" target="_blank" rel="noopener">查看完整核对 '+icon('ArrowUpRight')+'</a></div>')+'</div>'+
       section('已确认规则',['S11','S12','S17','S18','S26','S27','S40','S41'].map(id=>storyButton(window.ReviewStories.stories.find(x=>x.id===id))).join(''));
   }
   function modulePage() {
     const mod=ui.page;
+    if(mod==='payment'&&!group(ui.group)?.paymentEnabled)return '<div id="payment-unavailable">'+notice('本组未开通跨境支付','本组暂不开放支付单列表、草稿、模块设置及支付操作；请联系组织 Owner/Admin 开通。关闭不抹去历史资金承诺，账务仍按原资金来源处理。','warning')+(admin()?goto('funds','前往组织资金管理开通'):'<p class="form-hint">组织管理身份不会通过此入口自动授予；普通成员不能自行开通。</p>')+'</div>';
     const available=s.projects.filter(p=>p.module===mod&&p.groupId===ui.group&&p.status!=='DELETED'&&E.access(s,ui.actor,p.id).read);
     let p=available.find(x=>x.id===ui.project) || available[0];ui.project=p?.id || null;
     return (mod==='payment'?notice('逐单协作，草稿不向全组公开','协作直接绑定单条支付单或草稿，不设支付项目。正式单对本组有效成员只读；草稿仅负责人及有效协作者可见，含组织策略开启后的组长隐式协作。普通读写不等于支付执行权。'):mod==='email'?notice('协作权限不决定扣量账号','发送与邮箱解锁沿用各路径现有规则，不统一扣操作人或项目 Owner；这里只示意流程，不执行邮件扣量。'):'')+
+      (mod==='email'?notice('团队邮件数据 · 保留原模块','团队邮件数据只将账号候选限制当前业务组，其余指标、日期／邮件项目／账号筛选、账号展开任务、刷新及导出不变。该入口不采用管理 Dashboard 的组织／组／个人选择替换原逻辑，服务端仍需校验请求账号不得越组。')+'<div class="actions">'+button('团队邮件数据说明与待核对','dashboardQuestions',null,'')+'</div>':'')+
       (mod==='resource'?notice('内容协作与整夹治理分开','私有、本组公开、指定成员三种模式作用于当前收藏夹。协作者可维护夹内达人；名称、说明、共享范围、指定名单、转交和整夹删除仅负责人可操作。私有模式仍受组织组长默认协作策略影响。')+'<div class="actions">'+button('现网逻辑参考','collectionFacts',null,'')+button('评审问题 · 3 项','collectionQuestions',null,'')+'</div>':'')+
       (mod==='monitor'?notice('保留监控业务，项目治理与内容操作分开','负责人维护项目名称、说明、协作名单和日常治理；协作者可维护内容、内容负责人、时长与自动追踪，仍守原状态和配额。组长隐式来源不附带项目治理，不提供管理协作者委派。')+'<div class="actions">'+button('流程与配额说明','monitorRules',p?.id,'')+button('研发核对 · 5 项','monitorQuestions',null,'')+'</div>':'')+
       (mod==='crm'?notice('同一达人，各组独立对接','达人基础资料共享；本组合作状态、跟进备注和对接人独立。有效同组成员可读，写入与对接人改派沿用四项 CRM 配置；所有来源先受记录组隔离。记录不设置协作者，也不受组长默认协作开关影响。'):'')+
-      (mod==='payment'&&ui.group&&!group(ui.group)?.paymentEnabled?notice('本组未开通支付','不能提交新付款，已有订单仍按原权限和资金承诺处理。Demo 暂不开放新建草稿。','warning'):'')+
       '<div class="tabbar"><button data-tab="objects" class="'+(ui.tab==='objects'?'active':'')+'">'+(mod==='crm'?'合作记录':mod==='payment'?'支付单与协作':mod==='resource'?'收藏夹与协作':'项目与协作')+'</button><button data-tab="settings" class="'+(ui.tab==='settings'?'active':'')+'">模块内设置</button>'+(mod==='payment'?'<button data-tab="waiting" class="'+(ui.tab==='waiting'?'active':'')+'">待组长审核 '+s.projects.filter(x=>x.module==='payment'&&x.groupId===ui.group&&x.status==='WAITING_REVIEW').length+'</button>':'')+'</div>'+
       (ui.tab==='settings'?moduleSettings(mod):ui.tab==='waiting'?paymentWaiting():
       '<div class="project-layout"><div class="project-selector">'+(available.length?available.map(x=>'<button data-project="'+x.id+'" class="'+(x.id===p?.id?'active':'')+'"><span>'+icon(mod==='payment'?'CreditCard':mod==='crm'?'Contact':'Folder')+esc(x.name)+'</span><small>'+tag(statusNames[x.status],x.status==='DRAFT'?'orange':'')+(x.ownerId?'负责人 '+name(x.ownerId):'对接人 '+name(x.assigneeId))+'</small></button>').join(''):'<div class="empty">'+icon('LockKeyhole')+'当前账号在该组没有可见对象</div>')+'</div><div class="project-detail">'+(p?objectDetail(p):empty('组织管理身份不自动开放业务对象。',button('切换为样例 Owner','asOwner',mod,'')+'<span class="form-hint">可使用右侧权限探针查看被拦截原因。</span>'))+'</div></div>');
@@ -411,26 +599,28 @@
     const recipient=p.recipientSnapshot||{name:'未填写',account:''};
     const waiting=p.status==='WAITING_REVIEW',expired=p.status==='SCHEDULE_EXPIRED',canSubmit=r.execute&&group(p.groupId)?.paymentEnabled;
     const canAdvance=['FORMAL','SCHEDULED'].includes(p.status)||(waiting&&p.scheduled);
-    return '<div class="content-sheet"><div class="section-heading"><h3>付款信息</h3>'+tag(statusNames[p.status],p.status==='DRAFT'||waiting||expired?'orange':'blue')+'</div><dl class="definition"><dt>支付金额</dt><dd class="num">CNY '+n(p.paymentAmount)+'</dd><dt>收款人</dt><dd>'+esc(recipient.name)+(sensitive?' / 示例账号 '+esc(recipient.account):' / 敏感信息已遮蔽')+'</dd><dt>资金承担人 / 组</dt><dd>'+name(p.fundingUid || p.ownerId)+' / '+gname(p.fundingGroupId || p.groupId)+(p.fundingCommitted?' · 已形成占用':'')+'</dd><dt>实际执行人</dt><dd>'+name(p.submitterId)+' · 不替代资金承担人</dd>'+(p.scheduledAt?'<dt>预约时点</dt><dd>'+esc(p.scheduledAt.replace('T',' '))+' · 示例</dd>':'')+'</dl>'+
+    return '<div class="content-sheet"><div class="section-heading"><h3>付款信息</h3>'+tag(statusNames[p.status],p.status==='DRAFT'||waiting||expired?'orange':'blue')+'</div><dl class="definition"><dt>支付金额</dt><dd class="num">CNY '+n(p.paymentAmount)+'</dd><dt>收款人</dt><dd>'+esc(recipient.name)+(sensitive?' / 示例账号 '+esc(recipient.account):' / 敏感信息已遮蔽')+'</dd><dt>资金承担人 / 组</dt><dd>'+name(p.fundingUid || p.ownerId)+' / '+gname(p.fundingGroupId || p.groupId)+(p.fundingCommitted?' · 已形成占用':'')+'</dd><dt>资金来源 · 只读</dt><dd>'+esc((p.fundingMode|| (E.usesSharedFunds(s,p.groupId)?'shared':'dedicated'))==='shared'?'共享组织未分配余额':'组专用余额')+(p.fundingCommitted?' · 提交时资金快照':' · 提交时记录')+'</dd><dt>实际执行人</dt><dd>'+name(p.submitterId)+' · 不替代资金承担人</dd>'+(p.scheduledAt?'<dt>预约时点</dt><dd>'+esc(p.scheduledAt.replace('T',' '))+' · 示例</dd>':'')+'</dl>'+
       (p.status==='DRAFT'?'<div class="actions">'+button('填写草稿','savePayment',p.id,'',!r.write)+button('正式提交','submitPayment',p.id,'primary',!canSubmit)+button('预约提交','schedulePayment',p.id,'',!canSubmit)+button('删除草稿','deleteDraft',p.id,'danger',!r.delete)+'</div>':'')+
-      (waiting?notice(p.scheduled?'等待预约前审核':'等待组长审核','任一有效同组组长可审核；审核权限不等于支付执行权限。','warning'):'')+
+      (waiting?notice(p.scheduled?'等待预约前审核':'等待组长审核','按实时组策略与有效身份判断；任一同组组长可审核，无有效组长时自动跳过本闸门，不跳过原系统审核、定时或手动放行业务条件。','warning'):'')+
+      (p.reviewSkipReason?'<div data-review-skip="'+esc(p.id)+'">'+notice('组长审核已跳过',esc(p.reviewSkipReason)+'。只跳过组长闸门，不代表资金已自动执行；配置或任免动作本身不会扣款。')+'</div>':'')+
       (expired?notice('预约已逾期，未执行','不能补审或再次模拟到期来执行。原资金占用保留，可作废并释放；重新预约、转立即等路径不在本次示意中。','warning'):'')+
-      '<div class="actions">'+(waiting?button(p.scheduled?'通过预审核':'组长审核放行','reviewPayment',p.id,'primary',!lead(p.groupId)):'')+(canAdvance?button(p.scheduled?'模拟到达预约时点':'手动放行 / 执行','releasePayment',p.id,waiting?'':'primary',!r.execute):'')+(p.fundingCommitted&&(canAdvance||waiting||expired)?button('取消并释放占用','cancelPayment',p.id,'danger',!r.execute):'')+'</div>'+
+      '<div class="actions">'+(waiting?button(p.scheduled?'通过预审核':'组长审核放行','reviewPayment',p.id,'primary',!lead(p.groupId)):'')+(canAdvance?button(p.scheduled?'模拟到达预约时点':'模拟系统后续推进','releasePayment',p.id,waiting?'':'primary',!r.execute):'')+(p.fundingCommitted&&(canAdvance||waiting||expired)?button('取消并释放占用','cancelPayment',p.id,'danger',!r.execute):'')+'</div>'+
       (!r.write?notice('正式单同组固定只读','可以查看已允许的字段；不可编辑、提交、执行或管理协作。'):'')+
-      '<div class="metric-grid"><div class="metric-item"><small>所属组可用余额 · CNY</small><strong>'+n(b.groupRemaining)+'</strong></div><div class="metric-item"><small>负责人组内个人剩余</small><strong>'+n(b.memberRemaining)+'</strong></div></div></div>';
+      (canAdvance?'<p class="form-hint">“模拟系统后续推进”仅替代真实后台推进，不是生产中新增的额外审批；真实系统审核、预约时点和原手动放行意图仍按现有链路执行。</p>':'')+
+      '<div class="metric-grid"><div class="metric-item"><small>'+(E.usesSharedFunds(s,p.groupId)?'默认组共享可用':'所属组专用可用')+' · CNY</small><strong>'+n(b.groupRemaining)+'</strong></div><div class="metric-item"><small>负责人组内个人剩余</small><strong>'+n(b.memberRemaining)+'</strong></div></div></div>';
   }
   function recipientSettings() {
     const records=s.recipients.filter(r=>r.status==='ACTIVE');
     const channels=[...new Map(records.map(r=>[r.channelId,{id:r.channelId,name:r.channelName}])).values()];
     const selected=channels.some(c=>c.id===ui.recipientChannel)?ui.recipientChannel:'all';
     const visible=records.filter(r=>selected==='all'||r.channelId===selected);
-    return section('频道收款信息快捷模板',notice('全组织共享，不是支付业务记录','本组织有效成员均可管理；同频道可保留不同收款信息，重复记录拦截。改删模板不回写已保存支付单，也不开放来源订单。')+
+    return section('频道收款信息快捷模板',notice('全组织共享，不是支付业务记录','从已开通支付的组进入后，有效成员可管理组织共享模板；同频道可保留不同收款信息，重复记录拦截。改删模板不回写已保存支付单，也不开放来源订单；未开通组不展示此设置。')+
       '<div class="filterbar"><label>频道 <select id="recipient-channel" aria-label="筛选收款模板频道"><option value="all">全部频道</option>'+options(channels,selected)+'</select></label>'+button(icon('Plus')+' 新增收款记录','saveRecipient',null,'primary',!ui.group)+'</div>'+
       (visible.length?table(['频道','收款人','示例账号','操作'],visible.map(r=>'<tr data-recipient-row="'+esc(r.id)+'"><td>'+esc(r.channelName)+'<small>'+esc(r.channelId)+'</small></td><td>'+esc(r.name)+'</td><td>'+esc(r.account)+'</td><td><div class="actions">'+button(icon('Pencil'),'saveRecipient',r.id,'text',!ui.group,'编辑收款记录')+button(icon('Trash2'),'deleteRecipient',r.id,'text',!ui.group,'删除快捷模板，不删除支付记录')+'</div></td></tr>')):empty('没有符合条件的收款模板。'))+
       '<p class="form-hint">仅用虚构字段演示同频道去重；真实银行、币种等去重键留待 Spec，不建设版本审批或停用恢复系统。</p>'+button('预览共享模板','recipient',null,'',!ui.group));
   }
   function moduleSettings(mod) {
-    if(mod==='payment')return section('当前组支付审核',notice('组级规则，不设组织默认值','此开关在 '+gname(ui.group)+' 内生效。已预约且需审核的订单进入待预审核；到期未通过则逾期。本 Demo 使用手动推进的模拟时点，不接真实调度与系统审核。','warning')+'<div class="setting-row"><div><h2>支付前需要组长审核放行</h2><p>任一组长放行；到达闸门时实际提交人是同组 T2 则豁免。</p></div>'+toggle('groupPayment',group(ui.group)?.requireT2PaymentRelease,!admin(),'当前组支付审核')+'</div>')+recipientSettings();
+    if(mod==='payment')return section('当前组支付审核',notice('实时组级规则，不保存审核策略快照','此开关在 '+gname(ui.group)+' 内即时影响尚未执行的支付闸门。无有效组长时自动跳过；任免和配置仅重算闸门，不自动扣款。预约单到期仍需满足其余原有执行条件；已逾期不补审。本 Demo 无真实调度与系统审核。','warning')+'<div class="setting-row"><div><h2>支付前需要组长审核放行</h2><p>任一有效组长可放行；闸门时提交人是同组组长则豁免；组内无有效组长也仅跳过此审核闸门。</p></div>'+toggle('groupPayment',group(ui.group)?.requireT2PaymentRelease,!admin(),'当前组支付审核')+'</div>')+recipientSettings();
     if(mod==='monitor')return section('内容监控标签',notice('组织共享定义与项目应用分开','创建来源组不随创建人退组漂移，但不是定义权限隔离边界；标签groupId=1/2/3是分类，不是业务组。项目内应用仍需对象权限；置顶是否纳入新增定义限制开关仍待明确。')+labelsTable('monitor'))+goto('policies','设置组织级标签策略')+section('其他设置按原业务边界',notice('不统一收归负责人','内容负责人、时长和自动追踪由有效内容协作者按原规则维护；名称、说明和名单仅项目负责人。展示配置、人工指标与能力资格分别校验。')+button('查看业务流程与核算','monitorRules',null,'')+button('研发核对 · 5 项','monitorQuestions',null,''));
     if(mod==='crm')return section('CRM 记录读写权限',notice('沿用四项写权限，先检查记录组','四项是组织级 CRM 配置，选中来源叠加，不是新增组级角色。配置2/3仍按对接人的既有账号组关系取组长/成员，再与记录组边界求交，不直接授权新组全员。有对接人时本人可写，未分配沿原管理员兜底/所有人配置；普通编辑权限也用于指派和改派。')+
       '<div class="formgrid">'+crmWriteOptions.map(option=>'<label class="inline-check"><input type="checkbox" data-crm-permission="'+option.id+'" '+((s.crmWritePermissions||[]).includes(option.id)?'checked ':'')+(!admin()?'disabled ':'')+'>'+esc(option.name)+'</label>').join('')+'</div><div class="actions">'+button('保存 CRM 写权限','saveCRMWritePermissions',null,'primary',!admin())+button('查看已确认方案','decision','D09','')+'</div><p class="form-hint">虚构样例既有 CRM 管理员：'+name(s.crmLegacyAdminId)+'。配置1和未分配兜底不自动扩展为所有 Owner/Admin；原账号组关系只读保留作鉴权示意，不提供维护入口，真实身份/组关系映射仍须研发确认。旧 CRM 分组设置暂定弃用，不沿用为本期业务组；自定义视图及标签不能因此一并删除，历史归组和关联入口仍须验收。</p>')+
@@ -568,8 +758,11 @@
       $('#fund-ledger-scope').focus();
       return;
     }
-    if(action==='enablePayment')return dialog('开通支付 · '+gname(id),notice('可同时分配首笔余额','组织待分配余额 '+n(b.unallocated)+' CNY。填 0 仅开通；此组仍需有余额才能提交付款。')+amount('首次分配金额（CNY）',0,b.unallocated,0)+reason(),v=>perform('setGroupPaymentAccess',{groupId:id,enabled:true,amount:Number(v.amount),reason:v.reason},true),'确认开通');
-    if(action==='disablePayment')return dialog('关闭支付 · '+gname(id),notice('不再接受新付款','本组可用余额 '+n(g.fundBalance)+' CNY 将全部收回组织；既有占用 '+n(g.fundPending)+' CNY 保留。旧单之后释放或退款到账，均回组织待分配余额。','warning')+reason(),v=>perform('setGroupPaymentAccess',{groupId:id,enabled:false,reason:v.reason},true),'关闭并收回');
+    if(action==='enablePayment'){
+      const shared=E.usesSharedFunds(s,id);
+      return dialog('开通支付 · '+gname(id),notice(shared?'默认组共享组织余额':'可同时分配首笔专用余额',shared?'开通后可使用组织未分配可用余额，不单独分配或收回，不动其他组专用资金。':'组织未分配可用 '+n(b.unallocated)+' CNY。填 0 仅开通；后续也可在资金页正常分配。')+(shared?'':amount('首次分配金额（CNY）',0,b.unallocated,0))+reason(),v=>perform('setGroupPaymentAccess',{groupId:id,enabled:true,amount:shared?0:Number(v.amount),reason:v.reason},true),'确认开通');
+    }
+    if(action==='disablePayment')return dialog('关闭支付 · '+gname(id),notice('关闭后整个支付模块仅显示未开通提示',(E.usesSharedFunds(s,id)?'默认组不持有专用余额，不发生分配或收回；组织未分配资金保持不变。':'本组专用可用余额 '+n(g.fundBalance)+' CNY 将全部收回组织。')+'既有占用 '+n(g.fundPending)+' CNY 保留。旧单之后释放或退款到账按原责任留痕，回组织未分配余额。','warning')+reason(),v=>perform('setGroupPaymentAccess',{groupId:id,enabled:false,reason:v.reason},true),'确认关闭');
     if(action==='dismissRecharge'){
       ui.dismissedTopups ||= {};
       (ui.dismissedTopups[ui.actor] ||= []).push(id);
@@ -578,20 +771,24 @@
     if(action==='allocate'||action==='allocateFromRecharge'){
       const receipt=action==='allocateFromRecharge'?s.fundEvents.find(e=>e.id===id&&e.type==='topup'):null;
       if(action==='allocateFromRecharge'&&!receipt)return;
-      const activeGroups=s.groups.filter(g=>g.status==='ACTIVE');
-      const suggested=activeGroups.length===1&&activeGroups[0].isDefault&&activeGroups[0].paymentEnabled?activeGroups[0].id:'';
-      const target=receipt?field('目标组','<select name="groupId" required>'+options([{id:'',name:'请选择已开通支付的组'},...activeGroups.filter(g=>g.paymentEnabled)],suggested)+'</select>',true):'';
+      const activeGroups=s.groups.filter(g=>g.status==='ACTIVE'&&g.paymentEnabled&&!E.usesSharedFunds(s,g.id));
+      if(!receipt&&E.usesSharedFunds(s,id))return toast('默认组共享组织未分配余额，无独立分配或收回动作',false);
+      if(receipt&&!activeGroups.length)return toast('暂无可分配的已开通专用组；到账可直接供已开通默认组使用',false);
+      const target=receipt?field('目标专用组','<select name="groupId" required>'+options([{id:'',name:'请选择已开通支付的专用组'},...activeGroups],'')+'</select>',true):'';
       const note=receipt?'到账 '+n(receipt.amount)+' CNY，仅用于预填参考。':'';
       return dialog(receipt?'分配到组':'分配组余额 · '+gname(id),notice('组织待分配余额 '+n(b.unallocated)+' CNY',note+'确认后仅新增一笔内部划拨，不改变组织总余额。')+'<div class="formgrid">'+target+amount('金额（CNY）',0.01,b.unallocated,receipt?Math.min(receipt.amount,b.unallocated):'')+reason()+'</div>',v=>perform('allocateFunds',{groupId:receipt?v.groupId:id,amount:Number(v.amount),reason:v.reason,relatedEventId:receipt?.id},true),'确认分配');
     }
-    if(action==='returnFunds')return dialog('收回组余额 · '+gname(id),notice('本组可用 → 组织待分配','本次最多 '+n(g.fundBalance)+' CNY；逐笔记账，不改历史记录或已占用金额。')+'<div class="formgrid">'+amount('金额（CNY）',0.01,g.fundBalance)+reason()+'</div>',v=>perform('returnFunds',{groupId:id,amount:Number(v.amount),reason:v.reason},true),'确认收回');
+    if(action==='returnFunds'){
+      if(E.usesSharedFunds(s,id))return toast('默认组不持有专用余额，无独立收回动作',false);
+      return dialog('收回组余额 · '+gname(id),notice('本组专用可用 → 组织未分配','本次最多 '+n(g.fundBalance)+' CNY；逐笔记账，不改历史记录或已占用金额。')+'<div class="formgrid">'+amount('金额（CNY）',0.01,g.fundBalance)+reason()+'</div>',v=>perform('returnFunds',{groupId:id,amount:Number(v.amount),reason:v.reason},true),'确认收回');
+    }
     if(action==='rechargeFunds')return dialog('模拟线下到账',notice('仅演示财务已入账的结果','资金全部进入组织待分配余额，不发起真实充值，也不自动分配给组。')+amount('到账金额（CNY）',0.01),v=>{
       const result=perform('rechargeFunds',{amount:Number(v.amount)},true);
       if(result.ok)$('#recharge-notice')?.scrollIntoView({block:'nearest'});
     },'记录模拟到账');
     const paid=s.projects.filter(p=>p.module==='payment'&&p.status==='PAID'&&p.paymentAmount>(p.refundedAmount||0));
     const orderOptions=paid.map(p=>({id:p.id,name:p.id+' · '+(group(p.fundingGroupId)?.name||'原资金组')+' · 可退 '+n(p.paymentAmount-(p.refundedAmount||0))+' CNY'}));
-    return dialog('模拟退款到账',notice('仅模拟已确认到账，不发起退款','原资金周期仍有效则回本组；已关闭、归档或重新开通则回组织待分配余额，仍保留原组记录。')+'<div class="formgrid">'+field('原支付单',select('projectId',options(orderOptions,paid[0]?.id)))+amount('到账金额（CNY）',0.01)+'</div>',v=>perform('refundPayment',{projectId:v.projectId,amount:Number(v.amount)},true),'记录模拟到账');
+    return dialog('模拟退款到账',notice('资金和个人可用均按原责任回补','专用组原周期仍有效则资金回本组；共享来源及已关闭、归档或重新开通的原周期回组织未分配余额。按原 fundingUid + fundingGroupId 恢复个人可用，不提高配置上限，不把额度改记给退款操作人或当前 Owner，也不恢复已失效的成员身份。')+'<div class="formgrid">'+field('原支付单',select('projectId',options(orderOptions,paid[0]?.id)))+amount('到账金额（CNY）',0.01)+'</div>'+notice('仅记录已确认到账的结果','不发起真实退款；币种与手续费沿现有账务，异常冲正转线下人工。'),v=>perform('refundPayment',{projectId:v.projectId,amount:Number(v.amount)},true),'记录模拟到账');
   }
   function quotaForm(uid,gid) {
     const g=group(gid),m=member(uid,gid);
@@ -760,7 +957,7 @@
     if(action==='teamTasks'){ui.teamTab='tasks';return navigate('team');}
     if(action==='review')return navigate('review');
     if(action==='objects'){ui.tab='objects';return render();}
-    if(action==='reset')return dialog('重置全部模拟数据',notice('本次操作和审阅意见将清空','可先从功能审阅页导出意见；重置不会影响任何真实系统。','warning'),()=>{s=E.createState();Object.assign(ui,{actor:'u-owner',group:'g-growth',project:null,tab:'objects',conversationFilter:'chat',conversationId:null,reviews:{},notes:{},lastResult:null,probe:null,quotaGroup:null,dashboardUser:'all',dashboardGroup:'all',period:'2026-10',metric:'sent',usageHealth:'normal',reviewFilter:'all',showArchived:false,labelScopes:{},contactScope:'team',dismissedTopups:{},fundLedgerScope:'all'});$('#dialog').close();render();toast('模拟数据已重置');},'重置');
+    if(action==='reset')return dialog('重置全部模拟数据',notice('本次操作和审阅意见将清空','可先从功能审阅页导出意见；重置不会影响任何真实系统。','warning'),()=>{s=E.createState();Object.assign(ui,{actor:'u-owner',group:'g-growth',project:null,tab:'objects',conversationFilter:'chat',conversationId:null,reviews:{},notes:{},lastResult:null,probe:null,quotaGroup:null,dashboardUser:'all',dashboardGroup:'all',startDate:'2026-10-01',endDate:'2026-10-31',usageProject:'all',usageExpanded:[],usageRefreshedAt:null,metric:'sent',usageView:null,usagePanel:'business',usageDomain:'email',usageRank:'sent',resourcePeriod:'current',resourceBreakdown:'groups',usageHealth:'normal',reviewFilter:'all',showArchived:false,labelScopes:{},contactScope:'team',dismissedTopups:{},fundLedgerScope:'all'});$('#dialog').close();render();toast('模拟数据已重置');},'重置');
     if(action==='selectConversation'){ui.conversationId=id;return render();}
     if(action==='conversationAssignments')return conversationAssignmentsDialog(id);
     if(action==='clearConversationAssignments')return confirmAction('移除全部转交跟进人',notice('恢复未来 Owner 提醒','不改变邮件项目 Owner 或协作名单，不回补历史未读；原转交人若无其他有效来源，将失去本会话访问。'),'setConversationAssignments',{conversationId:id,uids:[]},'确认移除全部');
@@ -768,11 +965,16 @@
     if(action==='simulateConversationIncoming')return perform(action,{conversationId:id});
     if(action==='decision')return decisionDialog(id);
     if(action==='topic'){const t=D.topics.find(x=>x.id===id);return dialog(esc(t?.title || '记录意见'),'<textarea name="note" rows="4" aria-label="审阅意见">'+esc(ui.notes[id] || '')+'</textarea>',v=>{ui.notes[id]=v.note;$('#dialog').close();toast('意见已记录');},'记录意见');}
-    if(action==='exportReview')return download('账号权限-审阅意见.json',JSON.stringify({type:'standalone-input-review',source:'phase2_input_v0.md',createdAt:new Date().toISOString(),reviews:ui.reviews,notes:ui.notes,pendingDecisions:D.decisions.filter(d=>d.status!=='已确认'),confirmedDecisions:D.decisions.filter(d=>d.status==='已确认'),engineeringQuestions:D.engineeringQuestions,collectionReferenceFacts:D.collectionReferenceFacts,collectionEngineeringQuestions:D.collectionEngineeringQuestions,monitorQuotaPaths:D.monitorQuotaPaths,monitorEngineeringQuestions:D.monitorEngineeringQuestions,simulationAudit:s.audit},null,2));
-    if(action==='exportUsage')return download('使用情况-模拟数据.csv','\ufeff账号,业务组,统计月,邮件发送,邮件打开,回复,合作完成,寄样,新建监控\n'+usageRows().map(r=>[user(r.uid)?.name,group(r.groupId)?.name,ui.period,r.sent,r.opened,r.replied,r.cooperate,r.samples,r.monitor].map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(',')).join('\n'),'text/csv;charset=utf-8');
+    if(action==='exportReview')return download('账号权限-审阅意见.json',JSON.stringify({type:'standalone-input-review',source:'phase2_input_v0.md',createdAt:new Date().toISOString(),reviews:ui.reviews,notes:ui.notes,pendingDecisions:D.decisions.filter(d=>d.status!=='已确认'),confirmedDecisions:D.decisions.filter(d=>d.status==='已确认'),engineeringQuestions:D.engineeringQuestions,dashboardEngineeringQuestions:D.dashboardEngineeringQuestions||[],dashboardTimeEngineeringQuestions:D.dashboardTimeEngineeringQuestions||[],mailConversationEngineeringQuestions:D.mailConversationEngineeringQuestions||[],mailActorEngineeringQuestions:D.mailActorEngineeringQuestions||[],collectionReferenceFacts:D.collectionReferenceFacts,collectionEngineeringQuestions:D.collectionEngineeringQuestions,monitorQuotaPaths:D.monitorQuotaPaths,monitorEngineeringQuestions:D.monitorEngineeringQuestions,simulationAudit:s.audit},null,2));
+    if(action==='exportUsage')return exportUsage();
+    if(action==='refreshUsage'){if(!usageCanExport())return toast('当前统计范围不可刷新',false);ui.usageRefreshedAt=new Date().toISOString();render();return toast('已更新示意读取时间；不发信、不执行后台刷新任务');}
+    if(action==='dashboardQuestions'){if($('#dialog').open)$('#dialog').close();navigate('review');$('#dashboard-engineering-questions').scrollIntoView({block:'start'});return;}
+    if(action==='timeQuestions'){if($('#dialog').open)$('#dialog').close();navigate('review');$('#dashboard-time-engineering-questions').scrollIntoView({block:'start'});return;}
+    if(action==='conversationQuestions'){if($('#dialog').open)$('#dialog').close();navigate('review');$('#mail-conversation-engineering-questions').scrollIntoView({block:'start'});return;}
+    if(action==='actorQuestions'){if($('#dialog').open)$('#dialog').close();navigate('review');$('#mail-actor-engineering-questions').scrollIntoView({block:'start'});return;}
     if(action==='invite')return dialog('邀请组织成员',notice('仅组织 Owner/Admin 邀请','可选择首个业务组，默认选择始终保留的默认组。新增关系默认 inherit、个人支付上限默认不追加；后续由获委派的组长在本组逐项配置。')+'<div class="formgrid">'+field('成员昵称',inp('name','','text','required placeholder="例如：陆遥"'))+field('邀请邮箱',inp('email','','email','required placeholder="lu@example.com"'))+field('目标业务组',select('groupId',options(s.groups.filter(g=>g.status==='ACTIVE'),s.groups.find(g=>g.isDefault&&g.status==='ACTIVE')?.id)))+field('初始组身份',inp('fixedRole','T3 · 组成员','text','disabled'))+'</div><p class="form-hint">待接受邀请计入席位；不能修改目标组或身份，如需调整请撤销重邀。接受时再次检查组和席位，不发送真实邮件。</p>',v=>perform('invite',v,true),'发送模拟邀请');
     if(action==='acceptInvite'||action==='cancelInvite')return perform(action,{inviteId:id});
-    if(action==='addGroup')return dialog('创建业务组',field('组名称',inp('name','','text','required maxlength="30"'),true)+notice('允许先建空组','无需提前指定组长；成员及 T2 可在建组后分配。'),v=>perform('addGroup',v,true),'创建空组');
+    if(action==='addGroup')return dialog('创建业务组',field('组名称',inp('name','','text','required maxlength="30"'),true)+'<label class="inline-check"><input type="checkbox" name="paymentEnabled">同时开通跨境支付 · 使用组专用余额</label>'+notice('允许先建空组，资金另行分配','无需提前指定组长。支付默认不开通；勾选后以零专用余额开通，再由组织管理者在组织资金页分配，不自动取得资金。'),v=>perform('addGroup',{name:v.name,paymentEnabled:v.paymentEnabled==='on'},true),'创建空组');
     if(action==='renameGroup')return dialog('业务组改名',field('组名称',inp('name',group(id).name,'text','required maxlength="30"'),true),v=>perform('renameGroup',{groupId:id,name:v.name},true));
     if(action==='groupMembers')return dialog('添加组织成员至 '+gname(id),'<div class="formgrid">'+field('组织内已有成员',select('uid',options(s.users.filter(u=>u.status==='ACTIVE'&&!member(u.id,id)),'')))+field('组内身份',select('role','<option value="T3">组员</option><option value="T2">组长</option>'))+'</div>'+notice('仅建立此组关系','不改变组织身份或其他组关系；新关系个人额度默认不追加上限，由获委派的组长后续设置。'),v=>perform('addMembership',{groupId:id,...v},true),'加入该组');
     if(action==='membership')return membershipsDialog(uid);
@@ -882,7 +1084,7 @@
     if(action==='submitPayment'||action==='schedulePayment'){const p=E.project(s,id);return dialog(action==='schedulePayment'?'预约提交支付':'正式提交支付',notice('即刻占用 Owner 个人与组额度','本例省略真实系统审核过程。组审核策略会影响后续闸门；当前金额 '+n(p.paymentAmount)+' CNY。','warning')+(action==='schedulePayment'?field('预约时点 · 示意',inp('when','2026-10-30T10:00','datetime-local','required'),true):''),v=>perform('submitPayment',{projectId:id,scheduled:action==='schedulePayment',when:v.when},true),'确认并占用');}
     if(['deleteDraft','cancelPayment','releasePayment','reviewPayment'].includes(action)){
       const p=E.project(s,id),atDeadline=action==='releasePayment'&&p.scheduled;
-      const explanation=atDeadline?'模拟到达预约时点；审核未通过的单逾期不执行，保留占用。':action==='reviewPayment'&&p.scheduled?'预约前通过预审核，等到预约时点才执行。':action==='cancelPayment'?'作废后按原资金承担记录释放占用。':'仅更新本地样例，不发起真实转账。';
+      const explanation=atDeadline?'模拟到达预约时点；实时策略仍需审核而未通过则逾期，保留占用。无有效组长只跳过组长闸门，其余原条件不变。':action==='reviewPayment'&&p.scheduled?'预约前通过预审核，等到预约时点并满足其他原条件才执行。':action==='cancelPayment'?'作废后按原资金承担记录释放占用。':action==='releasePayment'?'仅模拟后台或原手动放行意图的后续推进，不是生产中新增的额外审批；不跳过原系统审核、资金与业务条件。':'仅更新本地样例，不发起真实转账。';
       return confirmAction(atDeadline?'模拟到达预约时点':actionNames[action],notice('虚构支付，非真实执行',explanation,'warning'),action,{projectId:id},'确认模拟');
     }
     if(action==='recipient'){
@@ -912,6 +1114,17 @@
     if(el.dataset.page){if($('#dialog').open)$('#dialog').close();if(el.dataset.page==='groups'){ui.managedGroup=null;ui.orgGroupTab='members';}return navigate(el.dataset.page);}
     if(el.dataset.teamTab){ui.teamTab=el.dataset.teamTab;return render();}
     if(el.dataset.orgGroupTab){ui.orgGroupTab=el.dataset.orgGroupTab;return render();}
+    if(el.dataset.usageView){ui.usageReportMode='summary';ui.usageView=el.dataset.usageView;ui.dashboardGroup=undefined;ui.dashboardUser='all';ui.usageProject='all';ui.usageExpanded=[];return render();}
+    if(el.dataset.usagePanel){ui.usagePanel=el.dataset.usagePanel;return render();}
+    if(el.dataset.resourcePeriod){ui.resourcePeriod=el.dataset.resourcePeriod;return render();}
+    if(el.dataset.resourceBreakdown){ui.resourceBreakdown=el.dataset.resourceBreakdown;return render();}
+    if(el.dataset.usageDomain){ui.usageReportMode=ui.usageReportMode==='workload'?'workload':'summary';ui.usageProject='all';ui.usageDomain=el.dataset.usageDomain;ui.usageRank=usageDomains[ui.usageDomain].rank[0][0];ui.usageExpanded=[];return render();}
+    if(el.dataset.overviewDomain){ui.usageReportMode=ui.usageReportMode==='workload'?'workload':'summary';ui.usageDomain=el.dataset.overviewDomain;ui.usageProject='all';ui.usageRank=usageDomains[ui.usageDomain].rank[0][0];ui.usageExpanded=[];render();$(el.dataset.overviewFocus==='communication'?'#usage-conversations':'.usage-domains')?.scrollIntoView({block:'start',behavior:'smooth'});return;}
+    if(el.dataset.usageDrillGroup){ui.usageReportMode=ui.usageReportMode==='workload'?'workload':'summary';ui.dashboardGroup=el.dataset.usageDrillGroup;ui.dashboardUser='all';ui.usageProject='all';ui.usageExpanded=[];return render();}
+    if(el.dataset.usageDrillUser){ui.usageReportMode='summary';ui.usageProject='all';ui.dashboardUser=el.dataset.usageDrillUser;return render();}
+    if(el.dataset.usageExpandUser){const key=el.dataset.usageExpandUser;ui.usageExpanded=(ui.usageExpanded||[]).includes(key)?ui.usageExpanded.filter(value=>value!==key):[...(ui.usageExpanded||[]),key];return render();}
+    if(el.hasAttribute('data-usage-back')){if(ui.dashboardUser==='all'&&ui.usageView==='organization')ui.dashboardGroup='all';ui.dashboardUser='all';return render();}
+    if(el.dataset.usageOpenProject){const p=E.project(s,el.dataset.usageOpenProject);if(!p||!E.access(s,ui.actor,p.id).read)return toast('当前已无项目访问权限',false);ui.group=p.groupId;ui.page=p.module;ui.project=p.id;ui.tab='objects';return render();}
     if(el.dataset.scenario){const key=el.dataset.scenario;ui.actor=key==='invite'||key==='removal'?'u-owner':'u-member';ui.group='g-growth';return navigate(key==='invite'?'members':key==='removal'?'tasks':key==='payment'?'payment':'email');}
     if(el.dataset.metric){ui.metric=el.dataset.metric;return render();}
     if(el.dataset.tab){ui.tab=el.dataset.tab;return render();}
@@ -924,6 +1137,9 @@
   });
   document.addEventListener('change',e=>{
     const el=e.target;
+    if(['actor-select','usage-group','usage-user'].includes(el.id)){ui.usageReportMode=el.id!=='actor-select'&&ui.usageReportMode==='workload'?'workload':'summary';ui.usageReportProject=null;ui.usageProject='all';}
+    if(el.id==='usage-report-mode'){ui.usageReportMode=el.value;ui.usageReportProject=U.reportCapabilities(s,ui.actor,usageOptions()).projects.find(p=>p.groupId===ui.dashboardGroup&&p.module===ui.usageDomain)?.id;ui.usageProject='all';return render();}
+    if(el.id==='usage-report-project'){ui.usageReportProject=el.value;return render();}
     if(el.hasAttribute('data-collection-mode'))return updateCollectionModeWarning();
     if(el.name==='mailPath'){$('#mail-quota-path-detail').innerHTML=mailQuotaPathDetail(el.value);return;}
     if(el.name==='monitorPath'){$('#monitor-rule-path-detail').innerHTML=monitorRulePathDetail(el.value);return;}
@@ -931,12 +1147,15 @@
     if((el.name==='handoffMode'||el.name==='targetId')&&$('#handoff-memberships'))return updateHandoffPreview();
     if(el.hasAttribute('data-quota-field'))return updateGroupQuotaPreview();
     if(el.id==='story-chapter'){ui.storyChapter=el.value;return render();}
-    if(el.id==='actor-select'){ui.actor=el.value;ui.project=null;ui.probe=null;ui.dashboardGroup='all';ui.dashboardUser='all';ui.quotaGroup=null;ui.managedGroup=null;ui.teamTab='members';return render();}
+    if(el.id==='actor-select'){ui.actor=el.value;ui.project=null;ui.probe=null;ui.usageView=null;ui.usagePanel='business';ui.usageDomain='email';ui.usageRank='sent';ui.resourcePeriod='current';ui.resourceBreakdown='groups';ui.usageProject='all';ui.usageExpanded=[];ui.usageHealth='normal';ui.dashboardGroup=undefined;ui.dashboardUser='all';ui.quotaGroup=null;ui.managedGroup=null;ui.teamTab='members';return render();}
     if(el.id==='group-select'){ui.group=el.value;ui.project=null;ui.probe=null;ui.quotaGroup=null;ui.teamTab='members';return render();}
-    if(el.id==='usage-group'){ui.dashboardGroup=el.value;ui.dashboardUser='all';return render();}
+    if(el.id==='usage-group'){ui.dashboardGroup=el.value;ui.dashboardUser='all';ui.usageProject='all';ui.usageExpanded=[];return render();}
     if(el.id==='usage-user'){ui.dashboardUser=el.value;return render();}
-    if(el.id==='usage-period'){ui.period=el.value;return render();}
+    if(el.id==='usage-date-start'||el.id==='usage-date-end'){ui[el.id==='usage-date-start'?'startDate':'endDate']=el.value;ui.usageExpanded=[];return render();}
+    if(el.id==='usage-project'){ui.usageProject=el.value;ui.usageExpanded=[];return render();}
     if(el.id==='usage-health'){ui.usageHealth=el.value;return render();}
+    if(el.id==='usage-rank-metric'){ui.usageRank=el.value;return render();}
+    if(el.id==='usage-trend-grain'){ui.usageTrendGrain=el.value;return render();}
     if(el.id==='quota-group'){ui.quotaGroup=el.value;return render();}
     if(el.id==='fund-ledger-scope'){ui.fundLedgerScope=el.value;render();$('#fund-ledger-scope').focus();return;}
     if(el.id==='review-filter'){ui.reviewFilter=el.value;return render();}
@@ -953,6 +1172,7 @@
     if(el.dataset.capability){const pid=el.dataset.project;perform('setCapability',{projectId:pid,uid:el.dataset.uid,capability:el.dataset.capability,value:el.checked});return collaboratorsDialog(pid);}
     if(el.dataset.policy){const key=el.dataset.policy,value=el.checked;render();const impacts={t2Collaborator:'开启将给同组有效 T2 增加普通读写来源；关闭只撤销此来源，不删除显式授权。',adminRemoveMembers:'仅 Owner 可修改。开启后所有 Admin 可移出组织或单组、撤销未完成单组移除及确认无业务项的关系结束；关闭后这些入口不再可用，已有组长业务交接不受影响。',adminArchiveGroups:'仅 Owner 可修改。开启后所有 Admin 可二次确认归档非默认业务组；关闭不自动恢复已归档组。默认组始终不可归档，也不提供自助解除归档。'};return dialog('确认策略影响',notice('配置立即生效',impacts[key]||'配置主体和影响范围请结合右侧规则审阅。','warning')+'<p>本次：'+(value?'开启':'关闭')+'；操作人：'+name(ui.actor)+'</p>',()=>perform(key==='groupPayment'?'setGroupPolicy':'setPolicy',key==='groupPayment'?{groupId:ui.group,key:'requireT2PaymentRelease',value}:{key,value},true),'确认修改');}
   });
+  document.addEventListener('toggle',e=>{if(e.target.id==='usage-mail-more')ui.usageMailMore=e.target.open;},true);
   document.addEventListener('input',e=>{
     const el=e.target;
     if(el.hasAttribute('data-quota-field'))return updateGroupQuotaPreview();

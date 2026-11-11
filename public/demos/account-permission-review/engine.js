@@ -39,7 +39,7 @@
         { id: 'u-view', name: '方禾', email: 'fang@xingye.example', orgRole: 'member', status: 'ACTIVE', memberships: [member('g-growth', 'T3', 0)] }
       ],
       groups: [
-        { id: 'g-default', name: '默认组', status: 'ACTIVE', isDefault: true, quotaLimit: 10000, used: 0, quotas:extraQuotas(5000,0,1000,0,'inherit'), paymentEnabled: false, fundBalance: 0, fundCycle: 0, fundUsed: 0, fundPending: 0, requireT2PaymentRelease: false },
+        { id: 'g-default', name: '默认组', status: 'ACTIVE', isDefault: true, quotaLimit: 10000, used: 0, quotas:extraQuotas(5000,0,1000,0,'inherit'), paymentEnabled: true, paymentMode: 'shared', fundBalance: 0, fundCycle: 1, fundUsed: 0, fundPending: 0, requireT2PaymentRelease: false },
         { id: 'g-growth', name: '增长团队', status: 'ACTIVE', isDefault: false, quotaLimit: 6000, used: 1400, quotas:extraQuotas(3000,900,600,120), paymentEnabled: true, fundBalance: 8600, fundCycle: 1, fundUsed: 2200, fundPending: 1200, requireT2PaymentRelease: false },
         { id: 'g-brand', name: '品牌团队', status: 'ACTIVE', isDefault: false, quotaLimit: 4000, used: 280, quotas:extraQuotas(2000,100,400,30), paymentEnabled: true, fundBalance: 7200, fundCycle: 1, fundUsed: 800, fundPending: 0, requireT2PaymentRelease: false },
         { id: 'g-empty', name: '新市场团队', status: 'ACTIVE', isDefault: false, quotaLimit: 3000, used: 0, quotas:extraQuotas(5000,0,1000,0,'inherit'), paymentEnabled: false, fundBalance: 0, fundCycle: 0, fundUsed: 0, fundPending: 0, requireT2PaymentRelease: false }
@@ -204,11 +204,12 @@
   }
   const roundMoney = value => Math.round(value * 100) / 100;
   const validMoney = value => value >= 0 && Number.isSafeInteger(Math.round(value * 100)) && value === roundMoney(value);
+  const usesSharedFunds = (s,gid) => group(s,gid)?.isDefault===true&&group(s,gid).paymentMode==='shared';
   function balances(s, gid, uid) {
     const orgAvailable = roundMoney(s.organization.walletBalance - s.organization.walletPending);
-    const unallocated = roundMoney(orgAvailable - s.groups.reduce((v, g) => v + g.fundBalance, 0));
+    const unallocated = roundMoney(orgAvailable - s.groups.filter(g=>!usesSharedFunds(s,g.id)).reduce((v, g) => v + g.fundBalance, 0));
     const g = group(s, gid), m = membership(s, uid, gid);
-    const groupRemaining = g?.paymentEnabled && g.status === 'ACTIVE' ? g.fundBalance : 0;
+    const groupRemaining = g?.paymentEnabled && g.status === 'ACTIVE' ? usesSharedFunds(s,gid)?Math.max(0,unallocated):g.fundBalance : 0;
     const memberRemaining = m ? m.paymentLimit === null ? Infinity : Math.max(0, roundMoney(m.paymentLimit - (m.paymentUsed || 0) - (m.paymentPending || 0))) : 0;
     return { orgAvailable, unallocated, groupRemaining, memberRemaining, available: Math.min(orgAvailable, groupRemaining, memberRemaining) };
   }
@@ -216,17 +217,34 @@
     s.organization.walletBalance = roundMoney(s.organization.walletBalance + walletDelta);
     s.organization.walletPending = roundMoney(s.organization.walletPending + pendingDelta);
     if (g) { g.fundBalance = roundMoney(g.fundBalance + groupDelta); g.fundPending = roundMoney(g.fundPending + pendingDelta); }
-    const event = { id: id('fund'), type, groupId: g?.id || null, projectId: p?.id || null, amount, reason, actorId, at: new Date().toISOString(), walletDelta, unallocatedDelta: roundMoney(walletDelta - pendingDelta - groupDelta), groupDelta, pendingDelta, ...(relatedEventId ? {relatedEventId} : {}) };
+    const event = { id: id('fund'), type, groupId: g?.id || null, projectId: p?.id || null, fundingMode:p?.fundingMode||(g?(usesSharedFunds(s,g.id)?'shared':'dedicated'):null), amount, reason, actorId, at: new Date().toISOString(), walletDelta, unallocatedDelta: roundMoney(walletDelta - pendingDelta - groupDelta), groupDelta, pendingDelta, ...(relatedEventId ? {relatedEventId} : {}) };
     s.fundEvents.push(event);
     return event.id;
   }
-  const acceptsFundingReturn = (g, p) => g?.status === 'ACTIVE' && g.paymentEnabled && g.fundCycle === p.fundingCycle;
+  const acceptsFundingReturn = (g, p) => p.fundingMode!=='shared'&&g?.status === 'ACTIVE' && g.paymentEnabled && g.fundCycle === p.fundingCycle;
+  function fundingMembership(s,p) {
+    const memberships=user(s,p.fundingUid)?.memberships||[],original=memberships[p.fundingMemberIndex];
+    return original?.groupId===p.fundingGroupId?original:memberships.find(m=>m.groupId===p.fundingGroupId);
+  }
+  function paymentReview(s,p) {
+    const g=group(s,p.groupId);
+    if(!g?.requireT2PaymentRelease)return {required:false,reason:'组长审核策略已关闭'};
+    if(isLead(s,p.submitterId,p.groupId))return {required:false,reason:'实际提交人当前为有效组长'};
+    if(!s.users.some(u=>isLead(s,u.id,p.groupId)))return {required:false,reason:'审核阶段无有效组长，自动跳过组长审核'};
+    return {required:!p.reviewedBy,reason:null};
+  }
+  function reconcilePaymentReviews(s) {
+    s.projects.filter(p=>p.module==='payment'&&p.fundingCommitted&&['WAITING_REVIEW','SCHEDULED'].includes(p.status)).forEach(p=>{
+      const decision=paymentReview(s,p);
+      p.reviewSkipReason=decision.reason;
+      if(decision.required)p.status='WAITING_REVIEW';
+      else if(p.status==='WAITING_REVIEW')p.status=p.scheduled?'SCHEDULED':'FORMAL';
+    });
+  }
   function settlePayment(s, actorId, p, paid) {
     const g = group(s, p.fundingGroupId), amount = p.paymentAmount;
     // A removed or subsequently re-added member must settle against the original relationship.
-    const memberships = user(s, p.fundingUid)?.memberships || [];
-    const original = memberships[p.fundingMemberIndex];
-    const m = original?.groupId === p.fundingGroupId ? original : memberships.find(x => x.groupId === p.fundingGroupId);
+    const m = fundingMembership(s,p);
     if (m) {
       m.paymentPending = Math.max(0, roundMoney(m.paymentPending - amount));
       if (paid) m.paymentUsed = roundMoney(m.paymentUsed + amount);
@@ -325,7 +343,9 @@
         const name = String(payload.name || '').trim();
         if (!name) return fail('请填写组名');
         if (s.groups.some(x => x.name === name && x.status === 'ACTIVE')) return fail('该组名已存在');
-        const gid = id('g'); s.groups.push({ id: gid, name, status: 'ACTIVE', isDefault: false, quotaLimit: s.organization.quotaLimit, used: 0, quotas:extraQuotas(s.organization.quotas.search.quotaLimit,0,s.organization.quotas.channelUnlock.quotaLimit,0,'inherit'), paymentEnabled: false, fundBalance: 0, fundCycle: 0, fundUsed: 0, fundPending: 0, requireT2PaymentRelease: false }); extra.groupId = gid; message = '空组已创建，允许 0 名成员和 0 名 T2'; break;
+        if(payload.paymentEnabled!==undefined&&typeof payload.paymentEnabled!=='boolean')return fail('支付开通状态须为明确开关值');
+        const enabled=payload.paymentEnabled===true;
+        const gid = id('g'); s.groups.push({ id: gid, name, status: 'ACTIVE', isDefault: false, quotaLimit: s.organization.quotaLimit, used: 0, quotas:extraQuotas(s.organization.quotas.search.quotaLimit,0,s.organization.quotas.channelUnlock.quotaLimit,0,'inherit'), paymentEnabled: enabled, paymentMode:'dedicated', fundBalance: 0, fundCycle: enabled?1:0, fundUsed: 0, fundPending: 0, requireT2PaymentRelease: false }); extra.groupId = gid; message = '空组已创建，允许 0 名成员和 0 名 T2；支付按建组选择，开通后另行分配专用余额'; break;
       }
       case 'renameGroup': {
         if (!g || !String(payload.name || '').trim()) return fail('组和名称不能为空');
@@ -354,14 +374,7 @@
         if (!canManageOrganization(s, actorId) || !g || g.status !== 'ACTIVE') return fail('需要有效组和组织管理权限；组策略编辑主体仍需评审');
         if (payload.key !== 'requireT2PaymentRelease') return fail('未知组级策略');
         g.requireT2PaymentRelease = !!payload.value;
-        const payments = s.projects.filter(x => x.module === 'payment' && x.groupId === g.id);
-        if (g.requireT2PaymentRelease) {
-          payments.filter(x => x.status === 'SCHEDULED' && !x.reviewedBy && !isLead(s, x.submitterId, g.id)).forEach(x => x.status = 'WAITING_REVIEW');
-          message = '已开启组级支付审核；符合条件的未审核预约单已进入审核待办';
-        } else {
-          payments.filter(x => x.status === 'WAITING_REVIEW').forEach(x => x.status = x.scheduled ? 'SCHEDULED' : 'FORMAL');
-          message = '已关闭组级支付审核；仅解除仍在等待的审核闸门，不恢复已逾期预约（评审示意）';
-        }
+        message = g.requireT2PaymentRelease?'已开启组级支付审核；按当前策略和有效组长实时重算，不保存创建时快照':'已关闭组级支付审核；解除等待中的组长闸门，不恢复已逾期预约';
         break;
       }
       case 'setQuota': {
@@ -660,10 +673,11 @@
         if (payload.enabled) {
           const amount = Number(payload.amount ?? 0);
           if (!validMoney(amount) || amount > balances(s, g.id).unallocated) return fail('首次分配须为非负金额（最多两位小数），且不得超过组织未分配余额');
+          if(usesSharedFunds(s,g.id)&&amount!==0)return fail('默认组共享组织未分配可用余额，不重复分配专用余额');
           if (amount > 0 && !reason) return fail('首次分配必须填写原因');
           g.paymentEnabled = true; g.fundCycle += 1;
           if (amount > 0) extra.fundEventId = recordFunds(s, actorId, 'allocate', amount, { group: g, reason, groupDelta: amount });
-          message = '组支付已开通；仅可使用该组专用可用余额';
+          message = usesSharedFunds(s,g.id)?'默认组支付已开通；共享组织未分配可用余额，不占用其他组资金':'组支付已开通；仅可使用该组专用可用余额';
         } else {
           if (g.fundBalance > 0) extra.fundEventId = recordFunds(s, actorId, 'close_return', g.fundBalance, { group: g, reason: reason || '关闭支付返还未占用余额', groupDelta: -g.fundBalance });
           g.paymentEnabled = false;
@@ -675,6 +689,7 @@
       case 'returnFunds': {
         const amount = Number(payload.amount);
         if (!g || g.status !== 'ACTIVE' || !g.paymentEnabled || !validMoney(amount) || amount <= 0) return fail('请选择已开通支付的有效组，调整金额须大于 0 且最多两位小数');
+        if(usesSharedFunds(s,g.id))return fail('默认组共享余额没有独立分配或收回动作；已分配到其他组的资金不属于此余额');
         const reason = String(payload.reason || '').trim(), allocating = type === 'allocateFunds';
         if (!reason) return fail('资金调整必须填写原因');
         if (allocating && amount > balances(s, g.id).unallocated) return fail('组织未分配余额不足，不能超额分配');
@@ -718,6 +733,7 @@
       case 'savePayment': {
         const amount = Number(payload.amount);
         if (!p || p.module !== 'payment' || !rights.write || p.status !== 'DRAFT') return fail('只有有效 Owner/Collaborator 可修改草稿');
+        if(!group(s,p.groupId)?.paymentEnabled)return fail('本组未开通支付，不能保存草稿；原草稿和资金责任保留');
         if (!validMoney(amount) || amount <= 0) return fail('金额必须大于 0 且最多两位小数');
         const selected=payload.recipientId !== undefined ? recipient(s,payload.recipientId) : null;
         if (payload.recipientId !== undefined && !selected) return fail('请选择有效的示例历史收款模板');
@@ -734,11 +750,13 @@
         if (money.memberRemaining < amount) return fail('Owner 个人支付上限不足；不使用提交人的个人额度');
         const gg = group(s, p.groupId), mm = membership(s, p.ownerId, p.groupId);
         p.scheduled = !!payload.scheduled; p.scheduledAt = payload.when || null;
-        p.status = gg.requireT2PaymentRelease && !isLead(s, actorId, p.groupId) ? 'WAITING_REVIEW' : payload.scheduled ? 'SCHEDULED' : 'FORMAL';
         p.fundingUid = p.ownerId; p.fundingGroupId = p.groupId; p.fundingCommitted = true; p.submitterId = actorId;
+        const decision=paymentReview(s,p);p.reviewSkipReason=decision.reason;
+        p.status = decision.required ? 'WAITING_REVIEW' : payload.scheduled ? 'SCHEDULED' : 'FORMAL';
+        p.fundingMode=usesSharedFunds(s,gg.id)?'shared':'dedicated';
         p.fundingCycle = gg.fundCycle; p.fundingMemberIndex = user(s, p.ownerId).memberships.indexOf(mm);
         mm.paymentPending = roundMoney(mm.paymentPending + amount);
-        extra.fundEventId = recordFunds(s, actorId, 'hold', amount, { group: gg, project: p, reason: '正式提交占用原资金', groupDelta: -amount, pendingDelta: amount });
+        extra.fundEventId = recordFunds(s, actorId, 'hold', amount, { group: gg, project: p, reason: '正式提交占用原资金', groupDelta: p.fundingMode==='shared'?0:-amount, pendingDelta: amount });
         message = '正式提交已占用 Owner 与所属组金额；实际提交人仅记录执行身份' + (p.status === 'WAITING_REVIEW' ? '，已进入待组长审核' : ''); break;
       }
       case 'cancelPayment': {
@@ -751,8 +769,10 @@
         if (!p || p.module !== 'payment' || p.status !== 'PAID' || !validMoney(amount) || amount <= 0 || totalRefunded > p.paymentAmount) return fail('只确认已支付单实际到账的退款，累计不得超过原支付金额');
         const gg = group(s, p.fundingGroupId), toGroup = acceptsFundingReturn(gg, p);
         p.refundedAmount = totalRefunded;
+        const original=fundingMembership(s,p);
+        if(original)original.paymentUsed=Math.max(0,roundMoney((original.paymentUsed||0)-amount));
         extra.fundEventId = recordFunds(s, actorId, 'refund', amount, { group: gg, project: p, reason: '模拟确认退款到账', walletDelta: amount, groupDelta: toGroup ? amount : 0 });
-        message = toGroup ? '退款已回到原组专用余额' : '原组资金周期已结束，退款已回到组织未分配余额'; break;
+        message = (toGroup ? '退款已回到原组专用余额' : '退款已回到组织共享未分配余额')+'；原承担人对应个人已用已冲回，不提高配置上限或恢复失效身份'; break;
       }
       case 'deleteDraft': {
         if (!p || p.module !== 'payment' || !rights.delete) return fail('只有 Owner/有效 Collaborator 可删除草稿；正式支付单不能删除');
@@ -761,8 +781,8 @@
       case 'releasePayment': {
         const waitingSchedule = p?.scheduled && p.status === 'WAITING_REVIEW';
         if (!p || !rights.execute || !p.fundingCommitted || (!waitingSchedule && !['FORMAL', 'SCHEDULED'].includes(p.status))) return fail('需要执行权和可放行订单');
-        const needsReview = (group(s, p.groupId).requireT2PaymentRelease || payload.requireApproval) && !isLead(s, p.submitterId, p.groupId) && !p.reviewedBy;
-        if (waitingSchedule || (p.status === 'SCHEDULED' && needsReview)) {
+        const decision=paymentReview(s,p),needsReview=decision.required;p.reviewSkipReason=decision.reason;
+        if ((waitingSchedule||p.status === 'SCHEDULED') && needsReview) {
           p.status = 'SCHEDULE_EXPIRED'; message = '预约到期时尚未通过审核；不执行、不补审，原占用保留，可作废'; break;
         }
         if (needsReview) { p.status = 'WAITING_REVIEW'; message = '已进入待组长放行（评审示意）'; break; }
@@ -771,6 +791,7 @@
       }
       case 'reviewPayment': {
         if (!p || p.status !== 'WAITING_REVIEW' || !p.fundingCommitted || !isLead(s, actorId, p.groupId)) return fail('只有同组 ACTIVE T2 可以审核待放行单');
+        if(!paymentReview(s,p).required)return fail('按当前策略与资格无需组长审核，不得用过期审核动作推进');
         p.reviewedBy = actorId;
         if (p.scheduled) { p.status = 'SCHEDULED'; message = '定时单预审核已通过，等待预约时点；资金快照保持不变'; }
         else {
@@ -838,6 +859,7 @@
       }
       default: return fail('该操作尚未纳入示意引擎：' + type);
     }
+    if(['setGroupPolicy','setRole','addMembership','removeMembership','cancelRemoval','startOrganizationExit','acceptInvite','completeGroupHandoff','completeRemoval'].includes(type))reconcilePaymentReviews(s);
     s.audit.unshift({ id: id('audit'), actorId, actorName: a.name, action: type, groupId: payload.groupId || p?.groupId || null, objectId: payload.projectId || payload.taskId || payload.uid || payload.recipientId || extra.recipientId || null, message, at: new Date().toISOString() });
     return Object.assign({ ok: true, message }, extra);
   }
@@ -847,5 +869,5 @@
     if(!g||(uid&&!m))return null;
     return {organization:scopeId==='email'?s.organization:s.organization.quotas[scopeId],group:scopeId==='email'?g:g.quotas[scopeId],member:m?(scopeId==='email'?m:m.quotas[scopeId]):null};
   }
-  return { createState, user, group, project, recipient, membership, active, canManageOrganization, isLead, canRemoveMember, canArchiveGroup, canHandleRemoval, removalObjects, access, conversationAccess, conversationsForGroup, conversationRecipients, conversationSender, balances, act, clone, quotaScopes, quota };
+  return { createState, user, group, project, recipient, membership, active, canManageOrganization, isLead, canRemoveMember, canArchiveGroup, canHandleRemoval, removalObjects, access, conversationAccess, conversationsForGroup, conversationRecipients, conversationSender, usesSharedFunds, balances, act, clone, quotaScopes, quota };
 });
