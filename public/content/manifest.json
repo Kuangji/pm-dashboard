@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-11-11T09:26:23.179Z",
+  "updatedAt": "2026-11-12T05:47:37.561Z",
   "navigation": {
     "docs": [
       {
@@ -110,6 +110,16 @@
               },
               {
                 "type": "file",
+                "name": "dashboard_review_2026-11-12.md",
+                "path": "02-project-documents/account_permission_collaboration/dashboard_review_2026-11-12.md",
+                "slug": "02-project-documents/account_permission_collaboration/dashboard_review_2026-11-12.md",
+                "title": "Dashboard 数据、体验与现网覆盖审阅 | dashboard_review_2026-11-12.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
                 "name": "dashboard_time_rules_2026-11-11.md",
                 "path": "02-project-documents/account_permission_collaboration/dashboard_time_rules_2026-11-11.md",
                 "slug": "02-project-documents/account_permission_collaboration/dashboard_time_rules_2026-11-11.md",
@@ -150,6 +160,16 @@
               },
               {
                 "type": "file",
+                "name": "email_real_page_mapping_review_2026-11-11.md",
+                "path": "02-project-documents/account_permission_collaboration/email_real_page_mapping_review_2026-11-11.md",
+                "slug": "02-project-documents/account_permission_collaboration/email_real_page_mapping_review_2026-11-11.md",
+                "title": "真实页面映射审阅｜邮件项目 | email_real_page_mapping_review_2026-11-11.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
                 "name": "fact_check_v0.md",
                 "path": "02-project-documents/account_permission_collaboration/fact_check_v0.md",
                 "slug": "02-project-documents/account_permission_collaboration/fact_check_v0.md",
@@ -173,7 +193,7 @@
                 "name": "mail_dashboard_conversation_rules_2026-11-11.md",
                 "path": "02-project-documents/account_permission_collaboration/mail_dashboard_conversation_rules_2026-11-11.md",
                 "slug": "02-project-documents/account_permission_collaboration/mail_dashboard_conversation_rules_2026-11-11.md",
-                "title": "Dashboard 邮件趋势、漏斗与对话沟通｜已确认规则 | mail_dashboard_conversation_rules_2026-11-11.md",
+                "title": "Dashboard 邮件趋势与对话沟通｜已确认规则 | mail_dashboard_conversation_rules_2026-11-11.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
@@ -284,6 +304,26 @@
                 "path": "02-project-documents/account_permission_collaboration/use_case_stories_v0.md",
                 "slug": "02-project-documents/account_permission_collaboration/use_case_stories_v0.md",
                 "title": "聚星账号权限｜业务故事审阅稿 v0 | use_case_stories_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "研发评审大纲与讲解路径_2026-11-12.md",
+                "path": "02-project-documents/account_permission_collaboration/研发评审大纲与讲解路径_2026-11-12.md",
+                "slug": "02-project-documents/account_permission_collaboration/研发评审大纲与讲解路径_2026-11-12.md",
+                "title": "聚星账号权限统一版本｜研发评审大纲与讲解路径 | 研发评审大纲与讲解路径_2026-11-12.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "管理动作矩阵_评审稿_v0.md",
+                "path": "02-project-documents/account_permission_collaboration/管理动作矩阵_评审稿_v0.md",
+                "slug": "02-project-documents/account_permission_collaboration/管理动作矩阵_评审稿_v0.md",
+                "title": "聚星账号权限｜管理动作矩阵评审稿 v0 | 管理动作矩阵_评审稿_v0.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false

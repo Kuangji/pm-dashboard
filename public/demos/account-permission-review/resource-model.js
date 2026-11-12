@@ -6,6 +6,24 @@
 })(typeof window !== 'undefined' ? window : globalThis, function (E, U) {
   'use strict';
 
+  const categories = {
+    34:'analysis',2:'analysis',10:'analysis',47:'analysis',49:'analysis',71:'analysis',78:'analysis',84:'analysis',
+    4:'outreach',59:'outreach',21:'outreach',5:'outreach',51:'outreach',82:'outreach',31:'collection',
+    45:'monitor',89:'monitor',24:'monitor',56:'monitor',46:'export',7502:'export',7503:'export',17:'account'
+  };
+  const displayMetadata = {
+    2:{kind:'entitlement',kindLabel:'当前资格',windowLabel:'当前资格'},
+    10:{kind:'entitlement',kindLabel:'当前资格',windowLabel:'当前资格'},
+    31:{kind:'capacity',kindLabel:'当前占用',unitLabel:'个',windowLabel:'当前占用'},
+    56:{kind:'capacity',kindLabel:'当前占用',unitLabel:'网红席位',windowLabel:'当前占用'},
+    17:{kind:'capacity',kindLabel:'当前占用',unitLabel:'席位',windowLabel:'当前占用'},
+    7502:{kind:'limit',kindLabel:'每日限制',windowLabel:'每日'},
+    7503:{kind:'limit',kindLabel:'每月限制',windowLabel:'每月'},
+    24:{kind:'pending',kindLabel:'时长折算待核',windowLabel:'调整时间口径待核'},
+    45:{kind:'pending',kindLabel:'授权存量待核',windowLabel:'当前授权存量'},
+    89:{kind:'pending',kindLabel:'计量口径待核',windowLabel:'周期待核'},
+    4:{unitLabel:'次'},59:{unitLabel:'次'},21:{unitLabel:'封'}
+  };
   const catalog = [
     [34,'基础数据分析'], [2,'网红受众分析'], [10,'品牌推广分析'], [4,'解锁电子邮件'],
     [59,'解锁WhatsApp'], [31,'收藏夹数量'], [21,'批量邮件邀约数量'], [5,'推广任务数量'],
@@ -13,7 +31,7 @@
     [24,'推广内容监控'], [56,'合作网红监控 (自动追踪)','合作网红监控'], [46,'深度数据导出'],
     [71,'产品评论洞察'], [51,'AI邮件生成'], [78,'店铺和商品详情分析'], [82,'AI谈判助手'],
     [17,'子账户数量'], [84,'AI网红分析报告'], [7502,'基础数据导出每天上限'], [7503,'基础数据导出每月上限']
-  ].map(([scopeId,name,columnName]) => Object.freeze({scopeId,name,columnName:columnName || name,organizationOnly:scopeId === 17}));
+  ].map(([scopeId,name,columnName]) => Object.freeze({scopeId,name,columnName:columnName || name,organizationOnly:scopeId === 17,kind:'usage',kindLabel:'有效用量',unitLabel:'单位待核',windowLabel:'原配额周期（待核）',category:categories[scopeId],...displayMetadata[scopeId]}));
   Object.freeze(catalog);
   const columns = catalog.filter(scope => !scope.organizationOnly);
   const finite = value => typeof value === 'number' && Number.isFinite(value) && value >= 0 ? value : null;
@@ -53,6 +71,8 @@
     'u-owner:g-growth': {current:columns.map(() => 0),cumulative:columns.map(() => 0)},
     'u-view:g-growth': {current:columns.map(() => 0),cumulative:columns.map(() => 0)}
   };
+  // Handoff-only objects have no events in the independent resource sample ledger.
+  for(const gid of ['g-growth','g-brand'])fixtures['u-removing:'+gid]={current:columns.map(()=>0),cumulative:columns.map(scope=>scope.scopeId===31?null:0)};
   const organizationLimits = {
     34:2000, 2:400, 10:200, 4:600, 59:100, 31:30, 5:40, 47:80, 49:80,
     45:20, 89:20, 24:40, 56:40, 46:150, 71:'unsupported', 51:'unlimited',
@@ -114,7 +134,7 @@
     return {...c,userId,users};
   }
   function blank(scope,coverageNote) {
-    return {scopeId:scope.scopeId,used:null,limit:null,limitState:'pending',remaining:null,...(coverageNote ? {coverageNote} : {})};
+    return {...scope,used:null,limit:null,limitState:'pending',remaining:null,...(coverageNote ? {coverageNote} : {})};
   }
   function fixtureCell(uid,gid,scope,resourcePeriod) {
     const sample = fixtures[uid + ':' + gid];
@@ -171,7 +191,7 @@
     const allOrganization = c.view === 'organization' && c.groupId === 'all' && c.userId === 'all';
     const visible = allOrganization ? catalog : columns;
     const result = {ok:c.ok,reason:c.reason,context:c,coverage:'covered',resourcePeriod,periodLabel:resourcePeriod === 'cumulative' ? '会员开通时间-现在（虚构样例）' : '当前配额周期（虚构样例；导出保留每天/每月口径）',summary:[],columns:[...columns],matrixRows:[],groupRows:[],asOf:health === 'delayed' ? '2026-11-09T09:00:00+08:00' : '2026-11-11T09:00:00+08:00'};
-    const summarize = cells => cells.map((cell,i) => ({...cell,name:visible[i].name,organizationOnly:visible[i].organizationOnly}));
+    const summarize = cells => cells.map((cell,i) => ({...visible[i],...cell}));
     function unavailable(coverage,reason,ok = false) {
       result.ok=ok;result.reason=reason;result.coverage=coverage;
       result.summary=summarize(visible.map(scope => blank(scope,reason)));
@@ -187,11 +207,11 @@
     if (health !== 'empty') {
       c.users.filter(u => c.userId === 'all' || u.id === c.userId).forEach(u => {
         groups.filter(g => currentMembership(u,g.id) || c.view !== 'personal' && fixtures[u.id + ':' + g.id]).forEach(g => {
-          const cells = columns.map(scope => scope.scopeId === 21 && resourcePeriod === 'current' ? quotaCell(s,g.id,u.id) : fixtureCell(u.id,g.id,scope,resourcePeriod));
+          const cells = columns.map(scope => ({...scope,...(scope.scopeId === 21 && resourcePeriod === 'current' ? quotaCell(s,g.id,u.id) : fixtureCell(u.id,g.id,scope,resourcePeriod))}));
           result.matrixRows.push({uid:u.id,groupId:g.id,label:u.name,historical:!currentMembership(u,g.id),cells});
         });
       });
-      if (allOrganization) result.groupRows = groups.map(g => ({uid:null,groupId:g.id,label:g.name,cells:columns.map(scope => scope.scopeId === 21 && resourcePeriod === 'current' ? quotaCell(s,g.id) : aggregate(result.matrixRows.filter(row => row.groupId === g.id),scope,resourcePeriod))}));
+      if (allOrganization) result.groupRows = groups.map(g => ({uid:null,groupId:g.id,label:g.name,cells:columns.map(scope => ({...scope,...(scope.scopeId === 21 && resourcePeriod === 'current' ? quotaCell(s,g.id) : aggregate(result.matrixRows.filter(row => row.groupId === g.id),scope,resourcePeriod))}))}));
     }
     const cells = visible.map(scope => {
       if (scope.scopeId === 17) return seatCell(s,resourcePeriod);

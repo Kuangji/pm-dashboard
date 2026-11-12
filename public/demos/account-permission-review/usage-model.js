@@ -156,7 +156,7 @@
   }
   function businessQuery(s, actorId, opts = {}) {
     const c = context(s, actorId, opts), domain = opts.domain ?? 'email', health = opts.health ?? 'normal', range=dateRange(opts);
-    const result = {ok:c.ok,reason:c.reason,context:c,coverage:'covered',rows:[],groupRows:[],taskRows:[],totals:zero(),series:[],trendSeries:[],trendGrain:opts.trendGrain||'day',funnel:{stages:[],strictlyNested:null,note:''},conversations:{newConversations:null,activeConversations:null,newCoverage:'uncovered',activeCoverage:'uncovered',coverage:'uncovered',reason:'尚无可靠来源',rows:[]},projects:[],projectOptions:[],dateRange:{startDate:range.startDate,endDate:range.endDate},asOf:asOf(health)};
+    const result = {ok:c.ok,reason:c.reason,context:c,coverage:'covered',rows:[],groupRows:[],taskRows:[],totals:zero(),series:[],trendSeries:[],trendGrain:opts.trendGrain||'day',conversations:{newConversations:null,activeConversations:null,newCoverage:'uncovered',activeCoverage:'uncovered',coverage:'uncovered',reason:'尚无可靠来源',rows:[]},projects:[],projectOptions:[],dateRange:{startDate:range.startDate,endDate:range.endDate},asOf:asOf(health)};
     const unavailable = (coverage, reason, ok = false) => Object.assign(result, {ok,reason,coverage,totals:Object.fromEntries(fields.map(key => [key,null])),conversations:{...result.conversations,reason}});
     if (!c.ok) return unavailable('forbidden',c.reason);
     if (!['email','crm','monitor'].includes(domain)) return unavailable('error','未知业务统计领域');
@@ -187,8 +187,6 @@
       for(let date=range.startDate;date<=range.endDate;date=new Date(Date.parse(date+'T00:00:00Z')+86400000).toISOString().slice(0,10))days.push(date);
       result.series=days.map(date=>{const daily=emailMetrics(receivers.filter(r=>r.sendDate===date),[]);return {date,label:date.slice(5).replace('-','/'),value:daily.sent,...Object.fromEntries(['sent','delivered','opened','replied'].map(key=>[key,daily[key]]))};});
       result.trendSeries=bucketSeries(result.series,result.trendGrain);
-      const strictlyNested=receivers.every(receiver=>!receiver.replied||receiver.status===2);
-      result.funnel={stages:[['sent','发送'],['delivered','送达'],['opened','已读'],['replied','回复']].map(([key,label])=>({key,label,value:result.totals[key]})),strictlyNested,note:strictlyNested?'这些记录当前满足包含关系；回复追踪不保证始终包含于已读，不盲算阶段转化率。':'回复存在未追踪打开的记录，不是严格包含漏斗；保留原值，不裁剪为单调，不计算阶段转化率。'};
       result.conversations=conversationMetrics(health==='empty'?[]:[...conversationDefinitions.values()].filter(inScope),health==='empty'?[]:mailSources.messages.filter(inScope),range);
       if(!result.rows.length)Object.assign(result,{coverage:'empty',reason:'当前授权范围及日期内暂无虚构邮件记录'});
       return result;
@@ -250,7 +248,7 @@
   function workload(s,actorId,opts={}) {
     const c=context(s,actorId,opts),range=dateRange(opts),domain=opts.domain||'email',health=opts.health||'normal';
     const emptyTotals=()=>({...Object.fromEntries(fields.map(key=>[key,null])),messageSent:null,followupConversations:null,crmCreated:null,crmUpdated:null,monitorCreated:null,monitorItemsAdded:null});
-    const result={ok:c.ok,reason:c.reason,context:c,reportKind:'workload',coverage:'covered',totals:emptyTotals(),rows:[],groupRows:[],taskRows:[],series:[],trendSeries:[],trendGrain:opts.trendGrain||'day',projects:[],projectOptions:[],operations:[],automatic:{count:null,note:'自动执行单列，不计人工量'},asOf:asOf(health),dateRange:{startDate:range.startDate,endDate:range.endDate},conversations:{newConversations:null,activeConversations:null,rows:[],reason:'本人操作量不把收信或新沟通归为人工动作'},funnel:{stages:[],strictlyNested:null,note:''}};
+    const result={ok:c.ok,reason:c.reason,context:c,reportKind:'workload',coverage:'covered',totals:emptyTotals(),rows:[],groupRows:[],taskRows:[],series:[],trendSeries:[],trendGrain:opts.trendGrain||'day',projects:[],projectOptions:[],operations:[],automatic:{count:null,note:'自动执行单列，不计人工量'},asOf:asOf(health),dateRange:{startDate:range.startDate,endDate:range.endDate},conversations:{newConversations:null,activeConversations:null,rows:[],reason:'本人操作量不把收信或新沟通归为人工动作'}};
     const unavailable=(coverage,reason,ok=false)=>Object.assign(result,{ok,coverage,reason});
     if(!c.ok)return unavailable('forbidden',c.reason);
     if(!['normal','empty','delayed','error','forbidden'].includes(health))return unavailable('error','未知操作数据状态');
@@ -279,7 +277,6 @@
     if(domain==='email') {
       for(let date=range.startDate;date<=range.endDate;date=new Date(Date.parse(date+'T00:00:00Z')+86400000).toISOString().slice(0,10)){const daily=metrics(result.operations.filter(event=>event.happenedAt.slice(0,10)===date));result.series.push({date,value:daily.sent,...Object.fromEntries(['sent','delivered','opened','replied'].map(key=>[key,daily[key]]))});}
       result.trendSeries=bucketSeries(result.series,result.trendGrain);
-      result.funnel={stages:[['sent','发送'],['delivered','送达'],['opened','已读'],['replied','回复']].map(([key,label])=>({key,label,value:result.totals[key]})),strictlyNested:result.operations.filter(event=>event.action==='email-send').every(event=>!event.effect.replied||event.effect.opened),note:'本人手动发送的对应邮件当前效果，不是收信或人工完成事件；未追踪打开时不裁剪回复，不盲算转化。'};
     }
     if(!result.operations.length){result.coverage='empty';result.reason='当前范围内没有已确认的本人手工动作；自动执行另列。';}
     return result;
@@ -320,9 +317,10 @@
     ];
     if(email.reportKind==='workload') {
       result.reportKind='workload';
-      result.panels[1].metrics=[metric('messageSent','本人有效发出消息','条',email.totals.messageSent,email),metric('followupConversations','实际跟进对话','个',email.totals.followupConversations,email)];
-      result.panels[2].metrics=[metric('crmCreated','本人新增 CRM','条',crm.totals.crmCreated,crm),metric('crmUpdated','本人人工更新','次',crm.totals.crmUpdated,crm)];
-      result.panels[3].metrics=[metric('monitorCreated','本人手建项目','个',monitor.totals.monitorCreated,monitor),metric('monitorItemsAdded','本人加入条目','条',monitor.totals.monitorItemsAdded,monitor)];
+      const target=c.view==='personal'?'本人':c.userId==='all'?'本范围':'所选成员';
+      result.panels[1].metrics=[metric('messageSent',target+'有效发出消息','条',email.totals.messageSent,email),metric('followupConversations',target+'实际跟进对话','个',email.totals.followupConversations,email)];
+      result.panels[2].metrics=[metric('crmCreated',target+'新增 CRM','条',crm.totals.crmCreated,crm),metric('crmUpdated',target+'人工更新','次',crm.totals.crmUpdated,crm)];
+      result.panels[3].metrics=[metric('monitorCreated',target+'手建项目','个',monitor.totals.monitorCreated,monitor),metric('monitorItemsAdded',target+'加入条目','条',monitor.totals.monitorItemsAdded,monitor)];
       delete result.panels[3].note;
     }
     return result;

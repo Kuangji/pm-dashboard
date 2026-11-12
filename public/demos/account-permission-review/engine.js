@@ -10,13 +10,13 @@
   const quotaValues = (limit,used=0,mode='capped') => ({quotaLimit:limit,used,quotaMode:mode});
   const extraQuotas = (searchLimit,searchUsed,unlockLimit,unlockUsed,mode='capped') => ({search:quotaValues(searchLimit,searchUsed,mode),channelUnlock:quotaValues(unlockLimit,unlockUsed,mode)});
   const member = (groupId, role = 'T3', used = 0) => ({ groupId, role, status: 'ACTIVE', quotaMode: 'inherit', quotaLimit: 2500, used, quotas:extraQuotas(0,Math.round(used/2),0,Math.round(used/20),'inherit'), paymentLimit: null, paymentUsed: 0, paymentPending: 0 });
-  function createState() {
+  function createState(options = {}) {
     const recipients = [
       {id:'mia',channelId:'youtube-mia',channelName:'Mia Chen · YouTube',name:'Mia Chen · YouTube',account:'6222 **** 0321',source:'品牌团队',status:'ACTIVE'},
       {id:'mia-alternative',channelId:'youtube-mia',channelName:'Mia Chen · YouTube',name:'Mia Chen · YouTube',account:'6222 **** 0987',source:'增长团队',status:'ACTIVE'},
       {id:'alex',channelId:'tiktok-alex',channelName:'Alex Rivers · TikTok',name:'Alex Rivers · TikTok',account:'6222 **** 0712',source:'增长团队',status:'ACTIVE'}
     ];
-    return {
+    const s = {
       recipients,
       creatorProfiles: [
         {id:'mia',name:'Mia Chen',platform:'YouTube',channelId:'youtube-mia'},
@@ -39,14 +39,14 @@
         { id: 'u-view', name: '方禾', email: 'fang@xingye.example', orgRole: 'member', status: 'ACTIVE', memberships: [member('g-growth', 'T3', 0)] }
       ],
       groups: [
-        { id: 'g-default', name: '默认组', status: 'ACTIVE', isDefault: true, quotaLimit: 10000, used: 0, quotas:extraQuotas(5000,0,1000,0,'inherit'), paymentEnabled: true, paymentMode: 'shared', fundBalance: 0, fundCycle: 1, fundUsed: 0, fundPending: 0, requireT2PaymentRelease: false },
-        { id: 'g-growth', name: '增长团队', status: 'ACTIVE', isDefault: false, quotaLimit: 6000, used: 1400, quotas:extraQuotas(3000,900,600,120), paymentEnabled: true, fundBalance: 8600, fundCycle: 1, fundUsed: 2200, fundPending: 1200, requireT2PaymentRelease: false },
-        { id: 'g-brand', name: '品牌团队', status: 'ACTIVE', isDefault: false, quotaLimit: 4000, used: 280, quotas:extraQuotas(2000,100,400,30), paymentEnabled: true, fundBalance: 7200, fundCycle: 1, fundUsed: 800, fundPending: 0, requireT2PaymentRelease: false },
-        { id: 'g-empty', name: '新市场团队', status: 'ACTIVE', isDefault: false, quotaLimit: 3000, used: 0, quotas:extraQuotas(5000,0,1000,0,'inherit'), paymentEnabled: false, fundBalance: 0, fundCycle: 0, fundUsed: 0, fundPending: 0, requireT2PaymentRelease: false }
+        { id: 'g-default', name: '默认组', status: 'ACTIVE', isDefault: true, quotaLimit: 10000, used: 0, quotas:extraQuotas(5000,0,1000,0,'inherit'), paymentEnabled: true, paymentMode: 'shared', fundBalance: 0, fundCycle: 1, fundUsed: 0, fundPending: 0, requireT2PaymentRelease: false, monitorLabelsT2: false, creatorLabelsT2: false },
+        { id: 'g-growth', name: '增长团队', status: 'ACTIVE', isDefault: false, quotaLimit: 6000, used: 1400, quotas:extraQuotas(3000,900,600,120), paymentEnabled: true, fundBalance: 8600, fundCycle: 1, fundUsed: 2200, fundPending: 1200, requireT2PaymentRelease: false, monitorLabelsT2: false, creatorLabelsT2: false },
+        { id: 'g-brand', name: '品牌团队', status: 'ACTIVE', isDefault: false, quotaLimit: 4000, used: 280, quotas:extraQuotas(2000,100,400,30), paymentEnabled: true, fundBalance: 7200, fundCycle: 1, fundUsed: 800, fundPending: 0, requireT2PaymentRelease: false, monitorLabelsT2: false, creatorLabelsT2: false },
+        { id: 'g-empty', name: '新市场团队', status: 'ACTIVE', isDefault: false, quotaLimit: 3000, used: 0, quotas:extraQuotas(5000,0,1000,0,'inherit'), paymentEnabled: false, fundBalance: 0, fundCycle: 0, fundUsed: 0, fundPending: 0, requireT2PaymentRelease: false, monitorLabelsT2: false, creatorLabelsT2: false }
       ],
       projects: [
         { id: 'email1', module: 'email', name: '秋季新品达人邀约', groupId: 'g-growth', ownerId: 'u-member', creatorId: 'u-member', assigneeId: null, status: 'ACTIVE', collaborators: [{ uid: 'u-editor', disabled: false, canManage: true, canExecute: false }] },
-        { id: 'monitor1', module: 'monitor', name: '秋季新品内容监控', description: '秋季合作内容复盘 · 虚构样例', items: [{id:'monitor-item-1',name:'Mia · 新品视频',platform:'YouTube',monitorDays:60,responsibleUid:'u-editor',note:'等待复盘'}], groupId: 'g-growth', ownerId: 'u-member', creatorId: 'u-member', assigneeId: null, status: 'ACTIVE', collaborators: [{ uid: 'u-editor', disabled: false, canManage: false, canExecute: false }] },
+        { id: 'monitor1', module: 'monitor', name: '秋季新品内容监控', description: '秋季合作内容复盘 · 虚构样例', items: [{id:'monitor-item-1',name:'Mia · 新品视频',platform:'YouTube',monitorDays:60,responsibleUid:'u-editor',note:'等待复盘',labelIds:['tag1']}], groupId: 'g-growth', ownerId: 'u-member', creatorId: 'u-member', assigneeId: null, status: 'ACTIVE', collaborators: [{ uid: 'u-editor', disabled: false, canManage: false, canExecute: false }] },
         { id: 'resource1', module: 'resource', name: '北美生活方式创作者', description: '生活方式合作候选 · 虚构样例', sharingMode: 'selected', items: [{id:'collection-mia',name:'Mia Chen',platform:'YouTube',note:'已收藏'},{id:'collection-alex',name:'Alex Rivers',platform:'TikTok',note:'等待联系'}], groupId: 'g-growth', ownerId: 'u-editor', creatorId: 'u-editor', assigneeId: null, status: 'ACTIVE', collaborators: [{ uid: 'u-member', disabled: false, canManage: false, canExecute: false }] },
         { id: 'crm1', module: 'crm', name: 'Mia · 护肤合作洽谈', creatorProfileId:'mia', cooperationStatus:'洽谈中', note:'增长团队的独立合作进度', groupId: 'g-growth', ownerId: null, creatorId: 'u-member', assigneeId: 'u-member', status: 'ACTIVE', collaborators: [] },
         { id: 'crm2', module: 'crm', name: 'Alex · 新增合作线索', creatorProfileId:'alex', cooperationStatus:'待跟进', note:'待安排对接', groupId: 'g-growth', ownerId: null, creatorId: 'u-member', assigneeId: null, status: 'ACTIVE', collaborators: [] },
@@ -63,7 +63,7 @@
       senderConfigs: [
         ['u-owner','林知夏','lin'],['u-admin','陈予安','chen'],['u-lead','周明','zhou'],['u-member','许念','xu'],['u-editor','孙可','sun'],['u-brand','乔南','qiao'],['u-view','方禾','fang']
       ].map(([uid,sendName,address])=>({id:'sender-'+uid,uid,sendName,address:address+'@xingye.example'})),
-      policies: { adminRemoveMembers: false, adminArchiveGroups: false, t2Collaborator: false, t2Quota: false, paymentSensitive: false, monitorLabelsT2: false, showTeamQuota: false },
+      policies: { adminRemoveMembers: false, adminArchiveGroups: false, t2Collaborator: false, t2Quota: false, paymentSensitive: false, showTeamQuota: false },
       invites: [{ id: 'invite-seed-pending', name: '陆遥', email: 'lu@xingye.example', groupId: 'g-growth', role: 'T3', quotaMode: 'inherit', status: 'PENDING' }],
       tasks: [], handoffs: [], audit: [], notifications: [],
       fundEvents: [
@@ -76,14 +76,18 @@
         ['hold','g-growth','pay2',1200,'现有支付单占用','u-member',0,-1200,1200]
       ].map(([type,groupId,projectId,amount,reason,actorId,walletDelta,groupDelta,pendingDelta],i)=>({id:'fund-seed-'+i,type,groupId,projectId,amount,reason,actorId,at:'2026-10-01T09:0'+i+':00+08:00',walletDelta,unallocatedDelta:walletDelta-pendingDelta-groupDelta,groupDelta,pendingDelta})),
       labels: [
-        { id: 'tag1', name: '新品合作', creatorId: 'u-member', groupId: 'g-growth', module: 'monitor' },
-        { id: 'tag2', name: '内容待确认', creatorId: 'u-editor', groupId: 'g-growth', module: 'monitor' },
-        { id: 'tag3', name: '品牌联名', creatorId: 'u-brand', groupId: 'g-brand', module: 'monitor' },
-        { id: 'tag-message1', name: '等待回复', creatorId: 'u-member', groupId: 'g-growth', module: 'message' },
-        { id: 'tag-message2', name: '合同确认', creatorId: 'u-editor', groupId: 'g-growth', module: 'message' },
-        { id: 'tag-message3', name: '品牌洽谈', creatorId: 'u-brand', groupId: 'g-brand', module: 'message' },
-        { id: 'tag-crm1', name: '重点合作', creatorId: 'u-member', groupId: 'g-growth', module: 'crm', affected: 18 },
-        { id: 'tag-crm2', name: '品牌签约', creatorId: 'u-brand', groupId: 'g-brand', module: 'crm', affected: 7 }
+        { id: 'tag1', name: '新品合作', creatorId: 'u-member', groupId: 'g-growth', createdGroupId: 'g-growth', domain: 'monitor', categoryId: 1 },
+        { id: 'tag2', name: '内容待确认', creatorId: 'u-editor', groupId: 'g-growth', createdGroupId: 'g-growth', domain: 'monitor', categoryId: 1 },
+        { id: 'tag3', name: '品牌联名', creatorId: 'u-brand', groupId: 'g-brand', createdGroupId: 'g-brand', domain: 'monitor', categoryId: 1 },
+        { id: 'tag-message1', name: '等待回复', creatorId: 'u-member', groupId: 'g-growth', createdGroupId: 'g-growth', domain: 'creator', categoryId: null },
+        { id: 'tag-message2', name: '合同确认', creatorId: 'u-editor', groupId: 'g-growth', createdGroupId: 'g-growth', domain: 'creator', categoryId: null },
+        { id: 'tag-message3', name: '品牌洽谈', creatorId: 'u-brand', groupId: 'g-brand', createdGroupId: 'g-brand', domain: 'creator', categoryId: null },
+        { id: 'tag-crm1', name: '重点合作', creatorId: 'u-member', groupId: 'g-growth', createdGroupId: 'g-growth', domain: 'creator', categoryId: null },
+        { id: 'tag-crm2', name: '品牌签约', creatorId: 'u-brand', groupId: 'g-brand', createdGroupId: 'g-brand', domain: 'creator', categoryId: null }
+      ],
+      creatorLabelAssignments: [
+        {groupId:'g-growth',creatorProfileId:'mia',labelIds:['tag-message1','tag-crm1']},
+        {groupId:'g-brand',creatorProfileId:'mia',labelIds:['tag-crm2']}
       ],
       usage: [
         { uid: 'u-member', groupId: 'g-growth', sent: 720, opened: 318, replied: 42, cooperate: 11, monitor: 7, clicks: 1320, samples: 9, month: '2026-10' },
@@ -94,6 +98,12 @@
         { uid: 'u-brand', groupId: 'g-brand', sent: 200, opened: 88, replied: 13, cooperate: 3, monitor: 2, clicks: 430, samples: 2, month: '2026-10' }
       ]
     };
+    if(options.pendingRemoval){
+      s.users.push({id:'u-removing',name:'沈岚',email:'shen@xingye.example',orgRole:'member',status:'ACTIVE',memberships:[member('g-growth'),member('g-brand')]});
+      for(const [gid,suffix,title] of [['g-growth','growth','增长达人候选'],['g-brand','brand','品牌达人候选']])s.projects.push({id:'seed-removal-'+suffix,module:'resource',name:'待交接 · '+title,description:'清退交接示例，不计入既有统计来源',sharingMode:'selected',items:[],groupId:gid,ownerId:'u-removing',creatorId:'u-removing',assigneeId:null,status:'ACTIVE',collaborators:[]});
+      act(s,'u-owner','startOrganizationExit',{uid:'u-removing',mode:'later'});
+    }
+    return s;
   }
   const user = (s, id) => s.users.find(x => x.id === id);
   const group = (s, id) => s.groups.find(x => x.id === id);
@@ -108,9 +118,88 @@
   const removalObjects = (s, task) => s.projects.filter(p=>p.groupId===task.groupId&&(p.ownerId===task.uid||p.assigneeId===task.uid||p.module!=='crm'&&p.collaborators.some(c=>c.uid===task.uid)));
   const canHandleRemoval = (s, actorId, task) => {
     const h=s.handoffs.find(h=>h.id===task?.handoffId);
-    return !!task&&task.status==='REMOVING'&&isLead(s,actorId,task.groupId)&&(!h||h.mode==='later');
+    return !!task&&task.status==='REMOVING'&&!task.archiveExempt&&isLead(s,actorId,task.groupId)&&(!h||h.mode==='later');
   };
-  const manageMonitorLabels = (s, uid) => user(s, uid)?.status === 'ACTIVE' && (!s.policies.monitorLabelsT2 || canManageOrganization(s, uid) || user(s, uid).memberships.some(m => isLead(s, uid, m.groupId)));
+  const canReadRemovalNotification = (s, uid, notice) => notice?.scope==='handoff'&&s.tasks.some(t=>t.id===notice.taskId&&t.groupId===notice.groupId)&&isLead(s,uid,notice.groupId);
+  function removalQueue(s, actorId) {
+    const a=user(s,actorId),canTrack=canManageOrganization(s,actorId);
+    if(!a||!['ACTIVE','REMOVING'].includes(a.status))return [];
+    return s.tasks.filter(t=>t.status==='REMOVING').flatMap(t=>{
+      const h=s.handoffs.find(h=>h.id===t.handoffId),canHandle=canHandleRemoval(s,actorId,t),self=t.uid===actorId;
+      if(h&&h.mode!=='later'||!canTrack&&!canHandle&&!self)return [];
+      const tasks=h?h.taskIds.map(id=>s.tasks.find(t=>t.id===id)).filter(Boolean):[t];
+      return [{taskId:t.id,uid:t.uid,groupId:t.groupId,organizationExit:t.organizationExit,archiveExempt:!!t.archiveExempt,canTrack,canHandle,self,completedGroups:tasks.filter(t=>t.status==='COMPLETED'||t.archiveExempt).length,totalGroups:tasks.length}];
+    });
+  }
+  function beginRemoval(s,actorId,u,memberships,organizationExit) {
+    if(organizationExit)u.status='REMOVING';
+    return memberships.map(mm=>{
+      mm.status='REMOVING';
+      const old=s.tasks.find(t=>t.uid===u.id&&t.groupId===mm.groupId&&t.status==='REMOVING');
+      if(old){if(organizationExit)Object.assign(old,{organizationExit:true,initiatorScope:'organization'});return old.id;}
+      const task={id:id('task'),type:'REMOVAL',uid:u.id,groupId:mm.groupId,status:'REMOVING',organizationExit,initiatorScope:'organization',initiatedBy:actorId,targetRole:mm.role,targetId:null,objectCount:removalObjects(s,{groupId:mm.groupId,uid:u.id}).length};
+      s.tasks.push(task);return task.id;
+    });
+  }
+  function reconcileRemovalProgress(s,uid,actorId) {
+    const departing=user(s,uid);
+    for(const h of s.handoffs.filter(h=>h.uid===uid)){
+      const tasks=h.taskIds.map(tid=>s.tasks.find(t=>t.id===tid)).filter(Boolean),done=tasks.length>0&&tasks.every(t=>t.status==='COMPLETED');
+      const inv=s.invites.find(i=>i.id===h.inviteId&&i.status==='PENDING');
+      if(done){h.status='COMPLETED';if(inv)inv.status='CANCELLED';}
+      else if(inv){
+        const groups=tasks.filter(t=>t.status==='REMOVING'&&!t.archiveExempt&&group(s,t.groupId)?.status==='ACTIVE').map(t=>t.groupId);
+        inv.groupIds=groups;inv.groupId=groups[0];inv.roles=Object.fromEntries(groups.map(gid=>[gid,inv.roles?.[gid]||'T3']));h.status='WAITING_FOR_TARGET';
+      }else if(tasks.some(t=>t.status==='COMPLETED'||t.archiveExempt))h.status='PARTIAL';
+    }
+    const tasks=s.tasks.filter(t=>t.uid===uid&&t.organizationExit);
+    if(departing?.status==='REMOVING'&&tasks.length&&tasks.every(t=>t.status==='COMPLETED')){
+      departing.status='REMOVED';
+      s.notifications.push({id:id('notice'),scope:'organization',groupId:null,title:departing.name+' 的组织清退已完成',message:'所有必要组均已处理（实际交接或归档免交接），组织成员关系已结束；历史责任和资金承诺不变',uid:tasks[0].initiatedBy||actorId,at:new Date().toISOString()});
+    }
+  }
+  function exemptArchivedRemovals(s,actorId) {
+    const affected=new Set();
+    for(const task of s.tasks.filter(t=>t.status==='REMOVING'&&group(s,t.groupId)?.status==='ARCHIVED')){
+      const first=!task.archiveExempt,u=user(s,task.uid),m=membership(s,task.uid,task.groupId);
+      Object.assign(task,{archiveExempt:true,completionReason:'GROUP_ARCHIVED'});affected.add(task.uid);
+      const canEnd=task.organizationExit||u.memberships.some(mm=>mm.groupId!==task.groupId&&active(s,u.id,mm.groupId));
+      if(canEnd){if(m)m.status='REMOVED';Object.assign(task,{status:'COMPLETED',targetId:null});}
+      if(first)s.notifications.push({id:id('notice'),scope:'group',groupId:task.groupId,title:group(s,task.groupId).name+'：'+u.name+' 归档免交接',message:'业务已封存，无需指定接收人，原责任及资金历史保留。'+(canEnd?'该组已处理。':'成员关系仍须满足原结束条件。'),uid:task.initiatedBy||actorId,at:new Date().toISOString()});
+    }
+    affected.forEach(uid=>reconcileRemovalProgress(s,uid,actorId));
+  }
+  function archivePaymentBlockers(s,gid) {
+    return s.projects.filter(p=>p.module==='payment'&&p.groupId===gid&&(p.requiresManualFundingAction===true||p.fundingCommitted&&(
+      ['WAITING_REVIEW','SCHEDULE_EXPIRED','WAITING_RELEASE'].includes(p.status)||
+      ['FORMAL','SCHEDULED'].includes(p.status)&&paymentReview(s,p).required)));
+  }
+  const labelDomain = domain => ['monitor','creator'].includes(domain);
+  const labelCategory = categoryId => String(categoryId ?? '');
+  const labelsForGroup = (s, uid, gid, domain) => active(s,uid,gid)&&labelDomain(domain) ? s.labels.filter(label=>label.groupId===gid&&label.domain===domain) : [];
+  const canManageLabels = (s, uid, gid, domain) => active(s,uid,gid)&&labelDomain(domain)&&(!group(s,gid)[domain==='monitor'?'monitorLabelsT2':'creatorLabelsT2']||isLead(s,uid,gid)||canManageOrganization(s,uid));
+  const validLabelIds = (s, gid, domain, ids) => Array.isArray(ids)&&new Set(ids).size===ids.length&&ids.every(id=>s.labels.some(label=>label.id===id&&label.groupId===gid&&label.domain===domain));
+  function initializeLegacyLabels(s, labels, assignments=[]) {
+    const fail=message=>({ok:false,message});
+    if(s.legacyLabelsInitialized)return {ok:true,initialized:false};
+    const g=s.groups[0];
+    if(s.groups.length!==1||!g?.isDefault||g.status!=='ACTIVE'||!Array.isArray(labels)||!Array.isArray(assignments)||(s.labels||[]).length||(s.creatorLabelAssignments||[]).length)return fail('仅用于唯一默认组且尚未初始化标签的遗留示意');
+    const normalized=[],ids=new Set();
+    for(const label of labels){
+      if(!label||typeof label!=='object')return fail('遗留标签记录无效，需先核对');
+      const domain=label.domain||({monitor:'monitor',message:'creator',crm:'creator'})[label.module],name=String(label.name||'').trim();
+      const categoryId=label.categoryId??(label.module==='monitor'?label.groupId??null:null);
+      if(!label.id||ids.has(label.id)||!labelDomain(domain)||!name||normalized.some(other=>other.domain===domain&&labelCategory(other.categoryId)===labelCategory(categoryId)&&other.name===name))return fail('遗留标签标识、名称、域或分类存在冲突，需先核对');
+      ids.add(label.id);normalized.push({id:label.id,name,domain,categoryId,groupId:g.id,createdGroupId:label.createdGroupId??null,creatorId:label.creatorId??null});
+    }
+    const normalizedAssignments=[];
+    for(const assignment of assignments){
+      if(!assignment||!assignment.creatorProfileId||!Array.isArray(assignment.labelIds)||new Set(assignment.labelIds).size!==assignment.labelIds.length||assignment.labelIds.some(id=>!normalized.some(label=>label.id===id&&label.domain==='creator'))||normalizedAssignments.some(other=>other.creatorProfileId===assignment.creatorProfileId))return fail('遗留达人打标关联不完整或重复，需先核对');
+      normalizedAssignments.push({groupId:g.id,creatorProfileId:assignment.creatorProfileId,labelIds:[...assignment.labelIds]});
+    }
+    s.labels=normalized;s.creatorLabelAssignments=normalizedAssignments;s.legacyLabelsInitialized=true;
+    return {ok:true,initialized:true};
+  }
   const leadQuota = (s, uid, gid) => s.policies.t2Quota && isLead(s, uid, gid);
   const number = value => Number.isFinite(Number(value)) && Number(value) >= 0;
   const id = prefix => prefix + '-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 7);
@@ -255,16 +344,20 @@
     return recordFunds(s, actorId, paid ? 'payment' : 'release', amount, { group: g, project: p, reason: paid ? '支付成功' : '支付作废，释放原占用', walletDelta: paid ? -amount : 0, groupDelta: !paid && acceptsFundingReturn(g, p) ? amount : 0, pendingDelta: -amount });
   }
   function validHandoffTasks(s,h) {
-    return h&&user(s,h.uid)?.status==='REMOVING'&&h.taskIds.length>0&&h.taskIds.every(tid=>{
+    return h&&user(s,h.uid)?.status==='REMOVING'&&h.taskIds.some(tid=>s.tasks.some(t=>t.id===tid&&t.status==='REMOVING'))&&h.taskIds.every(tid=>{
       const t=s.tasks.find(t=>t.id===tid);
-      return t&&t.uid===h.uid&&t.handoffId===h.id&&t.organizationExit&&t.status==='REMOVING'&&h.groupIds.includes(t.groupId)&&group(s,t.groupId)?.status==='ACTIVE'&&membership(s,h.uid,t.groupId)?.status==='REMOVING';
+      if(!t||t.uid!==h.uid||t.handoffId!==h.id||!t.organizationExit||!h.groupIds.includes(t.groupId))return false;
+      if(t.status==='COMPLETED')return user(s,h.uid).memberships.some(m=>m.groupId===t.groupId&&m.status==='REMOVED');
+      return t.status==='REMOVING'&&group(s,t.groupId)?.status==='ACTIVE'&&membership(s,h.uid,t.groupId)?.status==='REMOVING';
     });
   }
   // The authorized submission triggers this local worker; there is no second user approval.
   function executeUnifiedHandoff(s,h) {
     const departing=user(s,h.uid),target=user(s,h.targetId),at=new Date().toISOString();
     for(const taskId of h.taskIds){
-      const task=s.tasks.find(t=>t.id===taskId),summary={owner:0,assignee:0,collaborator:0,merged:0,disabledSkipped:0};
+      const task=s.tasks.find(t=>t.id===taskId);
+      if(task.status==='COMPLETED')continue;
+      const summary={owner:0,assignee:0,collaborator:0,merged:0,disabledSkipped:0};
       s.projects.filter(p=>p.groupId===task.groupId&&p.status!=='DELETED').forEach(p=>{
         if(p.module==='crm'){
           if(p.assigneeId===departing.id){p.assigneeId=target.id;summary.assignee++;}
@@ -292,7 +385,7 @@
       s.notifications.push({id:id('notice'),scope:'group',groupId:task.groupId,title:group(s,task.groupId).name+'：'+departing.name+' 的本组交接已完成',message:'业务接替已完成；个人配额不继承或相加，历史用量及资金承担不变',uid:h.authorizedBy,at});
     }
     departing.status='REMOVED';h.status='COMPLETED';h.completedAt=at;
-    s.notifications.push({id:id('notice'),scope:'organization',groupId:null,title:departing.name+' 的组织清退已完成',message:'全部示例组交接已完成；未退回已消耗额度，也未释放原支付占用',uid:h.authorizedBy,at});
+    s.notifications.push({id:id('notice'),scope:'organization',groupId:null,title:departing.name+' 的组织清退已完成',message:'全部必要组已处理（实际交接或归档免交接）；未退回已消耗额度，也未释放原支付占用',uid:h.authorizedBy,at});
   }
   function act(s, actorId, type, payload = {}) {
     const a = user(s, actorId);
@@ -303,7 +396,7 @@
     const u = payload.uid ? user(s, payload.uid) : null;
     const m = payload.uid && payload.groupId ? membership(s, payload.uid, payload.groupId) : null;
     const rights = p ? access(s, actorId, p.id) : null;
-    const adminActions = ['invite', 'acceptInvite', 'addGroup', 'renameGroup', 'setRole', 'setOrgRole', 'transferOrgOwner', 'addMembership', 'startOrganizationExit', 'completeHandoff', 'archiveGroup', 'moveProjects', 'setGroupPaymentAccess', 'allocateFunds', 'returnFunds', 'rechargeFunds', 'refundPayment'];
+    const adminActions = ['invite', 'acceptInvite', 'addGroup', 'renameGroup', 'setRole', 'setOrgRole', 'transferOrgOwner', 'addMembership', 'startOrganizationExit', 'completeHandoff', 'archiveGroup', 'setGroupPaymentAccess', 'allocateFunds', 'returnFunds', 'rechargeFunds', 'refundPayment'];
     if (adminActions.includes(type) && !canManageOrganization(s, actorId)) return fail('只有组织 Owner/Admin 可以执行此组织管理动作；T2 身份不授予该动作');
     let message = '操作已完成', extra = {};
     switch (type) {
@@ -345,7 +438,7 @@
         if (s.groups.some(x => x.name === name && x.status === 'ACTIVE')) return fail('该组名已存在');
         if(payload.paymentEnabled!==undefined&&typeof payload.paymentEnabled!=='boolean')return fail('支付开通状态须为明确开关值');
         const enabled=payload.paymentEnabled===true;
-        const gid = id('g'); s.groups.push({ id: gid, name, status: 'ACTIVE', isDefault: false, quotaLimit: s.organization.quotaLimit, used: 0, quotas:extraQuotas(s.organization.quotas.search.quotaLimit,0,s.organization.quotas.channelUnlock.quotaLimit,0,'inherit'), paymentEnabled: enabled, paymentMode:'dedicated', fundBalance: 0, fundCycle: enabled?1:0, fundUsed: 0, fundPending: 0, requireT2PaymentRelease: false }); extra.groupId = gid; message = '空组已创建，允许 0 名成员和 0 名 T2；支付按建组选择，开通后另行分配专用余额'; break;
+        const gid = id('g'); s.groups.push({ id: gid, name, status: 'ACTIVE', isDefault: false, quotaLimit: s.organization.quotaLimit, used: 0, quotas:extraQuotas(s.organization.quotas.search.quotaLimit,0,s.organization.quotas.channelUnlock.quotaLimit,0,'inherit'), paymentEnabled: enabled, paymentMode:'dedicated', fundBalance: 0, fundCycle: enabled?1:0, fundUsed: 0, fundPending: 0, requireT2PaymentRelease: false, monitorLabelsT2:false, creatorLabelsT2:false }); extra.groupId = gid; message = '空组已创建，允许 0 名成员和 0 名 T2；支付按建组选择，开通后另行分配专用余额'; break;
       }
       case 'renameGroup': {
         if (!g || !String(payload.name || '').trim()) return fail('组和名称不能为空');
@@ -371,10 +464,11 @@
         s.policies[payload.key] = !!payload.value; message = '组织策略已更新，现有对象的系统授权来源实时重新计算'; break;
       }
       case 'setGroupPolicy': {
-        if (!canManageOrganization(s, actorId) || !g || g.status !== 'ACTIVE') return fail('需要有效组和组织管理权限；组策略编辑主体仍需评审');
-        if (payload.key !== 'requireT2PaymentRelease') return fail('未知组级策略');
-        g.requireT2PaymentRelease = !!payload.value;
-        message = g.requireT2PaymentRelease?'已开启组级支付审核；按当前策略和有效组长实时重算，不保存创建时快照':'已关闭组级支付审核；解除等待中的组长闸门，不恢复已逾期预约';
+        if (!canManageOrganization(s, actorId) || !g || g.status !== 'ACTIVE') return fail('需要有效组和组织 Owner/Admin 管理权限');
+        if (!['requireT2PaymentRelease','monitorLabelsT2','creatorLabelsT2'].includes(payload.key)) return fail('未知组级策略');
+        if(typeof payload.value!=='boolean')return fail('组策略须为明确开关值');
+        g[payload.key] = payload.value;
+        message = payload.key==='requireT2PaymentRelease' ? g.requireT2PaymentRelease?'已开启组级支付审核；按当前策略和有效组长实时重算，不保存创建时快照':'已关闭组级支付审核；解除等待中的组长闸门，不恢复已逾期预约' : '已更新本组'+(payload.key==='monitorLabelsT2'?'监控':'达人')+'标签定义管理策略；不改变对象打标权限或其他组策略';
         break;
       }
       case 'setQuota': {
@@ -431,29 +525,23 @@
         if(!canRemoveMember(s,actorId,u.id,m.groupId,!!payload.asGroupLead))return fail('仅组织 Owner 或获开启成员移除策略的 Admin 可移出组或组织；组长只处理本组业务交接');
         if (u.orgRole === 'owner' && (payload.organizationExit || u.memberships.filter(x => x.status === 'ACTIVE').length <= 1)) return fail('组织 Owner 必须先转让组织所有权，且至少保留一个 ACTIVE 业务组');
         const memberships = payload.organizationExit ? u.memberships.filter(x => x.status === 'ACTIVE' || x.status === 'REMOVING') : [m];
-        if (payload.organizationExit) u.status = 'REMOVING';
-        const ids = [];
-        memberships.forEach(mm => {
-          mm.status = 'REMOVING';
-          const oldTask = s.tasks.find(t => t.uid === u.id && t.groupId === mm.groupId && t.status === 'REMOVING');
-          if (oldTask) { if (payload.organizationExit) {oldTask.organizationExit=true;oldTask.initiatorScope='organization';} ids.push(oldTask.id); return; }
-          const task = { id: id('task'), type: 'REMOVAL', uid: u.id, groupId: mm.groupId, status: 'REMOVING', organizationExit: !!payload.organizationExit, initiatorScope:'organization',initiatedBy:actorId,targetRole:mm.role, targetId: null, objectCount: removalObjects(s,{groupId:mm.groupId,uid:u.id}).length };
-          s.tasks.push(task); ids.push(task.id);
-        }); extra.taskId = ids[0]; extra.taskIds = ids; message = '成员已进入 REMOVING 并立即失权；资产暂未移交，可稍后处理'; break;
+        const ids=beginRemoval(s,actorId,u,memberships,!!payload.organizationExit);
+        exemptArchivedRemovals(s,actorId);
+        extra.taskId = ids[0]; extra.taskIds = ids; message = '成员已进入移除处理并立即失权；有效组业务待交接，归档组免交接，关系结束条件不变'; break;
       }
       case 'startOrganizationExit': {
         if(!canRemoveMember(s,actorId))return fail('Admin 移除成员策略未开启；仅 Owner 可发起组织清退');
         if(!u||!['ACTIVE','REMOVING'].includes(u.status)||u.orgRole==='owner')return fail('请选择可清退的非组织 Owner 成员');
         const memberships=u.memberships.filter(mm=>['ACTIVE','REMOVING'].includes(mm.status)),mode=payload.mode||'later';
         if(!memberships.length||!['later','existing','invite'].includes(mode))return fail('没有待移交的组关系或接收方式无效');
-        const groupIds=memberships.map(mm=>mm.groupId),old=s.handoffs.find(h=>h.uid===u.id&&h.status!=='COMPLETED');
+        const groupIds=memberships.map(mm=>mm.groupId),liveGroupIds=groupIds.filter(gid=>group(s,gid)?.status==='ACTIVE'),old=s.handoffs.find(h=>h.uid===u.id&&h.status!=='COMPLETED');
+        if(groupIds.some(gid=>!['ACTIVE','ARCHIVED'].includes(group(s,gid)?.status)))return fail('涉及未知组状态，请先核对组织关系');
         const oldInvite=s.invites.find(i=>i.id===old?.inviteId&&i.status==='PENDING');
         let target=null,missing=[],email='';
-        if(mode!=='later'&&groupIds.some(gid=>group(s,gid)?.status!=='ACTIVE'))return fail('涉及已归档组：可先清退并稍后处理，不在此流程自动恢复归档组');
         if(mode==='existing'){
           target=user(s,payload.targetId);
           if(!target||target.status!=='ACTIVE'||target.id===u.id)return fail('请选择组织内其他有效接收人');
-          missing=groupIds.filter(gid=>!active(s,target.id,gid));
+          missing=liveGroupIds.filter(gid=>!active(s,target.id,gid));
           if(missing.some(gid=>membership(s,target.id,gid)))return fail('接收人有未结束的退组关系，不能直接覆盖为有效身份');
         }
         if(mode==='invite'){
@@ -461,28 +549,33 @@
           if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))return fail('请输入新同事的有效邮箱');
           if(s.users.some(x=>x.email.toLowerCase()===email&&x.status!=='REMOVED')||s.invites.some(i=>i.email===email&&i.status==='PENDING'&&i.id!==oldInvite?.id))return fail('邮箱已在组织或已有待接受邀请，请使用现有账号或处理原邀请');
           const seats=s.users.filter(x=>x.status==='ACTIVE'&&x.id!==u.id).length+s.invites.filter(i=>i.status==='PENDING'&&i.id!==oldInvite?.id).length;
-          if(seats>=s.organization.seatLimit)return fail('没有可保留的接替席位；请先处理组织席位');
-          missing=groupIds;
+          if(liveGroupIds.length&&seats>=s.organization.seatLimit)return fail('没有可保留的接替席位；请先处理组织席位');
+          missing=liveGroupIds;
         }
         // Validate the complete receiver selection before revoking the departing identity.
-        const activeMembership=memberships.find(mm=>mm.status==='ACTIVE');
-        if(activeMembership){const removed=act(s,actorId,'removeMembership',{uid:u.id,groupId:activeMembership.groupId,organizationExit:true});if(!removed.ok)return removed;}
-        else {u.status='REMOVING';s.tasks.filter(t=>t.uid===u.id&&t.status==='REMOVING').forEach(t=>t.organizationExit=true);}
+        beginRemoval(s,actorId,u,memberships,true);
         if(oldInvite)oldInvite.status='CANCELLED';
         const tasks=s.tasks.filter(t=>t.uid===u.id&&t.status==='REMOVING'),h=old||{id:id('handoff'),uid:u.id};
-        Object.assign(h,{mode,targetId:target?.id||null,inviteId:null,groupIds,taskIds:tasks.map(t=>t.id),authorizedBy:actorId,status:mode==='later'?'PENDING_ASSIGNMENT':mode==='invite'?'WAITING_FOR_TARGET':'READY'});
+        const taskIds=[...new Set([...(old?.taskIds||[]),...tasks.map(t=>t.id)])],allGroupIds=[...new Set([...(old?.groupIds||[]),...groupIds])];
+        const partlyDone=taskIds.some(tid=>s.tasks.some(t=>t.id===tid&&t.status==='COMPLETED'));
+        Object.assign(h,{mode,targetId:target?.id||null,inviteId:null,groupIds:allGroupIds,taskIds,authorizedBy:actorId,status:mode==='later'?(partlyDone?'PARTIAL':'PENDING_ASSIGNMENT'):mode==='invite'?'WAITING_FOR_TARGET':'READY'});
         if(!old)s.handoffs.push(h);
         tasks.forEach(t=>{t.handoffId=h.id;t.organizationExit=true;});
         if(mode==='existing')missing.forEach(gid=>{
           target.memberships.push(member(gid,'T3'));
           s.projects.filter(p=>p.groupId===gid).forEach(p=>p.collaborators.filter(c=>c.uid===target.id).forEach(c=>c.disabled=false));
         });
-        if(mode==='invite'){
-          const inv={id:id('invite'),name:String(payload.name||email.split('@')[0]),email,groupId:groupIds[0],groupIds,roles:Object.fromEntries(groupIds.map(gid=>[gid,'T3'])),role:'T3',quotaMode:'inherit',status:'PENDING',handoffId:h.id,replacementSeat:true};
+        if(mode==='invite'&&liveGroupIds.length){
+          const inv={id:id('invite'),name:String(payload.name||email.split('@')[0]),email,groupId:liveGroupIds[0],groupIds:liveGroupIds,roles:Object.fromEntries(liveGroupIds.map(gid=>[gid,'T3'])),role:'T3',quotaMode:'inherit',status:'PENDING',handoffId:h.id,replacementSeat:true};
           s.invites.push(inv);h.inviteId=inv.id;
         }
-        if(mode==='existing')executeUnifiedHandoff(s,h);
-        extra.handoffId=h.id;message=mode==='invite'?'清退已生效；受邀人接受组织邀请后系统自动移交，无额外接替确认':mode==='existing'?'系统已自动完成示例业务接替；个人配额不继承或相加，历史用量与支付占用不变':'清退已生效；各组长可在本组处理业务交接';break;
+        exemptArchivedRemovals(s,actorId);
+        if(mode==='existing'&&u.status==='REMOVING')executeUnifiedHandoff(s,h);
+        if(mode==='later')tasks.filter(task=>task.status==='REMOVING'&&!task.archiveExempt).forEach(task=>{
+          if(s.notifications.some(n=>n.scope==='handoff'&&n.taskId===task.id))return;
+          s.notifications.push({id:id('notice'),scope:'handoff',groupId:task.groupId,taskId:task.id,title:group(s,task.groupId).name+'：'+u.name+' 的业务待交接',message:'组织清退已生效，请本组有效组长安排同组接收人。这里只处理本组业务，不更改清退决定。',at:new Date().toISOString()});
+        });
+        extra.handoffId=h.id;message=h.status==='COMPLETED'&&h.taskIds.every(tid=>s.tasks.find(t=>t.id===tid)?.archiveExempt)?'全部必要组已归档免交接，组织清退已完成；无需接收人或接替邀请':mode==='invite'?'清退已生效；受邀人接受组织邀请后系统自动移交，无额外接替确认':mode==='existing'?'系统已自动完成示例业务接替；个人配额不继承或相加，历史用量与支付占用不变':'清退已生效；各组长可在本组处理业务交接';break;
       }
       case 'completeHandoff': {
         return fail('统一接替由提交或接受组织邀请自动触发，不提供单独确认执行动作');
@@ -503,7 +596,13 @@
         if(businessAction?!canHandleRemoval(s,actorId,task):!canRemoveMember(s,actorId))return fail('本组业务交接仅由本组有效组长处理；组织侧结束关系须具备成员移除权限，不能指派业务接收人');
         const h=s.handoffs.find(h=>h.id===task.handoffId),whole=!!h&&h.mode!=='later';
         if(whole)return fail('统一接替由系统按既定接收人自动处理，不通过单组操作改派');
-        if(!businessAction&&(removalObjects(s,task).length||payload.targetId||payload.crmTargetId))return fail('存在业务对象时由本组组长交接；组织侧仅可确认没有业务交接项的关系结束');
+        if(!businessAction&&((!task.archiveExempt&&removalObjects(s,task).length)||payload.targetId||payload.crmTargetId))return fail('存在业务对象时由本组组长交接；组织侧仅可确认无业务交接项或归档免交接后的关系结束');
+        if(task.archiveExempt){
+          if(!task.organizationExit&&!user(s,task.uid).memberships.some(mm=>mm.groupId!==task.groupId&&active(s,task.uid,mm.groupId)))return fail('最后一个有效业务组：请先加入另一有效组或改为组织清退；归档免交接不绕过关系结束条件');
+          const original=membership(s,task.uid,task.groupId);if(original)original.status='REMOVED';task.status='COMPLETED';
+          s.notifications.push({id:id('notice'),scope:'group',groupId:task.groupId,title:group(s,task.groupId).name+'：'+user(s,task.uid).name+' 的组关系已结束',message:'归档免交接，原业务责任和资金历史保留；现已满足原成员移除决定的结束条件',uid:task.initiatedBy||actorId,at:new Date().toISOString()});
+          reconcileRemovalProgress(s,task.uid,actorId);message='归档免交接，该组已处理；按原移除决定结束关系，原业务责任和资金历史不变';break;
+        }
         const departing = user(s, task.uid), target = payload.targetId ? user(s, payload.targetId) : null;
         const objects = s.projects.filter(x => x.groupId === task.groupId);
         const owned = objects.filter(x => x.ownerId === departing.id);
@@ -512,21 +611,17 @@
         if (owned.length && (!target || target.id === departing.id || !active(s, target.id, task.groupId))) return fail('项目型对象必须选择一个同组 ACTIVE 接收人；未指定可继续保留 REMOVING');
         if (target && (!active(s, target.id, task.groupId) || target.id === departing.id)) return fail('接收人须为同组其他 ACTIVE 成员');
         if (crmTargetId && (!hasCrmAssignment || crmTargetId === departing.id || !active(s, crmTargetId, task.groupId))) return fail('CRM 接收人须为同组其他 ACTIVE 成员，且仅适用于存在原对接记录的任务');
-        if (!task.organizationExit && !departing.memberships.some(x => x.groupId !== task.groupId && x.status === 'ACTIVE')) return fail('最后一个业务组：请先加入另一真实组或改为组织移出');
+        if (!task.organizationExit && !departing.memberships.some(x => x.groupId !== task.groupId && active(s,departing.id,x.groupId))) return fail('最后一个业务组：请先加入另一真实组或改为组织移出');
         objects.forEach(x => {
           if (x.ownerId === departing.id) { clearConversationOwner(s,x.id); x.ownerId = target.id; }
           if (x.module === 'crm' && x.assigneeId === departing.id) x.assigneeId = crmTargetId;
           x.collaborators = x.module==='crm'?[]:x.collaborators.filter(c => c.uid !== departing.id && c.uid !== x.ownerId && c.uid !== x.assigneeId);
         });
         clearConversationMember(s,departing.id,task.groupId);
-        membership(s, departing.id, task.groupId).status = 'REMOVED'; task.status = 'COMPLETED'; task.targetId = target?.id || null;
+        membership(s, departing.id, task.groupId).status = 'REMOVED'; task.status = 'COMPLETED';task.completionReason=businessAction?'TRANSFERRED':'NO_BUSINESS_ITEMS'; task.targetId = target?.id || null;
         task.crmTargetId = crmTargetId; task.hasCrmAssignment = hasCrmAssignment;
-        if(h&&h.taskIds.every(tid=>s.tasks.find(t=>t.id===tid)?.status==='COMPLETED'))h.status='COMPLETED';
         s.notifications.push({ id: id('notice'), scope: 'group', groupId: task.groupId, title: group(s, task.groupId).name + '：' + departing.name + ' 的本组交接已完成', message: '原组、历史创建人、用量与资金承担快照保持不变', uid: actorId, at: new Date().toISOString() });
-        if (task.organizationExit && s.tasks.filter(t => t.uid === departing.id && t.organizationExit).every(t => t.status === 'COMPLETED')) {
-          departing.status = 'REMOVED';
-          s.notifications.push({ id: id('notice'), scope: 'organization', groupId: null, title: departing.name + ' 的组织清退已完成', message: '所有组的清退子任务均已完成，组织成员关系已移除', uid: task.initiatedBy || actorId, at: new Date().toISOString() });
-        }
+        reconcileRemovalProgress(s,departing.id,actorId);
         message = businessAction?'本组业务交接已完成；系统按原移除决定结束组关系':'无业务交接项已确认；系统结束成员关系'; break;
       }
       case 'archiveGroup': {
@@ -534,10 +629,12 @@
         if (g.isDefault) return fail('默认组必须始终存在，不可归档');
         if (!canArchiveGroup(s,actorId,g.id)) return fail('Admin 归档组策略未开启；仅 Owner 可归档业务组');
         if (payload.confirmIrreversible !== true) return fail('请二次确认归档不可自行解除；异常恢复仅可转线下处理');
+        const blocked=archivePaymentBlockers(s,g.id);
+        if(blocked.length)return fail('仍有 '+blocked.length+' 笔需人工推进的资金事项；请先处理或转既有人工渠道，不能直接归档');
         const owner = s.users.find(x => x.orgRole === 'owner');
         if (active(s, owner.id, g.id) && !owner.memberships.some(x => x.groupId !== g.id && x.status === 'ACTIVE' && group(s, x.groupId)?.status === 'ACTIVE')) return fail('组织 Owner 需要保留另一个有效业务组');
         if (g.fundBalance > 0) extra.fundEventId = recordFunds(s, actorId, 'archive_return', g.fundBalance, { group: g, reason: '归档返还未占用余额', groupDelta: -g.fundBalance });
-        g.paymentEnabled = false; g.status = 'ARCHIVED'; message = '组已冻结归档；未占用余额已返还组织，历史与既有资金承诺保留'; break;
+        g.paymentEnabled = false; g.status = 'ARCHIVED';exemptArchivedRemovals(s,actorId);message = '组已冻结归档；待交接业务归档免交接，按条件结束关系；未占用余额已返还组织，历史与既有资金承诺保留'; break;
       }
       case 'addCollaborator': {
         if (!p || !rights.manage) return fail('仅对象 Owner/Assignee 或被授予管理协作者能力的人可操作');
@@ -553,6 +650,28 @@
         const before = p.collaborators.length; p.collaborators = p.collaborators.filter(c => c.uid !== payload.uid);
         if (before === p.collaborators.length) return fail('只有系统来源时不可手动删除；请检查组织策略');
         message = '显式协作关系已删除；系统 T2 等其他独立来源仍可能生效'; break;
+      }
+      case 'saveEmailProjectSettings': {
+        if (!p || p.module !== 'email' || !rights.manage) return fail('仅邮件负责人或有效名单管理员可保存项目设置');
+        const name=String(payload.name||'').trim(),members=payload.collaborators;
+        if(p.ownerId!==actorId&&name!==p.name)return fail('名单管理员只能维护协作者，不能修改项目名称');
+        if(!name||name.length>50)return fail('项目名称须为1至50个字符');
+        if(!Array.isArray(members)||new Set(members.map(c=>c?.uid)).size!==members.length)return fail('协作者名单格式无效或包含重复账号');
+        const next=[];
+        for(const item of members){
+          if(!item||Object.keys(item).some(key=>!['uid','canManage'].includes(key))||typeof item.canManage!=='boolean'||item.uid===p.ownerId)return fail('只保存显式协作者及名单管理能力，不复制负责人或其他附加能力');
+          const old=p.collaborators.find(c=>c.uid===item.uid);
+          if(old?.disabled){
+            if(item.canManage!==!!old.canManage)return fail('已禁用协作不能修改能力或由本表单恢复');
+            next.push(clone(old));continue;
+          }
+          if(!active(s,item.uid,p.groupId))return fail('协作者必须是项目所属组的有效成员');
+          if(!old&&(s.conversations||[]).some(c=>c.projectId===p.id&&c.assignedUids.includes(item.uid)))return fail('请先移除该账号的对话转交关系，再添加项目协作');
+          next.push({...old,uid:item.uid,disabled:false,canManage:item.canManage,canExecute:old?.canExecute||false});
+        }
+        // 全部校验完成后一次保存，避免改名成功但名单失败。
+        p.name=name;p.collaborators=next;
+        message='邮件项目设置已保存；隐式来源、业务内容和配额未改变';break;
       }
       case 'setCapability': {
         if (p?.module === 'crm') return fail('CRM 不设置协作者或附加协作能力，使用原四项写权限');
@@ -660,11 +779,7 @@
         s.crmWritePermissions=[...permissions];message='CRM 原四项写权限已更新，仍先按记录所属组隔离；未新增协作者';break;
       }
       case 'moveProjects': {
-        const targetGroup = group(s, payload.targetGroupId), sourceGroup = group(s, payload.sourceGroupId);
-        if (!u || !targetGroup || !sourceGroup || payload.targetGroupId === payload.sourceGroupId || !active(s, u.id, targetGroup.id)) return fail('Owner 必须先加入有效目标组，且来源和目标不同');
-        const moved = s.projects.filter(x => x.ownerId === u.id && x.groupId === sourceGroup.id && x.module !== 'crm' && x.status !== 'DELETED');
-        moved.forEach(x => { x.groupId = targetGroup.id; x.collaborators.forEach(c => c.disabled = !active(s, c.uid, targetGroup.id)); });
-        message = '已迁移该 Owner 在来源组的 ' + moved.length + ' 个项目；目标组外 ACL 禁用保留，资金历史不变'; break;
+        return fail('本期不支持项目迁组，历史动作已取消；加入新组不迁移项目或标签');
       }
       case 'setGroupPaymentAccess': {
         if (!g || g.status !== 'ACTIVE' || typeof payload.enabled !== 'boolean') return fail('请选择有效组及明确的支付开通状态');
@@ -832,34 +947,59 @@
         p.status = 'DELETED'; message = '项目已模拟删除；历史审计继续保留'; break;
       }
       case 'addLabel': {
-        if (!g || !active(s, actorId, g.id) || !String(payload.name || '').trim()) return fail('需要有效组身份和标签名称');
-        const module = payload.module || 'monitor';
-        if (module === 'monitor' && !manageMonitorLabels(s, actorId)) return fail('当前策略限制 T3 管理组织共享监控标签定义');
-        s.labels.push({ id: id('tag'), name: String(payload.name).trim(), groupId: g.id, creatorId: actorId, module }); message = '标签定义已创建；createdGroupId 不随创建人转组漂移'; break;
+        const domain=payload.domain,name=String(payload.name||'').trim(),categoryId=payload.categoryId??(domain==='monitor'?1:null);
+        if(!g||!canManageLabels(s,actorId,g.id,domain))return fail('需要标签所属组的有效身份及该类标签定义管理权限');
+        if(!name||categoryId!==null&&!['string','number'].includes(typeof categoryId))return fail('请填写有效标签名称和分类');
+        if(s.labels.some(label=>label.groupId===g.id&&label.domain===domain&&labelCategory(label.categoryId)===labelCategory(categoryId)&&label.name===name))return fail('同组同类同分类已存在同名标签');
+        const label={id:id('tag'),name,domain,categoryId,groupId:g.id,createdGroupId:g.id,creatorId:actorId};
+        s.labels.push(label);extra.labelId=label.id;message='本组标签定义已创建；创建人和创建来源不随人员关系变化';break;
       }
       case 'renameLabel':
       case 'deleteLabel': {
-        const label = s.labels.find(x => x.id === payload.labelId);
-        if (!label || (label.module !== 'monitor' && (!active(s, actorId, label.groupId) || (payload.groupId && payload.groupId !== label.groupId)))) return fail('需要标签所在组的当前有效身份');
-        if (label.module === 'crm') return fail('CRM 标签使用独立高风险动作，不能走普通标签管理绕过');
-        if (label.module === 'monitor' && !manageMonitorLabels(s, actorId)) return fail('当前策略仅允许组织管理身份或有效 T2 管理组织共享监控标签定义');
+        const label=s.labels.find(x=>x.id===payload.labelId);
+        if(!label||!canManageLabels(s,actorId,label.groupId,label.domain))return fail('需要标签所属组的有效身份及该类标签定义管理权限');
+        if(Object.hasOwn(payload,'groupId')&&payload.groupId!==label.groupId||Object.hasOwn(payload,'domain')&&payload.domain!==label.domain||Object.hasOwn(payload,'categoryId')&&labelCategory(payload.categoryId)!==labelCategory(label.categoryId))return fail('标签所属组、类型或分类与当前操作不一致');
         if (type === 'renameLabel') {
-          const name = String(payload.name || '').trim();
-          if (!name) return fail('请填写标签名称');
-          label.name = name; message = '标签已改名；创建来源组保持不变';
-        } else { s.labels = s.labels.filter(x => x.id !== label.id); message = '标签定义已删除（模拟）；不授予任何项目操作权限'; }
+          const name=String(payload.name||'').trim();
+          if(!name)return fail('请填写标签名称');
+          if(s.labels.some(other=>other.id!==label.id&&other.groupId===label.groupId&&other.domain===label.domain&&labelCategory(other.categoryId)===labelCategory(label.categoryId)&&other.name===name))return fail('同组同类同分类已存在同名标签');
+          label.name=name;message='标签已改名；创建人和创建来源组保持不变';
+        } else {
+          s.labels=s.labels.filter(x=>x.id!==label.id);
+          if(label.domain==='creator')(s.creatorLabelAssignments||[]).filter(a=>a.groupId===label.groupId).forEach(a=>{a.labelIds=a.labelIds.filter(id=>id!==label.id);});
+          else s.projects.filter(p=>p.module==='monitor'&&p.groupId===label.groupId).forEach(p=>(p.items||[]).forEach(item=>{if(item.labelIds)item.labelIds=item.labelIds.filter(id=>id!==label.id);}));
+          message='已删除本组标签定义并清理本组引用；不更改其他组或授予项目权限';
+        }
         break;
       }
       case 'deleteCRMLabel': {
-        const label = s.labels.find(x => x.id === payload.labelId && x.module === 'crm');
-        if (!label) return fail('CRM 标签不存在');
-        if (a.orgRole !== 'owner') return fail('CRM 标签删除是独立高风险权限；Admin 范围与 T2 委派尚待确认，本示例仅开放组织 Owner');
-        s.labels = s.labels.filter(x => x.id !== label.id);
-        message = '已删除组织共享 CRM 标签定义（模拟），不以记录写权限替代删除资格'; break;
+        return fail('CRM 使用本组共享达人标签字典，请通过统一标签管理动作操作');
+      }
+      case 'applyMonitorLabels': {
+        const item=p?.items?.find(item=>item.id===payload.itemId);
+        if(!p||p.module!=='monitor'||!rights.write||!item||Object.hasOwn(payload,'groupId')&&payload.groupId!==p.groupId)return fail('需要监控对象所属组的有效内容写权限及当前内容');
+        if(!validLabelIds(s,p.groupId,'monitor',payload.labelIds))return fail('仅可应用本组监控标签，标签不可重复或失效');
+        item.labelIds=[...payload.labelIds];message='已更新本组监控内容的标签，不改变标签定义或对象权限';break;
+      }
+      case 'applyCreatorLabels': {
+        if(!g||!active(s,actorId,g.id))return fail('需要目标组的有效成员身份');
+        const profile=(s.creatorProfiles||[]).find(profile=>profile.id===payload.creatorProfileId);
+        const fromProject=!!payload.projectId,fromConversation=!!payload.conversationId;
+        if(!profile||fromProject===fromConversation)return fail('请选择达人及唯一的 CRM 或对话业务上下文');
+        if(fromProject){
+          if(!p||p.module!=='crm'||p.groupId!==g.id||p.creatorProfileId!==profile.id||!rights.write)return fail('需要此达人本组 CRM 记录的现行写权限');
+        }else{
+          const c=conversation(s,payload.conversationId),email=c&&project(s,c.projectId);
+          if(!c||email?.groupId!==g.id||c.channelId!==profile.channelId||!conversationAccess(s,actorId,c.id).write)return fail('需要对应达人本组对话的现行跟进权限');
+        }
+        if(!validLabelIds(s,g.id,'creator',payload.labelIds))return fail('仅可应用本组达人标签，标签不可重复或失效');
+        const assignments=s.creatorLabelAssignments||(s.creatorLabelAssignments=[]),current=assignments.find(a=>a.groupId===g.id&&a.creatorProfileId===profile.id);
+        if(current)current.labelIds=[...payload.labelIds];else assignments.push({groupId:g.id,creatorProfileId:profile.id,labelIds:[...payload.labelIds]});
+        message='已更新本组达人打标；CRM、消息与达人详情复用此关联，不影响其他组';break;
       }
       default: return fail('该操作尚未纳入示意引擎：' + type);
     }
-    if(['setGroupPolicy','setRole','addMembership','removeMembership','cancelRemoval','startOrganizationExit','acceptInvite','completeGroupHandoff','completeRemoval'].includes(type))reconcilePaymentReviews(s);
+    if(type==='setGroupPolicy'&&payload.key==='requireT2PaymentRelease'||['setRole','addMembership','removeMembership','cancelRemoval','startOrganizationExit','acceptInvite','completeGroupHandoff','completeRemoval'].includes(type))reconcilePaymentReviews(s);
     s.audit.unshift({ id: id('audit'), actorId, actorName: a.name, action: type, groupId: payload.groupId || p?.groupId || null, objectId: payload.projectId || payload.taskId || payload.uid || payload.recipientId || extra.recipientId || null, message, at: new Date().toISOString() });
     return Object.assign({ ok: true, message }, extra);
   }
@@ -869,5 +1009,5 @@
     if(!g||(uid&&!m))return null;
     return {organization:scopeId==='email'?s.organization:s.organization.quotas[scopeId],group:scopeId==='email'?g:g.quotas[scopeId],member:m?(scopeId==='email'?m:m.quotas[scopeId]):null};
   }
-  return { createState, user, group, project, recipient, membership, active, canManageOrganization, isLead, canRemoveMember, canArchiveGroup, canHandleRemoval, removalObjects, access, conversationAccess, conversationsForGroup, conversationRecipients, conversationSender, usesSharedFunds, balances, act, clone, quotaScopes, quota };
+  return { createState, user, group, project, recipient, membership, active, canManageOrganization, isLead, canRemoveMember, canArchiveGroup, canHandleRemoval, canReadRemovalNotification, removalQueue, removalObjects, archivePaymentBlockers, access, conversationAccess, conversationsForGroup, conversationRecipients, conversationSender, labelsForGroup, canManageLabels, initializeLegacyLabels, usesSharedFunds, balances, act, clone, quotaScopes, quota };
 });
