@@ -123,15 +123,11 @@
   }
 
   function context(s,actorId,opts) {
-    const c = U.context(s,actorId,{...opts,userId:undefined});
-    if (!c.ok) return c;
-    const gids = new Set(c.groups.filter(g => c.groupId === 'all' || g.id === c.groupId).map(g => g.id));
-    const users = s.users.filter(u => c.view === 'personal' ? u.id === actorId : c.groupId === 'all' || [...gids].some(gid => currentMembership(u,gid) || fixtures[u.id + ':' + gid]));
-    const userId = c.view === 'personal' ? actorId : opts.userId ?? 'all';
-    const deny = reason => ({...c,ok:false,reason,userId,groups:[],users:[]});
-    if (c.view === 'personal' && opts.userId != null && !['all',actorId].includes(opts.userId)) return deny('个人视图只能查看本人资源和获准项目');
-    if (userId !== 'all' && !users.some(u => u.id === userId)) return deny('所选账号不在当前获准统计范围');
-    return {...c,userId,users};
+    const c=U.context(s,actorId,opts);
+    if(!c.ok)return c;
+    const gids=new Set(c.groups.filter(g=>c.groupId==='all'||g.id===c.groupId).map(g=>g.id));
+    const users=s.users.filter(u=>c.groupId==='all'||[...gids].some(gid=>currentMembership(u,gid)||fixtures[u.id+':'+gid]));
+    return {...c,users};
   }
   function blank(scope,coverageNote) {
     return {...scope,used:null,limit:null,limitState:'pending',remaining:null,...(coverageNote ? {coverageNote} : {})};
@@ -186,7 +182,7 @@
     const used = s.users.filter(u => u.status === 'ACTIVE' && u.orgRole !== 'owner').length + s.invites.filter(i => i.status === 'PENDING').length;
     return {scopeId:17,used,limit,limitState:limit === null ? 'pending' : 'finite',remaining:limit === null ? null : Math.max(0,limit-used),coverageNote};
   }
-  function query(s,actorId,opts = {}) {
+  function resourceQuery(s,actorId,opts = {}) {
     const c = context(s,actorId,opts), resourcePeriod = opts.resourcePeriod ?? 'current', health = opts.health ?? 'normal';
     const allOrganization = c.view === 'organization' && c.groupId === 'all' && c.userId === 'all';
     const visible = allOrganization ? catalog : columns;
@@ -202,16 +198,16 @@
     if (!['current','cumulative','range'].includes(resourcePeriod)) return unavailable('error','未知资源统计周期');
     if (!['normal','empty','uncovered','delayed','error','forbidden'].includes(health)) return unavailable('error','未知审阅数据状态');
     if (['uncovered','error','forbidden'].includes(health)) return unavailable(health,{uncovered:'该范围缺少可靠的资源归属或周期证据，不视为零',error:'示例数据来源异常，不返回资源用量',forbidden:'当前示例无资源统计权限'}[health],health === 'uncovered');
-    if(resourcePeriod==='range')return rangeQuery(s,actorId,opts,query(s,actorId,{...opts,resourcePeriod:'current'}));
+    if(resourcePeriod==='range')return rangeQuery(s,actorId,opts,resourceQuery(s,actorId,{...opts,resourcePeriod:'current'}));
     const groups = c.groups.filter(g => c.groupId === 'all' || g.id === c.groupId);
     if (health !== 'empty') {
       c.users.filter(u => c.userId === 'all' || u.id === c.userId).forEach(u => {
-        groups.filter(g => currentMembership(u,g.id) || c.view !== 'personal' && fixtures[u.id + ':' + g.id]).forEach(g => {
+        groups.filter(g => currentMembership(u,g.id) || fixtures[u.id + ':' + g.id]).forEach(g => {
           const cells = columns.map(scope => ({...scope,...(scope.scopeId === 21 && resourcePeriod === 'current' ? quotaCell(s,g.id,u.id) : fixtureCell(u.id,g.id,scope,resourcePeriod))}));
           result.matrixRows.push({uid:u.id,groupId:g.id,label:u.name,historical:!currentMembership(u,g.id),cells});
         });
       });
-      if (allOrganization) result.groupRows = groups.map(g => ({uid:null,groupId:g.id,label:g.name,cells:columns.map(scope => ({...scope,...(scope.scopeId === 21 && resourcePeriod === 'current' ? quotaCell(s,g.id) : aggregate(result.matrixRows.filter(row => row.groupId === g.id),scope,resourcePeriod))}))}));
+      result.groupRows = groups.map(g => ({uid:null,groupId:g.id,label:g.name,cells:columns.map(scope => ({...scope,...(scope.scopeId === 21 && resourcePeriod === 'current' ? quotaCell(s,g.id) : aggregate(result.matrixRows.filter(row => row.groupId === g.id),scope,resourcePeriod))}))}));
     }
     const cells = visible.map(scope => {
       if (scope.scopeId === 17) return seatCell(s,resourcePeriod);
@@ -219,7 +215,7 @@
         if (allOrganization) return organizationQuota(s);
         if (c.userId === 'all' && groups.length === 1) return quotaCell(s,groups[0].id);
         if (result.matrixRows.length === 1) return {...result.matrixRows[0].cells.find(cell => cell.scopeId === 21)};
-        return {...aggregate(result.matrixRows,scope,resourcePeriod),coverageNote:'各组分别核算，不相加组上限或建立全局个人上限；按账号与组查看实际可用'};
+        return {...aggregate(result.matrixRows,scope,resourcePeriod),coverageNote:'各组分别核算，不相加组上限；按业务组查看实际可用'};
       }
       const cell = aggregate(result.matrixRows,scope,resourcePeriod);
       return allOrganization ? {...organizationCell(scope,cell.used,resourcePeriod),...(cell.used === null ? {coverageNote:cell.coverageNote} : {})} : cell;
@@ -234,6 +230,10 @@
     }
     result.summary=summarize(cells);
     return result;
+  }
+  function query(s,actorId,opts={}) {
+    const result=resourceQuery(s,actorId,opts);
+    return {...result,context:{...result.context,users:[]},matrixRows:[]};
   }
   return {catalog,query};
 });

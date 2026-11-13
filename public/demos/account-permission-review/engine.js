@@ -39,7 +39,7 @@
         { id: 'u-view', name: '方禾', email: 'fang@xingye.example', orgRole: 'member', status: 'ACTIVE', memberships: [member('g-growth', 'T3', 0)] }
       ],
       groups: [
-        { id: 'g-default', name: '默认组', status: 'ACTIVE', isDefault: true, quotaLimit: 10000, used: 0, quotas:extraQuotas(5000,0,1000,0,'inherit'), paymentEnabled: true, paymentMode: 'shared', fundBalance: 0, fundCycle: 1, fundUsed: 0, fundPending: 0, requireT2PaymentRelease: false, monitorLabelsT2: false, creatorLabelsT2: false },
+        { id: 'g-default', name: '默认组', status: 'ACTIVE', isDefault: true, quotaLimit: 10000, used: 0, quotas:extraQuotas(5000,0,1000,0,'inherit'), paymentEnabled: true, paymentMode: 'dedicated', fundBalance: 33000, fundCycle: 1, fundUsed: 0, fundPending: 0, requireT2PaymentRelease: false, monitorLabelsT2: false, creatorLabelsT2: false },
         { id: 'g-growth', name: '增长团队', status: 'ACTIVE', isDefault: false, quotaLimit: 6000, used: 1400, quotas:extraQuotas(3000,900,600,120), paymentEnabled: true, fundBalance: 8600, fundCycle: 1, fundUsed: 2200, fundPending: 1200, requireT2PaymentRelease: false, monitorLabelsT2: false, creatorLabelsT2: false },
         { id: 'g-brand', name: '品牌团队', status: 'ACTIVE', isDefault: false, quotaLimit: 4000, used: 280, quotas:extraQuotas(2000,100,400,30), paymentEnabled: true, fundBalance: 7200, fundCycle: 1, fundUsed: 800, fundPending: 0, requireT2PaymentRelease: false, monitorLabelsT2: false, creatorLabelsT2: false },
         { id: 'g-empty', name: '新市场团队', status: 'ACTIVE', isDefault: false, quotaLimit: 3000, used: 0, quotas:extraQuotas(5000,0,1000,0,'inherit'), paymentEnabled: false, fundBalance: 0, fundCycle: 0, fundUsed: 0, fundPending: 0, requireT2PaymentRelease: false, monitorLabelsT2: false, creatorLabelsT2: false }
@@ -63,7 +63,7 @@
       senderConfigs: [
         ['u-owner','林知夏','lin'],['u-admin','陈予安','chen'],['u-lead','周明','zhou'],['u-member','许念','xu'],['u-editor','孙可','sun'],['u-brand','乔南','qiao'],['u-view','方禾','fang']
       ].map(([uid,sendName,address])=>({id:'sender-'+uid,uid,sendName,address:address+'@xingye.example'})),
-      policies: { adminRemoveMembers: false, adminArchiveGroups: false, t2Collaborator: false, t2Quota: false, paymentSensitive: false, showTeamQuota: false },
+      policies: { adminRemoveMembers: false, adminArchiveGroups: false, t2Collaborator: false, t2Quota: false, paymentSensitive: false },
       invites: [{ id: 'invite-seed-pending', name: '陆遥', email: 'lu@xingye.example', groupId: 'g-growth', role: 'T3', quotaMode: 'inherit', status: 'PENDING' }],
       tasks: [], handoffs: [], audit: [], notifications: [],
       fundEvents: [
@@ -73,7 +73,8 @@
         ['payment','g-growth',null,2200,'历史支付成功','u-member',-2200,0,-2200],
         ['hold','g-brand',null,800,'历史支付占用','u-brand',0,-800,800],
         ['payment','g-brand',null,800,'历史支付成功','u-brand',-800,0,-800],
-        ['hold','g-growth','pay2',1200,'现有支付单占用','u-member',0,-1200,1200]
+        ['hold','g-growth','pay2',1200,'现有支付单占用','u-member',0,-1200,1200],
+        ['migration_allocate','g-default',null,33000,'上线剩余可用余额初始化分配，非新增充值','u-owner',0,33000,0]
       ].map(([type,groupId,projectId,amount,reason,actorId,walletDelta,groupDelta,pendingDelta],i)=>({id:'fund-seed-'+i,type,groupId,projectId,amount,reason,actorId,at:'2026-10-01T09:0'+i+':00+08:00',walletDelta,unallocatedDelta:walletDelta-pendingDelta-groupDelta,groupDelta,pendingDelta})),
       labels: [
         { id: 'tag1', name: '新品合作', creatorId: 'u-member', groupId: 'g-growth', createdGroupId: 'g-growth', domain: 'monitor', categoryId: 1 },
@@ -155,7 +156,7 @@
     const tasks=s.tasks.filter(t=>t.uid===uid&&t.organizationExit);
     if(departing?.status==='REMOVING'&&tasks.length&&tasks.every(t=>t.status==='COMPLETED')){
       departing.status='REMOVED';
-      s.notifications.push({id:id('notice'),scope:'organization',groupId:null,title:departing.name+' 的组织清退已完成',message:'所有必要组均已处理（实际交接或归档免交接），组织成员关系已结束；历史责任和资金承诺不变',uid:tasks[0].initiatedBy||actorId,at:new Date().toISOString()});
+      s.notifications.push({id:id('notice'),scope:'organization',groupId:null,title:departing.name+' 的组织清退已完成',message:'所有必要组均已处理（实际交接或删除免交接），组织成员关系已结束；历史责任和资金承诺不变',uid:tasks[0].initiatedBy||actorId,at:new Date().toISOString()});
     }
   }
   function exemptArchivedRemovals(s,actorId) {
@@ -165,7 +166,7 @@
       Object.assign(task,{archiveExempt:true,completionReason:'GROUP_ARCHIVED'});affected.add(task.uid);
       const canEnd=task.organizationExit||u.memberships.some(mm=>mm.groupId!==task.groupId&&active(s,u.id,mm.groupId));
       if(canEnd){if(m)m.status='REMOVED';Object.assign(task,{status:'COMPLETED',targetId:null});}
-      if(first)s.notifications.push({id:id('notice'),scope:'group',groupId:task.groupId,title:group(s,task.groupId).name+'：'+u.name+' 归档免交接',message:'业务已封存，无需指定接收人，原责任及资金历史保留。'+(canEnd?'该组已处理。':'成员关系仍须满足原结束条件。'),uid:task.initiatedBy||actorId,at:new Date().toISOString()});
+      if(first)s.notifications.push({id:id('notice'),scope:'group',groupId:task.groupId,title:group(s,task.groupId).name+'：'+u.name+' 删除免交接',message:'业务已封存，无需指定接收人，原责任及资金历史保留。'+(canEnd?'该组已处理。':'成员关系仍须满足原结束条件。'),uid:task.initiatedBy||actorId,at:new Date().toISOString()});
     }
     affected.forEach(uid=>reconcileRemovalProgress(s,uid,actorId));
   }
@@ -293,12 +294,13 @@
   }
   const roundMoney = value => Math.round(value * 100) / 100;
   const validMoney = value => value >= 0 && Number.isSafeInteger(Math.round(value * 100)) && value === roundMoney(value);
-  const usesSharedFunds = (s,gid) => group(s,gid)?.isDefault===true&&group(s,gid).paymentMode==='shared';
+  // Kept for old callers; new spending never reads the organization's unallocated pool.
+  const usesSharedFunds = () => false;
   function balances(s, gid, uid) {
     const orgAvailable = roundMoney(s.organization.walletBalance - s.organization.walletPending);
-    const unallocated = roundMoney(orgAvailable - s.groups.filter(g=>!usesSharedFunds(s,g.id)).reduce((v, g) => v + g.fundBalance, 0));
+    const unallocated = roundMoney(orgAvailable - s.groups.reduce((v, g) => v + g.fundBalance, 0));
     const g = group(s, gid), m = membership(s, uid, gid);
-    const groupRemaining = g?.paymentEnabled && g.status === 'ACTIVE' ? usesSharedFunds(s,gid)?Math.max(0,unallocated):g.fundBalance : 0;
+    const groupRemaining = g?.status === 'ACTIVE' ? g.fundBalance : 0;
     const memberRemaining = m ? m.paymentLimit === null ? Infinity : Math.max(0, roundMoney(m.paymentLimit - (m.paymentUsed || 0) - (m.paymentPending || 0))) : 0;
     return { orgAvailable, unallocated, groupRemaining, memberRemaining, available: Math.min(orgAvailable, groupRemaining, memberRemaining) };
   }
@@ -306,11 +308,27 @@
     s.organization.walletBalance = roundMoney(s.organization.walletBalance + walletDelta);
     s.organization.walletPending = roundMoney(s.organization.walletPending + pendingDelta);
     if (g) { g.fundBalance = roundMoney(g.fundBalance + groupDelta); g.fundPending = roundMoney(g.fundPending + pendingDelta); }
-    const event = { id: id('fund'), type, groupId: g?.id || null, projectId: p?.id || null, fundingMode:p?.fundingMode||(g?(usesSharedFunds(s,g.id)?'shared':'dedicated'):null), amount, reason, actorId, at: new Date().toISOString(), walletDelta, unallocatedDelta: roundMoney(walletDelta - pendingDelta - groupDelta), groupDelta, pendingDelta, ...(relatedEventId ? {relatedEventId} : {}) };
+    const event = { id: id('fund'), type, groupId: g?.id || null, projectId: p?.id || null, fundingMode:p?.fundingMode||(g?'dedicated':null), amount, reason, actorId, at: new Date().toISOString(), walletDelta, unallocatedDelta: roundMoney(walletDelta - pendingDelta - groupDelta), groupDelta, pendingDelta, ...(relatedEventId ? {relatedEventId} : {}) };
     s.fundEvents.push(event);
     return event.id;
   }
-  const acceptsFundingReturn = (g, p) => p.fundingMode!=='shared'&&g?.status === 'ACTIVE' && g.paymentEnabled && g.fundCycle === p.fundingCycle;
+  const acceptsFundingReturn = (g, p) => p.fundingMode!=='shared'&&g?.status === 'ACTIVE' && g.fundCycle === p.fundingCycle;
+  function fundLedger(s,actorId,opts={}) {
+    const deny=reason=>({ok:false,reason,rows:[],summary:null});
+    if(!canManageOrganization(s,actorId))return deny('需要组织所有者或Admin的账目查看资格');
+    if(opts.groupId&&!group(s,opts.groupId))return deny('目标组不存在');
+    const day=at=>{
+      const date=new Date(at);if(!Number.isFinite(date.getTime()))return '';
+      const parts=Object.fromEntries(new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(date).map(p=>[p.type,p.value]));
+      return parts.year+'-'+parts.month+'-'+parts.day;
+    };
+    const valid=value=>!value||/^\d{4}-\d{2}-\d{2}$/.test(value)&&day(value+'T00:00:00+08:00')===value;
+    if(!valid(opts.startDate)||!valid(opts.endDate)||opts.startDate&&opts.endDate&&opts.startDate>opts.endDate)return deny('账目日期范围无效');
+    const rows=s.fundEvents.filter(e=>(!opts.groupId||e.groupId===opts.groupId)&&(!opts.type||opts.type==='all'||e.type===opts.type)&&(!opts.startDate||day(e.at)>=opts.startDate)&&(!opts.endDate||day(e.at)<=opts.endDate)).map(e=>({id:e.id,type:e.type,groupId:e.groupId,projectId:e.projectId,amount:e.amount,reason:e.reason,actorId:e.actorId,at:e.at,date:day(e.at),fundingMode:e.fundingMode||null,relatedEventId:e.relatedEventId||null,walletDelta:e.walletDelta,groupDelta:e.groupDelta,pendingDelta:e.pendingDelta,unallocatedDelta:e.unallocatedDelta}));
+    const summary={count:rows.length,walletDelta:0,groupDelta:0,pendingDelta:0,unallocatedDelta:0};
+    for(const row of rows)for(const key of ['walletDelta','groupDelta','pendingDelta','unallocatedDelta'])summary[key]=roundMoney(summary[key]+row[key]);
+    return {ok:true,scope:opts.groupId||'all',rows,summary};
+  }
   function fundingMembership(s,p) {
     const memberships=user(s,p.fundingUid)?.memberships||[],original=memberships[p.fundingMemberIndex];
     return original?.groupId===p.fundingGroupId?original:memberships.find(m=>m.groupId===p.fundingGroupId);
@@ -385,7 +403,7 @@
       s.notifications.push({id:id('notice'),scope:'group',groupId:task.groupId,title:group(s,task.groupId).name+'：'+departing.name+' 的本组交接已完成',message:'业务接替已完成；个人配额不继承或相加，历史用量及资金承担不变',uid:h.authorizedBy,at});
     }
     departing.status='REMOVED';h.status='COMPLETED';h.completedAt=at;
-    s.notifications.push({id:id('notice'),scope:'organization',groupId:null,title:departing.name+' 的组织清退已完成',message:'全部必要组已处理（实际交接或归档免交接）；未退回已消耗额度，也未释放原支付占用',uid:h.authorizedBy,at});
+    s.notifications.push({id:id('notice'),scope:'organization',groupId:null,title:departing.name+' 的组织清退已完成',message:'全部必要组已处理（实际交接或删除免交接）；未退回已消耗额度，也未释放原支付占用',uid:h.authorizedBy,at});
   }
   function act(s, actorId, type, payload = {}) {
     const a = user(s, actorId);
@@ -421,9 +439,9 @@
         const inv = s.invites.find(x => x.id === payload.inviteId);
         if (!inv || inv.status !== 'PENDING') return fail('邀请已处理或不存在');
         const targetGroup = group(s, inv.groupId);
-        if (!targetGroup || targetGroup.status !== 'ACTIVE') return fail('目标组已归档，邀请配置失效');
+        if (!targetGroup || targetGroup.status !== 'ACTIVE') return fail('目标组已删除，邀请配置失效');
         const groupIds=inv.groupIds||[inv.groupId];
-        if(groupIds.some(gid=>group(s,gid)?.status!=='ACTIVE'))return fail('接替涉及的组已归档，暂不接受；请由组织管理者处理任务');
+        if(groupIds.some(gid=>group(s,gid)?.status!=='ACTIVE'))return fail('接替涉及的组已删除，暂不接受；请由组织管理者处理任务');
         if (s.users.filter(x => x.status === 'ACTIVE').length >= s.organization.seatLimit) return fail('接受时组织席位已满，请先释放席位');
         const h=s.handoffs.find(h=>h.inviteId===inv.id);
         if(inv.handoffId&&(!h||h.status!=='WAITING_FOR_TARGET'||!validHandoffTasks(s,h)))return fail('接替任务资格已变化，请先处理原清退任务');
@@ -460,7 +478,7 @@
       case 'setPolicy': {
         if (!canManageOrganization(s, actorId)) return fail('需要组织管理身份；T2 不能修改组织全局策略');
         if (!Object.hasOwn(s.policies,payload.key)) return fail('未知组织策略');
-        if (['adminRemoveMembers','adminArchiveGroups'].includes(payload.key)&&a.orgRole!=='owner') return fail('仅组织 Owner 可配置 Admin 的成员移除和组归档权限');
+        if (['adminRemoveMembers','adminArchiveGroups'].includes(payload.key)&&a.orgRole!=='owner') return fail('仅组织 Owner 可配置 Admin 的成员移除和组删除权限');
         s.policies[payload.key] = !!payload.value; message = '组织策略已更新，现有对象的系统授权来源实时重新计算'; break;
       }
       case 'setGroupPolicy': {
@@ -527,7 +545,7 @@
         const memberships = payload.organizationExit ? u.memberships.filter(x => x.status === 'ACTIVE' || x.status === 'REMOVING') : [m];
         const ids=beginRemoval(s,actorId,u,memberships,!!payload.organizationExit);
         exemptArchivedRemovals(s,actorId);
-        extra.taskId = ids[0]; extra.taskIds = ids; message = '成员已进入移除处理并立即失权；有效组业务待交接，归档组免交接，关系结束条件不变'; break;
+        extra.taskId = ids[0]; extra.taskIds = ids; message = '成员已进入移除处理并立即失权；有效组业务待交接，已删除组免交接，关系结束条件不变'; break;
       }
       case 'startOrganizationExit': {
         if(!canRemoveMember(s,actorId))return fail('Admin 移除成员策略未开启；仅 Owner 可发起组织清退');
@@ -575,7 +593,7 @@
           if(s.notifications.some(n=>n.scope==='handoff'&&n.taskId===task.id))return;
           s.notifications.push({id:id('notice'),scope:'handoff',groupId:task.groupId,taskId:task.id,title:group(s,task.groupId).name+'：'+u.name+' 的业务待交接',message:'组织清退已生效，请本组有效组长安排同组接收人。这里只处理本组业务，不更改清退决定。',at:new Date().toISOString()});
         });
-        extra.handoffId=h.id;message=h.status==='COMPLETED'&&h.taskIds.every(tid=>s.tasks.find(t=>t.id===tid)?.archiveExempt)?'全部必要组已归档免交接，组织清退已完成；无需接收人或接替邀请':mode==='invite'?'清退已生效；受邀人接受组织邀请后系统自动移交，无额外接替确认':mode==='existing'?'系统已自动完成示例业务接替；个人配额不继承或相加，历史用量与支付占用不变':'清退已生效；各组长可在本组处理业务交接';break;
+        extra.handoffId=h.id;message=h.status==='COMPLETED'&&h.taskIds.every(tid=>s.tasks.find(t=>t.id===tid)?.archiveExempt)?'全部必要组已删除并免交接，组织清退已完成；无需接收人或接替邀请':mode==='invite'?'清退已生效；受邀人接受组织邀请后系统自动移交，无额外接替确认':mode==='existing'?'系统已自动完成示例业务接替；个人配额不继承或相加，历史用量与支付占用不变':'清退已生效；各组长可在本组处理业务交接';break;
       }
       case 'completeHandoff': {
         return fail('统一接替由提交或接受组织邀请自动触发，不提供单独确认执行动作');
@@ -585,7 +603,7 @@
         if (!task || task.status !== 'REMOVING') return fail('任务已结束');
         if(!canRemoveMember(s,actorId))return fail('仅组织 Owner 或获开启成员移除策略的 Admin 可撤销单组移除；组长不能撤销人员关系变更');
         if (task.organizationExit) return fail('组织移出不可撤销');
-        if (group(s, task.groupId)?.status !== 'ACTIVE') return fail('组已归档，不能撤销为有效业务身份');
+        if (group(s, task.groupId)?.status !== 'ACTIVE') return fail('组已删除，不能撤销为有效业务身份');
         membership(s, task.uid, task.groupId).status = 'ACTIVE'; task.status = 'CANCELLED'; message = '退组已撤销；尚无资产移交，无需逆向恢复'; break;
       }
       case 'completeGroupHandoff':
@@ -596,12 +614,12 @@
         if(businessAction?!canHandleRemoval(s,actorId,task):!canRemoveMember(s,actorId))return fail('本组业务交接仅由本组有效组长处理；组织侧结束关系须具备成员移除权限，不能指派业务接收人');
         const h=s.handoffs.find(h=>h.id===task.handoffId),whole=!!h&&h.mode!=='later';
         if(whole)return fail('统一接替由系统按既定接收人自动处理，不通过单组操作改派');
-        if(!businessAction&&((!task.archiveExempt&&removalObjects(s,task).length)||payload.targetId||payload.crmTargetId))return fail('存在业务对象时由本组组长交接；组织侧仅可确认无业务交接项或归档免交接后的关系结束');
+        if(!businessAction&&((!task.archiveExempt&&removalObjects(s,task).length)||payload.targetId||payload.crmTargetId))return fail('存在业务对象时由本组组长交接；组织侧仅可确认无业务交接项或删除免交接后的关系结束');
         if(task.archiveExempt){
-          if(!task.organizationExit&&!user(s,task.uid).memberships.some(mm=>mm.groupId!==task.groupId&&active(s,task.uid,mm.groupId)))return fail('最后一个有效业务组：请先加入另一有效组或改为组织清退；归档免交接不绕过关系结束条件');
+          if(!task.organizationExit&&!user(s,task.uid).memberships.some(mm=>mm.groupId!==task.groupId&&active(s,task.uid,mm.groupId)))return fail('最后一个有效业务组：请先加入另一有效组或改为组织清退；删除免交接不绕过关系结束条件');
           const original=membership(s,task.uid,task.groupId);if(original)original.status='REMOVED';task.status='COMPLETED';
-          s.notifications.push({id:id('notice'),scope:'group',groupId:task.groupId,title:group(s,task.groupId).name+'：'+user(s,task.uid).name+' 的组关系已结束',message:'归档免交接，原业务责任和资金历史保留；现已满足原成员移除决定的结束条件',uid:task.initiatedBy||actorId,at:new Date().toISOString()});
-          reconcileRemovalProgress(s,task.uid,actorId);message='归档免交接，该组已处理；按原移除决定结束关系，原业务责任和资金历史不变';break;
+          s.notifications.push({id:id('notice'),scope:'group',groupId:task.groupId,title:group(s,task.groupId).name+'：'+user(s,task.uid).name+' 的组关系已结束',message:'删除免交接，原业务责任和资金历史保留；现已满足原成员移除决定的结束条件',uid:task.initiatedBy||actorId,at:new Date().toISOString()});
+          reconcileRemovalProgress(s,task.uid,actorId);message='删除免交接，该组已处理；按原移除决定结束关系，原业务责任和资金历史不变';break;
         }
         const departing = user(s, task.uid), target = payload.targetId ? user(s, payload.targetId) : null;
         const objects = s.projects.filter(x => x.groupId === task.groupId);
@@ -625,16 +643,16 @@
         message = businessAction?'本组业务交接已完成；系统按原移除决定结束组关系':'无业务交接项已确认；系统结束成员关系'; break;
       }
       case 'archiveGroup': {
-        if (!g || g.status !== 'ACTIVE') return fail('该组不存在或已归档');
-        if (g.isDefault) return fail('默认组必须始终存在，不可归档');
-        if (!canArchiveGroup(s,actorId,g.id)) return fail('Admin 归档组策略未开启；仅 Owner 可归档业务组');
-        if (payload.confirmIrreversible !== true) return fail('请二次确认归档不可自行解除；异常恢复仅可转线下处理');
+        if (!g || g.status !== 'ACTIVE') return fail('该组不存在或已删除');
+        if (g.isDefault) return fail('默认组必须始终存在，不可删除');
+        if (!canArchiveGroup(s,actorId,g.id)) return fail('Admin 删除组策略未开启；仅 Owner 可删除业务组');
+        if (payload.confirmIrreversible !== true) return fail('请二次确认逻辑删除不可自行恢复，历史业务和账目保留');
+        if (g.fundBalance > 0) return fail('组可用余额尚未归零，请先手动收回余额；删除不会自动清理资金');
         const blocked=archivePaymentBlockers(s,g.id);
-        if(blocked.length)return fail('仍有 '+blocked.length+' 笔需人工推进的资金事项；请先处理或转既有人工渠道，不能直接归档');
+        if(blocked.length)return fail('仍有 '+blocked.length+' 笔需人工推进的资金事项；请先处理或转既有人工渠道，不能直接删除');
         const owner = s.users.find(x => x.orgRole === 'owner');
         if (active(s, owner.id, g.id) && !owner.memberships.some(x => x.groupId !== g.id && x.status === 'ACTIVE' && group(s, x.groupId)?.status === 'ACTIVE')) return fail('组织 Owner 需要保留另一个有效业务组');
-        if (g.fundBalance > 0) extra.fundEventId = recordFunds(s, actorId, 'archive_return', g.fundBalance, { group: g, reason: '归档返还未占用余额', groupDelta: -g.fundBalance });
-        g.paymentEnabled = false; g.status = 'ARCHIVED';exemptArchivedRemovals(s,actorId);message = '组已冻结归档；待交接业务归档免交接，按条件结束关系；未占用余额已返还组织，历史与既有资金承诺保留'; break;
+        g.paymentEnabled = false; g.status = 'ARCHIVED';exemptArchivedRemovals(s,actorId);message = '组已逻辑删除；待交接业务免交接，按条件结束关系；未改变资金，历史与既有承诺保留'; break;
       }
       case 'addCollaborator': {
         if (!p || !rights.manage) return fail('仅对象 Owner/Assignee 或被授予管理协作者能力的人可操作');
@@ -788,23 +806,20 @@
         if (payload.enabled) {
           const amount = Number(payload.amount ?? 0);
           if (!validMoney(amount) || amount > balances(s, g.id).unallocated) return fail('首次分配须为非负金额（最多两位小数），且不得超过组织未分配余额');
-          if(usesSharedFunds(s,g.id)&&amount!==0)return fail('默认组共享组织未分配可用余额，不重复分配专用余额');
           if (amount > 0 && !reason) return fail('首次分配必须填写原因');
-          g.paymentEnabled = true; g.fundCycle += 1;
+          g.paymentEnabled = true; if(!g.fundCycle)g.fundCycle=1;
           if (amount > 0) extra.fundEventId = recordFunds(s, actorId, 'allocate', amount, { group: g, reason, groupDelta: amount });
-          message = usesSharedFunds(s,g.id)?'默认组支付已开通；共享组织未分配可用余额，不占用其他组资金':'组支付已开通；仅可使用该组专用可用余额';
+          message = '组支付新建与草稿提交已开通；仅使用本组获分配的可用余额';
         } else {
-          if (g.fundBalance > 0) extra.fundEventId = recordFunds(s, actorId, 'close_return', g.fundBalance, { group: g, reason: reason || '关闭支付返还未占用余额', groupDelta: -g.fundBalance });
           g.paymentEnabled = false;
-          message = '组支付已关闭；未占用余额返还组织，既有占用保留';
+          message = '已关闭新建与草稿提交；余额和周期不变，已正式提交的单据继续按原规则处理';
         }
         break;
       }
       case 'allocateFunds':
       case 'returnFunds': {
         const amount = Number(payload.amount);
-        if (!g || g.status !== 'ACTIVE' || !g.paymentEnabled || !validMoney(amount) || amount <= 0) return fail('请选择已开通支付的有效组，调整金额须大于 0 且最多两位小数');
-        if(usesSharedFunds(s,g.id))return fail('默认组共享余额没有独立分配或收回动作；已分配到其他组的资金不属于此余额');
+        if (!g || g.status !== 'ACTIVE' || !validMoney(amount) || amount <= 0) return fail('请选择有效组，调整金额须大于 0 且最多两位小数；关闭新建支付不锁住资金管理');
         const reason = String(payload.reason || '').trim(), allocating = type === 'allocateFunds';
         if (!reason) return fail('资金调整必须填写原因');
         if (allocating && amount > balances(s, g.id).unallocated) return fail('组织未分配余额不足，不能超额分配');
@@ -848,7 +863,6 @@
       case 'savePayment': {
         const amount = Number(payload.amount);
         if (!p || p.module !== 'payment' || !rights.write || p.status !== 'DRAFT') return fail('只有有效 Owner/Collaborator 可修改草稿');
-        if(!group(s,p.groupId)?.paymentEnabled)return fail('本组未开通支付，不能保存草稿；原草稿和资金责任保留');
         if (!validMoney(amount) || amount <= 0) return fail('金额必须大于 0 且最多两位小数');
         const selected=payload.recipientId !== undefined ? recipient(s,payload.recipientId) : null;
         if (payload.recipientId !== undefined && !selected) return fail('请选择有效的示例历史收款模板');
@@ -857,7 +871,7 @@
       }
       case 'submitPayment': {
         if (!p || p.module !== 'payment' || !rights.execute || p.status !== 'DRAFT') return fail('正式提交需要 Owner 或显式 can_execute_payment，且对象必须是草稿');
-        if (!group(s, p.groupId)?.paymentEnabled) return fail('本组尚未开通支付，不能正式提交');
+        if (!group(s, p.groupId)?.paymentEnabled) return fail('本组已关闭新建与草稿提交，已有草稿可保存但不能正式或预约提交');
         if (!active(s, p.ownerId, p.groupId)) return fail('Owner 不是同组有效成员，需先完成移交');
         const money = balances(s, p.groupId, p.ownerId), amount = p.paymentAmount;
         if (money.orgAvailable < amount) return fail('组织钱包可用余额不足');
@@ -868,10 +882,10 @@
         p.fundingUid = p.ownerId; p.fundingGroupId = p.groupId; p.fundingCommitted = true; p.submitterId = actorId;
         const decision=paymentReview(s,p);p.reviewSkipReason=decision.reason;
         p.status = decision.required ? 'WAITING_REVIEW' : payload.scheduled ? 'SCHEDULED' : 'FORMAL';
-        p.fundingMode=usesSharedFunds(s,gg.id)?'shared':'dedicated';
+        p.fundingMode='dedicated';
         p.fundingCycle = gg.fundCycle; p.fundingMemberIndex = user(s, p.ownerId).memberships.indexOf(mm);
         mm.paymentPending = roundMoney(mm.paymentPending + amount);
-        extra.fundEventId = recordFunds(s, actorId, 'hold', amount, { group: gg, project: p, reason: '正式提交占用原资金', groupDelta: p.fundingMode==='shared'?0:-amount, pendingDelta: amount });
+        extra.fundEventId = recordFunds(s, actorId, 'hold', amount, { group: gg, project: p, reason: '正式提交占用本组资金', groupDelta: -amount, pendingDelta: amount });
         message = '正式提交已占用 Owner 与所属组金额；实际提交人仅记录执行身份' + (p.status === 'WAITING_REVIEW' ? '，已进入待组长审核' : ''); break;
       }
       case 'cancelPayment': {
@@ -1009,5 +1023,5 @@
     if(!g||(uid&&!m))return null;
     return {organization:scopeId==='email'?s.organization:s.organization.quotas[scopeId],group:scopeId==='email'?g:g.quotas[scopeId],member:m?(scopeId==='email'?m:m.quotas[scopeId]):null};
   }
-  return { createState, user, group, project, recipient, membership, active, canManageOrganization, isLead, canRemoveMember, canArchiveGroup, canHandleRemoval, canReadRemovalNotification, removalQueue, removalObjects, archivePaymentBlockers, access, conversationAccess, conversationsForGroup, conversationRecipients, conversationSender, labelsForGroup, canManageLabels, initializeLegacyLabels, usesSharedFunds, balances, act, clone, quotaScopes, quota };
+  return { createState, user, group, project, recipient, membership, active, canManageOrganization, isLead, canRemoveMember, canArchiveGroup, canHandleRemoval, canReadRemovalNotification, removalQueue, removalObjects, archivePaymentBlockers, access, conversationAccess, conversationsForGroup, conversationRecipients, conversationSender, labelsForGroup, canManageLabels, initializeLegacyLabels, usesSharedFunds, balances, fundLedger, act, clone, quotaScopes, quota };
 });

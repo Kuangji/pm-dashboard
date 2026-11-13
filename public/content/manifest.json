@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-11-12T05:47:37.561Z",
+  "updatedAt": "2026-11-13T09:43:55.700Z",
   "navigation": {
     "docs": [
       {
@@ -103,7 +103,7 @@
                 "name": "dashboard_actor_workload_rules_2026-11-11.md",
                 "path": "02-project-documents/account_permission_collaboration/dashboard_actor_workload_rules_2026-11-11.md",
                 "slug": "02-project-documents/account_permission_collaboration/dashboard_actor_workload_rules_2026-11-11.md",
-                "title": "Dashboard 实际动作与整体统计｜当前生效规则和静态可行性 | dashboard_actor_workload_rules_2026-11-11.md",
+                "title": "Dashboard 实际动作与整体统计｜历史方案和静态可行性 | dashboard_actor_workload_rules_2026-11-11.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
@@ -180,6 +180,16 @@
               },
               {
                 "type": "file",
+                "name": "finance_ledger_mapping_review_2026-11-12.md",
+                "path": "02-project-documents/account_permission_collaboration/finance_ledger_mapping_review_2026-11-12.md",
+                "slug": "02-project-documents/account_permission_collaboration/finance_ledger_mapping_review_2026-11-12.md",
+                "title": "组织与组账目映射核查 | finance_ledger_mapping_review_2026-11-12.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
                 "name": "input_v0.md",
                 "path": "02-project-documents/account_permission_collaboration/input_v0.md",
                 "slug": "02-project-documents/account_permission_collaboration/input_v0.md",
@@ -194,6 +204,16 @@
                 "path": "02-project-documents/account_permission_collaboration/mail_dashboard_conversation_rules_2026-11-11.md",
                 "slug": "02-project-documents/account_permission_collaboration/mail_dashboard_conversation_rules_2026-11-11.md",
                 "title": "Dashboard 邮件趋势与对话沟通｜已确认规则 | mail_dashboard_conversation_rules_2026-11-11.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "monitor_item_responsibility_review_2026-11-12.md",
+                "path": "02-project-documents/account_permission_collaboration/monitor_item_responsibility_review_2026-11-12.md",
+                "slug": "02-project-documents/account_permission_collaboration/monitor_item_responsibility_review_2026-11-12.md",
+                "title": "监控项负责人 responsibleUid 核查 | monitor_item_responsibility_review_2026-11-12.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
@@ -324,6 +344,16 @@
                 "path": "02-project-documents/account_permission_collaboration/管理动作矩阵_评审稿_v0.md",
                 "slug": "02-project-documents/account_permission_collaboration/管理动作矩阵_评审稿_v0.md",
                 "title": "聚星账号权限｜管理动作矩阵评审稿 v0 | 管理动作矩阵_评审稿_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "评审意见收口_2026-11-12.md",
+                "path": "02-project-documents/account_permission_collaboration/评审意见收口_2026-11-12.md",
+                "slug": "02-project-documents/account_permission_collaboration/评审意见收口_2026-11-12.md",
+                "title": "账号权限统一版本｜11-12评审意见收口 | 评审意见收口_2026-11-12.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
