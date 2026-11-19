@@ -1,0 +1,56 @@
+[
+  {
+    "asset": "assets/emplifi-profile-vs-label.png",
+    "source_page": "compare",
+    "source_url": "https://docs.emplifi.io/__attachments/a_915edd0a283eebec9a52a871c51279902856f49b1d578bf5c0b8a9bc41dabb82/Profile%20vs%20Profile%20Label.png?cb=013c47f84bff04ff5c7350312200701c",
+    "type": "official_documentation_screenshot",
+    "caption": "Profile vs Profile Label.png",
+    "inspected_by": "social_brand_models",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "asset": "assets/emplifi-label-multicomparison.png",
+    "source_page": "compare",
+    "source_url": "https://docs.emplifi.io/__attachments/a_be7b639bcc4386aec71b4346aefd9fab275a01bb86d256d56dd505bce98f6b27/Profile%20Label%20Multicomparison.png?cb=16ba6cb070216ff62ab6e5efea4bf422",
+    "type": "official_documentation_screenshot",
+    "caption": "Profile Label Multicomparison.png",
+    "inspected_by": "social_brand_models",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "asset": "assets/emplifi-doc-content-drilldown.png",
+    "source_page": "drill",
+    "source_url": "https://docs.emplifi.io/__attachments/a_a832d2377a8b23cf470ca73f7126a1db32f28c58b40c2e374b0fbd8a11072e55/Unified%20Analytics%20Interactive%20Widget%20samples.png?cb=0b071f63a26345523604bb35cc332db9",
+    "type": "official_documentation_screenshot",
+    "caption": "Unified Analytics Interactive Widget samples.png",
+    "inspected_by": "social_brand_models",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "asset": "assets/emplifi-doc-saved-views.png",
+    "source_page": "views",
+    "source_url": "https://docs.emplifi.io/__attachments/a_5b29e7e036a6dd4203edec9afea4e3463dec4600afda33d1392c1f47100bba70/Savedviews.png?cb=83c4d07028b2c3c83587e97053bcb229",
+    "type": "official_documentation_screenshot",
+    "caption": "Savedviews.png",
+    "inspected_by": "social_brand_models",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "asset": "assets/emplifi-doc-profiles-summary.png",
+    "source_page": "summary",
+    "source_url": "https://docs.emplifi.io/__attachments/a_27ebb823c95beadcce18a864e67a2ab1f6e1465e9245b38fbc6dac965e3b2b4f/Profiles%20Summary.png?cb=0cffbf0786fd349b2b5aeb897d3fe219",
+    "type": "official_documentation_screenshot",
+    "caption": "Profiles Summary.png",
+    "inspected_by": "social_brand_models",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "asset": "assets/emplifi-doc-add-to-board.png",
+    "source_page": "dynamic",
+    "source_url": "https://docs.emplifi.io/__attachments/a_ec2ef4eb46961c1cb9d7bde218e603a5f9b37b8721ec2232236fd10ea8acee13/image-20250204-164210.png?cb=eada67a434a4adabdbdb0ac3ff633b3d",
+    "type": "official_documentation_screenshot",
+    "caption": "image-20250204-164210.png",
+    "inspected_by": "social_brand_models",
+    "observed_date": "2026-11-17"
+  }
+]

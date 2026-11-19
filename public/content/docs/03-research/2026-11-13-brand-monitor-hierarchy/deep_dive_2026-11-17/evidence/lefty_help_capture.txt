@@ -1,0 +1,4 @@
+Source: https://help.lefty.io/en/articles/18250173-showing-and-hiding-metric-cards-on-campaign-and-directory-reports
+Observed: 2026-11-17
+Fetch method: Python urllib, public page HTTP 200. Web extractor failed. Source says Updated this week; absolute publication date unknown.
+摘要：Campaign布局按活动共享，Directory布局按用户保存；卡片可隐藏与恢复，布局选择会影响部分导出列。未登录执行。完整原文不复制，仅保留官方来源与截图。

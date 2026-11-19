@@ -1,0 +1,326 @@
+[
+  {
+    "path": "assets/lefty-marketing-consolidated.jpg",
+    "sha256": "9997ac561c79c47e5f03cd13e2418adea46c4115c8190dff6879fc42a7e3924c",
+    "bytes": 163860,
+    "evidence_id": "L202",
+    "source_page": "https://lefty.io/features/influencer-reporting",
+    "source_assets": [
+      "https://images.prismic.io/lefty/U-LgMMrSzSxF0e2Y_Lefty_Website_DashboardReporting_2ndIllustration.png?auto=format%2Ccompress&fit=max&w=1920",
+      "https://images.prismic.io/lefty/HhbL8aFI4pSQmaSv_Lefty_Website_DashboardReporting_3rdIllustration.png?auto=format%2Ccompress&fit=max&w=1920",
+      "https://images.prismic.io/lefty/6VEiK2zVk81wQrqj_Lefty_Website_DashboardReporting_4thIllustration.png?auto=format%2Ccompress&fit=max&w=1920"
+    ],
+    "visual_status": "official_marketing_images_inspected",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/lefty-marketing-content.jpg",
+    "sha256": "cb49ca58f8315dac6065f02f22a3b1908c2296e29ff054569bac5f30533dee77",
+    "bytes": 87104,
+    "evidence_id": "L202",
+    "source_page": "https://lefty.io/features/influencer-reporting",
+    "source_assets": [
+      "https://images.prismic.io/lefty/U-LgMMrSzSxF0e2Y_Lefty_Website_DashboardReporting_2ndIllustration.png?auto=format%2Ccompress&fit=max&w=1920",
+      "https://images.prismic.io/lefty/HhbL8aFI4pSQmaSv_Lefty_Website_DashboardReporting_3rdIllustration.png?auto=format%2Ccompress&fit=max&w=1920",
+      "https://images.prismic.io/lefty/6VEiK2zVk81wQrqj_Lefty_Website_DashboardReporting_4thIllustration.png?auto=format%2Ccompress&fit=max&w=1920"
+    ],
+    "visual_status": "official_marketing_images_inspected",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/lefty-marketing-export.jpg",
+    "sha256": "191f841cf84deaf70a163e478c1ebb9ddf68037e1ecf6b6fd5f9503ab76bb9b9",
+    "bytes": 110806,
+    "evidence_id": "L202",
+    "source_page": "https://lefty.io/features/influencer-reporting",
+    "source_assets": [
+      "https://images.prismic.io/lefty/U-LgMMrSzSxF0e2Y_Lefty_Website_DashboardReporting_2ndIllustration.png?auto=format%2Ccompress&fit=max&w=1920",
+      "https://images.prismic.io/lefty/HhbL8aFI4pSQmaSv_Lefty_Website_DashboardReporting_3rdIllustration.png?auto=format%2Ccompress&fit=max&w=1920",
+      "https://images.prismic.io/lefty/6VEiK2zVk81wQrqj_Lefty_Website_DashboardReporting_4thIllustration.png?auto=format%2Ccompress&fit=max&w=1920"
+    ],
+    "visual_status": "official_marketing_images_inspected",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/emplifi-label-multicomparison.png",
+    "sha256": "11ddecf8201cb973441737def4b823400f776a3d95feb943c6f63633fab930e6",
+    "bytes": 633559,
+    "evidence_id": "E202",
+    "source_page": "https://docs.emplifi.io/platform/latest/home/compare-profile-labels",
+    "source_assets": [
+      "https://docs.emplifi.io/__attachments/a_be7b639bcc4386aec71b4346aefd9fab275a01bb86d256d56dd505bce98f6b27/Profile%20Label%20Multicomparison.png?cb=16ba6cb070216ff62ab6e5efea4bf422"
+    ],
+    "visual_status": "official_screenshot_inspected_and_documentation_text",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/emplifi-profile-vs-label.png",
+    "sha256": "a7c61006098033b52e5319008ec362fb2b0563f78a6efbaf75510f3acf5b2fdc",
+    "bytes": 275044,
+    "evidence_id": "E203",
+    "source_page": "https://docs.emplifi.io/platform/latest/home/compare-profile-labels",
+    "source_assets": [
+      "https://docs.emplifi.io/__attachments/a_915edd0a283eebec9a52a871c51279902856f49b1d578bf5c0b8a9bc41dabb82/Profile%20vs%20Profile%20Label.png?cb=013c47f84bff04ff5c7350312200701c"
+    ],
+    "visual_status": "official_screenshot_inspected_and_documentation_text",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/emplifi-doc-profiles-summary.png",
+    "sha256": "ae4060189f6d1bd90ab788b3ae096f3bb331bb0c3cd15c1474aca58f7d482148",
+    "bytes": 340102,
+    "evidence_id": "E204",
+    "source_page": "https://docs.emplifi.io/platform/latest/home/create-a-profiles-summary",
+    "source_assets": [
+      "https://docs.emplifi.io/__attachments/a_27ebb823c95beadcce18a864e67a2ab1f6e1465e9245b38fbc6dac965e3b2b4f/Profiles%20Summary.png?cb=0cffbf0786fd349b2b5aeb897d3fe219"
+    ],
+    "visual_status": "official_screenshot_inspected_and_documentation_text",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/emplifi-doc-content-drilldown.png",
+    "sha256": "a65be835bbf3a2f62482c5886f7b82fedc0af54220aec74a250e5d55363c7baf",
+    "bytes": 97707,
+    "evidence_id": "E205",
+    "source_page": "https://docs.emplifi.io/platform/latest/home/drill-into-interactive-widgets",
+    "source_assets": [
+      "https://docs.emplifi.io/__attachments/a_a832d2377a8b23cf470ca73f7126a1db32f28c58b40c2e374b0fbd8a11072e55/Unified%20Analytics%20Interactive%20Widget%20samples.png?cb=0b071f63a26345523604bb35cc332db9",
+      "https://docs.emplifi.io/__attachments/a_57e82536e9e42c4358fb73417168c78ce8cdb7a8e60df13025c33195e8affe7c/Display%20Content%20Hub%20Content.png?cb=22db3aa653929cfebf445476758eae0f"
+    ],
+    "visual_status": "official_screenshot_inspected_and_documentation_text",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/emplifi-doc-saved-views.png",
+    "sha256": "2ac8ee77a40f7c0baebe002ac03e62ee6f5bcc99a0ce54b0e93988b6a4348156",
+    "bytes": 294046,
+    "evidence_id": "E206",
+    "source_page": "https://docs.emplifi.io/platform/latest/home/managing-saved-views",
+    "source_assets": [
+      "https://docs.emplifi.io/__attachments/a_5b29e7e036a6dd4203edec9afea4e3463dec4600afda33d1392c1f47100bba70/Savedviews.png?cb=83c4d07028b2c3c83587e97053bcb229"
+    ],
+    "visual_status": "official_screenshot_inspected_and_documentation_text",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/emplifi-doc-add-to-board.png",
+    "sha256": "0d9331503d7d9e034e8e3665aede63825e17b698dfb78c2e5830c798147b224f",
+    "bytes": 21048,
+    "evidence_id": "E207",
+    "source_page": "https://docs.emplifi.io/platform/latest/home/create-a-dynamic-board-in-unified-analytics",
+    "source_assets": [
+      "https://docs.emplifi.io/__attachments/a_a614d7922fe5ff3773bc4256f65cb0e30795ed61a93091cae614625cb34561fb/UA%20Create%20widget%20with%20AI.png?cb=2f03fe88387ad570bb0b1566a71eb904",
+      "https://docs.emplifi.io/__attachments/a_ec9a08a8ede6dc1743594332264abc134c1be110aba17d06f4e30132b87f21bb/Add%20widget%20to%20a%20board.png?cb=1ff31e9a630a6315a987324ec4af1f73",
+      "https://docs.emplifi.io/__attachments/a_ec2ef4eb46961c1cb9d7bde218e603a5f9b37b8721ec2232236fd10ea8acee13/image-20250204-164210.png?cb=eada67a434a4adabdbdb0ac3ff633b3d"
+    ],
+    "visual_status": "official_screenshot_inspected_and_documentation_text",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/emplifi-tour-01-saved-views.png",
+    "sha256": "e71ad6f6e49196296afa7cde7c6319ecd73f85f7d15e5563f6f57b9f676b7d37",
+    "bytes": 402984,
+    "evidence_id": "UIE201",
+    "source_page": "https://capture.navattic.com/cmi556q9e000004kz6euo8dz0",
+    "source_assets": [],
+    "visual_status": "guided_tour_navigated_and_screenshots_inspected",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/emplifi-tour-05-content-drilldown.png",
+    "sha256": "81a4badb03bab1aa2b311fbab70cb932aaa0b83d0caa7a37b3346a8abe5c9fa7",
+    "bytes": 267269,
+    "evidence_id": "UIE201",
+    "source_page": "https://capture.navattic.com/cmi556q9e000004kz6euo8dz0",
+    "source_assets": [],
+    "visual_status": "guided_tour_navigated_and_screenshots_inspected",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/sprinklr-brand-group-filter.png",
+    "sha256": "a6314599c3373f9112d88e8f0f08074161f1638bff32f7a8b7835f828f28b7f2",
+    "bytes": 880963,
+    "evidence_id": "S201",
+    "source_page": "https://www.sprinklr.com/help/articles/entities/what-are-brand-groups/645dae4fe66f2e36b4518f65",
+    "source_assets": [
+      "https://prod2-sprcdn-assets.sprinklr.com/50400/3466366d-5651-4970-8b1f-993b0cc91c08-1298104377/AddFilter_BrandGroup.png"
+    ],
+    "visual_status": "observed_official_static_screenshot",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/sprinklr-create-dashboard.png",
+    "sha256": "242f4fbe19624f85a2f5dfbfa5c0fae4183c905edacccca679950954da0d456a",
+    "bytes": 130662,
+    "evidence_id": "S203",
+    "source_page": "https://www.sprinklr.com/help/articles/custom-benchmarking-dashboards/create-and-access-custom-dashboards-in-benchmarking/646354958ea3c9635cf36750",
+    "source_assets": [
+      "https://prod2-sprcdn-assets.sprinklr.com/50400/62abb79e-01b2-4d6a-b351-2418d0e1a2b0-1608909902/CreateBenchmarkingDashboard.png"
+    ],
+    "visual_status": "observed_official_static_screenshot",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/sprinklr-create-lens.png",
+    "sha256": "b97a1f643f3769a5cf15fcfb56eac284c4aed1cd1fa0193045a7a095861d0290",
+    "bytes": 373981,
+    "evidence_id": "S204",
+    "source_page": "https://www.sprinklr.com/help/articles/advanced-concepts/explore-lens-in-benchmarking/64a69cf2564e3e25f8040adf",
+    "source_assets": [
+      "https://prod2-sprcdn-assets.sprinklr.com/50400/96bab494-f63d-49e5-92fa-a74c2f605da5-769234245/ExploreLens_Create.png",
+      "https://prod2-sprcdn-assets.sprinklr.com/50400/3ed10b44-5926-416b-9477-8adb4237143c-822758753/DrillBy_Explore.png",
+      "https://prod2-sprcdn-assets.sprinklr.com/50400/335b1dec-2241-41f4-aaca-aecec624c44b-1792482755/ExploreLens_Overlay.png"
+    ],
+    "visual_status": "observed_three_official_static_screenshots",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/sprinklr-select-lens.png",
+    "sha256": "df71feddcdcfd1ca731db7aca3f646fff5137c44f5a638504b478ee550e370c5",
+    "bytes": 1411561,
+    "evidence_id": "S204",
+    "source_page": "https://www.sprinklr.com/help/articles/advanced-concepts/explore-lens-in-benchmarking/64a69cf2564e3e25f8040adf",
+    "source_assets": [
+      "https://prod2-sprcdn-assets.sprinklr.com/50400/96bab494-f63d-49e5-92fa-a74c2f605da5-769234245/ExploreLens_Create.png",
+      "https://prod2-sprcdn-assets.sprinklr.com/50400/3ed10b44-5926-416b-9477-8adb4237143c-822758753/DrillBy_Explore.png",
+      "https://prod2-sprcdn-assets.sprinklr.com/50400/335b1dec-2241-41f4-aaca-aecec624c44b-1792482755/ExploreLens_Overlay.png"
+    ],
+    "visual_status": "observed_three_official_static_screenshots",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/sprinklr-lens-detail.png",
+    "sha256": "f919379c8f7aaabfaa2693fe4ad98fd677933c344e8d8fed655c38733720acb3",
+    "bytes": 172778,
+    "evidence_id": "S204",
+    "source_page": "https://www.sprinklr.com/help/articles/advanced-concepts/explore-lens-in-benchmarking/64a69cf2564e3e25f8040adf",
+    "source_assets": [
+      "https://prod2-sprcdn-assets.sprinklr.com/50400/96bab494-f63d-49e5-92fa-a74c2f605da5-769234245/ExploreLens_Create.png",
+      "https://prod2-sprcdn-assets.sprinklr.com/50400/3ed10b44-5926-416b-9477-8adb4237143c-822758753/DrillBy_Explore.png",
+      "https://prod2-sprcdn-assets.sprinklr.com/50400/335b1dec-2241-41f4-aaca-aecec624c44b-1792482755/ExploreLens_Overlay.png"
+    ],
+    "visual_status": "observed_three_official_static_screenshots",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/meltwater-doc-comparisons.png",
+    "sha256": "778abd66f64170f60bada647d493538cb38d94b491d1a8a83a28395312189948",
+    "bytes": 16196,
+    "evidence_id": "M201",
+    "source_page": "https://community.meltwater.com/singapore-community-106/weekly-product-highlight-new-improved-explore-homepage-2563",
+    "source_assets": [
+      "https://uploads-us-west-2.insided.com/meltwater-en/attachment/c2ef02c3-1735-4b05-8282-841d69ef471b.png",
+      "https://uploads-us-west-2.insided.com/meltwater-en/attachment/fa5d1521-fd7c-4a9e-8e86-83d78b817a52.png"
+    ],
+    "visual_status": "已实际审看2张官方界面截图",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/meltwater-doc-combine-compare-actions.png",
+    "sha256": "da76dff3c30ff055153e4b9879d1448be2cadc5b075def206d172466be4a03af",
+    "bytes": 35154,
+    "evidence_id": "M201",
+    "source_page": "https://community.meltwater.com/singapore-community-106/weekly-product-highlight-new-improved-explore-homepage-2563",
+    "source_assets": [
+      "https://uploads-us-west-2.insided.com/meltwater-en/attachment/c2ef02c3-1735-4b05-8282-841d69ef471b.png",
+      "https://uploads-us-west-2.insided.com/meltwater-en/attachment/fa5d1521-fd7c-4a9e-8e86-83d78b817a52.png"
+    ],
+    "visual_status": "已实际审看2张官方界面截图",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/meltwater-doc-save-as-search.png",
+    "sha256": "f851c80d125cea972593fab8dbc7522531f13db15dfff9e41ddd12114bfb0705",
+    "bytes": 32046,
+    "evidence_id": "M208",
+    "source_page": "https://community.meltwater.com/meltwater-launch-125/best-ways-to-pull-data-in-meltwater-2762",
+    "source_assets": [
+      "https://uploads-us-west-2.insided.com/meltwater-en/attachment/5abae2cb-6a5e-418e-8468-0a1ae83bd8d4.png",
+      "https://uploads-us-west-2.insided.com/meltwater-en/attachment/45e6b165-3844-4e4b-919c-46cb1b5ae35b.png",
+      "https://uploads-us-west-2.insided.com/meltwater-en/attachment/b842d54a-08aa-40f6-97a8-01e53d6ec42f.png"
+    ],
+    "visual_status": "已实际审看3张官方员工截图",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/meltwater-doc-filtered-search-name.png",
+    "sha256": "52407d07d62dcabcc8125ba7e8d68a5c34ba45ad6ac65b924cc26a6abbf09c61",
+    "bytes": 55802,
+    "evidence_id": "M208",
+    "source_page": "https://community.meltwater.com/meltwater-launch-125/best-ways-to-pull-data-in-meltwater-2762",
+    "source_assets": [
+      "https://uploads-us-west-2.insided.com/meltwater-en/attachment/5abae2cb-6a5e-418e-8468-0a1ae83bd8d4.png",
+      "https://uploads-us-west-2.insided.com/meltwater-en/attachment/45e6b165-3844-4e4b-919c-46cb1b5ae35b.png",
+      "https://uploads-us-west-2.insided.com/meltwater-en/attachment/b842d54a-08aa-40f6-97a8-01e53d6ec42f.png"
+    ],
+    "visual_status": "已实际审看3张官方员工截图",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/meltwater-doc-analyze-inputs.png",
+    "sha256": "f00279c283b81837f067acade203e2c8a76ddd8ef875f8db91a2f852e1239243",
+    "bytes": 38812,
+    "evidence_id": "M208",
+    "source_page": "https://community.meltwater.com/meltwater-launch-125/best-ways-to-pull-data-in-meltwater-2762",
+    "source_assets": [
+      "https://uploads-us-west-2.insided.com/meltwater-en/attachment/5abae2cb-6a5e-418e-8468-0a1ae83bd8d4.png",
+      "https://uploads-us-west-2.insided.com/meltwater-en/attachment/45e6b165-3844-4e4b-919c-46cb1b5ae35b.png",
+      "https://uploads-us-west-2.insided.com/meltwater-en/attachment/b842d54a-08aa-40f6-97a8-01e53d6ec42f.png"
+    ],
+    "visual_status": "已实际审看3张官方员工截图",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/meltwater-doc-share-menu.png",
+    "sha256": "64dc400dd87fe7d21a6fabe2dd68e41df8730f9fac97be3f5a12241e37e406d2",
+    "bytes": 3024,
+    "evidence_id": "M211",
+    "source_page": "https://community.meltwater.com/meltwater-product-answers-428/how-do-i-share-a-dashboard-3531",
+    "source_assets": [
+      "https://uploads-us-west-2.insided.com/meltwater-en/attachment/6941e716-406b-4d5d-b3c2-67a973f4afb2.png",
+      "https://embed-ssl.wistia.com/deliveries/de0538774838ecad1b191b557e02f489665da4a9.bin"
+    ],
+    "visual_status": "已审看View/Edit/Share截图和分享视频storyboard；具体选项来自正文",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/meltwater-tour-06-overview-drill.png",
+    "sha256": "2d3c70ee5c665f52b0bfdccb608a6cf13dd5cbcfd085b144b9f5132f2a424311",
+    "bytes": 627760,
+    "evidence_id": "UIM201",
+    "source_page": "https://meltwater.navattic.com/rh6u057m?g=cmvkrx4y5002n02l78d31fyyx&s=0",
+    "source_assets": [],
+    "visual_status": "guided_tour_navigated_and_screenshots_inspected",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/meltwater-tour-08-layout.png",
+    "sha256": "440af128070a8b8710d770d97ec7471097c2e88fcd8951037a4bb8f03a27b723",
+    "bytes": 598354,
+    "evidence_id": "UIM201",
+    "source_page": "https://meltwater.navattic.com/rh6u057m?g=cmvkrx4y5002n02l78d31fyyx&s=0",
+    "source_assets": [],
+    "visual_status": "guided_tour_navigated_and_screenshots_inspected",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/meltwater-public-report-overview.png",
+    "sha256": "b57ea22b28285afed5ab49e27b0cca2e6cfc3e4cda1d7573bad8dad5809f313b",
+    "bytes": 197738,
+    "evidence_id": "UIM202",
+    "source_page": "https://app.meltwater.com/report/public/yR78hxiQteDEnqe8gfDKMrZB/snapshot",
+    "source_assets": [],
+    "visual_status": "public_shared_report_opened_and_drilldown_clicked",
+    "observed_date": "2026-11-17"
+  },
+  {
+    "path": "assets/meltwater-public-report-drilldown.png",
+    "sha256": "d4cba8861c6efcb25622781d82452483195eef1f246a555072eb7b27278491c3",
+    "bytes": 471369,
+    "evidence_id": "UIM202",
+    "source_page": "https://app.meltwater.com/report/public/yR78hxiQteDEnqe8gfDKMrZB/snapshot",
+    "source_assets": [],
+    "visual_status": "public_shared_report_opened_and_drilldown_clicked",
+    "observed_date": "2026-11-17"
+  }
+]

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-11-13T09:43:55.700Z",
+  "updatedAt": "2026-11-19T02:45:35.739Z",
   "navigation": {
     "docs": [
       {
@@ -414,6 +414,107 @@
                 "fileType": "binary",
                 "isText": false,
                 "isImage": false
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "brand_monitor_portfolio",
+            "path": "02-project-documents/brand_monitor_portfolio",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "02-project-documents/brand_monitor_portfolio/README.md",
+                "slug": "02-project-documents/brand_monitor_portfolio/README.md",
+                "title": "品牌监控：关联品牌聚合与定制视图 | README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "brand_product_display_753",
+            "path": "02-project-documents/brand_product_display_753",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "02-project-documents/brand_product_display_753/README.md",
+                "slug": "02-project-documents/brand_product_display_753/README.md",
+                "title": "v7.5.3 品牌商品展现优化 | README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "_sync_inbox.md",
+                "path": "02-project-documents/brand_product_display_753/_sync_inbox.md",
+                "slug": "02-project-documents/brand_product_display_753/_sync_inbox.md",
+                "title": "v7.5.3 品牌商品展现优化｜回流入口 | _sync_inbox.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "demo_review_contract_v0.md",
+                "path": "02-project-documents/brand_product_display_753/demo_review_contract_v0.md",
+                "slug": "02-project-documents/brand_product_display_753/demo_review_contract_v0.md",
+                "title": "v7.5.3 品牌商品展现优化｜审阅 Demo 合同 v0 | demo_review_contract_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "input_v0.md",
+                "path": "02-project-documents/brand_product_display_753/input_v0.md",
+                "slug": "02-project-documents/brand_product_display_753/input_v0.md",
+                "title": "v7.5.3 品牌商品展现优化｜Input | input_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "spec_v0.md",
+                "path": "02-project-documents/brand_product_display_753/spec_v0.md",
+                "slug": "02-project-documents/brand_product_display_753/spec_v0.md",
+                "title": "v7.5.3 品牌商品展现优化｜Spec v0 | spec_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "directory",
+                "name": "archive",
+                "path": "02-project-documents/brand_product_display_753/archive",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "INDEX.md",
+                    "path": "02-project-documents/brand_product_display_753/archive/INDEX.md",
+                    "slug": "02-project-documents/brand_product_display_753/archive/INDEX.md",
+                    "title": "频道品牌与商品 Input 归档 | INDEX.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "input_v0_progressive_2026-11-17.md",
+                    "path": "02-project-documents/brand_product_display_753/archive/input_v0_progressive_2026-11-17.md",
+                    "slug": "02-project-documents/brand_product_display_753/archive/input_v0_progressive_2026-11-17.md",
+                    "title": "频道详情页数据指标扩展｜渐进式 Input v0 | input_v0_progressive_2026-11-17.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
               }
             ]
           },
@@ -30913,6 +31014,1059 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "directory",
+            "name": "2026-11-13-brand-monitor-hierarchy",
+            "path": "03-research/2026-11-13-brand-monitor-hierarchy",
+            "children": [
+              {
+                "type": "file",
+                "name": "01_hypotheses.md",
+                "path": "03-research/2026-11-13-brand-monitor-hierarchy/01_hypotheses.md",
+                "slug": "03-research/2026-11-13-brand-monitor-hierarchy/01_hypotheses.md",
+                "title": "研究假设与验证口径 | 01_hypotheses.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "02_source_plan.md",
+                "path": "03-research/2026-11-13-brand-monitor-hierarchy/02_source_plan.md",
+                "slug": "03-research/2026-11-13-brand-monitor-hierarchy/02_source_plan.md",
+                "title": "来源计划与采集边界 | 02_source_plan.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "03-research/2026-11-13-brand-monitor-hierarchy/README.md",
+                "slug": "03-research/2026-11-13-brand-monitor-hierarchy/README.md",
+                "title": "品牌监控：关联品牌聚合与总—分定制视图 | README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "_plan.md",
+                "path": "03-research/2026-11-13-brand-monitor-hierarchy/_plan.md",
+                "slug": "03-research/2026-11-13-brand-monitor-hierarchy/_plan.md",
+                "title": "执行计划 | _plan.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "_sync_inbox.md",
+                "path": "03-research/2026-11-13-brand-monitor-hierarchy/_sync_inbox.md",
+                "slug": "03-research/2026-11-13-brand-monitor-hierarchy/_sync_inbox.md",
+                "title": "品牌监控关联品牌视图 · Sync Inbox | _sync_inbox.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "brand_monitor_common_context_v1.md",
+                "path": "03-research/2026-11-13-brand-monitor-hierarchy/brand_monitor_common_context_v1.md",
+                "slug": "03-research/2026-11-13-brand-monitor-hierarchy/brand_monitor_common_context_v1.md",
+                "title": "品牌监控调研范围共识 v1 | brand_monitor_common_context_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "调研报告_v1.md",
+                "path": "03-research/2026-11-13-brand-monitor-hierarchy/调研报告_v1.md",
+                "slug": "03-research/2026-11-13-brand-monitor-hierarchy/调研报告_v1.md",
+                "title": "品牌监控：关联品牌聚合与总—分定制视图竞研 v1 | 调研报告_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "调研简报.md",
+                "path": "03-research/2026-11-13-brand-monitor-hierarchy/调研简报.md",
+                "slug": "03-research/2026-11-13-brand-monitor-hierarchy/调研简报.md",
+                "title": "调研简报：关联品牌如何形成总—分视图 | 调研简报.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "directory",
+                "name": "01_raw_data",
+                "path": "03-research/2026-11-13-brand-monitor-hierarchy/01_raw_data",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "creator_marketing_raw.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/01_raw_data/creator_marketing_raw.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/01_raw_data/creator_marketing_raw.md",
+                    "title": "红人营销产品：多品牌数据组织原始采集记录 | creator_marketing_raw.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "enterprise_raw.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/01_raw_data/enterprise_raw.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/01_raw_data/enterprise_raw.md",
+                    "title": "企业级数据组织：Brandwatch / Sprinklr / Meltwater | enterprise_raw.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "rival_iq_raw.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/01_raw_data/rival_iq_raw.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/01_raw_data/rival_iq_raw.md",
+                    "title": "Rival IQ：集合和可定制聚合 | rival_iq_raw.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "social_analytics_raw.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/01_raw_data/social_analytics_raw.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/01_raw_data/social_analytics_raw.md",
+                    "title": "社交分析产品的品牌组织机制：官方文档采集 | social_analytics_raw.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "user_voice_raw.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/01_raw_data/user_voice_raw.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/01_raw_data/user_voice_raw.md",
+                    "title": "用户声音补充：定制报表仍有维护摩擦 | user_voice_raw.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "02_ux_flows",
+                "path": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/README.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/README.md",
+                    "title": "逐产品流程索引 | README.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "brandwatch_flow.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/brandwatch_flow.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/brandwatch_flow.md",
+                    "title": "Brandwatch Consumer Research：文档重建流程 | brandwatch_flow.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "creatoriq_flow.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/creatoriq_flow.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/creatoriq_flow.md",
+                    "title": "CreatorIQ：文档重建流程 | creatoriq_flow.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "emplifi_flow.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/emplifi_flow.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/emplifi_flow.md",
+                    "title": "Emplifi：文档重建流程 | emplifi_flow.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "hootsuite_flow.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/hootsuite_flow.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/hootsuite_flow.md",
+                    "title": "Hootsuite Analytics：文档重建流程 | hootsuite_flow.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "lefty_flow.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/lefty_flow.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/lefty_flow.md",
+                    "title": "Lefty：文档重建流程 | lefty_flow.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "meltwater_flow.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/meltwater_flow.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/meltwater_flow.md",
+                    "title": "Meltwater Explore / Explore+：文档重建流程 | meltwater_flow.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "rival_iq_flow.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/rival_iq_flow.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/rival_iq_flow.md",
+                    "title": "Rival IQ：文档重建流程 | rival_iq_flow.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "sprinklr_flow.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/sprinklr_flow.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/sprinklr_flow.md",
+                    "title": "Sprinklr Benchmarking：文档重建流程 | sprinklr_flow.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "sprout_influencer_flow.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/sprout_influencer_flow.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/sprout_influencer_flow.md",
+                    "title": "Sprout Influencer Marketing：文档重建流程 | sprout_influencer_flow.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "sprout_social_flow.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/sprout_social_flow.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/sprout_social_flow.md",
+                    "title": "Sprout Social：文档重建流程 | sprout_social_flow.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "traackr_flow.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/traackr_flow.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/02_ux_flows/traackr_flow.md",
+                    "title": "Traackr：文档重建流程 | traackr_flow.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "03_teardown",
+                "path": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/README.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/README.md",
+                    "title": "六维拆解索引 | README.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "brandwatch_teardown.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/brandwatch_teardown.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/brandwatch_teardown.md",
+                    "title": "Brandwatch Consumer Research：六维拆解 | brandwatch_teardown.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "creatoriq_teardown.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/creatoriq_teardown.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/creatoriq_teardown.md",
+                    "title": "CreatorIQ：六维拆解 | creatoriq_teardown.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "emplifi_teardown.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/emplifi_teardown.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/emplifi_teardown.md",
+                    "title": "Emplifi：六维拆解 | emplifi_teardown.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "hootsuite_teardown.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/hootsuite_teardown.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/hootsuite_teardown.md",
+                    "title": "Hootsuite Analytics：六维拆解 | hootsuite_teardown.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "lefty_teardown.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/lefty_teardown.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/lefty_teardown.md",
+                    "title": "Lefty：六维拆解 | lefty_teardown.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "meltwater_teardown.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/meltwater_teardown.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/meltwater_teardown.md",
+                    "title": "Meltwater Explore / Explore+：六维拆解 | meltwater_teardown.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "rival_iq_teardown.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/rival_iq_teardown.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/rival_iq_teardown.md",
+                    "title": "Rival IQ：六维拆解 | rival_iq_teardown.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "sprinklr_teardown.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/sprinklr_teardown.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/sprinklr_teardown.md",
+                    "title": "Sprinklr Benchmarking：六维拆解 | sprinklr_teardown.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "sprout_influencer_teardown.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/sprout_influencer_teardown.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/sprout_influencer_teardown.md",
+                    "title": "Sprout Influencer Marketing：六维拆解 | sprout_influencer_teardown.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "sprout_social_teardown.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/sprout_social_teardown.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/sprout_social_teardown.md",
+                    "title": "Sprout Social：六维拆解 | sprout_social_teardown.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "traackr_teardown.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/traackr_teardown.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/03_teardown/traackr_teardown.md",
+                    "title": "Traackr：六维拆解 | traackr_teardown.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "04_matrix",
+                "path": "03-research/2026-11-13-brand-monitor-hierarchy/04_matrix",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "feature_comparison.csv",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/04_matrix/feature_comparison.csv",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/04_matrix/feature_comparison.csv",
+                    "fileType": "table",
+                    "language": "csv",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "feature_comparison.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/04_matrix/feature_comparison.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/04_matrix/feature_comparison.md",
+                    "title": "功能对比矩阵 | feature_comparison.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "05_insights",
+                "path": "03-research/2026-11-13-brand-monitor-hierarchy/05_insights",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "竞品洞察.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/05_insights/竞品洞察.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/05_insights/竞品洞察.md",
+                    "title": "竞品洞察与VDR上游素材 | 竞品洞察.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "decision",
+                "path": "03-research/2026-11-13-brand-monitor-hierarchy/decision",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "decision_memo.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/decision/decision_memo.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/decision/decision_memo.md",
+                    "title": "本轮研究判断 | decision_memo.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "red_team.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/decision/red_team.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/decision/red_team.md",
+                    "title": "对本轮结论的质疑 | red_team.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "主子品牌关系与计算展示_候选形式比较_v1.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/decision/主子品牌关系与计算展示_候选形式比较_v1.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/decision/主子品牌关系与计算展示_候选形式比较_v1.md",
+                    "title": "主子品牌关系、计算与展示：候选形式比较 v1 | 主子品牌关系与计算展示_候选形式比较_v1.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "deep_dive_2026-11-17",
+                "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/README.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/README.md",
+                    "title": "第二轮：Lefty / Sprinklr / Emplifi / Meltwater界面深挖 | README.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "browser_walkthrough.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/browser_walkthrough.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/browser_walkthrough.md",
+                    "title": "官方交互导览实走记录 | browser_walkthrough.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "emplifi.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/emplifi.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/emplifi.md",
+                    "title": "Emplifi：关联品牌集合、总分报表与定制视图的公开界面深挖 | emplifi.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "lefty.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/lefty.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/lefty.md",
+                    "title": "Lefty：跨工作区报告与个人/团队布局 | lefty.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "meltwater.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/meltwater.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/meltwater.md",
+                    "title": "Meltwater：搜索组织、总分分析与定制看板深挖 | meltwater.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "sprinklr.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/sprinklr.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/sprinklr.md",
+                    "title": "Sprinklr 深入核对：品牌集合、总分阅读与定制看板 | sprinklr.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "verification.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/verification.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/verification.md",
+                    "title": "本轮交付验证 | verification.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "界面与操作深挖报告_v1.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/界面与操作深挖报告_v1.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/界面与操作深挖报告_v1.md",
+                    "title": "四家产品的关联品牌组织与定制视图：界面深挖 | 界面与操作深挖报告_v1.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "界面证据导览.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/界面证据导览.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/界面证据导览.md",
+                    "title": "官方界面证据导览 | 界面证据导览.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "directory",
+                    "name": "assets",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "emplifi-doc-add-to-board.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/emplifi-doc-add-to-board.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/emplifi-doc-add-to-board.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "emplifi-doc-content-drilldown.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/emplifi-doc-content-drilldown.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/emplifi-doc-content-drilldown.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "emplifi-doc-profiles-summary.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/emplifi-doc-profiles-summary.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/emplifi-doc-profiles-summary.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "emplifi-doc-saved-views.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/emplifi-doc-saved-views.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/emplifi-doc-saved-views.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "emplifi-label-multicomparison.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/emplifi-label-multicomparison.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/emplifi-label-multicomparison.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "emplifi-profile-vs-label.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/emplifi-profile-vs-label.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/emplifi-profile-vs-label.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "emplifi-tour-01-saved-views.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/emplifi-tour-01-saved-views.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/emplifi-tour-01-saved-views.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "emplifi-tour-05-content-drilldown.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/emplifi-tour-05-content-drilldown.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/emplifi-tour-05-content-drilldown.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "lefty-marketing-consolidated.jpg",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/lefty-marketing-consolidated.jpg",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/lefty-marketing-consolidated.jpg",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "lefty-marketing-content.jpg",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/lefty-marketing-content.jpg",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/lefty-marketing-content.jpg",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "lefty-marketing-export.jpg",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/lefty-marketing-export.jpg",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/lefty-marketing-export.jpg",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "meltwater-doc-analyze-inputs.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/meltwater-doc-analyze-inputs.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/meltwater-doc-analyze-inputs.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "meltwater-doc-combine-compare-actions.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/meltwater-doc-combine-compare-actions.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/meltwater-doc-combine-compare-actions.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "meltwater-doc-comparisons.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/meltwater-doc-comparisons.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/meltwater-doc-comparisons.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "meltwater-doc-filtered-search-name.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/meltwater-doc-filtered-search-name.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/meltwater-doc-filtered-search-name.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "meltwater-doc-save-as-search.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/meltwater-doc-save-as-search.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/meltwater-doc-save-as-search.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "meltwater-doc-share-menu.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/meltwater-doc-share-menu.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/meltwater-doc-share-menu.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "meltwater-public-report-drilldown.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/meltwater-public-report-drilldown.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/meltwater-public-report-drilldown.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "meltwater-public-report-overview.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/meltwater-public-report-overview.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/meltwater-public-report-overview.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "meltwater-tour-06-overview-drill.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/meltwater-tour-06-overview-drill.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/meltwater-tour-06-overview-drill.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "meltwater-tour-08-layout.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/meltwater-tour-08-layout.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/meltwater-tour-08-layout.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "sprinklr-brand-group-filter.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/sprinklr-brand-group-filter.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/sprinklr-brand-group-filter.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "sprinklr-create-dashboard.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/sprinklr-create-dashboard.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/sprinklr-create-dashboard.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "sprinklr-create-lens.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/sprinklr-create-lens.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/sprinklr-create-lens.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "sprinklr-lens-detail.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/sprinklr-lens-detail.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/sprinklr-lens-detail.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "sprinklr-select-lens.png",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/sprinklr-select-lens.png",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/assets/sprinklr-select-lens.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "evidence",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/evidence",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/evidence/README.md",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/evidence/README.md",
+                        "title": "第二轮证据索引 | README.md",
+                        "fileType": "markdown",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "assets_manifest.json",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/evidence/assets_manifest.json",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/evidence/assets_manifest.json",
+                        "fileType": "json",
+                        "language": "json",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "browser_cards.jsonl",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/evidence/browser_cards.jsonl",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/evidence/browser_cards.jsonl",
+                        "fileType": "binary",
+                        "isText": false,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "emplifi_assets.json",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/evidence/emplifi_assets.json",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/evidence/emplifi_assets.json",
+                        "fileType": "json",
+                        "language": "json",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "emplifi_cards.jsonl",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/evidence/emplifi_cards.jsonl",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/evidence/emplifi_cards.jsonl",
+                        "fileType": "binary",
+                        "isText": false,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "evidence_cards.jsonl",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/evidence/evidence_cards.jsonl",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/evidence/evidence_cards.jsonl",
+                        "fileType": "binary",
+                        "isText": false,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "lefty_cards.jsonl",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/evidence/lefty_cards.jsonl",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/evidence/lefty_cards.jsonl",
+                        "fileType": "binary",
+                        "isText": false,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "lefty_help_capture.txt",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/evidence/lefty_help_capture.txt",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/evidence/lefty_help_capture.txt",
+                        "fileType": "text",
+                        "isText": true,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "meltwater_cards.jsonl",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/evidence/meltwater_cards.jsonl",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/evidence/meltwater_cards.jsonl",
+                        "fileType": "binary",
+                        "isText": false,
+                        "isImage": false
+                      },
+                      {
+                        "type": "file",
+                        "name": "sprinklr_cards.jsonl",
+                        "path": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/evidence/sprinklr_cards.jsonl",
+                        "slug": "03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/evidence/sprinklr_cards.jsonl",
+                        "fileType": "binary",
+                        "isText": false,
+                        "isImage": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "evidence",
+                "path": "03-research/2026-11-13-brand-monitor-hierarchy/evidence",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/evidence/README.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/evidence/README.md",
+                    "title": "证据索引 | README.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "creator_cards.jsonl",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/evidence/creator_cards.jsonl",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/evidence/creator_cards.jsonl",
+                    "fileType": "binary",
+                    "isText": false,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "enterprise_cards.jsonl",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/evidence/enterprise_cards.jsonl",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/evidence/enterprise_cards.jsonl",
+                    "fileType": "binary",
+                    "isText": false,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "evidence_cards.jsonl",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/evidence/evidence_cards.jsonl",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/evidence/evidence_cards.jsonl",
+                    "fileType": "binary",
+                    "isText": false,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "nox_brand_static_baseline_2026-11-17.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/evidence/nox_brand_static_baseline_2026-11-17.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/evidence/nox_brand_static_baseline_2026-11-17.md",
+                    "title": "聚星品牌监控：本轮服务端静态核对边界 | nox_brand_static_baseline_2026-11-17.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "root_cards.jsonl",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/evidence/root_cards.jsonl",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/evidence/root_cards.jsonl",
+                    "fileType": "binary",
+                    "isText": false,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "social_cards.jsonl",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/evidence/social_cards.jsonl",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/evidence/social_cards.jsonl",
+                    "fileType": "binary",
+                    "isText": false,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "reviews",
+                "path": "03-research/2026-11-13-brand-monitor-hierarchy/reviews",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "candidate_options_review_2026-11-17.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/reviews/candidate_options_review_2026-11-17.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/reviews/candidate_options_review_2026-11-17.md",
+                    "title": "候选形式比较：审阅与验证 | candidate_options_review_2026-11-17.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "verification.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/reviews/verification.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/reviews/verification.md",
+                    "title": "交付验证记录 | verification.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "synthesis",
+                "path": "03-research/2026-11-13-brand-monitor-hierarchy/synthesis",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "contradictions.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/synthesis/contradictions.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/synthesis/contradictions.md",
+                    "title": "缺口与矛盾复查 | contradictions.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "hypothesis_verdicts.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/synthesis/hypothesis_verdicts.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/synthesis/hypothesis_verdicts.md",
+                    "title": "假设判断 | hypothesis_verdicts.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "research_gaps.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/synthesis/research_gaps.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/synthesis/research_gaps.md",
+                    "title": "未解决问题与追加取证 | research_gaps.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -30949,6 +32103,19 @@
           "业务分组",
           "协作",
           "Input审阅"
+        ]
+      },
+      {
+        "id": "brand-product-display-753",
+        "title": "v7.5.3 品牌商品展现优化",
+        "description": "V06最新收口：商品三组视频Top5合并为唯一完整清单，支持发布时间、播放量、点赞量、评论数排序；完整集合先过滤/排序再分页。四总览和两环图随频道，趋势点桶只筛清单，仅视频TAB。复用原卡片和分页，无新增复杂指标。固定虚构数据。",
+        "path": "demos/brand-product-display-753/index.html",
+        "thumbnail": "/demos/brand-product-display-753/preview.png",
+        "tags": [
+          "频道详情",
+          "品牌商品",
+          "指标扩展",
+          "渐进评审"
         ]
       },
       {

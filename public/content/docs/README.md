@@ -11,6 +11,9 @@
 
 - [爆款视频识别交付包](./02-project-documents/viral_video_identification/README.md) - 需求清单、计算规则、榜单及其他模块改造 SPEC、数据组交接说明
 - [账号权限统一版本](./02-project-documents/account_permission_collaboration/README.md) - 当前 Input、业务故事、11-12 评审收口、资金账目与监控项分工核对
+- [v7.5.3 品牌商品展现优化](./02-project-documents/brand_product_display_753/README.md) - Spec 评审版、研发评审清单和静态 Demo
+
+- [品牌监控：关联品牌聚合与总—分定制视图](./03-research/2026-11-13-brand-monitor-hierarchy/README.md) - [主子品牌关系、计算与展示候选](./03-research/2026-11-13-brand-monitor-hierarchy/decision/主子品牌关系与计算展示_候选形式比较_v1.md)、[两轮界面证据](./03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/界面证据导览.md)；未选型，正式版本号待核定
 
 ## 文档结构
 
@@ -19,6 +22,8 @@
 ├── 01-getting-started/  # 快速开始
 ├── 02-project-documents/  # 项目文档
 │   ├── account_permission_collaboration/  # 账号权限协作
+│   ├── brand_monitor_portfolio/  # 品牌监控产品组合
+│   ├── brand_product_display_753/  # 品牌商品展示页
 │   ├── brand_reputation_radar_752/  # 品牌口碑雷达
 │   ├── channel_search_agent_upgrade/  # 频道搜索Agent升级
 │   ├── monitor_760/  # Monitor 监控功能
@@ -42,7 +47,8 @@
     ├── youtube_channel_nondefault_sort_threshold_audit/  # 频道排序阈值调研
     ├── youtube_to_notebooklm_teardown/  # 视频笔记产品拆解
     ├── 2026-06-30-influencer-marketing-ai-agent-opportunities-2026/  # 网红营销AI机遇研究
-    └── 2026-07-07-q3-video-risk-roi-opportunity-deep-dive/  # Q3视频风险与ROI深挖
+    ├── 2026-07-07-q3-video-risk-roi-opportunity-deep-dive/  # Q3视频风险与ROI深挖
+    └── 2026-11-13-brand-monitor-hierarchy/  # 品牌监控层级调研
 ```
 <!-- CONTENT-TREE-END -->
 
