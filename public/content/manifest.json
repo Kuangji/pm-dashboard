@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-11-19T02:45:35.739Z",
+  "updatedAt": "2026-11-19T06:41:37.072Z",
   "navigation": {
     "docs": [
       {
@@ -485,6 +485,16 @@
                 "path": "02-project-documents/brand_product_display_753/spec_v0.md",
                 "slug": "02-project-documents/brand_product_display_753/spec_v0.md",
                 "title": "v7.5.3 品牌商品展现优化｜Spec v0 | spec_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "spec_v1.md",
+                "path": "02-project-documents/brand_product_display_753/spec_v1.md",
+                "slug": "02-project-documents/brand_product_display_753/spec_v1.md",
+                "title": "v7.5.3 品牌商品展现优化｜Spec v1 | spec_v1.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
@@ -32108,7 +32118,7 @@
       {
         "id": "brand-product-display-753",
         "title": "v7.5.3 品牌商品展现优化",
-        "description": "V06最新收口：商品三组视频Top5合并为唯一完整清单，支持发布时间、播放量、点赞量、评论数排序；完整集合先过滤/排序再分页。四总览和两环图随频道，趋势点桶只筛清单，仅视频TAB。复用原卡片和分页，无新增复杂指标。固定虚构数据。",
+        "description": "第二轮 Spec 评审。YouTube 频道与通用商品详情（当前为 Amazon）展示完整方案，Instagram 仅适用 B01 品牌总数，TikTok 两类详情页仅纳入回归。推广商品区使用一张完整商品表，默认按本频道关联视频总观看量降序。10 个评审点均标注适用平台。",
         "path": "demos/brand-product-display-753/index.html",
         "thumbnail": "/demos/brand-product-display-753/preview.png",
         "tags": [

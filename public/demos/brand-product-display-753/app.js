@@ -9,7 +9,8 @@
   const number = value => typeof value==='number'&&Number.isFinite(value)?value.toLocaleString('zh-CN'):'--';
   const button = (text, action, id='', kind='') => '<button class="btn '+kind+'" data-action="'+action+'" data-id="'+esc(id)+'">'+text+'</button>';
   const tag = (text, kind='') => '<span class="tag '+kind+'">'+esc(text)+'</span>';
-  const ui = {page:'overview', point:'P04', group:'all', query:'', sample:'filled', brandQuery:'', promotion:'', sort:'videoCount', sortDirection:'desc', pageSize:10, productMetadata:'provided', fullProductPage:1, fullProductSize:10, fullProductBrand:'', fullProductSort:'', fullProductSortDirection:'desc', layoutTab:'brand', comparisonView:'performance', trendGrain:'month', trendBrand:'', trendProduct:'', trendStatus:'available', trendSelected:null, locateProducts:false, drawerBrand:null, contentType:'all', mentionType:'all', notes:{}};
+  const defaultProductSort = 'totalViews';
+  const ui = {page:'overview', point:'P04', group:'all', query:'', sample:'filled', brandQuery:'', promotion:'', sort:'videoCount', sortDirection:'desc', pageSize:10, productMetadata:'provided', fullProductPage:1, fullProductSize:10, fullProductBrand:'', fullProductSort:defaultProductSort, fullProductSortDirection:'desc', layoutTab:'brand', comparisonView:'performance', trendGrain:'month', trendBrand:'', trendProduct:'', trendStatus:'available', trendSelected:null, locateProducts:false, drawerBrand:null, contentType:'all', mentionType:'all', notes:{}};
   const statuses = ['未审阅','有疑问','建议调整','本轮无补充'];
   let toastTimer;
   let publicationDrawer=null;
@@ -46,13 +47,13 @@
   }
   const titles = {'channel-publications':'非推广 vs 推广','channel-layout':'频道详情 · 总页面骨架',overview:'先看范围，再逐点讨论',points:'修改点评审清单',brands:'品牌提及 · 线上功能参照',products:'推广商品 · 品牌与视频数示意','product-detail':'商品详情 · 关联视频示意',notes:'本次审阅记录'};
   const descriptions = {
-    'channel-publications':'在原模块内切换观看表现与发布数量，共用品牌TAB统计时间。',
-    'channel-layout':'定位真实频道页面中的修改点；灰块沿现状，橙框为本轮扩展，布局待设计。',
+    'channel-publications':'适用于 YouTube 频道。在原模块内切换观看表现与发布数量，共用品牌 TAB 统计时间。',
+    'channel-layout':'以 YouTube 频道为样例。灰块为已有模块，橙框标出本轮修改。',
     overview:'优先让内容/视频关联到具体品牌和商品。',
     points:'候选分别管理，讨论结果先写入 Input，再同步对应 Demo。',
-    brands:'保留已有品牌列表的指标结构，供后续局部修改对照。',
-    products:'在原商品行补品牌和本频道关联视频数，完整视频在商品详情查看。',
-    'product-detail':'商品详情的完整关联视频、频道筛选与分页；在同一评审框架中查看。',
+    brands:'以 YouTube 品牌表为样例。Instagram 本期适用 B01 品牌总数。',
+    products:'适用于 YouTube 频道。推广商品表默认按本频道关联视频总观看量降序，支持品牌筛选、排序和视频反查。',
+    'product-detail':'适用于通用商品详情（当前为 Amazon）。在「关联视频」查看总览、发布趋势和完整清单。',
     notes:'意见仅在本次页面内保留，导出后可带回讨论。'
   };
   function render() {
@@ -68,7 +69,9 @@
       '<div class="nav-group"><div class="nav-title">审阅记录</div>'+navItem('notes','意见与备注','MessageSquare',String(changedNotes().length))+'</div>'+
       '<div class="nav-note">Input 与 Demo 同步迭代<br>不包含业务故事<br>非真实页面 / 非设计定稿</div></aside>'+
       '<div class="workspace '+(['brands','products','channel-layout','channel-publications'].includes(ui.page)?'baseline-layout':(ui.page==='product-detail'||ui.page==='point'&&['P03','P05','V04','V06'].includes(ui.point))?'association-layout':'')+'"><main class="main" id="main-content" tabindex="-1"><div class="breadcrumbs">'+icon('Layers')+'频道详情页'+icon('ChevronRight')+(['brands','products'].includes(ui.page)?'品牌数据'+icon('ChevronRight')+(ui.page==='brands'?'品牌提及':'推广商品'):ui.page==='point'?'修改点评审':heading)+'</div>'+
-      '<div class="page-header"><div><h1>'+esc(heading)+'</h1><p>'+esc(desc)+'</p></div>'+tag(ui.page==='point'?p.scopeStatus+' · '+p.implementation:ui.page==='brands'?'现有模块 + B01':ui.page==='products'?'现有模块 + P04':ui.page==='product-detail'?'方案示意 · P05':'渐进评审',ui.page==='point'?(p.implementation==='已演示'?'implemented':'pending'):'reference')+'</div>'+
+      '<div class="page-header"><div><h1>'+esc(heading)+'</h1>'+
+      (ui.page==='point'?'<p data-point-platform>适用平台 · '+esc(p.platform)+'</p>':'')+
+      '<p>'+esc(desc)+'</p></div>'+tag(ui.page==='point'?p.scopeStatus+' · '+p.implementation:ui.page==='brands'?'现有模块 + B01':ui.page==='products'?'现有模块 + P04':ui.page==='product-detail'?'方案示意 · P05':'渐进评审',ui.page==='point'?(p.implementation==='已演示'?'implemented':'pending'):'reference')+'</div>'+
       (isBrandReview()?brandPeriodControl()+brandPeriodSummary():'')+pageContent()+'</main>'+rulePanel()+'</div></div>';
     window.ChannelReview = {getState:() => ({...structuredClone(ui),brandPeriod:B.getRange()}),getPoints:() => structuredClone(D.points),navigate};
     if(ui.page==='products'&&ui.locateProducts){ui.locateProducts=false;requestAnimationFrame(()=>{$('#complete-product-brand')?.focus({preventScroll:true});$('.complete-products-module')?.scrollIntoView({block:'start'});});}
@@ -94,9 +97,8 @@
       block('非推广 VS. 推广','V01：原模块内切换「观看表现／发布数量」。观看表现保留逐视频观看量对比；发布数量支持日/周/月、品牌商品筛选与视频抽屉。','navigate','查看双视图示意','channel-publications','wire-publications')+
       block('品牌成本','报价范围 / 合作价格范围 / 付款倾向')+
       '<div class="wire-group"><h3>效率 &amp; 成功率</h3><div class="wire-grid">'+block('合作效率','既有分析卡')+block('合作漏斗','既有分析卡')+'</div></div>'+ 
-      block('推广商品 · Top5 / 商品分类','P04：商品行补品牌、本频道视频数；标题进详情，其余区域开视频抽屉。','navigate','查看推广商品示意','products','wire-products')+
-      block('品牌提及 · 品牌表 / 合作详情','B01：表底品牌总数；P03：合作详情视频卡强展示品牌和商品。详情可带品牌查看推广商品。','navigate','查看品牌提及示意','brands','wire-brands')+
-      block('全部推广商品 · 分页表','P01 / P02：完整清单、品牌筛选、关联视频数、总观看量与互动率排序；此处暂叠加，最终位置待设计。','layoutProducts','查看完整商品表','','wire-complete');
+      block('推广商品 · 完整商品表 / 商品分类','P01 / P02 / P04：原推广商品区首屏展示可排序的完整商品表，默认按本频道关联视频总观看量降序。保留品牌筛选、商品分类和本频道视频抽屉。','layoutProducts','查看推广商品','','wire-products')+
+      block('品牌提及 · 品牌表 / 合作详情','B01：表底品牌总数；P03：合作详情视频卡强展示品牌和商品。详情可带品牌查看推广商品。','navigate','查看品牌提及示意','brands','wire-brands');
     else if(ui.layoutTab==='content') panel=
       '<p class="caption">前置区域按当前代码顺序概括；线上留存实测只覆盖末尾视频列表。模块可能因权限/数据条件隐藏。</p>'+block('内容类型 / 统计范围','沿现有筛选区')+block('基本数据','既有内容表现指标区')+block('互动','既有互动图表区')+block('发布分析','发布时间表 / 发布频率')+block('频道标签','有标签数据时显示')+
       block('内容数据 · 视频列表','P03：沿用现有视频卡，仅增加品牌/商品数量标记；点击在关联抽屉中展开。','point','查看双TAB关联方案','P03','wire-content')+
@@ -113,23 +115,24 @@
   }
   function overview() {
     return '<section class="surface section"><h2>版本目标</h2><p>为频道详情页做数据指标扩展，范围是品牌—商品。最高优先解决：从内容/视频看清关联品牌和商品。</p>'+
-      '<dl><div class="scope-line"><dt>优先方式</dt><dd>优先扩充现有内容列表/视频卡，复用已收录的品牌、商品关系；商品清单和表现指标随后讨论。</dd></div>'+
-      '<div class="scope-line"><dt>新增模块</dt><dd>先说明它解决什么问题、比现有模块多提供什么价值，再确认是否加入。</dd></div>'+
-      '<div class="scope-line"><dt>推进方式</dt><dd>调研与讨论收口一点 → 渐进式 Input 记录一点 → Demo 实现一点。</dd></div></dl></section>'+
+      '<dl><div class="scope-line"><dt>YouTube</dt><dd>频道详情覆盖视频关联、品牌数据时间、品牌总数、推广商品和频道发布数量。</dd></div>'+
+      '<div class="scope-line"><dt>通用商品详情</dt><dd>当前为 Amazon。「关联视频」覆盖频道筛选、总览与占比、发布趋势和可排序的完整清单。</dd></div>'+
+      '<div class="scope-line"><dt>Instagram</dt><dd>本期仅 B01 品牌总数，沿用现有品牌表统计范围和分页总数。</dd></div>'+
+      '<div class="scope-line"><dt>TikTok</dt><dd>频道详情与 TikTok Shop 商品详情仅纳入回归检查。</dd></div></dl></section>'+
       '<section class="section"><div class="section-title"><h2>先认识已有模块</h2>'+tag('仅作参照')+'</div><div class="module-links">'+
       '<button class="module-link" data-page="brands">'+icon('Tags')+'<h3>品牌提及</h3><p>已有品牌、视频数、观看量、互动率和最近发布时间。</p><span class="inline">查看简化参照 '+icon('ArrowRight')+'</span></button>'+
-      '<button class="module-link" data-page="products">'+icon('Package')+'<h3>推广商品</h3><p>已有商品 Top5、资料、价格和分类；观看字段存在缺失。</p><span class="inline">查看简化参照 '+icon('ArrowRight')+'</span></button></div></section>'+
-      notice('本轮推进商品列表与详情清单','P04商品行补品牌与本频道视频数；P05商品详情增加完整分页视频和频道筛选。P03双TAB关联方案继续保留；P01完整商品清单本轮已叠加；P02总观看量与互动率已补列并支持排序。')+
+      '<button class="module-link" data-page="products">'+icon('Package')+'<h3>推广商品</h3><p>完整商品表默认按总观看量降序，支持品牌筛选和查看关联视频。</p><span class="inline">查看简化参照 '+icon('ArrowRight')+'</span></button></div></section>'+
+      notice('推广商品表','原推广商品区用一张完整商品表呈现商品，默认按本频道关联视频总观看量降序，表格下方保留商品分类。')+
       '<section class="section"><div class="section-title"><h2>逐点展开</h2>'+button('查看全部修改点','navigate','points')+'</div>'+pointList(D.points.slice(0,4))+'</section>';
   }
   function pointList(points) {
     if (!points.length) return '<div class="empty">'+icon('Search')+'没有匹配的修改点</div>';
-    return '<div class="point-list">'+points.map(p => '<article class="point-row" data-point="'+p.id+'"><div class="point-id">'+p.id+'</div><div><div class="review-meta">'+tag(D.groups[p.group])+tag(p.scopeStatus,p.implementation==='已演示'?'implemented':'pending')+tag(p.priority)+'</div><h3>'+esc(p.title)+'</h3><p>'+esc(p.value)+'</p><div class="placement">修改位置：'+esc(p.placement)+'</div></div>'+button('进入评审 '+icon('ChevronRight'),'point',p.id)+'</article>').join('')+'</div>';
+    return '<div class="point-list">'+points.map(p => '<article class="point-row" data-point="'+p.id+'"><div class="point-id">'+p.id+'</div><div><div class="review-meta">'+tag(D.groups[p.group])+tag(p.scopeStatus,p.implementation==='已演示'?'implemented':'pending')+tag(p.priority)+'</div><h3>'+esc(p.title)+'</h3><div class="placement" data-point-platform>适用平台 · '+esc(p.platform)+'</div><p>'+esc(p.value)+'</p><div class="placement">修改位置：'+esc(p.placement)+'</div></div>'+button('进入评审 '+icon('ChevronRight'),'point',p.id)+'</article>').join('')+'</div>';
   }
   function pointsPage() {
     const filtered = D.points.filter(p => (ui.group==='all'||p.group===ui.group)&&[p.id,p.title,p.value,p.placement].join(' ').toLowerCase().includes(ui.query.toLowerCase()));
     return '<div class="filterbar"><input id="point-query" type="search" aria-label="搜索修改点" placeholder="搜索指标或修改位置" value="'+esc(ui.query)+'"><label for="point-group">范围<select id="point-group"><option value="all">全部范围</option>'+Object.entries(D.groups).map(([key,value])=>'<option value="'+key+'" '+(ui.group===key?'selected':'')+'>'+value+'</option>').join('')+'</select></label><span class="muted" role="status">'+filtered.length+' 项</span></div>'+
-      pointList(filtered)+'<p class="caption">P03双TAB关联方案已演示、待评审；P01完整商品清单已叠加，P02指标列已补齐。B01低优先级已演示，P04/P05商品列表与详情清单已演示；S01品牌TAB时间选择器已确认并演示，不跨TAB；V01/V04发布能力、V06商品视频模块频道联动已确认并演示。</p>';
+      pointList(filtered)+'<p class="caption">P03双TAB关联方案已演示、待评审；P01完整商品表位于原推广商品区，P02默认按本频道关联视频总观看量降序。B01低优先级已演示，P04/P05商品列表与详情清单已演示；S01品牌TAB时间选择器已确认并演示，不跨TAB；V01/V04发布能力、V06商品视频模块频道联动已确认并演示。</p>';
   }
   function pointPage() {
     const p=point();
@@ -137,12 +140,12 @@
     if (p.id==='V01') return channelPublications();
     if (['V04','V06'].includes(p.id)) return productDetailDemo();
     if (p.id==='S01') return timeScopeDemo();
-    if (p.id==='P02') return notice('P02 · 商品表现指标列','完整商品表补本频道关联视频总观看量与互动率；点击表头降序/升序，均播先不加。数据为同一完整关联集合的固定模拟聚合。')+productBaseline();
-    if (p.id==='P01') return notice('P01 · 全部推广商品','保留Top5和品牌表，完整商品清单先直接叠加，布局由设计阶段调整。')+productBaseline();
+    if (p.id==='P02') return notice('P02 · 商品表现指标与排序','推广商品表默认按本频道关联视频总观看量降序。通过两个表头可切换总观看量或互动率排序，先筛选和排序，再分页。')+productBaseline();
+    if (p.id==='P01') return notice('P01 · 推广商品完整表','在原推广商品区查看完整清单。可以按商品所属品牌筛选或从品牌合作详情带入品牌。')+productBaseline();
     if (p.id==='P04') return notice('P04 · 商品列表品牌与视频数','品牌在商品资料区补充；点击标题进商品详情；其余区域打开本频道该商品视频抽屉。')+productBaseline();
     if (p.id==='P05') return productDetailDemo();
     if (p.id==='P03') return notice('P03 · 双TAB关联方案','品牌数据在卡下直接展示；内容数据只加标记，点击进入右侧抽屉。切换TAB比较同一组视频的呈现。')+'<div id="association-demo">'+window.ChannelAssociations.page()+'</div>';
-    if (p.implementation==='已演示') return notice('B01 已确认并同步 Demo','低优先级：品牌表底部左侧显示当前筛选品牌总数，右侧保留分页；标题不加数量。')+brandBaseline();
+    if (p.implementation==='已演示') return notice('B01 · 品牌总数','下方用 YouTube 样例演示表底左侧总数与右侧分页。Instagram 复用该展示方式，直接取现有品牌表的分页总数，沿用原统计范围。')+brandBaseline();
     return notice('本修改点尚未实现','先确认需要解决的判断，再决定字段与呈现。审阅意见不会自动变成已确认需求。',true)+
       '<section class="surface section"><div class="contract-row"><div class="label">修改位置</div><p>'+esc(p.placement)+'</p></div>'+
       '<div class="contract-row"><div class="label">当前已有</div><p>'+esc(p.current)+'</p></div>'+
@@ -173,7 +176,7 @@
     return notice('S01 · 仅品牌数据TAB内统一时间','本轮新增局部时间选择器，统一品牌、商品内容统计和对应列表/抽屉；不做跨TAB全局统一。切换上方范围可查看模拟联动。')+
       '<section class="surface section" data-scope-policy><h2>一个品牌TAB，共用一个时间值</h2><div class="table-wrap"><table><thead><tr><th>作用位置</th><th>行为</th></tr></thead><tbody>'+[
         ['品牌提及与合作详情','品牌数、提及视频及表现随时间更新'],
-        ['商品Top5 / 分类 / 完整表','在完整范围集合上更新列表、总数、指标与分类'],
+        ['推广商品表 / 商品分类','在完整范围集合上更新列表、总数、指标与分类'],
         ['本频道商品视频抽屉','继承品牌TAB时间，视频数与所开清单一致'],
         ['其他TAB / 独立商品详情','保持各自原范围，不受本选择器影响']
       ].map(row=>'<tr>'+row.map(value=>'<td>'+value+'</td>').join('')+'</tr>').join('')+'</tbody></table></div><p class="caption">仅使用时间选项，不加入近N内容。6M按日历月示意，不视为固定180天；生产日期字段与接口范围仍待接入。</p><div class="inline">'+button('查看品牌提及','navigate','brands')+button('查看推广商品','navigate','products')+'</div></section>'+
@@ -210,7 +213,7 @@
     const context='当前频道：星野数码评测 · '+B.label()+(ui.trendBrand?' · '+D.brands.find(b=>b.id===ui.trendBrand)?.name:' · 全部品牌')+(ui.trendProduct?' · '+D.products.find(p=>p.id===ui.trendProduct)?.name:' · 全部商品');
     const publication='<div class="filterbar publication-filters"><label for="channel-trend-brand">品牌<select id="channel-trend-brand"><option value="">全部品牌</option>'+D.brands.map(b=>'<option value="'+b.id+'" '+(ui.trendBrand===b.id?'selected':'')+'>'+esc(b.name)+'</option>').join('')+'</select></label><label for="channel-trend-product">商品<select id="channel-trend-product"><option value="">全部商品</option>'+products.map(p=>'<option value="'+p.id+'" '+(ui.trendProduct===p.id?'selected':'')+'>'+esc(p.name)+'</option>').join('')+'</select></label>'+((ui.trendBrand||ui.trendProduct)?button('清除趋势条件','clearTrendFilters'):'')+'</div>'+
       window.PublicationTrend.render({id:'channel-publications',title:'关联内容发布数量',rows,start:range.start,end:range.end,grain:ui.trendGrain,context,unavailable:ui.trendStatus==='unavailable',selected:ui.trendSelected,embedded:true})+
-      '<p class="caption">品牌/商品条件仅作用发布数量及其视频查看，不影响观看表现、主表或Top5。</p>';
+      '<p class="caption">品牌和商品条件仅作用发布数量及其视频查看。</p>';
     const tabs=[['performance','观看表现'],['publications','发布数量']];
     return notice('V01 · 原模块内扩展发布数量','共用「非推广 vs 推广」图卡，切换视图查看不同指标。观看表现保留线上结构，使用独立固定虚构样例；发布数量按完整已收录关联样例去重计数，含仅品牌内容。')+
       '<div class="review-baseline-tools"><label for="channel-trend-state">图表样例 <select id="channel-trend-state">'+[['available','有记录'],['empty','无记录'],['unavailable','数据未提供']].map(([v,t])=>'<option value="'+v+'" '+(ui.trendStatus===v?'selected':'')+'>'+t+'</option>').join('')+'</select></label><span class="muted">虚构集合 · 示例基准日2026-11-17</span></div>'+
@@ -278,14 +281,12 @@
       '<div class="online-chart-legend">'+categories.map((c,i)=>'<span class="online-legend-item"><i style="background:'+colors[i]+'"></i><span class="num">'+c.percent+'%</span> '+esc(c.name)+' <em>('+c.count+')</em></span>').join('')+'</div>';
   }
   function productBaseline() {
-    const R=window.ProductReviewData;
-    const topProducts=B.products().filter(p=>productMetricValue(p,'totalViews')!==null).sort((a,b)=>compareProductMetric(a,b,'totalViews','desc')).slice(0,5);
-    return notice('P04 · 品牌数据 → 推广商品','保留双卡、商品行与分类图；补品牌和本频道视频数。标题打开商品详情，其余区域打开本频道关联视频抽屉；完整表另补总观看量与互动率及排序。')+
-      baselineTools('products')+'<div class="review-baseline-tools"><label for="product-metadata-state">商品资料样例 <select id="product-metadata-state"><option value="provided" '+(ui.productMetadata==='provided'?'selected':'')+'>已提供品牌和视频数</option><option value="missing" '+(ui.productMetadata==='missing'?'selected':'')+'>品牌与视频数缺失</option></select></label></div><section class="online-module" data-live-module="products">'+liveModuleHeading('推广商品')+
-      '<div class="online-product-grid"><div class="online-card online-product-card"><h3>TOP5视频观看量最多</h3>'+
-      (ui.sample==='empty'||!topProducts.length?'<div class="online-no-data">'+(ui.sample==='empty'?'暂无数据':'暂无可排序的观看量数据')+'</div>':'<div class="online-product-list">'+topProducts.map(p=>{const b=ui.productMetadata==='missing'?null:D.brands.find(b=>b.id===p.brandId);const count=ui.productMetadata==='missing'?null:B.count(p.id);return '<div class="product-item channel-product-row" data-product-id="'+p.id+'" data-product-card data-action="productVideos" data-id="'+p.id+'" tabindex="0" aria-haspopup="dialog" aria-label="查看'+esc(p.name)+'的本频道关联视频"><div class="online-product-image-link"><img class="online-product-image" src="'+p.image+'" alt="'+esc(p.name)+'"></div><div class="online-product-info"><a href="'+R.detailHref(p.id)+'" target="_blank" rel="noopener" class="online-product-title" title="'+esc(p.name)+'">'+esc(p.name)+'</a><div class="online-product-brand">品牌：'+(b?'<span>'+esc(b.name)+'</span>':'--')+'</div><span class="online-product-category" title="'+esc(p.category)+'">'+esc(p.category)+'</span><p class="online-product-price">'+esc(p.price)+'</p></div><div class="online-product-data product-association-data">'+(count===null?'<span class="product-missing-video-count">本频道视频 --</span>':'<button class="product-channel-video-count" data-action="productVideos" data-id="'+p.id+'" aria-haspopup="dialog" aria-label="查看本频道关联的'+count+'条视频">本频道视频 <strong>'+count+'</strong></button>')+'<span class="product-existing-view-count"><span class="play-circle" aria-hidden="true">▷</span><span class="product-top-views" title="本频道关联视频总观看量">'+number(productMetricValue(p,'totalViews'))+'</span></span></div></div>';}).join('')+'</div>')+
-      '<p class="product-list-scope">本频道视频数：'+esc(B.label())+'已收录关联，按视频去重。</p></div><div class="online-card online-category-card"><h3>商品分类</h3>'+(ui.sample==='empty'?'<div class="online-no-data">暂无数据</div>':categoryDonut())+'</div></div></section>'+
-      '<p class="caption">评审说明：Top5保留现有标题与展示，按所选时间内全部商品的本频道关联视频总观看量降序取前5；缺失不参排，不新增排序控件。完整表可独立选择排序。示例价格以美元展示，币种及缺失口径不在本轮改动。</p>'+completeProducts();
+    return notice('P04 · 品牌数据 → 推广商品','商品行显示品牌和本频道视频数。点击标题进入商品详情，点击其余区域打开本频道关联视频抽屉。')+
+      baselineTools('products')+
+      '<div class="review-baseline-tools"><label for="product-metadata-state">商品资料样例 <select id="product-metadata-state"><option value="provided" '+(ui.productMetadata==='provided'?'selected':'')+'>已提供品牌和视频数</option><option value="missing" '+(ui.productMetadata==='missing'?'selected':'')+'>品牌与视频数缺失</option></select></label></div>'+
+      '<section class="online-module" data-live-module="products">'+liveModuleHeading('推广商品')+
+      completeProducts()+
+      '<div class="online-card online-category-card"><h3>商品分类</h3>'+(ui.sample==='empty'?'<div class="online-no-data">暂无数据</div>':categoryDonut())+'</div></section>';
   }
   function productMetricValue(p,key) {
     const value=B.metric(p.id,key);
@@ -305,12 +306,12 @@
   function completeProducts() {
     const R=window.ProductReviewData,all=ui.sample==='empty'?[]:B.products();
     const items=all.filter(p=>{const id=ui.productMetadata==='missing'?'':p.brandId||'';return !ui.fullProductBrand||(ui.fullProductBrand==='__unknown__'?!id:id===ui.fullProductBrand);});
-    if(ui.fullProductSort)items.sort((a,b)=>compareProductMetric(a,b,ui.fullProductSort,ui.fullProductSortDirection));
+    items.sort((a,b)=>compareProductMetric(a,b,ui.fullProductSort,ui.fullProductSortDirection));
     const pages=Math.max(1,Math.ceil(items.length/ui.fullProductSize));ui.fullProductPage=Math.min(ui.fullProductPage,pages);
     const rows=items.slice((ui.fullProductPage-1)*ui.fullProductSize,ui.fullProductPage*ui.fullProductSize);
-    return '<section class="online-module complete-products-module" data-live-module="complete-products">'+liveModuleHeading('全部推广商品')+'<div class="online-card"><div class="complete-products-toolbar"><p class="product-list-scope">当前频道：星野数码评测 · '+esc(B.label())+'已收录关联商品</p><div class="complete-products-brand-controls"><label for="complete-product-brand">商品品牌</label><select id="complete-product-brand"><option value="">全部品牌</option>'+D.brands.map(b=>'<option value="'+b.id+'" '+(ui.fullProductBrand===b.id?'selected':'')+'>'+esc(b.name)+'</option>').join('')+'<option value="__unknown__" '+(ui.fullProductBrand==='__unknown__'?'selected':'')+'>未知品牌</option></select>'+(ui.fullProductBrand?button('清除品牌','clearProductBrand'):'')+'</div></div><div class="complete-products-scroll" role="region" aria-label="全部推广商品表" tabindex="0"><table class="complete-products-table"><thead><tr><th>商品</th><th>品牌</th><th>分类</th><th>价格</th><th>本频道关联视频</th>'+productMetricHeader('本频道关联视频总观看量','totalViews')+productMetricHeader('互动率','engagementRatePct')+'</tr></thead><tbody>'+
+    return '<div class="online-card complete-products-module" data-live-module="complete-products"><div class="complete-products-toolbar"><p class="product-list-scope">当前频道：星野数码评测 · '+esc(B.label())+'已收录关联商品</p><div class="complete-products-brand-controls"><label for="complete-product-brand">商品品牌</label><select id="complete-product-brand"><option value="">全部品牌</option>'+D.brands.map(b=>'<option value="'+b.id+'" '+(ui.fullProductBrand===b.id?'selected':'')+'>'+esc(b.name)+'</option>').join('')+'<option value="__unknown__" '+(ui.fullProductBrand==='__unknown__'?'selected':'')+'>未知品牌</option></select>'+(ui.fullProductBrand?button('清除品牌','clearProductBrand'):'')+'</div></div><div class="complete-products-scroll" role="region" aria-label="全部推广商品表" tabindex="0"><table class="complete-products-table"><thead><tr><th>商品</th><th>品牌</th><th>分类</th><th>价格</th><th>本频道关联视频</th>'+productMetricHeader('本频道关联视频总观看量','totalViews')+productMetricHeader('互动率','engagementRatePct')+'</tr></thead><tbody>'+
       (rows.length?rows.map(p=>{const b=ui.productMetadata==='missing'?null:D.brands.find(b=>b.id===p.brandId);const count=ui.productMetadata==='missing'?null:B.count(p.id);return '<tr class="channel-product-row" data-product-id="'+p.id+'" data-action="productVideos" data-id="'+p.id+'" tabindex="0" aria-haspopup="dialog" aria-label="查看'+esc(p.name)+'的本频道关联视频"><td><div class="complete-product-name"><img src="'+p.image+'" alt=""><a class="complete-product-title" href="'+R.detailHref(p.id)+'" target="_blank" rel="noopener">'+esc(p.name)+'</a></div></td><td>'+(b?'<span class="complete-product-brand">'+esc(b.name)+'</span>':'<span class="missing">--</span>')+'</td><td><span class="complete-product-category" title="'+esc(p.category)+'">'+esc(p.category)+'</span></td><td>'+esc(p.price)+'</td><td>'+(count===null?'<span class="complete-product-count-missing">--</span>':'<button class="complete-product-video-count" data-action="productVideos" data-id="'+p.id+'" aria-haspopup="dialog" aria-label="查看本频道关联的'+count+'条视频">'+count+'</button>')+'</td><td class="complete-product-total-views num">'+(productMetricValue(p,'totalViews')===null?'<span class="missing">--</span>':number(productMetricValue(p,'totalViews')))+'</td><td class="complete-product-engagement-rate num">'+(productMetricValue(p,'engagementRatePct')===null?'<span class="missing">--</span>':productMetricValue(p,'engagementRatePct').toFixed(2)+'%')+'</td></tr>';}).join(''):'<tr><td colspan="7"><div class="online-no-data">'+(ui.fullProductBrand?'当前品牌筛选下暂无可展示商品':'暂无已收录推广商品')+'</div></td></tr>')+
-      '</tbody></table></div><div class="product-video-pagination"><span class="complete-product-total" aria-live="polite">共 '+items.length+' 件商品</span><div class="product-pagination-controls"><button data-action="completeProductsPrev" aria-label="商品列表上一页" '+(ui.fullProductPage<=1?'disabled':'')+'>‹</button><span>'+ui.fullProductPage+' / '+pages+'</span><button data-action="completeProductsNext" aria-label="商品列表下一页" '+(ui.fullProductPage>=pages?'disabled':'')+'>›</button><label class="sr-only" for="complete-product-size">商品列表每页数量</label><select id="complete-product-size">'+[10,20,50].map(n=>'<option value="'+n+'" '+(ui.fullProductSize===n?'selected':'')+'>'+n+'条/页</option>').join('')+'</select></div></div></div></section><p class="caption">完整商品清单集中在本子页；与品牌模块的整页对应位置见“频道详情总览”。页面长度和布局留设计阶段调整。样例共12件，不代表线上数量。</p>';
+      '</tbody></table></div><div class="product-video-pagination"><span class="complete-product-total" aria-live="polite">共 '+items.length+' 件商品</span><div class="product-pagination-controls"><button data-action="completeProductsPrev" aria-label="商品列表上一页" '+(ui.fullProductPage<=1?'disabled':'')+'>‹</button><span>'+ui.fullProductPage+' / '+pages+'</span><button data-action="completeProductsNext" aria-label="商品列表下一页" '+(ui.fullProductPage>=pages?'disabled':'')+'>›</button><label class="sr-only" for="complete-product-size">商品列表每页数量</label><select id="complete-product-size">'+[10,20,50].map(n=>'<option value="'+n+'" '+(ui.fullProductSize===n?'selected':'')+'>'+n+'条/页</option>').join('')+'</select></div></div></div>';
   }
   function renderBrandDrawer() {
     const b=B.brands().find(item=>item.id===ui.drawerBrand);
@@ -351,7 +352,7 @@
     $('#dialog').showModal();
   }
   function exportNotes() {
-    const data={demo:D.releaseName+' · 功能审阅',releaseVersion:D.releaseVersion,releaseName:D.releaseName,version:D.version,exportedAt:new Date().toISOString(),baselineDate:D.baselineDate,scope:'频道详情页品牌-商品指标扩展',note:'本文件只记录会话内意见，不代表正式需求确认。',points:D.points.map(p=>({id:p.id,title:p.title,scopeStatus:p.scopeStatus,implementation:p.implementation,priority:p.priority,review:note(p.id)}))};
+    const data={demo:D.releaseName+' · 功能审阅',releaseVersion:D.releaseVersion,releaseName:D.releaseName,version:D.version,exportedAt:new Date().toISOString(),baselineDate:D.baselineDate,scope:'频道详情页品牌-商品指标扩展',note:'本文件只记录会话内意见，不代表正式需求确认。',points:D.points.map(p=>({id:p.id,title:p.title,platform:p.platform,scopeStatus:p.scopeStatus,implementation:p.implementation,priority:p.priority,review:note(p.id)}))};
     const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json;charset=utf-8'});
     const url=URL.createObjectURL(blob),a=document.createElement('a');
     a.href=url;a.download=D.releaseVersion+'-'+D.releaseName+'-审阅意见.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
@@ -378,7 +379,7 @@
     if (action==='export') exportNotes();
     if (action==='cancel') $('#dialog').close();
     if (action==='reset') openDialog('<h2 id="dialog-title">重置本次示例与意见？</h2><p>当前备注和意见标记将清空。需要保留时，请先取消并导出。</p>',button('取消','cancel')+button('重置','confirmReset','','primary'));
-    if (action==='confirmReset') {ui.comparisonView='performance';ui.trendGrain='month';ui.trendBrand='';ui.trendProduct='';ui.trendStatus='available';ui.trendSelected=null;B.reset();window.ChannelAssociations.reset();window.ProductVideoReview.reset();ui.productMetadata='provided';ui.fullProductPage=1;ui.fullProductSize=10;ui.fullProductBrand='';ui.fullProductSort='';ui.fullProductSortDirection='desc';ui.notes={};ui.sample='filled';ui.brandQuery='';ui.query='';ui.group='all';ui.sort='videoCount';ui.sortDirection='desc';ui.promotion='';ui.pageSize=10;ui.drawerBrand=null;$('#dialog').close();render();toast('示例与意见已重置');}
+    if (action==='confirmReset') {ui.comparisonView='performance';ui.trendGrain='month';ui.trendBrand='';ui.trendProduct='';ui.trendStatus='available';ui.trendSelected=null;B.reset();window.ChannelAssociations.reset();window.ProductVideoReview.reset();ui.productMetadata='provided';ui.fullProductPage=1;ui.fullProductSize=10;ui.fullProductBrand='';ui.fullProductSort=defaultProductSort;ui.fullProductSortDirection='desc';ui.notes={};ui.sample='filled';ui.brandQuery='';ui.query='';ui.group='all';ui.sort='videoCount';ui.sortDirection='desc';ui.promotion='';ui.pageSize=10;ui.drawerBrand=null;$('#dialog').close();render();toast('示例与意见已重置');}
     if (action==='completeProductsNext'||action==='completeProductsPrev') {ui.fullProductPage+=action==='completeProductsNext'?1:-1;render();document.querySelector('.complete-products-module')?.scrollIntoView({block:'start'});}
     if (action==='productMetricSort') {ui.fullProductSortDirection=ui.fullProductSort===id&&ui.fullProductSortDirection==='desc'?'asc':'desc';ui.fullProductSort=id;ui.fullProductPage=1;render();document.querySelector('[data-action="productMetricSort"][data-id="'+id+'"]')?.focus({preventScroll:true});}
     if (action==='clearProductBrand') {ui.fullProductBrand='';ui.fullProductPage=1;render();$('#complete-product-brand')?.focus({preventScroll:true});}

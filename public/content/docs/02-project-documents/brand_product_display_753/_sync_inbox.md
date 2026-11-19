@@ -2,6 +2,39 @@
 
 > 主线：[README](README.md)；首版：[审阅合同](demo_review_contract_v0.md)。承接审阅意见、逐点范围确认、Demo 与真实实现差异。
 
+## 2026-11-19｜第二轮联合复核与发布
+
+复核 [Spec v1](spec_v1.md)、[README 评审清单](README.md#研发评审清单)和 Demo v0.20。10 项适用平台一致。Instagram 仅 B01，沿用现有品牌表的分页总数和统计范围。TikTok 两类详情页列为生产回归对象。
+
+推广商品区只保留一张完整表，位于原模块首位。实测默认按总观看量降序，品牌筛选、排序和分页独立于分类图，切换品牌 TAB 时间会更新分类图和商品范围。实测通过合作详情带品牌定位、标题跳转、当前频道视频抽屉以及关闭后恢复焦点。
+
+校正调研入口的当前 Spec 链接、旧 TOP5 方案的历史标记和发布入口名称。联合复核无评审包发布阻塞。静态浏览器回归 20 组通过，覆盖 1440／1024／768／390，0 脚本错误、0 外部请求，未启动服务器。生产接口、权限和时间口径待核见 [Spec §5](spec_v1.md#5-现状证据与-spec-待确认)。
+
+- [发布版文档](README.md)
+- [发布版静态 Demo](../../../demos/brand-product-display-753/index.html)
+
+## 2026-11-19｜频道推广商品区合并
+
+用户确认由原「推广商品」区的一张完整商品表替代独立 TOP5 卡。默认按本频道关联视频总观看量降序，先筛选和排序再分页。保留品牌筛选、合作详情带品牌定位、商品标题跳转及本频道视频抽屉。分类图随品牌 TAB 时间更新，独立于表格的品牌筛选、排序和分页。Demo v0.20 在原商品区先展示表格，分类图放在表格下方。本条覆盖历史 TOP5 保留方案。
+
+已同步 [Input](input_v0.md)、[第二轮 Spec](spec_v1.md)、[README 评审清单](README.md#研发评审清单)和 [Demo](../../../demos/brand-product-display-753/index.html#products)。静态文件回归 20 组通过，覆盖 1440／1024／768／390 四个视口，0 脚本错误、0 外部请求，未启动服务器。[验收结果](../../../../06_Prototypes/brand_product_display_753_demo/qa/acceptance.json)
+
+## 2026-11-19｜第二轮 Spec 与平台标注
+
+[Spec v1](spec_v1.md)承接已确认的平台范围并进入第二轮评审。[README 清单](README.md#研发评审清单)和 [Demo v0.19 清单](../../../demos/brand-product-display-753/index.html#points)逐项标注平台。Instagram 仅 B01，沿用现有品牌表统计范围和分页总数。TikTok 频道及 TikTok Shop 商品详情仅列入生产回归验收。首轮评审稿见 [Spec v0](spec_v0.md)。
+
+静态验收通过 20 组检查，核对 10 项的清单、详情和意见导出标签，以及四个视口的原功能回归。验收未启动服务器，0 脚本错误、0 外部请求。见[静态验收结果](../../../../06_Prototypes/brand_product_display_753_demo/qa/acceptance.json)。
+
+## 2026-11-19｜确认平台范围与 Instagram 本期改动
+
+用户确认 YouTube 频道和通用商品详情做完整方案，TikTok 频道及 TikTok Shop 商品详情维持现有体验。Instagram 本期只纳入 B01，实测确认可沿用现有品牌表分页总数。P03 的逐条品牌关联、S01 的表格与抽屉时间以及 V01 的同口径聚合与明细作为待核项。见 [Input 平台范围](input_v0.md#平台适用范围)及 [Instagram 复核记录](../../../../02_Research_Analysis/channel_brand_product_pending/平台适用范围核对_2026-11-19.md#instagram-品牌侧复核)。
+
+用户进一步确认聚星目前不支持 Instagram 商品数据。Instagram 本期交付和待核项均限品牌侧。
+
+## 2026-11-19｜回到 Input 核定平台范围
+
+首轮 Spec 评审完成。用户提出本期以通用商品详情、非 TikTok 频道详情为范围，TikTok 两类详情页沿用现状。线上复查核实 YouTube → Amazon 与 TikTok → TikTok Shop 各有独立入口、页面和数据。Instagram 样本有品牌提及，推广商品接口未提供。当前建议 YouTube × Amazon 完整覆盖，Instagram 按品牌能力评估，其余平台维持现状。见 [Input 范围方案](input_v0.md#平台适用范围)及[线上与代码核对](../../../../02_Research_Analysis/channel_brand_product_pending/平台适用范围核对_2026-11-19.md)。
+
 ## 2026-11-19｜评审版发布口径
 
 用户确认 Demo 用于评审功能与交互，样例无需满足真实数据闭环。下节列出的数量、候选、状态与分页表现均来自 Demo 的虚构样例，本轮保留为评审记录，发布沿用 v0.18 交互。生产规则与待核项继续以 [Spec v0](spec_v0.md) 为准。
