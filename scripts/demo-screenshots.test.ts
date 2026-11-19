@@ -76,6 +76,38 @@ test('skips capture when screenshot is newer than demo files', async () => {
   }
 })
 
+test('keeps an existing screenshot when refreshing it fails', async () => {
+  const root = await fs.mkdtemp(path.join(os.tmpdir(), 'pm-dashboard-demo-screenshots-'))
+
+  try {
+    const demoPath = path.join(root, 'stale-demo')
+    const indexPath = path.join(demoPath, 'index.html')
+    const screenshotPath = path.join(demoPath, 'screenshot.png')
+    await fs.mkdir(demoPath, { recursive: true })
+    await fs.writeFile(indexPath, '<title>Updated</title>', 'utf-8')
+    await fs.writeFile(screenshotPath, 'existing png', 'utf-8')
+
+    const older = new Date('2026-01-01T00:00:00Z')
+    const newer = new Date('2026-01-02T00:00:00Z')
+    await fs.utimes(screenshotPath, older, older)
+    await fs.utimes(indexPath, newer, newer)
+
+    const result = await ensureDemoScreenshot({
+      demoId: 'stale-demo',
+      demoPath,
+      capture: async () => {
+        throw new Error('Browser unavailable')
+      },
+    })
+
+    assert.equal(result.publicPath, '/demos/stale-demo/screenshot.png')
+    assert.equal(result.generated, false)
+    assert.equal(await fs.readFile(screenshotPath, 'utf-8'), 'existing png')
+  } finally {
+    await fs.rm(root, { recursive: true, force: true })
+  }
+})
+
 test('does not treat demo metadata changes as stale screenshot input', async () => {
   const root = await fs.mkdtemp(path.join(os.tmpdir(), 'pm-dashboard-demo-screenshots-'))
 

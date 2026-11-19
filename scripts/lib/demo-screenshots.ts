@@ -133,10 +133,23 @@ export async function ensureDemoScreenshot({
     }
   }
 
-  await capture({
-    demoPath,
-    screenshotPath: paths.filePath,
-  })
+  try {
+    await capture({
+      demoPath,
+      screenshotPath: paths.filePath,
+    })
+  } catch (error) {
+    try {
+      await fs.access(paths.filePath)
+      console.warn(`   ⚠️  截图更新失败，保留现有截图: ${demoId}`)
+      return {
+        ...paths,
+        generated: false,
+      }
+    } catch {
+      throw error
+    }
+  }
 
   return {
     ...paths,
