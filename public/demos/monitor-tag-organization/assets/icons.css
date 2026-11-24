@@ -1,0 +1,25 @@
+@font-face { font-family: kolicon; src: url(iconfont.woff2) format("woff2"); font-display: block; }
+.i { display: inline-flex; flex: none; justify-content: center; align-items: center; width: 1em; height: 1em; font: normal 18px/1 kolicon; }
+.i-monitor1::before { content: "\e6a2"; }
+.i-folder1::before { content: "\e6a4"; }
+.i-tag::before { content: "\e69a"; }
+.i-clock::before { content: "\e63e"; }
+.i-angle-right::before { content: "\e61c"; }
+.i-angle-down::before { content: "\e61b"; }
+.i-close::before { content: "\e621"; }
+.i-checkmark::before { content: "\e60a"; }
+.i-search-normal::before { content: "\e615"; }
+.i-filter::before { content: "\e665"; }
+.i-list-view::before { content: "\e616"; }
+.i-videos::before { content: "\e661"; }
+.i-settings_gear::before { content: "\e666"; }
+.i-star::before { content: "\e693"; }
+.i-star-filled::before { content: "\e704"; }
+.i-delete::before { content: "\e7c5"; }
+.i-arrow-left::before { content: "\e61f"; }
+.i-arrow-right::before { content: "\e620"; }
+.i-play::before { content: "\e60e"; }
+.i-instagram::before { content: "\e68c"; }
+.i-icon_search::before { content: "\e7cf"; }
+.i-checkmark-filled::before { content: "\e70a"; }
+.i-label::before { content: "\e7c9"; }

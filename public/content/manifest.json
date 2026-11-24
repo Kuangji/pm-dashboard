@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-11-19T06:41:37.072Z",
+  "updatedAt": "2026-11-24T09:57:30.307Z",
   "navigation": {
     "docs": [
       {
@@ -427,7 +427,117 @@
                 "name": "README.md",
                 "path": "02-project-documents/brand_monitor_portfolio/README.md",
                 "slug": "02-project-documents/brand_monitor_portfolio/README.md",
-                "title": "品牌监控：关联品牌聚合与定制视图 | README.md",
+                "title": "v7.5.4 主子品牌视图化查询 | README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "comparison_rules_review_v0.md",
+                "path": "02-project-documents/brand_monitor_portfolio/comparison_rules_review_v0.md",
+                "slug": "02-project-documents/brand_monitor_portfolio/comparison_rules_review_v0.md",
+                "title": "v7.5.4 子视图对比盘点与展示规则 · 评审稿 v0 | comparison_rules_review_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "demo_review_contract_v0.md",
+                "path": "02-project-documents/brand_monitor_portfolio/demo_review_contract_v0.md",
+                "slug": "02-project-documents/brand_monitor_portfolio/demo_review_contract_v0.md",
+                "title": "v7.5.4 主子品牌视图化查询｜Demo 评审约定 v0 | demo_review_contract_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "design_v0.md",
+                "path": "02-project-documents/brand_monitor_portfolio/design_v0.md",
+                "slug": "02-project-documents/brand_monitor_portfolio/design_v0.md",
+                "title": "v7.5.4 主子品牌视图化查询｜Design v0 | design_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "input_v0.md",
+                "path": "02-project-documents/brand_monitor_portfolio/input_v0.md",
+                "slug": "02-project-documents/brand_monitor_portfolio/input_v0.md",
+                "title": "v7.5.4 主子品牌视图化查询｜评审版 Input v0 | input_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "input_v1.md",
+                "path": "02-project-documents/brand_monitor_portfolio/input_v1.md",
+                "slug": "02-project-documents/brand_monitor_portfolio/input_v1.md",
+                "title": "v7.5.4 主子品牌视图化查询｜Input v1 | input_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "input_v2.md",
+                "path": "02-project-documents/brand_monitor_portfolio/input_v2.md",
+                "slug": "02-project-documents/brand_monitor_portfolio/input_v2.md",
+                "title": "v7.5.4 主子品牌视图化查询｜Input v2 | input_v2.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "query_scheme_review_v0.md",
+                "path": "02-project-documents/brand_monitor_portfolio/query_scheme_review_v0.md",
+                "slug": "02-project-documents/brand_monitor_portfolio/query_scheme_review_v0.md",
+                "title": "v7.5.4 子视图查询方案 | query_scheme_review_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "spec_v0.md",
+                "path": "02-project-documents/brand_monitor_portfolio/spec_v0.md",
+                "slug": "02-project-documents/brand_monitor_portfolio/spec_v0.md",
+                "title": "v7.5.4 主子品牌视图化查询｜评审版 Spec v0 | spec_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "子品牌查询与快照讨论_v0.md",
+                "path": "02-project-documents/brand_monitor_portfolio/子品牌查询与快照讨论_v0.md",
+                "slug": "02-project-documents/brand_monitor_portfolio/子品牌查询与快照讨论_v0.md",
+                "title": "v7.5.4 子品牌查询与快照｜Input 讨论稿 v0 | 子品牌查询与快照讨论_v0.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "子品牌视图一期建议方案_v1.md",
+                "path": "02-project-documents/brand_monitor_portfolio/子品牌视图一期建议方案_v1.md",
+                "slug": "02-project-documents/brand_monitor_portfolio/子品牌视图一期建议方案_v1.md",
+                "title": "v7.5.4 主子品牌视图化查询｜一期建议方案 v1 | 子品牌视图一期建议方案_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "组合视图一期规则与指标规划_v0.md",
+                "path": "02-project-documents/brand_monitor_portfolio/组合视图一期规则与指标规划_v0.md",
+                "slug": "02-project-documents/brand_monitor_portfolio/组合视图一期规则与指标规划_v0.md",
+                "title": "v7.5.4 主子品牌视图化查询｜组合规则与指标规划 v0 | 组合视图一期规则与指标规划_v0.md",
                 "fileType": "markdown",
                 "isText": true,
                 "isImage": false
@@ -1939,6 +2049,170 @@
                     "fileType": "markdown",
                     "isText": true,
                     "isImage": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "monitor_tag_organization",
+            "path": "02-project-documents/monitor_tag_organization",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "02-project-documents/monitor_tag_organization/README.md",
+                "slug": "02-project-documents/monitor_tag_organization/README.md",
+                "title": "内容监控标签组织与交互优化 | README.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "_sync_inbox.md",
+                "path": "02-project-documents/monitor_tag_organization/_sync_inbox.md",
+                "slug": "02-project-documents/monitor_tag_organization/_sync_inbox.md",
+                "title": "内容监控标签实现回流 | _sync_inbox.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "design_v1.md",
+                "path": "02-project-documents/monitor_tag_organization/design_v1.md",
+                "slug": "02-project-documents/monitor_tag_organization/design_v1.md",
+                "title": "内容监控标签组织与交互优化｜交互设计 v1 | design_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "input_v1.md",
+                "path": "02-project-documents/monitor_tag_organization/input_v1.md",
+                "slug": "02-project-documents/monitor_tag_organization/input_v1.md",
+                "title": "内容监控标签组织与交互优化｜Input v1 | input_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "prd_v1.md",
+                "path": "02-project-documents/monitor_tag_organization/prd_v1.md",
+                "slug": "02-project-documents/monitor_tag_organization/prd_v1.md",
+                "title": "内容监控标签组织与交互优化｜PRD v1 | prd_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "file",
+                "name": "spec_v1.md",
+                "path": "02-project-documents/monitor_tag_organization/spec_v1.md",
+                "slug": "02-project-documents/monitor_tag_organization/spec_v1.md",
+                "title": "内容监控标签组织与交互优化｜Spec v1 | spec_v1.md",
+                "fileType": "markdown",
+                "isText": true,
+                "isImage": false
+              },
+              {
+                "type": "directory",
+                "name": "archive",
+                "path": "02-project-documents/monitor_tag_organization/archive",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "INDEX.md",
+                    "path": "02-project-documents/monitor_tag_organization/archive/INDEX.md",
+                    "slug": "02-project-documents/monitor_tag_organization/archive/INDEX.md",
+                    "title": "内容监控标签评审归档 | INDEX.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "review_2026-11-24.md",
+                    "path": "02-project-documents/monitor_tag_organization/archive/review_2026-11-24.md",
+                    "slug": "02-project-documents/monitor_tag_organization/archive/review_2026-11-24.md",
+                    "title": "内容监控标签｜一致性与视觉评审 | review_2026-11-24.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
+                  },
+                  {
+                    "type": "directory",
+                    "name": "assets",
+                    "path": "02-project-documents/monitor_tag_organization/archive/assets",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "主筛选-1440.png",
+                        "path": "02-project-documents/monitor_tag_organization/archive/assets/主筛选-1440.png",
+                        "slug": "02-project-documents/monitor_tag_organization/archive/assets/主筛选-1440.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "主筛选-390.png",
+                        "path": "02-project-documents/monitor_tag_organization/archive/assets/主筛选-390.png",
+                        "slug": "02-project-documents/monitor_tag_organization/archive/assets/主筛选-390.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "原行改色-320.png",
+                        "path": "02-project-documents/monitor_tag_organization/archive/assets/原行改色-320.png",
+                        "slug": "02-project-documents/monitor_tag_organization/archive/assets/原行改色-320.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "快捷工具栏与全局无标签-1440.png",
+                        "path": "02-project-documents/monitor_tag_organization/archive/assets/快捷工具栏与全局无标签-1440.png",
+                        "slug": "02-project-documents/monitor_tag_organization/archive/assets/快捷工具栏与全局无标签-1440.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "快捷筛选与全局无标签-320.png",
+                        "path": "02-project-documents/monitor_tag_organization/archive/assets/快捷筛选与全局无标签-320.png",
+                        "slug": "02-project-documents/monitor_tag_organization/archive/assets/快捷筛选与全局无标签-320.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "标签换组确认-1440.png",
+                        "path": "02-project-documents/monitor_tag_organization/archive/assets/标签换组确认-1440.png",
+                        "slug": "02-project-documents/monitor_tag_organization/archive/assets/标签换组确认-1440.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      },
+                      {
+                        "type": "file",
+                        "name": "管理单列-1440.png",
+                        "path": "02-project-documents/monitor_tag_organization/archive/assets/管理单列-1440.png",
+                        "slug": "02-project-documents/monitor_tag_organization/archive/assets/管理单列-1440.png",
+                        "fileType": "image",
+                        "isText": false,
+                        "isImage": true
+                      }
+                    ]
                   }
                 ]
               }
@@ -31499,6 +31773,16 @@
                     "fileType": "markdown",
                     "isText": true,
                     "isImage": false
+                  },
+                  {
+                    "type": "file",
+                    "name": "自顶向下与自底向上_竞品对应.md",
+                    "path": "03-research/2026-11-13-brand-monitor-hierarchy/decision/自顶向下与自底向上_竞品对应.md",
+                    "slug": "03-research/2026-11-13-brand-monitor-hierarchy/decision/自顶向下与自底向上_竞品对应.md",
+                    "title": "自顶向下与自底向上的竞品对应 | 自顶向下与自底向上_竞品对应.md",
+                    "fileType": "markdown",
+                    "isText": true,
+                    "isImage": false
                   }
                 ]
               },
@@ -32116,6 +32400,18 @@
         ]
       },
       {
+        "id": "brand-monitor-portfolio-754",
+        "title": "v7.5.4 主子品牌视图化查询 · 评审 Demo",
+        "description": "验证同一抽屉中的子视图与对比设置，以及主品牌报告的同批指标和下钻。",
+        "path": "demos/brand-monitor-portfolio-754/index.html",
+        "thumbnail": "preview.png",
+        "tags": [
+          "品牌监控",
+          "子视图",
+          "评审 Demo"
+        ]
+      },
+      {
         "id": "brand-product-display-753",
         "title": "v7.5.3 品牌商品展现优化",
         "description": "第二轮 Spec 评审。YouTube 频道与通用商品详情（当前为 Amazon）展示完整方案，Instagram 仅适用 B01 品牌总数，TikTok 两类详情页仅纳入回归。推广商品区使用一张完整商品表，默认按本频道关联视频总观看量降序。10 个评审点均标注适用平台。",
@@ -32175,6 +32471,19 @@
           "监控",
           "原型",
           "Next.js"
+        ]
+      },
+      {
+        "id": "monitor-tag-organization",
+        "title": "内容监控标签组织与交互优化 · 评审 Demo",
+        "description": "体验分组搜索、个人标签置顶、分组快捷筛选、全局无标签和统一打标，以及标签分组的排序、移组与行内编辑。",
+        "path": "demos/monitor-tag-organization/index.html",
+        "thumbnail": "preview.png",
+        "tags": [
+          "内容监控",
+          "标签管理",
+          "分组快捷筛选",
+          "评审 Demo"
         ]
       },
       {

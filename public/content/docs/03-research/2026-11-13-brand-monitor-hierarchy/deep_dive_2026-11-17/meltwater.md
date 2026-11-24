@@ -2,6 +2,19 @@
 
 观察日期：2026-11-17（Asia/Shanghai）。本轮只研究品牌监控的数据组织/报告交互；未注册、未联系销售、未创建真实搜索或对外分享。没有使用共享浏览器。本轮使用实时检索、直接读取官方教程/API、审看官方截图及视频公开storyboard，**不是已登录产品实测，也不是完整视频播放**。
 
+## 2026-11-23 补充 · 对照聚星 Demo v0.2
+
+下表为 Demo v0.2 时的对照。标准 Explore 的对应点是保存和复用查询及并列比较。Explore+ 的私有索引和业务分类更接近 Demo 的池内划分机制。聚星随后统一子视图，改由名称和标签标识业务用途，所有可用的同池视图均可配置进对比。[现行评审 Spec](../../../02-project-documents/brand_monitor_portfolio/spec_v0.md)
+
+| 聚星 Demo v0.2 | Meltwater 对应机制 | 差异与取证边界 |
+|---|---|---|
+| 主品牌全量池，子视图只能读取池内内容 | 标准 Explore 的 Combined Search 可引用已保存搜索，用交集表达「主范围 AND 子条件」。Explore+ 的 Optimized Search 定义收录到私有索引的数据，再用 Custom Fields 按规则给内容分类并筛选分析。 | 标准 Explore 是可显式配置的查询逻辑。Explore+ 支持按业务建立内容范围和分类，公开证据中的索引范围属于客户环境，尚未确认有与 Demo 等价的主品牌对象及原生主子绑定。 |
+| 创建时选择子品牌或查询视图 | Explore 保存具名 Saved Search，可预览、过滤、通过 Save as 保存新的搜索并用于报告。Explore+ 官方培训还有 Standard 和 Organized Searches。 | 官方培训公开目录能确认后一组名称，详细教程正文未取到。聚星的两个类型表达业务用途，并决定是否进入子品牌对比和未归入数。 |
+| 同批主品牌总量、子品牌分项、覆盖率和未归入数 | Explore Compare 支持多个搜索并列，有日期和分段能力。Combine 返回组合查询结果。Explore+ 可按自定义字段聚合拆分。 | 未确认界面有同批主品牌分母、全部子品牌命中并集后的池内差集或同等重叠口径。Demo 的覆盖率和未归入数不能直接按一般 Share of Voice 理解。 |
+| 对比下钻、回看旧批次 | Explore 结果中可查内容。既有公开共享报告已点验 Related Mentions，另有 Explore Shareable Dashboard 的时点式汇报和 Analyze 的持续看板。 | 找到内容和保存输出均有参考。未确认 Meltwater 有聚星这种用同一发布批次绑定主池分母、子报数字、明细和旧链接的机制。 |
+
+官方来源：[Explore 操作说明](https://community.meltwater.com/meltwater-product-answers-428/meltwater-explore-10974) · [Save as 截图与官方答复](https://community.meltwater.com/meltwater-launch-125/best-ways-to-pull-data-in-meltwater-2762) · [Combined Search](https://developer.meltwater.com/guides/listening/managing-searches/#working-with-combined-searches) · [Explore+ 私有索引和自定义字段](https://developer.meltwater.com/guides/explore-plus/overview/) · [Explore+ 资产管理](https://community.meltwater.com/use-case-playbooks-132/explore-admin-asset-builder-playbooks-10752) · [Compare 更新](https://community.meltwater.com/year-end-release-2026-449/explore-explore-2026-year-end-release-updates-resources-12590) · [快照式报告与持续看板](https://community.meltwater.com/use-case-playbooks-132/reporting-sharing-insights-playbook-2949)。
+
 ## 先给结论
 
 Meltwater呈现出四层分工：**先保存各品牌/业务单元的查询，再决定“组合成一个数据集”或“并列比较”，最后在Analyze配置持续复用的报告**。分类导航与统计聚合是两件事；Explore+的嵌套Folder也不能直接叫作主子品牌数据模型。

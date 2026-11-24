@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>内容监控 · 标签体验 Demo</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="assets/icons.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar" aria-label="内容监控导航">
+    <div class="brand"><img src="assets/logo.png" alt="Nox 聚星" width="108" height="35"></div>
+    <div class="side-section">内容监控</div>
+    <nav>
+      <button type="button" class="nav-item" data-act="content"><i class="i i-monitor1" aria-hidden="true"></i><span>项目内容</span></button>
+      <button type="button" class="nav-item" data-act="manage"><i class="i i-tag" aria-hidden="true"></i><span>标签管理</span></button>
+    </nav>
+    <div class="side-bottom">
+      <span class="avatar" aria-hidden="true">S</span>
+      <div><b>北极星工作区</b><span>内容监控演示</span></div>
+    </div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar">
+      <div id="breadcrumb" class="breadcrumb"></div>
+      <label class="actor-select"><span>体验身份</span><select id="actor" aria-label="体验身份"><option value="admin">管理员</option><option value="member">项目成员</option></select></label>
+    </header>
+    <main id="page"></main>
+  </div>
+  <div id="picker" class="picker" role="dialog" aria-modal="true" hidden></div>
+  <dialog id="editor" aria-labelledby="editor-title"></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -13,7 +13,8 @@
 - [账号权限统一版本](./02-project-documents/account_permission_collaboration/README.md) - 当前 Input、业务故事、11-12 评审收口、资金账目与监控项分工核对
 - [v7.5.3 品牌商品展现优化](./02-project-documents/brand_product_display_753/README.md) - 第二轮 Spec、研发评审清单和静态 Demo v0.20
 
-- [品牌监控：关联品牌聚合与总—分定制视图](./03-research/2026-11-13-brand-monitor-hierarchy/README.md) - [主子品牌关系、计算与展示候选](./03-research/2026-11-13-brand-monitor-hierarchy/decision/主子品牌关系与计算展示_候选形式比较_v1.md)、[两轮界面证据](./03-research/2026-11-13-brand-monitor-hierarchy/deep_dive_2026-11-17/界面证据导览.md)；未选型，正式版本号待核定
+- [v7.5.4 主子品牌视图化查询](./02-project-documents/brand_monitor_portfolio/README.md) · [范围基线 Input v2](./02-project-documents/brand_monitor_portfolio/input_v2.md) · [非正式评审稿](./02-project-documents/brand_monitor_portfolio/README.md#非正式评审稿与-demo) · [独立 Demo](../demos/brand-monitor-portfolio-754/index.html#report) · [品牌监控竞研](./03-research/2026-11-13-brand-monitor-hierarchy/README.md)
+- [内容监控标签组织与交互优化](./02-project-documents/monitor_tag_organization/README.md) · [正式 PRD](./02-project-documents/monitor_tag_organization/prd_v1.md) · [独立 Demo](../demos/monitor-tag-organization/index.html)
 
 ## 文档结构
 
@@ -30,6 +31,7 @@
 │   ├── monitor_761/  # 监控平台文档
 │   ├── monitor_762/  # 监控模块方案
 │   ├── monitor_763/  # 监控模块迭代
+│   ├── monitor_tag_organization/  # 监控标签体系
 │   ├── other_social_search_741/  # 社交搜索项目文档
 │   ├── search_experience_6310/  # 搜索体验需求6310
 │   ├── search_experience_639/  # 搜索体验需求639
@@ -61,4 +63,4 @@
 
 ---
 
-*最后更新: 2026-10-22*
+*最后更新: 2026-11-24*
