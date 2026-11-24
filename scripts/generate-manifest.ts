@@ -17,6 +17,7 @@ import { hasMissingDemoConfigFiles } from './lib/demo-configs'
 import { ensureDemoScreenshot, hasMissingDemoScreenshots } from './lib/demo-screenshots'
 import { getNewestMtime } from './lib/file-mtime'
 import { shouldIncludeManifestFile } from './lib/manifest-files'
+import { resolveDemoThumbnail } from './lib/demo-thumbnail'
 
 const DASHBOARD_ROOT = process.cwd()
 const DOCUMENTS_DIR = path.join(DASHBOARD_ROOT, 'public/content/docs')
@@ -258,7 +259,7 @@ async function scanDemos(): Promise<DemoItem[]> {
           title: config.title || entry.name,
           description: config.description || '',
           path: `demos/${entry.name}/index.html`,
-          thumbnail: config.thumbnail || generatedThumbnail,
+          thumbnail: resolveDemoThumbnail(entry.name, config.thumbnail || generatedThumbnail),
           tags: config.tags || [],
         })
       }

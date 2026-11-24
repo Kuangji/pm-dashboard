@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-11-24T09:57:30.307Z",
+  "updatedAt": "2026-11-24T10:05:29.387Z",
   "navigation": {
     "docs": [
       {
@@ -32404,7 +32404,7 @@
         "title": "v7.5.4 主子品牌视图化查询 · 评审 Demo",
         "description": "验证同一抽屉中的子视图与对比设置，以及主品牌报告的同批指标和下钻。",
         "path": "demos/brand-monitor-portfolio-754/index.html",
-        "thumbnail": "preview.png",
+        "thumbnail": "/demos/brand-monitor-portfolio-754/preview.png",
         "tags": [
           "品牌监控",
           "子视图",
@@ -32478,7 +32478,7 @@
         "title": "内容监控标签组织与交互优化 · 评审 Demo",
         "description": "体验分组搜索、个人标签置顶、分组快捷筛选、全局无标签和统一打标，以及标签分组的排序、移组与行内编辑。",
         "path": "demos/monitor-tag-organization/index.html",
-        "thumbnail": "preview.png",
+        "thumbnail": "/demos/monitor-tag-organization/preview.png",
         "tags": [
           "内容监控",
           "标签管理",
