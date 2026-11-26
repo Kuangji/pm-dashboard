@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>子视图对比 · 图表候选 | 岩途 TerraPeak</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./chart-gallery.css">
+</head>
+<body>
+  <main class="gallery">
+    <a href="./index.html#comparison" class="back">← 子视图对比</a>
+    <header class="gallery-header">
+      <div><h1>子视图对比 · 图表候选</h1><p>岩途 TerraPeak <span aria-hidden="true">/</span> 山野系列、居家系列 <span aria-hidden="true">/</span> 本地示例数据</p></div>
+      <label>统计区间 <select id="range"><option value="30">最近 30 天</option><option value="7">最近 7 天</option></select></label>
+    </header>
+    <p class="scope-line" id="scope" aria-live="polite"></p>
+    <div class="charts" id="charts"></div>
+  </main>
+  <dialog id="chart-detail" aria-labelledby="detail-title">
+    <div class="detail-head"><div><h2 id="detail-title"></h2><p id="detail-scope"></p></div><form method="dialog"><button class="btn" autofocus>关闭</button></form></div>
+    <p id="detail-metric"></p><div id="detail-rows"></div>
+  </dialog>
+  <script src="./engine.js"></script><script src="./chart-gallery.js"></script>
+</body>
+</html>

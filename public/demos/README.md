@@ -1,13 +1,13 @@
 # Demo 构建规范
 
-## 内容监控标签组织与交互优化评审 Demo
+## v7.6.4 内容监控标签分组与管理 · 评审 Demo
 
-- [视频标签筛选](./monitor-tag-organization/index.html) · [项目内容](./monitor-tag-organization/index.html?view=content) · [标签管理](./monitor-tag-organization/index.html?view=manage) · [操作手册](./monitor-tag-organization/README.md) · [正式 PRD](../documents/02-project-documents/monitor_tag_organization/prd_v1.md)
-- 源码在 `06_Prototypes/monitor_tag_demo/`。本地发布采用原生静态副本，支持分组搜索、个人置顶、分组快捷筛选，以及标签整理与打标。产品版本待排期。
+- [视频标签筛选](./monitor-764/index.html) · [项目内容](./monitor-764/index.html?view=content) · [标签管理](./monitor-764/index.html?view=manage) · [操作手册](./monitor-764/README.md) · [正式 PRD](../documents/02-project-documents/monitor_764/prd_v1.md)
+- 源码在 `06_Prototypes/monitor_764_demo/`。本地发布采用原生静态副本，支持分组搜索、个人置顶、分组快捷筛选，以及标签整理与打标。待研发评审及排期。
 
 ## v7.5.4 主子品牌视图化查询评审 Demo
 
-- [主品牌报告](./brand-monitor-portfolio-754/index.html#report) · [子视图管理抽屉](./brand-monitor-portfolio-754/index.html#manage) · [逐点评审](./brand-monitor-portfolio-754/index.html#review) · [评审文档](../documents/02-project-documents/brand_monitor_portfolio/README.md#非正式评审稿与-demo)
+- [一键处理全部](./brand-monitor-portfolio-754/index.html#anker-bulk) · [Anker 主配置变动提示](./brand-monitor-portfolio-754/index.html#anker-impact) · [条件组编辑示例](./brand-monitor-portfolio-754/index.html#anker-query) · [主品牌报告](./brand-monitor-portfolio-754/index.html#report) · [子视图管理抽屉](./brand-monitor-portfolio-754/index.html#manage) · [逐点评审](./brand-monitor-portfolio-754/index.html#review) · [评审文档](../documents/02-project-documents/brand_monitor_portfolio/README.md#非正式评审稿与-demo)
 - 源码在 `06_Prototypes/brand_monitor_portfolio_754_demo/`。执行 `npm --prefix 06_Prototypes/brand_monitor_portfolio_754_demo run publish:demo` 更新并验证本地评审副本。
 
 ## 账号权限功能审阅 Demo

@@ -1,6 +1,6 @@
-# 内容监控标签体验 Demo
+# v7.6.4 内容监控标签分组与管理 · Demo
 
-[打开 Demo](./index.html) · [项目总览](../../documents/02-project-documents/monitor_tag_organization/README.md) · [正式 PRD](../../documents/02-project-documents/monitor_tag_organization/prd_v1.md) · [交互设计](../../documents/02-project-documents/monitor_tag_organization/design_v1.md) · [一致性与视觉评审](../../documents/02-project-documents/monitor_tag_organization/archive/review_2026-11-24.md)
+[打开 Demo](./index.html) · [项目总览](../../documents/02-project-documents/monitor_764/README.md) · [正式 PRD](../../documents/02-project-documents/monitor_764/prd_v1.md) · [交互设计](../../documents/02-project-documents/monitor_764/design_v1.md) · [一致性与视觉评审](../../documents/02-project-documents/monitor_764/archive/review_2026-11-24.md)
 
 从浏览器直接打开 `index.html` 可运行。也可在 drafts 工作区启动发布目录的静态预览。
 
@@ -8,7 +8,7 @@
 python3 -m http.server 8768 --bind 127.0.0.1 --directory publish
 ```
 
-启动服务后访问 `http://127.0.0.1:8768/demos/monitor-tag-organization/index.html`，默认打开示例项目及视频标签筛选器。[项目内容](./index.html?view=content) 直接进入内容列表，[标签管理](./index.html?view=manage) 直接进入配置。
+启动服务后访问 `http://127.0.0.1:8768/demos/monitor-764/index.html`，默认打开示例项目及视频标签筛选器。[项目内容](./index.html?view=content) 直接进入内容列表，[标签管理](./index.html?view=manage) 直接进入配置。
 
 | 想验证 | 操作 |
 |---|---|
@@ -23,7 +23,7 @@ python3 -m http.server 8768 --bind 127.0.0.1 --directory publish
 | 单条／批量 | 通过某一行的「编辑标签」同时编辑普通标签和原额外标签。选中多行后体验「添加标签」与「移除标签」 |
 | 新增监控 | 选择「新增监控」，填样例标题并暂存视频标签，确认创建后检查对应的内容及标签 |
 
-只使用合成项目与内容。顶栏的身份切换演示管理员和没有共享定义维护权限的项目成员，两个身份都具有样例项目的内容写权限。原两类额外标签归入同一个「额外标签」组。浏览器本地存储记录本机样例、折叠状态、个人置顶与快捷入口，清除该页面站点数据可恢复初始状态。配置弹窗中的影响数量来自本 Demo 内容样本。产品接入通过 [Spec 验收矩阵](../../documents/02-project-documents/monitor_tag_organization/spec_v1.md#61-验收矩阵) 核对服务端和灰度表现。
+只使用合成项目与内容。顶栏的身份切换演示管理员和没有共享定义维护权限的项目成员，两个身份都具有样例项目的内容写权限。原两类额外标签归入同一个「额外标签」组。浏览器本地存储记录本机样例、折叠状态、个人置顶与快捷入口，清除该页面站点数据可恢复初始状态。配置弹窗中的影响数量来自本 Demo 内容样本。产品接入通过 [Spec 验收矩阵](../../documents/02-project-documents/monitor_764/spec_v1.md#61-验收矩阵) 核对服务端和灰度表现。
 
 ## 浏览器验收
 

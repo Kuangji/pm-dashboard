@@ -7,14 +7,41 @@
   <meta name="description" content="聚星品牌监控主子品牌视图化查询独立评审 Demo">
   <title>主子品牌视图化查询 · 聚星评审 Demo</title>
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./assets-library.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">跳至主内容</a>
   <div id="app"></div>
   <dialog id="view-manager" class="drawer manager-drawer" aria-labelledby="manager-title"></dialog>
   <dialog id="dialog" aria-labelledby="dialog-title"></dialog>
+  <dialog id="config-picker" aria-labelledby="picker-title">
+    <header class="dialog-head">
+      <div><h2 id="picker-title">选择主品牌配置</h2><p class="small muted">Anker · MIS 配置摘录</p></div>
+    </header>
+    <div class="picker-toolbar">
+      <input class="field" type="search" aria-label="搜索主配置" placeholder="搜索关键词、账号或网址" autocomplete="off">
+      <select aria-label="配置类别"></select>
+    </div>
+    <div class="picker-subhead">
+      <span class="small muted" id="picker-count" role="status"></span>
+      <button class="btn link picker-add-results" type="button" data-action="picker-add-results" hidden>选中全部搜索结果</button>
+      <button class="btn compact" type="button" data-action="picker-selected" aria-pressed="false">只看已选</button>
+    </div>
+    <div id="picker-results" role="group" aria-label="候选配置"></div>
+    <div class="picker-pager">
+      <button class="btn compact" type="button" data-action="picker-prev">上一页</button>
+      <span class="small muted" id="picker-page"></span>
+      <button class="btn compact" type="button" data-action="picker-next">下一页</button>
+    </div>
+    <footer class="dialog-footer">
+      <button class="btn" type="button" data-action="picker-cancel">取消</button>
+      <button class="btn primary" type="button" data-action="picker-apply">应用选择</button>
+    </footer>
+  </dialog>
   <div id="announcement" class="announcement" role="status" aria-live="polite" hidden></div>
   <script src="./engine.js"></script>
+  <script src="./assets-store.js"></script>
+  <script src="./assets-library.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>

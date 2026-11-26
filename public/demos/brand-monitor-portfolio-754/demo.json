@@ -1,8 +1,12 @@
 {
   "title": "v7.5.4 主子品牌视图化查询 · 评审 Demo",
-  "description": "验证同一抽屉中的子视图与对比设置，以及主品牌报告的同批指标和下钻。",
+  "description": "点击报告或管理诊断中的作品、网红名单，直接在新标签页打开对应资产库，可按子视图归属继续筛选。",
   "thumbnail": "preview.png",
-  "tags": ["品牌监控", "子视图", "评审 Demo"],
+  "tags": [
+    "品牌监控",
+    "子视图",
+    "评审 Demo"
+  ],
   "releaseVersion": "v7.5.4",
   "releaseName": "主子品牌视图化查询"
 }

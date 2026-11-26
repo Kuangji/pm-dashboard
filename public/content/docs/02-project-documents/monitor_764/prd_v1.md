@@ -1,8 +1,8 @@
-# 内容监控标签组织与交互优化｜PRD v1
+# v7.6.4 内容监控标签分组与管理｜PRD v1
 
-2026-11-24 · 研发评审版 · 发布版本待排期
+2026-11-25 · 研发评审版 · 排期待定
 
-[需求输入](input_v1.md) · [实施规格](spec_v1.md) · [交互设计](design_v1.md) · [独立 Demo](../../../demos/monitor-tag-organization/index.html) · [评审记录](archive/review_2026-11-24.md)
+[需求输入](input_v1.md) · [实施规格](spec_v1.md) · [交互设计](design_v1.md) · [独立 Demo](../../../demos/monitor-764/index.html) · [评审记录](archive/review_2026-11-24.md)
 
 ## 1. 目标与验收
 
